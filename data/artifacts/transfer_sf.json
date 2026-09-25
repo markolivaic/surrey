@@ -1,0 +1,709 @@
+{
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "checkpoint_step": 12000,
+  "trained_on": "Surrey, British Columbia, Canada (DALES-2)",
+  "scored_on": "San Francisco, California, USA (USGS 3DEP CA_SanFrancisco_1_B23)",
+  "hag_gate_m": 2.0,
+  "hag_note": "the 2 m gate uses a quantile ground floor and is a scoring gate only, never a model feature. Its error is measured in data/artifacts/ground_cell_choice.json",
+  "coverage_cell_m": 1.0,
+  "asprs_noise_excluded": [
+    7,
+    18
+  ],
+  "taxonomy": {
+    "model_classes": 15,
+    "delivery_labelled_classes": [
+      "ground",
+      "water",
+      "bridge deck"
+    ],
+    "model_has_a_class_for": [
+      "ground"
+    ],
+    "model_has_no_class_for": [
+      "water",
+      "bridge deck"
+    ],
+    "note": "of fifteen classes the model knows, exactly one has a direct label on this target. Two classes the target labels, the model cannot name, so over water and over a bridge deck it cannot be right, only consistent."
+  },
+  "in_domain_reference": {
+    "iou_per_class": {
+      "ground": 0.924,
+      "vegetation": 0.4592,
+      "car": 0.5636,
+      "powerline": 0.7774,
+      "fence": 0.4122,
+      "tree": 0.889,
+      "pickup": 0.2173,
+      "van-truck": 0.2589,
+      "heavy-duty": 0.0333,
+      "utility-pole": 0.1027,
+      "light-pole": 0.1145,
+      "traffic-pole": 0.0783,
+      "habitat": 0.7567,
+      "complex": 0.4299,
+      "annex": 0.3061
+    },
+    "accuracy": 0.8948,
+    "steps_trained": 12000,
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU"
+  },
+  "caveats": [
+    "the target carries no hand labels, so there is no per-class IoU here",
+    "ground is scored against the delivery's automated classification, which measures agreement with a vendor algorithm and not correctness",
+    "the delivery leaves real ground unlabelled, so ground precision is a band between a strict floor and a generous ceiling rather than one number. See data/artifacts/ground_reference_check.json",
+    "a footprint is a 2D polygon whose interior holds ground, parked cars and overhanging branches, so precision is only meaningful beside its null",
+    "the fraction of footprints touched by any predicted point is not reported. It is 1.00 for almost any model and measures nothing",
+    "coverage has a high null of its own, so it catches under-covering only"
+  ],
+  "aois": [
+    {
+      "aoi": "baybridge",
+      "is_control": true,
+      "points": 3069047,
+      "epsg": 32610,
+      "aoi_area_m2": 90315.1,
+      "noise_excluded_fraction": 0.00019,
+      "points_over_2m_fraction": 0.1862,
+      "predicted_distribution_coarse": {
+        "ground": 0.75714,
+        "vegetation": 0.00012,
+        "building": 0.22743,
+        "vehicle": 0.0,
+        "pole": 0.01525,
+        "fence": 7e-05
+      },
+      "ground_vs_delivery": {
+        "reference_points": 0,
+        "note": "this area carries no ground class, nothing to score against"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 0,
+        "eligible_points": 571498,
+        "predicted_building_points": 487836,
+        "predicted_building_fraction": 0.8536,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "precision_lift_over_null": 0.0
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 0,
+        "footprints_too_small": 0,
+        "coverage_median": null,
+        "coverage_p10": null,
+        "coverage_p90": null,
+        "null_coverage_median": null,
+        "null_coverage_p10": null,
+        "shortfall_against_null": null,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.8536,
+      "vegetation_fraction_over_2m": 0.0006,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 9,
+          "delivery_name": "water",
+          "points": 1396087,
+          "fraction_of_area": 0.4549,
+          "model_has_a_class_for_it": false,
+          "predicted_coarse": {
+            "ground": 0.9572,
+            "building": 0.0426,
+            "pole": 0.0002
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9572,
+          "most_common_fine": "ground"
+        },
+        {
+          "delivery_class": 17,
+          "delivery_name": "bridge deck",
+          "points": 325405,
+          "fraction_of_area": 0.106,
+          "model_has_a_class_for_it": false,
+          "predicted_coarse": {
+            "ground": 0.0167,
+            "building": 0.9706,
+            "pole": 0.0127
+          },
+          "most_common_prediction": "building",
+          "most_common_share": 0.9706,
+          "most_common_fine": "complex"
+        }
+      ],
+      "inference_seconds": 19.7
+    },
+    {
+      "aoi": "embarcadero",
+      "is_control": false,
+      "points": 4458544,
+      "epsg": 32610,
+      "aoi_area_m2": 90950.1,
+      "noise_excluded_fraction": 0.00542,
+      "points_over_2m_fraction": 0.2803,
+      "predicted_distribution_coarse": {
+        "ground": 0.81992,
+        "vegetation": 0.00042,
+        "building": 0.16994,
+        "vehicle": 0.0,
+        "pole": 0.00762,
+        "fence": 0.0021
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 459883,
+        "predicted_points": 3635815,
+        "predicted_points_judgeable": 1823554,
+        "predicted_points_unjudgeable_fraction": 0.4984,
+        "recall_clean": 0.9839,
+        "precision_floor": 0.2481,
+        "precision_ceiling": 0.4018,
+        "iou_floor": 0.1242,
+        "null_iou_predict_all_ground": 0.1037,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.2015,
+        "area_with_no_ground_class": 0.5061,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 7,
+        "eligible_points": 1249647,
+        "predicted_building_points": 605476,
+        "predicted_building_fraction": 0.4845,
+        "precision": 0.065,
+        "null_precision": 0.137,
+        "precision_lift_over_null": -0.0835
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 7,
+        "footprints_too_small": 0,
+        "coverage_median": 0.25,
+        "coverage_p10": 0.1316,
+        "coverage_p90": 0.6502,
+        "null_coverage_median": 0.8275,
+        "null_coverage_p10": 0.4377,
+        "shortfall_against_null": 0.6979,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.4845,
+      "vegetation_fraction_over_2m": 0.0015,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 459883,
+          "fraction_of_area": 0.1031,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.9839,
+            "building": 0.016,
+            "pole": 0.0001,
+            "fence": 0.0
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9839,
+          "most_common_fine": "ground"
+        },
+        {
+          "delivery_class": 9,
+          "delivery_name": "water",
+          "points": 1279147,
+          "fraction_of_area": 0.2869,
+          "model_has_a_class_for_it": false,
+          "predicted_coarse": {
+            "ground": 0.9481,
+            "building": 0.0513,
+            "pole": 0.0006
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9481,
+          "most_common_fine": "ground"
+        },
+        {
+          "delivery_class": 17,
+          "delivery_name": "bridge deck",
+          "points": 234883,
+          "fraction_of_area": 0.0527,
+          "model_has_a_class_for_it": false,
+          "predicted_coarse": {
+            "ground": 0.0466,
+            "building": 0.9483,
+            "pole": 0.0051
+          },
+          "most_common_prediction": "building",
+          "most_common_share": 0.9483,
+          "most_common_fine": "complex"
+        }
+      ],
+      "inference_seconds": 32.9
+    },
+    {
+      "aoi": "financial",
+      "is_control": false,
+      "points": 7630301,
+      "epsg": 32610,
+      "aoi_area_m2": 90923.0,
+      "noise_excluded_fraction": 0.01821,
+      "points_over_2m_fraction": 0.6359,
+      "predicted_distribution_coarse": {
+        "ground": 0.45421,
+        "vegetation": 0.00118,
+        "building": 0.43893,
+        "vehicle": 0.0,
+        "pole": 0.10332,
+        "fence": 0.00236
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 1394775,
+        "predicted_points": 3402617,
+        "predicted_points_judgeable": 3378305,
+        "predicted_points_unjudgeable_fraction": 0.0071,
+        "recall_clean": 0.963,
+        "precision_floor": 0.3976,
+        "precision_ceiling": 0.5562,
+        "iou_floor": 0.3888,
+        "null_iou_predict_all_ground": 0.1862,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.0949,
+        "area_with_no_ground_class": 0.0064,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 25,
+        "eligible_points": 4851963,
+        "predicted_building_points": 3025927,
+        "predicted_building_fraction": 0.6237,
+        "precision": 0.6024,
+        "null_precision": 0.6319,
+        "precision_lift_over_null": -0.0802
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 23,
+        "footprints_too_small": 2,
+        "coverage_median": 0.6522,
+        "coverage_p10": 0.296,
+        "coverage_p90": 0.9044,
+        "null_coverage_median": 0.8342,
+        "null_coverage_p10": 0.7053,
+        "shortfall_against_null": 0.2182,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.6237,
+      "vegetation_fraction_over_2m": 0.0018,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 1394775,
+          "fraction_of_area": 0.1828,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.963,
+            "building": 0.0366,
+            "pole": 0.0005
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.963,
+          "most_common_fine": "ground"
+        }
+      ],
+      "inference_seconds": 63.5
+    },
+    {
+      "aoi": "ggpark",
+      "is_control": true,
+      "points": 9012919,
+      "epsg": 32610,
+      "aoi_area_m2": 90751.2,
+      "noise_excluded_fraction": 0.00035,
+      "points_over_2m_fraction": 0.6115,
+      "predicted_distribution_coarse": {
+        "ground": 0.46907,
+        "vegetation": 7e-05,
+        "building": 0.5255,
+        "vehicle": 0.0,
+        "pole": 0.0023,
+        "fence": 0.00306
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 2354868,
+        "predicted_points": 4226181,
+        "predicted_points_judgeable": 4226181,
+        "predicted_points_unjudgeable_fraction": 0.0,
+        "recall_clean": 0.9579,
+        "precision_floor": 0.5337,
+        "precision_ceiling": 0.7183,
+        "iou_floor": 0.5215,
+        "null_iou_predict_all_ground": 0.2614,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.1221,
+        "area_with_no_ground_class": 0.0,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 1,
+        "eligible_points": 5511190,
+        "predicted_building_points": 4555891,
+        "predicted_building_fraction": 0.8267,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "precision_lift_over_null": 0.0
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 1,
+        "footprints_too_small": 0,
+        "coverage_median": 0.0,
+        "coverage_p10": 0.0,
+        "coverage_p90": 0.0,
+        "null_coverage_median": 0.0,
+        "null_coverage_p10": 0.0,
+        "shortfall_against_null": null,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.8267,
+      "vegetation_fraction_over_2m": 0.0001,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 2354868,
+          "fraction_of_area": 0.2613,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.9579,
+            "vegetation": 0.0,
+            "building": 0.042,
+            "pole": 0.0001
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9579,
+          "most_common_fine": "ground"
+        }
+      ],
+      "inference_seconds": 55.7
+    },
+    {
+      "aoi": "mission",
+      "is_control": false,
+      "points": 4536209,
+      "epsg": 32610,
+      "aoi_area_m2": 90889.8,
+      "noise_excluded_fraction": 0.00092,
+      "points_over_2m_fraction": 0.4591,
+      "predicted_distribution_coarse": {
+        "ground": 0.76263,
+        "vegetation": 3e-05,
+        "building": 0.2302,
+        "vehicle": 0.0,
+        "pole": 0.00371,
+        "fence": 0.00343
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 1400802,
+        "predicted_points": 3456233,
+        "predicted_points_judgeable": 3449689,
+        "predicted_points_unjudgeable_fraction": 0.0019,
+        "recall_clean": 0.9618,
+        "precision_floor": 0.3905,
+        "precision_ceiling": 0.4934,
+        "iou_floor": 0.3839,
+        "null_iou_predict_all_ground": 0.3091,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.118,
+        "area_with_no_ground_class": 0.0016,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 56,
+        "eligible_points": 2082611,
+        "predicted_building_points": 895091,
+        "predicted_building_fraction": 0.4298,
+        "precision": 0.4413,
+        "null_precision": 0.542,
+        "precision_lift_over_null": -0.22
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 56,
+        "footprints_too_small": 0,
+        "coverage_median": 0.5755,
+        "coverage_p10": 0.2986,
+        "coverage_p90": 0.773,
+        "null_coverage_median": 0.9382,
+        "null_coverage_p10": 0.6732,
+        "shortfall_against_null": 0.3866,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.4298,
+      "vegetation_fraction_over_2m": 0.0001,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 1400802,
+          "fraction_of_area": 0.3088,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.9618,
+            "building": 0.0379,
+            "pole": 0.0004
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9618,
+          "most_common_fine": "ground"
+        }
+      ],
+      "inference_seconds": 39.8
+    },
+    {
+      "aoi": "soma",
+      "is_control": false,
+      "points": 4527700,
+      "epsg": 32610,
+      "aoi_area_m2": 90895.8,
+      "noise_excluded_fraction": 0.00108,
+      "points_over_2m_fraction": 0.4949,
+      "predicted_distribution_coarse": {
+        "ground": 0.71594,
+        "vegetation": 0.0001,
+        "building": 0.27916,
+        "vehicle": 0.0,
+        "pole": 0.00274,
+        "fence": 0.00207
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 1284347,
+        "predicted_points": 3238061,
+        "predicted_points_judgeable": 3238061,
+        "predicted_points_unjudgeable_fraction": 0.0,
+        "recall_clean": 0.9689,
+        "precision_floor": 0.3843,
+        "precision_ceiling": 0.4714,
+        "iou_floor": 0.3796,
+        "null_iou_predict_all_ground": 0.284,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.0912,
+        "area_with_no_ground_class": 0.0,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 26,
+        "eligible_points": 2240726,
+        "predicted_building_points": 1129910,
+        "predicted_building_fraction": 0.5043,
+        "precision": 0.5615,
+        "null_precision": 0.6289,
+        "precision_lift_over_null": -0.1817
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 26,
+        "footprints_too_small": 0,
+        "coverage_median": 0.4832,
+        "coverage_p10": 0.2476,
+        "coverage_p90": 0.7052,
+        "null_coverage_median": 0.7495,
+        "null_coverage_p10": 0.4661,
+        "shortfall_against_null": 0.3553,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.5043,
+      "vegetation_fraction_over_2m": 0.0002,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 1284347,
+          "fraction_of_area": 0.2837,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.9689,
+            "building": 0.0308,
+            "pole": 0.0003
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9689,
+          "most_common_fine": "ground"
+        }
+      ],
+      "inference_seconds": 45.4
+    },
+    {
+      "aoi": "steep",
+      "is_control": false,
+      "points": 5427902,
+      "epsg": 32610,
+      "aoi_area_m2": 90886.8,
+      "noise_excluded_fraction": 0.00205,
+      "points_over_2m_fraction": 0.6587,
+      "predicted_distribution_coarse": {
+        "ground": 0.61858,
+        "vegetation": 0.0002,
+        "building": 0.37313,
+        "vehicle": 0.0,
+        "pole": 0.00337,
+        "fence": 0.00472
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 1143332,
+        "predicted_points": 3350705,
+        "predicted_points_judgeable": 3350705,
+        "predicted_points_unjudgeable_fraction": 0.0,
+        "recall_clean": 0.9741,
+        "precision_floor": 0.3324,
+        "precision_ceiling": 0.434,
+        "iou_floor": 0.3294,
+        "null_iou_predict_all_ground": 0.2111,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.0831,
+        "area_with_no_ground_class": 0.0,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 78,
+        "eligible_points": 3575521,
+        "predicted_building_points": 1879325,
+        "predicted_building_fraction": 0.5256,
+        "precision": 0.6058,
+        "null_precision": 0.5954,
+        "precision_lift_over_null": 0.0256
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 77,
+        "footprints_too_small": 1,
+        "coverage_median": 0.7011,
+        "coverage_p10": 0.4762,
+        "coverage_p90": 0.8457,
+        "null_coverage_median": 0.9683,
+        "null_coverage_p10": 0.8548,
+        "shortfall_against_null": 0.2759,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.5256,
+      "vegetation_fraction_over_2m": 0.0003,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 1143332,
+          "fraction_of_area": 0.2106,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.9741,
+            "vegetation": 0.0,
+            "building": 0.0256,
+            "pole": 0.0004,
+            "fence": 0.0
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.9741,
+          "most_common_fine": "ground"
+        }
+      ],
+      "inference_seconds": 48.7
+    },
+    {
+      "aoi": "sunset",
+      "is_control": false,
+      "points": 5466462,
+      "epsg": 32610,
+      "aoi_area_m2": 90742.1,
+      "noise_excluded_fraction": 0.00097,
+      "points_over_2m_fraction": 0.4212,
+      "predicted_distribution_coarse": {
+        "ground": 0.84133,
+        "vegetation": 2e-05,
+        "building": 0.15177,
+        "vehicle": 0.0,
+        "pole": 0.00298,
+        "fence": 0.00391
+      },
+      "ground_vs_delivery": {
+        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference_points": 1853797,
+        "predicted_points": 4594616,
+        "predicted_points_judgeable": 4594616,
+        "predicted_points_unjudgeable_fraction": 0.0,
+        "recall_clean": 0.986,
+        "precision_floor": 0.3978,
+        "precision_ceiling": 0.5506,
+        "iou_floor": 0.3956,
+        "null_iou_predict_all_ground": 0.3395,
+        "surface_cell_m": 5.0,
+        "surface_reach_m": 25.0,
+        "unassigned_at_ground_level": 0.1982,
+        "area_with_no_ground_class": 0.0,
+        "reading": "recall is the clean number: every point in the reference really is ground. Precision is a band because the vendor left some ground unlabelled, so the floor undercounts and the ceiling overcounts"
+      },
+      "building_vs_footprints_over_2m": {
+        "footprints": 33,
+        "eligible_points": 2302589,
+        "predicted_building_points": 738195,
+        "predicted_building_fraction": 0.3206,
+        "precision": 0.4103,
+        "null_precision": 0.5105,
+        "precision_lift_over_null": -0.2046
+      },
+      "building_area_coverage": {
+        "cell_m": 1.0,
+        "min_cells": 4,
+        "footprints_scored": 33,
+        "footprints_too_small": 0,
+        "coverage_median": 0.4449,
+        "coverage_p10": 0.2114,
+        "coverage_p90": 0.5946,
+        "null_coverage_median": 0.9286,
+        "null_coverage_p10": 0.8205,
+        "shortfall_against_null": 0.5209,
+        "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_fraction_over_2m": 0.3206,
+      "vegetation_fraction_over_2m": 0.0,
+      "where_the_delivery_has_labels": [
+        {
+          "delivery_class": 2,
+          "delivery_name": "ground",
+          "points": 1853797,
+          "fraction_of_area": 0.3391,
+          "model_has_a_class_for_it": true,
+          "predicted_coarse": {
+            "ground": 0.986,
+            "building": 0.0139,
+            "pole": 0.0001
+          },
+          "most_common_prediction": "ground",
+          "most_common_share": 0.986,
+          "most_common_fine": "ground"
+        }
+      ],
+      "inference_seconds": 44.7
+    }
+  ],
+  "laz_written": [],
+  "seconds": 350.6
+}

@@ -1,0 +1,308 @@
+{
+  "question": "the ground band with water in and with water out",
+  "scorer": "dayton.reference.score_ground",
+  "water_removed_from": "both the predictions and the reference, as noise is",
+  "areas": [
+    {
+      "aoi": "baybridge",
+      "water_points": 1396087,
+      "as_trained": {
+        "with_water": {
+          "note": "this area carries no ground class, nothing to score against"
+        },
+        "without_water": {
+          "note": "this area carries no ground class, nothing to score against"
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "note": "this area carries no ground class, nothing to score against"
+        },
+        "without_water": {
+          "note": "this area carries no ground class, nothing to score against"
+        }
+      }
+    },
+    {
+      "aoi": "embarcadero",
+      "water_points": 1279147,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9839,
+          "precision_floor": 0.2479,
+          "precision_ceiling": 0.4016,
+          "predicted_points": 3638594,
+          "reference_points": 459883,
+          "predicted_points_unjudgeable_fraction": 0.4983
+        },
+        "without_water": {
+          "recall_clean": 0.9839,
+          "precision_floor": 0.2838,
+          "precision_ceiling": 0.4598,
+          "predicted_points": 2424691,
+          "reference_points": 459883,
+          "predicted_points_unjudgeable_fraction": 0.3424
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9544,
+          "precision_floor": 0.3154,
+          "precision_ceiling": 0.4813,
+          "predicted_points": 3114567,
+          "reference_points": 459883,
+          "predicted_points_unjudgeable_fraction": 0.5532
+        },
+        "without_water": {
+          "recall_clean": 0.9544,
+          "precision_floor": 0.3723,
+          "precision_ceiling": 0.5681,
+          "predicted_points": 1948512,
+          "reference_points": 459883,
+          "predicted_points_unjudgeable_fraction": 0.395
+        }
+      }
+    },
+    {
+      "aoi": "financial",
+      "water_points": 0,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9599,
+          "precision_floor": 0.3988,
+          "precision_ceiling": 0.5579,
+          "predicted_points": 3380310,
+          "reference_points": 1394775,
+          "predicted_points_unjudgeable_fraction": 0.0067
+        },
+        "without_water": {
+          "recall_clean": 0.9599,
+          "precision_floor": 0.3988,
+          "precision_ceiling": 0.5579,
+          "predicted_points": 3380310,
+          "reference_points": 1394775,
+          "predicted_points_unjudgeable_fraction": 0.0067
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9152,
+          "precision_floor": 0.5365,
+          "precision_ceiling": 0.7311,
+          "predicted_points": 2391581,
+          "reference_points": 1394775,
+          "predicted_points_unjudgeable_fraction": 0.0051
+        },
+        "without_water": {
+          "recall_clean": 0.9152,
+          "precision_floor": 0.5365,
+          "precision_ceiling": 0.7311,
+          "predicted_points": 2391581,
+          "reference_points": 1394775,
+          "predicted_points_unjudgeable_fraction": 0.0051
+        }
+      }
+    },
+    {
+      "aoi": "ggpark",
+      "water_points": 0,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9585,
+          "precision_floor": 0.5334,
+          "precision_ceiling": 0.7177,
+          "predicted_points": 4231467,
+          "reference_points": 2354868,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9585,
+          "precision_floor": 0.5334,
+          "precision_ceiling": 0.7177,
+          "predicted_points": 4231467,
+          "reference_points": 2354868,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9825,
+          "precision_floor": 0.7297,
+          "precision_ceiling": 0.9474,
+          "predicted_points": 3170496,
+          "reference_points": 2354868,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9825,
+          "precision_floor": 0.7297,
+          "precision_ceiling": 0.9474,
+          "predicted_points": 3170496,
+          "reference_points": 2354868,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      }
+    },
+    {
+      "aoi": "mission",
+      "water_points": 0,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9602,
+          "precision_floor": 0.3899,
+          "precision_ceiling": 0.4927,
+          "predicted_points": 3456426,
+          "reference_points": 1400802,
+          "predicted_points_unjudgeable_fraction": 0.0019
+        },
+        "without_water": {
+          "recall_clean": 0.9602,
+          "precision_floor": 0.3899,
+          "precision_ceiling": 0.4927,
+          "predicted_points": 3456426,
+          "reference_points": 1400802,
+          "predicted_points_unjudgeable_fraction": 0.0019
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9887,
+          "precision_floor": 0.5819,
+          "precision_ceiling": 0.7154,
+          "predicted_points": 2383316,
+          "reference_points": 1400802,
+          "predicted_points_unjudgeable_fraction": 0.0013
+        },
+        "without_water": {
+          "recall_clean": 0.9887,
+          "precision_floor": 0.5819,
+          "precision_ceiling": 0.7154,
+          "predicted_points": 2383316,
+          "reference_points": 1400802,
+          "predicted_points_unjudgeable_fraction": 0.0013
+        }
+      }
+    },
+    {
+      "aoi": "soma",
+      "water_points": 0,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9691,
+          "precision_floor": 0.3844,
+          "precision_ceiling": 0.4717,
+          "predicted_points": 3237693,
+          "reference_points": 1284347,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9691,
+          "precision_floor": 0.3844,
+          "precision_ceiling": 0.4717,
+          "predicted_points": 3237693,
+          "reference_points": 1284347,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9937,
+          "precision_floor": 0.5289,
+          "precision_ceiling": 0.6422,
+          "predicted_points": 2412860,
+          "reference_points": 1284347,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9937,
+          "precision_floor": 0.5289,
+          "precision_ceiling": 0.6422,
+          "predicted_points": 2412860,
+          "reference_points": 1284347,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      }
+    },
+    {
+      "aoi": "steep",
+      "water_points": 0,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9738,
+          "precision_floor": 0.3321,
+          "precision_ceiling": 0.4333,
+          "predicted_points": 3352892,
+          "reference_points": 1143332,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9738,
+          "precision_floor": 0.3321,
+          "precision_ceiling": 0.4333,
+          "predicted_points": 3352892,
+          "reference_points": 1143332,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9468,
+          "precision_floor": 0.5559,
+          "precision_ceiling": 0.6925,
+          "predicted_points": 1947168,
+          "reference_points": 1143332,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9468,
+          "precision_floor": 0.5559,
+          "precision_ceiling": 0.6925,
+          "predicted_points": 1947168,
+          "reference_points": 1143332,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      }
+    },
+    {
+      "aoi": "sunset",
+      "water_points": 0,
+      "as_trained": {
+        "with_water": {
+          "recall_clean": 0.9861,
+          "precision_floor": 0.3989,
+          "precision_ceiling": 0.5522,
+          "predicted_points": 4582381,
+          "reference_points": 1853797,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9861,
+          "precision_floor": 0.3989,
+          "precision_ceiling": 0.5522,
+          "predicted_points": 4582381,
+          "reference_points": 1853797,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      },
+      "channel_at_0": {
+        "with_water": {
+          "recall_clean": 0.9813,
+          "precision_floor": 0.6056,
+          "precision_ceiling": 0.7955,
+          "predicted_points": 3003612,
+          "reference_points": 1853797,
+          "predicted_points_unjudgeable_fraction": 0.0
+        },
+        "without_water": {
+          "recall_clean": 0.9813,
+          "precision_floor": 0.6056,
+          "precision_ceiling": 0.7955,
+          "predicted_points": 3003612,
+          "reference_points": 1853797,
+          "predicted_points_unjudgeable_fraction": 0.0
+        }
+      }
+    }
+  ],
+  "seconds": 21.6
+}

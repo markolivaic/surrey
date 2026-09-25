@@ -1,0 +1,71 @@
+{
+  "population": "held-out Surrey tiles, voxel-thinned, the points of the 0.8948 accuracy",
+  "rows_are": "reference class; columns are prediction",
+  "groups": {
+    "ground": [
+      "ground"
+    ],
+    "vegetation": [
+      "vegetation",
+      "tree"
+    ],
+    "building": [
+      "habitat",
+      "complex",
+      "annex"
+    ],
+    "other": [
+      "car",
+      "pickup",
+      "van-truck",
+      "heavy-duty",
+      "utility-pole",
+      "light-pole",
+      "traffic-pole",
+      "powerline",
+      "fence"
+    ]
+  },
+  "points": 107947429,
+  "accuracy": 0.9469,
+  "do_nothing_accuracy": 0.4797,
+  "iou": {
+    "ground": 0.924,
+    "vegetation": 0.9128,
+    "building": 0.8448,
+    "other": 0.576
+  },
+  "mean_iou": 0.8144,
+  "support_share": {
+    "ground": 0.4797,
+    "vegetation": 0.3369,
+    "building": 0.1674,
+    "other": 0.0159
+  },
+  "confusion": [
+    [
+      50099740,
+      1160839,
+      414600,
+      109069
+    ],
+    [
+      847358,
+      34840509,
+      161562,
+      522334
+    ],
+    [
+      1551538,
+      485236,
+      15775238,
+      261250
+    ],
+    [
+      38464,
+      150858,
+      24887,
+      1503947
+    ]
+  ]
+}

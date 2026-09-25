@@ -1,0 +1,98 @@
+{
+  "rule": "every pixel at least 3.0:1",
+  "isolated_definition": "fewer than 3 points within 1.0 m",
+  "themes": {
+    "light": {
+      "over_water": {
+        "pixels": 81,
+        "normal": {
+          "min": 3.64,
+          "p1": 3.64,
+          "median": 3.89,
+          "share_below_3": 0.0
+        },
+        "deuteranopia": {
+          "min": 3.64,
+          "p1": 3.64,
+          "median": 3.65,
+          "share_below_3": 0.0
+        },
+        "protanopia": {
+          "min": 3.38,
+          "p1": 3.38,
+          "median": 4.32,
+          "share_below_3": 0.0
+        },
+        "passes": true
+      },
+      "cables": {
+        "pixels": 712,
+        "normal": {
+          "min": 3.63,
+          "p1": 3.63,
+          "median": 3.7,
+          "share_below_3": 0.0
+        },
+        "deuteranopia": {
+          "min": 3.69,
+          "p1": 3.75,
+          "median": 3.83,
+          "share_below_3": 0.0
+        },
+        "protanopia": {
+          "min": 3.36,
+          "p1": 3.36,
+          "median": 3.53,
+          "share_below_3": 0.0
+        },
+        "passes": true
+      }
+    },
+    "dark": {
+      "over_water": {
+        "pixels": 81,
+        "normal": {
+          "min": 3.68,
+          "p1": 3.68,
+          "median": 7.6,
+          "share_below_3": 0.0
+        },
+        "deuteranopia": {
+          "min": 3.58,
+          "p1": 3.58,
+          "median": 8.18,
+          "share_below_3": 0.0
+        },
+        "protanopia": {
+          "min": 3.81,
+          "p1": 3.84,
+          "median": 6.71,
+          "share_below_3": 0.0
+        },
+        "passes": true
+      },
+      "cables": {
+        "pixels": 712,
+        "normal": {
+          "min": 3.6,
+          "p1": 3.6,
+          "median": 13.75,
+          "share_below_3": 0.0
+        },
+        "deuteranopia": {
+          "min": 3.38,
+          "p1": 3.39,
+          "median": 13.23,
+          "share_below_3": 0.0
+        },
+        "protanopia": {
+          "min": 3.81,
+          "p1": 3.86,
+          "median": 14.48,
+          "share_below_3": 0.0
+        },
+        "passes": true
+      }
+    }
+  }
+}

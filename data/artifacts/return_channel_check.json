@@ -1,0 +1,582 @@
+{
+  "question": "does the transfer recover when the return ratio is given its training value",
+  "training_value": 0.0,
+  "prediction_cache": {
+    "checkpoint_sha256_16": "c8ef2e4a026888a0",
+    "seed": 0
+  },
+  "predictions_written_to": "data/predictions/ret0",
+  "reading_fixed_before_running": {
+    "a major cause": "ggpark vegetation cores called vegetation above 0.5, or easy errors fall by half in at least four of six scored areas",
+    "not the cause": "ggpark under 0.1 and easy errors fall by less than a fifth in at least four of six",
+    "otherwise": "partial"
+  },
+  "scored_areas_easy_errors_halved": 4,
+  "scored_areas_easy_errors_fell_under_a_fifth": 0,
+  "ggpark_vegetation_core_called_vegetation_after": 0.9393,
+  "verdict": "a major cause",
+  "areas": [
+    {
+      "aoi": "baybridge",
+      "scored_for_easy_errors": false,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.7569,
+          "vegetation": 0.0002,
+          "building": 0.2276,
+          "vehicle": 0.0,
+          "pole": 0.0153,
+          "fence": 0.0
+        },
+        "delivery_ground_called_ground": null,
+        "water_called_ground": 0.957,
+        "bridge_deck_called_building": 0.9743,
+        "easy_errors": 0,
+        "easy_auroc": null,
+        "water_auroc": null,
+        "median_confidence": 0.6533,
+        "naip_vegetation_core_called": null,
+        "naip_not_vegetation_core_called": {
+          "ground": 0.2458,
+          "vegetation": 0.0,
+          "building": 0.7286,
+          "vehicle": 0.0,
+          "pole": 0.0252,
+          "fence": 0.0004
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.7433,
+          "vegetation": 0.0147,
+          "building": 0.2161,
+          "vehicle": 0.0019,
+          "pole": 0.0231,
+          "fence": 0.0008
+        },
+        "delivery_ground_called_ground": null,
+        "water_called_ground": 0.9583,
+        "bridge_deck_called_building": 0.9835,
+        "easy_errors": 0,
+        "easy_auroc": null,
+        "water_auroc": null,
+        "median_confidence": 0.9205,
+        "naip_vegetation_core_called": null,
+        "naip_not_vegetation_core_called": {
+          "ground": 0.0939,
+          "vegetation": 0.0687,
+          "building": 0.7724,
+          "vehicle": 0.0228,
+          "pole": 0.0374,
+          "fence": 0.0048
+        }
+      },
+      "changed_predictions_share": 0.0998
+    },
+    {
+      "aoi": "embarcadero",
+      "scored_for_easy_errors": true,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.8205,
+          "vegetation": 0.0005,
+          "building": 0.1692,
+          "vehicle": 0.0,
+          "pole": 0.0078,
+          "fence": 0.002
+        },
+        "delivery_ground_called_ground": 0.9839,
+        "water_called_ground": 0.949,
+        "bridge_deck_called_building": 0.952,
+        "easy_errors": 606963,
+        "easy_auroc": 0.5022,
+        "water_auroc": 0.6433,
+        "median_confidence": 0.6514,
+        "naip_vegetation_core_called": {
+          "ground": 0.5717,
+          "vegetation": 0.0281,
+          "building": 0.3354,
+          "vehicle": 0.0,
+          "pole": 0.0023,
+          "fence": 0.0624
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.7101,
+          "vegetation": 0.0,
+          "building": 0.2785,
+          "vehicle": 0.0,
+          "pole": 0.0079,
+          "fence": 0.0035
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.7024,
+          "vegetation": 0.0711,
+          "building": 0.1831,
+          "vehicle": 0.0098,
+          "pole": 0.0186,
+          "fence": 0.0151
+        },
+        "delivery_ground_called_ground": 0.9544,
+        "water_called_ground": 0.9116,
+        "bridge_deck_called_building": 0.9713,
+        "easy_errors": 364857,
+        "easy_auroc": 0.7143,
+        "water_auroc": 0.7748,
+        "median_confidence": 0.8919,
+        "naip_vegetation_core_called": {
+          "ground": 0.0002,
+          "vegetation": 0.9918,
+          "building": 0.0001,
+          "vehicle": 0.0014,
+          "pole": 0.0026,
+          "fence": 0.004
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.4165,
+          "vegetation": 0.0879,
+          "building": 0.3625,
+          "vehicle": 0.0237,
+          "pole": 0.0503,
+          "fence": 0.0591
+        }
+      },
+      "changed_predictions_share": 0.2156,
+      "easy_error_fall": 0.3989
+    },
+    {
+      "aoi": "financial",
+      "scored_for_easy_errors": true,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.4512,
+          "vegetation": 0.0011,
+          "building": 0.4421,
+          "vehicle": 0.0,
+          "pole": 0.1033,
+          "fence": 0.0023
+        },
+        "delivery_ground_called_ground": 0.9599,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 1339034,
+        "easy_auroc": 0.4378,
+        "water_auroc": null,
+        "median_confidence": 0.7681,
+        "naip_vegetation_core_called": {
+          "ground": 0.5026,
+          "vegetation": 0.0002,
+          "building": 0.4866,
+          "vehicle": 0.0,
+          "pole": 0.0022,
+          "fence": 0.0084
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.3815,
+          "vegetation": 0.0001,
+          "building": 0.5646,
+          "vehicle": 0.0,
+          "pole": 0.048,
+          "fence": 0.0059
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.3192,
+          "vegetation": 0.0968,
+          "building": 0.4235,
+          "vehicle": 0.0151,
+          "pole": 0.1231,
+          "fence": 0.0223
+        },
+        "delivery_ground_called_ground": 0.9152,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 614904,
+        "easy_auroc": 0.781,
+        "water_auroc": null,
+        "median_confidence": 0.8637,
+        "naip_vegetation_core_called": {
+          "ground": 0.006,
+          "vegetation": 0.9894,
+          "building": 0.0002,
+          "vehicle": 0.0004,
+          "pole": 0.0027,
+          "fence": 0.0014
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.1414,
+          "vegetation": 0.167,
+          "building": 0.5078,
+          "vehicle": 0.0222,
+          "pole": 0.1035,
+          "fence": 0.0581
+        }
+      },
+      "changed_predictions_share": 0.3092,
+      "easy_error_fall": 0.5408
+    },
+    {
+      "aoi": "ggpark",
+      "scored_for_easy_errors": true,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.4697,
+          "vegetation": 0.0,
+          "building": 0.5248,
+          "vehicle": 0.0,
+          "pole": 0.0025,
+          "fence": 0.003
+        },
+        "delivery_ground_called_ground": 0.9585,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 572676,
+        "easy_auroc": 0.3345,
+        "water_auroc": null,
+        "median_confidence": 0.7832,
+        "naip_vegetation_core_called": {
+          "ground": 0.2336,
+          "vegetation": 0.0001,
+          "building": 0.7561,
+          "vehicle": 0.0,
+          "pole": 0.0041,
+          "fence": 0.0061
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.4027,
+          "vegetation": 0.0,
+          "building": 0.5897,
+          "vehicle": 0.0,
+          "pole": 0.0048,
+          "fence": 0.0027
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.3519,
+          "vegetation": 0.6261,
+          "building": 0.0089,
+          "vehicle": 0.001,
+          "pole": 0.0114,
+          "fence": 0.0008
+        },
+        "delivery_ground_called_ground": 0.9825,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 53680,
+        "easy_auroc": 0.9619,
+        "water_auroc": null,
+        "median_confidence": 0.8694,
+        "naip_vegetation_core_called": {
+          "ground": 0.0306,
+          "vegetation": 0.9393,
+          "building": 0.0087,
+          "vehicle": 0.0017,
+          "pole": 0.0187,
+          "fence": 0.001
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.1617,
+          "vegetation": 0.8128,
+          "building": 0.0151,
+          "vehicle": 0.0,
+          "pole": 0.0075,
+          "fence": 0.0029
+        }
+      },
+      "changed_predictions_share": 0.6578,
+      "easy_error_fall": 0.9063
+    },
+    {
+      "aoi": "mission",
+      "scored_for_easy_errors": true,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.7627,
+          "vegetation": 0.0001,
+          "building": 0.2303,
+          "vehicle": 0.0,
+          "pole": 0.0037,
+          "fence": 0.0033
+        },
+        "delivery_ground_called_ground": 0.9602,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 1436858,
+        "easy_auroc": 0.4629,
+        "water_auroc": null,
+        "median_confidence": 0.6758,
+        "naip_vegetation_core_called": {
+          "ground": 0.4987,
+          "vegetation": 0.0002,
+          "building": 0.4824,
+          "vehicle": 0.0,
+          "pole": 0.002,
+          "fence": 0.0167
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.6381,
+          "vegetation": 0.0,
+          "building": 0.3534,
+          "vehicle": 0.0,
+          "pole": 0.0072,
+          "fence": 0.0013
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.5259,
+          "vegetation": 0.1842,
+          "building": 0.2181,
+          "vehicle": 0.0355,
+          "pole": 0.0081,
+          "fence": 0.0283
+        },
+        "delivery_ground_called_ground": 0.9887,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 634392,
+        "easy_auroc": 0.8198,
+        "water_auroc": null,
+        "median_confidence": 0.8676,
+        "naip_vegetation_core_called": {
+          "ground": 0.0119,
+          "vegetation": 0.974,
+          "building": 0.0027,
+          "vehicle": 0.0023,
+          "pole": 0.007,
+          "fence": 0.0021
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.2644,
+          "vegetation": 0.0477,
+          "building": 0.5919,
+          "vehicle": 0.0297,
+          "pole": 0.0132,
+          "fence": 0.053
+        }
+      },
+      "changed_predictions_share": 0.405,
+      "easy_error_fall": 0.5585
+    },
+    {
+      "aoi": "soma",
+      "scored_for_easy_errors": true,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.7159,
+          "vegetation": 0.0001,
+          "building": 0.2793,
+          "vehicle": 0.0,
+          "pole": 0.0027,
+          "fence": 0.002
+        },
+        "delivery_ground_called_ground": 0.9691,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 1566658,
+        "easy_auroc": 0.4401,
+        "water_auroc": null,
+        "median_confidence": 0.6816,
+        "naip_vegetation_core_called": {
+          "ground": 0.5852,
+          "vegetation": 0.0005,
+          "building": 0.4069,
+          "vehicle": 0.0,
+          "pole": 0.0023,
+          "fence": 0.0051
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.5394,
+          "vegetation": 0.0,
+          "building": 0.4552,
+          "vehicle": 0.0,
+          "pole": 0.0046,
+          "fence": 0.0009
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.5335,
+          "vegetation": 0.1529,
+          "building": 0.2507,
+          "vehicle": 0.0212,
+          "pole": 0.0123,
+          "fence": 0.0294
+        },
+        "delivery_ground_called_ground": 0.9937,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 835514,
+        "easy_auroc": 0.8466,
+        "water_auroc": null,
+        "median_confidence": 0.8822,
+        "naip_vegetation_core_called": {
+          "ground": 0.0409,
+          "vegetation": 0.9452,
+          "building": 0.0039,
+          "vehicle": 0.0004,
+          "pole": 0.0083,
+          "fence": 0.0012
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.2825,
+          "vegetation": 0.0534,
+          "building": 0.5704,
+          "vehicle": 0.0178,
+          "pole": 0.0216,
+          "fence": 0.0543
+        }
+      },
+      "changed_predictions_share": 0.3447,
+      "easy_error_fall": 0.4667
+    },
+    {
+      "aoi": "steep",
+      "scored_for_easy_errors": false,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.619,
+          "vegetation": 0.0002,
+          "building": 0.3727,
+          "vehicle": 0.0,
+          "pole": 0.0037,
+          "fence": 0.0045
+        },
+        "delivery_ground_called_ground": 0.9738,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 1485753,
+        "easy_auroc": 0.5656,
+        "water_auroc": null,
+        "median_confidence": 0.7212,
+        "naip_vegetation_core_called": {
+          "ground": 0.5406,
+          "vegetation": 0.0048,
+          "building": 0.4292,
+          "vehicle": 0.0,
+          "pole": 0.0023,
+          "fence": 0.0231
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.4589,
+          "vegetation": 0.0,
+          "building": 0.5338,
+          "vehicle": 0.0,
+          "pole": 0.0052,
+          "fence": 0.0021
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.3595,
+          "vegetation": 0.2286,
+          "building": 0.3333,
+          "vehicle": 0.0184,
+          "pole": 0.0189,
+          "fence": 0.0414
+        },
+        "delivery_ground_called_ground": 0.9468,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 516240,
+        "easy_auroc": 0.8368,
+        "water_auroc": null,
+        "median_confidence": 0.798,
+        "naip_vegetation_core_called": {
+          "ground": 0.0452,
+          "vegetation": 0.9297,
+          "building": 0.0124,
+          "vehicle": 0.0026,
+          "pole": 0.0085,
+          "fence": 0.0016
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.1975,
+          "vegetation": 0.0924,
+          "building": 0.6062,
+          "vehicle": 0.0112,
+          "pole": 0.0278,
+          "fence": 0.0649
+        }
+      },
+      "changed_predictions_share": 0.4405,
+      "easy_error_fall": 0.6525
+    },
+    {
+      "aoi": "sunset",
+      "scored_for_easy_errors": true,
+      "before": {
+        "predicted_coarse_shares": {
+          "ground": 0.8391,
+          "vegetation": 0.0,
+          "building": 0.1544,
+          "vehicle": 0.0,
+          "pole": 0.003,
+          "fence": 0.0035
+        },
+        "delivery_ground_called_ground": 0.9861,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 1236431,
+        "easy_auroc": 0.4861,
+        "water_auroc": null,
+        "median_confidence": 0.6948,
+        "naip_vegetation_core_called": {
+          "ground": 0.4162,
+          "vegetation": 0.0,
+          "building": 0.5748,
+          "vehicle": 0.0,
+          "pole": 0.0013,
+          "fence": 0.0077
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.6962,
+          "vegetation": 0.0,
+          "building": 0.2904,
+          "vehicle": 0.0,
+          "pole": 0.0083,
+          "fence": 0.0051
+        }
+      },
+      "after": {
+        "predicted_coarse_shares": {
+          "ground": 0.55,
+          "vegetation": 0.1936,
+          "building": 0.1859,
+          "vehicle": 0.0229,
+          "pole": 0.0079,
+          "fence": 0.0397
+        },
+        "delivery_ground_called_ground": 0.9813,
+        "water_called_ground": null,
+        "bridge_deck_called_building": null,
+        "easy_errors": 452771,
+        "easy_auroc": 0.8603,
+        "water_auroc": null,
+        "median_confidence": 0.8532,
+        "naip_vegetation_core_called": {
+          "ground": 0.0351,
+          "vegetation": 0.9408,
+          "building": 0.0084,
+          "vehicle": 0.0026,
+          "pole": 0.0073,
+          "fence": 0.0059
+        },
+        "naip_not_vegetation_core_called": {
+          "ground": 0.2676,
+          "vegetation": 0.0525,
+          "building": 0.593,
+          "vehicle": 0.014,
+          "pole": 0.0192,
+          "fence": 0.0537
+        }
+      },
+      "changed_predictions_share": 0.3889,
+      "easy_error_fall": 0.6338
+    }
+  ],
+  "seconds": 238.2
+}

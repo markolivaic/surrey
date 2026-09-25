@@ -1,0 +1,27 @@
+{
+  "same_configuration": {
+    "width": 128,
+    "batch": 4,
+    "points_per_crop": 32768
+  },
+  "laptop": {
+    "card": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "steps": 12000,
+    "wall_seconds": 24732.6,
+    "steps_per_second_whole_run": 0.485,
+    "note": "a whole 12,000 step run, model build and final evaluation included"
+  },
+  "rented": {
+    "card": "NVIDIA GeForce RTX 4090",
+    "memory_gb": 51.13,
+    "steps_per_second_probe": 12.093,
+    "steps_per_second_whole_run": 10.256,
+    "bench_steps": 200,
+    "bench_wall_seconds": 19.5,
+    "note": "the probe times eight steps in the middle; the bench is a whole 200 step run"
+  },
+  "speedup_like_for_like": 24.9,
+  "speedup_whole_runs": 21.1,
+  "a_full_run_here_minutes": 16.5,
+  "a_full_run_on_the_laptop_minutes": 412.2
+}

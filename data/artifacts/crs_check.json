@@ -1,0 +1,1499 @@
+{
+  "question": "are lidar, NAIP and footprints on the same coordinates",
+  "convention": "metres east and north by which the lidar raster is displaced relative to the other raster; positive east means lidar lies east",
+  "measurement_crs": "EPSG:32610, WGS 84 / UTM zone 10N; offsets are metres in that CRS, which differ from metres on the ground by the UTM scale factor, about 0.9996, recorded per area",
+  "lidar": "EPT CA_SanFrancisco_1_B23, published EPSG:3857, reprojected to EPSG:32610 by scripts/fetch_sf_aoi.py",
+  "expected_if_one_side_took_a_real_datum_shift": {
+    "transformation": "axis order change (2D) + Conversion from NAD83(2011) (geog3D) to NAD83(2011) (geocentric) + Inverse of ITRF2014 to NAD83(2011) (1) + Conversion from ITRF2014 (geocentric) to ITRF2014 (geog3D) + axis order change (2D)",
+    "epoch": 2023.3,
+    "east_m": -1.52,
+    "north_m": 0.205,
+    "reading": "where a point given in NAD83(2011) lands in ITRF2014, which WGS84 tracks"
+  },
+  "reading_fixed_before_running": {
+    "consistent": "within 0.5 m of zero in both axes and by both methods",
+    "datum_shift": "near 1.5 m west and 0.2 m north",
+    "otherwise": "reported as found, not explained"
+  },
+  "resolution_m": 0.6,
+  "highpass_sigma_px": 4.0,
+  "search_radius_m": 6.0,
+  "areas": [
+    {
+      "aoi": "embarcadero",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000364
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 504,
+        "cols": 505
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712213_se_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.153,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": null,
+          "ncc_north_m": null,
+          "ncc_peak": 0.161,
+          "ncc_peak_z": 2.5,
+          "phase_east_m": -88.805,
+          "phase_north_m": -22.143,
+          "phase_peak": 0.0165,
+          "valid_share": 0.153
+        },
+        "subsets": [
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.218,
+            "ncc_peak_z": 2.0,
+            "phase_east_m": -70.244,
+            "phase_north_m": -46.235,
+            "phase_peak": 0.0165,
+            "valid_share": 0.039
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.247,
+            "ncc_peak_z": 4.8,
+            "phase_east_m": -48.483,
+            "phase_north_m": -34.749,
+            "phase_peak": 0.0171,
+            "valid_share": 0.029
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.11,
+            "ncc_peak_z": 1.6,
+            "phase_east_m": -22.743,
+            "phase_north_m": -8.256,
+            "phase_peak": 0.0162,
+            "valid_share": 0.049
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.163,
+            "ncc_peak_z": 2.4,
+            "phase_east_m": -52.128,
+            "phase_north_m": -16.334,
+            "phase_peak": 0.0167,
+            "valid_share": 0.036
+          }
+        ],
+        "ncc_east_m_subset_mean": null,
+        "ncc_east_m_subset_se": null,
+        "ncc_east_m_subsets_used": 0,
+        "ncc_north_m_subset_mean": null,
+        "ncc_north_m_subset_se": null,
+        "ncc_north_m_subsets_used": 0,
+        "phase_east_m_subset_mean": -48.4,
+        "phase_east_m_subset_se": 9.787,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": -26.394,
+        "phase_north_m_subset_se": 8.63,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": null
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": null
+        }
+      ],
+      "footprints": {
+        "polygons": 7,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.144,
+            "ncc_peak_z": 3.2,
+            "phase_east_m": -6.492,
+            "phase_north_m": 79.761,
+            "phase_peak": 0.0393,
+            "valid_share": 0.983
+          },
+          "subsets": [
+            {
+              "ncc_east_m": 1.44,
+              "ncc_north_m": -0.312,
+              "ncc_peak": 0.219,
+              "ncc_peak_z": 5.1,
+              "phase_east_m": -13.18,
+              "phase_north_m": 85.786,
+              "phase_peak": 0.0465,
+              "valid_share": 0.246
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.197,
+              "ncc_peak_z": 4.7,
+              "phase_east_m": 50.334,
+              "phase_north_m": 27.021,
+              "phase_peak": 0.0508,
+              "valid_share": 0.244
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.133,
+              "ncc_peak_z": 2.6,
+              "phase_east_m": 64.796,
+              "phase_north_m": 29.307,
+              "phase_peak": 0.0379,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.151,
+              "ncc_peak_z": 3.1,
+              "phase_east_m": 37.171,
+              "phase_north_m": 12.562,
+              "phase_peak": 0.0502,
+              "valid_share": 0.245
+            }
+          ],
+          "ncc_east_m_subset_mean": 1.44,
+          "ncc_east_m_subset_se": null,
+          "ncc_east_m_subsets_used": 1,
+          "ncc_north_m_subset_mean": -0.312,
+          "ncc_north_m_subset_se": null,
+          "ncc_north_m_subsets_used": 1,
+          "phase_east_m_subset_mean": 34.78,
+          "phase_east_m_subset_se": 16.953,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": 38.669,
+          "phase_north_m_subset_se": 16.137,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": null
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": null
+          }
+        ]
+      }
+    },
+    {
+      "aoi": "financial",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000366
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 503,
+        "cols": 506
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712213_se_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.535,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": null,
+          "ncc_north_m": null,
+          "ncc_peak": 0.095,
+          "ncc_peak_z": 3.9,
+          "phase_east_m": 0.015,
+          "phase_north_m": -0.366,
+          "phase_peak": 0.0209,
+          "valid_share": 0.535
+        },
+        "subsets": [
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.068,
+            "ncc_peak_z": 3.0,
+            "phase_east_m": -19.817,
+            "phase_north_m": -9.617,
+            "phase_peak": 0.0153,
+            "valid_share": 0.129
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.09,
+            "ncc_peak_z": 2.6,
+            "phase_east_m": 2.97,
+            "phase_north_m": -4.252,
+            "phase_peak": 0.0213,
+            "valid_share": 0.122
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.138,
+            "ncc_peak_z": 3.6,
+            "phase_east_m": 0.12,
+            "phase_north_m": -0.438,
+            "phase_peak": 0.0149,
+            "valid_share": 0.145
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.132,
+            "ncc_peak_z": 4.0,
+            "phase_east_m": -10.775,
+            "phase_north_m": -48.617,
+            "phase_peak": 0.0133,
+            "valid_share": 0.139
+          }
+        ],
+        "ncc_east_m_subset_mean": null,
+        "ncc_east_m_subset_se": null,
+        "ncc_east_m_subsets_used": 0,
+        "ncc_north_m_subset_mean": null,
+        "ncc_north_m_subset_se": null,
+        "ncc_north_m_subsets_used": 0,
+        "phase_east_m_subset_mean": -6.876,
+        "phase_east_m_subset_se": 5.233,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": -15.731,
+        "phase_north_m_subset_se": 11.122,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": null
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": null
+        }
+      ],
+      "footprints": {
+        "polygons": 25,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.02,
+            "ncc_peak_z": 2.1,
+            "phase_east_m": 1.202,
+            "phase_north_m": -1.182,
+            "phase_peak": 0.0154,
+            "valid_share": 0.983
+          },
+          "subsets": [
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.036,
+              "ncc_peak_z": 2.2,
+              "phase_east_m": 14.441,
+              "phase_north_m": 16.246,
+              "phase_peak": 0.0224,
+              "valid_share": 0.246
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.046,
+              "ncc_peak_z": 1.7,
+              "phase_east_m": 43.732,
+              "phase_north_m": 5.425,
+              "phase_peak": 0.0198,
+              "valid_share": 0.245
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.041,
+              "ncc_peak_z": 2.1,
+              "phase_east_m": 54.671,
+              "phase_north_m": 34.817,
+              "phase_peak": 0.0161,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.056,
+              "ncc_peak_z": 3.2,
+              "phase_east_m": -17.951,
+              "phase_north_m": 31.865,
+              "phase_peak": 0.02,
+              "valid_share": 0.245
+            }
+          ],
+          "ncc_east_m_subset_mean": null,
+          "ncc_east_m_subset_se": null,
+          "ncc_east_m_subsets_used": 0,
+          "ncc_north_m_subset_mean": null,
+          "ncc_north_m_subset_se": null,
+          "ncc_north_m_subsets_used": 0,
+          "phase_east_m_subset_mean": 23.723,
+          "phase_east_m_subset_se": 16.281,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": 22.088,
+          "phase_north_m_subset_se": 6.888,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": null
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": null
+          }
+        ]
+      }
+    },
+    {
+      "aoi": "ggpark",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000375
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 502,
+        "cols": 504
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712213_sw_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.898,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": 3.288,
+          "ncc_north_m": -1.92,
+          "ncc_peak": 0.099,
+          "ncc_peak_z": 5.1,
+          "phase_east_m": 2.388,
+          "phase_north_m": -1.171,
+          "phase_peak": 0.0149,
+          "valid_share": 0.898
+        },
+        "subsets": [
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.1,
+            "ncc_peak_z": 2.3,
+            "phase_east_m": -1.334,
+            "phase_north_m": 14.914,
+            "phase_peak": 0.0113,
+            "valid_share": 0.224
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.091,
+            "ncc_peak_z": 3.6,
+            "phase_east_m": 5.988,
+            "phase_north_m": 18.518,
+            "phase_peak": 0.0157,
+            "valid_share": 0.226
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.104,
+            "ncc_peak_z": 3.8,
+            "phase_east_m": 12.633,
+            "phase_north_m": -17.998,
+            "phase_peak": 0.0153,
+            "valid_share": 0.224
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.111,
+            "ncc_peak_z": 3.8,
+            "phase_east_m": 24.543,
+            "phase_north_m": 1.175,
+            "phase_peak": 0.0131,
+            "valid_share": 0.225
+          }
+        ],
+        "ncc_east_m_subset_mean": null,
+        "ncc_east_m_subset_se": null,
+        "ncc_east_m_subsets_used": 0,
+        "ncc_north_m_subset_mean": null,
+        "ncc_north_m_subset_se": null,
+        "ncc_north_m_subsets_used": 0,
+        "phase_east_m_subset_mean": 10.457,
+        "phase_east_m_subset_se": 5.494,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": 4.152,
+        "phase_north_m_subset_se": 8.275,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": null
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": [
+            0.672,
+            -0.36
+          ]
+        }
+      ],
+      "footprints": {
+        "polygons": 1,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.003,
+            "ncc_peak_z": 3.0,
+            "phase_east_m": -132.61,
+            "phase_north_m": 82.157,
+            "phase_peak": 0.0265,
+            "valid_share": 0.99
+          },
+          "subsets": [
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.006,
+              "ncc_peak_z": 2.9,
+              "phase_east_m": -60.566,
+              "phase_north_m": -3.583,
+              "phase_peak": 0.0549,
+              "valid_share": 0.248
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.002,
+              "ncc_peak_z": 7.9,
+              "phase_east_m": -86.38,
+              "phase_north_m": -6.966,
+              "phase_peak": 0.0449,
+              "valid_share": 0.246
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.0,
+              "ncc_peak_z": 6.9,
+              "phase_east_m": -132.587,
+              "phase_north_m": 82.183,
+              "phase_peak": 0.0399,
+              "valid_share": 0.248
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.004,
+              "ncc_peak_z": 40.2,
+              "phase_east_m": -90.665,
+              "phase_north_m": -34.838,
+              "phase_peak": 0.0424,
+              "valid_share": 0.247
+            }
+          ],
+          "ncc_east_m_subset_mean": null,
+          "ncc_east_m_subset_se": null,
+          "ncc_east_m_subsets_used": 0,
+          "ncc_north_m_subset_mean": null,
+          "ncc_north_m_subset_se": null,
+          "ncc_north_m_subsets_used": 0,
+          "phase_east_m_subset_mean": -92.55,
+          "phase_east_m_subset_se": 14.91,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": 9.199,
+          "phase_north_m_subset_se": 25.316,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": null
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": null
+          }
+        ]
+      }
+    },
+    {
+      "aoi": "mission",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000367
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 503,
+        "cols": 504
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712213_se_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.555,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": -1.488,
+          "ncc_north_m": -1.584,
+          "ncc_peak": 0.192,
+          "ncc_peak_z": 5.3,
+          "phase_east_m": -0.253,
+          "phase_north_m": -0.903,
+          "phase_peak": 0.0216,
+          "valid_share": 0.555
+        },
+        "subsets": [
+          {
+            "ncc_east_m": -0.888,
+            "ncc_north_m": -1.392,
+            "ncc_peak": 0.215,
+            "ncc_peak_z": 5.4,
+            "phase_east_m": -0.702,
+            "phase_north_m": -1.137,
+            "phase_peak": 0.022,
+            "valid_share": 0.143
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.22,
+            "ncc_peak_z": 3.6,
+            "phase_east_m": -17.398,
+            "phase_north_m": -25.152,
+            "phase_peak": 0.0147,
+            "valid_share": 0.157
+          },
+          {
+            "ncc_east_m": -1.992,
+            "ncc_north_m": -1.752,
+            "ncc_peak": 0.17,
+            "ncc_peak_z": 6.0,
+            "phase_east_m": 36.575,
+            "phase_north_m": -4.963,
+            "phase_peak": 0.0153,
+            "valid_share": 0.127
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.192,
+            "ncc_peak_z": 3.2,
+            "phase_east_m": 54.572,
+            "phase_north_m": -9.618,
+            "phase_peak": 0.0146,
+            "valid_share": 0.127
+          }
+        ],
+        "ncc_east_m_subset_mean": -1.44,
+        "ncc_east_m_subset_se": 0.552,
+        "ncc_east_m_subsets_used": 2,
+        "ncc_north_m_subset_mean": -1.572,
+        "ncc_north_m_subset_se": 0.18,
+        "ncc_north_m_subsets_used": 2,
+        "phase_east_m_subset_mean": 18.262,
+        "phase_east_m_subset_se": 16.546,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": -10.218,
+        "phase_north_m_subset_se": 5.271,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": [
+            -1.2,
+            0.864
+          ]
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": [
+            0.672,
+            -0.48
+          ]
+        }
+      ],
+      "footprints": {
+        "polygons": 56,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": 1.992,
+            "ncc_north_m": -0.792,
+            "ncc_peak": 0.337,
+            "ncc_peak_z": 6.8,
+            "phase_east_m": 1.679,
+            "phase_north_m": -0.676,
+            "phase_peak": 0.0575,
+            "valid_share": 0.987
+          },
+          "subsets": [
+            {
+              "ncc_east_m": 1.584,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.337,
+              "ncc_peak_z": 6.0,
+              "phase_east_m": 1.469,
+              "phase_north_m": -0.605,
+              "phase_peak": 0.0222,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": 1.992,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.354,
+              "ncc_peak_z": 6.2,
+              "phase_east_m": 1.89,
+              "phase_north_m": -0.641,
+              "phase_peak": 0.0184,
+              "valid_share": 0.246
+            },
+            {
+              "ncc_east_m": 1.608,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.33,
+              "ncc_peak_z": 7.0,
+              "phase_east_m": 1.786,
+              "phase_north_m": -0.615,
+              "phase_peak": 0.0349,
+              "valid_share": 0.248
+            },
+            {
+              "ncc_east_m": 1.992,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.329,
+              "ncc_peak_z": 6.2,
+              "phase_east_m": 1.433,
+              "phase_north_m": -0.606,
+              "phase_peak": 0.0354,
+              "valid_share": 0.246
+            }
+          ],
+          "ncc_east_m_subset_mean": 1.794,
+          "ncc_east_m_subset_se": 0.114,
+          "ncc_east_m_subsets_used": 4,
+          "ncc_north_m_subset_mean": -0.792,
+          "ncc_north_m_subset_se": 0.0,
+          "ncc_north_m_subsets_used": 4,
+          "phase_east_m_subset_mean": 1.644,
+          "phase_east_m_subset_se": 0.114,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": -0.617,
+          "phase_north_m_subset_se": 0.008,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": [
+              -1.2,
+              1.056
+            ]
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": [
+              0.648,
+              -0.216
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aoi": "soma",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000366
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 503,
+        "cols": 505
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712213_se_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.501,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": null,
+          "ncc_north_m": null,
+          "ncc_peak": 0.188,
+          "ncc_peak_z": 4.0,
+          "phase_east_m": 0.071,
+          "phase_north_m": -0.585,
+          "phase_peak": 0.0204,
+          "valid_share": 0.501
+        },
+        "subsets": [
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.204,
+            "ncc_peak_z": 4.1,
+            "phase_east_m": 0.591,
+            "phase_north_m": -0.061,
+            "phase_peak": 0.0153,
+            "valid_share": 0.116
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.152,
+            "ncc_peak_z": 4.3,
+            "phase_east_m": -16.256,
+            "phase_north_m": -1.145,
+            "phase_peak": 0.014,
+            "valid_share": 0.122
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.184,
+            "ncc_peak_z": 4.2,
+            "phase_east_m": -40.183,
+            "phase_north_m": -15.064,
+            "phase_peak": 0.0133,
+            "valid_share": 0.135
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.224,
+            "ncc_peak_z": 3.4,
+            "phase_east_m": -25.597,
+            "phase_north_m": 25.752,
+            "phase_peak": 0.014,
+            "valid_share": 0.128
+          }
+        ],
+        "ncc_east_m_subset_mean": null,
+        "ncc_east_m_subset_se": null,
+        "ncc_east_m_subsets_used": 0,
+        "ncc_north_m_subset_mean": null,
+        "ncc_north_m_subset_se": null,
+        "ncc_north_m_subsets_used": 0,
+        "phase_east_m_subset_mean": -20.361,
+        "phase_east_m_subset_se": 8.545,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": 2.37,
+        "phase_north_m_subset_se": 8.509,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": null
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": null
+        }
+      ],
+      "footprints": {
+        "polygons": 26,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.311,
+            "ncc_peak_z": 3.7,
+            "phase_east_m": 1.69,
+            "phase_north_m": -0.826,
+            "phase_peak": 0.0452,
+            "valid_share": 0.985
+          },
+          "subsets": [
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.257,
+              "ncc_peak_z": 3.7,
+              "phase_east_m": 0.748,
+              "phase_north_m": -0.541,
+              "phase_peak": 0.0279,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.329,
+              "ncc_peak_z": 3.9,
+              "phase_east_m": -77.43,
+              "phase_north_m": 21.568,
+              "phase_peak": 0.0211,
+              "valid_share": 0.245
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.343,
+              "ncc_peak_z": 4.5,
+              "phase_east_m": 1.603,
+              "phase_north_m": -0.75,
+              "phase_peak": 0.0396,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.314,
+              "ncc_peak_z": 3.9,
+              "phase_east_m": -13.158,
+              "phase_north_m": -15.614,
+              "phase_peak": 0.0244,
+              "valid_share": 0.246
+            }
+          ],
+          "ncc_east_m_subset_mean": null,
+          "ncc_east_m_subset_se": null,
+          "ncc_east_m_subsets_used": 0,
+          "ncc_north_m_subset_mean": null,
+          "ncc_north_m_subset_se": null,
+          "ncc_north_m_subsets_used": 0,
+          "phase_east_m_subset_mean": -22.059,
+          "phase_east_m_subset_se": 18.764,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": 1.166,
+          "phase_north_m_subset_se": 7.662,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": null
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": null
+          }
+        ]
+      }
+    },
+    {
+      "aoi": "steep",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000368
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 503,
+        "cols": 505
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712213_se_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.478,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": -1.104,
+          "ncc_north_m": -1.944,
+          "ncc_peak": 0.139,
+          "ncc_peak_z": 7.6,
+          "phase_east_m": 20.366,
+          "phase_north_m": 24.555,
+          "phase_peak": 0.0127,
+          "valid_share": 0.478
+        },
+        "subsets": [
+          {
+            "ncc_east_m": -1.08,
+            "ncc_north_m": -2.136,
+            "ncc_peak": 0.108,
+            "ncc_peak_z": 5.5,
+            "phase_east_m": -7.237,
+            "phase_north_m": 35.974,
+            "phase_peak": 0.0136,
+            "valid_share": 0.128
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.136,
+            "ncc_peak_z": 4.5,
+            "phase_east_m": -13.851,
+            "phase_north_m": 35.467,
+            "phase_peak": 0.0137,
+            "valid_share": 0.12
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.163,
+            "ncc_peak_z": 5.0,
+            "phase_east_m": 19.143,
+            "phase_north_m": -28.87,
+            "phase_peak": 0.0135,
+            "valid_share": 0.117
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.152,
+            "ncc_peak_z": 4.8,
+            "phase_east_m": 17.394,
+            "phase_north_m": 4.243,
+            "phase_peak": 0.0131,
+            "valid_share": 0.114
+          }
+        ],
+        "ncc_east_m_subset_mean": -1.08,
+        "ncc_east_m_subset_se": null,
+        "ncc_east_m_subsets_used": 1,
+        "ncc_north_m_subset_mean": -2.136,
+        "ncc_north_m_subset_se": null,
+        "ncc_north_m_subsets_used": 1,
+        "phase_east_m_subset_mean": 3.862,
+        "phase_east_m_subset_se": 8.434,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": 11.704,
+        "phase_north_m_subset_se": 15.426,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": [
+            -1.2,
+            0.96
+          ]
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": [
+            0.744,
+            -0.36
+          ]
+        }
+      ],
+      "footprints": {
+        "polygons": 78,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": 1.56,
+            "ncc_north_m": -0.84,
+            "ncc_peak": 0.314,
+            "ncc_peak_z": 5.3,
+            "phase_east_m": 1.652,
+            "phase_north_m": -0.977,
+            "phase_peak": 0.0318,
+            "valid_share": 0.984
+          },
+          "subsets": [
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.32,
+              "ncc_peak_z": 5.0,
+              "phase_east_m": 1.812,
+              "phase_north_m": -0.718,
+              "phase_peak": 0.0194,
+              "valid_share": 0.246
+            },
+            {
+              "ncc_east_m": null,
+              "ncc_north_m": null,
+              "ncc_peak": 0.32,
+              "ncc_peak_z": 4.6,
+              "phase_east_m": 1.326,
+              "phase_north_m": -1.011,
+              "phase_peak": 0.0211,
+              "valid_share": 0.245
+            },
+            {
+              "ncc_east_m": 1.56,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.308,
+              "ncc_peak_z": 6.0,
+              "phase_east_m": 1.163,
+              "phase_north_m": -0.579,
+              "phase_peak": 0.0183,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": 1.608,
+              "ncc_north_m": -0.84,
+              "ncc_peak": 0.309,
+              "ncc_peak_z": 7.1,
+              "phase_east_m": 2.436,
+              "phase_north_m": -0.653,
+              "phase_peak": 0.0218,
+              "valid_share": 0.246
+            }
+          ],
+          "ncc_east_m_subset_mean": 1.584,
+          "ncc_east_m_subset_se": 0.024,
+          "ncc_east_m_subsets_used": 2,
+          "ncc_north_m_subset_mean": -0.816,
+          "ncc_north_m_subset_se": 0.024,
+          "ncc_north_m_subsets_used": 2,
+          "phase_east_m_subset_mean": 1.684,
+          "phase_east_m_subset_se": 0.286,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": -0.74,
+          "phase_north_m_subset_se": 0.095,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": [
+              -1.176,
+              1.08
+            ]
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": [
+              1.056,
+              -0.528
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aoi": "sunset",
+      "measurement_crs": {
+        "epsg": 32610,
+        "name": "WGS 84 / UTM zone 10N",
+        "metres_on_ground_per_crs_unit": 1.000375
+      },
+      "grid": {
+        "res_m": 0.6,
+        "rows": 503,
+        "cols": 504
+      },
+      "naip": {
+        "items": [
+          "ca_m_3712221_nw_10_060_20220518",
+          "ca_m_3712213_sw_10_060_20220518"
+        ],
+        "epsg": 26910,
+        "transform": "Inverse of UTM zone 10N + Inverse of NAD83 to WGS 84 (1) + UTM zone 10N"
+      },
+      "ground_cells_share": 0.649,
+      "lidar_ground_intensity_vs_naip_red": {
+        "whole": {
+          "ncc_east_m": 1.944,
+          "ncc_north_m": -0.84,
+          "ncc_peak": 0.241,
+          "ncc_peak_z": 5.4,
+          "phase_east_m": 1.742,
+          "phase_north_m": -1.034,
+          "phase_peak": 0.0246,
+          "valid_share": 0.649
+        },
+        "subsets": [
+          {
+            "ncc_east_m": 2.016,
+            "ncc_north_m": -0.84,
+            "ncc_peak": 0.232,
+            "ncc_peak_z": 5.6,
+            "phase_east_m": 2.376,
+            "phase_north_m": -1.213,
+            "phase_peak": 0.019,
+            "valid_share": 0.146
+          },
+          {
+            "ncc_east_m": null,
+            "ncc_north_m": null,
+            "ncc_peak": 0.217,
+            "ncc_peak_z": 3.7,
+            "phase_east_m": -5.545,
+            "phase_north_m": -3.585,
+            "phase_peak": 0.0146,
+            "valid_share": 0.166
+          },
+          {
+            "ncc_east_m": 1.944,
+            "ncc_north_m": -0.744,
+            "ncc_peak": 0.271,
+            "ncc_peak_z": 6.1,
+            "phase_east_m": 0.763,
+            "phase_north_m": -0.273,
+            "phase_peak": 0.0148,
+            "valid_share": 0.165
+          },
+          {
+            "ncc_east_m": 1.896,
+            "ncc_north_m": -0.84,
+            "ncc_peak": 0.249,
+            "ncc_peak_z": 5.3,
+            "phase_east_m": 1.781,
+            "phase_north_m": -1.123,
+            "phase_peak": 0.0168,
+            "valid_share": 0.172
+          }
+        ],
+        "ncc_east_m_subset_mean": 1.952,
+        "ncc_east_m_subset_se": 0.035,
+        "ncc_east_m_subsets_used": 3,
+        "ncc_north_m_subset_mean": -0.808,
+        "ncc_north_m_subset_se": 0.032,
+        "ncc_north_m_subsets_used": 3,
+        "phase_east_m_subset_mean": -0.156,
+        "phase_east_m_subset_se": 1.827,
+        "phase_east_m_subsets_used": 4,
+        "phase_north_m_subset_mean": -1.548,
+        "phase_north_m_subset_se": 0.711,
+        "phase_north_m_subsets_used": 4
+      },
+      "planted_shift_checks": [
+        {
+          "planted_east_north_m": [
+            1.2,
+            -0.9
+          ],
+          "expected_change_east_north_m": [
+            -1.2,
+            0.9
+          ],
+          "ncc_change_east_north_m": [
+            -1.2,
+            0.864
+          ]
+        },
+        {
+          "planted_east_north_m": [
+            -0.75,
+            0.45
+          ],
+          "expected_change_east_north_m": [
+            0.75,
+            -0.45
+          ],
+          "ncc_change_east_north_m": [
+            0.672,
+            -0.408
+          ]
+        }
+      ],
+      "footprints": {
+        "polygons": 33,
+        "smooth_px": 0.0,
+        "lidar_low_raised_vs_footprints": {
+          "whole": {
+            "ncc_east_m": 1.584,
+            "ncc_north_m": -0.792,
+            "ncc_peak": 0.477,
+            "ncc_peak_z": 5.5,
+            "phase_east_m": 1.693,
+            "phase_north_m": -0.605,
+            "phase_peak": 0.0616,
+            "valid_share": 0.987
+          },
+          "subsets": [
+            {
+              "ncc_east_m": 1.584,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.474,
+              "ncc_peak_z": 5.3,
+              "phase_east_m": 1.69,
+              "phase_north_m": -0.574,
+              "phase_peak": 0.0272,
+              "valid_share": 0.247
+            },
+            {
+              "ncc_east_m": 1.56,
+              "ncc_north_m": -0.792,
+              "ncc_peak": 0.492,
+              "ncc_peak_z": 5.6,
+              "phase_east_m": 1.366,
+              "phase_north_m": -0.703,
+              "phase_peak": 0.0357,
+              "valid_share": 0.246
+            },
+            {
+              "ncc_east_m": 2.016,
+              "ncc_north_m": -0.816,
+              "ncc_peak": 0.475,
+              "ncc_peak_z": 5.1,
+              "phase_east_m": 3.558,
+              "phase_north_m": -0.543,
+              "phase_peak": 0.0206,
+              "valid_share": 0.248
+            },
+            {
+              "ncc_east_m": 1.584,
+              "ncc_north_m": -0.408,
+              "ncc_peak": 0.469,
+              "ncc_peak_z": 5.9,
+              "phase_east_m": 1.725,
+              "phase_north_m": -0.444,
+              "phase_peak": 0.0384,
+              "valid_share": 0.246
+            }
+          ],
+          "ncc_east_m_subset_mean": 1.686,
+          "ncc_east_m_subset_se": 0.11,
+          "ncc_east_m_subsets_used": 4,
+          "ncc_north_m_subset_mean": -0.702,
+          "ncc_north_m_subset_se": 0.098,
+          "ncc_north_m_subsets_used": 4,
+          "phase_east_m_subset_mean": 2.085,
+          "phase_east_m_subset_se": 0.498,
+          "phase_east_m_subsets_used": 4,
+          "phase_north_m_subset_mean": -0.566,
+          "phase_north_m_subset_se": 0.053,
+          "phase_north_m_subsets_used": 4
+        },
+        "planted_shift_checks": [
+          {
+            "planted_east_north_m": [
+              1.2,
+              -0.9
+            ],
+            "expected_change_east_north_m": [
+              -1.2,
+              0.9
+            ],
+            "ncc_change_east_north_m": [
+              -1.2,
+              1.08
+            ]
+          },
+          {
+            "planted_east_north_m": [
+              -0.75,
+              0.45
+            ],
+            "expected_change_east_north_m": [
+              0.75,
+              -0.45
+            ],
+            "ncc_change_east_north_m": [
+              1.056,
+              -0.216
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 331.7
+}

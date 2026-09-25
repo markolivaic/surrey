@@ -1,0 +1,614 @@
+{
+  "question": "does unassigned mean not-ground, or not-looked-at",
+  "rule": {
+    "near_ground_m": 0.5,
+    "max_unassigned_at_ground_level": 0.1,
+    "stated_before_the_numbers_were_read": true
+  },
+  "cell_m": 5.0,
+  "unassigned_at_ground_level_worst_area": 0.2015,
+  "unassigned_at_ground_level_mean": 0.1299,
+  "robustness_across_surface_settings": [
+    {
+      "setting": "reach 25 m, cell 5 m",
+      "worst_area": 0.2015,
+      "areas_failing_the_rule": 4,
+      "areas_measured": 7
+    },
+    {
+      "setting": "reach 10 m, cell 5 m",
+      "worst_area": 0.2414,
+      "areas_failing_the_rule": 5,
+      "areas_measured": 7
+    },
+    {
+      "setting": "reach 5 m, cell 5 m",
+      "worst_area": 0.2672,
+      "areas_failing_the_rule": 6,
+      "areas_measured": 7
+    },
+    {
+      "setting": "reach 0 m, cell 5 m",
+      "worst_area": 0.3252,
+      "areas_failing_the_rule": 7,
+      "areas_measured": 7
+    },
+    {
+      "setting": "cell 0.0 m, no interpolation",
+      "worst_area": 0.3252,
+      "areas_failing_the_rule": 7,
+      "areas_measured": 7
+    },
+    {
+      "setting": "cell 0.0 m, no interpolation",
+      "worst_area": 0.3778,
+      "areas_failing_the_rule": 7,
+      "areas_measured": 7
+    },
+    {
+      "setting": "cell 0.0 m, no interpolation",
+      "worst_area": 0.4116,
+      "areas_failing_the_rule": 7,
+      "areas_measured": 7
+    },
+    {
+      "setting": "cell 0.0 m, no interpolation",
+      "worst_area": 0.4412,
+      "areas_failing_the_rule": 7,
+      "areas_measured": 7
+    }
+  ],
+  "verdict_holds_under_every_setting": true,
+  "method_order_disclosure": "The first measurement used a plain nearest-cell fill and failed in seven of seven areas. The bounded 25 m reach was introduced AFTER seeing that, because a roof beside labelled street is plainly not ground and refusing to judge it throws away an easy call. The threshold never moved and the verdict never turned, and the sweep above shows the conclusion holds at every setting tried. Reporting only the second table would hide that the method was chosen after looking.",
+  "verdict": "unassigned is not a clean negative: a meaningful share of it sits at ground level, so ground precision is contaminated and the score speaks only for the labelled fraction",
+  "ground_iou_may_stand_alone": false,
+  "note": "cells holding no class 2 at all are counted separately. Under a wide roof the vendor has no ground to give, and filling one in would manufacture a height the delivery never claimed",
+  "aois": [
+    {
+      "aoi": "baybridge",
+      "skipped": "needs both a ground and an unassigned class",
+      "ground_points": 0,
+      "unassigned_points": 1346984
+    },
+    {
+      "aoi": "embarcadero",
+      "points": 4458544,
+      "ground_fraction": 0.1031,
+      "unassigned_fraction": 0.5509,
+      "cells": 3690,
+      "cells_with_no_ground_class": 2972,
+      "cells_with_no_ground_fraction": 0.8054,
+      "unassigned_points_in_cells_with_no_ground": 1031066,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.4198,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.12
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": -1.56,
+        "median": 6.47,
+        "p95": 29.09
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.2015,
+      "unassigned_below_ground": 0.0998,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 0.5802,
+          "at_ground": 0.2015
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 0.4523,
+          "at_ground": 0.2414
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 0.3958,
+          "at_ground": 0.2672
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.3085,
+          "at_ground": 0.3252
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.3085,
+          "at_ground": 0.3252
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.2621,
+          "at_ground": 0.3778
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.2348,
+          "at_ground": 0.4116
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.2034,
+          "at_ground": 0.4412
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 459883,
+        "median_above_local_min_m": 0.04,
+        "p95_above_local_min_m": 0.25,
+        "fraction_above_1m": 0.00687
+      }
+    },
+    {
+      "aoi": "financial",
+      "points": 7630301,
+      "ground_fraction": 0.1828,
+      "unassigned_fraction": 0.799,
+      "cells": 3690,
+      "cells_with_no_ground_class": 1162,
+      "cells_with_no_ground_fraction": 0.3149,
+      "unassigned_points_in_cells_with_no_ground": 46586,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.0076,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.1
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": 0.02,
+        "median": 25.91,
+        "p95": 158.54
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.0949,
+      "unassigned_below_ground": 0.0005,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 0.9924,
+          "at_ground": 0.0949
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 0.8797,
+          "at_ground": 0.1066
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 0.7756,
+          "at_ground": 0.1206
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.621,
+          "at_ground": 0.1493
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.621,
+          "at_ground": 0.1493
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.5211,
+          "at_ground": 0.1772
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.4619,
+          "at_ground": 0.196
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.3948,
+          "at_ground": 0.2158
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 1394775,
+        "median_above_local_min_m": 0.05,
+        "p95_above_local_min_m": 0.19,
+        "fraction_above_1m": 0.00106
+      }
+    },
+    {
+      "aoi": "ggpark",
+      "points": 9012919,
+      "ground_fraction": 0.2613,
+      "unassigned_fraction": 0.7384,
+      "cells": 3684,
+      "cells_with_no_ground_class": 6,
+      "cells_with_no_ground_fraction": 0.0016,
+      "unassigned_points_in_cells_with_no_ground": 0,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.0,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.32
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": 0.0,
+        "median": 17.78,
+        "p95": 33.3
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.1221,
+      "unassigned_below_ground": 0.0057,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 1.0,
+          "at_ground": 0.1221
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 1.0,
+          "at_ground": 0.1221
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 1.0,
+          "at_ground": 0.1221
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.9986,
+          "at_ground": 0.1222
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.9986,
+          "at_ground": 0.1222
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.9872,
+          "at_ground": 0.1361
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.9298,
+          "at_ground": 0.1427
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.7998,
+          "at_ground": 0.1448
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 2354868,
+        "median_above_local_min_m": 0.06,
+        "p95_above_local_min_m": 0.44,
+        "fraction_above_1m": 0.00245
+      }
+    },
+    {
+      "aoi": "mission",
+      "points": 4536209,
+      "ground_fraction": 0.3088,
+      "unassigned_fraction": 0.6903,
+      "cells": 3689,
+      "cells_with_no_ground_class": 836,
+      "cells_with_no_ground_fraction": 0.2266,
+      "unassigned_points_in_cells_with_no_ground": 7343,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.0023,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.08
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": 0.02,
+        "median": 6.87,
+        "p95": 14.29
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.118,
+      "unassigned_below_ground": 0.0018,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 0.9977,
+          "at_ground": 0.118
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 0.9544,
+          "at_ground": 0.1233
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 0.8793,
+          "at_ground": 0.1337
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.7048,
+          "at_ground": 0.1649
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.7048,
+          "at_ground": 0.1649
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.5704,
+          "at_ground": 0.2032
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.47,
+          "at_ground": 0.2396
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.3641,
+          "at_ground": 0.2782
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 1400802,
+        "median_above_local_min_m": 0.05,
+        "p95_above_local_min_m": 0.15,
+        "fraction_above_1m": 0.00051
+      }
+    },
+    {
+      "aoi": "soma",
+      "points": 4527700,
+      "ground_fraction": 0.2837,
+      "unassigned_fraction": 0.7153,
+      "cells": 3689,
+      "cells_with_no_ground_class": 1066,
+      "cells_with_no_ground_fraction": 0.289,
+      "unassigned_points_in_cells_with_no_ground": 0,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.0,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.09
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": 0.03,
+        "median": 7.55,
+        "p95": 23.52
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.0912,
+      "unassigned_below_ground": 0.0007,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 1.0,
+          "at_ground": 0.0912
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 0.949,
+          "at_ground": 0.0961
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 0.8341,
+          "at_ground": 0.109
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.6274,
+          "at_ground": 0.1439
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.6274,
+          "at_ground": 0.1439
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.4733,
+          "at_ground": 0.1895
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.3945,
+          "at_ground": 0.2233
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.3188,
+          "at_ground": 0.2596
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 1284347,
+        "median_above_local_min_m": 0.05,
+        "p95_above_local_min_m": 0.16,
+        "fraction_above_1m": 0.0016
+      }
+    },
+    {
+      "aoi": "steep",
+      "points": 5427902,
+      "ground_fraction": 0.2106,
+      "unassigned_fraction": 0.7873,
+      "cells": 3688,
+      "cells_with_no_ground_class": 680,
+      "cells_with_no_ground_fraction": 0.1844,
+      "unassigned_points_in_cells_with_no_ground": 0,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.0,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.38
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": 0.06,
+        "median": 8.31,
+        "p95": 22.99
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.0831,
+      "unassigned_below_ground": 0.0069,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 1.0,
+          "at_ground": 0.0831
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 0.9948,
+          "at_ground": 0.0835
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 0.9729,
+          "at_ground": 0.0853
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.7988,
+          "at_ground": 0.1034
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.7988,
+          "at_ground": 0.1034
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.6051,
+          "at_ground": 0.1447
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.4781,
+          "at_ground": 0.178
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.3479,
+          "at_ground": 0.2063
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 1143332,
+        "median_above_local_min_m": 0.11,
+        "p95_above_local_min_m": 0.49,
+        "fraction_above_1m": 0.01444
+      }
+    },
+    {
+      "aoi": "sunset",
+      "points": 5466462,
+      "ground_fraction": 0.3391,
+      "unassigned_fraction": 0.6599,
+      "cells": 3684,
+      "cells_with_no_ground_class": 539,
+      "cells_with_no_ground_fraction": 0.1463,
+      "unassigned_points_in_cells_with_no_ground": 0,
+      "unassigned_points_in_cells_with_no_ground_fraction": 0.0,
+      "ground_height_above_own_surface": {
+        "median": 0.0,
+        "p95": 0.32
+      },
+      "unassigned_height_above_ground_surface": {
+        "p05": -0.05,
+        "median": 3.52,
+        "p95": 8.73
+      },
+      "unassigned_within_half_a_metre_of_ground": 0.1982,
+      "unassigned_below_ground": 0.0084,
+      "reach_sweep": [
+        {
+          "reach_m": 25.0,
+          "judged_fraction": 1.0,
+          "at_ground": 0.1982
+        },
+        {
+          "reach_m": 10.0,
+          "judged_fraction": 0.9996,
+          "at_ground": 0.1982
+        },
+        {
+          "reach_m": 5.0,
+          "judged_fraction": 0.993,
+          "at_ground": 0.1996
+        },
+        {
+          "reach_m": 0.0,
+          "judged_fraction": 0.8195,
+          "at_ground": 0.241
+        }
+      ],
+      "cell_sweep_no_interpolation": [
+        {
+          "cell_m": 5.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.8195,
+          "at_ground": 0.241
+        },
+        {
+          "cell_m": 2.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.6964,
+          "at_ground": 0.3027
+        },
+        {
+          "cell_m": 1.0,
+          "reach_m": 0.0,
+          "judged_fraction": 0.5946,
+          "at_ground": 0.3498
+        },
+        {
+          "cell_m": 0.5,
+          "reach_m": 0.0,
+          "judged_fraction": 0.4597,
+          "at_ground": 0.3908
+        }
+      ],
+      "class2_purity": {
+        "cell_m": 2.0,
+        "points": 1853797,
+        "median_above_local_min_m": 0.08,
+        "p95_above_local_min_m": 0.42,
+        "fraction_above_1m": 0.00487
+      }
+    }
+  ],
+  "seconds": 42.0
+}

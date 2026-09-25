@@ -1,0 +1,209 @@
+:root { --ground: #e6e9e6; --ink: #1b211e; --dim: #58625c; --card: rgba(236, 239, 236, .93); --rule: #bcc4be; --focus: #0b5fb3; }
+[data-theme="dark"] { --ground: #131815; --ink: #e4e9e5; --dim: #97a29b; --card: rgba(24, 30, 27, .92); --rule: #36403a; --focus: #7db7ff; }
+
+html, body { margin: 0; background: var(--ground); color: var(--ink);
+  font-family: "Recursive", ui-sans-serif, system-ui, sans-serif; font-variation-settings: "CASL" 0.25, "MONO" 0; }
+.mono { font-variation-settings: "MONO" 1, "CASL" 0; }
+.dim { color: var(--dim); }
+.small { font-size: 11px; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+a { color: var(--ink); }
+
+/* The scene stands behind the first screen and the cards; in the free view it becomes a framed figure
+   beside the column that holds its controls and its key. */
+.stage { position: fixed; inset: 0; z-index: 0; }
+.stage canvas { display: block; width: 100%; height: 100%; transition: opacity .16s linear; }
+.top { position: fixed; top: 12px; left: 20px; right: 20px; z-index: 3; display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; pointer-events: none; }
+.top > * { pointer-events: auto; background: color-mix(in srgb, var(--ground) 78%, transparent);
+  padding: 3px 8px; backdrop-filter: blur(2px); }
+.top b { font-variation-settings: "CASL" 1, "wght" 780; font-size: 17px; }
+.theme { border: 1px solid var(--rule); background: var(--card); padding: 4px 10px; cursor: pointer; margin-left: 10px; }
+.chip { position: fixed; left: 20px; bottom: 18px; z-index: 3; font-size: 12px; background: var(--card); padding: 5px 9px; border: 1px solid var(--rule); }
+body[data-on-hero="1"] .chip { left: auto; right: 20px; }
+.loading { position: fixed; left: 20px; top: 44px; z-index: 3; font-size: 11px; color: var(--dim); }
+.legend { position: fixed; left: 20px; bottom: 58px; z-index: 3; background: var(--card); border: 1px solid var(--rule); padding: 8px 10px; font-size: 11px; max-width: 300px; }
+.legend table { border-collapse: collapse; }
+.legend td, .legend th { padding: 2px 5px; text-align: left; font-weight: 400; }
+.legend th { color: var(--dim); }
+.legend i { display: inline-block; width: 16px; height: 10px; vertical-align: middle; }
+.legend .note { color: var(--dim); margin-top: 4px; }
+
+.cards { position: relative; z-index: 2; pointer-events: none; }
+.card { min-height: 100vh; display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 28px 16vh; box-sizing: border-box; }
+.card .body { width: 300px; background: var(--card); border: 1px solid var(--rule); padding: 12px 14px 11px; pointer-events: auto; }
+.card .k { font-size: 11px; color: var(--dim); }
+.card h2 { font-size: 19px; line-height: 1.15; margin: 2px 0 6px; font-variation-settings: "CASL" 0.8, "wght" 700; }
+.card p { font-size: 13px; line-height: 1.5; margin: 0 0 6px; }
+.card .fig { font-size: 12px; line-height: 1.5; border-top: 1px solid var(--rule); padding-top: 6px; margin-top: 8px; }
+/* One figure carries the card: its median large, with two decimals, and the range of the seeds small
+   beneath it. Whatever else the card cites sits in the same small type. */
+.card .fig-label { color: var(--dim); font-size: 11.5px; }
+.card .fig-big { font-size: 30px; line-height: 1.1; font-variation-settings: "MONO" 1, "wght" 620; margin: 2px 0; }
+.card .fig-small { font-size: 11px; color: var(--dim); }
+.card .src { font-size: 10.5px; color: var(--dim); }
+.card.disabled .body { border-style: dashed; }
+/* The M1 card carries two pictures side by side, so it is wider than the others. */
+#m1card .body { width: 380px; }
+.inset { margin: 10px 0 6px; }
+.inset-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.inset-pair figure { margin: 0; }
+.inset-pair img.inset { display: block; width: 100%; aspect-ratio: 1; border: 1px solid var(--rule); image-rendering: auto; }
+.inset-pair figcaption { font-size: 11px; color: var(--dim); margin-top: 3px; }
+.inset > figcaption { font-size: 11px; color: var(--dim); margin-top: 6px; line-height: 1.6; }
+.inset i[data-swatch] { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: -1px; margin-left: 4px; }
+.card img.still { display: none; }
+
+.free { position: relative; z-index: 2; min-height: 100vh; display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 28px 16vh; box-sizing: border-box; pointer-events: none; }
+.panel { background: var(--card); border: 1px solid var(--rule); padding: 12px 14px; width: 560px; font-size: 13px; pointer-events: auto; }
+/* The free view reads as a field sheet, the way the first screen does: the controls and the key stand
+   in a column on the left, and the scene is a framed figure beside them with its label under it. */
+.free .panel { position: fixed; left: 28px; top: 64px; z-index: 3; width: 396px; box-sizing: border-box;
+  padding: 14px 16px; font-size: 13px; }
+.free .panel .free-title { font-size: 20px; margin: 0 0 6px; font-variation-settings: "CASL" 0.9, "wght" 760; }
+.free .panel .row { margin: 6px 0; gap: 8px; }
+.free .panel .areas { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 6px; }
+.free .panel .areas button { padding: 2px 7px; font-size: 12px; }
+body:not([data-free="1"]) .free .panel { display: none; }
+body[data-free="1"] .stage { inset: 64px 28px 64px 452px; border: 1px solid var(--rule); }
+body[data-free="1"] .legend { left: 28px; bottom: 64px; width: 396px; max-width: none; box-sizing: border-box; }
+body[data-free="1"] .chip { left: 452px; right: auto; bottom: 30px; border: 0; background: none; padding: 0; }
+body[data-credits="1"] .legend, body[data-credits="1"] .chip, body[data-credits="1"] .free .panel,
+body[data-credits="1"] .handle { visibility: hidden; }
+.row { display: flex; gap: 10px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
+.seg { display: inline-flex; border: 1px solid var(--ink); }
+.seg button { background: none; border: 0; padding: 5px 11px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--ground); }
+.seg button:disabled { color: var(--dim); cursor: not-allowed; }
+.switch button { width: 46px; height: 24px; border: 1px solid var(--ink); background: none; position: relative; cursor: pointer; }
+.switch button::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; background: var(--ink); transition: left .12s; }
+.switch button[aria-pressed="true"]::after { left: 25px; }
+.switch button:disabled { opacity: .35; cursor: not-allowed; }
+.areas button { background: none; border: 1px solid var(--rule); padding: 3px 8px; cursor: pointer; }
+.areas button[aria-pressed="true"] { border-color: var(--ink); }
+.handle { position: fixed; z-index: 3; top: 0; bottom: 0; width: 0; border-left: 2px solid var(--ink); }
+.handle button { position: absolute; top: 46%; left: -13px; width: 24px; height: 52px; border: 1px solid var(--ink); background: var(--ground); cursor: ew-resize; }
+/* The page's last lines sit over the fixed scene, so they carry the page's ground across the full width,
+   as the provenance strip does, and keep a reading width inside it. */
+.credits { position: relative; z-index: 2; padding: 10px 28px 18px; color: var(--dim);
+  background: color-mix(in srgb, var(--ground) 94%, transparent); border-top: 1px solid var(--rule); }
+.credits > * { max-width: 900px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stage canvas, .switch button::after { transition: none; }
+}
+
+/* Phones: no pinned 3D. Each card carries its own still; the free view is for a desktop. */
+@media (max-width: 760px) {
+  .stage, .handle, .legend, .chip, .loading { display: none !important; }
+  .cards { pointer-events: auto; }
+  .card { min-height: 0; display: block; padding: 18px 14px; }
+  .card .body, #m1card .body { width: auto; }
+  .card img.still { display: block; width: 100%; margin-bottom: 10px; }
+  .free { min-height: 0; padding: 18px 14px 30px; display: block; }
+  .free .panel { display: none; }
+  .free::before { content: "The free view needs a desktop screen; the six cards above are the whole finding."; font-size: 13px; }
+}
+
+.fixture { position: fixed; top: 44px; right: 20px; z-index: 4; background: #fff3b0; color: #1b211e; border: 2px solid #1b211e; padding: 6px 10px; font-size: 12px; }
+
+/* The first screen: the scene, the standard's class table, and the strip that names the data. Nothing
+   here invents a colour; the swatches come from the palette the points are drawn with. */
+.hero { position: relative; z-index: 2; min-height: 100vh; box-sizing: border-box;
+  display: grid; pointer-events: none; padding: 74px 28px 22px; }
+.hero > * { pointer-events: auto; }
+.hero img.still { display: none; }
+/* Three lines, not four: the strip under the table has to stay on the first screen. */
+.hero h1 { font-size: 34px; line-height: 1.08; margin: 0 0 10px; max-width: 19ch;
+  font-variation-settings: "CASL" 0.9, "wght" 760; }
+.hero .lede { font-size: 14px; line-height: 1.55; margin: 0; max-width: 46ch; }
+/* A phone draws no live scene and so has no reveal to promise; it says what its still shows. */
+.hero .phone-only { display: none; }
+.hero .hero-text { background: var(--card); border: 1px solid var(--rule); padding: 16px 18px; }
+.asprs { margin: 0; background: var(--card); border: 1px solid var(--rule); padding: 12px 14px; }
+.asprs figcaption { font-size: 12px; color: var(--dim); margin-bottom: 4px; }
+.asprs table { border-collapse: collapse; width: 100%; font-size: 12px; }
+.asprs th, .asprs td { padding: 1px 8px 1px 0; text-align: left; font-weight: 400; vertical-align: baseline;
+  line-height: 1.35; }
+/* A row is one line: a name or a delivery note that wraps doubles the row for nothing. */
+.asprs th[scope="row"], .asprs td.why { white-space: nowrap; }
+.asprs thead th { font-size: 10.5px; color: var(--dim); border-bottom: 1px solid var(--rule); }
+.asprs td.code { color: var(--dim); width: 2.5em; }
+.asprs .swatch { width: 22px; }
+.asprs i { display: inline-block; width: 16px; height: 10px; border: 1px solid var(--rule); }
+.asprs i.none { background: repeating-linear-gradient(135deg, transparent 0 3px, var(--rule) 3px 4px); }
+.asprs tr.missing th, .asprs tr.missing td.count { text-decoration: line-through; color: var(--dim); }
+.asprs tr.unclassified th { color: var(--dim); }
+.asprs tr.story th, .asprs tr.story td.code { color: var(--ink); font-variation-settings: "wght" 680; }
+.asprs tr.story { background: color-mix(in srgb, var(--rule) 22%, transparent); }
+.asprs tr.missing td.count { text-decoration: none; }
+.asprs td.why { font-size: 11px; }
+/* A count and its share read as one figure, so they never break across lines. */
+.asprs td.count { white-space: nowrap; }
+.asprs tbody.nocode { border-top: 1px solid var(--rule); }
+/* The model's own groups carry a shape as well as a colour. In the light theme pole, fence and the two
+   vegetations are close greens at this size; the shape tells the rows apart without the colour. */
+.asprs i.shape-pole { width: 4px; height: 13px; margin: 0 6px; vertical-align: -2px; }
+.asprs i.shape-vehicle { width: 16px; height: 8px; border-radius: 4px; }
+.asprs i.shape-fence { background-image: repeating-linear-gradient(90deg, transparent 0 3px, var(--card) 3px 5px); }
+.asprs .nocode-head { font-size: 10.5px; }
+.asprs .nocode-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1px 14px; font-size: 11px;
+  padding-top: 4px; line-height: 1.5; }
+.asprs .nocode-item { white-space: nowrap; }
+.asprs .nocode-item i { margin-right: 3px; }
+.asprs .src { font-size: 10px; color: var(--dim); margin: 8px 0 0; line-height: 1.45; }
+.strip { display: flex; flex-wrap: wrap; gap: 2px 18px; font-size: 11px; color: var(--ink);
+  border-top: 1px solid var(--rule); padding: 7px 10px; line-height: 1.7;
+  background: color-mix(in srgb, var(--ground) 82%, transparent); backdrop-filter: blur(2px); }
+.strip .cell { white-space: nowrap; }
+.strip .dim { color: var(--dim); }
+
+/* The table is an equal half beside the scene, and the first screen reads as a document. */
+.hero { grid-template-columns: minmax(340px, 38%) minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto; gap: 18px 26px;
+  background: linear-gradient(to right, var(--ground) 0 38%, transparent 38%); }
+.hero .hero-text { grid-column: 1; grid-row: 1; }
+.hero .asprs { grid-column: 1; grid-row: 2; align-self: start; }
+.hero .strip { grid-column: 1; grid-row: 3; align-self: end; }
+/* A short desktop screen cannot hold the text, the table and the strip in one column. The strip keeps
+   its own calm ground, so it can sit at the foot of the scene instead and stay on the first screen. */
+@media (min-width: 761px) and (max-height: 860px) {
+  .hero .strip { grid-column: 2; grid-row: 1 / -1; align-self: end; justify-self: start;
+    max-width: min(80ch, calc(100% - 260px)); }
+  /* Narrower than in the column, so a long cell wraps instead of running under the model label. */
+  .hero .strip .cell { white-space: normal; }
+  .hero { padding-top: 64px; padding-bottom: 10px; }
+  .hero .lede { font-size: 13px; }
+  .asprs th, .asprs td { padding-top: 1px; padding-bottom: 1px; }
+}
+
+@media (max-width: 760px) {
+  .hero { padding: 72px 14px 16px; gap: 12px; }
+  .hero h1 { font-size: 24px; max-width: none; }
+  .hero .lede { font-size: 13px; }
+  .hero .wide-only { display: none; }
+  .hero .phone-only { display: inline; }
+  .hero {
+    grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto auto; background: none; }
+  .hero .hero-text {
+    grid-column: 1; grid-row: 2; }
+  /* A phone draws no live scene, so the picture is a still, and it comes first: the place, then
+     what it is, then what it is made of. This sits after the rule that hides it on a desktop. */
+  .hero img.still {
+    display: block; width: 100%; grid-column: 1; grid-row: 1; align-self: start;
+    border: 1px solid var(--rule); }
+  /* The picture comes before the table on a phone: the place first, then what it is made of. */
+  .hero .asprs {
+    grid-column: 1; grid-row: 3; max-width: none; align-self: start; justify-self: stretch; }
+  .hero .strip {
+    grid-column: 1; grid-row: 4; align-self: end; }
+  .asprs .why { display: none; }
+  .asprs table { font-size: 11px; }
+  /* At phone width nothing may hold a line longer than the screen: names, headers and strip cells
+     wrap, and the header keeps only the name and its two controls. */
+  .asprs { padding: 10px; }
+  .asprs th, .asprs td { padding-right: 6px; }
+  .asprs th[scope="row"], .asprs thead th, .strip .cell { white-space: normal; }
+  .top { left: 12px; right: 12px; }
+  .top .sub { display: none; }
+}

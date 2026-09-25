@@ -1,0 +1,74 @@
+{
+  "measured_utc": "2026-09-21T08:16:41",
+  "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "throttle_megabit_per_second": 20,
+  "order": "visibility",
+  "image": "docs/design/prototype/budget_frames.png",
+  "one_run_per_cell": true,
+  "cells": [
+    {
+      "area": "ggpark",
+      "budget": 3000000,
+      "seconds_to_90_percent": 13.46,
+      "nodes": 268,
+      "octree_bytes": 27968626,
+      "file": "docs/design/prototype/budget/ggpark_3000000.png"
+    },
+    {
+      "area": "ggpark",
+      "budget": 1500000,
+      "seconds_to_90_percent": 6.806,
+      "nodes": 91,
+      "octree_bytes": 14812875,
+      "file": "docs/design/prototype/budget/ggpark_1500000.png"
+    },
+    {
+      "area": "ggpark",
+      "budget": 1000000,
+      "seconds_to_90_percent": 4.65,
+      "nodes": 51,
+      "octree_bytes": 10153931,
+      "file": "docs/design/prototype/budget/ggpark_1000000.png"
+    },
+    {
+      "area": "ggpark",
+      "budget": 750000,
+      "seconds_to_90_percent": 3.589,
+      "nodes": 32,
+      "octree_bytes": 7696634,
+      "file": "docs/design/prototype/budget/ggpark_750000.png"
+    },
+    {
+      "area": "embarcadero",
+      "budget": 3000000,
+      "seconds_to_90_percent": 7.404,
+      "nodes": 385,
+      "octree_bytes": 15890653,
+      "file": "docs/design/prototype/budget/embarcadero_3000000.png"
+    },
+    {
+      "area": "embarcadero",
+      "budget": 1500000,
+      "seconds_to_90_percent": 6.66,
+      "nodes": 326,
+      "octree_bytes": 14280779,
+      "file": "docs/design/prototype/budget/embarcadero_1500000.png"
+    },
+    {
+      "area": "embarcadero",
+      "budget": 1000000,
+      "seconds_to_90_percent": 4.423,
+      "nodes": 204,
+      "octree_bytes": 9928139,
+      "file": "docs/design/prototype/budget/embarcadero_1000000.png"
+    },
+    {
+      "area": "embarcadero",
+      "budget": 750000,
+      "seconds_to_90_percent": 3.957,
+      "nodes": 148,
+      "octree_bytes": 7702086,
+      "file": "docs/design/prototype/budget/embarcadero_750000.png"
+    }
+  ]
+}

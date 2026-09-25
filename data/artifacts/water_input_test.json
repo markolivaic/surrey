@@ -1,0 +1,579 @@
+{
+  "reading_written_before_running": "written 2026-09-20 before the first run: intensity AUROC at or above 0.9 means the one channel that finds water is the sensor-bound one this project dropped; z above the block floor with AUROC near 0.5 while bay blocks are all water means the model's input cannot separate open water from flat ground; Swiss water having land in its block and San Francisco water not having it measures the difference between the two",
+  "model_involved": false,
+  "block_floor": {
+    "block_m": 40.0,
+    "floor_quantile": 0.01,
+    "min_block_points": 2000,
+    "floor_near_m": 0.5,
+    "areas": {
+      "embarcadero": {
+        "blocks": {
+          "all_water": 0,
+          "mixed": 57,
+          "no_water": 7,
+          "floor_on_the_water": 56,
+          "counted": 64
+        },
+        "share_of_blocks_all_water": 0.0,
+        "water_points": 1279147,
+        "share_of_water_points_in_an_all_water_block": 0.0,
+        "z_above_block_floor_m": {
+          "water": {
+            "n": 1279147,
+            "median": 0.12,
+            "p5": 0.03,
+            "p25": 0.08,
+            "p75": 0.15,
+            "p95": 0.21,
+            "mean": 0.12
+          },
+          "ground": {
+            "n": 459883,
+            "median": 1.26,
+            "p5": 0.06,
+            "p25": 0.23,
+            "p75": 3.28,
+            "p95": 3.64,
+            "mean": 1.69
+          }
+        },
+        "share_of_water_points_within_half_a_metre_of_the_floor": 0.9978,
+        "share_of_ground_points_within_half_a_metre_of_the_floor": 0.4363,
+        "separation_by_z_above_floor": {
+          "auroc": 0.1226,
+          "n_positive": 1279147,
+          "n_negative": 459883,
+          "sampled_positive": 1279147,
+          "sampled_negative": 459883,
+          "read_either_way": {
+            "strength": 0.8774,
+            "direction": "water lower"
+          }
+        }
+      },
+      "baybridge": {
+        "blocks": {
+          "all_water": 0,
+          "mixed": 53,
+          "no_water": 0,
+          "floor_on_the_water": 53,
+          "counted": 53
+        },
+        "share_of_blocks_all_water": 0.0,
+        "water_points": 1395758,
+        "share_of_water_points_in_an_all_water_block": 0.0,
+        "z_above_block_floor_m": {
+          "water": {
+            "n": 1395758,
+            "median": 0.09,
+            "p5": 0.02,
+            "p25": 0.06,
+            "p75": 0.12,
+            "p95": 0.16,
+            "mean": 0.089
+          },
+          "ground": {
+            "n": 0
+          }
+        },
+        "share_of_water_points_within_half_a_metre_of_the_floor": 0.9999,
+        "share_of_ground_points_within_half_a_metre_of_the_floor": null,
+        "separation_by_z_above_floor": {
+          "auroc": null,
+          "n_positive": 1395758,
+          "n_negative": 0,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      }
+    }
+  },
+  "swiss_blocks": {
+    "sub_tiles_with_water": 13,
+    "water_points": 16093260,
+    "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.1686,
+    "per_sub_tile": {
+      "ch2024_2683-1243_00": {
+        "water_points_in_counted_blocks": 339853,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.3796,
+        "land_share_of_their_blocks": {
+          "n": 29,
+          "median": 0.09,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.343,
+          "p95": 0.639,
+          "mean": 0.19
+        }
+      },
+      "ch2024_2683-1243_01": {
+        "water_points_in_counted_blocks": 2290705,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.2655,
+        "land_share_of_their_blocks": {
+          "n": 114,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.117,
+          "p95": 0.528,
+          "mean": 0.101
+        }
+      },
+      "ch2024_2683-1243_10": {
+        "water_points_in_counted_blocks": 1707364,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.051,
+        "land_share_of_their_blocks": {
+          "n": 79,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.399,
+          "mean": 0.034
+        }
+      },
+      "ch2024_2683-1243_11": {
+        "water_points_in_counted_blocks": 109433,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.0,
+        "land_share_of_their_blocks": {
+          "n": 6,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0,
+          "mean": 0.0
+        }
+      },
+      "ch2024_2683-1246_00": {
+        "water_points_in_counted_blocks": 1593774,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.0241,
+        "land_share_of_their_blocks": {
+          "n": 83,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.0,
+          "mean": 0.003
+        }
+      },
+      "ch2024_2683-1246_01": {
+        "water_points_in_counted_blocks": 1424103,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.2588,
+        "land_share_of_their_blocks": {
+          "n": 104,
+          "median": 0.084,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.61,
+          "p95": 0.926,
+          "mean": 0.293
+        }
+      },
+      "ch2024_2683-1246_10": {
+        "water_points_in_counted_blocks": 1441121,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.1311,
+        "land_share_of_their_blocks": {
+          "n": 75,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.01,
+          "p95": 0.518,
+          "mean": 0.105
+        }
+      },
+      "ch2024_2683-1246_11": {
+        "water_points_in_counted_blocks": 327907,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.3073,
+        "land_share_of_their_blocks": {
+          "n": 20,
+          "median": 0.122,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.454,
+          "p95": 0.629,
+          "mean": 0.224
+        }
+      },
+      "ch2025_2500-1118_00": {
+        "water_points_in_counted_blocks": 297691,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.5271,
+        "land_share_of_their_blocks": {
+          "n": 29,
+          "median": 0.398,
+          "p5": 0.0,
+          "p25": 0.025,
+          "p75": 0.777,
+          "p95": 0.927,
+          "mean": 0.412
+        }
+      },
+      "ch2025_2500-1118_10": {
+        "water_points_in_counted_blocks": 3239698,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.0826,
+        "land_share_of_their_blocks": {
+          "n": 147,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.518,
+          "mean": 0.072
+        }
+      },
+      "ch2025_2500-1118_11": {
+        "water_points_in_counted_blocks": 1424227,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.2599,
+        "land_share_of_their_blocks": {
+          "n": 72,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.127,
+          "p95": 0.597,
+          "mean": 0.109
+        }
+      },
+      "ch2025_2500-1119_10": {
+        "water_points_in_counted_blocks": 990609,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.2385,
+        "land_share_of_their_blocks": {
+          "n": 56,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.15,
+          "p95": 0.588,
+          "mean": 0.117
+        }
+      },
+      "ch2025_2500-1119_11": {
+        "water_points_in_counted_blocks": 906775,
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.1776,
+        "land_share_of_their_blocks": {
+          "n": 53,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.23,
+          "p95": 0.516,
+          "mean": 0.127
+        }
+      }
+    }
+  },
+  "intensity": {
+    "source": "the delivery's own LAZ, before this project's voxel step",
+    "note": "intensity is not normalised between flights or sensors, which is why this project never trained on it",
+    "areas": {
+      "baybridge": {
+        "delivery_points": 4495909,
+        "water": {
+          "n": 1946662,
+          "median": 36997.0,
+          "p5": 16949.0,
+          "p25": 28507.0,
+          "p75": 44265.0,
+          "p95": 54572.0,
+          "mean": 36463.123
+        },
+        "ground": {
+          "n": 0
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 1946662,
+          "n_negative": 0,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      },
+      "channel": {
+        "delivery_points": 7264088,
+        "water": {
+          "n": 2906,
+          "median": 12162.5,
+          "p5": 2791.0,
+          "p25": 7066.0,
+          "p75": 18442.0,
+          "p95": 26945.25,
+          "mean": 13305.02
+        },
+        "ground": {
+          "n": 2187990,
+          "median": 27500.0,
+          "p5": 16253.0,
+          "p25": 22492.0,
+          "p75": 33684.0,
+          "p95": 41318.0,
+          "mean": 28051.958
+        },
+        "separation": {
+          "auroc": 0.0975,
+          "n_positive": 2906,
+          "n_negative": 2187990,
+          "sampled_positive": 2906,
+          "sampled_negative": 2000000,
+          "read_either_way": {
+            "strength": 0.9025,
+            "direction": "water lower"
+          }
+        }
+      },
+      "embarcadero": {
+        "delivery_points": 9006733,
+        "water": {
+          "n": 1761510,
+          "median": 26788.0,
+          "p5": 6813.0,
+          "p25": 18196.0,
+          "p75": 35763.0,
+          "p95": 49300.0,
+          "mean": 27360.72
+        },
+        "ground": {
+          "n": 1390308,
+          "median": 25666.0,
+          "p5": 17731.0,
+          "p25": 22547.0,
+          "p75": 31385.0,
+          "p95": 40125.0,
+          "mean": 27089.131
+        },
+        "separation": {
+          "auroc": 0.4996,
+          "n_positive": 1761510,
+          "n_negative": 1390308,
+          "sampled_positive": 1761510,
+          "sampled_negative": 1390308,
+          "read_either_way": {
+            "strength": 0.5004,
+            "direction": "water lower"
+          }
+        }
+      },
+      "financial": {
+        "delivery_points": 13086608,
+        "water": {
+          "n": 0
+        },
+        "ground": {
+          "n": 2808839,
+          "median": 24709.0,
+          "p5": 16281.0,
+          "p25": 21398.0,
+          "p75": 29552.0,
+          "p95": 36256.0,
+          "mean": 25416.658
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 0,
+          "n_negative": 2808839,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      },
+      "ggpark": {
+        "delivery_points": 13250164,
+        "water": {
+          "n": 0
+        },
+        "ground": {
+          "n": 4429611,
+          "median": 38390.0,
+          "p5": 11738.0,
+          "p25": 27609.0,
+          "p75": 40798.0,
+          "p95": 42440.0,
+          "mean": 33517.292
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 0,
+          "n_negative": 4429611,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      },
+      "mission": {
+        "delivery_points": 6969036,
+        "water": {
+          "n": 0
+        },
+        "ground": {
+          "n": 2299715,
+          "median": 25256.0,
+          "p5": 15323.0,
+          "p25": 21781.0,
+          "p75": 28868.0,
+          "p95": 33492.0,
+          "mean": 25024.93
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 0,
+          "n_negative": 2299715,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      },
+      "soma": {
+        "delivery_points": 6855946,
+        "water": {
+          "n": 0
+        },
+        "ground": {
+          "n": 2097061,
+          "median": 25447.0,
+          "p5": 16417.0,
+          "p25": 22000.0,
+          "p75": 29388.0,
+          "p95": 39102.0,
+          "mean": 25894.093
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 0,
+          "n_negative": 2097061,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      },
+      "steep": {
+        "delivery_points": 8323079,
+        "water": {
+          "n": 0
+        },
+        "ground": {
+          "n": 1910599,
+          "median": 27007.0,
+          "p5": 13873.0,
+          "p25": 23559.0,
+          "p75": 30674.0,
+          "p95": 36502.0,
+          "mean": 26631.484
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 0,
+          "n_negative": 1910599,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      },
+      "sunset": {
+        "delivery_points": 10495885,
+        "water": {
+          "n": 0
+        },
+        "ground": {
+          "n": 4070439,
+          "median": 30181.0,
+          "p5": 20440.0,
+          "p25": 25174.0,
+          "p75": 34313.0,
+          "p95": 39184.0,
+          "mean": 29646.764
+        },
+        "separation": {
+          "auroc": null,
+          "n_positive": 0,
+          "n_negative": 4070439,
+          "read_either_way": {
+            "strength": null,
+            "direction": null
+          }
+        }
+      }
+    }
+  },
+  "seconds": 16.4,
+  "both_countries": {
+    "note": "the same measurements on both sides, so the difference between them is read off one table; land counts a delivery class above 1 in San Francisco and any labelled non-water class in Switzerland",
+    "countries": {
+      "san_francisco": {
+        "tiles_with_water": 2,
+        "water_points_in_counted_blocks": 2674905,
+        "z_above_block_floor_m": {
+          "n": 2674905,
+          "median": 0.1,
+          "p5": 0.03,
+          "p25": 0.07,
+          "p75": 0.14,
+          "p95": 0.19,
+          "mean": 0.104
+        },
+        "land_share_of_their_blocks": {
+          "n": 110,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.137,
+          "p95": 0.416,
+          "mean": 0.09
+        },
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.2042,
+        "points_per_square_metre": {
+          "n": 2,
+          "median": 41.502,
+          "p5": 34.734,
+          "p25": 37.742,
+          "p75": 45.262,
+          "p95": 48.27,
+          "mean": 41.502
+        }
+      },
+      "switzerland": {
+        "tiles_with_water": 13,
+        "water_points_in_counted_blocks": 16093260,
+        "z_above_block_floor_m": {
+          "n": 16093260,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.0,
+          "p95": 0.03,
+          "mean": 0.005
+        },
+        "land_share_of_their_blocks": {
+          "n": 867,
+          "median": 0.0,
+          "p5": 0.0,
+          "p25": 0.0,
+          "p75": 0.122,
+          "p95": 0.67,
+          "mean": 0.123
+        },
+        "share_of_water_points_whose_block_is_at_least_5_percent_land": 0.1686,
+        "points_per_square_metre": {
+          "n": 13,
+          "median": 17.195,
+          "p5": 8.554,
+          "p25": 15.842,
+          "p75": 18.4,
+          "p95": 23.856,
+          "mean": 16.401
+        }
+      }
+    },
+    "measured_after": "a, b and c, whose readings are above"
+  }
+}

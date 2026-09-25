@@ -1,0 +1,1591 @@
+{
+  "what": "LAS point flags per class in every source",
+  "flags": [
+    "synthetic",
+    "key_point",
+    "withheld",
+    "overlap"
+  ],
+  "dales2_train": {
+    "tiles": 29,
+    "points": 357621323,
+    "overlap_bit_in_format": true,
+    "all_classes": {
+      "share_synthetic": 0.0,
+      "share_key_point": 0.0,
+      "share_withheld": 0.0,
+      "share_overlap": 0.0
+    },
+    "per_class": {
+      "0": {
+        "name": "ground",
+        "points": 178021561,
+        "share_of_source": 0.497793,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "1": {
+        "name": "vegetation",
+        "points": 26405920,
+        "share_of_source": 0.073838,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "2": {
+        "name": "car",
+        "points": 1874735,
+        "share_of_source": 0.005242,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "3": {
+        "name": "powerline",
+        "points": 775547,
+        "share_of_source": 0.002169,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "4": {
+        "name": "fence",
+        "points": 1468478,
+        "share_of_source": 0.004106,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "5": {
+        "name": "tree",
+        "points": 91961579,
+        "share_of_source": 0.257148,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "6": {
+        "name": "pickup",
+        "points": 324304,
+        "share_of_source": 0.000907,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "7": {
+        "name": "van-truck",
+        "points": 764133,
+        "share_of_source": 0.002137,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "8": {
+        "name": "heavy-duty",
+        "points": 86529,
+        "share_of_source": 0.000242,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "9": {
+        "name": "utility-pole",
+        "points": 99518,
+        "share_of_source": 0.000278,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "10": {
+        "name": "light-pole",
+        "points": 63002,
+        "share_of_source": 0.000176,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "11": {
+        "name": "traffic-pole",
+        "points": 37886,
+        "share_of_source": 0.000106,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "12": {
+        "name": "habitat",
+        "points": 37017209,
+        "share_of_source": 0.10351,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "13": {
+        "name": "complex",
+        "points": 17362817,
+        "share_of_source": 0.048551,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "14": {
+        "name": "annex",
+        "points": 1358105,
+        "share_of_source": 0.003798,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      }
+    }
+  },
+  "dales2_test": {
+    "tiles": 11,
+    "points": 134546997,
+    "overlap_bit_in_format": true,
+    "all_classes": {
+      "share_synthetic": 0.0,
+      "share_key_point": 0.0,
+      "share_withheld": 0.0,
+      "share_overlap": 0.0
+    },
+    "per_class": {
+      "0": {
+        "name": "ground",
+        "points": 68871897,
+        "share_of_source": 0.51188,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "1": {
+        "name": "vegetation",
+        "points": 7562656,
+        "share_of_source": 0.056208,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "2": {
+        "name": "car",
+        "points": 819010,
+        "share_of_source": 0.006087,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "3": {
+        "name": "powerline",
+        "points": 220113,
+        "share_of_source": 0.001636,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "4": {
+        "name": "fence",
+        "points": 601167,
+        "share_of_source": 0.004468,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "5": {
+        "name": "tree",
+        "points": 33087061,
+        "share_of_source": 0.245915,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "6": {
+        "name": "pickup",
+        "points": 128909,
+        "share_of_source": 0.000958,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "7": {
+        "name": "van-truck",
+        "points": 142165,
+        "share_of_source": 0.001057,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "8": {
+        "name": "heavy-duty",
+        "points": 31584,
+        "share_of_source": 0.000235,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "9": {
+        "name": "utility-pole",
+        "points": 35525,
+        "share_of_source": 0.000264,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "10": {
+        "name": "light-pole",
+        "points": 18460,
+        "share_of_source": 0.000137,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "11": {
+        "name": "traffic-pole",
+        "points": 8775,
+        "share_of_source": 6.5e-05,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "12": {
+        "name": "habitat",
+        "points": 16346857,
+        "share_of_source": 0.121496,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "13": {
+        "name": "complex",
+        "points": 5982929,
+        "share_of_source": 0.044467,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "14": {
+        "name": "annex",
+        "points": 689889,
+        "share_of_source": 0.005127,
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      }
+    }
+  },
+  "swiss_training": {
+    "tiles": [
+      "2683-1246",
+      "2683-1243",
+      "2500-1118",
+      "2500-1119"
+    ],
+    "per_tile": {
+      "2683-1246": {
+        "points": 17679586,
+        "overlap_bit_in_format": true,
+        "all_classes": {
+          "share_synthetic": 0.237036,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 298983,
+            "share_of_source": 0.016911,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "2": {
+            "name": "ground",
+            "points": 5182031,
+            "share_of_source": 0.293108,
+            "share_synthetic": 0.013468,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "3": {
+            "name": "vegetation",
+            "points": 2718243,
+            "share_of_source": 0.15375,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "6": {
+            "name": "building roofs",
+            "points": 3964590,
+            "share_of_source": 0.224247,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "9": {
+            "name": "water",
+            "points": 4799841,
+            "share_of_source": 0.271491,
+            "share_synthetic": 0.85855,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "14": {
+            "name": "power line",
+            "points": 7218,
+            "share_of_source": 0.000408,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "15": {
+            "name": "masts",
+            "points": 4213,
+            "share_of_source": 0.000238,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 169888,
+            "share_of_source": 0.009609,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "26": {
+            "name": "building facades",
+            "points": 522124,
+            "share_of_source": 0.029533,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "27": {
+            "name": "bridge piers",
+            "points": 12455,
+            "share_of_source": 0.000704,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          }
+        }
+      },
+      "2683-1243": {
+        "points": 13488761,
+        "overlap_bit_in_format": true,
+        "all_classes": {
+          "share_synthetic": 0.329231,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 275697,
+            "share_of_source": 0.020439,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "2": {
+            "name": "ground",
+            "points": 4881858,
+            "share_of_source": 0.36192,
+            "share_synthetic": 0.005417,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "3": {
+            "name": "vegetation",
+            "points": 2650423,
+            "share_of_source": 0.196491,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "6": {
+            "name": "building roofs",
+            "points": 1027523,
+            "share_of_source": 0.076176,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "9": {
+            "name": "water",
+            "points": 4458242,
+            "share_of_source": 0.330515,
+            "share_synthetic": 0.990183,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "14": {
+            "name": "power line",
+            "points": 1654,
+            "share_of_source": 0.000123,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "15": {
+            "name": "masts",
+            "points": 4551,
+            "share_of_source": 0.000337,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 77820,
+            "share_of_source": 0.005769,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "26": {
+            "name": "building facades",
+            "points": 100933,
+            "share_of_source": 0.007483,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "27": {
+            "name": "bridge piers",
+            "points": 10060,
+            "share_of_source": 0.000746,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          }
+        }
+      },
+      "2500-1118": {
+        "points": 17411642,
+        "overlap_bit_in_format": true,
+        "all_classes": {
+          "share_synthetic": 0.285191,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 555722,
+            "share_of_source": 0.031917,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "2": {
+            "name": "ground",
+            "points": 4621426,
+            "share_of_source": 0.265422,
+            "share_synthetic": 0.000587,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "3": {
+            "name": "vegetation",
+            "points": 687350,
+            "share_of_source": 0.039476,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "6": {
+            "name": "building roofs",
+            "points": 5244728,
+            "share_of_source": 0.30122,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "9": {
+            "name": "water",
+            "points": 4963614,
+            "share_of_source": 0.285074,
+            "share_synthetic": 0.999863,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "14": {
+            "name": "power line",
+            "points": 415,
+            "share_of_source": 2.4e-05,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "15": {
+            "name": "masts",
+            "points": 19467,
+            "share_of_source": 0.001118,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 100441,
+            "share_of_source": 0.005769,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "26": {
+            "name": "building facades",
+            "points": 1213699,
+            "share_of_source": 0.069706,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "27": {
+            "name": "bridge piers",
+            "points": 4780,
+            "share_of_source": 0.000275,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          }
+        }
+      },
+      "2500-1119": {
+        "points": 16831995,
+        "overlap_bit_in_format": true,
+        "all_classes": {
+          "share_synthetic": 0.116727,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 478355,
+            "share_of_source": 0.028419,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "2": {
+            "name": "ground",
+            "points": 7595186,
+            "share_of_source": 0.451235,
+            "share_synthetic": 0.008335,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "3": {
+            "name": "vegetation",
+            "points": 3357900,
+            "share_of_source": 0.199495,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "6": {
+            "name": "building roofs",
+            "points": 2578645,
+            "share_of_source": 0.153199,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "9": {
+            "name": "water",
+            "points": 1901714,
+            "share_of_source": 0.112982,
+            "share_synthetic": 0.999855,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "14": {
+            "name": "power line",
+            "points": 1035,
+            "share_of_source": 6.1e-05,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "15": {
+            "name": "masts",
+            "points": 47472,
+            "share_of_source": 0.00282,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 62290,
+            "share_of_source": 0.003701,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "26": {
+            "name": "building facades",
+            "points": 785390,
+            "share_of_source": 0.046661,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "27": {
+            "name": "bridge piers",
+            "points": 24008,
+            "share_of_source": 0.001426,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          }
+        }
+      }
+    },
+    "pooled": {
+      "points": 65411984,
+      "overlap_bit_in_format": true,
+      "all_classes": {
+        "share_synthetic": 0.237908,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "per_class": {
+        "1": {
+          "name": "unclassified",
+          "points": 1608757,
+          "share_of_source": 0.024594,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "2": {
+          "name": "ground",
+          "points": 22280501,
+          "share_of_source": 0.340618,
+          "share_synthetic": 0.007282,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "3": {
+          "name": "vegetation",
+          "points": 9413916,
+          "share_of_source": 0.143917,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "6": {
+          "name": "building roofs",
+          "points": 12815486,
+          "share_of_source": 0.19592,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "9": {
+          "name": "water",
+          "points": 16123411,
+          "share_of_source": 0.24649,
+          "share_synthetic": 0.955117,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "14": {
+          "name": "power line",
+          "points": 10322,
+          "share_of_source": 0.000158,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "15": {
+          "name": "masts",
+          "points": 75703,
+          "share_of_source": 0.001157,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "17": {
+          "name": "bridge deck",
+          "points": 410439,
+          "share_of_source": 0.006275,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "26": {
+          "name": "building facades",
+          "points": 2622146,
+          "share_of_source": 0.040087,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "27": {
+          "name": "bridge piers",
+          "points": 51303,
+          "share_of_source": 0.000784,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        }
+      }
+    }
+  },
+  "swiss_held_out": {
+    "tiles": [
+      "2680-1225"
+    ],
+    "per_tile": {
+      "2680-1225": {
+        "points": 20906489,
+        "overlap_bit_in_format": true,
+        "all_classes": {
+          "share_synthetic": 0.209786,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 332944,
+            "share_of_source": 0.015925,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "2": {
+            "name": "ground",
+            "points": 9701188,
+            "share_of_source": 0.464028,
+            "share_synthetic": 0.004849,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "3": {
+            "name": "vegetation",
+            "points": 4004936,
+            "share_of_source": 0.191564,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "6": {
+            "name": "building roofs",
+            "points": 2129543,
+            "share_of_source": 0.10186,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "9": {
+            "name": "water",
+            "points": 4369359,
+            "share_of_source": 0.208995,
+            "share_synthetic": 0.993014,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "14": {
+            "name": "power line",
+            "points": 414,
+            "share_of_source": 2e-05,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "15": {
+            "name": "masts",
+            "points": 2473,
+            "share_of_source": 0.000118,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 124505,
+            "share_of_source": 0.005955,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "26": {
+            "name": "building facades",
+            "points": 233080,
+            "share_of_source": 0.011149,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          },
+          "27": {
+            "name": "bridge piers",
+            "points": 8047,
+            "share_of_source": 0.000385,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": 0.0
+          }
+        }
+      }
+    },
+    "pooled": {
+      "points": 20906489,
+      "overlap_bit_in_format": true,
+      "all_classes": {
+        "share_synthetic": 0.209786,
+        "share_key_point": 0.0,
+        "share_withheld": 0.0,
+        "share_overlap": 0.0
+      },
+      "per_class": {
+        "1": {
+          "name": "unclassified",
+          "points": 332944,
+          "share_of_source": 0.015925,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "2": {
+          "name": "ground",
+          "points": 9701188,
+          "share_of_source": 0.464028,
+          "share_synthetic": 0.004849,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "3": {
+          "name": "vegetation",
+          "points": 4004936,
+          "share_of_source": 0.191564,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "6": {
+          "name": "building roofs",
+          "points": 2129543,
+          "share_of_source": 0.10186,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "9": {
+          "name": "water",
+          "points": 4369359,
+          "share_of_source": 0.208995,
+          "share_synthetic": 0.993014,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "14": {
+          "name": "power line",
+          "points": 414,
+          "share_of_source": 2e-05,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "15": {
+          "name": "masts",
+          "points": 2473,
+          "share_of_source": 0.000118,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "17": {
+          "name": "bridge deck",
+          "points": 124505,
+          "share_of_source": 0.005955,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "26": {
+          "name": "building facades",
+          "points": 233080,
+          "share_of_source": 0.011149,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        },
+        "27": {
+          "name": "bridge piers",
+          "points": 8047,
+          "share_of_source": 0.000385,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": 0.0
+        }
+      }
+    }
+  },
+  "san_francisco": {
+    "sample": "a seeded sample of up to 60 nodes overlapping each area, points inside it",
+    "per_area": {
+      "financial": {
+        "nodes_overlapping": 459,
+        "nodes_read": 60,
+        "points": 1428043,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.00304,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1009383,
+            "share_of_source": 0.70683,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 414319,
+            "share_of_source": 0.290131,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 1513,
+            "share_of_source": 0.001059,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "18": {
+            "name": "high noise",
+            "points": 2828,
+            "share_of_source": 0.00198,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "soma": {
+        "nodes_overlapping": 181,
+        "nodes_read": 60,
+        "points": 2345770,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.000651,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1599151,
+            "share_of_source": 0.681717,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 745093,
+            "share_of_source": 0.317633,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 1525,
+            "share_of_source": 0.00065,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "18": {
+            "name": "high noise",
+            "points": 1,
+            "share_of_source": 0.0,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "mission": {
+        "nodes_overlapping": 185,
+        "nodes_read": 60,
+        "points": 2191923,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.000682,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1452338,
+            "share_of_source": 0.662586,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 738091,
+            "share_of_source": 0.336732,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 1494,
+            "share_of_source": 0.000682,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "sunset": {
+        "nodes_overlapping": 357,
+        "nodes_read": 60,
+        "points": 1794493,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.000718,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1131752,
+            "share_of_source": 0.630681,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 661453,
+            "share_of_source": 0.368602,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 1282,
+            "share_of_source": 0.000714,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "18": {
+            "name": "high noise",
+            "points": 6,
+            "share_of_source": 3e-06,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "ggpark": {
+        "nodes_overlapping": 277,
+        "nodes_read": 60,
+        "points": 2800963,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.000245,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1896317,
+            "share_of_source": 0.677023,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 903961,
+            "share_of_source": 0.322732,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 685,
+            "share_of_source": 0.000245,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "embarcadero": {
+        "nodes_overlapping": 294,
+        "nodes_read": 60,
+        "points": 1731682,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.001153,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1056435,
+            "share_of_source": 0.610063,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 195517,
+            "share_of_source": 0.112906,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 446,
+            "share_of_source": 0.000258,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "9": {
+            "name": "water",
+            "points": 388847,
+            "share_of_source": 0.224549,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 87437,
+            "share_of_source": 0.050493,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "18": {
+            "name": "high noise",
+            "points": 1550,
+            "share_of_source": 0.000895,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "20": {
+            "name": "",
+            "points": 1450,
+            "share_of_source": 0.000837,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "baybridge": {
+        "nodes_overlapping": 147,
+        "nodes_read": 60,
+        "points": 1742704,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.000176,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 737633,
+            "share_of_source": 0.423269,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 300,
+            "share_of_source": 0.000172,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "9": {
+            "name": "water",
+            "points": 642255,
+            "share_of_source": 0.368539,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "17": {
+            "name": "bridge deck",
+            "points": 362509,
+            "share_of_source": 0.208015,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "18": {
+            "name": "high noise",
+            "points": 7,
+            "share_of_source": 4e-06,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      },
+      "steep": {
+        "nodes_overlapping": 232,
+        "nodes_read": 60,
+        "points": 1912236,
+        "overlap_bit_in_format": false,
+        "all_classes": {
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.001384,
+          "share_overlap": null
+        },
+        "per_class": {
+          "1": {
+            "name": "unclassified",
+            "points": 1400855,
+            "share_of_source": 0.732574,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "2": {
+            "name": "ground",
+            "points": 508734,
+            "share_of_source": 0.266041,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 0.0,
+            "share_overlap": null
+          },
+          "7": {
+            "name": "low noise",
+            "points": 2645,
+            "share_of_source": 0.001383,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          },
+          "18": {
+            "name": "high noise",
+            "points": 2,
+            "share_of_source": 1e-06,
+            "share_synthetic": 0.0,
+            "share_key_point": 0.0,
+            "share_withheld": 1.0,
+            "share_overlap": null
+          }
+        }
+      }
+    },
+    "pooled": {
+      "points": 15947814,
+      "overlap_bit_in_format": false,
+      "all_classes": {
+        "share_synthetic": 0.0,
+        "share_key_point": 0.0,
+        "share_withheld": 0.000896,
+        "share_overlap": null
+      },
+      "per_class": {
+        "1": {
+          "name": "unclassified",
+          "points": 10283864,
+          "share_of_source": 0.644845,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": null
+        },
+        "2": {
+          "name": "ground",
+          "points": 4167168,
+          "share_of_source": 0.2613,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": null
+        },
+        "7": {
+          "name": "low noise",
+          "points": 9890,
+          "share_of_source": 0.00062,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 1.0,
+          "share_overlap": null
+        },
+        "9": {
+          "name": "water",
+          "points": 1031102,
+          "share_of_source": 0.064655,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": null
+        },
+        "17": {
+          "name": "bridge deck",
+          "points": 449946,
+          "share_of_source": 0.028214,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": null
+        },
+        "18": {
+          "name": "high noise",
+          "points": 4394,
+          "share_of_source": 0.000276,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 1.0,
+          "share_overlap": null
+        },
+        "20": {
+          "name": "",
+          "points": 1450,
+          "share_of_source": 9.1e-05,
+          "share_synthetic": 0.0,
+          "share_key_point": 0.0,
+          "share_withheld": 0.0,
+          "share_overlap": null
+        }
+      }
+    }
+  },
+  "seconds": 1351.0,
+  "decisions": {
+    "mbendjilali/DALES-2": {
+      "synthetic": {
+        "decision": "drop",
+        "reason": "never set; the rule every source follows, and it removes nothing here"
+      },
+      "key_point": {
+        "decision": "keep",
+        "reason": "never set; it marks a measured point a thinning kept, nothing against the point"
+      },
+      "withheld": {
+        "decision": "drop",
+        "reason": "never set; the specification says a withheld point is not to be used"
+      },
+      "overlap": {
+        "decision": "keep",
+        "reason": "never set; an overlap point is a measured return from the edge of a flight line"
+      }
+    },
+    "swissSURFACE3D": {
+      "synthetic": {
+        "decision": "drop",
+        "reason": "set on almost all class 9 water and on a small share of ground: points swisstopo placed to fill the surface, not returns, and the regular lattice M1 learned water from"
+      },
+      "key_point": {
+        "decision": "keep",
+        "reason": "never set; the same reason"
+      },
+      "withheld": {
+        "decision": "drop",
+        "reason": "never set; the same rule"
+      },
+      "overlap": {
+        "decision": "keep",
+        "reason": "never set; the same reason"
+      }
+    },
+    "USGS 3DEP CA_SanFrancisco_1_B23": {
+      "synthetic": {
+        "decision": "drop",
+        "reason": "never set in the sampled nodes; the same rule"
+      },
+      "key_point": {
+        "decision": "keep",
+        "reason": "never set in the sampled nodes; the same reason"
+      },
+      "withheld": {
+        "decision": "drop",
+        "reason": "set on every point of the two noise classes, 7 and 18, and on nothing else in the sampled nodes"
+      },
+      "overlap": {
+        "decision": "keep",
+        "reason": "the delivery's point format has no overlap bit"
+      }
+    }
+  }
+}

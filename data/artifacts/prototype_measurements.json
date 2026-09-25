@@ -1,0 +1,1253 @@
+{
+  "measured_utc": "2026-09-21T06:18:05+00:00",
+  "device_bound": true,
+  "device": {
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 0% busy, 0 MiB used",
+    "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "os": "Windows-11-10.0.26200-SP0"
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "thresholds": {
+    "a_first_frame_local_s": {
+      "kind": "max",
+      "value": 3.0
+    },
+    "b_first_frame_20mbit_s": {
+      "kind": "max",
+      "value": 8.0
+    },
+    "c_orbit_median_fps": {
+      "kind": "min",
+      "value": 30.0
+    },
+    "d_scroll_median_fps": {
+      "kind": "min",
+      "value": 30.0
+    },
+    "e_area_change_first_frame_s": {
+      "kind": "max",
+      "value": 2.0
+    }
+  },
+  "runs": {
+    "a_first_frame_local_s": {
+      "per_run": [
+        0.2385,
+        0.27789999997615816,
+        0.2601999999880791
+      ],
+      "median": 0.26,
+      "threshold": 3.0,
+      "kind": "max",
+      "passes": true
+    },
+    "b_first_frame_20mbit_s": {
+      "per_run": [
+        1.186600000023842,
+        1.1335,
+        0.7845
+      ],
+      "median": 1.133,
+      "threshold": 8.0,
+      "kind": "max",
+      "passes": true
+    },
+    "c_orbit_median_fps": {
+      "per_run": [
+        59.9,
+        59.9,
+        59.9
+      ],
+      "median": 59.9,
+      "threshold": 30.0,
+      "kind": "min",
+      "passes": true
+    },
+    "d_scroll_median_fps": {
+      "per_run": [
+        59.9,
+        59.9,
+        59.9
+      ],
+      "median": 59.9,
+      "threshold": 30.0,
+      "kind": "min",
+      "passes": true
+    },
+    "e_area_change_first_frame_s": {
+      "per_run": [
+        0.02080000001192093,
+        0.018599999964237213,
+        0.019300000011920927
+      ],
+      "median": 0.019,
+      "threshold": 2.0,
+      "kind": "max",
+      "passes": true
+    }
+  },
+  "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "headless": true,
+  "browser": "chromium 125.0.6422.26",
+  "video": "docs/design/prototype/03f615e43576c1023cd1da455a49e4c2.webm",
+  "fallback_reading": "all thresholds pass: design B stands",
+  "visibility_lever": {
+    "measured_utc": "2026-09-21T06:26:30+00:00",
+    "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 0% busy, 0 MiB used",
+      "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+      "os": "Windows-11-10.0.26200-SP0"
+    },
+    "order": "visibility",
+    "chromium_flags_added": [
+      "--disable-domain-blocking-for-3d-apis"
+    ],
+    "renderer_note": "device.gpu is the CUDA card checked idle; WebGL ran on webgl_renderer",
+    "budgets": {
+      "3000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            13.431,
+            13.063,
+            13.328
+          ],
+          "median": 13.328,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.005,
+            0.017,
+            0.012
+          ],
+          "median": 0.012,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            7.312,
+            7.609,
+            7.389
+          ],
+          "median": 7.389,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            3000000
+          ],
+          [
+            "visibility",
+            3000000
+          ],
+          [
+            "visibility",
+            3000000
+          ]
+        ]
+      },
+      "1500000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            6.77,
+            6.808,
+            6.807
+          ],
+          "median": 6.807,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.018,
+            0.02,
+            0.018
+          ],
+          "median": 0.018,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            6.391,
+            6.408,
+            6.542
+          ],
+          "median": 6.408,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            1500000
+          ],
+          [
+            "visibility",
+            1500000
+          ],
+          [
+            "visibility",
+            1500000
+          ]
+        ]
+      },
+      "1000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            4.639,
+            4.666,
+            4.639
+          ],
+          "median": 4.639,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.019,
+            0.021,
+            0.019
+          ],
+          "median": 0.019,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            4.271,
+            4.343,
+            4.256
+          ],
+          "median": 4.271,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            1000000
+          ],
+          [
+            "visibility",
+            1000000
+          ],
+          [
+            "visibility",
+            1000000
+          ]
+        ]
+      },
+      "750000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.578,
+            3.601,
+            3.58
+          ],
+          "median": 3.58,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.02,
+            0.02,
+            0.021
+          ],
+          "median": 0.02,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.158,
+            3.175,
+            3.226
+          ],
+          "median": 3.175,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            750000
+          ],
+          [
+            "visibility",
+            750000
+          ],
+          [
+            "visibility",
+            750000
+          ]
+        ]
+      }
+    },
+    "choice": {
+      "budget": 1000000,
+      "next": "set the page's point budget to this and re-measure a to e"
+    }
+  },
+  "g_diagnosis": {
+    "measured_utc": "2026-09-16T18:51:09+00:00",
+    "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 0% busy, 0 MiB used",
+      "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+      "os": "Windows-11-10.0.26200-SP0"
+    },
+    "order": "visibility",
+    "budget": 3000000,
+    "throttle_megabit_per_second": 20,
+    "one_run_only": true,
+    "runs": {
+      "start_camera_ggpark": {
+        "nodes": 268,
+        "nodes_missing_a_load_time": 0,
+        "settled_set_bytes": 0,
+        "share": 0.9,
+        "node_at_share": "r4023",
+        "seconds_to_share": 12.862,
+        "octree_bytes_by_then": 26668192,
+        "megabit_per_second_by_then": 16.59,
+        "preload_bytes": 509283,
+        "slowest_five": [
+          {
+            "node": "r0642",
+            "second": 13.578,
+            "bytes": 0
+          },
+          {
+            "node": "r2054",
+            "second": 13.611,
+            "bytes": 0
+          },
+          {
+            "node": "r4022",
+            "second": 13.614,
+            "bytes": 0
+          },
+          {
+            "node": "r0262",
+            "second": 13.633,
+            "bytes": 0
+          },
+          {
+            "node": "r0623",
+            "second": 13.633,
+            "bytes": 0
+          }
+        ]
+      },
+      "area_change_embarcadero": {
+        "nodes": 385,
+        "nodes_missing_a_load_time": 0,
+        "settled_set_bytes": 0,
+        "share": 0.9,
+        "node_at_share": "r01036",
+        "seconds_to_share": 7.331,
+        "octree_bytes_by_then": 14841931,
+        "megabit_per_second_by_then": 16.2,
+        "preload_bytes": 242951,
+        "slowest_five": [
+          {
+            "node": "r4176",
+            "second": 7.84,
+            "bytes": 0
+          },
+          {
+            "node": "r01214",
+            "second": 7.872,
+            "bytes": 0
+          },
+          {
+            "node": "r00157",
+            "second": 7.889,
+            "bytes": 0
+          },
+          {
+            "node": "r4500",
+            "second": 7.889,
+            "bytes": 0
+          },
+          {
+            "node": "r2017",
+            "second": 7.889,
+            "bytes": 0
+          }
+        ]
+      }
+    },
+    "recovered_from": "data/logs/measure_diagnose_g.log, the output of the run that measured it; a later full run overwrote this file before it carried sections forward"
+  },
+  "budget_lever": {
+    "measured_utc": "2026-09-15T17:38:12+00:00",
+    "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 0% busy, 0 MiB used",
+      "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+      "os": "Windows-11-10.0.26200-SP0"
+    },
+    "renderer_note": "device.gpu is the CUDA card checked idle; WebGL ran on webgl_renderer",
+    "budgets": {
+      "1500000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            5.703,
+            6.136,
+            6.037
+          ],
+          "median": 6.037,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.018,
+            0.015,
+            0.015
+          ],
+          "median": 0.015,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            5.825,
+            5.821,
+            5.755
+          ],
+          "median": 5.821,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        }
+      },
+      "1000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            4.154,
+            null,
+            5.353
+          ],
+          "median": 4.753,
+          "runs_with_a_figure": 2,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.02,
+            null,
+            0.003
+          ],
+          "median": 0.011,
+          "runs_with_a_figure": 2,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.854,
+            null,
+            15.398
+          ],
+          "median": 9.626,
+          "runs_with_a_figure": 2,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": null
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        }
+      },
+      "750000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.597,
+            3.722,
+            3.687
+          ],
+          "median": 3.687,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.003,
+            0.003,
+            0.003
+          ],
+          "median": 0.003,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            9.622,
+            9.353,
+            8.944
+          ],
+          "median": 9.353,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        }
+      }
+    },
+    "choice": {
+      "budget": null,
+      "next": "no smaller budget passes; the second lever, loading order by visibility"
+    },
+    "recovered_from": "data/logs/measure_budget_lever.log, the output of the run that measured it; a later full run overwrote this file before it carried sections forward"
+  },
+  "visibility_lever_first_run": {
+    "measured_utc": "2026-09-16T11:32:52+00:00",
+    "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 0% busy, 0 MiB used",
+      "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+      "os": "Windows-11-10.0.26200-SP0"
+    },
+    "order": "visibility",
+    "chromium_flags_added": [
+      "--disable-domain-blocking-for-3d-apis"
+    ],
+    "renderer_note": "device.gpu is the CUDA card checked idle; WebGL ran on webgl_renderer",
+    "budgets": {
+      "3000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            11.474,
+            null,
+            11.679
+          ],
+          "median": 11.576,
+          "runs_with_a_figure": 2,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.016,
+            null,
+            0.006
+          ],
+          "median": 0.011,
+          "runs_with_a_figure": 2,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            6.723,
+            null,
+            6.626
+          ],
+          "median": 6.675,
+          "runs_with_a_figure": 2,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": null
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            3000000
+          ],
+          [
+            "visibility",
+            3000000
+          ],
+          [
+            "visibility",
+            3000000
+          ]
+        ]
+      },
+      "1500000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            5.67,
+            5.953,
+            5.689
+          ],
+          "median": 5.689,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.019,
+            0.018,
+            0.019
+          ],
+          "median": 0.019,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            5.792,
+            5.709,
+            5.941
+          ],
+          "median": 5.792,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            1500000
+          ],
+          [
+            "visibility",
+            1500000
+          ],
+          [
+            "visibility",
+            1500000
+          ]
+        ]
+      },
+      "1000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            4.2,
+            5.542,
+            5.223
+          ],
+          "median": 5.223,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.02,
+            0.004,
+            0.005
+          ],
+          "median": 0.005,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.84,
+            15.095,
+            14.764
+          ],
+          "median": 14.764,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            1000000
+          ],
+          [
+            "visibility",
+            1000000
+          ],
+          [
+            "visibility",
+            1000000
+          ]
+        ]
+      },
+      "750000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.676,
+            3.644,
+            3.577
+          ],
+          "median": 3.644,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.003,
+            0.005,
+            0.003
+          ],
+          "median": 0.003,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            8.845,
+            9.413,
+            9.033
+          ],
+          "median": 9.033,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            },
+            {
+              "embarcadero": 218783
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            750000
+          ],
+          [
+            "visibility",
+            750000
+          ],
+          [
+            "visibility",
+            750000
+          ]
+        ]
+      }
+    },
+    "choice": {
+      "budget": null,
+      "next": "no budget passes with visibility order; the third lever, fewer bits for confidence"
+    },
+    "recovered_from": "data/logs/measure_visibility_lever.log, the output of the run that measured it; a later full run overwrote this file before it carried sections forward"
+  },
+  "detail": {
+    "runs": {
+      "f_start_camera_90pct_nodes_20mbit_s": {
+        "per_run": [
+          11.656,
+          11.642,
+          null
+        ],
+        "median": 11.649,
+        "threshold": 5.0,
+        "kind": "max",
+        "passes": false
+      },
+      "g_area_change_coarse_preload_first_frame_20mbit_s": {
+        "per_run": [
+          0.011,
+          0.013,
+          null
+        ],
+        "median": 0.012,
+        "threshold": 2.0,
+        "kind": "max",
+        "passes": true
+      },
+      "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+        "per_run": [
+          6.618,
+          6.485,
+          null
+        ],
+        "median": 6.552,
+        "threshold": 5.0,
+        "kind": "max",
+        "passes": false
+      },
+      "h_preload_bytes": {
+        "per_run": [
+          {
+            "embarcadero": 218783
+          },
+          {
+            "embarcadero": 218783
+          },
+          {
+            "embarcadero": null
+          }
+        ]
+      }
+    },
+    "recovered_from": "data/logs/measure_detail.log, the output of the run that measured it; a later full run overwrote this file before it carried sections forward",
+    "recovered_note": "the run printed its figures only, so the device stamp is not recovered"
+  },
+  "visibility_lever_first_of_two_on_the_21st": {
+    "measured_utc": "2026-09-21T06:14:28+00:00",
+    "webgl_renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001681) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "device": {
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU, 0% busy, 0 MiB used",
+      "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+      "os": "Windows-11-10.0.26200-SP0"
+    },
+    "order": "visibility",
+    "chromium_flags_added": [
+      "--disable-domain-blocking-for-3d-apis"
+    ],
+    "renderer_note": "device.gpu is the CUDA card checked idle; WebGL ran on webgl_renderer",
+    "budgets": {
+      "3000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            13.293,
+            13.286,
+            13.28
+          ],
+          "median": 13.286,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.011,
+            0.01,
+            0.205
+          ],
+          "median": 0.011,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            7.37,
+            7.285,
+            7.573
+          ],
+          "median": 7.37,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            3000000
+          ],
+          [
+            "visibility",
+            3000000
+          ],
+          [
+            "visibility",
+            3000000
+          ]
+        ]
+      },
+      "1500000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            6.785,
+            6.832,
+            6.81
+          ],
+          "median": 6.81,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.019,
+            0.016,
+            0.019
+          ],
+          "median": 0.019,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            6.474,
+            6.425,
+            6.374
+          ],
+          "median": 6.425,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": false
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            1500000
+          ],
+          [
+            "visibility",
+            1500000
+          ],
+          [
+            "visibility",
+            1500000
+          ]
+        ]
+      },
+      "1000000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            4.609,
+            4.651,
+            4.683
+          ],
+          "median": 4.651,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.02,
+            0.019,
+            0.019
+          ],
+          "median": 0.019,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            4.14,
+            4.138,
+            4.286
+          ],
+          "median": 4.14,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            1000000
+          ],
+          [
+            "visibility",
+            1000000
+          ],
+          [
+            "visibility",
+            1000000
+          ]
+        ]
+      },
+      "750000": {
+        "f_start_camera_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.547,
+            3.591,
+            3.583
+          ],
+          "median": 3.583,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_first_frame_20mbit_s": {
+          "per_run": [
+            0.018,
+            0.019,
+            0.019
+          ],
+          "median": 0.019,
+          "runs_with_a_figure": 3,
+          "threshold": 2.0,
+          "kind": "max",
+          "passes": true
+        },
+        "g_area_change_coarse_preload_90pct_nodes_20mbit_s": {
+          "per_run": [
+            3.133,
+            3.267,
+            3.168
+          ],
+          "median": 3.168,
+          "runs_with_a_figure": 3,
+          "threshold": 5.0,
+          "kind": "max",
+          "passes": true
+        },
+        "h_preload_bytes": {
+          "per_run": [
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            },
+            {
+              "embarcadero": 242951
+            }
+          ]
+        },
+        "page_order_and_budget": [
+          [
+            "visibility",
+            750000
+          ],
+          [
+            "visibility",
+            750000
+          ],
+          [
+            "visibility",
+            750000
+          ]
+        ]
+      }
+    },
+    "choice": {
+      "budget": 1000000,
+      "next": "set the page's point budget to this and re-measure a to e"
+    },
+    "recovered_from": "data/logs/measure_after_chain.log, the output of the run that measured it; a later full run overwrote this file before it carried sections forward"
+  }
+}

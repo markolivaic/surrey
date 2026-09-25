@@ -1,0 +1,831 @@
+{
+  "rule_written_before": "for each theme, the largest strength in the grid at which every palette rule passes on both scenes in all three visions at the median shade, provided every smaller strength in the grid passes too; written in progress.md on 2026-09-23 before the sweep ran",
+  "grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+  ],
+  "scenes": {
+    "sunset_mid": "area=sunset&open=mid",
+    "ggpark_cards": "area=ggpark&open=cards"
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "cells": {
+    "light|sunset_mid|0": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.0,
+      "shade_median": 1.0,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.33,
+        "deuteranopia": 3.52,
+        "protanopia": 3.04
+      }
+    },
+    "light|sunset_mid|0.05": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.05,
+      "shade_median": 0.9855,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.42,
+        "deuteranopia": 3.61,
+        "protanopia": 3.12
+      }
+    },
+    "light|sunset_mid|0.1": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.1,
+      "shade_median": 0.9732,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.49,
+        "deuteranopia": 3.68,
+        "protanopia": 3.19
+      }
+    },
+    "light|sunset_mid|0.15": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.15,
+      "shade_median": 0.9583,
+      "failures": [
+        "R2 vegetation/pole normal: 19.7",
+        "R2 vegetation/pole deuteranopia: 19.8"
+      ],
+      "contrast_min": {
+        "normal": 3.59,
+        "deuteranopia": 3.78,
+        "protanopia": 3.28
+      }
+    },
+    "light|sunset_mid|0.2": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.2,
+      "shade_median": 0.9451,
+      "failures": [
+        "R2 vegetation/pole normal: 19.5",
+        "R2 vegetation/pole deuteranopia: 19.5",
+        "R2 vegetation/pole protanopia: 19.9"
+      ],
+      "contrast_min": {
+        "normal": 3.67,
+        "deuteranopia": 3.87,
+        "protanopia": 3.36
+      }
+    },
+    "light|sunset_mid|0.25": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.25,
+      "shade_median": 0.9316,
+      "failures": [
+        "R2 vegetation/pole normal: 19.3",
+        "R2 vegetation/pole deuteranopia: 19.3",
+        "R2 vegetation/pole protanopia: 19.6"
+      ],
+      "contrast_min": {
+        "normal": 3.76,
+        "deuteranopia": 3.96,
+        "protanopia": 3.44
+      }
+    },
+    "light|sunset_mid|0.3": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.3,
+      "shade_median": 0.9185,
+      "failures": [
+        "R2 vegetation/pole normal: 19.1",
+        "R2 vegetation/pole deuteranopia: 19.1",
+        "R2 vegetation/pole protanopia: 19.4"
+      ],
+      "contrast_min": {
+        "normal": 3.85,
+        "deuteranopia": 4.05,
+        "protanopia": 3.53
+      }
+    },
+    "light|sunset_mid|0.35": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.35,
+      "shade_median": 0.9055,
+      "failures": [
+        "R2 vegetation/pole normal: 18.8",
+        "R2 vegetation/pole deuteranopia: 18.9",
+        "R2 vegetation/pole protanopia: 19.2"
+      ],
+      "contrast_min": {
+        "normal": 3.95,
+        "deuteranopia": 4.15,
+        "protanopia": 3.62
+      }
+    },
+    "light|sunset_mid|0.4": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.4,
+      "shade_median": 0.8929,
+      "failures": [
+        "R2 vegetation/pole normal: 18.6",
+        "R2 vegetation/pole deuteranopia: 18.7",
+        "R2 vegetation/pole protanopia: 19.0"
+      ],
+      "contrast_min": {
+        "normal": 4.04,
+        "deuteranopia": 4.24,
+        "protanopia": 3.7
+      }
+    },
+    "light|sunset_mid|0.45": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.45,
+      "shade_median": 0.8806,
+      "failures": [
+        "R2 vegetation/pole normal: 18.4",
+        "R2 vegetation/pole deuteranopia: 18.5",
+        "R2 vegetation/pole protanopia: 18.8"
+      ],
+      "contrast_min": {
+        "normal": 4.13,
+        "deuteranopia": 4.34,
+        "protanopia": 3.79
+      }
+    },
+    "light|sunset_mid|0.5": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.5,
+      "shade_median": 0.8684,
+      "failures": [
+        "R2 vegetation/pole normal: 18.2",
+        "R2 vegetation/pole deuteranopia: 18.3",
+        "R2 vegetation/pole protanopia: 18.5"
+      ],
+      "contrast_min": {
+        "normal": 4.23,
+        "deuteranopia": 4.43,
+        "protanopia": 3.88
+      }
+    },
+    "light|sunset_mid|0.55": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.55,
+      "shade_median": 0.8571,
+      "failures": [
+        "R2 vegetation/pole normal: 18.0",
+        "R2 vegetation/pole deuteranopia: 18.1",
+        "R2 vegetation/pole protanopia: 18.3"
+      ],
+      "contrast_min": {
+        "normal": 4.32,
+        "deuteranopia": 4.53,
+        "protanopia": 3.97
+      }
+    },
+    "light|sunset_mid|0.6": {
+      "theme": "light",
+      "scene": "sunset_mid",
+      "strength": 0.6,
+      "shade_median": 0.8448,
+      "failures": [
+        "R2 vegetation/pole normal: 17.8",
+        "R2 vegetation/pole deuteranopia: 17.9",
+        "R2 vegetation/pole protanopia: 18.1"
+      ],
+      "contrast_min": {
+        "normal": 4.42,
+        "deuteranopia": 4.63,
+        "protanopia": 4.06
+      }
+    },
+    "light|ggpark_cards|0": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.0,
+      "shade_median": 1.0,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.33,
+        "deuteranopia": 3.52,
+        "protanopia": 3.04
+      }
+    },
+    "light|ggpark_cards|0.05": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.05,
+      "shade_median": 0.9799,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.45,
+        "deuteranopia": 3.64,
+        "protanopia": 3.15
+      }
+    },
+    "light|ggpark_cards|0.1": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.1,
+      "shade_median": 0.9573,
+      "failures": [
+        "R2 vegetation/pole normal: 19.7",
+        "R2 vegetation/pole deuteranopia: 19.7"
+      ],
+      "contrast_min": {
+        "normal": 3.59,
+        "deuteranopia": 3.79,
+        "protanopia": 3.28
+      }
+    },
+    "light|ggpark_cards|0.15": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.15,
+      "shade_median": 0.9359,
+      "failures": [
+        "R2 vegetation/pole normal: 19.4",
+        "R2 vegetation/pole deuteranopia: 19.4",
+        "R2 vegetation/pole protanopia: 19.7"
+      ],
+      "contrast_min": {
+        "normal": 3.73,
+        "deuteranopia": 3.93,
+        "protanopia": 3.42
+      }
+    },
+    "light|ggpark_cards|0.2": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.2,
+      "shade_median": 0.9167,
+      "failures": [
+        "R2 vegetation/pole normal: 19.0",
+        "R2 vegetation/pole deuteranopia: 19.1",
+        "R2 vegetation/pole protanopia: 19.4"
+      ],
+      "contrast_min": {
+        "normal": 3.87,
+        "deuteranopia": 4.07,
+        "protanopia": 3.54
+      }
+    },
+    "light|ggpark_cards|0.25": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.25,
+      "shade_median": 0.8968,
+      "failures": [
+        "R2 vegetation/pole normal: 18.7",
+        "R2 vegetation/pole deuteranopia: 18.7",
+        "R2 vegetation/pole protanopia: 19.0"
+      ],
+      "contrast_min": {
+        "normal": 4.01,
+        "deuteranopia": 4.21,
+        "protanopia": 3.68
+      }
+    },
+    "light|ggpark_cards|0.3": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.3,
+      "shade_median": 0.8774,
+      "failures": [
+        "R2 vegetation/pole normal: 18.4",
+        "R2 vegetation/pole deuteranopia: 18.4",
+        "R2 vegetation/pole protanopia: 18.7"
+      ],
+      "contrast_min": {
+        "normal": 4.16,
+        "deuteranopia": 4.36,
+        "protanopia": 3.82
+      }
+    },
+    "light|ggpark_cards|0.35": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.35,
+      "shade_median": 0.859,
+      "failures": [
+        "R2 vegetation/pole normal: 18.0",
+        "R2 vegetation/pole deuteranopia: 18.1",
+        "R2 vegetation/pole protanopia: 18.4"
+      ],
+      "contrast_min": {
+        "normal": 4.3,
+        "deuteranopia": 4.51,
+        "protanopia": 3.95
+      }
+    },
+    "light|ggpark_cards|0.4": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.4,
+      "shade_median": 0.8403,
+      "failures": [
+        "R2 vegetation/pole normal: 17.7",
+        "R2 vegetation/pole deuteranopia: 17.8",
+        "R2 vegetation/pole protanopia: 18.0"
+      ],
+      "contrast_min": {
+        "normal": 4.46,
+        "deuteranopia": 4.67,
+        "protanopia": 4.1
+      }
+    },
+    "light|ggpark_cards|0.45": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.45,
+      "shade_median": 0.822,
+      "failures": [
+        "R2 vegetation/pole normal: 17.4",
+        "R2 vegetation/pole deuteranopia: 17.5",
+        "R2 vegetation/pole protanopia: 17.7"
+      ],
+      "contrast_min": {
+        "normal": 4.61,
+        "deuteranopia": 4.83,
+        "protanopia": 4.25
+      }
+    },
+    "light|ggpark_cards|0.5": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.5,
+      "shade_median": 0.8052,
+      "failures": [
+        "R2 vegetation/pole normal: 17.1",
+        "R2 vegetation/pole deuteranopia: 17.2",
+        "R2 vegetation/pole protanopia: 17.4"
+      ],
+      "contrast_min": {
+        "normal": 4.76,
+        "deuteranopia": 4.98,
+        "protanopia": 4.39
+      }
+    },
+    "light|ggpark_cards|0.55": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.55,
+      "shade_median": 0.7881,
+      "failures": [
+        "R2 vegetation/pole normal: 16.8",
+        "R2 vegetation/pole deuteranopia: 16.9",
+        "R2 vegetation/pole protanopia: 17.1"
+      ],
+      "contrast_min": {
+        "normal": 4.92,
+        "deuteranopia": 5.14,
+        "protanopia": 4.54
+      }
+    },
+    "light|ggpark_cards|0.6": {
+      "theme": "light",
+      "scene": "ggpark_cards",
+      "strength": 0.6,
+      "shade_median": 0.7707,
+      "failures": [
+        "R2 vegetation/pole normal: 16.5",
+        "R2 vegetation/pole deuteranopia: 16.6",
+        "R2 vegetation/pole protanopia: 16.8",
+        "R3 vegetation/bridge deck deuteranopia: 9.9",
+        "R3 fence/bridge deck deuteranopia: 9.9"
+      ],
+      "contrast_min": {
+        "normal": 5.09,
+        "deuteranopia": 5.31,
+        "protanopia": 4.7
+      }
+    },
+    "dark|sunset_mid|0": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.0,
+      "shade_median": 1.0,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.6,
+        "deuteranopia": 3.37,
+        "protanopia": 3.8
+      }
+    },
+    "dark|sunset_mid|0.05": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.05,
+      "shade_median": 0.9851,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.51,
+        "deuteranopia": 3.3,
+        "protanopia": 3.7
+      }
+    },
+    "dark|sunset_mid|0.1": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.1,
+      "shade_median": 0.9707,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.43,
+        "deuteranopia": 3.22,
+        "protanopia": 3.62
+      }
+    },
+    "dark|sunset_mid|0.15": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.15,
+      "shade_median": 0.9569,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.35,
+        "deuteranopia": 3.15,
+        "protanopia": 3.53
+      }
+    },
+    "dark|sunset_mid|0.2": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.2,
+      "shade_median": 0.9432,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.27,
+        "deuteranopia": 3.08,
+        "protanopia": 3.45
+      }
+    },
+    "dark|sunset_mid|0.25": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.25,
+      "shade_median": 0.9298,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.2,
+        "deuteranopia": 3.01,
+        "protanopia": 3.37
+      }
+    },
+    "dark|sunset_mid|0.3": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.3,
+      "shade_median": 0.9167,
+      "failures": [
+        "R1 deuteranopia: contrast 2.95"
+      ],
+      "contrast_min": {
+        "normal": 3.13,
+        "deuteranopia": 2.95,
+        "protanopia": 3.3
+      }
+    },
+    "dark|sunset_mid|0.35": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.35,
+      "shade_median": 0.9035,
+      "failures": [
+        "R1 deuteranopia: contrast 2.89"
+      ],
+      "contrast_min": {
+        "normal": 3.06,
+        "deuteranopia": 2.89,
+        "protanopia": 3.22
+      }
+    },
+    "dark|sunset_mid|0.4": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.4,
+      "shade_median": 0.8904,
+      "failures": [
+        "R1 normal: contrast 3.00",
+        "R1 deuteranopia: contrast 2.83"
+      ],
+      "contrast_min": {
+        "normal": 3.0,
+        "deuteranopia": 2.83,
+        "protanopia": 3.15
+      }
+    },
+    "dark|sunset_mid|0.45": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.45,
+      "shade_median": 0.8775,
+      "failures": [
+        "R1 normal: contrast 2.93",
+        "R1 deuteranopia: contrast 2.77"
+      ],
+      "contrast_min": {
+        "normal": 2.93,
+        "deuteranopia": 2.77,
+        "protanopia": 3.08
+      }
+    },
+    "dark|sunset_mid|0.5": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.5,
+      "shade_median": 0.8646,
+      "failures": [
+        "R1 normal: contrast 2.87",
+        "R1 deuteranopia: contrast 2.71"
+      ],
+      "contrast_min": {
+        "normal": 2.87,
+        "deuteranopia": 2.71,
+        "protanopia": 3.01
+      }
+    },
+    "dark|sunset_mid|0.55": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.55,
+      "shade_median": 0.852,
+      "failures": [
+        "R1 normal: contrast 2.81",
+        "R1 deuteranopia: contrast 2.65",
+        "R1 protanopia: contrast 2.95"
+      ],
+      "contrast_min": {
+        "normal": 2.81,
+        "deuteranopia": 2.65,
+        "protanopia": 2.95
+      }
+    },
+    "dark|sunset_mid|0.6": {
+      "theme": "dark",
+      "scene": "sunset_mid",
+      "strength": 0.6,
+      "shade_median": 0.8402,
+      "failures": [
+        "R1 normal: contrast 2.75",
+        "R1 deuteranopia: contrast 2.60",
+        "R1 protanopia: contrast 2.89"
+      ],
+      "contrast_min": {
+        "normal": 2.75,
+        "deuteranopia": 2.6,
+        "protanopia": 2.89
+      }
+    },
+    "dark|ggpark_cards|0": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.0,
+      "shade_median": 1.0,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.6,
+        "deuteranopia": 3.37,
+        "protanopia": 3.8
+      }
+    },
+    "dark|ggpark_cards|0.05": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.05,
+      "shade_median": 0.9778,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.47,
+        "deuteranopia": 3.26,
+        "protanopia": 3.66
+      }
+    },
+    "dark|ggpark_cards|0.1": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.1,
+      "shade_median": 0.9556,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.34,
+        "deuteranopia": 3.14,
+        "protanopia": 3.52
+      }
+    },
+    "dark|ggpark_cards|0.15": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.15,
+      "shade_median": 0.9339,
+      "failures": [],
+      "contrast_min": {
+        "normal": 3.22,
+        "deuteranopia": 3.03,
+        "protanopia": 3.4
+      }
+    },
+    "dark|ggpark_cards|0.2": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.2,
+      "shade_median": 0.9127,
+      "failures": [
+        "R1 deuteranopia: contrast 2.93"
+      ],
+      "contrast_min": {
+        "normal": 3.11,
+        "deuteranopia": 2.93,
+        "protanopia": 3.28
+      }
+    },
+    "dark|ggpark_cards|0.25": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.25,
+      "shade_median": 0.8929,
+      "failures": [
+        "R1 deuteranopia: contrast 2.84"
+      ],
+      "contrast_min": {
+        "normal": 3.01,
+        "deuteranopia": 2.84,
+        "protanopia": 3.17
+      }
+    },
+    "dark|ggpark_cards|0.3": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.3,
+      "shade_median": 0.8724,
+      "failures": [
+        "R1 normal: contrast 2.91",
+        "R1 deuteranopia: contrast 2.74"
+      ],
+      "contrast_min": {
+        "normal": 2.91,
+        "deuteranopia": 2.74,
+        "protanopia": 3.06
+      }
+    },
+    "dark|ggpark_cards|0.35": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.35,
+      "shade_median": 0.8529,
+      "failures": [
+        "R1 normal: contrast 2.81",
+        "R1 deuteranopia: contrast 2.66",
+        "R1 protanopia: contrast 2.95"
+      ],
+      "contrast_min": {
+        "normal": 2.81,
+        "deuteranopia": 2.66,
+        "protanopia": 2.95
+      }
+    },
+    "dark|ggpark_cards|0.4": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.4,
+      "shade_median": 0.8341,
+      "failures": [
+        "R1 normal: contrast 2.72",
+        "R1 deuteranopia: contrast 2.57",
+        "R1 protanopia: contrast 2.86"
+      ],
+      "contrast_min": {
+        "normal": 2.72,
+        "deuteranopia": 2.57,
+        "protanopia": 2.86
+      }
+    },
+    "dark|ggpark_cards|0.45": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.45,
+      "shade_median": 0.8153,
+      "failures": [
+        "R1 normal: contrast 2.63",
+        "R1 deuteranopia: contrast 2.49",
+        "R1 protanopia: contrast 2.76"
+      ],
+      "contrast_min": {
+        "normal": 2.63,
+        "deuteranopia": 2.49,
+        "protanopia": 2.76
+      }
+    },
+    "dark|ggpark_cards|0.5": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.5,
+      "shade_median": 0.7974,
+      "failures": [
+        "R1 normal: contrast 2.55",
+        "R1 deuteranopia: contrast 2.42",
+        "R1 protanopia: contrast 2.68",
+        "R3 building/vehicle deuteranopia: 9.8"
+      ],
+      "contrast_min": {
+        "normal": 2.55,
+        "deuteranopia": 2.42,
+        "protanopia": 2.68
+      }
+    },
+    "dark|ggpark_cards|0.55": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.55,
+      "shade_median": 0.7794,
+      "failures": [
+        "R1 normal: contrast 2.47",
+        "R1 deuteranopia: contrast 2.35",
+        "R1 protanopia: contrast 2.59",
+        "R3 building/vehicle deuteranopia: 9.6"
+      ],
+      "contrast_min": {
+        "normal": 2.47,
+        "deuteranopia": 2.35,
+        "protanopia": 2.59
+      }
+    },
+    "dark|ggpark_cards|0.6": {
+      "theme": "dark",
+      "scene": "ggpark_cards",
+      "strength": 0.6,
+      "shade_median": 0.7621,
+      "failures": [
+        "R1 normal: contrast 2.40",
+        "R1 deuteranopia: contrast 2.28",
+        "R1 protanopia: contrast 2.51",
+        "R3 building/vehicle deuteranopia: 9.4"
+      ],
+      "contrast_min": {
+        "normal": 2.4,
+        "deuteranopia": 2.28,
+        "protanopia": 2.51
+      }
+    }
+  },
+  "chosen": {
+    "light": {
+      "strength": 0.05,
+      "passes_by_strength": {
+        "0": true,
+        "0.05": true,
+        "0.1": false,
+        "0.15": false,
+        "0.2": false,
+        "0.25": false,
+        "0.3": false,
+        "0.35": false,
+        "0.4": false,
+        "0.45": false,
+        "0.5": false,
+        "0.55": false,
+        "0.6": false
+      }
+    },
+    "dark": {
+      "strength": 0.15,
+      "passes_by_strength": {
+        "0": true,
+        "0.05": true,
+        "0.1": true,
+        "0.15": true,
+        "0.2": false,
+        "0.25": false,
+        "0.3": false,
+        "0.35": false,
+        "0.4": false,
+        "0.45": false,
+        "0.5": false,
+        "0.55": false,
+        "0.6": false
+      }
+    }
+  },
+  "console_errors": [],
+  "palette_read": "docs/design/palette.json as it stood when --rechoose last ran"
+}

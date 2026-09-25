@@ -1,0 +1,149 @@
+{
+  "method": "The bug card is one frame against another: the same points, the old checkpoint, the input\nas delivered against the return ratio set to 0. For a reader with a red-green deficiency\nthe difference between the two frames is what is left of the finding. This measures it:",
+  "pairs": {
+    "before_light_e6e9e6": {
+      "pixels": 1293600,
+      "changed_share": 0.202,
+      "changed_de": 20.0,
+      "normal": {
+        "median_delta_e76": 69.1,
+        "share_of_normal": 1.0
+      },
+      "deuteranopia": {
+        "median_delta_e76": 19.7,
+        "share_of_normal": 0.286
+      },
+      "protanopia": {
+        "median_delta_e76": 36.5,
+        "share_of_normal": 0.528
+      },
+      "sensitivity_changed_de_2_3": {
+        "pixels": 1293600,
+        "changed_share": 0.395,
+        "changed_de": 2.3,
+        "normal": {
+          "median_delta_e76": 21.9,
+          "share_of_normal": 1.0
+        },
+        "deuteranopia": {
+          "median_delta_e76": 12.8,
+          "share_of_normal": 0.586
+        },
+        "protanopia": {
+          "median_delta_e76": 15.9,
+          "share_of_normal": 0.729
+        }
+      },
+      "a": "docs/design/frames/ggpark_ret0_oblique_e6e9e6.png",
+      "b": "docs/design/frames/ggpark_returns_ood_oblique_e6e9e6.png"
+    },
+    "before_dark_1c1a17": {
+      "pixels": 1293600,
+      "changed_share": 0.202,
+      "changed_de": 20.0,
+      "normal": {
+        "median_delta_e76": 69.1,
+        "share_of_normal": 1.0
+      },
+      "deuteranopia": {
+        "median_delta_e76": 19.7,
+        "share_of_normal": 0.286
+      },
+      "protanopia": {
+        "median_delta_e76": 36.5,
+        "share_of_normal": 0.528
+      },
+      "sensitivity_changed_de_2_3": {
+        "pixels": 1293600,
+        "changed_share": 0.395,
+        "changed_de": 2.3,
+        "normal": {
+          "median_delta_e76": 21.9,
+          "share_of_normal": 1.0
+        },
+        "deuteranopia": {
+          "median_delta_e76": 12.8,
+          "share_of_normal": 0.586
+        },
+        "protanopia": {
+          "median_delta_e76": 15.9,
+          "share_of_normal": 0.729
+        }
+      },
+      "a": "docs/design/frames/ggpark_ret0_oblique_1c1a17.png",
+      "b": "docs/design/frames/ggpark_returns_ood_oblique_1c1a17.png"
+    },
+    "after_light": {
+      "pixels": 1689600,
+      "changed_share": 0.4192,
+      "changed_de": 20.0,
+      "normal": {
+        "median_delta_e76": 70.1,
+        "share_of_normal": 1.0
+      },
+      "deuteranopia": {
+        "median_delta_e76": 57.3,
+        "share_of_normal": 0.818
+      },
+      "protanopia": {
+        "median_delta_e76": 57.9,
+        "share_of_normal": 0.826
+      },
+      "sensitivity_changed_de_2_3": {
+        "pixels": 1689600,
+        "changed_share": 0.5227,
+        "changed_de": 2.3,
+        "normal": {
+          "median_delta_e76": 56.8,
+          "share_of_normal": 1.0
+        },
+        "deuteranopia": {
+          "median_delta_e76": 46.2,
+          "share_of_normal": 0.812
+        },
+        "protanopia": {
+          "median_delta_e76": 48.0,
+          "share_of_normal": 0.846
+        }
+      },
+      "a": "docs/design/frames/ggpark_ret0_oblique_e6e9e6_edl00_p2.png",
+      "b": "docs/design/frames/ggpark_returns_ood_oblique_e6e9e6_edl00_p2.png"
+    },
+    "after_dark": {
+      "pixels": 1689600,
+      "changed_share": 0.4826,
+      "changed_de": 20.0,
+      "normal": {
+        "median_delta_e76": 72.3,
+        "share_of_normal": 1.0
+      },
+      "deuteranopia": {
+        "median_delta_e76": 57.3,
+        "share_of_normal": 0.793
+      },
+      "protanopia": {
+        "median_delta_e76": 60.9,
+        "share_of_normal": 0.842
+      },
+      "sensitivity_changed_de_2_3": {
+        "pixels": 1689600,
+        "changed_share": 0.5237,
+        "changed_de": 2.3,
+        "normal": {
+          "median_delta_e76": 68.3,
+          "share_of_normal": 1.0
+        },
+        "deuteranopia": {
+          "median_delta_e76": 50.1,
+          "share_of_normal": 0.733
+        },
+        "protanopia": {
+          "median_delta_e76": 54.4,
+          "share_of_normal": 0.797
+        }
+      },
+      "a": "docs/design/frames/ggpark_ret0_oblique_131815_edl00_p2.png",
+      "b": "docs/design/frames/ggpark_returns_ood_oblique_131815_edl00_p2.png"
+    }
+  }
+}

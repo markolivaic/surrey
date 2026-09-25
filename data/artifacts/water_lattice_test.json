@@ -1,0 +1,191 @@
+{
+  "reading_written_before_running": "written 2026-09-23 before the first run: if water IoU on Zug falls well below as_prepared when the water points are moved off their 25 cm grid, and does not fall that way when ground points are moved the same distance, M1's water depends on the grid; if it barely moves, the grid is not what M1 reads and the rest of the San Francisco result stays unexplained",
+  "jitter_cm": 12,
+  "device": "cuda",
+  "sub_tiles": [
+    "ch2024_2680-1225_00",
+    "ch2024_2680-1225_01",
+    "ch2024_2680-1225_10",
+    "ch2024_2680-1225_11"
+  ],
+  "moved": {
+    "water_jittered": {
+      "ch2024_2680-1225_00": {
+        "moved": 2176641,
+        "lattice_share_before": 0.548,
+        "lattice_share_after": 0.036,
+        "chance_share": 0.0352
+      },
+      "ch2024_2680-1225_01": {
+        "moved": 433505,
+        "lattice_share_before": 0.8987,
+        "lattice_share_after": 0.0357,
+        "chance_share": 0.0352
+      },
+      "ch2024_2680-1225_10": {
+        "moved": 1748098,
+        "lattice_share_before": 0.9554,
+        "lattice_share_after": 0.0352,
+        "chance_share": 0.0352
+      },
+      "ch2024_2680-1225_11": {
+        "moved": 8929,
+        "lattice_share_before": 0.1007,
+        "lattice_share_after": 0.0428,
+        "chance_share": 0.04
+      }
+    },
+    "ground_jittered": {
+      "ch2024_2680-1225_00": {
+        "moved": 155733,
+        "lattice_share_before": 0.0539,
+        "lattice_share_after": 0.0544,
+        "chance_share": 0.0533
+      },
+      "ch2024_2680-1225_01": {
+        "moved": 3349539,
+        "lattice_share_before": 0.0538,
+        "lattice_share_after": 0.0533,
+        "chance_share": 0.0533
+      },
+      "ch2024_2680-1225_10": {
+        "moved": 1840869,
+        "lattice_share_before": 0.0534,
+        "lattice_share_after": 0.0536,
+        "chance_share": 0.0533
+      },
+      "ch2024_2680-1225_11": {
+        "moved": 3423447,
+        "lattice_share_before": 0.0533,
+        "lattice_share_after": 0.0534,
+        "chance_share": 0.0533
+      }
+    }
+  },
+  "variants": {
+    "m1_seedA": {
+      "as_prepared": {
+        "support": 4367173,
+        "called": 5032929,
+        "true_positive": 4304770,
+        "precision": 0.8553,
+        "recall": 0.9857,
+        "iou": 0.8448,
+        "seconds": 125.1,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      },
+      "water_jittered": {
+        "support": 4367173,
+        "called": 5009970,
+        "true_positive": 4290593,
+        "precision": 0.8564,
+        "recall": 0.9825,
+        "iou": 0.8435,
+        "seconds": 123.9,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      },
+      "ground_jittered": {
+        "support": 4367173,
+        "called": 4495021,
+        "true_positive": 4303895,
+        "precision": 0.9575,
+        "recall": 0.9855,
+        "iou": 0.9442,
+        "seconds": 124.3,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      }
+    },
+    "m1_seedB": {
+      "as_prepared": {
+        "support": 4367173,
+        "called": 4567575,
+        "true_positive": 4306220,
+        "precision": 0.9428,
+        "recall": 0.986,
+        "iou": 0.9304,
+        "seconds": 123.4,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      },
+      "water_jittered": {
+        "support": 4367173,
+        "called": 1367094,
+        "true_positive": 1129728,
+        "precision": 0.8264,
+        "recall": 0.2587,
+        "iou": 0.2454,
+        "seconds": 123.5,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      },
+      "ground_jittered": {
+        "support": 4367173,
+        "called": 4419593,
+        "true_positive": 4305719,
+        "precision": 0.9742,
+        "recall": 0.9859,
+        "iou": 0.9609,
+        "seconds": 123.4,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      }
+    },
+    "m1_seedC": {
+      "as_prepared": {
+        "support": 4367173,
+        "called": 4502376,
+        "true_positive": 4294220,
+        "precision": 0.9538,
+        "recall": 0.9833,
+        "iou": 0.9386,
+        "seconds": 123.4,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      },
+      "water_jittered": {
+        "support": 4367173,
+        "called": 4391365,
+        "true_positive": 4201651,
+        "precision": 0.9568,
+        "recall": 0.9621,
+        "iou": 0.922,
+        "seconds": 123.5,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      },
+      "ground_jittered": {
+        "support": 4367173,
+        "called": 4400496,
+        "true_positive": 4293567,
+        "precision": 0.9757,
+        "recall": 0.9831,
+        "iou": 0.9596,
+        "seconds": 122.3,
+        "null": "call every point this class",
+        "null_precision": 0.2225,
+        "null_recall": 1.0,
+        "null_iou": 0.2225
+      }
+    }
+  },
+  "points": 19626248
+}

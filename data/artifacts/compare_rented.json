@@ -1,0 +1,1052 @@
+{
+  "rules_written_before_the_runs": {
+    "run_1": "inside the three laptop seeds means the machine is not a difference; outside means every large against small comparison carries that caveat",
+    "upgrade": "at least 4 of the 6 areas with footprints must have the large model's building lift above the max of the three small seeds; written before the runs",
+    "sensitivities": "runs 4 and 5 are reported whatever they say and do not enter the decision",
+    "run_6": "a diagnosis on one seed; anything claimed in the README needs three"
+  },
+  "cards": {
+    "m0_rented_small_seedA": {
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "device_total_gb": 51.13,
+      "width": 128,
+      "batch": 4,
+      "steps": 12000,
+      "lr": 0.002,
+      "parameters": 725967,
+      "points_seen": 1572864000,
+      "crop_distinct_range": null,
+      "wall_seconds": 1029.0
+    },
+    "m0_big_seedA": {
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "device_total_gb": 51.13,
+      "width": 512,
+      "batch": 8,
+      "steps": 6000,
+      "lr": 0.004,
+      "parameters": 11505423,
+      "points_seen": 1572864000,
+      "crop_distinct_range": null,
+      "wall_seconds": 2046.1
+    },
+    "m1_big_seedA": {
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "device_total_gb": 51.13,
+      "width": 512,
+      "batch": 8,
+      "steps": 6000,
+      "lr": 0.004,
+      "parameters": 11506449,
+      "points_seen": 1572864000,
+      "crop_distinct_range": null,
+      "wall_seconds": 2048.8
+    },
+    "m0_big_2x_seedA": {
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "device_total_gb": 51.13,
+      "width": 512,
+      "batch": 8,
+      "steps": 12000,
+      "lr": 0.004,
+      "parameters": 11505423,
+      "points_seen": 3145728000,
+      "crop_distinct_range": null,
+      "wall_seconds": 4010.3
+    },
+    "m0_big_lr2_seedA": {
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "device_total_gb": 51.13,
+      "width": 512,
+      "batch": 8,
+      "steps": 6000,
+      "lr": 0.002,
+      "parameters": 11505423,
+      "points_seen": 1572864000,
+      "crop_distinct_range": null,
+      "wall_seconds": 2052.5
+    },
+    "m1_densityaug_seedA": {
+      "device_name": "NVIDIA GeForce RTX 4090",
+      "device_total_gb": 51.13,
+      "width": 128,
+      "batch": 4,
+      "steps": 12000,
+      "lr": 0.002,
+      "parameters": 726225,
+      "points_seen": 1572864000,
+      "crop_distinct_range": [
+        12800,
+        32768
+      ],
+      "wall_seconds": 1042.2
+    }
+  },
+  "run_1_machine_check": {
+    "in_domain": {
+      "laptop_band": {
+        "min": 0.8843,
+        "max": 0.8929,
+        "n": 3
+      },
+      "rented": 0.8976,
+      "verdict": "above"
+    },
+    "san_francisco": {
+      "embarcadero.building_lift_global_shift": {
+        "laptop_band": {
+          "min": 0.0116,
+          "max": 0.0191,
+          "n": 3
+        },
+        "rented": -0.0158,
+        "verdict": "below"
+      },
+      "embarcadero.ground_recall": {
+        "laptop_band": {
+          "min": 0.8155,
+          "max": 0.8707,
+          "n": 3
+        },
+        "rented": 0.9664,
+        "verdict": "above"
+      },
+      "embarcadero.vegetation_headline": {
+        "laptop_band": {
+          "min": 0.9494,
+          "max": 0.9864,
+          "n": 3
+        },
+        "rented": 0.9513,
+        "verdict": "inside"
+      },
+      "embarcadero.not_vegetation_core_called_vegetation": {
+        "laptop_band": {
+          "min": 0.0522,
+          "max": 0.0852,
+          "n": 3
+        },
+        "rented": 0.0608,
+        "verdict": "inside"
+      },
+      "embarcadero.raised_unassigned_called_ground_rate": {
+        "laptop_band": {
+          "min": 0.3075,
+          "max": 0.3524,
+          "n": 3
+        },
+        "rented": 0.4346,
+        "verdict": "above"
+      },
+      "financial.building_lift_global_shift": {
+        "laptop_band": {
+          "min": 0.2384,
+          "max": 0.3307,
+          "n": 3
+        },
+        "rented": 0.3073,
+        "verdict": "inside"
+      },
+      "financial.ground_recall": {
+        "laptop_band": {
+          "min": 0.8212,
+          "max": 0.845,
+          "n": 3
+        },
+        "rented": 0.9293,
+        "verdict": "above"
+      },
+      "financial.vegetation_headline": {
+        "laptop_band": {
+          "min": 0.9825,
+          "max": 0.9918,
+          "n": 3
+        },
+        "rented": 0.9741,
+        "verdict": "below"
+      },
+      "financial.not_vegetation_core_called_vegetation": {
+        "laptop_band": {
+          "min": 0.1572,
+          "max": 0.1911,
+          "n": 3
+        },
+        "rented": 0.1521,
+        "verdict": "below"
+      },
+      "financial.raised_unassigned_called_ground_rate": {
+        "laptop_band": {
+          "min": 0.0727,
+          "max": 0.0923,
+          "n": 3
+        },
+        "rented": 0.1212,
+        "verdict": "above"
+      },
+      "mission.building_lift_global_shift": {
+        "laptop_band": {
+          "min": 0.6274,
+          "max": 0.6689,
+          "n": 3
+        },
+        "rented": 0.597,
+        "verdict": "below"
+      },
+      "mission.ground_recall": {
+        "laptop_band": {
+          "min": 0.9389,
+          "max": 0.9722,
+          "n": 3
+        },
+        "rented": 0.9878,
+        "verdict": "above"
+      },
+      "mission.vegetation_headline": {
+        "laptop_band": {
+          "min": 0.9416,
+          "max": 0.9763,
+          "n": 3
+        },
+        "rented": 0.9572,
+        "verdict": "inside"
+      },
+      "mission.not_vegetation_core_called_vegetation": {
+        "laptop_band": {
+          "min": 0.0493,
+          "max": 0.0651,
+          "n": 3
+        },
+        "rented": 0.0563,
+        "verdict": "inside"
+      },
+      "mission.raised_unassigned_called_ground_rate": {
+        "laptop_band": {
+          "min": 0.163,
+          "max": 0.2048,
+          "n": 3
+        },
+        "rented": 0.2954,
+        "verdict": "above"
+      },
+      "soma.building_lift_global_shift": {
+        "laptop_band": {
+          "min": 0.6034,
+          "max": 0.6251,
+          "n": 3
+        },
+        "rented": 0.5906,
+        "verdict": "below"
+      },
+      "soma.ground_recall": {
+        "laptop_band": {
+          "min": 0.9672,
+          "max": 0.987,
+          "n": 3
+        },
+        "rented": 0.9935,
+        "verdict": "above"
+      },
+      "soma.vegetation_headline": {
+        "laptop_band": {
+          "min": 0.9465,
+          "max": 0.9687,
+          "n": 3
+        },
+        "rented": 0.9603,
+        "verdict": "inside"
+      },
+      "soma.not_vegetation_core_called_vegetation": {
+        "laptop_band": {
+          "min": 0.047,
+          "max": 0.0598,
+          "n": 3
+        },
+        "rented": 0.0524,
+        "verdict": "inside"
+      },
+      "soma.raised_unassigned_called_ground_rate": {
+        "laptop_band": {
+          "min": 0.2182,
+          "max": 0.2373,
+          "n": 3
+        },
+        "rented": 0.3051,
+        "verdict": "above"
+      },
+      "steep.building_lift_global_shift": {
+        "laptop_band": {
+          "min": 0.6183,
+          "max": 0.6759,
+          "n": 3
+        },
+        "rented": 0.6103,
+        "verdict": "below"
+      },
+      "steep.ground_recall": {
+        "laptop_band": {
+          "min": 0.8658,
+          "max": 0.9431,
+          "n": 3
+        },
+        "rented": 0.9618,
+        "verdict": "above"
+      },
+      "steep.vegetation_headline": {
+        "laptop_band": {
+          "min": 0.8597,
+          "max": 0.9096,
+          "n": 3
+        },
+        "rented": 0.8934,
+        "verdict": "inside"
+      },
+      "steep.not_vegetation_core_called_vegetation": {
+        "laptop_band": {
+          "min": 0.1,
+          "max": 0.1202,
+          "n": 3
+        },
+        "rented": 0.1017,
+        "verdict": "inside"
+      },
+      "steep.raised_unassigned_called_ground_rate": {
+        "laptop_band": {
+          "min": 0.0915,
+          "max": 0.1047,
+          "n": 3
+        },
+        "rented": 0.1629,
+        "verdict": "above"
+      },
+      "sunset.building_lift_global_shift": {
+        "laptop_band": {
+          "min": 0.6613,
+          "max": 0.7151,
+          "n": 3
+        },
+        "rented": 0.6453,
+        "verdict": "below"
+      },
+      "sunset.ground_recall": {
+        "laptop_band": {
+          "min": 0.9491,
+          "max": 0.9736,
+          "n": 3
+        },
+        "rented": 0.9856,
+        "verdict": "above"
+      },
+      "sunset.vegetation_headline": {
+        "laptop_band": {
+          "min": 0.8769,
+          "max": 0.913,
+          "n": 3
+        },
+        "rented": 0.8992,
+        "verdict": "inside"
+      },
+      "sunset.not_vegetation_core_called_vegetation": {
+        "laptop_band": {
+          "min": 0.0503,
+          "max": 0.0781,
+          "n": 3
+        },
+        "rented": 0.0561,
+        "verdict": "inside"
+      },
+      "sunset.raised_unassigned_called_ground_rate": {
+        "laptop_band": {
+          "min": 0.1259,
+          "max": 0.1447,
+          "n": 3
+        },
+        "rented": 0.2839,
+        "verdict": "above"
+      }
+    },
+    "outside_count": 19,
+    "measures_compared": 30,
+    "outside": [
+      "embarcadero.building_lift_global_shift",
+      "embarcadero.ground_recall",
+      "embarcadero.raised_unassigned_called_ground_rate",
+      "financial.ground_recall",
+      "financial.vegetation_headline",
+      "financial.not_vegetation_core_called_vegetation",
+      "financial.raised_unassigned_called_ground_rate",
+      "mission.building_lift_global_shift",
+      "mission.ground_recall",
+      "mission.raised_unassigned_called_ground_rate",
+      "soma.building_lift_global_shift",
+      "soma.ground_recall",
+      "soma.raised_unassigned_called_ground_rate",
+      "steep.building_lift_global_shift",
+      "steep.ground_recall",
+      "steep.raised_unassigned_called_ground_rate",
+      "sunset.building_lift_global_shift",
+      "sunset.ground_recall",
+      "sunset.raised_unassigned_called_ground_rate"
+    ],
+    "reading": "the machine moves some measures; every large against small comparison carries that caveat"
+  },
+  "run_2_upgrade": {
+    "per_area": {
+      "embarcadero": {
+        "small_band": {
+          "min": 0.0116,
+          "max": 0.0191,
+          "n": 3
+        },
+        "big": 0.0321,
+        "verdict": "above"
+      },
+      "financial": {
+        "small_band": {
+          "min": 0.2384,
+          "max": 0.3307,
+          "n": 3
+        },
+        "big": 0.3085,
+        "verdict": "inside"
+      },
+      "mission": {
+        "small_band": {
+          "min": 0.6274,
+          "max": 0.6689,
+          "n": 3
+        },
+        "big": 0.6396,
+        "verdict": "inside"
+      },
+      "soma": {
+        "small_band": {
+          "min": 0.6034,
+          "max": 0.6251,
+          "n": 3
+        },
+        "big": 0.6079,
+        "verdict": "inside"
+      },
+      "steep": {
+        "small_band": {
+          "min": 0.6183,
+          "max": 0.6759,
+          "n": 3
+        },
+        "big": 0.635,
+        "verdict": "inside"
+      },
+      "sunset": {
+        "small_band": {
+          "min": 0.6613,
+          "max": 0.7151,
+          "n": 3
+        },
+        "big": 0.6856,
+        "verdict": "inside"
+      }
+    },
+    "areas_above": [
+      "embarcadero"
+    ],
+    "areas_needed": 4,
+    "rule": "at least 4 of the 6 areas with footprints must have the large model's building lift above the max of the three small seeds; written before the runs",
+    "rule_met": false,
+    "in_domain": {
+      "laptop_band": {
+        "min": 0.8843,
+        "max": 0.8929,
+        "n": 3
+      },
+      "big": 0.8944
+    },
+    "other_measures": {
+      "embarcadero.ground_recall": {
+        "small_band": {
+          "min": 0.8155,
+          "max": 0.8707,
+          "n": 3
+        },
+        "big": 0.71
+      },
+      "embarcadero.vegetation_headline": {
+        "small_band": {
+          "min": 0.9494,
+          "max": 0.9864,
+          "n": 3
+        },
+        "big": 0.8635
+      },
+      "embarcadero.not_vegetation_core_called_vegetation": {
+        "small_band": {
+          "min": 0.0522,
+          "max": 0.0852,
+          "n": 3
+        },
+        "big": 0.0449
+      },
+      "embarcadero.raised_unassigned_called_ground_rate": {
+        "small_band": {
+          "min": 0.3075,
+          "max": 0.3524,
+          "n": 3
+        },
+        "big": 0.2781
+      },
+      "financial.ground_recall": {
+        "small_band": {
+          "min": 0.8212,
+          "max": 0.845,
+          "n": 3
+        },
+        "big": 0.7649
+      },
+      "financial.vegetation_headline": {
+        "small_band": {
+          "min": 0.9825,
+          "max": 0.9918,
+          "n": 3
+        },
+        "big": 0.968
+      },
+      "financial.not_vegetation_core_called_vegetation": {
+        "small_band": {
+          "min": 0.1572,
+          "max": 0.1911,
+          "n": 3
+        },
+        "big": 0.1554
+      },
+      "financial.raised_unassigned_called_ground_rate": {
+        "small_band": {
+          "min": 0.0727,
+          "max": 0.0923,
+          "n": 3
+        },
+        "big": 0.0568
+      },
+      "mission.ground_recall": {
+        "small_band": {
+          "min": 0.9389,
+          "max": 0.9722,
+          "n": 3
+        },
+        "big": 0.8908
+      },
+      "mission.vegetation_headline": {
+        "small_band": {
+          "min": 0.9416,
+          "max": 0.9763,
+          "n": 3
+        },
+        "big": 0.9451
+      },
+      "mission.not_vegetation_core_called_vegetation": {
+        "small_band": {
+          "min": 0.0493,
+          "max": 0.0651,
+          "n": 3
+        },
+        "big": 0.0508
+      },
+      "mission.raised_unassigned_called_ground_rate": {
+        "small_band": {
+          "min": 0.163,
+          "max": 0.2048,
+          "n": 3
+        },
+        "big": 0.1394
+      },
+      "soma.ground_recall": {
+        "small_band": {
+          "min": 0.9672,
+          "max": 0.987,
+          "n": 3
+        },
+        "big": 0.951
+      },
+      "soma.vegetation_headline": {
+        "small_band": {
+          "min": 0.9465,
+          "max": 0.9687,
+          "n": 3
+        },
+        "big": 0.9659
+      },
+      "soma.not_vegetation_core_called_vegetation": {
+        "small_band": {
+          "min": 0.047,
+          "max": 0.0598,
+          "n": 3
+        },
+        "big": 0.0373
+      },
+      "soma.raised_unassigned_called_ground_rate": {
+        "small_band": {
+          "min": 0.2182,
+          "max": 0.2373,
+          "n": 3
+        },
+        "big": 0.1513
+      },
+      "steep.ground_recall": {
+        "small_band": {
+          "min": 0.8658,
+          "max": 0.9431,
+          "n": 3
+        },
+        "big": 0.9034
+      },
+      "steep.vegetation_headline": {
+        "small_band": {
+          "min": 0.8597,
+          "max": 0.9096,
+          "n": 3
+        },
+        "big": 0.8803
+      },
+      "steep.not_vegetation_core_called_vegetation": {
+        "small_band": {
+          "min": 0.1,
+          "max": 0.1202,
+          "n": 3
+        },
+        "big": 0.092
+      },
+      "steep.raised_unassigned_called_ground_rate": {
+        "small_band": {
+          "min": 0.0915,
+          "max": 0.1047,
+          "n": 3
+        },
+        "big": 0.0525
+      },
+      "sunset.ground_recall": {
+        "small_band": {
+          "min": 0.9491,
+          "max": 0.9736,
+          "n": 3
+        },
+        "big": 0.9295
+      },
+      "sunset.vegetation_headline": {
+        "small_band": {
+          "min": 0.8769,
+          "max": 0.913,
+          "n": 3
+        },
+        "big": 0.922
+      },
+      "sunset.not_vegetation_core_called_vegetation": {
+        "small_band": {
+          "min": 0.0503,
+          "max": 0.0781,
+          "n": 3
+        },
+        "big": 0.0559
+      },
+      "sunset.raised_unassigned_called_ground_rate": {
+        "small_band": {
+          "min": 0.1259,
+          "max": 0.1447,
+          "n": 3
+        },
+        "big": 0.057
+      }
+    }
+  },
+  "run_3_water": {
+    "per_area": {
+      "embarcadero": {
+        "model": {
+          "called": 51606,
+          "water_points": 1279147,
+          "true_positive": 31918,
+          "precision": 0.6185,
+          "recall": 0.025,
+          "iou": 0.0246,
+          "null_precision": 0.5919,
+          "null_recall": 0.9987,
+          "null_iou": 0.5915
+        },
+        "lift_over_null": -1.3878,
+        "small_seed_lift_band": {
+          "min": -1.4284,
+          "max": -1.2832,
+          "n": 3
+        },
+        "small_seed_recall_band": {
+          "min": 0.0081,
+          "max": 0.0782,
+          "n": 3
+        },
+        "lift_verdict": "inside",
+        "positive_lift": false
+      },
+      "baybridge": {
+        "model": {
+          "called": 39474,
+          "water_points": 1396087,
+          "true_positive": 27750,
+          "precision": 0.703,
+          "recall": 0.0199,
+          "iou": 0.0197,
+          "null_precision": 0.5946,
+          "null_recall": 1.0,
+          "null_iou": 0.5946
+        },
+        "lift_over_null": -1.4181,
+        "small_seed_lift_band": {
+          "min": -1.4524,
+          "max": -1.1653,
+          "n": 3
+        },
+        "small_seed_recall_band": {
+          "min": 0.0058,
+          "max": 0.1358,
+          "n": 3
+        },
+        "lift_verdict": "inside",
+        "positive_lift": false
+      }
+    },
+    "any_positive": false,
+    "note": "a positive lift is a new story and needs three seeds before anything is claimed"
+  },
+  "sensitivities": {
+    "m0_big_2x_seedA": {
+      "why": "twice the points seen",
+      "per_area": {
+        "embarcadero": {
+          "primary_big": 0.0321,
+          "this_run": 0.0147,
+          "small_band": {
+            "min": 0.0116,
+            "max": 0.0191,
+            "n": 3
+          }
+        },
+        "financial": {
+          "primary_big": 0.3085,
+          "this_run": 0.3117,
+          "small_band": {
+            "min": 0.2384,
+            "max": 0.3307,
+            "n": 3
+          }
+        },
+        "mission": {
+          "primary_big": 0.6396,
+          "this_run": 0.6477,
+          "small_band": {
+            "min": 0.6274,
+            "max": 0.6689,
+            "n": 3
+          }
+        },
+        "soma": {
+          "primary_big": 0.6079,
+          "this_run": 0.62,
+          "small_band": {
+            "min": 0.6034,
+            "max": 0.6251,
+            "n": 3
+          }
+        },
+        "steep": {
+          "primary_big": 0.635,
+          "this_run": 0.6444,
+          "small_band": {
+            "min": 0.6183,
+            "max": 0.6759,
+            "n": 3
+          }
+        },
+        "sunset": {
+          "primary_big": 0.6856,
+          "this_run": 0.6956,
+          "small_band": {
+            "min": 0.6613,
+            "max": 0.7151,
+            "n": 3
+          }
+        }
+      },
+      "in_domain": 0.8932,
+      "in_domain_primary_big": 0.8944,
+      "enters_the_decision": false
+    },
+    "m0_big_lr2_seedA": {
+      "why": "the learning rate left unscaled",
+      "per_area": {
+        "embarcadero": {
+          "primary_big": 0.0321,
+          "this_run": 0.0307,
+          "small_band": {
+            "min": 0.0116,
+            "max": 0.0191,
+            "n": 3
+          }
+        },
+        "financial": {
+          "primary_big": 0.3085,
+          "this_run": 0.2758,
+          "small_band": {
+            "min": 0.2384,
+            "max": 0.3307,
+            "n": 3
+          }
+        },
+        "mission": {
+          "primary_big": 0.6396,
+          "this_run": 0.649,
+          "small_band": {
+            "min": 0.6274,
+            "max": 0.6689,
+            "n": 3
+          }
+        },
+        "soma": {
+          "primary_big": 0.6079,
+          "this_run": 0.6105,
+          "small_band": {
+            "min": 0.6034,
+            "max": 0.6251,
+            "n": 3
+          }
+        },
+        "steep": {
+          "primary_big": 0.635,
+          "this_run": 0.6365,
+          "small_band": {
+            "min": 0.6183,
+            "max": 0.6759,
+            "n": 3
+          }
+        },
+        "sunset": {
+          "primary_big": 0.6856,
+          "this_run": 0.712,
+          "small_band": {
+            "min": 0.6613,
+            "max": 0.7151,
+            "n": 3
+          }
+        }
+      },
+      "in_domain": 0.8965,
+      "in_domain_primary_big": 0.8944,
+      "enters_the_decision": false
+    }
+  },
+  "run_6_density": {
+    "per_area": {
+      "embarcadero": {
+        "recall": 0.045,
+        "three_seed_recall_band": {
+          "min": 0.0081,
+          "max": 0.0782,
+          "n": 3
+        },
+        "recall_verdict": "inside",
+        "lift_over_null": -1.3435,
+        "three_seed_lift_band": {
+          "min": -1.4284,
+          "max": -1.2832,
+          "n": 3
+        },
+        "lift_verdict": "inside"
+      },
+      "baybridge": {
+        "recall": 0.0811,
+        "three_seed_recall_band": {
+          "min": 0.0058,
+          "max": 0.1358,
+          "n": 3
+        },
+        "recall_verdict": "inside",
+        "lift_over_null": -1.2745,
+        "three_seed_lift_band": {
+          "min": -1.4524,
+          "max": -1.1653,
+          "n": 3
+        },
+        "lift_verdict": "inside"
+      }
+    },
+    "in_domain": 0.8706,
+    "in_domain_three_seeds": {
+      "min": 0.8591,
+      "max": 0.8807,
+      "n": 3
+    },
+    "reading": "one seed; above the three seed band is a proposal for two more seeds, never a claim"
+  },
+  "size_on_the_same_machine": {
+    "note": "both on the rented card, so the machine cancels; the difference is the size",
+    "in_domain": {
+      "small": 0.8976,
+      "big": 0.8944
+    },
+    "per_measure": {
+      "embarcadero.building_lift_global_shift": {
+        "small_same_machine": -0.0158,
+        "big": 0.0321,
+        "difference": 0.0479
+      },
+      "embarcadero.ground_recall": {
+        "small_same_machine": 0.9664,
+        "big": 0.71,
+        "difference": -0.2564
+      },
+      "embarcadero.vegetation_headline": {
+        "small_same_machine": 0.9513,
+        "big": 0.8635,
+        "difference": -0.0878
+      },
+      "embarcadero.not_vegetation_core_called_vegetation": {
+        "small_same_machine": 0.0608,
+        "big": 0.0449,
+        "difference": -0.0159
+      },
+      "embarcadero.raised_unassigned_called_ground_rate": {
+        "small_same_machine": 0.4346,
+        "big": 0.2781,
+        "difference": -0.1565
+      },
+      "financial.building_lift_global_shift": {
+        "small_same_machine": 0.3073,
+        "big": 0.3085,
+        "difference": 0.0012
+      },
+      "financial.ground_recall": {
+        "small_same_machine": 0.9293,
+        "big": 0.7649,
+        "difference": -0.1644
+      },
+      "financial.vegetation_headline": {
+        "small_same_machine": 0.9741,
+        "big": 0.968,
+        "difference": -0.0061
+      },
+      "financial.not_vegetation_core_called_vegetation": {
+        "small_same_machine": 0.1521,
+        "big": 0.1554,
+        "difference": 0.0033
+      },
+      "financial.raised_unassigned_called_ground_rate": {
+        "small_same_machine": 0.1212,
+        "big": 0.0568,
+        "difference": -0.0644
+      },
+      "mission.building_lift_global_shift": {
+        "small_same_machine": 0.597,
+        "big": 0.6396,
+        "difference": 0.0426
+      },
+      "mission.ground_recall": {
+        "small_same_machine": 0.9878,
+        "big": 0.8908,
+        "difference": -0.097
+      },
+      "mission.vegetation_headline": {
+        "small_same_machine": 0.9572,
+        "big": 0.9451,
+        "difference": -0.0121
+      },
+      "mission.not_vegetation_core_called_vegetation": {
+        "small_same_machine": 0.0563,
+        "big": 0.0508,
+        "difference": -0.0055
+      },
+      "mission.raised_unassigned_called_ground_rate": {
+        "small_same_machine": 0.2954,
+        "big": 0.1394,
+        "difference": -0.156
+      },
+      "soma.building_lift_global_shift": {
+        "small_same_machine": 0.5906,
+        "big": 0.6079,
+        "difference": 0.0173
+      },
+      "soma.ground_recall": {
+        "small_same_machine": 0.9935,
+        "big": 0.951,
+        "difference": -0.0425
+      },
+      "soma.vegetation_headline": {
+        "small_same_machine": 0.9603,
+        "big": 0.9659,
+        "difference": 0.0056
+      },
+      "soma.not_vegetation_core_called_vegetation": {
+        "small_same_machine": 0.0524,
+        "big": 0.0373,
+        "difference": -0.0151
+      },
+      "soma.raised_unassigned_called_ground_rate": {
+        "small_same_machine": 0.3051,
+        "big": 0.1513,
+        "difference": -0.1538
+      },
+      "steep.building_lift_global_shift": {
+        "small_same_machine": 0.6103,
+        "big": 0.635,
+        "difference": 0.0247
+      },
+      "steep.ground_recall": {
+        "small_same_machine": 0.9618,
+        "big": 0.9034,
+        "difference": -0.0584
+      },
+      "steep.vegetation_headline": {
+        "small_same_machine": 0.8934,
+        "big": 0.8803,
+        "difference": -0.0131
+      },
+      "steep.not_vegetation_core_called_vegetation": {
+        "small_same_machine": 0.1017,
+        "big": 0.092,
+        "difference": -0.0097
+      },
+      "steep.raised_unassigned_called_ground_rate": {
+        "small_same_machine": 0.1629,
+        "big": 0.0525,
+        "difference": -0.1104
+      },
+      "sunset.building_lift_global_shift": {
+        "small_same_machine": 0.6453,
+        "big": 0.6856,
+        "difference": 0.0403
+      },
+      "sunset.ground_recall": {
+        "small_same_machine": 0.9856,
+        "big": 0.9295,
+        "difference": -0.0561
+      },
+      "sunset.vegetation_headline": {
+        "small_same_machine": 0.8992,
+        "big": 0.922,
+        "difference": 0.0228
+      },
+      "sunset.not_vegetation_core_called_vegetation": {
+        "small_same_machine": 0.0561,
+        "big": 0.0559,
+        "difference": -0.0002
+      },
+      "sunset.raised_unassigned_called_ground_rate": {
+        "small_same_machine": 0.2839,
+        "big": 0.057,
+        "difference": -0.2269
+      }
+    },
+    "building_lift_better_in": [
+      "embarcadero.building_lift_global_shift",
+      "financial.building_lift_global_shift",
+      "mission.building_lift_global_shift",
+      "soma.building_lift_global_shift",
+      "steep.building_lift_global_shift",
+      "sunset.building_lift_global_shift"
+    ]
+  }
+}

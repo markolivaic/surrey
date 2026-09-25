@@ -1,0 +1,2979 @@
+{
+  "new": "m1",
+  "old": "m0prime",
+  "seeds": {
+    "m1": [
+      "A",
+      "B",
+      "C"
+    ],
+    "m0prime": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "rule": "backend/surrey/m1_criteria.py and surrey.seeds.drop, written before training",
+  "density_confound": null,
+  "side_effects_san_francisco": {
+    "baybridge": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.0,
+            "B": 0.0,
+            "C": 0.0
+          },
+          "n": 3,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0,
+            "B": 0.0,
+            "C": 0.0
+          },
+          "n": 3,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "drop": false,
+        "gain": false
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0549,
+            "B": 0.0318,
+            "C": 0.0807
+          },
+          "n": 3,
+          "median": 0.0549,
+          "min": 0.0318,
+          "max": 0.0807
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0342,
+            "B": 0.0461,
+            "C": 0.0851
+          },
+          "n": 3,
+          "median": 0.0461,
+          "min": 0.0342,
+          "max": 0.0851
+        },
+        "drop": false,
+        "gain": false
+      },
+      "water_called_ground": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.8392,
+            "B": 0.7543,
+            "C": 0.7134
+          },
+          "n": 3,
+          "median": 0.7543,
+          "min": 0.7134,
+          "max": 0.8392
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9492,
+            "B": 0.9571,
+            "C": 0.9601
+          },
+          "n": 3,
+          "median": 0.9571,
+          "min": 0.9492,
+          "max": 0.9601
+        },
+        "drop": false,
+        "gain": true
+      },
+      "bridge_deck_called_building": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.9773,
+            "B": 0.9983,
+            "C": 0.8641
+          },
+          "n": 3,
+          "median": 0.9773,
+          "min": 0.8641,
+          "max": 0.9983
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9995,
+            "B": 0.9993,
+            "C": 0.9992
+          },
+          "n": 3,
+          "median": 0.9993,
+          "min": 0.9992,
+          "max": 0.9995
+        },
+        "drop": false,
+        "gain": true
+      }
+    },
+    "embarcadero": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": -0.0159,
+            "B": 0.0013,
+            "C": -0.0124
+          },
+          "n": 3,
+          "median": -0.0124,
+          "min": -0.0159,
+          "max": 0.0013
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": -0.0045,
+            "B": 0.0087,
+            "C": -0.0103
+          },
+          "n": 3,
+          "median": -0.0045,
+          "min": -0.0103,
+          "max": 0.0087
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.3092,
+            "B": 0.3232,
+            "C": 0.2947
+          },
+          "n": 3,
+          "median": 0.3092,
+          "min": 0.2947,
+          "max": 0.3232
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.3051,
+            "B": 0.3177,
+            "C": 0.3042
+          },
+          "n": 3,
+          "median": 0.3051,
+          "min": 0.3042,
+          "max": 0.3177
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.672,
+            "B": 0.6836,
+            "C": 0.6028
+          },
+          "n": 3,
+          "median": 0.672,
+          "min": 0.6028,
+          "max": 0.6836
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.8659,
+            "B": 0.8867,
+            "C": 0.8248
+          },
+          "n": 3,
+          "median": 0.8659,
+          "min": 0.8248,
+          "max": 0.8867
+        },
+        "drop": true,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9957,
+            "B": 0.9941,
+            "C": 0.998
+          },
+          "n": 3,
+          "median": 0.9957,
+          "min": 0.9941,
+          "max": 0.998
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9906,
+            "B": 0.9892,
+            "C": 0.9922
+          },
+          "n": 3,
+          "median": 0.9906,
+          "min": 0.9892,
+          "max": 0.9922
+        },
+        "drop": false,
+        "gain": true
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.1076,
+            "B": 0.0787,
+            "C": 0.1281
+          },
+          "n": 3,
+          "median": 0.1076,
+          "min": 0.0787,
+          "max": 0.1281
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.071,
+            "B": 0.0756,
+            "C": 0.1065
+          },
+          "n": 3,
+          "median": 0.0756,
+          "min": 0.071,
+          "max": 0.1065
+        },
+        "drop": false,
+        "gain": false
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.2984,
+            "B": 0.2854,
+            "C": 0.3027
+          },
+          "n": 3,
+          "median": 0.2984,
+          "min": 0.2854,
+          "max": 0.3027
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.356,
+            "B": 0.3439,
+            "C": 0.3227
+          },
+          "n": 3,
+          "median": 0.3439,
+          "min": 0.3227,
+          "max": 0.356
+        },
+        "drop": false,
+        "gain": true
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.4815,
+            "B": 0.5453,
+            "C": 0.5257
+          },
+          "n": 3,
+          "median": 0.5257,
+          "min": 0.4815,
+          "max": 0.5453
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.6035,
+            "B": 0.6335,
+            "C": 0.5667
+          },
+          "n": 3,
+          "median": 0.6035,
+          "min": 0.5667,
+          "max": 0.6335
+        },
+        "drop": true,
+        "gain": false
+      },
+      "hard_water_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.4922,
+            "B": 0.5516,
+            "C": 0.4165
+          },
+          "n": 3,
+          "median": 0.4922,
+          "min": 0.4165,
+          "max": 0.5516
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5175,
+            "B": 0.5362,
+            "C": 0.5167
+          },
+          "n": 3,
+          "median": 0.5175,
+          "min": 0.5167,
+          "max": 0.5362
+        },
+        "drop": false,
+        "gain": false
+      },
+      "water_called_ground": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.744,
+            "B": 0.6968,
+            "C": 0.6764
+          },
+          "n": 3,
+          "median": 0.6968,
+          "min": 0.6764,
+          "max": 0.744
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9388,
+            "B": 0.9331,
+            "C": 0.9518
+          },
+          "n": 3,
+          "median": 0.9388,
+          "min": 0.9331,
+          "max": 0.9518
+        },
+        "drop": false,
+        "gain": true
+      },
+      "bridge_deck_called_building": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.9974,
+            "B": 0.9976,
+            "C": 0.9863
+          },
+          "n": 3,
+          "median": 0.9974,
+          "min": 0.9863,
+          "max": 0.9976
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9983,
+            "B": 0.9981,
+            "C": 0.9981
+          },
+          "n": 3,
+          "median": 0.9981,
+          "min": 0.9981,
+          "max": 0.9983
+        },
+        "drop": false,
+        "gain": true
+      }
+    },
+    "financial": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.2459,
+            "B": 0.2295,
+            "C": 0.2524
+          },
+          "n": 3,
+          "median": 0.2459,
+          "min": 0.2295,
+          "max": 0.2524
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.2343,
+            "B": 0.2351,
+            "C": 0.2682
+          },
+          "n": 3,
+          "median": 0.2351,
+          "min": 0.2343,
+          "max": 0.2682
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.5803,
+            "B": 0.5942,
+            "C": 0.5762
+          },
+          "n": 3,
+          "median": 0.5803,
+          "min": 0.5762,
+          "max": 0.5942
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5541,
+            "B": 0.5763,
+            "C": 0.5719
+          },
+          "n": 3,
+          "median": 0.5719,
+          "min": 0.5541,
+          "max": 0.5763
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.7333,
+            "B": 0.7168,
+            "C": 0.6924
+          },
+          "n": 3,
+          "median": 0.7168,
+          "min": 0.6924,
+          "max": 0.7333
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.8466,
+            "B": 0.8573,
+            "C": 0.8262
+          },
+          "n": 3,
+          "median": 0.8466,
+          "min": 0.8262,
+          "max": 0.8573
+        },
+        "drop": true,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9967,
+            "B": 0.9939,
+            "C": 0.9971
+          },
+          "n": 3,
+          "median": 0.9967,
+          "min": 0.9939,
+          "max": 0.9971
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9897,
+            "B": 0.9741,
+            "C": 0.9926
+          },
+          "n": 3,
+          "median": 0.9897,
+          "min": 0.9741,
+          "max": 0.9926
+        },
+        "drop": false,
+        "gain": true
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.1669,
+            "B": 0.1781,
+            "C": 0.2179
+          },
+          "n": 3,
+          "median": 0.1781,
+          "min": 0.1669,
+          "max": 0.2179
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.1537,
+            "B": 0.1689,
+            "C": 0.1893
+          },
+          "n": 3,
+          "median": 0.1689,
+          "min": 0.1537,
+          "max": 0.1893
+        },
+        "drop": false,
+        "gain": false
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0652,
+            "B": 0.0557,
+            "C": 0.0635
+          },
+          "n": 3,
+          "median": 0.0635,
+          "min": 0.0557,
+          "max": 0.0652
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0904,
+            "B": 0.0791,
+            "C": 0.0788
+          },
+          "n": 3,
+          "median": 0.0791,
+          "min": 0.0788,
+          "max": 0.0904
+        },
+        "drop": false,
+        "gain": true
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.7015,
+            "B": 0.6829,
+            "C": 0.6549
+          },
+          "n": 3,
+          "median": 0.6829,
+          "min": 0.6549,
+          "max": 0.7015
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.6692,
+            "B": 0.7497,
+            "C": 0.6829
+          },
+          "n": 3,
+          "median": 0.6829,
+          "min": 0.6692,
+          "max": 0.7497
+        },
+        "drop": false,
+        "gain": false
+      }
+    },
+    "ggpark": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.0,
+            "B": 0.0,
+            "C": 0.0
+          },
+          "n": 3,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0,
+            "B": 0.0,
+            "C": 0.0
+          },
+          "n": 3,
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.731,
+            "B": 0.7251,
+            "C": 0.7374
+          },
+          "n": 3,
+          "median": 0.731,
+          "min": 0.7251,
+          "max": 0.7374
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.7184,
+            "B": 0.7228,
+            "C": 0.7351
+          },
+          "n": 3,
+          "median": 0.7228,
+          "min": 0.7184,
+          "max": 0.7351
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.8695,
+            "B": 0.9683,
+            "C": 0.9253
+          },
+          "n": 3,
+          "median": 0.9253,
+          "min": 0.8695,
+          "max": 0.9683
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9817,
+            "B": 0.9713,
+            "C": 0.9637
+          },
+          "n": 3,
+          "median": 0.9713,
+          "min": 0.9637,
+          "max": 0.9817
+        },
+        "drop": false,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.94,
+            "B": 0.8952,
+            "C": 0.9438
+          },
+          "n": 3,
+          "median": 0.94,
+          "min": 0.8952,
+          "max": 0.9438
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9107,
+            "B": 0.8958,
+            "C": 0.9404
+          },
+          "n": 3,
+          "median": 0.9107,
+          "min": 0.8958,
+          "max": 0.9404
+        },
+        "drop": false,
+        "gain": false
+      },
+      "not_vegetation_core_called_vegetation": {
+        "reference_not_valid": "the NAIP not-vegetation core in Golden Gate Park has a multiple-return share typical of canopy on both masks (naip_mask_choice.json), so NDVI probably misses canopy there, by shadow or relief displacement, and vegetation called inside it is likely right",
+        "m1": {
+          "per_seed": {
+            "A": 0.7995,
+            "B": 0.6872,
+            "C": 0.8274
+          },
+          "n": 3,
+          "median": 0.7995,
+          "min": 0.6872,
+          "max": 0.8274
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.7684,
+            "B": 0.6975,
+            "C": 0.8033
+          },
+          "n": 3,
+          "median": 0.7684,
+          "min": 0.6975,
+          "max": 0.8033
+        },
+        "drop": null,
+        "gain": null
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0104,
+            "B": 0.0127,
+            "C": 0.0054
+          },
+          "n": 3,
+          "median": 0.0104,
+          "min": 0.0054,
+          "max": 0.0127
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0137,
+            "B": 0.0146,
+            "C": 0.0111
+          },
+          "n": 3,
+          "median": 0.0137,
+          "min": 0.0111,
+          "max": 0.0146
+        },
+        "drop": false,
+        "gain": false
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.8982,
+            "B": 0.9463,
+            "C": 0.8161
+          },
+          "n": 3,
+          "median": 0.8982,
+          "min": 0.8161,
+          "max": 0.9463
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.8923,
+            "B": 0.9485,
+            "C": 0.9321
+          },
+          "n": 3,
+          "median": 0.9321,
+          "min": 0.8923,
+          "max": 0.9485
+        },
+        "drop": false,
+        "gain": false
+      }
+    },
+    "mission": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.595,
+            "B": 0.5386,
+            "C": 0.5846
+          },
+          "n": 3,
+          "median": 0.5846,
+          "min": 0.5386,
+          "max": 0.595
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.6064,
+            "B": 0.5775,
+            "C": 0.6208
+          },
+          "n": 3,
+          "median": 0.6064,
+          "min": 0.5775,
+          "max": 0.6208
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.612,
+            "B": 0.6092,
+            "C": 0.5945
+          },
+          "n": 3,
+          "median": 0.6092,
+          "min": 0.5945,
+          "max": 0.612
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5947,
+            "B": 0.6035,
+            "C": 0.6113
+          },
+          "n": 3,
+          "median": 0.6035,
+          "min": 0.5947,
+          "max": 0.6113
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9201,
+            "B": 0.9216,
+            "C": 0.9121
+          },
+          "n": 3,
+          "median": 0.9201,
+          "min": 0.9121,
+          "max": 0.9216
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9621,
+            "B": 0.9667,
+            "C": 0.9536
+          },
+          "n": 3,
+          "median": 0.9621,
+          "min": 0.9536,
+          "max": 0.9667
+        },
+        "drop": true,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9801,
+            "B": 0.9693,
+            "C": 0.9836
+          },
+          "n": 3,
+          "median": 0.9801,
+          "min": 0.9693,
+          "max": 0.9836
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9642,
+            "B": 0.9446,
+            "C": 0.9701
+          },
+          "n": 3,
+          "median": 0.9642,
+          "min": 0.9446,
+          "max": 0.9701
+        },
+        "drop": false,
+        "gain": false
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0494,
+            "B": 0.0436,
+            "C": 0.07
+          },
+          "n": 3,
+          "median": 0.0494,
+          "min": 0.0436,
+          "max": 0.07
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0411,
+            "B": 0.0514,
+            "C": 0.0555
+          },
+          "n": 3,
+          "median": 0.0514,
+          "min": 0.0411,
+          "max": 0.0555
+        },
+        "drop": false,
+        "gain": false
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.1997,
+            "B": 0.2022,
+            "C": 0.226
+          },
+          "n": 3,
+          "median": 0.2022,
+          "min": 0.1997,
+          "max": 0.226
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.2309,
+            "B": 0.2261,
+            "C": 0.2109
+          },
+          "n": 3,
+          "median": 0.2261,
+          "min": 0.2109,
+          "max": 0.2309
+        },
+        "drop": false,
+        "gain": false
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.7163,
+            "B": 0.7086,
+            "C": 0.7021
+          },
+          "n": 3,
+          "median": 0.7086,
+          "min": 0.7021,
+          "max": 0.7163
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.7602,
+            "B": 0.7736,
+            "C": 0.7331
+          },
+          "n": 3,
+          "median": 0.7602,
+          "min": 0.7331,
+          "max": 0.7736
+        },
+        "drop": true,
+        "gain": false
+      }
+    },
+    "soma": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.5604,
+            "B": 0.5195,
+            "C": 0.5489
+          },
+          "n": 3,
+          "median": 0.5489,
+          "min": 0.5195,
+          "max": 0.5604
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5472,
+            "B": 0.5349,
+            "C": 0.5641
+          },
+          "n": 3,
+          "median": 0.5472,
+          "min": 0.5349,
+          "max": 0.5641
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.6054,
+            "B": 0.6166,
+            "C": 0.5904
+          },
+          "n": 3,
+          "median": 0.6054,
+          "min": 0.5904,
+          "max": 0.6166
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5771,
+            "B": 0.581,
+            "C": 0.5927
+          },
+          "n": 3,
+          "median": 0.581,
+          "min": 0.5771,
+          "max": 0.5927
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9343,
+            "B": 0.9503,
+            "C": 0.9294
+          },
+          "n": 3,
+          "median": 0.9343,
+          "min": 0.9294,
+          "max": 0.9503
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9717,
+            "B": 0.9772,
+            "C": 0.9621
+          },
+          "n": 3,
+          "median": 0.9717,
+          "min": 0.9621,
+          "max": 0.9772
+        },
+        "drop": true,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9695,
+            "B": 0.9382,
+            "C": 0.973
+          },
+          "n": 3,
+          "median": 0.9695,
+          "min": 0.9382,
+          "max": 0.973
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9468,
+            "B": 0.9166,
+            "C": 0.9549
+          },
+          "n": 3,
+          "median": 0.9468,
+          "min": 0.9166,
+          "max": 0.9549
+        },
+        "drop": false,
+        "gain": false
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0423,
+            "B": 0.0334,
+            "C": 0.0631
+          },
+          "n": 3,
+          "median": 0.0423,
+          "min": 0.0334,
+          "max": 0.0631
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0337,
+            "B": 0.045,
+            "C": 0.0448
+          },
+          "n": 3,
+          "median": 0.0448,
+          "min": 0.0337,
+          "max": 0.045
+        },
+        "drop": false,
+        "gain": false
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.1793,
+            "B": 0.1699,
+            "C": 0.1979
+          },
+          "n": 3,
+          "median": 0.1793,
+          "min": 0.1699,
+          "max": 0.1979
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.2228,
+            "B": 0.2216,
+            "C": 0.2029
+          },
+          "n": 3,
+          "median": 0.2216,
+          "min": 0.2029,
+          "max": 0.2228
+        },
+        "drop": false,
+        "gain": true
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.7453,
+            "B": 0.7656,
+            "C": 0.6964
+          },
+          "n": 3,
+          "median": 0.7453,
+          "min": 0.6964,
+          "max": 0.7656
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.7938,
+            "B": 0.8155,
+            "C": 0.785
+          },
+          "n": 3,
+          "median": 0.7938,
+          "min": 0.785,
+          "max": 0.8155
+        },
+        "drop": true,
+        "gain": false
+      }
+    },
+    "steep": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.6095,
+            "B": 0.556,
+            "C": 0.607
+          },
+          "n": 3,
+          "median": 0.607,
+          "min": 0.556,
+          "max": 0.6095
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5855,
+            "B": 0.5668,
+            "C": 0.6159
+          },
+          "n": 3,
+          "median": 0.5855,
+          "min": 0.5668,
+          "max": 0.6159
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.6289,
+            "B": 0.6421,
+            "C": 0.6371
+          },
+          "n": 3,
+          "median": 0.6371,
+          "min": 0.6289,
+          "max": 0.6421
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.5918,
+            "B": 0.6063,
+            "C": 0.6275
+          },
+          "n": 3,
+          "median": 0.6063,
+          "min": 0.5918,
+          "max": 0.6275
+        },
+        "drop": false,
+        "gain": true
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9102,
+            "B": 0.9245,
+            "C": 0.9189
+          },
+          "n": 3,
+          "median": 0.9189,
+          "min": 0.9102,
+          "max": 0.9245
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9435,
+            "B": 0.9202,
+            "C": 0.9027
+          },
+          "n": 3,
+          "median": 0.9202,
+          "min": 0.9027,
+          "max": 0.9435
+        },
+        "drop": false,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9205,
+            "B": 0.8778,
+            "C": 0.9284
+          },
+          "n": 3,
+          "median": 0.9205,
+          "min": 0.8778,
+          "max": 0.9284
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.8931,
+            "B": 0.8754,
+            "C": 0.9144
+          },
+          "n": 3,
+          "median": 0.8931,
+          "min": 0.8754,
+          "max": 0.9144
+        },
+        "drop": false,
+        "gain": false
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0736,
+            "B": 0.0608,
+            "C": 0.1048
+          },
+          "n": 3,
+          "median": 0.0736,
+          "min": 0.0608,
+          "max": 0.1048
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0687,
+            "B": 0.0768,
+            "C": 0.0833
+          },
+          "n": 3,
+          "median": 0.0768,
+          "min": 0.0687,
+          "max": 0.0833
+        },
+        "drop": false,
+        "gain": false
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0793,
+            "B": 0.0636,
+            "C": 0.0784
+          },
+          "n": 3,
+          "median": 0.0784,
+          "min": 0.0636,
+          "max": 0.0793
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.104,
+            "B": 0.0961,
+            "C": 0.0805
+          },
+          "n": 3,
+          "median": 0.0961,
+          "min": 0.0805,
+          "max": 0.104
+        },
+        "drop": false,
+        "gain": true
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.8395,
+            "B": 0.8363,
+            "C": 0.8234
+          },
+          "n": 3,
+          "median": 0.8363,
+          "min": 0.8234,
+          "max": 0.8395
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.8276,
+            "B": 0.8547,
+            "C": 0.8203
+          },
+          "n": 3,
+          "median": 0.8276,
+          "min": 0.8203,
+          "max": 0.8547
+        },
+        "drop": false,
+        "gain": false
+      }
+    },
+    "sunset": {
+      "building_lift_global_shift": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.6668,
+            "B": 0.6039,
+            "C": 0.6459
+          },
+          "n": 3,
+          "median": 0.6459,
+          "min": 0.6039,
+          "max": 0.6668
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.665,
+            "B": 0.6512,
+            "C": 0.6814
+          },
+          "n": 3,
+          "median": 0.665,
+          "min": 0.6512,
+          "max": 0.6814
+        },
+        "drop": false,
+        "gain": false
+      },
+      "ground_precision_floor": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.6564,
+            "B": 0.6561,
+            "C": 0.6566
+          },
+          "n": 3,
+          "median": 0.6564,
+          "min": 0.6561,
+          "max": 0.6566
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.6121,
+            "B": 0.6136,
+            "C": 0.6305
+          },
+          "n": 3,
+          "median": 0.6136,
+          "min": 0.6121,
+          "max": 0.6305
+        },
+        "drop": false,
+        "gain": true
+      },
+      "ground_recall": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9234,
+            "B": 0.9318,
+            "C": 0.904
+          },
+          "n": 3,
+          "median": 0.9234,
+          "min": 0.904,
+          "max": 0.9318
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9772,
+            "B": 0.9632,
+            "C": 0.9632
+          },
+          "n": 3,
+          "median": 0.9632,
+          "min": 0.9632,
+          "max": 0.9772
+        },
+        "drop": true,
+        "gain": false
+      },
+      "vegetation_headline": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.9422,
+            "B": 0.9179,
+            "C": 0.9452
+          },
+          "n": 3,
+          "median": 0.9422,
+          "min": 0.9179,
+          "max": 0.9452
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.9217,
+            "B": 0.8979,
+            "C": 0.9212
+          },
+          "n": 3,
+          "median": 0.9212,
+          "min": 0.8979,
+          "max": 0.9217
+        },
+        "drop": false,
+        "gain": false
+      },
+      "not_vegetation_core_called_vegetation": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.0581,
+            "B": 0.0536,
+            "C": 0.0853
+          },
+          "n": 3,
+          "median": 0.0581,
+          "min": 0.0536,
+          "max": 0.0853
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.0587,
+            "B": 0.0611,
+            "C": 0.0762
+          },
+          "n": 3,
+          "median": 0.0611,
+          "min": 0.0587,
+          "max": 0.0762
+        },
+        "drop": false,
+        "gain": false
+      },
+      "raised_unassigned_called_ground_rate": {
+        "higher_is_better": false,
+        "m1": {
+          "per_seed": {
+            "A": 0.1209,
+            "B": 0.0923,
+            "C": 0.117
+          },
+          "n": 3,
+          "median": 0.117,
+          "min": 0.0923,
+          "max": 0.1209
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.1784,
+            "B": 0.1923,
+            "C": 0.1832
+          },
+          "n": 3,
+          "median": 0.1832,
+          "min": 0.1784,
+          "max": 0.1923
+        },
+        "drop": false,
+        "gain": true
+      },
+      "easy_error_auroc": {
+        "higher_is_better": true,
+        "m1": {
+          "per_seed": {
+            "A": 0.8613,
+            "B": 0.8472,
+            "C": 0.8165
+          },
+          "n": 3,
+          "median": 0.8472,
+          "min": 0.8165,
+          "max": 0.8613
+        },
+        "m0prime": {
+          "per_seed": {
+            "A": 0.8538,
+            "B": 0.8398,
+            "C": 0.8189
+          },
+          "n": 3,
+          "median": 0.8398,
+          "min": 0.8189,
+          "max": 0.8538
+        },
+        "drop": false,
+        "gain": false
+      }
+    }
+  },
+  "side_effects_surrey_held_out": {
+    "accuracy": {
+      "m1": {
+        "per_seed": {
+          "A": 0.8739,
+          "B": 0.8591,
+          "C": 0.8807
+        },
+        "n": 3,
+        "median": 0.8739,
+        "min": 0.8591,
+        "max": 0.8807
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.8769,
+          "B": 0.8819,
+          "C": 0.8819
+        },
+        "n": 3,
+        "median": 0.8819,
+        "min": 0.8769,
+        "max": 0.8819
+      },
+      "drop": false,
+      "gain": false
+    },
+    "ground": {
+      "m1": {
+        "per_seed": {
+          "A": 0.8977,
+          "B": 0.8912,
+          "C": 0.9098
+        },
+        "n": 3,
+        "median": 0.8977,
+        "min": 0.8912,
+        "max": 0.9098
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.9188,
+          "B": 0.9142,
+          "C": 0.9113
+        },
+        "n": 3,
+        "median": 0.9142,
+        "min": 0.9113,
+        "max": 0.9188
+      },
+      "drop": true,
+      "gain": false
+    },
+    "vegetation": {
+      "m1": {
+        "per_seed": {
+          "A": 0.4072,
+          "B": 0.387,
+          "C": 0.4165
+        },
+        "n": 3,
+        "median": 0.4072,
+        "min": 0.387,
+        "max": 0.4165
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.427,
+          "B": 0.427,
+          "C": 0.4289
+        },
+        "n": 3,
+        "median": 0.427,
+        "min": 0.427,
+        "max": 0.4289
+      },
+      "drop": true,
+      "gain": false
+    },
+    "car": {
+      "m1": {
+        "per_seed": {
+          "A": 0.5722,
+          "B": 0.5432,
+          "C": 0.5547
+        },
+        "n": 3,
+        "median": 0.5547,
+        "min": 0.5432,
+        "max": 0.5722
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.554,
+          "B": 0.5237,
+          "C": 0.4922
+        },
+        "n": 3,
+        "median": 0.5237,
+        "min": 0.4922,
+        "max": 0.554
+      },
+      "drop": false,
+      "gain": false
+    },
+    "powerline": {
+      "m1": {
+        "per_seed": {
+          "A": 0.8005,
+          "B": 0.792,
+          "C": 0.7578
+        },
+        "n": 3,
+        "median": 0.792,
+        "min": 0.7578,
+        "max": 0.8005
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.8142,
+          "B": 0.8511,
+          "C": 0.773
+        },
+        "n": 3,
+        "median": 0.8142,
+        "min": 0.773,
+        "max": 0.8511
+      },
+      "drop": false,
+      "gain": false
+    },
+    "fence": {
+      "m1": {
+        "per_seed": {
+          "A": 0.3733,
+          "B": 0.3743,
+          "C": 0.4059
+        },
+        "n": 3,
+        "median": 0.3743,
+        "min": 0.3733,
+        "max": 0.4059
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.3723,
+          "B": 0.3838,
+          "C": 0.3774
+        },
+        "n": 3,
+        "median": 0.3774,
+        "min": 0.3723,
+        "max": 0.3838
+      },
+      "drop": false,
+      "gain": false
+    },
+    "tree": {
+      "m1": {
+        "per_seed": {
+          "A": 0.8604,
+          "B": 0.8361,
+          "C": 0.8779
+        },
+        "n": 3,
+        "median": 0.8604,
+        "min": 0.8361,
+        "max": 0.8779
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.8756,
+          "B": 0.8767,
+          "C": 0.883
+        },
+        "n": 3,
+        "median": 0.8767,
+        "min": 0.8756,
+        "max": 0.883
+      },
+      "drop": false,
+      "gain": false
+    },
+    "pickup": {
+      "m1": {
+        "per_seed": {
+          "A": 0.1205,
+          "B": 0.1103,
+          "C": 0.1022
+        },
+        "n": 3,
+        "median": 0.1103,
+        "min": 0.1022,
+        "max": 0.1205
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.1502,
+          "B": 0.1398,
+          "C": 0.1446
+        },
+        "n": 3,
+        "median": 0.1446,
+        "min": 0.1398,
+        "max": 0.1502
+      },
+      "drop": true,
+      "gain": false
+    },
+    "van-truck": {
+      "m1": {
+        "per_seed": {
+          "A": 0.2099,
+          "B": 0.1937,
+          "C": 0.1845
+        },
+        "n": 3,
+        "median": 0.1937,
+        "min": 0.1845,
+        "max": 0.2099
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.1743,
+          "B": 0.2119,
+          "C": 0.1749
+        },
+        "n": 3,
+        "median": 0.1749,
+        "min": 0.1743,
+        "max": 0.2119
+      },
+      "drop": false,
+      "gain": false
+    },
+    "heavy-duty": {
+      "m1": {
+        "per_seed": {
+          "A": 0.037,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.037
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.0003,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0003
+      },
+      "drop": false,
+      "gain": false
+    },
+    "utility-pole": {
+      "m1": {
+        "per_seed": {
+          "A": 0.1959,
+          "B": 0.0968,
+          "C": 0.1663
+        },
+        "n": 3,
+        "median": 0.1663,
+        "min": 0.0968,
+        "max": 0.1959
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.2186,
+          "B": 0.1608,
+          "C": 0.1758
+        },
+        "n": 3,
+        "median": 0.1758,
+        "min": 0.1608,
+        "max": 0.2186
+      },
+      "drop": false,
+      "gain": false
+    },
+    "light-pole": {
+      "m1": {
+        "per_seed": {
+          "A": 0.0487,
+          "B": 0.1459,
+          "C": 0.0433
+        },
+        "n": 3,
+        "median": 0.0487,
+        "min": 0.0433,
+        "max": 0.1459
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.072,
+          "B": 0.1108,
+          "C": 0.0691
+        },
+        "n": 3,
+        "median": 0.072,
+        "min": 0.0691,
+        "max": 0.1108
+      },
+      "drop": false,
+      "gain": false
+    },
+    "traffic-pole": {
+      "m1": {
+        "per_seed": {
+          "A": 0.1508,
+          "B": 0.1473,
+          "C": 0.1537
+        },
+        "n": 3,
+        "median": 0.1508,
+        "min": 0.1473,
+        "max": 0.1537
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.0827,
+          "B": 0.0826,
+          "C": 0.0961
+        },
+        "n": 3,
+        "median": 0.0827,
+        "min": 0.0826,
+        "max": 0.0961
+      },
+      "drop": false,
+      "gain": true
+    },
+    "habitat": {
+      "m1": {
+        "per_seed": {
+          "A": 0.7614,
+          "B": 0.7291,
+          "C": 0.7279
+        },
+        "n": 3,
+        "median": 0.7291,
+        "min": 0.7279,
+        "max": 0.7614
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.6676,
+          "B": 0.7242,
+          "C": 0.7265
+        },
+        "n": 3,
+        "median": 0.7242,
+        "min": 0.6676,
+        "max": 0.7265
+      },
+      "drop": false,
+      "gain": true
+    },
+    "complex": {
+      "m1": {
+        "per_seed": {
+          "A": 0.4137,
+          "B": 0.3586,
+          "C": 0.398
+        },
+        "n": 3,
+        "median": 0.398,
+        "min": 0.3586,
+        "max": 0.4137
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.3737,
+          "B": 0.3933,
+          "C": 0.4037
+        },
+        "n": 3,
+        "median": 0.3933,
+        "min": 0.3737,
+        "max": 0.4037
+      },
+      "drop": false,
+      "gain": false
+    },
+    "annex": {
+      "m1": {
+        "per_seed": {
+          "A": 0.174,
+          "B": 0.228,
+          "C": 0.2022
+        },
+        "n": 3,
+        "median": 0.2022,
+        "min": 0.174,
+        "max": 0.228
+      },
+      "m0prime": {
+        "per_seed": {
+          "A": 0.273,
+          "B": 0.2344,
+          "C": 0.2631
+        },
+        "n": 3,
+        "median": 0.2631,
+        "min": 0.2344,
+        "max": 0.273
+      },
+      "drop": true,
+      "gain": false
+    }
+  },
+  "drops": [
+    "embarcadero.easy_error_auroc",
+    "embarcadero.ground_recall",
+    "financial.ground_recall",
+    "mission.easy_error_auroc",
+    "mission.ground_recall",
+    "soma.easy_error_auroc",
+    "soma.ground_recall",
+    "sunset.ground_recall",
+    "surrey.annex",
+    "surrey.ground",
+    "surrey.pickup",
+    "surrey.vegetation"
+  ],
+  "gains": [
+    "baybridge.bridge_deck_called_building",
+    "baybridge.water_called_ground",
+    "embarcadero.bridge_deck_called_building",
+    "embarcadero.raised_unassigned_called_ground_rate",
+    "embarcadero.vegetation_headline",
+    "embarcadero.water_called_ground",
+    "financial.raised_unassigned_called_ground_rate",
+    "financial.vegetation_headline",
+    "soma.raised_unassigned_called_ground_rate",
+    "steep.ground_precision_floor",
+    "steep.raised_unassigned_called_ground_rate",
+    "sunset.ground_precision_floor",
+    "sunset.raised_unassigned_called_ground_rate",
+    "surrey.habitat",
+    "surrey.traffic-pole"
+  ],
+  "water": {
+    "criterion": {
+      "per_area": {
+        "embarcadero": {
+          "lift_per_seed": {
+            "A": -1.4149,
+            "B": -1.4284,
+            "C": -1.2832
+          },
+          "positive_on": 0,
+          "seeds": 3,
+          "undefined_on": 0,
+          "success": false,
+          "phrase": "positive on 0 of 3 seeds"
+        },
+        "baybridge": {
+          "lift_per_seed": {
+            "A": -1.447,
+            "B": -1.4524,
+            "C": -1.1653
+          },
+          "positive_on": 0,
+          "seeds": 3,
+          "undefined_on": 0,
+          "success": false,
+          "phrase": "positive on 0 of 3 seeds"
+        }
+      },
+      "success": false,
+      "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+    },
+    "per_area_per_seed": {
+      "embarcadero": {
+        "A": {
+          "model_has_water_output": true,
+          "model": {
+            "called": 27644,
+            "water_points": 1279147,
+            "true_positive": 17434,
+            "precision": 0.6307,
+            "recall": 0.0136,
+            "iou": 0.0135,
+            "null_precision": 0.5919,
+            "null_recall": 0.9987,
+            "null_iou": 0.5915
+          },
+          "null": {
+            "null_0_5m": {
+              "called": 2158284,
+              "water_points": 1279147,
+              "true_positive": 1277531,
+              "null_precision": 0.5919,
+              "null_recall": 0.9987,
+              "null_iou": 0.5915
+            },
+            "null_0_25m": {
+              "called": 2150785,
+              "water_points": 1279147,
+              "true_positive": 1275639,
+              "null_precision": 0.5931,
+              "null_recall": 0.9973,
+              "null_iou": 0.5921
+            },
+            "null_1_0m": {
+              "called": 2171155,
+              "water_points": 1279147,
+              "true_positive": 1279090,
+              "null_precision": 0.5891,
+              "null_recall": 1.0,
+              "null_iou": 0.5891
+            }
+          },
+          "headline_null": "null_0_5m",
+          "lift_over_null": -1.4149,
+          "lift_over_null_sensitivity": {
+            "null_0_5m": -1.4149,
+            "null_0_25m": -1.4185,
+            "null_1_0m": -1.4008
+          },
+          "band": {
+            "written": "2026-09-15, after m0prime_seedA was scored and before m1_seedA was scored; a sensitivity beside the unchanged criterion",
+            "polygon_edge_written": "2026-09-15, before m1_seedA was scored; no height used",
+            "null_description": "The water null is not a do-nothing baseline: it knows each point's absolute height in NAVD88 and the sea level at the moment of flight. The model knows neither; it sees height above the floor of a 40 m block.",
+            "lower": {
+              "water_points": 1279147,
+              "model": {
+                "called": 27644,
+                "water_points": 1279147,
+                "true_positive": 17434,
+                "precision": 0.6307,
+                "recall": 0.0136,
+                "iou": 0.0135,
+                "null_precision": 0.5919,
+                "null_recall": 0.9987,
+                "null_iou": 0.5915
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 1279147,
+                "true_positive": 1277531,
+                "null_precision": 0.5919,
+                "null_recall": 0.9987,
+                "null_iou": 0.5915
+              },
+              "lift_over_null": -1.4149,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            },
+            "upper": {
+              "water_points": 2156700,
+              "model": {
+                "called": 27644,
+                "water_points": 2156700,
+                "true_positive": 21295,
+                "precision": 0.7703,
+                "recall": 0.0099,
+                "iou": 0.0098,
+                "null_precision": 0.9985,
+                "null_recall": 0.9993,
+                "null_iou": 0.9978
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 2156700,
+                "true_positive": 2155084,
+                "null_precision": 0.9985,
+                "null_recall": 0.9993,
+                "null_iou": 0.9978
+              },
+              "lift_over_null": -449.0909,
+              "null_agrees_by_construction": true,
+              "uses_height": true
+            },
+            "upper_polygon": {
+              "water_points": 2311511,
+              "model": {
+                "called": 27644,
+                "water_points": 2311511,
+                "true_positive": 20913,
+                "precision": 0.7565,
+                "recall": 0.009,
+                "iou": 0.009,
+                "null_precision": 0.9498,
+                "null_recall": 0.8868,
+                "null_iou": 0.8471
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 2311511,
+                "true_positive": 2049937,
+                "null_precision": 0.9498,
+                "null_recall": 0.8868,
+                "null_iou": 0.8471
+              },
+              "lift_over_null": -5.4814,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            }
+          },
+          "scope": "Embarcadero and Bay Bridge only, the areas the delivery labels water"
+        },
+        "B": {
+          "model_has_water_output": true,
+          "model": {
+            "called": 17610,
+            "water_points": 1279147,
+            "true_positive": 10299,
+            "precision": 0.5848,
+            "recall": 0.0081,
+            "iou": 0.008,
+            "null_precision": 0.5919,
+            "null_recall": 0.9987,
+            "null_iou": 0.5915
+          },
+          "null": {
+            "null_0_5m": {
+              "called": 2158284,
+              "water_points": 1279147,
+              "true_positive": 1277531,
+              "null_precision": 0.5919,
+              "null_recall": 0.9987,
+              "null_iou": 0.5915
+            },
+            "null_0_25m": {
+              "called": 2150785,
+              "water_points": 1279147,
+              "true_positive": 1275639,
+              "null_precision": 0.5931,
+              "null_recall": 0.9973,
+              "null_iou": 0.5921
+            },
+            "null_1_0m": {
+              "called": 2171155,
+              "water_points": 1279147,
+              "true_positive": 1279090,
+              "null_precision": 0.5891,
+              "null_recall": 1.0,
+              "null_iou": 0.5891
+            }
+          },
+          "headline_null": "null_0_5m",
+          "lift_over_null": -1.4284,
+          "lift_over_null_sensitivity": {
+            "null_0_5m": -1.4284,
+            "null_0_25m": -1.432,
+            "null_1_0m": -1.4142
+          },
+          "band": {
+            "written": "2026-09-15, after m0prime_seedA was scored and before m1_seedA was scored; a sensitivity beside the unchanged criterion",
+            "polygon_edge_written": "2026-09-15, before m1_seedA was scored; no height used",
+            "null_description": "The water null is not a do-nothing baseline: it knows each point's absolute height in NAVD88 and the sea level at the moment of flight. The model knows neither; it sees height above the floor of a 40 m block.",
+            "lower": {
+              "water_points": 1279147,
+              "model": {
+                "called": 17610,
+                "water_points": 1279147,
+                "true_positive": 10299,
+                "precision": 0.5848,
+                "recall": 0.0081,
+                "iou": 0.008,
+                "null_precision": 0.5919,
+                "null_recall": 0.9987,
+                "null_iou": 0.5915
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 1279147,
+                "true_positive": 1277531,
+                "null_precision": 0.5919,
+                "null_recall": 0.9987,
+                "null_iou": 0.5915
+              },
+              "lift_over_null": -1.4284,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            },
+            "upper": {
+              "water_points": 2156700,
+              "model": {
+                "called": 17610,
+                "water_points": 2156700,
+                "true_positive": 13459,
+                "precision": 0.7643,
+                "recall": 0.0062,
+                "iou": 0.0062,
+                "null_precision": 0.9985,
+                "null_recall": 0.9993,
+                "null_iou": 0.9978
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 2156700,
+                "true_positive": 2155084,
+                "null_precision": 0.9985,
+                "null_recall": 0.9993,
+                "null_iou": 0.9978
+              },
+              "lift_over_null": -450.7273,
+              "null_agrees_by_construction": true,
+              "uses_height": true
+            },
+            "upper_polygon": {
+              "water_points": 2311511,
+              "model": {
+                "called": 17610,
+                "water_points": 2311511,
+                "true_positive": 13331,
+                "precision": 0.757,
+                "recall": 0.0058,
+                "iou": 0.0058,
+                "null_precision": 0.9498,
+                "null_recall": 0.8868,
+                "null_iou": 0.8471
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 2311511,
+                "true_positive": 2049937,
+                "null_precision": 0.9498,
+                "null_recall": 0.8868,
+                "null_iou": 0.8471
+              },
+              "lift_over_null": -5.5023,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            }
+          },
+          "scope": "Embarcadero and Bay Bridge only, the areas the delivery labels water"
+        },
+        "C": {
+          "model_has_water_output": true,
+          "model": {
+            "called": 308177,
+            "water_points": 1279147,
+            "true_positive": 100088,
+            "precision": 0.3248,
+            "recall": 0.0782,
+            "iou": 0.0673,
+            "null_precision": 0.5919,
+            "null_recall": 0.9987,
+            "null_iou": 0.5915
+          },
+          "null": {
+            "null_0_5m": {
+              "called": 2158284,
+              "water_points": 1279147,
+              "true_positive": 1277531,
+              "null_precision": 0.5919,
+              "null_recall": 0.9987,
+              "null_iou": 0.5915
+            },
+            "null_0_25m": {
+              "called": 2150785,
+              "water_points": 1279147,
+              "true_positive": 1275639,
+              "null_precision": 0.5931,
+              "null_recall": 0.9973,
+              "null_iou": 0.5921
+            },
+            "null_1_0m": {
+              "called": 2171155,
+              "water_points": 1279147,
+              "true_positive": 1279090,
+              "null_precision": 0.5891,
+              "null_recall": 1.0,
+              "null_iou": 0.5891
+            }
+          },
+          "headline_null": "null_0_5m",
+          "lift_over_null": -1.2832,
+          "lift_over_null_sensitivity": {
+            "null_0_5m": -1.2832,
+            "null_0_25m": -1.2866,
+            "null_1_0m": -1.2699
+          },
+          "band": {
+            "written": "2026-09-15, after m0prime_seedA was scored and before m1_seedA was scored; a sensitivity beside the unchanged criterion",
+            "polygon_edge_written": "2026-09-15, before m1_seedA was scored; no height used",
+            "null_description": "The water null is not a do-nothing baseline: it knows each point's absolute height in NAVD88 and the sea level at the moment of flight. The model knows neither; it sees height above the floor of a 40 m block.",
+            "lower": {
+              "water_points": 1279147,
+              "model": {
+                "called": 308177,
+                "water_points": 1279147,
+                "true_positive": 100088,
+                "precision": 0.3248,
+                "recall": 0.0782,
+                "iou": 0.0673,
+                "null_precision": 0.5919,
+                "null_recall": 0.9987,
+                "null_iou": 0.5915
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 1279147,
+                "true_positive": 1277531,
+                "null_precision": 0.5919,
+                "null_recall": 0.9987,
+                "null_iou": 0.5915
+              },
+              "lift_over_null": -1.2832,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            },
+            "upper": {
+              "water_points": 2156700,
+              "model": {
+                "called": 308177,
+                "water_points": 2156700,
+                "true_positive": 180150,
+                "precision": 0.5846,
+                "recall": 0.0835,
+                "iou": 0.0788,
+                "null_precision": 0.9985,
+                "null_recall": 0.9993,
+                "null_iou": 0.9978
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 2156700,
+                "true_positive": 2155084,
+                "null_precision": 0.9985,
+                "null_recall": 0.9993,
+                "null_iou": 0.9978
+              },
+              "lift_over_null": -417.7273,
+              "null_agrees_by_construction": true,
+              "uses_height": true
+            },
+            "upper_polygon": {
+              "water_points": 2311511,
+              "model": {
+                "called": 308177,
+                "water_points": 2311511,
+                "true_positive": 188386,
+                "precision": 0.6113,
+                "recall": 0.0815,
+                "iou": 0.0775,
+                "null_precision": 0.9498,
+                "null_recall": 0.8868,
+                "null_iou": 0.8471
+              },
+              "null": {
+                "called": 2158284,
+                "water_points": 2311511,
+                "true_positive": 2049937,
+                "null_precision": 0.9498,
+                "null_recall": 0.8868,
+                "null_iou": 0.8471
+              },
+              "lift_over_null": -5.0334,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            }
+          },
+          "scope": "Embarcadero and Bay Bridge only, the areas the delivery labels water"
+        }
+      },
+      "baybridge": {
+        "A": {
+          "model_has_water_output": true,
+          "model": {
+            "called": 21686,
+            "water_points": 1396087,
+            "true_positive": 11266,
+            "precision": 0.5195,
+            "recall": 0.0081,
+            "iou": 0.008,
+            "null_precision": 0.5946,
+            "null_recall": 1.0,
+            "null_iou": 0.5946
+          },
+          "null": {
+            "null_0_5m": {
+              "called": 2347896,
+              "water_points": 1396087,
+              "true_positive": 1396086,
+              "null_precision": 0.5946,
+              "null_recall": 1.0,
+              "null_iou": 0.5946
+            },
+            "null_0_25m": {
+              "called": 2346730,
+              "water_points": 1396087,
+              "true_positive": 1396059,
+              "null_precision": 0.5949,
+              "null_recall": 1.0,
+              "null_iou": 0.5949
+            },
+            "null_1_0m": {
+              "called": 2349616,
+              "water_points": 1396087,
+              "true_positive": 1396087,
+              "null_precision": 0.5942,
+              "null_recall": 1.0,
+              "null_iou": 0.5942
+            }
+          },
+          "headline_null": "null_0_5m",
+          "lift_over_null": -1.447,
+          "lift_over_null_sensitivity": {
+            "null_0_5m": -1.447,
+            "null_0_25m": -1.4488,
+            "null_1_0m": -1.4446
+          },
+          "band": {
+            "written": "2026-09-15, after m0prime_seedA was scored and before m1_seedA was scored; a sensitivity beside the unchanged criterion",
+            "polygon_edge_written": "2026-09-15, before m1_seedA was scored; no height used",
+            "null_description": "The water null is not a do-nothing baseline: it knows each point's absolute height in NAVD88 and the sea level at the moment of flight. The model knows neither; it sees height above the floor of a 40 m block.",
+            "lower": {
+              "water_points": 1396087,
+              "model": {
+                "called": 21686,
+                "water_points": 1396087,
+                "true_positive": 11266,
+                "precision": 0.5195,
+                "recall": 0.0081,
+                "iou": 0.008,
+                "null_precision": 0.5946,
+                "null_recall": 1.0,
+                "null_iou": 0.5946
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 1396087,
+                "true_positive": 1396086,
+                "null_precision": 0.5946,
+                "null_recall": 1.0,
+                "null_iou": 0.5946
+              },
+              "lift_over_null": -1.447,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            },
+            "upper": {
+              "water_points": 2347897,
+              "model": {
+                "called": 21686,
+                "water_points": 2347897,
+                "true_positive": 14271,
+                "precision": 0.6581,
+                "recall": 0.0061,
+                "iou": 0.0061,
+                "null_precision": 1.0,
+                "null_recall": 1.0,
+                "null_iou": 1.0
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 2347897,
+                "true_positive": 2347896,
+                "null_precision": 1.0,
+                "null_recall": 1.0,
+                "null_iou": 1.0
+              },
+              "lift_over_null": null,
+              "null_agrees_by_construction": true,
+              "uses_height": true
+            },
+            "upper_polygon": {
+              "water_points": 2621008,
+              "model": {
+                "called": 21686,
+                "water_points": 2621008,
+                "true_positive": 14422,
+                "precision": 0.665,
+                "recall": 0.0055,
+                "iou": 0.0055,
+                "null_precision": 0.9994,
+                "null_recall": 0.8953,
+                "null_iou": 0.8948
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 2621008,
+                "true_positive": 2346497,
+                "null_precision": 0.9994,
+                "null_recall": 0.8953,
+                "null_iou": 0.8948
+              },
+              "lift_over_null": -8.4534,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            }
+          },
+          "scope": "Embarcadero and Bay Bridge only, the areas the delivery labels water"
+        },
+        "B": {
+          "model_has_water_output": true,
+          "model": {
+            "called": 12043,
+            "water_points": 1396087,
+            "true_positive": 8084,
+            "precision": 0.6713,
+            "recall": 0.0058,
+            "iou": 0.0058,
+            "null_precision": 0.5946,
+            "null_recall": 1.0,
+            "null_iou": 0.5946
+          },
+          "null": {
+            "null_0_5m": {
+              "called": 2347896,
+              "water_points": 1396087,
+              "true_positive": 1396086,
+              "null_precision": 0.5946,
+              "null_recall": 1.0,
+              "null_iou": 0.5946
+            },
+            "null_0_25m": {
+              "called": 2346730,
+              "water_points": 1396087,
+              "true_positive": 1396059,
+              "null_precision": 0.5949,
+              "null_recall": 1.0,
+              "null_iou": 0.5949
+            },
+            "null_1_0m": {
+              "called": 2349616,
+              "water_points": 1396087,
+              "true_positive": 1396087,
+              "null_precision": 0.5942,
+              "null_recall": 1.0,
+              "null_iou": 0.5942
+            }
+          },
+          "headline_null": "null_0_5m",
+          "lift_over_null": -1.4524,
+          "lift_over_null_sensitivity": {
+            "null_0_5m": -1.4524,
+            "null_0_25m": -1.4542,
+            "null_1_0m": -1.45
+          },
+          "band": {
+            "written": "2026-09-15, after m0prime_seedA was scored and before m1_seedA was scored; a sensitivity beside the unchanged criterion",
+            "polygon_edge_written": "2026-09-15, before m1_seedA was scored; no height used",
+            "null_description": "The water null is not a do-nothing baseline: it knows each point's absolute height in NAVD88 and the sea level at the moment of flight. The model knows neither; it sees height above the floor of a 40 m block.",
+            "lower": {
+              "water_points": 1396087,
+              "model": {
+                "called": 12043,
+                "water_points": 1396087,
+                "true_positive": 8084,
+                "precision": 0.6713,
+                "recall": 0.0058,
+                "iou": 0.0058,
+                "null_precision": 0.5946,
+                "null_recall": 1.0,
+                "null_iou": 0.5946
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 1396087,
+                "true_positive": 1396086,
+                "null_precision": 0.5946,
+                "null_recall": 1.0,
+                "null_iou": 0.5946
+              },
+              "lift_over_null": -1.4524,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            },
+            "upper": {
+              "water_points": 2347897,
+              "model": {
+                "called": 12043,
+                "water_points": 2347897,
+                "true_positive": 11631,
+                "precision": 0.9658,
+                "recall": 0.005,
+                "iou": 0.005,
+                "null_precision": 1.0,
+                "null_recall": 1.0,
+                "null_iou": 1.0
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 2347897,
+                "true_positive": 2347896,
+                "null_precision": 1.0,
+                "null_recall": 1.0,
+                "null_iou": 1.0
+              },
+              "lift_over_null": null,
+              "null_agrees_by_construction": true,
+              "uses_height": true
+            },
+            "upper_polygon": {
+              "water_points": 2621008,
+              "model": {
+                "called": 12043,
+                "water_points": 2621008,
+                "true_positive": 11697,
+                "precision": 0.9713,
+                "recall": 0.0045,
+                "iou": 0.0045,
+                "null_precision": 0.9994,
+                "null_recall": 0.8953,
+                "null_iou": 0.8948
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 2621008,
+                "true_positive": 2346497,
+                "null_precision": 0.9994,
+                "null_recall": 0.8953,
+                "null_iou": 0.8948
+              },
+              "lift_over_null": -8.4629,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            }
+          },
+          "scope": "Embarcadero and Bay Bridge only, the areas the delivery labels water"
+        },
+        "C": {
+          "model_has_water_output": true,
+          "model": {
+            "called": 344540,
+            "water_points": 1396087,
+            "true_positive": 189602,
+            "precision": 0.5503,
+            "recall": 0.1358,
+            "iou": 0.1222,
+            "null_precision": 0.5946,
+            "null_recall": 1.0,
+            "null_iou": 0.5946
+          },
+          "null": {
+            "null_0_5m": {
+              "called": 2347896,
+              "water_points": 1396087,
+              "true_positive": 1396086,
+              "null_precision": 0.5946,
+              "null_recall": 1.0,
+              "null_iou": 0.5946
+            },
+            "null_0_25m": {
+              "called": 2346730,
+              "water_points": 1396087,
+              "true_positive": 1396059,
+              "null_precision": 0.5949,
+              "null_recall": 1.0,
+              "null_iou": 0.5949
+            },
+            "null_1_0m": {
+              "called": 2349616,
+              "water_points": 1396087,
+              "true_positive": 1396087,
+              "null_precision": 0.5942,
+              "null_recall": 1.0,
+              "null_iou": 0.5942
+            }
+          },
+          "headline_null": "null_0_5m",
+          "lift_over_null": -1.1653,
+          "lift_over_null_sensitivity": {
+            "null_0_5m": -1.1653,
+            "null_0_25m": -1.1669,
+            "null_1_0m": -1.1631
+          },
+          "band": {
+            "written": "2026-09-15, after m0prime_seedA was scored and before m1_seedA was scored; a sensitivity beside the unchanged criterion",
+            "polygon_edge_written": "2026-09-15, before m1_seedA was scored; no height used",
+            "null_description": "The water null is not a do-nothing baseline: it knows each point's absolute height in NAVD88 and the sea level at the moment of flight. The model knows neither; it sees height above the floor of a 40 m block.",
+            "lower": {
+              "water_points": 1396087,
+              "model": {
+                "called": 344540,
+                "water_points": 1396087,
+                "true_positive": 189602,
+                "precision": 0.5503,
+                "recall": 0.1358,
+                "iou": 0.1222,
+                "null_precision": 0.5946,
+                "null_recall": 1.0,
+                "null_iou": 0.5946
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 1396087,
+                "true_positive": 1396086,
+                "null_precision": 0.5946,
+                "null_recall": 1.0,
+                "null_iou": 0.5946
+              },
+              "lift_over_null": -1.1653,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            },
+            "upper": {
+              "water_points": 2347897,
+              "model": {
+                "called": 344540,
+                "water_points": 2347897,
+                "true_positive": 300480,
+                "precision": 0.8721,
+                "recall": 0.128,
+                "iou": 0.1256,
+                "null_precision": 1.0,
+                "null_recall": 1.0,
+                "null_iou": 1.0
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 2347897,
+                "true_positive": 2347896,
+                "null_precision": 1.0,
+                "null_recall": 1.0,
+                "null_iou": 1.0
+              },
+              "lift_over_null": null,
+              "null_agrees_by_construction": true,
+              "uses_height": true
+            },
+            "upper_polygon": {
+              "water_points": 2621008,
+              "model": {
+                "called": 344540,
+                "water_points": 2621008,
+                "true_positive": 301178,
+                "precision": 0.8741,
+                "recall": 0.1149,
+                "iou": 0.113,
+                "null_precision": 0.9994,
+                "null_recall": 0.8953,
+                "null_iou": 0.8948
+              },
+              "null": {
+                "called": 2347896,
+                "water_points": 2621008,
+                "true_positive": 2346497,
+                "null_precision": 0.9994,
+                "null_recall": 0.8953,
+                "null_iou": 0.8948
+              },
+              "lift_over_null": -7.4316,
+              "null_agrees_by_construction": false,
+              "uses_height": false
+            }
+          },
+          "scope": "Embarcadero and Bay Bridge only, the areas the delivery labels water"
+        }
+      }
+    },
+    "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels",
+    "band_sensitivity": {
+      "lift_over_null_per_edge": {
+        "embarcadero": {
+          "A": {
+            "lower": -1.4149,
+            "upper": -449.0909,
+            "upper_polygon": -5.4814
+          },
+          "B": {
+            "lower": -1.4284,
+            "upper": -450.7273,
+            "upper_polygon": -5.5023
+          },
+          "C": {
+            "lower": -1.2832,
+            "upper": -417.7273,
+            "upper_polygon": -5.0334
+          }
+        },
+        "baybridge": {
+          "A": {
+            "lower": -1.447,
+            "upper": null,
+            "upper_polygon": -8.4534
+          },
+          "B": {
+            "lower": -1.4524,
+            "upper": null,
+            "upper_polygon": -8.4629
+          },
+          "C": {
+            "lower": -1.1653,
+            "upper": null,
+            "upper_polygon": -7.4316
+          }
+        }
+      },
+      "upper_edge_read_like_the_criterion": {
+        "per_area": {
+          "embarcadero": {
+            "lift_per_seed": {
+              "A": -449.0909,
+              "B": -450.7273,
+              "C": -417.7273
+            },
+            "positive_on": 0,
+            "seeds": 3,
+            "undefined_on": 0,
+            "success": false,
+            "phrase": "positive on 0 of 3 seeds"
+          },
+          "baybridge": {
+            "lift_per_seed": {
+              "A": null,
+              "B": null,
+              "C": null
+            },
+            "positive_on": 0,
+            "seeds": 3,
+            "undefined_on": 3,
+            "success": false,
+            "phrase": "positive on 0 of 3 seeds, undefined on 3 (the null scores IoU 1)"
+          }
+        },
+        "success": false,
+        "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+      },
+      "polygon_edge_read_like_the_criterion": {
+        "per_area": {
+          "embarcadero": {
+            "lift_per_seed": {
+              "A": -5.4814,
+              "B": -5.5023,
+              "C": -5.0334
+            },
+            "positive_on": 0,
+            "seeds": 3,
+            "undefined_on": 0,
+            "success": false,
+            "phrase": "positive on 0 of 3 seeds"
+          },
+          "baybridge": {
+            "lift_per_seed": {
+              "A": -8.4534,
+              "B": -8.4629,
+              "C": -7.4316
+            },
+            "positive_on": 0,
+            "seeds": 3,
+            "undefined_on": 0,
+            "success": false,
+            "phrase": "positive on 0 of 3 seeds"
+          }
+        },
+        "success": false,
+        "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+      },
+      "note": "sensitivity only; the criterion reads the lower edge. The upper edge uses the null's own height rule, so its lift over the null cannot be positive and is not a comparison; read M1's recall, precision and IoU there instead"
+    }
+  },
+  "bridge_deck": {
+    "per_area_per_seed": {
+      "embarcadero": {
+        "A": {
+          "called": 705966,
+          "true_positive": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "iou": 0.0,
+          "deck_points": 234883,
+          "model_has_bridge_deck_output": true,
+          "null_precision": null,
+          "note": "descriptive only; no simple null for a bridge deck"
+        },
+        "B": {
+          "called": 743959,
+          "true_positive": 26,
+          "precision": 0.0,
+          "recall": 0.0001,
+          "iou": 0.0,
+          "deck_points": 234883,
+          "model_has_bridge_deck_output": true,
+          "null_precision": null,
+          "note": "descriptive only; no simple null for a bridge deck"
+        },
+        "C": {
+          "called": 663837,
+          "true_positive": 130,
+          "precision": 0.0002,
+          "recall": 0.0006,
+          "iou": 0.0001,
+          "deck_points": 234883,
+          "model_has_bridge_deck_output": true,
+          "null_precision": null,
+          "note": "descriptive only; no simple null for a bridge deck"
+        }
+      },
+      "baybridge": {
+        "A": {
+          "called": 292107,
+          "true_positive": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "iou": 0.0,
+          "deck_points": 325405,
+          "model_has_bridge_deck_output": true,
+          "null_precision": null,
+          "note": "descriptive only; no simple null for a bridge deck"
+        },
+        "B": {
+          "called": 388514,
+          "true_positive": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "iou": 0.0,
+          "deck_points": 325405,
+          "model_has_bridge_deck_output": true,
+          "null_precision": null,
+          "note": "descriptive only; no simple null for a bridge deck"
+        },
+        "C": {
+          "called": 237280,
+          "true_positive": 6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "iou": 0.0,
+          "deck_points": 325405,
+          "model_has_bridge_deck_output": true,
+          "null_precision": null,
+          "note": "descriptive only; no simple null for a bridge deck"
+        }
+      }
+    },
+    "note": "no null for bridge deck; the Swiss decks are road bridges, overpasses and footbridges, the Bay Bridge is a double deck suspension bridge",
+    "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+  }
+}

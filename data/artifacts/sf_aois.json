@@ -1,0 +1,332 @@
+{
+  "delivery": "CA_SanFrancisco_1_B23",
+  "aois": [
+    {
+      "aoi": "baybridge",
+      "description": "Bay Bridge deck over water",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7955,
+        "lon": -122.381
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.7902,
+      "nodes_walked": 147,
+      "node_points_available": 5615890,
+      "points_in_aoi": 4495909,
+      "density_pts_per_m2": 50.0,
+      "z_min_m": -2.32,
+      "z_max_m": 170.86,
+      "classification_histogram": {
+        "1": 1824632,
+        "7": 624,
+        "9": 1946662,
+        "17": 723980,
+        "18": 11
+      },
+      "classification_fraction": {
+        "1": 0.40584,
+        "7": 0.00014,
+        "9": 0.43299,
+        "17": 0.16103,
+        "18": 0.0
+      },
+      "walk_seconds": 7.8,
+      "fetch_seconds": 0.4,
+      "output": "data/target/sf/baybridge.laz",
+      "output_bytes": 19777369
+    },
+    {
+      "aoi": "channel",
+      "description": "Mission Creek channel and its bridges",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.774,
+        "lon": -122.392
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79043,
+      "nodes_walked": 204,
+      "node_points_available": 8867953,
+      "points_in_aoi": 7264088,
+      "density_pts_per_m2": 80.7,
+      "z_min_m": -7.52,
+      "z_max_m": 58.41,
+      "classification_histogram": {
+        "1": 5003262,
+        "2": 2187990,
+        "7": 9004,
+        "9": 2906,
+        "17": 51830,
+        "18": 5,
+        "20": 9091
+      },
+      "classification_fraction": {
+        "1": 0.68877,
+        "2": 0.30121,
+        "7": 0.00124,
+        "9": 0.0004,
+        "17": 0.00714,
+        "18": 0.0,
+        "20": 0.00125
+      },
+      "walk_seconds": 4.2,
+      "fetch_seconds": 0.7,
+      "output": "data/target/sf/channel.laz",
+      "output_bytes": 32689799
+    },
+    {
+      "aoi": "embarcadero",
+      "description": "bay shoreline, piers and open water",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7905,
+        "lon": -122.3875
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79026,
+      "nodes_walked": 294,
+      "node_points_available": 11985570,
+      "points_in_aoi": 9006733,
+      "density_pts_per_m2": 100.1,
+      "z_min_m": -68.27,
+      "z_max_m": 146.04,
+      "classification_histogram": {
+        "1": 4961463,
+        "2": 1390308,
+        "7": 5467,
+        "9": 1761510,
+        "17": 861133,
+        "18": 19045,
+        "20": 7807
+      },
+      "classification_fraction": {
+        "1": 0.55086,
+        "2": 0.15436,
+        "7": 0.00061,
+        "9": 0.19558,
+        "17": 0.09561,
+        "18": 0.00211,
+        "20": 0.00087
+      },
+      "walk_seconds": 6.4,
+      "fetch_seconds": 0.9,
+      "output": "data/target/sf/embarcadero.laz",
+      "output_bytes": 40403382
+    },
+    {
+      "aoi": "financial",
+      "description": "high rise towers, deep street canyons",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7935,
+        "lon": -122.3985
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79022,
+      "nodes_walked": 459,
+      "node_points_available": 18778022,
+      "points_in_aoi": 13086608,
+      "density_pts_per_m2": 145.4,
+      "z_min_m": -69.06,
+      "z_max_m": 267.44,
+      "classification_histogram": {
+        "1": 10132854,
+        "2": 2808839,
+        "7": 70843,
+        "18": 74072
+      },
+      "classification_fraction": {
+        "1": 0.77429,
+        "2": 0.21463,
+        "7": 0.00541,
+        "18": 0.00566
+      },
+      "walk_seconds": 4.3,
+      "fetch_seconds": 1.8,
+      "output": "data/target/sf/financial.laz",
+      "output_bytes": 61850520
+    },
+    {
+      "aoi": "ggpark",
+      "description": "tree canopy, few buildings",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7694,
+        "lon": -122.4862
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79048,
+      "nodes_walked": 277,
+      "node_points_available": 15952527,
+      "points_in_aoi": 13250164,
+      "density_pts_per_m2": 147.2,
+      "z_min_m": 40.37,
+      "z_max_m": 93.46,
+      "classification_histogram": {
+        "1": 8816966,
+        "2": 4429611,
+        "7": 3587
+      },
+      "classification_fraction": {
+        "1": 0.66542,
+        "2": 0.33431,
+        "7": 0.00027
+      },
+      "walk_seconds": 6.4,
+      "fetch_seconds": 1.2,
+      "output": "data/target/sf/ggpark.laz",
+      "output_bytes": 75154588
+    },
+    {
+      "aoi": "mission",
+      "description": "dense low rise rowhouses on a grid",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7599,
+        "lon": -122.4148
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79058,
+      "nodes_walked": 185,
+      "node_points_available": 9433016,
+      "points_in_aoi": 6969036,
+      "density_pts_per_m2": 77.4,
+      "z_min_m": 1.68,
+      "z_max_m": 39.4,
+      "classification_histogram": {
+        "1": 4664799,
+        "2": 2299715,
+        "7": 4521,
+        "18": 1
+      },
+      "classification_fraction": {
+        "1": 0.66936,
+        "2": 0.32999,
+        "7": 0.00065,
+        "18": 0.0
+      },
+      "walk_seconds": 4.3,
+      "fetch_seconds": 0.7,
+      "output": "data/target/sf/mission.laz",
+      "output_bytes": 30801284
+    },
+    {
+      "aoi": "soma",
+      "description": "mixed mid rise, wide streets, parking",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7785,
+        "lon": -122.4056
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79038,
+      "nodes_walked": 181,
+      "node_points_available": 9590738,
+      "points_in_aoi": 6855946,
+      "density_pts_per_m2": 76.2,
+      "z_min_m": -2.93,
+      "z_max_m": 51.14,
+      "classification_histogram": {
+        "1": 4753629,
+        "2": 2097061,
+        "7": 5255,
+        "18": 1
+      },
+      "classification_fraction": {
+        "1": 0.69336,
+        "2": 0.30587,
+        "7": 0.00077,
+        "18": 0.0
+      },
+      "walk_seconds": 4.6,
+      "fetch_seconds": 45.8,
+      "output": "data/target/sf/soma.laz",
+      "output_bytes": 30436856
+    },
+    {
+      "aoi": "steep",
+      "description": "Russian Hill, one of the steepest grades in the city",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.7998,
+        "lon": -122.419
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79016,
+      "nodes_walked": 232,
+      "node_points_available": 10460420,
+      "points_in_aoi": 8323079,
+      "density_pts_per_m2": 92.5,
+      "z_min_m": 51.03,
+      "z_max_m": 139.13,
+      "classification_histogram": {
+        "1": 6400397,
+        "2": 1910599,
+        "7": 12078,
+        "18": 5
+      },
+      "classification_fraction": {
+        "1": 0.76899,
+        "2": 0.22955,
+        "7": 0.00145,
+        "18": 0.0
+      },
+      "walk_seconds": 4.9,
+      "fetch_seconds": 74.6,
+      "output": "data/target/sf/steep.laz",
+      "output_bytes": 38935797
+    },
+    {
+      "aoi": "sunset",
+      "description": "uniform two storey grid, small gardens",
+      "delivery": "CA_SanFrancisco_1_B23",
+      "centre_wgs84": {
+        "lat": 37.75,
+        "lon": -122.49
+      },
+      "size_m": 300.0,
+      "source_epsg": 3857,
+      "output_epsg": 32610,
+      "web_mercator_unit_in_metres": 0.79069,
+      "nodes_walked": 357,
+      "node_points_available": 12551375,
+      "points_in_aoi": 10495885,
+      "density_pts_per_m2": 116.6,
+      "z_min_m": 64.63,
+      "z_max_m": 105.18,
+      "classification_histogram": {
+        "1": 6419260,
+        "2": 4070439,
+        "7": 6177,
+        "18": 9
+      },
+      "classification_fraction": {
+        "1": 0.6116,
+        "2": 0.38781,
+        "7": 0.00059,
+        "18": 0.0
+      },
+      "walk_seconds": 4.6,
+      "fetch_seconds": 49975.2,
+      "output": "data/target/sf/sunset.laz",
+      "output_bytes": 46818954
+    }
+  ]
+}

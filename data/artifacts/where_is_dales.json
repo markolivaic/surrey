@@ -1,0 +1,822 @@
+{
+  "question": "where was the lidar behind DALES actually flown",
+  "tiles": 40,
+  "points_total": 492168320,
+  "georeference": "tile filename only",
+  "crs_used": "EPSG:26910",
+  "crs_origin": "absent from every LAS header, taken from Varney et al. 2020, DALES, section 3.1",
+  "grid_check": {
+    "origins_on_500m_pitch": "40/40",
+    "local_boxes_are_500m_from_zero": "40/40",
+    "holds": true
+  },
+  "bbox_utm": [
+    508000.0,
+    5432000.0,
+    519500.0,
+    5450000.0
+  ],
+  "extent_km": [
+    11.5,
+    18.0
+  ],
+  "tiled_area_km2": 10.0,
+  "centroid_wgs84": {
+    "lat": 49.12168,
+    "lon": -122.81155
+  },
+  "corners_wgs84": [
+    [
+      -122.89053,
+      49.04083
+    ],
+    [
+      -122.73318,
+      49.04057
+    ],
+    [
+      -122.73231,
+      49.20249
+    ],
+    [
+      -122.89018,
+      49.20274
+    ]
+  ],
+  "distance_km": {
+    "Dayton, Ohio, USA": 3197.9,
+    "Surrey, British Columbia, Canada": 8.2
+  },
+  "nearest_named_place": "Surrey, British Columbia, Canada",
+  "point_formats": {
+    "6": 5,
+    "7": 35
+  },
+  "z_normalised_per_tile": true,
+  "z_max_range_m": [
+    25.83,
+    136.74
+  ],
+  "per_tile": [
+    {
+      "split": "test",
+      "name": "5080_54400",
+      "points": 12038801,
+      "point_format": 6,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        40.66
+      ],
+      "origin_e": 508000.0,
+      "origin_n": 5440000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5080_54470",
+      "points": 11638798,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        51.1
+      ],
+      "origin_e": 508000.0,
+      "origin_n": 5447000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5100_54440",
+      "points": 11331772,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        72.89
+      ],
+      "origin_e": 510000.0,
+      "origin_n": 5444000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5100_54490",
+      "points": 11868903,
+      "point_format": 6,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        49.19
+      ],
+      "origin_e": 510000.0,
+      "origin_n": 5449000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5120_54445",
+      "points": 13741395,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        59.86
+      ],
+      "origin_e": 512000.0,
+      "origin_n": 5444500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5135_54430",
+      "points": 12243812,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        54.09
+      ],
+      "origin_e": 513500.0,
+      "origin_n": 5443000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5135_54435",
+      "points": 14079882,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        54.02
+      ],
+      "origin_e": 513500.0,
+      "origin_n": 5443500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5140_54390",
+      "points": 11840197,
+      "point_format": 6,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        68.4
+      ],
+      "origin_e": 514000.0,
+      "origin_n": 5439000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5150_54325",
+      "points": 11749755,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        45.86
+      ],
+      "origin_e": 515000.0,
+      "origin_n": 5432500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5155_54335",
+      "points": 12035555,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        79.57
+      ],
+      "origin_e": 515500.0,
+      "origin_n": 5433500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "test",
+      "name": "5175_54395",
+      "points": 11978127,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        54.35
+      ],
+      "origin_e": 517500.0,
+      "origin_n": 5439500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5080_54435",
+      "points": 11153689,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.05,
+        500.04,
+        36.93
+      ],
+      "origin_e": 508000.0,
+      "origin_n": 5443500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5085_54320",
+      "points": 14181372,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.04,
+        88.9
+      ],
+      "origin_e": 508500.0,
+      "origin_n": 5432000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5095_54440",
+      "points": 11496317,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        47.95
+      ],
+      "origin_e": 509500.0,
+      "origin_n": 5444000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5095_54455",
+      "points": 13367451,
+      "point_format": 6,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.05,
+        500.03,
+        49.13
+      ],
+      "origin_e": 509500.0,
+      "origin_n": 5445500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5100_54495",
+      "points": 11872445,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        55.66
+      ],
+      "origin_e": 510000.0,
+      "origin_n": 5449500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5105_54405",
+      "points": 11699759,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        54.47
+      ],
+      "origin_e": 510500.0,
+      "origin_n": 5440500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5105_54460",
+      "points": 12752749,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.02,
+        60.48
+      ],
+      "origin_e": 510500.0,
+      "origin_n": 5446000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5110_54320",
+      "points": 17560116,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.01,
+        500.03,
+        67.66
+      ],
+      "origin_e": 511000.0,
+      "origin_n": 5432000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5110_54460",
+      "points": 13555370,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.02,
+        53.11
+      ],
+      "origin_e": 511000.0,
+      "origin_n": 5446000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5110_54475",
+      "points": 11498181,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        136.74
+      ],
+      "origin_e": 511000.0,
+      "origin_n": 5447500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5110_54495",
+      "points": 11771043,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        64.83
+      ],
+      "origin_e": 511000.0,
+      "origin_n": 5449500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5115_54480",
+      "points": 13525852,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        93.3
+      ],
+      "origin_e": 511500.0,
+      "origin_n": 5448000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5130_54355",
+      "points": 12023503,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        42.11
+      ],
+      "origin_e": 513000.0,
+      "origin_n": 5435500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5135_54495",
+      "points": 11617334,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        49.94
+      ],
+      "origin_e": 513500.0,
+      "origin_n": 5449500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5140_54445",
+      "points": 12063052,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        69.27
+      ],
+      "origin_e": 514000.0,
+      "origin_n": 5444500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5145_54340",
+      "points": 11807976,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.03,
+        54.42
+      ],
+      "origin_e": 514500.0,
+      "origin_n": 5434000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5145_54405",
+      "points": 12064535,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.04,
+        50.04
+      ],
+      "origin_e": 514500.0,
+      "origin_n": 5440500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5145_54460",
+      "points": 12191052,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        48.39
+      ],
+      "origin_e": 514500.0,
+      "origin_n": 5446000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5145_54470",
+      "points": 11898373,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        35.54
+      ],
+      "origin_e": 514500.0,
+      "origin_n": 5447000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5145_54480",
+      "points": 12566988,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.02,
+        500.03,
+        41.54
+      ],
+      "origin_e": 514500.0,
+      "origin_n": 5448000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5150_54340",
+      "points": 13483881,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        60.0
+      ],
+      "origin_e": 515000.0,
+      "origin_n": 5434000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5160_54330",
+      "points": 11814747,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.05,
+        71.8
+      ],
+      "origin_e": 516000.0,
+      "origin_n": 5433000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5165_54390",
+      "points": 6582632,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.05,
+        500.03,
+        25.83
+      ],
+      "origin_e": 516500.0,
+      "origin_n": 5439000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5165_54395",
+      "points": 13558873,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.06,
+        500.04,
+        84.42
+      ],
+      "origin_e": 516500.0,
+      "origin_n": 5439500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5180_54435",
+      "points": 11887488,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        54.57
+      ],
+      "origin_e": 518000.0,
+      "origin_n": 5443500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5180_54485",
+      "points": 11793658,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        72.05
+      ],
+      "origin_e": 518000.0,
+      "origin_n": 5448500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5185_54390",
+      "points": 11743016,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.04,
+        500.02,
+        42.13
+      ],
+      "origin_e": 518500.0,
+      "origin_n": 5439000.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5185_54485",
+      "points": 14253406,
+      "point_format": 7,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.04,
+        95.16
+      ],
+      "origin_e": 518500.0,
+      "origin_n": 5448500.0,
+      "crs_declared": null
+    },
+    {
+      "split": "train",
+      "name": "5190_54400",
+      "points": 11836465,
+      "point_format": 6,
+      "local_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_max": [
+        500.03,
+        500.03,
+        41.62
+      ],
+      "origin_e": 519000.0,
+      "origin_n": 5440000.0,
+      "crs_declared": null
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "areas": {
+    "embarcadero": {
+      "area": "embarcadero",
+      "nodes": 6,
+      "points_decoded": 56006,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 104,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "ggpark": {
+      "area": "ggpark",
+      "nodes": 6,
+      "points_decoded": 204922,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 156,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "surrey_5135_54430": {
+      "area": "5135_54430",
+      "nodes": 6,
+      "points_decoded": 107943,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 42,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "class_field_agrees_with_dales_label": 0.8966,
+      "manifest_dales_labels_included": false,
+      "decoder_round_trip_exact": true
+    },
+    "baybridge": {
+      "area": "baybridge",
+      "nodes": 6,
+      "points_decoded": 46781,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 52,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "financial": {
+      "area": "financial",
+      "nodes": 6,
+      "points_decoded": 157970,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 103,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "mission": {
+      "area": "mission",
+      "nodes": 6,
+      "points_decoded": 101495,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 138,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "soma": {
+      "area": "soma",
+      "nodes": 6,
+      "points_decoded": 99222,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 93,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "steep": {
+      "area": "steep",
+      "nodes": 6,
+      "points_decoded": 122463,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 152,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    },
+    "sunset": {
+      "area": "sunset",
+      "nodes": 6,
+      "points_decoded": 87275,
+      "position_match_within_2cm": 1.0,
+      "position_distance_max_m": 0.0173,
+      "points_with_a_second_cached_point_within_2cm": 178,
+      "rgb_equal": 1.0,
+      "variants": {
+        "returns_ood": {
+          "slot": 0,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "ret0": {
+          "slot": 1,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m0_seedA": {
+          "slot": 2,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        },
+        "m1_seedA": {
+          "slot": 3,
+          "class_equal": 1.0,
+          "confidence_equal": 1.0
+        }
+      },
+      "decoder_round_trip_exact": true
+    }
+  }
+}

@@ -1,0 +1,772 @@
+{
+  "question": "is the confidence collapse a lost signal, or water being hard",
+  "task": "among points the model calls ground, rank right calls above wrong ones",
+  "prediction_cache": {
+    "checkpoint_sha256_16": "c8ef2e4a026888a0",
+    "seed": 0
+  },
+  "easy_error": "wrong call more than 3.0 m above the ground surface",
+  "hard_error": "wrong call within 0.5 m of the ground surface",
+  "surface": {
+    "cell_m": 5.0,
+    "reach_m": 25.0,
+    "surrey_from": "DALES ground labels",
+    "san_francisco_from": "delivery ASPRS class 2"
+  },
+  "surrey_pooling_note": "eleven held-out tiles, one flight, one city, one split; each tile is also listed",
+  "surrey": {
+    "all": {
+      "right": 50121637,
+      "wrong": 2445351,
+      "auroc": 0.881
+    },
+    "easy": {
+      "right": 50121637,
+      "wrong": 1331232,
+      "auroc": 0.8573
+    },
+    "hard": {
+      "right": 50121637,
+      "wrong": 731401,
+      "auroc": 0.9118
+    }
+  },
+  "surrey_per_tile": [
+    {
+      "tile": "5080_54400",
+      "all": {
+        "right": 3929880,
+        "wrong": 144351,
+        "auroc": 0.9049,
+        "median_conf_right": 0.9785,
+        "median_conf_wrong": 0.7163
+      },
+      "easy": {
+        "right": 3929880,
+        "wrong": 53749,
+        "auroc": 0.8987,
+        "median_conf_right": 0.9785,
+        "median_conf_wrong": 0.7441,
+        "wrong_height_m_p10_p50_p90": [
+          4.1,
+          6.7,
+          7.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.3
+        ]
+      },
+      "hard": {
+        "right": 3929880,
+        "wrong": 64071,
+        "auroc": 0.9034,
+        "median_conf_right": 0.9785,
+        "median_conf_wrong": 0.7163,
+        "wrong_height_m_p10_p50_p90": [
+          0.0,
+          0.2,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.3
+        ]
+      }
+    },
+    {
+      "tile": "5080_54470",
+      "all": {
+        "right": 4560216,
+        "wrong": 196718,
+        "auroc": 0.9052,
+        "median_conf_right": 0.9756,
+        "median_conf_wrong": 0.748
+      },
+      "easy": {
+        "right": 4560216,
+        "wrong": 108013,
+        "auroc": 0.8978,
+        "median_conf_right": 0.9756,
+        "median_conf_wrong": 0.7871,
+        "wrong_height_m_p10_p50_p90": [
+          3.5,
+          5.4,
+          8.3
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.34
+        ]
+      },
+      "hard": {
+        "right": 4560216,
+        "wrong": 62283,
+        "auroc": 0.9063,
+        "median_conf_right": 0.9756,
+        "median_conf_wrong": 0.7266,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          0.1,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.34
+        ]
+      }
+    },
+    {
+      "tile": "5100_54440",
+      "all": {
+        "right": 4114207,
+        "wrong": 811395,
+        "auroc": 0.8464,
+        "median_conf_right": 0.9697,
+        "median_conf_wrong": 0.8813
+      },
+      "easy": {
+        "right": 4114207,
+        "wrong": 690152,
+        "auroc": 0.8415,
+        "median_conf_right": 0.9697,
+        "median_conf_wrong": 0.8867,
+        "wrong_height_m_p10_p50_p90": [
+          6.5,
+          8.9,
+          11.6
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.36
+        ]
+      },
+      "hard": {
+        "right": 4114207,
+        "wrong": 43703,
+        "auroc": 0.922,
+        "median_conf_right": 0.9697,
+        "median_conf_wrong": 0.6826,
+        "wrong_height_m_p10_p50_p90": [
+          -0.0,
+          0.2,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.36
+        ]
+      }
+    },
+    {
+      "tile": "5100_54490",
+      "all": {
+        "right": 4938471,
+        "wrong": 165309,
+        "auroc": 0.8924,
+        "median_conf_right": 0.9717,
+        "median_conf_wrong": 0.7485
+      },
+      "easy": {
+        "right": 4938471,
+        "wrong": 71910,
+        "auroc": 0.8664,
+        "median_conf_right": 0.9717,
+        "median_conf_wrong": 0.8179,
+        "wrong_height_m_p10_p50_p90": [
+          3.7,
+          6.9,
+          8.7
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.3
+        ]
+      },
+      "hard": {
+        "right": 4938471,
+        "wrong": 63245,
+        "auroc": 0.9047,
+        "median_conf_right": 0.9717,
+        "median_conf_wrong": 0.7168,
+        "wrong_height_m_p10_p50_p90": [
+          -0.0,
+          0.2,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.3
+        ]
+      }
+    },
+    {
+      "tile": "5120_54445",
+      "all": {
+        "right": 4549480,
+        "wrong": 162405,
+        "auroc": 0.8999,
+        "median_conf_right": 0.9712,
+        "median_conf_wrong": 0.6826
+      },
+      "easy": {
+        "right": 4549480,
+        "wrong": 7383,
+        "auroc": 0.8895,
+        "median_conf_right": 0.9712,
+        "median_conf_wrong": 0.6294,
+        "wrong_height_m_p10_p50_p90": [
+          3.3,
+          4.5,
+          7.8
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.43
+        ]
+      },
+      "hard": {
+        "right": 4549480,
+        "wrong": 117398,
+        "auroc": 0.8948,
+        "median_conf_right": 0.9712,
+        "median_conf_wrong": 0.7002,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          0.1,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.43
+        ]
+      }
+    },
+    {
+      "tile": "5135_54430",
+      "all": {
+        "right": 4598165,
+        "wrong": 85557,
+        "auroc": 0.9229,
+        "median_conf_right": 0.98,
+        "median_conf_wrong": 0.6816
+      },
+      "easy": {
+        "right": 4598165,
+        "wrong": 7357,
+        "auroc": 0.8776,
+        "median_conf_right": 0.98,
+        "median_conf_wrong": 0.6855,
+        "wrong_height_m_p10_p50_p90": [
+          3.3,
+          4.8,
+          9.1
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.39
+        ]
+      },
+      "hard": {
+        "right": 4598165,
+        "wrong": 51717,
+        "auroc": 0.9261,
+        "median_conf_right": 0.98,
+        "median_conf_wrong": 0.6963,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          0.1,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.39
+        ]
+      }
+    },
+    {
+      "tile": "5135_54435",
+      "all": {
+        "right": 5031056,
+        "wrong": 123858,
+        "auroc": 0.9079,
+        "median_conf_right": 0.9736,
+        "median_conf_wrong": 0.6719
+      },
+      "easy": {
+        "right": 5031056,
+        "wrong": 4229,
+        "auroc": 0.832,
+        "median_conf_right": 0.9736,
+        "median_conf_wrong": 0.7192,
+        "wrong_height_m_p10_p50_p90": [
+          3.1,
+          4.4,
+          13.2
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.64
+        ]
+      },
+      "hard": {
+        "right": 5031056,
+        "wrong": 88071,
+        "auroc": 0.9083,
+        "median_conf_right": 0.9736,
+        "median_conf_wrong": 0.6777,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          0.1,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.64
+        ]
+      }
+    },
+    {
+      "tile": "5140_54390",
+      "all": {
+        "right": 4487437,
+        "wrong": 265433,
+        "auroc": 0.8662,
+        "median_conf_right": 0.9761,
+        "median_conf_wrong": 0.7817
+      },
+      "easy": {
+        "right": 4487437,
+        "wrong": 179846,
+        "auroc": 0.8441,
+        "median_conf_right": 0.9761,
+        "median_conf_wrong": 0.835,
+        "wrong_height_m_p10_p50_p90": [
+          3.7,
+          6.8,
+          10.2
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.63
+        ]
+      },
+      "hard": {
+        "right": 4487437,
+        "wrong": 49623,
+        "auroc": 0.9227,
+        "median_conf_right": 0.9761,
+        "median_conf_wrong": 0.6709,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          0.2,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.63
+        ]
+      }
+    },
+    {
+      "tile": "5150_54325",
+      "all": {
+        "right": 4412663,
+        "wrong": 218762,
+        "auroc": 0.8844,
+        "median_conf_right": 0.9756,
+        "median_conf_wrong": 0.7754
+      },
+      "easy": {
+        "right": 4412663,
+        "wrong": 132761,
+        "auroc": 0.8671,
+        "median_conf_right": 0.9756,
+        "median_conf_wrong": 0.8213,
+        "wrong_height_m_p10_p50_p90": [
+          3.3,
+          5.3,
+          7.2
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.42
+        ]
+      },
+      "hard": {
+        "right": 4412663,
+        "wrong": 49845,
+        "auroc": 0.9192,
+        "median_conf_right": 0.9756,
+        "median_conf_wrong": 0.6812,
+        "wrong_height_m_p10_p50_p90": [
+          -0.0,
+          0.2,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.42
+        ]
+      }
+    },
+    {
+      "tile": "5155_54335",
+      "all": {
+        "right": 4956465,
+        "wrong": 130313,
+        "auroc": 0.914,
+        "median_conf_right": 0.9761,
+        "median_conf_wrong": 0.687
+      },
+      "easy": {
+        "right": 4956465,
+        "wrong": 34108,
+        "auroc": 0.8834,
+        "median_conf_right": 0.9761,
+        "median_conf_wrong": 0.7161,
+        "wrong_height_m_p10_p50_p90": [
+          3.7,
+          6.8,
+          10.2
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.52
+        ]
+      },
+      "hard": {
+        "right": 4956465,
+        "wrong": 70013,
+        "auroc": 0.9255,
+        "median_conf_right": 0.9761,
+        "median_conf_wrong": 0.6875,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          0.1,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.52
+        ]
+      }
+    },
+    {
+      "tile": "5175_54395",
+      "all": {
+        "right": 4543597,
+        "wrong": 141250,
+        "auroc": 0.906,
+        "median_conf_right": 0.9746,
+        "median_conf_wrong": 0.7056
+      },
+      "easy": {
+        "right": 4543597,
+        "wrong": 41724,
+        "auroc": 0.9034,
+        "median_conf_right": 0.9746,
+        "median_conf_wrong": 0.7192,
+        "wrong_height_m_p10_p50_p90": [
+          3.9,
+          4.9,
+          6.7
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.34
+        ]
+      },
+      "hard": {
+        "right": 4543597,
+        "wrong": 71432,
+        "auroc": 0.9037,
+        "median_conf_right": 0.9746,
+        "median_conf_wrong": 0.7095,
+        "wrong_height_m_p10_p50_p90": [
+          -0.0,
+          0.2,
+          0.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.34
+        ]
+      }
+    }
+  ],
+  "san_francisco_per_area": [
+    {
+      "aoi": "baybridge",
+      "excluded": "no delivery ground class, so there is no right call to rank"
+    },
+    {
+      "aoi": "embarcadero",
+      "ground_relief_median_m": 0.62,
+      "easy_unassigned_over_3m": {
+        "right": 452482,
+        "wrong": 606963,
+        "auroc": 0.5022,
+        "median_conf_right": 0.6621,
+        "median_conf_wrong": 0.6523,
+        "wrong_height_m_p10_p50_p90": [
+          4.5,
+          10.5,
+          24.6
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.67
+        ]
+      },
+      "hard_water": {
+        "right": 452482,
+        "wrong": 1213903,
+        "auroc": 0.6433,
+        "median_conf_right": 0.6621,
+        "median_conf_wrong": 0.6279,
+        "wrong_height_m_p10_p50_p90": [
+          -3.6,
+          -1.6,
+          -0.0
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.67
+        ]
+      },
+      "hard_water_within_0_5m": {
+        "right": 452482,
+        "wrong": 48755,
+        "auroc": 0.573,
+        "median_conf_right": 0.6621,
+        "median_conf_wrong": 0.644,
+        "wrong_height_m_p10_p50_p90": [
+          -0.1,
+          -0.0,
+          0.1
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.67
+        ]
+      }
+    },
+    {
+      "aoi": "financial",
+      "ground_relief_median_m": 0.47,
+      "easy_unassigned_over_3m": {
+        "right": 1338899,
+        "wrong": 1339034,
+        "auroc": 0.4378,
+        "median_conf_right": 0.667,
+        "median_conf_wrong": 0.6948,
+        "wrong_height_m_p10_p50_p90": [
+          5.1,
+          10.5,
+          28.0
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.22
+        ]
+      },
+      "hard_water": {
+        "right": 1338899,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.667,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.22
+        ]
+      },
+      "hard_water_within_0_5m": {
+        "right": 1338899,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.667,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.22
+        ]
+      }
+    },
+    {
+      "aoi": "ggpark",
+      "ground_relief_median_m": 4.51,
+      "easy_unassigned_over_3m": {
+        "right": 2257126,
+        "wrong": 572676,
+        "auroc": 0.3345,
+        "median_conf_right": 0.6504,
+        "median_conf_wrong": 0.7666,
+        "wrong_height_m_p10_p50_p90": [
+          3.4,
+          9.7,
+          21.4
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.69
+        ]
+      },
+      "hard_water": {
+        "right": 2257126,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6504,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.69
+        ]
+      },
+      "hard_water_within_0_5m": {
+        "right": 2257126,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6504,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.69
+        ]
+      }
+    },
+    {
+      "aoi": "mission",
+      "ground_relief_median_m": 1.0,
+      "easy_unassigned_over_3m": {
+        "right": 1345064,
+        "wrong": 1436858,
+        "auroc": 0.4629,
+        "median_conf_right": 0.6533,
+        "median_conf_wrong": 0.6704,
+        "wrong_height_m_p10_p50_p90": [
+          4.6,
+          8.8,
+          13.5
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.19
+        ]
+      },
+      "hard_water": {
+        "right": 1345064,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6533,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.19
+        ]
+      },
+      "hard_water_within_0_5m": {
+        "right": 1345064,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6533,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.19
+        ]
+      }
+    },
+    {
+      "aoi": "soma",
+      "ground_relief_median_m": 0.68,
+      "easy_unassigned_over_3m": {
+        "right": 1244650,
+        "wrong": 1566658,
+        "auroc": 0.4401,
+        "median_conf_right": 0.6523,
+        "median_conf_wrong": 0.6792,
+        "wrong_height_m_p10_p50_p90": [
+          4.3,
+          7.8,
+          15.3
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.18
+        ]
+      },
+      "hard_water": {
+        "right": 1244650,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6523,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.18
+        ]
+      },
+      "hard_water_within_0_5m": {
+        "right": 1244650,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6523,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.18
+        ]
+      }
+    },
+    {
+      "aoi": "steep",
+      "excluded": "29 percent grade; the interpolated surface can miss by metres, so a 3 m gate is a guess"
+    },
+    {
+      "aoi": "sunset",
+      "ground_relief_median_m": 3.56,
+      "easy_unassigned_over_3m": {
+        "right": 1828016,
+        "wrong": 1236431,
+        "auroc": 0.4861,
+        "median_conf_right": 0.6758,
+        "median_conf_wrong": 0.6802,
+        "wrong_height_m_p10_p50_p90": [
+          3.9,
+          5.7,
+          7.1
+        ],
+        "right_height_m_p50_p99": [
+          0.0,
+          0.8
+        ]
+      },
+      "hard_water": {
+        "right": 1828016,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6758,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.8
+        ]
+      },
+      "hard_water_within_0_5m": {
+        "right": 1828016,
+        "wrong": 0,
+        "auroc": null,
+        "median_conf_right": 0.6758,
+        "median_conf_wrong": null,
+        "right_height_m_p50_p99": [
+          0.0,
+          0.8
+        ]
+      }
+    }
+  ],
+  "no_pooled_san_francisco": "areas are never pooled here",
+  "seconds": 46.2
+}

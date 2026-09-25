@@ -1,0 +1,563 @@
+seedB done 09:58
+device cuda, checkpoint 6754880bffb667b3 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m0_seedA\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.9566  confounds measured nothing None
+  embarcadero  lift global 0.0116 (null 0.164)  veg core called veg 0.9727  easy auroc 0.6238  water->ground 0.8873  confounds measured nothing None
+  financial    lift global 0.2384 (null 0.6733)  veg core called veg 0.9831  easy auroc 0.7744  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.9153  easy auroc 0.9462  water->ground None  confounds None measured nothing
+  mission      lift global 0.6274 (null 0.5644)  veg core called veg 0.9654  easy auroc 0.7908  water->ground None  confounds None None
+  soma         lift global 0.6034 (null 0.6482)  veg core called veg 0.9605  easy auroc 0.804  water->ground None  confounds None None
+  steep        lift global 0.6183 (null 0.6228)  veg core called veg 0.8982  easy auroc 0.8298  water->ground None  confounds None predicts degradation
+  sunset       lift global 0.6613 (null 0.5407)  veg core called veg 0.9104  easy auroc 0.8661  water->ground None  confounds None None
+surrey accuracy 0.8927  auroc {'all': {'right': 50028806, 'wrong': 2304945, 'auroc': 0.8673}, 'easy': {'right': 50028806, 'wrong': 1251981, 'auroc': 0.8311}, 'hard': {'right': 50028806, 'wrong': 693631, 'auroc': 0.9164}}
+extrapolation across areas: {'financial': 0.2384, 'other_built_areas': {'embarcadero': 0.0116, 'mission': 0.6274, 'soma': 0.6034, 'sunset': 0.6613}, 'other_built_median': 0.6154, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m0_seedA.json
+m0_seedA scored 10:13
+device cuda, checkpoint 02093b9d6e556811 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m0_seedB\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.941  confounds measured nothing None
+  embarcadero  lift global 0.0191 (null 0.164)  veg core called veg 0.9864  easy auroc 0.6427  water->ground 0.9036  confounds measured nothing None
+  financial    lift global 0.3307 (null 0.6733)  veg core called veg 0.9918  easy auroc 0.7176  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.9314  easy auroc 0.8284  water->ground None  confounds None measured nothing
+  mission      lift global 0.66 (null 0.5644)  veg core called veg 0.9763  easy auroc 0.7912  water->ground None  confounds None None
+  soma         lift global 0.6206 (null 0.6482)  veg core called veg 0.9691  easy auroc 0.7505  water->ground None  confounds None None
+  steep        lift global 0.651 (null 0.6228)  veg core called veg 0.9096  easy auroc 0.7883  water->ground None  confounds None predicts degradation
+  sunset       lift global 0.7011 (null 0.5407)  veg core called veg 0.913  easy auroc 0.8414  water->ground None  confounds None None
+surrey accuracy 0.891  auroc {'all': {'right': 49493248, 'wrong': 2109361, 'auroc': 0.8824}, 'easy': {'right': 49493248, 'wrong': 1008722, 'auroc': 0.8689}, 'hard': {'right': 49493248, 'wrong': 739717, 'auroc': 0.8923}}
+extrapolation across areas: {'financial': 0.3307, 'other_built_areas': {'embarcadero': 0.0191, 'mission': 0.66, 'soma': 0.6206, 'sunset': 0.7011}, 'other_built_median': 0.6403, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m0_seedB.json
+m0_seedB scored 10:28
+m0C train start 2026-09-14 12:03:43
+m0C train done 2026-09-14 18:59:45
+device cuda, checkpoint ad8d03e7a393b3f5 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m0_seedC\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.9695  confounds measured nothing None
+  embarcadero  lift global 0.0159 (null 0.164)  veg core called veg 0.9494  easy auroc 0.6  water->ground 0.9342  confounds measured nothing None
+  financial    lift global 0.3306 (null 0.6733)  veg core called veg 0.9825  easy auroc 0.7676  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.9039  easy auroc 0.9256  water->ground None  confounds None measured nothing
+  mission      lift global 0.6689 (null 0.5644)  veg core called veg 0.9416  easy auroc 0.798  water->ground None  confounds None None
+  soma         lift global 0.6251 (null 0.6482)  veg core called veg 0.9465  easy auroc 0.8022  water->ground None  confounds None None
+  steep        lift global 0.6759 (null 0.6228)  veg core called veg 0.8597  easy auroc 0.8462  water->ground None  confounds None measured nothing
+  sunset       lift global 0.7151 (null 0.5407)  veg core called veg 0.8769  easy auroc 0.8771  water->ground None  confounds None None
+surrey accuracy 0.884  auroc {'all': {'right': 49877139, 'wrong': 2401920, 'auroc': 0.8683}, 'easy': {'right': 49877139, 'wrong': 1309512, 'auroc': 0.8372}, 'hard': {'right': 49877139, 'wrong': 730318, 'auroc': 0.9103}}
+extrapolation across areas: {'financial': 0.3306, 'other_built_areas': {'embarcadero': 0.0159, 'mission': 0.6689, 'soma': 0.6251, 'sunset': 0.7151}, 'other_built_median': 0.647, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m0_seedC.json
+m0: seeds ['A', 'B', 'C']
+  extrapolation on all 3 seeds (predicts degradation)
+  relief        on 2 of 3 seeds  gap {'per_seed': {'A': 0.0516, 'B': 0.0732, 'C': 0.0441}, 'n': 3, 'median': 0.0516, 'min': 0.0441, 'max': 0.0732}
+  easy embarcadero  transfer on all 3 seeds, home on 0 of 3 seeds
+  easy financial    transfer on 0 of 3 seeds, home on all 3 seeds
+  easy ggpark       transfer on 0 of 3 seeds, home on all 3 seeds
+  easy mission      transfer on all 3 seeds, home on 0 of 3 seeds
+  easy soma         transfer on all 3 seeds, home on 0 of 3 seeds
+  easy steep        transfer on 0 of 3 seeds, home on all 3 seeds
+  easy sunset       transfer on 0 of 3 seeds, home on all 3 seeds
+  hard home {'per_seed': {'A': 0.9164, 'B': 0.8923, 'C': 0.9103}, 'n': 3, 'median': 0.9103, 'min': 0.8923, 'max': 0.9164} water {'per_seed': {'A': 0.725, 'B': 0.6018, 'C': 0.6666}, 'n': 3, 'median': 0.6666, 'min': 0.6018, 'max': 0.725} -> on all 3 seeds
+wrote data/artifacts/seeds_m0.json
+m0C scored 2026-09-14 19:15:16
+m0prime_seedA train start 2026-09-14 19:19:23
+m0prime_seedA train done 2026-09-15 02:17:32
+device cuda, checkpoint e2f8cc1a8ef2b45a step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m0prime_seedA\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.9492  confounds measured nothing None
+  embarcadero  lift global -0.0045 (null 0.164)  veg core called veg 0.9906  easy auroc 0.6035  water->ground 0.9388  confounds measured nothing None
+  financial    lift global 0.2343 (null 0.6733)  veg core called veg 0.9897  easy auroc 0.6692  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.9107  easy auroc 0.8923  water->ground None  confounds None measured nothing
+  mission      lift global 0.6064 (null 0.5644)  veg core called veg 0.9642  easy auroc 0.7602  water->ground None  confounds None None
+  soma         lift global 0.5472 (null 0.6482)  veg core called veg 0.9468  easy auroc 0.7938  water->ground None  confounds None None
+  steep        lift global 0.5855 (null 0.6228)  veg core called veg 0.8931  easy auroc 0.8276  water->ground None  confounds None measured nothing
+  sunset       lift global 0.665 (null 0.5407)  veg core called veg 0.9217  easy auroc 0.8538  water->ground None  confounds None None
+surrey accuracy 0.8769  auroc {'all': {'right': 49817895, 'wrong': 2446665, 'auroc': 0.8682}, 'easy': {'right': 49817895, 'wrong': 1136726, 'auroc': 0.8627}, 'hard': {'right': 49817895, 'wrong': 851757, 'auroc': 0.8617}}
+extrapolation across areas: {'financial': 0.2343, 'other_built_areas': {'embarcadero': -0.0045, 'mission': 0.6064, 'soma': 0.5472, 'sunset': 0.665}, 'other_built_median': 0.5768, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m0prime_seedA.json
+m0prime: seeds ['A']
+  extrapolation on all 1 seeds (predicts degradation)
+  relief        on 0 of 1 seeds  gap {'per_seed': {'A': 0.0318}, 'n': 1, 'median': 0.0318, 'min': 0.0318, 'max': 0.0318}
+  easy embarcadero  transfer on all 1 seeds, home on 0 of 1 seeds
+  easy financial    transfer on 0 of 1 seeds, home on all 1 seeds
+  easy ggpark       transfer on 0 of 1 seeds, home on all 1 seeds
+  easy mission      transfer on all 1 seeds, home on 0 of 1 seeds
+  easy soma         transfer on all 1 seeds, home on 0 of 1 seeds
+  easy steep        transfer on 0 of 1 seeds, home on all 1 seeds
+  easy sunset       transfer on all 1 seeds, home on 0 of 1 seeds
+  hard home {'per_seed': {'A': 0.8617}, 'n': 1, 'median': 0.8617, 'min': 0.8617, 'max': 0.8617} water {'per_seed': {'A': 0.5175}, 'n': 1, 'median': 0.5175, 'min': 0.5175, 'max': 0.5175} -> on all 1 seeds
+wrote data/artifacts/seeds_m0prime.json
+m0prime_seedA scored 2026-09-15 02:33:06
+m1_seedA train start 2026-09-15 02:33:06
+power loss about 05:47; m1_seedA checkpoint at step 5750; chain restarted 2026-09-15 07:52:03
+m0prime_seedA already scored, skipped 2026-09-15 07:52:10
+m1_seedA resuming from its checkpoint 2026-09-15 07:52:10
+m1_seedA train start 2026-09-15 07:52:11
+water band sensitivity written into m1_criteria.py, score_variant.py and compare_recipes.py 2026-09-15 09:46:50, before m1_seedA was scored
+water polygon upper edge and null description written into m1_criteria.py 2026-09-15 10:23:22, before m1_seedA was scored
+water polygon edge (NHD, no height) wired into score_variant.py and compare_recipes.py 2026-09-15 10:38:23, before m1_seedA was scored
+m1_seedA train done 2026-09-15 11:43:23
+device cuda, checkpoint c8265e294dddabd2 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m1_seedA\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.8392  confounds measured nothing None
+  embarcadero  lift global -0.0159 (null 0.164)  veg core called veg 0.9957  easy auroc 0.4815  water->ground 0.744  confounds measured nothing None
+  financial    lift global 0.2459 (null 0.6733)  veg core called veg 0.9971  easy auroc 0.7015  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.94  easy auroc 0.8982  water->ground None  confounds None measured nothing
+  mission      lift global 0.595 (null 0.5644)  veg core called veg 0.9801  easy auroc 0.7163  water->ground None  confounds None None
+  soma         lift global 0.5604 (null 0.6482)  veg core called veg 0.9695  easy auroc 0.7453  water->ground None  confounds None None
+  steep        lift global 0.6095 (null 0.6228)  veg core called veg 0.9205  easy auroc 0.8395  water->ground None  confounds None predicts degradation
+  sunset       lift global 0.6668 (null 0.5407)  veg core called veg 0.9422  easy auroc 0.8613  water->ground None  confounds None None
+surrey accuracy 0.8733  auroc {'all': {'right': 48257394, 'wrong': 1972203, 'auroc': 0.8629}, 'easy': {'right': 48257394, 'wrong': 961225, 'auroc': 0.8612}, 'hard': {'right': 48257394, 'wrong': 662338, 'auroc': 0.852}}
+extrapolation across areas: {'financial': 0.2459, 'other_built_areas': {'embarcadero': -0.0159, 'mission': 0.595, 'soma': 0.5604, 'sunset': 0.6668}, 'other_built_median': 0.5777, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m1_seedA.json
+m1: seeds ['A']
+  extrapolation on all 1 seeds (predicts degradation)
+  relief        on all 1 seeds  gap {'per_seed': {'A': 0.0709}, 'n': 1, 'median': 0.0709, 'min': 0.0709, 'max': 0.0709}
+  easy embarcadero  transfer on all 1 seeds, home on 0 of 1 seeds
+  easy financial    transfer on 0 of 1 seeds, home on all 1 seeds
+  easy ggpark       transfer on 0 of 1 seeds, home on all 1 seeds
+  easy mission      transfer on all 1 seeds, home on 0 of 1 seeds
+  easy soma         transfer on all 1 seeds, home on 0 of 1 seeds
+  easy steep        transfer on 0 of 1 seeds, home on all 1 seeds
+  easy sunset       transfer on all 1 seeds, home on 0 of 1 seeds
+  hard home {'per_seed': {'A': 0.852}, 'n': 1, 'median': 0.852, 'min': 0.852, 'max': 0.852} water {'per_seed': {'A': 0.4922}, 'n': 1, 'median': 0.4922, 'min': 0.4922, 'max': 0.4922} -> on all 1 seeds
+wrote data/artifacts/seeds_m1.json
+m1_seedA scored 2026-09-15 11:58:58
+drops ['baybridge.bridge_deck_called_building', 'embarcadero.bridge_deck_called_building', 'embarcadero.building_lift_global_shift', 'embarcadero.ground_precision_floor', 'embarcadero.hard_water_auroc', 'embarcadero.raised_unassigned_called_ground_rate', 'embarcadero.water_called_ground', 'financial.building_lift_global_shift', 'financial.easy_error_auroc', 'financial.ground_precision_floor', 'mission.building_lift_global_shift', 'mission.easy_error_auroc', 'mission.ground_precision_floor', 'mission.raised_unassigned_called_ground_rate', 'soma.building_lift_global_shift', 'steep.building_lift_global_shift', 'steep.ground_precision_floor', 'sunset.ground_precision_floor', 'sunset.not_vegetation_core_called_vegetation', 'sunset.raised_unassigned_called_ground_rate', 'surrey.accuracy', 'surrey.annex', 'surrey.complex', 'surrey.fence', 'surrey.ground', 'surrey.habitat', 'surrey.heavy-duty', 'surrey.light-pole', 'surrey.pickup', 'surrey.tree', 'surrey.van-truck', 'surrey.vegetation']
+gains ['baybridge.not_vegetation_core_called_vegetation', 'embarcadero.vegetation_headline', 'financial.ground_recall', 'financial.not_vegetation_core_called_vegetation', 'ggpark.ground_recall', 'ggpark.raised_unassigned_called_ground_rate', 'soma.not_vegetation_core_called_vegetation', 'steep.ground_recall', 'steep.not_vegetation_core_called_vegetation', 'sunset.ground_recall', 'sunset.vegetation_headline', 'surrey.utility-pole']
+wrote data/artifacts/compare_m0prime_vs_m0.json
+drops ['baybridge.not_vegetation_core_called_vegetation', 'embarcadero.building_lift_global_shift', 'embarcadero.easy_error_auroc', 'embarcadero.ground_recall', 'embarcadero.hard_water_auroc', 'embarcadero.not_vegetation_core_called_vegetation', 'financial.ground_recall', 'financial.not_vegetation_core_called_vegetation', 'ggpark.ground_recall', 'mission.building_lift_global_shift', 'mission.easy_error_auroc', 'mission.ground_recall', 'mission.not_vegetation_core_called_vegetation', 'soma.easy_error_auroc', 'soma.ground_recall', 'soma.not_vegetation_core_called_vegetation', 'steep.ground_recall', 'steep.not_vegetation_core_called_vegetation', 'sunset.ground_recall', 'surrey.accuracy', 'surrey.annex', 'surrey.ground', 'surrey.light-pole', 'surrey.pickup', 'surrey.powerline', 'surrey.tree', 'surrey.utility-pole', 'surrey.vegetation']
+gains ['baybridge.bridge_deck_called_building', 'baybridge.water_called_ground', 'embarcadero.bridge_deck_called_building', 'embarcadero.ground_precision_floor', 'embarcadero.raised_unassigned_called_ground_rate', 'embarcadero.vegetation_headline', 'embarcadero.water_called_ground', 'financial.building_lift_global_shift', 'financial.easy_error_auroc', 'financial.ground_precision_floor', 'financial.raised_unassigned_called_ground_rate', 'financial.vegetation_headline', 'ggpark.easy_error_auroc', 'ggpark.ground_precision_floor', 'ggpark.raised_unassigned_called_ground_rate', 'ggpark.vegetation_headline', 'mission.ground_precision_floor', 'mission.raised_unassigned_called_ground_rate', 'mission.vegetation_headline', 'soma.building_lift_global_shift', 'soma.ground_precision_floor', 'soma.raised_unassigned_called_ground_rate', 'soma.vegetation_headline', 'steep.building_lift_global_shift', 'steep.easy_error_auroc', 'steep.ground_precision_floor', 'steep.raised_unassigned_called_ground_rate', 'steep.vegetation_headline', 'sunset.building_lift_global_shift', 'sunset.easy_error_auroc', 'sunset.ground_precision_floor', 'sunset.not_vegetation_core_called_vegetation', 'sunset.raised_unassigned_called_ground_rate', 'sunset.vegetation_headline', 'surrey.car', 'surrey.complex', 'surrey.fence', 'surrey.habitat', 'surrey.heavy-duty', 'surrey.traffic-pole', 'surrey.van-truck']
+{
+ "per_area": {
+  "embarcadero": {
+   "lift_per_seed": {
+    "A": -1.4149
+   },
+   "positive_on": 0,
+   "seeds": 1,
+   "success": false,
+   "phrase": "positive on 0 of 1 seeds"
+  },
+  "baybridge": {
+   "lift_per_seed": {
+    "A": -1.447
+   },
+   "positive_on": 0,
+   "seeds": 1,
+   "success": false,
+   "phrase": "positive on 0 of 1 seeds"
+  }
+ },
+ "success": false,
+ "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+}
+wrote data/artifacts/compare_m1_vs_m0prime.json
+compared after seed A 2026-09-15 11:58:59
+m0prime_seedB train start 2026-09-15 11:58:59
+pause start 2026-09-15 11:59:50
+resume check on the card done, exit 1 2026-09-15 12:00:28
+water_success counts seeds with an undefined lift and names them; bridge_deck_call reference count renamed deck_points. Written 2026-09-15 12:00:44, after m1_seedA was scored; count and phrase only, the success rule is unchanged (tests/unit/test_seeds.py checks it against the written rule on every combination)
+pause measurement done, exit 0 2026-09-15 12:09:37
+HOLD released 2026-09-15 12:09:37
+first lever for f and g written into measure_prototype.py 2026-09-15 12:52:41, before any smaller budget was measured: budgets 1500000, 1000000, 750000, the largest passing f and both g is taken, none passing means the second lever
+m0prime_seedB train done 2026-09-15 19:09:41
+device cuda, checkpoint 374ff2738ff4a344 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m0prime_seedB\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.9571  confounds measured nothing None
+  embarcadero  lift global 0.0087 (null 0.164)  veg core called veg 0.9892  easy auroc 0.6335  water->ground 0.9331  confounds measured nothing None
+  financial    lift global 0.2351 (null 0.6733)  veg core called veg 0.9741  easy auroc 0.7497  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.8958  easy auroc 0.9485  water->ground None  confounds None measured nothing
+  mission      lift global 0.5775 (null 0.5644)  veg core called veg 0.9446  easy auroc 0.7736  water->ground None  confounds None None
+  soma         lift global 0.5349 (null 0.6482)  veg core called veg 0.9166  easy auroc 0.8155  water->ground None  confounds None None
+  steep        lift global 0.5668 (null 0.6228)  veg core called veg 0.8754  easy auroc 0.8547  water->ground None  confounds None measured nothing
+  sunset       lift global 0.6512 (null 0.5407)  veg core called veg 0.8979  easy auroc 0.8398  water->ground None  confounds None None
+surrey accuracy 0.8814  auroc {'all': {'right': 49573559, 'wrong': 2467699, 'auroc': 0.8634}, 'easy': {'right': 49573559, 'wrong': 1286974, 'auroc': 0.845}, 'hard': {'right': 49573559, 'wrong': 750391, 'auroc': 0.8755}}
+extrapolation across areas: {'financial': 0.2351, 'other_built_areas': {'embarcadero': 0.0087, 'mission': 0.5775, 'soma': 0.5349, 'sunset': 0.6512}, 'other_built_median': 0.5562, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m0prime_seedB.json
+m0prime: seeds ['A', 'B']
+  extrapolation on all 2 seeds (predicts degradation)
+  relief        on 0 of 2 seeds  gap {'per_seed': {'A': 0.0318, 'B': 0.0454}, 'n': 2, 'median': 0.0386, 'min': 0.0318, 'max': 0.0454}
+  easy embarcadero  transfer on all 2 seeds, home on 0 of 2 seeds
+  easy financial    transfer on 0 of 2 seeds, home on all 2 seeds
+  easy ggpark       transfer on 0 of 2 seeds, home on all 2 seeds
+  easy mission      transfer on all 2 seeds, home on 0 of 2 seeds
+  easy soma         transfer on all 2 seeds, home on 0 of 2 seeds
+  easy steep        transfer on 0 of 2 seeds, home on all 2 seeds
+  easy sunset       transfer on all 2 seeds, home on 0 of 2 seeds
+  hard home {'per_seed': {'A': 0.8617, 'B': 0.8755}, 'n': 2, 'median': 0.8686, 'min': 0.8617, 'max': 0.8755} water {'per_seed': {'A': 0.5175, 'B': 0.5362}, 'n': 2, 'median': 0.5269, 'min': 0.5175, 'max': 0.5362} -> on all 2 seeds
+wrote data/artifacts/seeds_m0prime.json
+m0prime_seedB scored 2026-09-15 19:25:22
+m1_seedB train start 2026-09-15 19:25:22
+second pause start 2026-09-15 19:26:09
+resume check on the card done, exit 0 2026-09-15 19:26:49
+budget lever measurement done, exit 0 2026-09-15 19:38:12
+HOLD released 2026-09-15 19:38:13
+second lever for f and g written into octree.js and measure_prototype.py 2026-09-15 19:42:09, before it was measured: order=visibility at budgets 3000000, 1500000, 1000000, 750000, the largest passing f and both g is taken, none passing means the third lever; Chromium adds --disable-domain-blocking-for-3d-apis
+m1_seedB train done 2026-09-16 13:03:58
+device cuda, checkpoint 5d80f52828d843f9 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m1_seedB\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.7543  confounds measured nothing None
+  embarcadero  lift global 0.0013 (null 0.164)  veg core called veg 0.9941  easy auroc 0.5453  water->ground 0.6968  confounds measured nothing None
+  financial    lift global 0.2295 (null 0.6733)  veg core called veg 0.9942  easy auroc 0.6829  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.8952  easy auroc 0.9463  water->ground None  confounds None measured nothing
+  mission      lift global 0.5386 (null 0.5644)  veg core called veg 0.9693  easy auroc 0.7086  water->ground None  confounds None None
+  soma         lift global 0.5195 (null 0.6482)  veg core called veg 0.9382  easy auroc 0.7656  water->ground None  confounds None None
+  steep        lift global 0.556 (null 0.6228)  veg core called veg 0.8778  easy auroc 0.8363  water->ground None  confounds None predicts degradation
+  sunset       lift global 0.6039 (null 0.5407)  veg core called veg 0.9179  easy auroc 0.8472  water->ground None  confounds None None
+surrey accuracy 0.8593  auroc {'all': {'right': 48191420, 'wrong': 2235688, 'auroc': 0.8309}, 'easy': {'right': 48191420, 'wrong': 946763, 'auroc': 0.8527}, 'hard': {'right': 48191420, 'wrong': 854032, 'auroc': 0.7927}}
+extrapolation across areas: {'financial': 0.2295, 'other_built_areas': {'embarcadero': 0.0013, 'mission': 0.5386, 'soma': 0.5195, 'sunset': 0.6039}, 'other_built_median': 0.5291, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m1_seedB.json
+m1: seeds ['A', 'B']
+  extrapolation on all 2 seeds (predicts degradation)
+  relief        on all 2 seeds  gap {'per_seed': {'A': 0.0709, 'B': 0.066}, 'n': 2, 'median': 0.0685, 'min': 0.066, 'max': 0.0709}
+  easy embarcadero  transfer on all 2 seeds, home on 0 of 2 seeds
+  easy financial    transfer on 0 of 2 seeds, home on all 2 seeds
+  easy ggpark       transfer on 0 of 2 seeds, home on all 2 seeds
+  easy mission      transfer on all 2 seeds, home on 0 of 2 seeds
+  easy soma         transfer on all 2 seeds, home on 0 of 2 seeds
+  easy steep        transfer on 0 of 2 seeds, home on all 2 seeds
+  easy sunset       transfer on 1 of 2 seeds, home on 1 of 2 seeds
+  hard home {'per_seed': {'A': 0.852, 'B': 0.7927}, 'n': 2, 'median': 0.8223, 'min': 0.7927, 'max': 0.852} water {'per_seed': {'A': 0.4922, 'B': 0.5516}, 'n': 2, 'median': 0.5219, 'min': 0.4922, 'max': 0.5516} -> on all 2 seeds
+wrote data/artifacts/seeds_m1.json
+m1_seedB scored 2026-09-16 13:19:36
+drops ['baybridge.bridge_deck_called_building', 'embarcadero.bridge_deck_called_building', 'embarcadero.building_lift_global_shift', 'embarcadero.hard_water_auroc', 'financial.building_lift_global_shift', 'mission.building_lift_global_shift', 'mission.easy_error_auroc', 'mission.ground_precision_floor', 'mission.raised_unassigned_called_ground_rate', 'soma.building_lift_global_shift', 'steep.building_lift_global_shift', 'sunset.ground_precision_floor', 'sunset.not_vegetation_core_called_vegetation', 'sunset.raised_unassigned_called_ground_rate', 'surrey.accuracy', 'surrey.annex', 'surrey.fence', 'surrey.ground', 'surrey.heavy-duty', 'surrey.pickup', 'surrey.tree', 'surrey.vegetation']
+gains ['baybridge.not_vegetation_core_called_vegetation', 'embarcadero.vegetation_headline', 'financial.ground_recall', 'ggpark.raised_unassigned_called_ground_rate', 'soma.not_vegetation_core_called_vegetation', 'steep.not_vegetation_core_called_vegetation', 'surrey.utility-pole']
+wrote data/artifacts/compare_m0prime_vs_m0.json
+drops ['embarcadero.easy_error_auroc', 'embarcadero.ground_recall', 'embarcadero.not_vegetation_core_called_vegetation', 'financial.ground_recall', 'ggpark.ground_recall', 'mission.easy_error_auroc', 'mission.ground_recall', 'soma.easy_error_auroc', 'soma.ground_recall', 'sunset.ground_recall', 'surrey.accuracy', 'surrey.annex', 'surrey.ground', 'surrey.pickup', 'surrey.powerline', 'surrey.tree', 'surrey.vegetation']
+gains ['baybridge.bridge_deck_called_building', 'baybridge.water_called_ground', 'embarcadero.bridge_deck_called_building', 'embarcadero.raised_unassigned_called_ground_rate', 'embarcadero.vegetation_headline', 'embarcadero.water_called_ground', 'financial.ground_precision_floor', 'financial.raised_unassigned_called_ground_rate', 'financial.vegetation_headline', 'ggpark.ground_precision_floor', 'ggpark.raised_unassigned_called_ground_rate', 'mission.ground_precision_floor', 'mission.raised_unassigned_called_ground_rate', 'mission.vegetation_headline', 'soma.ground_precision_floor', 'soma.raised_unassigned_called_ground_rate', 'steep.ground_precision_floor', 'steep.raised_unassigned_called_ground_rate', 'sunset.ground_precision_floor', 'sunset.not_vegetation_core_called_vegetation', 'sunset.raised_unassigned_called_ground_rate', 'surrey.habitat', 'surrey.traffic-pole']
+{
+ "per_area": {
+  "embarcadero": {
+   "lift_per_seed": {
+    "A": -1.4149,
+    "B": -1.4284
+   },
+   "positive_on": 0,
+   "seeds": 2,
+   "undefined_on": 0,
+   "success": false,
+   "phrase": "positive on 0 of 2 seeds"
+  },
+  "baybridge": {
+   "lift_per_seed": {
+    "A": -1.447,
+    "B": -1.4524
+   },
+   "positive_on": 0,
+   "seeds": 2,
+   "undefined_on": 0,
+   "success": false,
+   "phrase": "positive on 0 of 2 seeds"
+  }
+ },
+ "success": false,
+ "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+}
+wrote data/artifacts/compare_m1_vs_m0prime.json
+compared after seed B 2026-09-16 13:19:37
+m0prime_seedC train start 2026-09-16 13:19:37
+third pause start 2026-09-16 13:20:05
+visibility lever measurement done, exit 0 2026-09-16 13:32:52
+HOLD released 2026-09-16 13:32:52
+g diagnosis written into measure_prototype.py 2026-09-16 13:35:17, before it ran: one run at 3000000 with visibility order, reporting the settled set's bytes, the node at the 90 percent mark and the rate the bytes arrived at, to say whether the time is the throttled link or the loader
+m0prime_seedC train done 2026-09-16 20:33:57
+device cuda, checkpoint 34638a24ef991425 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m0prime_seedC\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.9601  confounds measured nothing None
+  embarcadero  lift global -0.0103 (null 0.164)  veg core called veg 0.9922  easy auroc 0.5667  water->ground 0.9518  confounds measured nothing None
+  financial    lift global 0.2682 (null 0.6733)  veg core called veg 0.9934  easy auroc 0.6829  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.9407  easy auroc 0.9321  water->ground None  confounds None measured nothing
+  mission      lift global 0.6208 (null 0.5644)  veg core called veg 0.9701  easy auroc 0.7331  water->ground None  confounds None None
+  soma         lift global 0.5641 (null 0.6482)  veg core called veg 0.9549  easy auroc 0.785  water->ground None  confounds None None
+  steep        lift global 0.6159 (null 0.6228)  veg core called veg 0.9144  easy auroc 0.8203  water->ground None  confounds None predicts degradation
+  sunset       lift global 0.6814 (null 0.5407)  veg core called veg 0.9212  easy auroc 0.8189  water->ground None  confounds None None
+surrey accuracy 0.8819  auroc {'all': {'right': 49263586, 'wrong': 2269903, 'auroc': 0.8611}, 'easy': {'right': 49263586, 'wrong': 1185807, 'auroc': 0.8571}, 'hard': {'right': 49263586, 'wrong': 706109, 'auroc': 0.8566}}
+extrapolation across areas: {'financial': 0.2682, 'other_built_areas': {'embarcadero': -0.0103, 'mission': 0.6208, 'soma': 0.5641, 'sunset': 0.6814}, 'other_built_median': 0.5925, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m0prime_seedC.json
+m0prime: seeds ['A', 'B', 'C']
+  extrapolation on all 3 seeds (predicts degradation)
+  relief        on 1 of 3 seeds  gap {'per_seed': {'A': 0.0318, 'B': 0.0454, 'C': 0.0563}, 'n': 3, 'median': 0.0454, 'min': 0.0318, 'max': 0.0563}
+  easy embarcadero  transfer on all 3 seeds, home on 0 of 3 seeds
+  easy financial    transfer on 0 of 3 seeds, home on all 3 seeds
+  easy ggpark       transfer on 0 of 3 seeds, home on all 3 seeds
+  easy mission      transfer on all 3 seeds, home on 0 of 3 seeds
+  easy soma         transfer on all 3 seeds, home on 0 of 3 seeds
+  easy steep        transfer on 0 of 3 seeds, home on all 3 seeds
+  easy sunset       transfer on all 3 seeds, home on 0 of 3 seeds
+  hard home {'per_seed': {'A': 0.8617, 'B': 0.8755, 'C': 0.8566}, 'n': 3, 'median': 0.8617, 'min': 0.8566, 'max': 0.8755} water {'per_seed': {'A': 0.5175, 'B': 0.5362, 'C': 0.5167}, 'n': 3, 'median': 0.5175, 'min': 0.5167, 'max': 0.5362} -> on all 3 seeds
+wrote data/artifacts/seeds_m0prime.json
+m0prime_seedC scored 2026-09-16 20:49:31
+m1_seedC train start 2026-09-16 20:49:31
+fourth pause start 2026-09-16 20:50:24
+g diagnosis done, exit 0 2026-09-16 20:51:10
+HOLD released 2026-09-16 20:51:10
+g diagnosis read 2026-09-16 20:53:33: the link is nearly full at the 90 percent mark (16.59 and 16.2 Mbit/s of 20), so f and g are bytes, not order. Two fixes from it: node byte counts read zero because the decoder transfer empties the buffer, and an area that is left kept fetching (stopLoading). Final measurement rule written into measure_prototype.py before it runs
+swiss in-sample water scoring written into scripts/score_swiss.py 2026-09-20 22:00:43, reading recorded before the first run: high water IoU on the Swiss sub-tiles means the class was learned and the San Francisco collapse is a transfer finding, low water IoU means it was never learned and that is a training fault to chase; all sixteen sub-tiles are training tiles so this is in-sample
+both countries table added to water_input_test.py 2026-09-20 22:09:05, reading written before it ran: if water's height above the block floor and the land in its block are much the same in both countries, geometry is not what changed and density is what is left to name
+swiss in-sample scoring done 2026-09-20 22:14:16
+water density test done, exit 0 2026-09-20 22:14:58
+m1_seedC resuming from its checkpoint 2026-09-20 22:14:58
+m1_seedC train start 2026-09-20 22:14:58
+m1_seedC train done 2026-09-21 01:06:49
+device cuda, checkpoint 957cf561631b9838 step 12000, 3 channels, seed 0
+  sf     baybridge      3,069,047 points
+  sf     embarcadero    4,458,544 points
+  sf     financial      7,630,301 points
+  sf     ggpark         9,012,919 points
+  sf     mission        4,536,209 points
+  sf     soma           4,527,700 points
+  sf     steep          5,427,902 points
+  sf     sunset         5,466,462 points
+  surrey 5080_54400     9,768,785 points
+  surrey 5080_54470     9,253,168 points
+  surrey 5100_54440     8,961,455 points
+  surrey 5100_54490     9,371,661 points
+  surrey 5120_54445    11,222,843 points
+  surrey 5135_54430     9,843,150 points
+  surrey 5135_54435    11,567,902 points
+  surrey 5140_54390     9,426,823 points
+  surrey 5150_54325     9,344,526 points
+  surrey 5155_54335     9,646,108 points
+  surrey 5175_54395     9,541,008 points
+wrote data\predictions\m1_seedC\manifest.json
+  baybridge    lift global 0.0 (null 0.0)  veg core called veg None  easy auroc None  water->ground 0.7134  confounds measured nothing None
+  embarcadero  lift global -0.0124 (null 0.164)  veg core called veg 0.998  easy auroc 0.5257  water->ground 0.6764  confounds measured nothing None
+  financial    lift global 0.2524 (null 0.6733)  veg core called veg 0.9974  easy auroc 0.6549  water->ground None  confounds predicts degradation None
+  ggpark       lift global 0.0 (null 0.0)  veg core called veg 0.9438  easy auroc 0.8161  water->ground None  confounds None measured nothing
+  mission      lift global 0.5846 (null 0.5644)  veg core called veg 0.9836  easy auroc 0.7021  water->ground None  confounds None None
+  soma         lift global 0.5489 (null 0.6482)  veg core called veg 0.973  easy auroc 0.6964  water->ground None  confounds None None
+  steep        lift global 0.607 (null 0.6228)  veg core called veg 0.9284  easy auroc 0.8234  water->ground None  confounds None measured nothing
+  sunset       lift global 0.6459 (null 0.5407)  veg core called veg 0.9452  easy auroc 0.8165  water->ground None  confounds None None
+surrey accuracy 0.8805  auroc {'all': {'right': 49393197, 'wrong': 2505020, 'auroc': 0.8763}, 'easy': {'right': 49393197, 'wrong': 1392318, 'auroc': 0.8817}, 'hard': {'right': 49393197, 'wrong': 714501, 'auroc': 0.8576}}
+extrapolation across areas: {'financial': 0.2524, 'other_built_areas': {'embarcadero': -0.0124, 'mission': 0.5846, 'soma': 0.5489, 'sunset': 0.6459}, 'other_built_median': 0.5668, 'reading': 'predicts degradation', 'status': 'primary: the formulation written before E0'}
+wrote data/artifacts/sf_scores_m1_seedC.json
+m1: seeds ['A', 'B', 'C']
+  extrapolation on all 3 seeds (predicts degradation)
+  relief        on 2 of 3 seeds  gap {'per_seed': {'A': 0.0709, 'B': 0.066, 'C': 0.0317}, 'n': 3, 'median': 0.066, 'min': 0.0317, 'max': 0.0709}
+  easy embarcadero  transfer on all 3 seeds, home on 0 of 3 seeds
+  easy financial    transfer on 0 of 3 seeds, home on all 3 seeds
+  easy ggpark       transfer on 0 of 3 seeds, home on all 3 seeds
+  easy mission      transfer on all 3 seeds, home on 0 of 3 seeds
+  easy soma         transfer on all 3 seeds, home on 0 of 3 seeds
+  easy steep        transfer on 0 of 3 seeds, home on all 3 seeds
+  easy sunset       transfer on 1 of 3 seeds, home on 2 of 3 seeds
+  hard home {'per_seed': {'A': 0.852, 'B': 0.7927, 'C': 0.8576}, 'n': 3, 'median': 0.852, 'min': 0.7927, 'max': 0.8576} water {'per_seed': {'A': 0.4922, 'B': 0.5516, 'C': 0.4165}, 'n': 3, 'median': 0.4922, 'min': 0.4165, 'max': 0.5516} -> on all 3 seeds
+wrote data/artifacts/seeds_m1.json
+m1_seedC scored 2026-09-21 01:22:44
+drops ['baybridge.bridge_deck_called_building', 'embarcadero.bridge_deck_called_building', 'embarcadero.building_lift_global_shift', 'embarcadero.hard_water_auroc', 'mission.building_lift_global_shift', 'mission.easy_error_auroc', 'mission.ground_precision_floor', 'mission.raised_unassigned_called_ground_rate', 'soma.building_lift_global_shift', 'steep.building_lift_global_shift', 'sunset.ground_precision_floor', 'sunset.not_vegetation_core_called_vegetation', 'sunset.raised_unassigned_called_ground_rate', 'surrey.accuracy', 'surrey.annex', 'surrey.fence', 'surrey.ground', 'surrey.heavy-duty', 'surrey.pickup', 'surrey.tree', 'surrey.vegetation']
+gains ['embarcadero.vegetation_headline', 'ggpark.raised_unassigned_called_ground_rate', 'soma.not_vegetation_core_called_vegetation', 'surrey.utility-pole']
+wrote data/artifacts/compare_m0prime_vs_m0.json
+drops ['embarcadero.easy_error_auroc', 'embarcadero.ground_recall', 'financial.ground_recall', 'mission.easy_error_auroc', 'mission.ground_recall', 'soma.easy_error_auroc', 'soma.ground_recall', 'sunset.ground_recall', 'surrey.annex', 'surrey.ground', 'surrey.pickup', 'surrey.vegetation']
+gains ['baybridge.bridge_deck_called_building', 'baybridge.water_called_ground', 'embarcadero.bridge_deck_called_building', 'embarcadero.raised_unassigned_called_ground_rate', 'embarcadero.vegetation_headline', 'embarcadero.water_called_ground', 'financial.raised_unassigned_called_ground_rate', 'financial.vegetation_headline', 'soma.raised_unassigned_called_ground_rate', 'steep.ground_precision_floor', 'steep.raised_unassigned_called_ground_rate', 'sunset.ground_precision_floor', 'sunset.raised_unassigned_called_ground_rate', 'surrey.habitat', 'surrey.traffic-pole']
+{
+ "per_area": {
+  "embarcadero": {
+   "lift_per_seed": {
+    "A": -1.4149,
+    "B": -1.4284,
+    "C": -1.2832
+   },
+   "positive_on": 0,
+   "seeds": 3,
+   "undefined_on": 0,
+   "success": false,
+   "phrase": "positive on 0 of 3 seeds"
+  },
+  "baybridge": {
+   "lift_per_seed": {
+    "A": -1.447,
+    "B": -1.4524,
+    "C": -1.1653
+   },
+   "positive_on": 0,
+   "seeds": 3,
+   "undefined_on": 0,
+   "success": false,
+   "phrase": "positive on 0 of 3 seeds"
+  }
+ },
+ "success": false,
+ "scope": "water and bridge deck scored on Embarcadero and Bay Bridge only, the areas the delivery labels"
+}
+wrote data/artifacts/compare_m1_vs_m0prime.json
+compared after seed C 2026-09-21 01:22:45
+2270 quantities, 0 unresolved
+wrote data/artifacts/quantities.json
+registry rebuilt 2026-09-21 01:22:46
+final f and g measurement done, exit 1 2026-09-21 01:22:47
+budget frames done, exit 1 2026-09-21 01:22:47
+final f and g measurement start 2026-09-21 08:02:18
+final f and g measurement start 2026-09-21 08:10:10
+final f and g measurement done, exit 0 2026-09-21 08:14:28
+budget frames done, exit 0 2026-09-21 08:16:42
+page budget set to 1000000 and loading order to visibility 2026-09-21 08:17:50, by the rule written before measuring: the largest budget where f and both parts of g pass (f 4.651 s, g 0.019 s and 4.14 s)
+a to e measurement at the chosen budget start 2026-09-21 08:18:03
+a to e measurement done, exit 0 2026-09-21 08:21:19
+lever measurement rerun, to put back what the a to e run dropped 2026-09-21 08:22:10
+lever measurement rerun done, exit 0 2026-09-21 08:26:30
+held-out Swiss tile: reading written 2026-09-21 09:57:00, before the tile was selected or scored. One tile from a third city (Lucerne), chosen by the same rule as the training tiles (water at least 0.05 and building at least 0.10 of the sampled points, then highest bridge deck share), never trained on. If M1's water IoU there is close to the in-sample 0.959, the class was learned and the San Francisco collapse is transfer. If it falls there too, the in-sample figure was memorisation of sixteen tiles and the project's main sentence changes. Bridge deck is measured the same way but not expected to hold, because 0.2583 in-sample already says that class was not learned
+held-out city order written 2026-09-21 09:58:36 before any eligibility was read: lucerne, zug, rapperswil, interlaken, neuchatel, lausanne; the first with an eligible tile by the training rule is taken, 2024 or later flights only
+held-out Swiss scoring start 2026-09-21 10:05:46
+held-out Swiss scoring done, exit 0 2026-09-21 10:14:13
+density across classes done, exit 0 2026-09-21 10:19:08
+block floor check written 2026-09-21 10:20:33 before it ran: thinning changes the crop's points and the block's floor quantile at once; with the floor held at the full block's value, if the water effect disappears the cause was the floor estimate and not the spacing, and the density claim comes out of the README
+density measurement corrected 2026-09-21 10:25:14: thinning the pool a crop is drawn from changes nothing while the pool is larger than the crop, so the first version varied the input over the two small water areas and left the larger areas untouched. Both tests now vary the distinct points a crop carries (backend/dayton/density.py, tested), and both are being rerun
+water density rerun start 2026-09-21 10:25:15
+water density rerun done, exit 0 2026-09-21 10:28:17
+water density fixed floor done, exit 0 2026-09-21 10:29:32
+density across classes rerun done, exit 0 2026-09-21 10:34:23
+water density rerun start, four densities 2026-09-21 10:37:30
+water density rerun done, exit 0 2026-09-21 10:40:35
+water density fixed floor done, exit 0 2026-09-21 10:41:49
+rented card plan written into docs/rented_gpu.md 2026-09-21 13:40:25, before any rented run: two measurements then a stop (200 steps at the small configuration, and a memory probe), length by points seen not steps, learning rate scaled linearly with batch, one seed each for m0_big_seedA and m1_big_seedA, a difference counts only outside the min to max of the three small seeds, and the upgrade rule is at least 4 of the 6 areas with footprints
+run 1 reading written 2026-09-21 14:40, before the run finished and before any of it was read: if m0_rented_small_seedA falls inside the min to max range of the three laptop seeds on in-domain accuracy and on the main San Francisco measures, the machine is not a factor and the large runs may be read as a difference in size; if it falls outside, every comparison of a large run against a small one carries that caveat, written beside the table
+run 6 rule written 2026-09-21 14:40, before it runs: each crop is thinned at random to a distinct point count drawn uniformly from 12,800 to 32,768, which is 8.0 to 20.48 points per square metre over a 40 m block. The low end sits below the 11.55 the Swiss training tiles deliver, so the model sees water sparser than it learned it, and the high end is the most a crop can carry, which is what San Francisco and Surrey both deliver. Uniform over the count rather than over the density, drawn per crop, so every batch mixes densities. Reading, also written before: this is a diagnosis on one seed; if water recall comes out above the max of the three existing M1 seeds, that is reported with a proposal for two more seeds and nothing is claimed in the README
+train.py, cache.py and the registry replaced on the rented card mid chain 2026-09-21 14:45:41: the crop density option defaults to off and a unit test holds that the draw without it is identical, generator state included, so runs 2 to 5 stay comparable with run 1

@@ -1,0 +1,956 @@
+{
+  "question": "does San Francisco fall inside the input range Surrey taught",
+  "block_m": 40.0,
+  "measured_before_training": true,
+  "labels_used_here_only": "DALES class 0 and the delivery's ASPRS class 2 choose and check these numbers, and are never inputs",
+  "slope_leak": {
+    "surrey_ground_relief_median_m": 1.57,
+    "surrey_ground_relief_p99_m": 9.1,
+    "sf_ground_relief_median_m": 1.33,
+    "sf_ground_relief_p99_m": 13.37,
+    "surrey_typical_building_top_m": 9.08,
+    "sf_blocks_where_ground_relief_exceeds_a_surrey_building": 0.0424,
+    "surrey_blocks_where_ground_relief_exceeds_a_surrey_building": 0.0102,
+    "reading": "a block whose ground alone spans more than a typical building can present a hillside to the network as a roof",
+    "pooling_hides_this": "the pooled median says San Francisco is no worse than Surrey, and that is an artefact of pooling: four of the eight areas are flat districts at 0.5 to 1.0 m and they drag the median under. Read the per-area column",
+    "per_aoi_ground_relief_m": {
+      "embarcadero": {
+        "median": 0.62,
+        "p90": 2.07,
+        "max": 4.59,
+        "exceeds_a_surrey_building_at_p90": false
+      },
+      "financial": {
+        "median": 0.47,
+        "p90": 1.14,
+        "max": 2.57,
+        "exceeds_a_surrey_building_at_p90": false
+      },
+      "ggpark": {
+        "median": 4.51,
+        "p90": 8.11,
+        "max": 12.18,
+        "exceeds_a_surrey_building_at_p90": false
+      },
+      "mission": {
+        "median": 1.0,
+        "p90": 2.05,
+        "max": 3.08,
+        "exceeds_a_surrey_building_at_p90": false
+      },
+      "soma": {
+        "median": 0.68,
+        "p90": 1.55,
+        "max": 3.25,
+        "exceeds_a_surrey_building_at_p90": false
+      },
+      "steep": {
+        "median": 6.06,
+        "p90": 11.05,
+        "max": 17.82,
+        "exceeds_a_surrey_building_at_p90": true
+      },
+      "sunset": {
+        "median": 3.56,
+        "p90": 6.61,
+        "max": 9.06,
+        "exceeds_a_surrey_building_at_p90": false
+      }
+    }
+  },
+  "vertical_extrapolation": {
+    "surrey_training_block_z_max_m": 121.77,
+    "sf_block_z_max_m": 202.4,
+    "sf_blocks_above_training_max": 0.0778,
+    "per_aoi": {
+      "baybridge": {
+        "blocks": 53,
+        "blocks_above_training_max": 9,
+        "fraction_above": 0.1698,
+        "max_m": 158.11
+      },
+      "embarcadero": {
+        "blocks": 64,
+        "blocks_above_training_max": 4,
+        "fraction_above": 0.0625,
+        "max_m": 145.58
+      },
+      "financial": {
+        "blocks": 64,
+        "blocks_above_training_max": 26,
+        "fraction_above": 0.4062,
+        "max_m": 202.4
+      },
+      "ggpark": {
+        "blocks": 64,
+        "blocks_above_training_max": 0,
+        "fraction_above": 0.0,
+        "max_m": 46.1
+      },
+      "mission": {
+        "blocks": 64,
+        "blocks_above_training_max": 0,
+        "fraction_above": 0.0,
+        "max_m": 27.1
+      },
+      "soma": {
+        "blocks": 64,
+        "blocks_above_training_max": 0,
+        "fraction_above": 0.0,
+        "max_m": 49.12
+      },
+      "steep": {
+        "blocks": 64,
+        "blocks_above_training_max": 0,
+        "fraction_above": 0.0,
+        "max_m": 57.3
+      },
+      "sunset": {
+        "blocks": 64,
+        "blocks_above_training_max": 0,
+        "fraction_above": 0.0,
+        "max_m": 24.82
+      }
+    },
+    "reading": "a block above the training maximum is not a harder example, it is outside the range the layers were fitted on. Naming these before scoring turns their result into a check, not a surprise"
+  },
+  "surrey_tiles": [
+    {
+      "name": "5080_54435",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 0.87,
+        "p90": 1.32,
+        "p99": 2.26,
+        "max": 3.11
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 13.19,
+        "p90": 20.19,
+        "p99": 30.94,
+        "max": 31.59
+      },
+      "building_top_m": {
+        "blocks": 160,
+        "median": 9.65,
+        "p90": 11.36,
+        "p99": 16.74,
+        "max": 18.01
+      }
+    },
+    {
+      "name": "5085_54320",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.14,
+        "p90": 7.34,
+        "p99": 31.17,
+        "max": 36.3
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 26.04,
+        "p90": 40.14,
+        "p99": 58.22,
+        "max": 68.87
+      },
+      "building_top_m": {
+        "blocks": 147,
+        "median": 8.64,
+        "p90": 11.27,
+        "p99": 24.18,
+        "max": 33.44
+      }
+    },
+    {
+      "name": "5095_54440",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.33,
+        "p90": 3.88,
+        "p99": 6.97,
+        "max": 8.4
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 13.03,
+        "p90": 23.65,
+        "p99": 31.33,
+        "max": 33.27
+      },
+      "building_top_m": {
+        "blocks": 146,
+        "median": 9.62,
+        "p90": 13.0,
+        "p99": 17.63,
+        "max": 18.05
+      }
+    },
+    {
+      "name": "5095_54455",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.29,
+        "p90": 1.77,
+        "p99": 2.61,
+        "max": 3.29
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 19.29,
+        "p90": 25.93,
+        "p99": 32.41,
+        "max": 35.52
+      },
+      "building_top_m": {
+        "blocks": 132,
+        "median": 8.05,
+        "p90": 10.71,
+        "p99": 11.64,
+        "max": 11.68
+      }
+    },
+    {
+      "name": "5100_54495",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.53,
+        "p90": 2.23,
+        "p99": 4.06,
+        "max": 5.54
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.05,
+        "p90": 27.14,
+        "p99": 33.56,
+        "max": 35.44
+      },
+      "building_top_m": {
+        "blocks": 157,
+        "median": 8.69,
+        "p90": 10.74,
+        "p99": 13.29,
+        "max": 14.29
+      }
+    },
+    {
+      "name": "5105_54405",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.85,
+        "p90": 3.16,
+        "p99": 6.01,
+        "max": 8.83
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.37,
+        "p90": 27.82,
+        "p99": 34.87,
+        "max": 35.82
+      },
+      "building_top_m": {
+        "blocks": 152,
+        "median": 8.22,
+        "p90": 11.26,
+        "p99": 15.57,
+        "max": 16.41
+      }
+    },
+    {
+      "name": "5105_54460",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.7,
+        "p90": 2.85,
+        "p99": 4.11,
+        "max": 4.47
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 19.56,
+        "p90": 25.76,
+        "p99": 34.6,
+        "max": 37.04
+      },
+      "building_top_m": {
+        "blocks": 122,
+        "median": 8.08,
+        "p90": 10.58,
+        "p99": 12.91,
+        "max": 13.2
+      }
+    },
+    {
+      "name": "5110_54320",
+      "ground_relief_m": {
+        "blocks": 168,
+        "median": 1.12,
+        "p90": 2.65,
+        "p99": 4.29,
+        "max": 4.97
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.95,
+        "p90": 42.32,
+        "p99": 56.14,
+        "max": 56.83
+      },
+      "building_top_m": {
+        "blocks": 108,
+        "median": 9.57,
+        "p90": 11.92,
+        "p99": 13.77,
+        "max": 14.67
+      }
+    },
+    {
+      "name": "5110_54460",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.5,
+        "p90": 6.17,
+        "p99": 8.61,
+        "max": 10.36
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 18.15,
+        "p90": 34.0,
+        "p99": 44.14,
+        "max": 45.29
+      },
+      "building_top_m": {
+        "blocks": 125,
+        "median": 8.77,
+        "p90": 14.03,
+        "p99": 17.47,
+        "max": 18.5
+      }
+    },
+    {
+      "name": "5110_54475",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 2.01,
+        "p90": 7.93,
+        "p99": 16.5,
+        "max": 18.05
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 17.36,
+        "p90": 45.39,
+        "p99": 117.37,
+        "max": 121.77
+      },
+      "building_top_m": {
+        "blocks": 77,
+        "median": 10.2,
+        "p90": 107.56,
+        "p99": 117.15,
+        "max": 121.25
+      }
+    },
+    {
+      "name": "5110_54495",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.96,
+        "p90": 3.27,
+        "p99": 3.97,
+        "max": 4.33
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.54,
+        "p90": 29.19,
+        "p99": 36.76,
+        "max": 38.21
+      },
+      "building_top_m": {
+        "blocks": 141,
+        "median": 8.53,
+        "p90": 15.0,
+        "p99": 19.3,
+        "max": 20.58
+      }
+    },
+    {
+      "name": "5115_54480",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.77,
+        "p90": 4.07,
+        "p99": 6.39,
+        "max": 10.0
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 20.59,
+        "p90": 31.48,
+        "p99": 45.99,
+        "max": 65.84
+      },
+      "building_top_m": {
+        "blocks": 151,
+        "median": 10.25,
+        "p90": 15.19,
+        "p99": 43.62,
+        "max": 64.28
+      }
+    },
+    {
+      "name": "5130_54355",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 0.73,
+        "p90": 2.09,
+        "p99": 3.07,
+        "max": 3.31
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 12.37,
+        "p90": 21.67,
+        "p99": 33.0,
+        "max": 39.29
+      },
+      "building_top_m": {
+        "blocks": 5,
+        "median": 4.31,
+        "p90": 8.92,
+        "p99": 9.09,
+        "max": 9.11
+      }
+    },
+    {
+      "name": "5135_54495",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.73,
+        "p90": 2.49,
+        "p99": 3.44,
+        "max": 3.64
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 17.46,
+        "p90": 28.44,
+        "p99": 33.41,
+        "max": 35.2
+      },
+      "building_top_m": {
+        "blocks": 153,
+        "median": 7.14,
+        "p90": 9.49,
+        "p99": 11.75,
+        "max": 12.18
+      }
+    },
+    {
+      "name": "5140_54445",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 2.77,
+        "p90": 4.32,
+        "p99": 5.41,
+        "max": 6.01
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 13.84,
+        "p90": 27.01,
+        "p99": 37.42,
+        "max": 39.36
+      },
+      "building_top_m": {
+        "blocks": 145,
+        "median": 9.63,
+        "p90": 11.58,
+        "p99": 13.27,
+        "max": 14.19
+      }
+    },
+    {
+      "name": "5145_54340",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.51,
+        "p90": 3.08,
+        "p99": 4.76,
+        "max": 6.15
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.29,
+        "p90": 30.03,
+        "p99": 43.94,
+        "max": 48.67
+      },
+      "building_top_m": {
+        "blocks": 124,
+        "median": 10.51,
+        "p90": 14.12,
+        "p99": 19.56,
+        "max": 20.33
+      }
+    },
+    {
+      "name": "5145_54405",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.58,
+        "p90": 3.56,
+        "p99": 6.9,
+        "max": 7.32
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 12.1,
+        "p90": 23.74,
+        "p99": 34.25,
+        "max": 36.93
+      },
+      "building_top_m": {
+        "blocks": 32,
+        "median": 7.87,
+        "p90": 10.89,
+        "p99": 13.41,
+        "max": 13.99
+      }
+    },
+    {
+      "name": "5145_54460",
+      "ground_relief_m": {
+        "blocks": 168,
+        "median": 1.08,
+        "p90": 2.05,
+        "p99": 3.11,
+        "max": 3.49
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 11.34,
+        "p90": 28.15,
+        "p99": 38.85,
+        "max": 39.9
+      },
+      "building_top_m": {
+        "blocks": 142,
+        "median": 8.27,
+        "p90": 9.72,
+        "p99": 11.26,
+        "max": 12.72
+      }
+    },
+    {
+      "name": "5145_54470",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 0.85,
+        "p90": 1.29,
+        "p99": 2.1,
+        "max": 2.74
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.3,
+        "p90": 23.47,
+        "p99": 30.39,
+        "max": 31.77
+      },
+      "building_top_m": {
+        "blocks": 160,
+        "median": 7.8,
+        "p90": 9.08,
+        "p99": 12.13,
+        "max": 13.63
+      }
+    },
+    {
+      "name": "5145_54480",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 0.87,
+        "p90": 1.74,
+        "p99": 3.02,
+        "max": 3.47
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.12,
+        "p90": 28.42,
+        "p99": 35.96,
+        "max": 38.84
+      },
+      "building_top_m": {
+        "blocks": 137,
+        "median": 10.42,
+        "p90": 17.01,
+        "p99": 19.15,
+        "max": 20.88
+      }
+    },
+    {
+      "name": "5150_54340",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 2.01,
+        "p90": 4.56,
+        "p99": 7.89,
+        "max": 8.43
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 14.72,
+        "p90": 32.17,
+        "p99": 47.18,
+        "max": 50.32
+      },
+      "building_top_m": {
+        "blocks": 122,
+        "median": 10.46,
+        "p90": 12.75,
+        "p99": 13.8,
+        "max": 13.94
+      }
+    },
+    {
+      "name": "5160_54330",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 2.6,
+        "p90": 4.8,
+        "p99": 8.15,
+        "max": 8.59
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 13.01,
+        "p90": 31.55,
+        "p99": 41.64,
+        "max": 51.56
+      },
+      "building_top_m": {
+        "blocks": 129,
+        "median": 12.12,
+        "p90": 14.37,
+        "p99": 20.17,
+        "max": 24.0
+      }
+    },
+    {
+      "name": "5165_54390",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 2.33,
+        "p90": 4.51,
+        "p99": 8.64,
+        "max": 10.07
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 4.08,
+        "p90": 16.51,
+        "p99": 21.82,
+        "max": 23.54
+      },
+      "building_top_m": {
+        "blocks": 28,
+        "median": 7.39,
+        "p90": 11.7,
+        "p99": 14.46,
+        "max": 15.24
+      }
+    },
+    {
+      "name": "5165_54395",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 3.52,
+        "p90": 6.41,
+        "p99": 8.48,
+        "max": 9.32
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 14.91,
+        "p90": 35.51,
+        "p99": 46.83,
+        "max": 51.24
+      },
+      "building_top_m": {
+        "blocks": 120,
+        "median": 11.71,
+        "p90": 14.14,
+        "p99": 17.3,
+        "max": 18.83
+      }
+    },
+    {
+      "name": "5180_54435",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 2.42,
+        "p90": 4.01,
+        "p99": 5.29,
+        "max": 5.87
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 13.95,
+        "p90": 26.7,
+        "p99": 36.24,
+        "max": 39.16
+      },
+      "building_top_m": {
+        "blocks": 96,
+        "median": 10.27,
+        "p90": 12.83,
+        "p99": 14.15,
+        "max": 14.75
+      }
+    },
+    {
+      "name": "5180_54485",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 3.08,
+        "p90": 6.38,
+        "p99": 10.5,
+        "max": 11.23
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 14.62,
+        "p90": 35.85,
+        "p99": 46.19,
+        "max": 48.29
+      },
+      "building_top_m": {
+        "blocks": 137,
+        "median": 10.48,
+        "p90": 13.45,
+        "p99": 16.44,
+        "max": 18.13
+      }
+    },
+    {
+      "name": "5185_54390",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 1.39,
+        "p90": 2.84,
+        "p99": 3.41,
+        "max": 3.92
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 15.69,
+        "p90": 23.27,
+        "p99": 30.24,
+        "max": 32.12
+      },
+      "building_top_m": {
+        "blocks": 97,
+        "median": 7.67,
+        "p90": 9.69,
+        "p99": 11.32,
+        "max": 11.39
+      }
+    },
+    {
+      "name": "5185_54485",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 4.24,
+        "p90": 7.91,
+        "p99": 11.9,
+        "max": 15.27
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 17.79,
+        "p90": 40.09,
+        "p99": 46.12,
+        "max": 49.64
+      },
+      "building_top_m": {
+        "blocks": 81,
+        "median": 11.69,
+        "p90": 16.87,
+        "p99": 19.15,
+        "max": 20.44
+      }
+    },
+    {
+      "name": "5190_54400",
+      "ground_relief_m": {
+        "blocks": 169,
+        "median": 0.99,
+        "p90": 1.52,
+        "p99": 2.21,
+        "max": 2.87
+      },
+      "block_z_range_m": {
+        "blocks": 169,
+        "median": 14.13,
+        "p90": 21.44,
+        "p99": 31.46,
+        "max": 33.95
+      },
+      "building_top_m": {
+        "blocks": 131,
+        "median": 7.07,
+        "p90": 9.54,
+        "p99": 12.55,
+        "max": 13.44
+      }
+    }
+  ],
+  "san_francisco": [
+    {
+      "name": "baybridge",
+      "ground_relief_m": null,
+      "block_z_range_m": {
+        "blocks": 53,
+        "median": 0.23,
+        "p90": 136.4,
+        "p99": 158.08,
+        "max": 158.11
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "embarcadero",
+      "ground_relief_m": {
+        "blocks": 20,
+        "median": 0.62,
+        "p90": 2.07,
+        "p99": 4.23,
+        "max": 4.59
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 8.14,
+        "p90": 102.78,
+        "p99": 137.9,
+        "max": 145.58
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "financial",
+      "ground_relief_m": {
+        "blocks": 62,
+        "median": 0.47,
+        "p90": 1.14,
+        "p99": 2.11,
+        "max": 2.57
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 100.11,
+        "p90": 179.42,
+        "p99": 197.07,
+        "max": 202.4
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "ggpark",
+      "ground_relief_m": {
+        "blocks": 64,
+        "median": 4.51,
+        "p90": 8.11,
+        "p99": 11.97,
+        "max": 12.18
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 34.54,
+        "p90": 42.61,
+        "p99": 45.52,
+        "max": 46.1
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "mission",
+      "ground_relief_m": {
+        "blocks": 64,
+        "median": 1.0,
+        "p90": 2.05,
+        "p99": 2.63,
+        "max": 3.08
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 14.59,
+        "p90": 18.78,
+        "p99": 27.01,
+        "max": 27.1
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "soma",
+      "ground_relief_m": {
+        "blocks": 63,
+        "median": 0.68,
+        "p90": 1.55,
+        "p99": 2.83,
+        "max": 3.25
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 17.58,
+        "p90": 29.13,
+        "p99": 48.0,
+        "max": 49.12
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "steep",
+      "ground_relief_m": {
+        "blocks": 64,
+        "median": 6.06,
+        "p90": 11.05,
+        "p99": 17.2,
+        "max": 17.82
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 22.08,
+        "p90": 37.9,
+        "p99": 51.03,
+        "max": 57.3
+      },
+      "building_top_m": null
+    },
+    {
+      "name": "sunset",
+      "ground_relief_m": {
+        "blocks": 64,
+        "median": 3.56,
+        "p90": 6.61,
+        "p99": 8.92,
+        "max": 9.06
+      },
+      "block_z_range_m": {
+        "blocks": 64,
+        "median": 11.95,
+        "p90": 17.21,
+        "p99": 22.92,
+        "max": 24.82
+      },
+      "building_top_m": null
+    }
+  ],
+  "seconds": 25.7
+}

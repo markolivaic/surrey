@@ -1,0 +1,379 @@
+{
+  "source": "swissSURFACE3D 2024 classification, tiles from swiss_tile_selection.json",
+  "licence": "swisstopo free geodata, attribution ©swisstopo",
+  "voxel_m": 0.15,
+  "sub_tile_m": 500.0,
+  "class_table": {
+    "1": {
+      "name": "unclassified and temporary objects",
+      "m1_label": -1,
+      "reason": "mixes vehicles, cranes and anything unresolved; DALES splits vehicles four ways and has no class for the rest"
+    },
+    "2": {
+      "name": "ground",
+      "m1_label": 0,
+      "reason": "the same class"
+    },
+    "3": {
+      "name": "vegetation (low - medium - high)",
+      "m1_label": -1,
+      "reason": "flown in February and March with no leaves; bare branches could undo the vegetation San Francisco just got back, so M1 learns vegetation from DALES alone"
+    },
+    "6": {
+      "name": "building roofs",
+      "m1_label": 100,
+      "reason": "one Swiss building class against three DALES ones; scored as the building superclass"
+    },
+    "9": {
+      "name": "water",
+      "m1_label": 15,
+      "reason": "the class M1 exists to add"
+    },
+    "14": {
+      "name": "high-voltage / power line",
+      "m1_label": 3,
+      "reason": "a conductor span, the object DALES labels powerline"
+    },
+    "15": {
+      "name": "masts with a load-bearing function",
+      "m1_label": -1,
+      "reason": "lattice pylons and masts; DALES poles are utility, light and traffic poles, a different object, and no class fits"
+    },
+    "17": {
+      "name": "bridge-, overpass-, viaduct- and footbridge deck",
+      "m1_label": 16,
+      "reason": "the class M1 exists to add, and the only bridge part the San Francisco delivery labels"
+    },
+    "26": {
+      "name": "building facades",
+      "m1_label": 100,
+      "reason": "part of the building, as DALES labels walls"
+    },
+    "27": {
+      "name": "bridge piers and viaduct stay cables",
+      "m1_label": -1,
+      "reason": "the San Francisco reference labels decks only, piers are not deck, and stay cables look like powerline; teaching either as deck or wire would be wrong"
+    }
+  },
+  "codes_not_in_table_ignored": {},
+  "flags_dropped": "synthetic and withheld (surrey.flags); raw points each removed, per class",
+  "dropped_by_tile": {
+    "swisssurface3d_2024_2683-1246": {
+      "points_in_file": 17679586,
+      "dropped_by_flag": {
+        "synthetic": {
+          "2": 69790,
+          "9": 4120902
+        },
+        "withheld": {}
+      }
+    },
+    "swisssurface3d_2024_2683-1243": {
+      "points_in_file": 13488761,
+      "dropped_by_flag": {
+        "synthetic": {
+          "2": 26447,
+          "9": 4414475
+        },
+        "withheld": {}
+      }
+    },
+    "swisssurface3d_2025_2500-1118": {
+      "points_in_file": 17411642,
+      "dropped_by_flag": {
+        "synthetic": {
+          "2": 2714,
+          "9": 4962933
+        },
+        "withheld": {}
+      }
+    },
+    "swisssurface3d_2025_2500-1119": {
+      "points_in_file": 16831995,
+      "dropped_by_flag": {
+        "synthetic": {
+          "2": 63303,
+          "9": 1901439
+        },
+        "withheld": {}
+      }
+    }
+  },
+  "tiles": [
+    {
+      "name": "ch2024_2683-1246_00",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1246",
+      "points_raw": 241700,
+      "points_kept": 240856,
+      "water_points_kept": 225469,
+      "density_raw": 1.0,
+      "density_kept": 1.0,
+      "label_mix": {
+        "ignore": 0.0446,
+        "ground": 0.0,
+        "water": 0.9361,
+        "bridge_deck": 0.0192
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1246_00"
+    },
+    {
+      "name": "ch2024_2683-1246_01",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1246",
+      "points_raw": 3276940,
+      "points_kept": 3077669,
+      "water_points_kept": 161645,
+      "density_raw": 13.1,
+      "density_kept": 12.3,
+      "label_mix": {
+        "ignore": 0.2222,
+        "ground": 0.3725,
+        "powerline": 0.0006,
+        "water": 0.0525,
+        "bridge_deck": 0.0413,
+        "building (superclass)": 0.311
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1246_01"
+    },
+    {
+      "name": "ch2024_2683-1246_10",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1246",
+      "points_raw": 4140077,
+      "points_kept": 3842304,
+      "water_points_kept": 288804,
+      "density_raw": 16.6,
+      "density_kept": 15.4,
+      "label_mix": {
+        "ignore": 0.169,
+        "ground": 0.37,
+        "powerline": 0.0002,
+        "water": 0.0752,
+        "bridge_deck": 0.0047,
+        "building (superclass)": 0.3809
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1246_10"
+    },
+    {
+      "name": "ch2024_2683-1246_11",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1246",
+      "points_raw": 5830177,
+      "points_kept": 5483513,
+      "water_points_kept": 2658,
+      "density_raw": 23.3,
+      "density_kept": 21.9,
+      "label_mix": {
+        "ignore": 0.2894,
+        "ground": 0.3865,
+        "powerline": 0.0008,
+        "water": 0.0005,
+        "bridge_deck": 0.001,
+        "building (superclass)": 0.3218
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1246_11"
+    },
+    {
+      "name": "ch2024_2683-1243_00",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1243",
+      "points_raw": 6269271,
+      "points_kept": 5845897,
+      "water_points_kept": 588,
+      "density_raw": 25.1,
+      "density_kept": 23.4,
+      "label_mix": {
+        "ignore": 0.3382,
+        "ground": 0.535,
+        "powerline": 0.0002,
+        "water": 0.0001,
+        "bridge_deck": 0.0015,
+        "building (superclass)": 0.1251
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1243_00"
+    },
+    {
+      "name": "ch2024_2683-1243_01",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1243",
+      "points_raw": 2476498,
+      "points_kept": 2300218,
+      "water_points_kept": 17201,
+      "density_raw": 9.9,
+      "density_kept": 9.2,
+      "label_mix": {
+        "ignore": 0.3375,
+        "ground": 0.5043,
+        "powerline": 0.0003,
+        "water": 0.0075,
+        "bridge_deck": 0.0259,
+        "building (superclass)": 0.1245
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1243_01"
+    },
+    {
+      "name": "ch2024_2683-1243_10",
+      "city": "zurich",
+      "tile": "swisssurface3d_2024_2683-1243",
+      "points_raw": 301379,
+      "points_kept": 287509,
+      "water_points_kept": 25181,
+      "density_raw": 1.2,
+      "density_kept": 1.2,
+      "label_mix": {
+        "ignore": 0.3128,
+        "ground": 0.4832,
+        "powerline": 0.0001,
+        "water": 0.0876,
+        "bridge_deck": 0.0069,
+        "building (superclass)": 0.1095
+      },
+      "cache": "data/prep/swiss/ch2024_2683-1243_10"
+    },
+    {
+      "name": "ch2025_2500-1118_00",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1118",
+      "points_raw": 4217661,
+      "points_kept": 3999620,
+      "water_points_kept": 658,
+      "density_raw": 16.9,
+      "density_kept": 16.0,
+      "label_mix": {
+        "ignore": 0.0988,
+        "ground": 0.3677,
+        "powerline": 0.0,
+        "water": 0.0002,
+        "bridge_deck": 0.0149,
+        "building (superclass)": 0.5185
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1118_00"
+    },
+    {
+      "name": "ch2025_2500-1118_01",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1118",
+      "points_raw": 4637908,
+      "points_kept": 4400554,
+      "water_points_kept": 0,
+      "density_raw": 18.6,
+      "density_kept": 17.6,
+      "label_mix": {
+        "ignore": 0.0802,
+        "ground": 0.3357,
+        "powerline": 0.0001,
+        "building (superclass)": 0.584
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1118_01"
+    },
+    {
+      "name": "ch2025_2500-1118_10",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1118",
+      "points_raw": 875372,
+      "points_kept": 821048,
+      "water_points_kept": 7,
+      "density_raw": 3.5,
+      "density_kept": 3.3,
+      "label_mix": {
+        "ignore": 0.1347,
+        "ground": 0.5132,
+        "water": 0.0,
+        "bridge_deck": 0.0199,
+        "building (superclass)": 0.3322
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1118_10"
+    },
+    {
+      "name": "ch2025_2500-1118_11",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1118",
+      "points_raw": 2715054,
+      "points_kept": 2575832,
+      "water_points_kept": 0,
+      "density_raw": 10.9,
+      "density_kept": 10.3,
+      "label_mix": {
+        "ignore": 0.1371,
+        "ground": 0.3828,
+        "bridge_deck": 0.0067,
+        "building (superclass)": 0.4734
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1118_11"
+    },
+    {
+      "name": "ch2025_2500-1119_00",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1119",
+      "points_raw": 4345285,
+      "points_kept": 4090690,
+      "water_points_kept": 0,
+      "density_raw": 17.4,
+      "density_kept": 16.4,
+      "label_mix": {
+        "ignore": 0.1445,
+        "ground": 0.5255,
+        "powerline": 0.0002,
+        "building (superclass)": 0.3298
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1119_00"
+    },
+    {
+      "name": "ch2025_2500-1119_01",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1119",
+      "points_raw": 4772579,
+      "points_kept": 4532921,
+      "water_points_kept": 0,
+      "density_raw": 19.1,
+      "density_kept": 18.1,
+      "label_mix": {
+        "ignore": 0.2256,
+        "ground": 0.4783,
+        "powerline": 0.0,
+        "bridge_deck": 0.0127,
+        "building (superclass)": 0.2834
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1119_01"
+    },
+    {
+      "name": "ch2025_2500-1119_10",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1119",
+      "points_raw": 2506969,
+      "points_kept": 2393713,
+      "water_points_kept": 40,
+      "density_raw": 10.0,
+      "density_kept": 9.6,
+      "label_mix": {
+        "ignore": 0.3655,
+        "ground": 0.5286,
+        "water": 0.0,
+        "bridge_deck": 0.0005,
+        "building (superclass)": 0.1054
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1119_10"
+    },
+    {
+      "name": "ch2025_2500-1119_11",
+      "city": "geneva",
+      "tile": "swisssurface3d_2025_2500-1119",
+      "points_raw": 3242420,
+      "points_kept": 3077328,
+      "water_points_kept": 217,
+      "density_raw": 13.0,
+      "density_kept": 12.3,
+      "label_mix": {
+        "ignore": 0.4141,
+        "ground": 0.4936,
+        "water": 0.0001,
+        "bridge_deck": 0.0,
+        "building (superclass)": 0.0922
+      },
+      "cache": "data/prep/swiss/ch2025_2500-1119_11"
+    }
+  ],
+  "points_kept_total": 46969672,
+  "seconds": 90.9
+}

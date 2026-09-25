@@ -1,0 +1,497 @@
+{
+  "question": "tiles with evergreen canopy flown in leaf",
+  "canopy_source": "IGN BD Forêt V2, formation_vegetale, attribute essence",
+  "date_source": "LiDAR HD tile metadata, date_debut_acquisition",
+  "evergreen_rule": "essence naming a conifer other than larch, or evergreen oak",
+  "leaf_on_months": [
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "regions": {
+    "marseille": {
+      "forest_polygons": 1212,
+      "forest_polygons_server_count": 1212,
+      "tiles_server_count": 385,
+      "essences_by_polygon_count": {
+        "Mixte": 349,
+        "Conifères": 260,
+        "Feuillus": 207,
+        "Pin d'Alep": 200,
+        "NC": 153,
+        "NR": 23,
+        "Chênes décidus": 10,
+        "Chênes sempervirents": 5,
+        "Pin autre": 3,
+        "Pins mélangés": 2
+      },
+      "tiles": 385,
+      "tiles_leaf_on": 385,
+      "top": [
+        {
+          "tile": "0904-6244",
+          "acquired": "2021-06-26",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 37.2,
+          "evergreen_forest_share": 0.958,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.036,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0904_6244_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0893-6240",
+          "acquired": "2021-06-26",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 35.6,
+          "evergreen_forest_share": 0.921,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.079,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0893_6240_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0906-6242",
+          "acquired": "2021-06-26",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 35.3,
+          "evergreen_forest_share": 0.914,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.0,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0906_6242_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0894-6240",
+          "acquired": "2021-06-26",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 39.6,
+          "evergreen_forest_share": 0.902,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.032,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0894_6240_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0902-6257",
+          "acquired": "2021-06-25",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 29.0,
+          "evergreen_forest_share": 0.899,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.072,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0902_6257_PTS_LAMB93_IGN69.copc.laz"
+        }
+      ]
+    },
+    "nice": {
+      "forest_polygons": 1021,
+      "forest_polygons_server_count": 1021,
+      "tiles_server_count": 197,
+      "essences_by_polygon_count": {
+        "Mixte": 453,
+        "Feuillus": 207,
+        "Pin d'Alep": 164,
+        "NC": 123,
+        "Chênes sempervirents": 28,
+        "Conifères": 19,
+        "Chênes décidus": 13,
+        "NR": 5,
+        "Pins mélangés": 5,
+        "Pin maritime": 3,
+        "Pin sylvestre": 1
+      },
+      "tiles": 197,
+      "tiles_leaf_on": 197,
+      "top": [
+        {
+          "tile": "1045-6307",
+          "acquired": "2021-05-12",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 32.4,
+          "evergreen_forest_share": 0.881,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.088,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_SP_2025-06-20/LHD_FXX_1045_6307_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "1045-6306",
+          "acquired": "2021-06-03",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 28.4,
+          "evergreen_forest_share": 0.677,
+          "deciduous_forest_share": 0.023,
+          "broadleaf_not_stated_share": 0.138,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_SP_2025-06-20/LHD_FXX_1045_6306_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "1046-6307",
+          "acquired": "2021-05-12",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 30.7,
+          "evergreen_forest_share": 0.617,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.32,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_SP_2025-06-20/LHD_FXX_1046_6307_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "1047-6308",
+          "acquired": "2021-05-12",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 44.2,
+          "evergreen_forest_share": 0.504,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.272,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_SP_2025-06-20/LHD_FXX_1047_6308_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "1046-6306",
+          "acquired": "2021-05-12",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 31.8,
+          "evergreen_forest_share": 0.433,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.339,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_SP_2025-06-20/LHD_FXX_1046_6306_PTS_LAMB93_IGN69.copc.laz"
+        }
+      ]
+    },
+    "toulon": {
+      "forest_polygons": 746,
+      "forest_polygons_server_count": 746,
+      "tiles_server_count": 148,
+      "essences_by_polygon_count": {
+        "Mixte": 364,
+        "Pin d'Alep": 119,
+        "Feuillus": 98,
+        "Conifères": 65,
+        "NC": 53,
+        "Chênes sempervirents": 33,
+        "Chênes décidus": 8,
+        "NR": 6
+      },
+      "tiles": 148,
+      "tiles_leaf_on": 148,
+      "top": [
+        {
+          "tile": "0932-6233",
+          "acquired": "2021-07-12",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 30.3,
+          "evergreen_forest_share": 0.942,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.058,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0932_6233_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0933-6233",
+          "acquired": "2021-07-12",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 31.5,
+          "evergreen_forest_share": 0.934,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.066,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_PQ_2025-03-14/LHD_FXX_0933_6233_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0939-6232",
+          "acquired": "2022-09-09",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 45.9,
+          "evergreen_forest_share": 0.837,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.125,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_QR_2025-03-11/LHD_FXX_0939_6232_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0940-6232",
+          "acquired": "2022-09-09",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 49.7,
+          "evergreen_forest_share": 0.829,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.097,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_QR_2025-03-11/LHD_FXX_0940_6232_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0941-6232",
+          "acquired": "2022-09-09",
+          "leaf_on": true,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 52.3,
+          "evergreen_forest_share": 0.781,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.12,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_QR_2025-03-11/LHD_FXX_0941_6232_PTS_LAMB93_IGN69.copc.laz"
+        }
+      ]
+    },
+    "montpellier": {
+      "forest_polygons": 835,
+      "forest_polygons_server_count": 835,
+      "tiles_server_count": 234,
+      "essences_by_polygon_count": {
+        "NC": 243,
+        "Feuillus": 202,
+        "Mixte": 194,
+        "Pin d'Alep": 86,
+        "Conifères": 58,
+        "Chênes sempervirents": 27,
+        "NR": 8,
+        "Peuplier": 6,
+        "Pin autre": 5,
+        "Pins mélangés": 4,
+        "Chênes décidus": 2
+      },
+      "tiles": 234,
+      "tiles_leaf_on": 234,
+      "top": [
+        {
+          "tile": "0771-6287",
+          "acquired": "2021-05-30",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 36.7,
+          "evergreen_forest_share": 0.66,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.089,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_MP_2024-12-13/LHD_FXX_0771_6287_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0770-6286",
+          "acquired": "2021-05-30",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 39.1,
+          "evergreen_forest_share": 0.656,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.308,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_MP_2024-12-13/LHD_FXX_0770_6286_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0765-6286",
+          "acquired": "2021-06-05",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 36.5,
+          "evergreen_forest_share": 0.618,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.229,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_MP_2024-12-13/LHD_FXX_0765_6286_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0770-6287",
+          "acquired": "2021-05-30",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 36.9,
+          "evergreen_forest_share": 0.513,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.29,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_MP_2024-12-13/LHD_FXX_0770_6287_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0762-6285",
+          "acquired": "2021-05-30",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 51.1,
+          "evergreen_forest_share": 0.497,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.021,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_MP_2024-12-13/LHD_FXX_0762_6285_PTS_LAMB93_IGN69.copc.laz"
+        }
+      ]
+    },
+    "ajaccio": {
+      "forest_polygons": 754,
+      "forest_polygons_server_count": 754,
+      "tiles_server_count": 124,
+      "essences_by_polygon_count": {
+        "Feuillus": 378,
+        "NC": 276,
+        "Chênes sempervirents": 81,
+        "Mixte": 13,
+        "NR": 3,
+        "Pins mélangés": 2,
+        "Conifères": 1
+      },
+      "tiles": 124,
+      "tiles_leaf_on": 124,
+      "top": [
+        {
+          "tile": "1183-6113",
+          "acquired": "2021-05-04",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 28.3,
+          "evergreen_forest_share": 0.624,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.062,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_UT_2025-04-02/LHD_FXX_1183_6113_PTS_LAMB93_IGN78.copc.laz"
+        },
+        {
+          "tile": "1183-6111",
+          "acquired": "2021-05-04",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 24.8,
+          "evergreen_forest_share": 0.441,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.073,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_UT_2025-04-02/LHD_FXX_1183_6111_PTS_LAMB93_IGN78.copc.laz"
+        },
+        {
+          "tile": "1180-6114",
+          "acquired": "2021-05-04",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 42.7,
+          "evergreen_forest_share": 0.387,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.089,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_UT_2025-04-02/LHD_FXX_1180_6114_PTS_LAMB93_IGN78.copc.laz"
+        },
+        {
+          "tile": "1183-6107",
+          "acquired": "2021-05-04",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 28.3,
+          "evergreen_forest_share": 0.354,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.183,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_UT_2025-04-02/LHD_FXX_1183_6107_PTS_LAMB93_IGN78.copc.laz"
+        },
+        {
+          "tile": "1172-6109",
+          "acquired": "2021-05-04",
+          "leaf_on": true,
+          "procede_classement": "ST_AUTO_MANUEL",
+          "points_per_m2": 40.9,
+          "evergreen_forest_share": 0.343,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.643,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_UT_2025-04-02/LHD_FXX_1172_6109_PTS_LAMB93_IGN78.copc.laz"
+        }
+      ]
+    },
+    "paris": {
+      "forest_polygons": 237,
+      "forest_polygons_server_count": 237,
+      "tiles_server_count": 228,
+      "essences_by_polygon_count": {
+        "Feuillus": 204,
+        "Chênes décidus": 16,
+        "Mixte": 4,
+        "Châtaignier": 4,
+        "NR": 3,
+        "Hêtre": 3,
+        "NC": 2,
+        "Pin laricio, pin noir": 1
+      },
+      "tiles": 228,
+      "tiles_leaf_on": 0,
+      "top": [
+        {
+          "tile": "0645-6865",
+          "acquired": "2023-03-02",
+          "leaf_on": false,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 19.8,
+          "evergreen_forest_share": 0.049,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.201,
+          "claimed_by_two_groups_share": 0.021,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_KE_2025-06-06/LHD_FXX_0645_6865_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0641-6856",
+          "acquired": "2023-03-01",
+          "leaf_on": false,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 34.1,
+          "evergreen_forest_share": 0.0,
+          "deciduous_forest_share": 0.829,
+          "broadleaf_not_stated_share": 0.007,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_KE_2025-06-06/LHD_FXX_0641_6856_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0641-6857",
+          "acquired": "2023-03-01",
+          "leaf_on": false,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 35.5,
+          "evergreen_forest_share": 0.0,
+          "deciduous_forest_share": 0.487,
+          "broadleaf_not_stated_share": 0.437,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_KE_2025-06-06/LHD_FXX_0641_6857_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0641-6858",
+          "acquired": "2023-03-01",
+          "leaf_on": false,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 28.8,
+          "evergreen_forest_share": 0.0,
+          "deciduous_forest_share": 0.527,
+          "broadleaf_not_stated_share": 0.041,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_KE_2025-06-06/LHD_FXX_0641_6858_PTS_LAMB93_IGN69.copc.laz"
+        },
+        {
+          "tile": "0641-6859",
+          "acquired": "2023-03-01",
+          "leaf_on": false,
+          "procede_classement": "IGN_AUTO_V5",
+          "points_per_m2": 20.6,
+          "evergreen_forest_share": 0.0,
+          "deciduous_forest_share": 0.0,
+          "broadleaf_not_stated_share": 0.058,
+          "claimed_by_two_groups_share": 0.0,
+          "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_KE_2025-06-06/LHD_FXX_0641_6859_PTS_LAMB93_IGN69.copc.laz"
+        }
+      ]
+    }
+  },
+  "seconds": 50.4
+}

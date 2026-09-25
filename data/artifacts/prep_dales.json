@@ -1,0 +1,1136 @@
+{
+  "source": "dales",
+  "voxel_m": 0.15,
+  "tiles": [
+    {
+      "name": "5080_54435",
+      "split": "train",
+      "source": "data/dales2/train/5080_54435.laz",
+      "point_format": 7,
+      "points_raw": 11153689,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 8934072,
+      "kept_fraction": 0.801,
+      "density_raw": 44.6,
+      "density_kept": 35.7,
+      "hag_min_m": -9.64,
+      "hag_max_m": 32.47,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5080_54435",
+      "cache_bytes": 160856184
+    },
+    {
+      "name": "5085_54320",
+      "split": "train",
+      "source": "data/dales2/train/5085_54320.laz",
+      "point_format": 7,
+      "points_raw": 14181372,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11851138,
+      "kept_fraction": 0.8357,
+      "density_raw": 56.7,
+      "density_kept": 47.4,
+      "hag_min_m": -15.78,
+      "hag_max_m": 44.49,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5085_54320",
+      "cache_bytes": 213363372
+    },
+    {
+      "name": "5095_54440",
+      "split": "train",
+      "source": "data/dales2/train/5095_54440.laz",
+      "point_format": 7,
+      "points_raw": 11496317,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9137214,
+      "kept_fraction": 0.7948,
+      "density_raw": 46.0,
+      "density_kept": 36.5,
+      "hag_min_m": -9.95,
+      "hag_max_m": 33.11,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5095_54440",
+      "cache_bytes": 164512740
+    },
+    {
+      "name": "5095_54455",
+      "split": "train",
+      "source": "data/dales2/train/5095_54455.laz",
+      "point_format": 6,
+      "points_raw": 13367451,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 10848574,
+      "kept_fraction": 0.8116,
+      "density_raw": 53.5,
+      "density_kept": 43.4,
+      "hag_min_m": -7.81,
+      "hag_max_m": 35.27,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5095_54455",
+      "cache_bytes": 195317220
+    },
+    {
+      "name": "5100_54495",
+      "split": "train",
+      "source": "data/dales2/train/5100_54495.laz",
+      "point_format": 7,
+      "points_raw": 11872445,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9436202,
+      "kept_fraction": 0.7948,
+      "density_raw": 47.5,
+      "density_kept": 37.7,
+      "hag_min_m": -8.68,
+      "hag_max_m": 35.4,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5100_54495",
+      "cache_bytes": 169894524
+    },
+    {
+      "name": "5105_54405",
+      "split": "train",
+      "source": "data/dales2/train/5105_54405.laz",
+      "point_format": 7,
+      "points_raw": 11699759,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9362290,
+      "kept_fraction": 0.8002,
+      "density_raw": 46.8,
+      "density_kept": 37.4,
+      "hag_min_m": -12.84,
+      "hag_max_m": 36.29,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5105_54405",
+      "cache_bytes": 168564108
+    },
+    {
+      "name": "5105_54460",
+      "split": "train",
+      "source": "data/dales2/train/5105_54460.laz",
+      "point_format": 7,
+      "points_raw": 12752749,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 10263515,
+      "kept_fraction": 0.8048,
+      "density_raw": 51.0,
+      "density_kept": 41.0,
+      "hag_min_m": -9.06,
+      "hag_max_m": 37.83,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5105_54460",
+      "cache_bytes": 184786158
+    },
+    {
+      "name": "5110_54320",
+      "split": "train",
+      "source": "data/dales2/train/5110_54320.laz",
+      "point_format": 7,
+      "points_raw": 17560116,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 14839772,
+      "kept_fraction": 0.8451,
+      "density_raw": 70.2,
+      "density_kept": 59.4,
+      "hag_min_m": -25.25,
+      "hag_max_m": 57.14,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2598,
+      "cache": "data/prep/dales/5110_54320",
+      "cache_bytes": 267158752
+    },
+    {
+      "name": "5110_54460",
+      "split": "train",
+      "source": "data/dales2/train/5110_54460.laz",
+      "point_format": 7,
+      "points_raw": 13555370,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11002525,
+      "kept_fraction": 0.8117,
+      "density_raw": 54.2,
+      "density_kept": 44.0,
+      "hag_min_m": -8.4,
+      "hag_max_m": 45.42,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2597,
+      "cache": "data/prep/dales/5110_54460",
+      "cache_bytes": 198088290
+    },
+    {
+      "name": "5110_54475",
+      "split": "train",
+      "source": "data/dales2/train/5110_54475.laz",
+      "point_format": 7,
+      "points_raw": 11498181,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9120131,
+      "kept_fraction": 0.7932,
+      "density_raw": 46.0,
+      "density_kept": 36.5,
+      "hag_min_m": -100.53,
+      "hag_max_m": 121.74,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5110_54475",
+      "cache_bytes": 164205246
+    },
+    {
+      "name": "5110_54495",
+      "split": "train",
+      "source": "data/dales2/train/5110_54495.laz",
+      "point_format": 7,
+      "points_raw": 11771043,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9244426,
+      "kept_fraction": 0.7854,
+      "density_raw": 47.1,
+      "density_kept": 37.0,
+      "hag_min_m": -14.01,
+      "hag_max_m": 39.07,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5110_54495",
+      "cache_bytes": 166442556
+    },
+    {
+      "name": "5115_54480",
+      "split": "train",
+      "source": "data/dales2/train/5115_54480.laz",
+      "point_format": 7,
+      "points_raw": 13525852,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11023424,
+      "kept_fraction": 0.815,
+      "density_raw": 54.1,
+      "density_kept": 44.1,
+      "hag_min_m": -21.62,
+      "hag_max_m": 68.13,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5115_54480",
+      "cache_bytes": 198464504
+    },
+    {
+      "name": "5130_54355",
+      "split": "train",
+      "source": "data/dales2/train/5130_54355.laz",
+      "point_format": 7,
+      "points_raw": 12023503,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9520192,
+      "kept_fraction": 0.7918,
+      "density_raw": 48.1,
+      "density_kept": 38.1,
+      "hag_min_m": -1.98,
+      "hag_max_m": 38.73,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5130_54355",
+      "cache_bytes": 171406344
+    },
+    {
+      "name": "5135_54495",
+      "split": "train",
+      "source": "data/dales2/train/5135_54495.laz",
+      "point_format": 7,
+      "points_raw": 11617334,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9198590,
+      "kept_fraction": 0.7918,
+      "density_raw": 46.5,
+      "density_kept": 36.8,
+      "hag_min_m": -9.12,
+      "hag_max_m": 35.12,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5135_54495",
+      "cache_bytes": 165617508
+    },
+    {
+      "name": "5140_54445",
+      "split": "train",
+      "source": "data/dales2/train/5140_54445.laz",
+      "point_format": 7,
+      "points_raw": 12063052,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9562677,
+      "kept_fraction": 0.7927,
+      "density_raw": 48.2,
+      "density_kept": 38.2,
+      "hag_min_m": -7.8,
+      "hag_max_m": 37.79,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5140_54445",
+      "cache_bytes": 172171058
+    },
+    {
+      "name": "5145_54340",
+      "split": "train",
+      "source": "data/dales2/train/5145_54340.laz",
+      "point_format": 7,
+      "points_raw": 11807976,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9321422,
+      "kept_fraction": 0.7894,
+      "density_raw": 47.2,
+      "density_kept": 37.3,
+      "hag_min_m": -17.09,
+      "hag_max_m": 51.05,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5145_54340",
+      "cache_bytes": 167828484
+    },
+    {
+      "name": "5145_54405",
+      "split": "train",
+      "source": "data/dales2/train/5145_54405.laz",
+      "point_format": 7,
+      "points_raw": 12064535,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9656432,
+      "kept_fraction": 0.8004,
+      "density_raw": 48.3,
+      "density_kept": 38.6,
+      "hag_min_m": -11.58,
+      "hag_max_m": 37.29,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5145_54405",
+      "cache_bytes": 173858664
+    },
+    {
+      "name": "5145_54460",
+      "split": "train",
+      "source": "data/dales2/train/5145_54460.laz",
+      "point_format": 7,
+      "points_raw": 12191052,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9639170,
+      "kept_fraction": 0.7907,
+      "density_raw": 48.8,
+      "density_kept": 38.6,
+      "hag_min_m": -9.28,
+      "hag_max_m": 41.72,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5145_54460",
+      "cache_bytes": 173547948
+    },
+    {
+      "name": "5145_54470",
+      "split": "train",
+      "source": "data/dales2/train/5145_54470.laz",
+      "point_format": 7,
+      "points_raw": 11898373,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9497837,
+      "kept_fraction": 0.7982,
+      "density_raw": 47.6,
+      "density_kept": 38.0,
+      "hag_min_m": -6.7,
+      "hag_max_m": 32.75,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2598,
+      "cache": "data/prep/dales/5145_54470",
+      "cache_bytes": 171003922
+    },
+    {
+      "name": "5145_54480",
+      "split": "train",
+      "source": "data/dales2/train/5145_54480.laz",
+      "point_format": 7,
+      "points_raw": 12566988,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 10010200,
+      "kept_fraction": 0.7965,
+      "density_raw": 50.3,
+      "density_kept": 40.0,
+      "hag_min_m": -14.27,
+      "hag_max_m": 38.8,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5145_54480",
+      "cache_bytes": 180226488
+    },
+    {
+      "name": "5150_54340",
+      "split": "train",
+      "source": "data/dales2/train/5150_54340.laz",
+      "point_format": 7,
+      "points_raw": 13483881,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11043881,
+      "kept_fraction": 0.819,
+      "density_raw": 53.9,
+      "density_kept": 44.2,
+      "hag_min_m": -9.46,
+      "hag_max_m": 51.44,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5150_54340",
+      "cache_bytes": 198832746
+    },
+    {
+      "name": "5160_54330",
+      "split": "train",
+      "source": "data/dales2/train/5160_54330.laz",
+      "point_format": 7,
+      "points_raw": 11814747,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9557626,
+      "kept_fraction": 0.809,
+      "density_raw": 47.3,
+      "density_kept": 38.2,
+      "hag_min_m": -12.82,
+      "hag_max_m": 51.63,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5160_54330",
+      "cache_bytes": 172080156
+    },
+    {
+      "name": "5165_54390",
+      "split": "train",
+      "source": "data/dales2/train/5165_54390.laz",
+      "point_format": 7,
+      "points_raw": 6582632,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 5034758,
+      "kept_fraction": 0.7649,
+      "density_raw": 26.3,
+      "density_kept": 20.1,
+      "hag_min_m": -5.9,
+      "hag_max_m": 23.21,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2582,
+      "cache": "data/prep/dales/5165_54390",
+      "cache_bytes": 90668244
+    },
+    {
+      "name": "5165_54395",
+      "split": "train",
+      "source": "data/dales2/train/5165_54395.laz",
+      "point_format": 7,
+      "points_raw": 13558873,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11230435,
+      "kept_fraction": 0.8283,
+      "density_raw": 54.2,
+      "density_kept": 44.9,
+      "hag_min_m": -11.07,
+      "hag_max_m": 49.26,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5165_54395",
+      "cache_bytes": 202190718
+    },
+    {
+      "name": "5180_54435",
+      "split": "train",
+      "source": "data/dales2/train/5180_54435.laz",
+      "point_format": 7,
+      "points_raw": 11887488,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9532991,
+      "kept_fraction": 0.8019,
+      "density_raw": 47.5,
+      "density_kept": 38.1,
+      "hag_min_m": -9.67,
+      "hag_max_m": 39.41,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5180_54435",
+      "cache_bytes": 171636726
+    },
+    {
+      "name": "5180_54485",
+      "split": "train",
+      "source": "data/dales2/train/5180_54485.laz",
+      "point_format": 7,
+      "points_raw": 11793658,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9743408,
+      "kept_fraction": 0.8262,
+      "density_raw": 47.2,
+      "density_kept": 39.0,
+      "hag_min_m": -12.36,
+      "hag_max_m": 48.46,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5180_54485",
+      "cache_bytes": 175424232
+    },
+    {
+      "name": "5185_54390",
+      "split": "train",
+      "source": "data/dales2/train/5185_54390.laz",
+      "point_format": 7,
+      "points_raw": 11743016,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9290128,
+      "kept_fraction": 0.7911,
+      "density_raw": 47.0,
+      "density_kept": 37.2,
+      "hag_min_m": -6.82,
+      "hag_max_m": 32.76,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5185_54390",
+      "cache_bytes": 167265176
+    },
+    {
+      "name": "5185_54485",
+      "split": "train",
+      "source": "data/dales2/train/5185_54485.laz",
+      "point_format": 7,
+      "points_raw": 14253406,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11882142,
+      "kept_fraction": 0.8336,
+      "density_raw": 57.0,
+      "density_kept": 47.5,
+      "hag_min_m": -8.48,
+      "hag_max_m": 48.1,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5185_54485",
+      "cache_bytes": 213921428
+    },
+    {
+      "name": "5190_54400",
+      "split": "train",
+      "source": "data/dales2/train/5190_54400.laz",
+      "point_format": 6,
+      "points_raw": 11836465,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9263689,
+      "kept_fraction": 0.7826,
+      "density_raw": 47.3,
+      "density_kept": 37.1,
+      "hag_min_m": -8.29,
+      "hag_max_m": 35.64,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "epsg": null,
+      "cells": 2589,
+      "cache": "data/prep/dales/5190_54400",
+      "cache_bytes": 166789114
+    },
+    {
+      "name": "5080_54400",
+      "split": "test",
+      "source": "data/dales2/test/5080_54400.laz",
+      "point_format": 6,
+      "points_raw": 12038801,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9768785,
+      "kept_fraction": 0.8114,
+      "density_raw": 48.1,
+      "density_kept": 39.1,
+      "hag_min_m": -7.33,
+      "hag_max_m": 37.27,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5080_54400",
+      "cache_bytes": 175881018
+    },
+    {
+      "name": "5080_54470",
+      "split": "test",
+      "source": "data/dales2/test/5080_54470.laz",
+      "point_format": 7,
+      "points_raw": 11638798,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9253168,
+      "kept_fraction": 0.795,
+      "density_raw": 46.5,
+      "density_kept": 37.0,
+      "hag_min_m": -8.65,
+      "hag_max_m": 43.39,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5080_54470",
+      "cache_bytes": 166599896
+    },
+    {
+      "name": "5100_54440",
+      "split": "test",
+      "source": "data/dales2/test/5100_54440.laz",
+      "point_format": 7,
+      "points_raw": 11331772,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 8961455,
+      "kept_fraction": 0.7908,
+      "density_raw": 45.3,
+      "density_kept": 35.8,
+      "hag_min_m": -11.55,
+      "hag_max_m": 67.09,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5100_54440",
+      "cache_bytes": 161349062
+    },
+    {
+      "name": "5100_54490",
+      "split": "test",
+      "source": "data/dales2/test/5100_54490.laz",
+      "point_format": 6,
+      "points_raw": 11868903,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9371661,
+      "kept_fraction": 0.7896,
+      "density_raw": 47.5,
+      "density_kept": 37.5,
+      "hag_min_m": -8.69,
+      "hag_max_m": 38.82,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "epsg": null,
+      "cells": 2601,
+      "cache": "data/prep/dales/5100_54490",
+      "cache_bytes": 168732802
+    },
+    {
+      "name": "5120_54445",
+      "split": "test",
+      "source": "data/dales2/test/5120_54445.laz",
+      "point_format": 7,
+      "points_raw": 13741395,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11222843,
+      "kept_fraction": 0.8167,
+      "density_raw": 55.0,
+      "density_kept": 44.9,
+      "hag_min_m": -11.07,
+      "hag_max_m": 42.25,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5120_54445",
+      "cache_bytes": 202054062
+    },
+    {
+      "name": "5135_54430",
+      "split": "test",
+      "source": "data/dales2/test/5135_54430.laz",
+      "point_format": 7,
+      "points_raw": 12243812,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9843150,
+      "kept_fraction": 0.8039,
+      "density_raw": 49.0,
+      "density_kept": 39.4,
+      "hag_min_m": -11.45,
+      "hag_max_m": 34.12,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5135_54430",
+      "cache_bytes": 177219588
+    },
+    {
+      "name": "5135_54435",
+      "split": "test",
+      "source": "data/dales2/test/5135_54435.laz",
+      "point_format": 7,
+      "points_raw": 14079882,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 11567902,
+      "kept_fraction": 0.8216,
+      "density_raw": 56.3,
+      "density_kept": 46.3,
+      "hag_min_m": -9.9,
+      "hag_max_m": 47.39,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2598,
+      "cache": "data/prep/dales/5135_54435",
+      "cache_bytes": 208265092
+    },
+    {
+      "name": "5140_54390",
+      "split": "test",
+      "source": "data/dales2/test/5140_54390.laz",
+      "point_format": 6,
+      "points_raw": 11840197,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9426823,
+      "kept_fraction": 0.7962,
+      "density_raw": 47.4,
+      "density_kept": 37.7,
+      "hag_min_m": -11.18,
+      "hag_max_m": 38.03,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5140_54390",
+      "cache_bytes": 169725702
+    },
+    {
+      "name": "5150_54325",
+      "split": "test",
+      "source": "data/dales2/test/5150_54325.laz",
+      "point_format": 7,
+      "points_raw": 11749755,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9344526,
+      "kept_fraction": 0.7953,
+      "density_raw": 47.0,
+      "density_kept": 37.4,
+      "hag_min_m": -17.4,
+      "hag_max_m": 41.9,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5150_54325",
+      "cache_bytes": 168244356
+    },
+    {
+      "name": "5155_54335",
+      "split": "test",
+      "source": "data/dales2/test/5155_54335.laz",
+      "point_format": 7,
+      "points_raw": 12035555,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9646108,
+      "kept_fraction": 0.8015,
+      "density_raw": 48.1,
+      "density_kept": 38.6,
+      "hag_min_m": -10.43,
+      "hag_max_m": 50.28,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "epsg": null,
+      "cells": 2599,
+      "cache": "data/prep/dales/5155_54335",
+      "cache_bytes": 173672816
+    },
+    {
+      "name": "5175_54395",
+      "split": "test",
+      "source": "data/dales2/test/5175_54395.laz",
+      "point_format": 7,
+      "points_raw": 11978127,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {}
+      },
+      "points_kept": 9541008,
+      "kept_fraction": 0.7965,
+      "density_raw": 47.9,
+      "density_kept": 38.2,
+      "hag_min_m": -8.94,
+      "hag_max_m": 38.71,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "epsg": null,
+      "cells": 2600,
+      "cache": "data/prep/dales/5175_54395",
+      "cache_bytes": 171781032
+    }
+  ],
+  "points_raw_total": 492168320,
+  "points_kept_total": 395996290,
+  "kept_fraction_overall": 0.8046,
+  "density_kept": {
+    "min": 20.1,
+    "median": 38.2,
+    "max": 59.4
+  },
+  "cache_bytes_total": 7129648036,
+  "seconds": 924.1
+}

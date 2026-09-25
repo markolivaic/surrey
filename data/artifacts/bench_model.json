@@ -1,0 +1,80 @@
+{
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "device_total_gb": 4.294,
+  "torch": "2.11.0+cu128",
+  "amp": true,
+  "parameters": 726159,
+  "best_by_throughput": {
+    "points_per_crop": 32768,
+    "batch": 4,
+    "step_ms": 1725.7,
+    "peak_gb": 1.91,
+    "points_per_second": 75952
+  },
+  "runs": [
+    {
+      "points_per_crop": 8192,
+      "batch": 16,
+      "sampler": "random",
+      "step_ms": 15915.3,
+      "peak_gb": 5.257,
+      "points_per_second": 8236,
+      "fits": true
+    },
+    {
+      "points_per_crop": 16384,
+      "batch": 4,
+      "sampler": "random",
+      "step_ms": 1494.3,
+      "peak_gb": 1.332,
+      "points_per_second": 43859,
+      "fits": true
+    },
+    {
+      "points_per_crop": 16384,
+      "batch": 8,
+      "sampler": "random",
+      "step_ms": 3224.0,
+      "peak_gb": 2.644,
+      "points_per_second": 40656,
+      "fits": true
+    },
+    {
+      "points_per_crop": 32768,
+      "batch": 4,
+      "sampler": "random",
+      "step_ms": 1725.7,
+      "peak_gb": 1.91,
+      "points_per_second": 75952,
+      "fits": true
+    },
+    {
+      "points_per_crop": 32768,
+      "batch": 4,
+      "sampler": "fps",
+      "step_ms": 3405.2,
+      "peak_gb": 1.909,
+      "points_per_second": 38491,
+      "fits": true
+    },
+    {
+      "points_per_crop": 32768,
+      "batch": 6,
+      "sampler": "random",
+      "step_ms": 2632.2,
+      "peak_gb": 2.855,
+      "points_per_second": 74694,
+      "fits": true
+    },
+    {
+      "points_per_crop": 65536,
+      "batch": 2,
+      "sampler": "random",
+      "step_ms": 4347.5,
+      "peak_gb": 1.908,
+      "points_per_second": 30149,
+      "fits": true
+    }
+  ]
+}

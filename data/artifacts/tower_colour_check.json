@@ -1,0 +1,839 @@
+{
+  "question": "does the model call the tall towers vegetation",
+  "height_is": "height above ground, the min-z grid surface",
+  "model": {
+    "m0_seedA": {
+      "training_block_z_max_m": 121.77,
+      "areas": {
+        "baybridge": {
+          "max_height_m": 163.47,
+          "bins": {
+            "above_60m": {
+              "points": 418467,
+              "share_of_area": 0.136351,
+              "coarse": {
+                "building": 0.8008,
+                "pole": 0.1007,
+                "vegetation": 0.0682,
+                "ground": 0.0294,
+                "vehicle": 0.0009,
+                "fence": 0.0001
+              }
+            },
+            "above_100m": {
+              "points": 72639,
+              "share_of_area": 0.023668,
+              "coarse": {
+                "building": 0.4147,
+                "pole": 0.3683,
+                "vegetation": 0.1803,
+                "ground": 0.0367
+              }
+            },
+            "above_training_ceiling": {
+              "points": 38526,
+              "share_of_area": 0.012553,
+              "coarse": {
+                "pole": 0.4221,
+                "vegetation": 0.3104,
+                "building": 0.233,
+                "ground": 0.0345
+              }
+            },
+            "above_150m": {
+              "points": 331,
+              "share_of_area": 0.000108,
+              "coarse": {
+                "vegetation": 0.5015,
+                "pole": 0.4804,
+                "building": 0.0181
+              }
+            }
+          }
+        },
+        "embarcadero": {
+          "max_height_m": 143.69,
+          "bins": {
+            "above_60m": {
+              "points": 274887,
+              "share_of_area": 0.061654,
+              "coarse": {
+                "building": 0.7821,
+                "pole": 0.1321,
+                "ground": 0.0427,
+                "vegetation": 0.0381,
+                "vehicle": 0.0047,
+                "fence": 0.0004
+              }
+            },
+            "above_100m": {
+              "points": 38016,
+              "share_of_area": 0.008527,
+              "coarse": {
+                "building": 0.3993,
+                "pole": 0.3688,
+                "vegetation": 0.1666,
+                "ground": 0.0653
+              }
+            },
+            "above_training_ceiling": {
+              "points": 17573,
+              "share_of_area": 0.003941,
+              "coarse": {
+                "pole": 0.4913,
+                "building": 0.3067,
+                "vegetation": 0.1774,
+                "ground": 0.0246
+              }
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "financial": {
+          "max_height_m": 263.86,
+          "bins": {
+            "above_60m": {
+              "points": 1715158,
+              "share_of_area": 0.224782,
+              "coarse": {
+                "building": 0.5502,
+                "pole": 0.358,
+                "vegetation": 0.0662,
+                "ground": 0.025,
+                "vehicle": 0.0006,
+                "fence": 0.0
+              }
+            },
+            "above_100m": {
+              "points": 1069525,
+              "share_of_area": 0.140168,
+              "coarse": {
+                "pole": 0.4543,
+                "building": 0.4108,
+                "vegetation": 0.0973,
+                "ground": 0.0372,
+                "vehicle": 0.0005
+              }
+            },
+            "above_training_ceiling": {
+              "points": 797859,
+              "share_of_area": 0.104565,
+              "coarse": {
+                "pole": 0.5171,
+                "building": 0.3088,
+                "vegetation": 0.1281,
+                "ground": 0.0457,
+                "vehicle": 0.0003
+              }
+            },
+            "above_150m": {
+              "points": 296082,
+              "share_of_area": 0.038803,
+              "coarse": {
+                "pole": 0.6335,
+                "vegetation": 0.2669,
+                "building": 0.0697,
+                "ground": 0.0297,
+                "vehicle": 0.0002
+              }
+            }
+          }
+        },
+        "ggpark": {
+          "max_height_m": 45.17,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "mission": {
+          "max_height_m": 29.0,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "soma": {
+          "max_height_m": 47.01,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "steep": {
+          "max_height_m": 52.94,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "sunset": {
+          "max_height_m": 22.33,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        }
+      }
+    },
+    "m0_seedB": {
+      "training_block_z_max_m": 121.77,
+      "areas": {
+        "baybridge": {
+          "max_height_m": 163.47,
+          "bins": {
+            "above_60m": {
+              "points": 418467,
+              "share_of_area": 0.136351,
+              "coarse": {
+                "building": 0.859,
+                "pole": 0.0736,
+                "vegetation": 0.038,
+                "ground": 0.0284,
+                "vehicle": 0.0009,
+                "fence": 0.0001
+              }
+            },
+            "above_100m": {
+              "points": 72639,
+              "share_of_area": 0.023668,
+              "coarse": {
+                "building": 0.6969,
+                "pole": 0.2355,
+                "vegetation": 0.0555,
+                "ground": 0.012
+              }
+            },
+            "above_training_ceiling": {
+              "points": 38526,
+              "share_of_area": 0.012553,
+              "coarse": {
+                "building": 0.6433,
+                "pole": 0.2522,
+                "vegetation": 0.0882,
+                "ground": 0.0163
+              }
+            },
+            "above_150m": {
+              "points": 331,
+              "share_of_area": 0.000108,
+              "coarse": {
+                "building": 0.4743,
+                "vegetation": 0.4018,
+                "pole": 0.1239
+              }
+            }
+          }
+        },
+        "embarcadero": {
+          "max_height_m": 143.69,
+          "bins": {
+            "above_60m": {
+              "points": 274887,
+              "share_of_area": 0.061654,
+              "coarse": {
+                "building": 0.852,
+                "pole": 0.0982,
+                "vegetation": 0.0276,
+                "ground": 0.0212,
+                "vehicle": 0.0006,
+                "fence": 0.0003
+              }
+            },
+            "above_100m": {
+              "points": 38016,
+              "share_of_area": 0.008527,
+              "coarse": {
+                "building": 0.7057,
+                "pole": 0.1492,
+                "vegetation": 0.0936,
+                "ground": 0.0515
+              }
+            },
+            "above_training_ceiling": {
+              "points": 17573,
+              "share_of_area": 0.003941,
+              "coarse": {
+                "building": 0.7059,
+                "pole": 0.1486,
+                "vegetation": 0.1068,
+                "ground": 0.0387
+              }
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "financial": {
+          "max_height_m": 263.86,
+          "bins": {
+            "above_60m": {
+              "points": 1715158,
+              "share_of_area": 0.224782,
+              "coarse": {
+                "building": 0.7319,
+                "pole": 0.2175,
+                "vegetation": 0.0411,
+                "ground": 0.0084,
+                "fence": 0.0011,
+                "vehicle": 0.0001
+              }
+            },
+            "above_100m": {
+              "points": 1069525,
+              "share_of_area": 0.140168,
+              "coarse": {
+                "building": 0.6449,
+                "pole": 0.2916,
+                "vegetation": 0.0509,
+                "ground": 0.0126,
+                "vehicle": 0.0,
+                "fence": 0.0
+              }
+            },
+            "above_training_ceiling": {
+              "points": 797859,
+              "share_of_area": 0.104565,
+              "coarse": {
+                "building": 0.5628,
+                "pole": 0.3557,
+                "vegetation": 0.0653,
+                "ground": 0.0161,
+                "vehicle": 0.0,
+                "fence": 0.0
+              }
+            },
+            "above_150m": {
+              "points": 296082,
+              "share_of_area": 0.038803,
+              "coarse": {
+                "pole": 0.7044,
+                "building": 0.1447,
+                "vegetation": 0.1252,
+                "ground": 0.0257,
+                "vehicle": 0.0
+              }
+            }
+          }
+        },
+        "ggpark": {
+          "max_height_m": 45.17,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "mission": {
+          "max_height_m": 29.0,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "soma": {
+          "max_height_m": 47.01,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "steep": {
+          "max_height_m": 52.94,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "sunset": {
+          "max_height_m": 22.33,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        }
+      }
+    },
+    "m0_seedC": {
+      "training_block_z_max_m": 121.77,
+      "areas": {
+        "baybridge": {
+          "max_height_m": 163.47,
+          "bins": {
+            "above_60m": {
+              "points": 418467,
+              "share_of_area": 0.136351,
+              "coarse": {
+                "building": 0.8801,
+                "pole": 0.0591,
+                "ground": 0.0325,
+                "vegetation": 0.0276,
+                "vehicle": 0.0007,
+                "fence": 0.0
+              }
+            },
+            "above_100m": {
+              "points": 72639,
+              "share_of_area": 0.023668,
+              "coarse": {
+                "building": 0.7708,
+                "pole": 0.1452,
+                "vegetation": 0.0715,
+                "ground": 0.0125
+              }
+            },
+            "above_training_ceiling": {
+              "points": 38526,
+              "share_of_area": 0.012553,
+              "coarse": {
+                "building": 0.7833,
+                "vegetation": 0.1055,
+                "pole": 0.099,
+                "ground": 0.0122
+              }
+            },
+            "above_150m": {
+              "points": 331,
+              "share_of_area": 0.000108,
+              "coarse": {
+                "building": 0.6103,
+                "vegetation": 0.3535,
+                "pole": 0.0363
+              }
+            }
+          }
+        },
+        "embarcadero": {
+          "max_height_m": 143.69,
+          "bins": {
+            "above_60m": {
+              "points": 274887,
+              "share_of_area": 0.061654,
+              "coarse": {
+                "building": 0.8311,
+                "pole": 0.1032,
+                "ground": 0.0291,
+                "vegetation": 0.0288,
+                "vehicle": 0.0074,
+                "fence": 0.0004
+              }
+            },
+            "above_100m": {
+              "points": 38016,
+              "share_of_area": 0.008527,
+              "coarse": {
+                "building": 0.8074,
+                "pole": 0.13,
+                "vegetation": 0.0545,
+                "ground": 0.0081
+              }
+            },
+            "above_training_ceiling": {
+              "points": 17573,
+              "share_of_area": 0.003941,
+              "coarse": {
+                "building": 0.7695,
+                "pole": 0.1579,
+                "vegetation": 0.0678,
+                "ground": 0.0048
+              }
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "financial": {
+          "max_height_m": 263.86,
+          "bins": {
+            "above_60m": {
+              "points": 1715158,
+              "share_of_area": 0.224782,
+              "coarse": {
+                "building": 0.728,
+                "pole": 0.2474,
+                "ground": 0.0143,
+                "vegetation": 0.0101,
+                "fence": 0.0001,
+                "vehicle": 0.0001
+              }
+            },
+            "above_100m": {
+              "points": 1069525,
+              "share_of_area": 0.140168,
+              "coarse": {
+                "building": 0.6329,
+                "pole": 0.3394,
+                "ground": 0.0212,
+                "vegetation": 0.0065,
+                "vehicle": 0.0,
+                "fence": 0.0
+              }
+            },
+            "above_training_ceiling": {
+              "points": 797859,
+              "share_of_area": 0.104565,
+              "coarse": {
+                "building": 0.539,
+                "pole": 0.428,
+                "ground": 0.026,
+                "vegetation": 0.0069,
+                "fence": 0.0
+              }
+            },
+            "above_150m": {
+              "points": 296082,
+              "share_of_area": 0.038803,
+              "coarse": {
+                "pole": 0.8282,
+                "building": 0.1389,
+                "ground": 0.0259,
+                "vegetation": 0.0071,
+                "fence": 0.0
+              }
+            }
+          }
+        },
+        "ggpark": {
+          "max_height_m": 45.17,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "mission": {
+          "max_height_m": 29.0,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "soma": {
+          "max_height_m": 47.01,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "steep": {
+          "max_height_m": 52.94,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        },
+        "sunset": {
+          "max_height_m": 22.33,
+          "bins": {
+            "above_60m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_100m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_training_ceiling": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            },
+            "above_150m": {
+              "points": 0,
+              "share_of_area": 0.0,
+              "coarse": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "picture": {
+    "frame": "docs/design/hero/hero_financial_order2wide_desktop_dark.png",
+    "pixels_judged": 25746,
+    "grey_pixels_left_out": 1704,
+    "top_fraction_of_the_cloud": 0.25,
+    "palette_hue_degrees": {
+      "ground": 69.00000489668184,
+      "vegetation": 159.9999892290517,
+      "building": 266.0000002543407,
+      "vehicle": 255.99999887985402,
+      "pole": 179.99998573666375,
+      "fence": 137.99999121050976,
+      "water": 231.99999384378708,
+      "bridge deck": 149.9999895554757
+    },
+    "share_nearest_each_hue": {
+      "ground": 0.0278,
+      "vegetation": 0.1136,
+      "building": 0.1407,
+      "vehicle": 0.0,
+      "pole": 0.7179,
+      "fence": 0.0,
+      "water": 0.0,
+      "bridge deck": 0.0
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "rule_written_before": "written 2026-09-23 before the first run: 8 m squares on a 2 m step inside every 40 m block; among the squares whose labelled water share lies between 0.3 and 0.7, the one with the most labelled water points in the crop; labels only, never the model's calls",
+  "variant": "m1_seedA",
+  "window_m": 8.0,
+  "px_per_m": 40,
+  "point_radius_px": 2.2,
+  "device": "cuda",
+  "areas": {
+    "zug": {
+      "tile": "ch2024_2680-1225_01",
+      "block_centre_m": [
+        140.0,
+        60.0
+      ],
+      "window_origin_m": [
+        128.0,
+        40.0
+      ],
+      "points": 1562,
+      "water_points": 1012,
+      "water_share": 0.6479,
+      "crop_distinct_points": 32768,
+      "crop_points_per_m2": 20.48,
+      "window_points_per_m2": 24.41,
+      "labelled_water_called_water": 0.999,
+      "labelled_water_called_ground": 0.0
+    },
+    "embarcadero": {
+      "tile": "embarcadero",
+      "block_centre_m": [
+        180.0,
+        300.0
+      ],
+      "window_origin_m": [
+        166.0,
+        292.0
+      ],
+      "points": 2617,
+      "water_points": 1528,
+      "water_share": 0.5839,
+      "crop_distinct_points": 32768,
+      "crop_points_per_m2": 20.48,
+      "window_points_per_m2": 40.89,
+      "labelled_water_called_water": 0.0,
+      "labelled_water_called_ground": 0.8226
+    }
+  }
+}

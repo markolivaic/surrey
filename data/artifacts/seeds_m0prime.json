@@ -1,0 +1,1345 @@
+{
+  "recipe": "m0prime",
+  "seeds_scored": [
+    "A",
+    "B",
+    "C"
+  ],
+  "published_seed": "A",
+  "published_variant": "m0prime_seedA",
+  "rules": "backend/surrey/seeds.py, written before M0 seed C",
+  "san_francisco": {
+    "baybridge": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.0342,
+          "B": 0.0461,
+          "C": 0.0851
+        },
+        "n": 3,
+        "median": 0.0461,
+        "min": 0.0342,
+        "max": 0.0851
+      },
+      "water_called_ground": {
+        "per_seed": {
+          "A": 0.9492,
+          "B": 0.9571,
+          "C": 0.9601
+        },
+        "n": 3,
+        "median": 0.9571,
+        "min": 0.9492,
+        "max": 0.9601
+      },
+      "bridge_deck_called_building": {
+        "per_seed": {
+          "A": 0.9995,
+          "B": 0.9993,
+          "C": 0.9992
+        },
+        "n": 3,
+        "median": 0.9993,
+        "min": 0.9992,
+        "max": 0.9995
+      }
+    },
+    "embarcadero": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": -0.0045,
+          "B": 0.0087,
+          "C": -0.0103
+        },
+        "n": 3,
+        "median": -0.0045,
+        "min": -0.0103,
+        "max": 0.0087
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.3051,
+          "B": 0.3177,
+          "C": 0.3042
+        },
+        "n": 3,
+        "median": 0.3051,
+        "min": 0.3042,
+        "max": 0.3177
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.8659,
+          "B": 0.8867,
+          "C": 0.8248
+        },
+        "n": 3,
+        "median": 0.8659,
+        "min": 0.8248,
+        "max": 0.8867
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.9906,
+          "B": 0.9892,
+          "C": 0.9922
+        },
+        "n": 3,
+        "median": 0.9906,
+        "min": 0.9892,
+        "max": 0.9922
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.071,
+          "B": 0.0756,
+          "C": 0.1065
+        },
+        "n": 3,
+        "median": 0.0756,
+        "min": 0.071,
+        "max": 0.1065
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.356,
+          "B": 0.3439,
+          "C": 0.3227
+        },
+        "n": 3,
+        "median": 0.3439,
+        "min": 0.3227,
+        "max": 0.356
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.6035,
+          "B": 0.6335,
+          "C": 0.5667
+        },
+        "n": 3,
+        "median": 0.6035,
+        "min": 0.5667,
+        "max": 0.6335
+      },
+      "hard_water_auroc": {
+        "per_seed": {
+          "A": 0.5175,
+          "B": 0.5362,
+          "C": 0.5167
+        },
+        "n": 3,
+        "median": 0.5175,
+        "min": 0.5167,
+        "max": 0.5362
+      },
+      "water_called_ground": {
+        "per_seed": {
+          "A": 0.9388,
+          "B": 0.9331,
+          "C": 0.9518
+        },
+        "n": 3,
+        "median": 0.9388,
+        "min": 0.9331,
+        "max": 0.9518
+      },
+      "bridge_deck_called_building": {
+        "per_seed": {
+          "A": 0.9983,
+          "B": 0.9981,
+          "C": 0.9981
+        },
+        "n": 3,
+        "median": 0.9981,
+        "min": 0.9981,
+        "max": 0.9983
+      }
+    },
+    "financial": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.2343,
+          "B": 0.2351,
+          "C": 0.2682
+        },
+        "n": 3,
+        "median": 0.2351,
+        "min": 0.2343,
+        "max": 0.2682
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.5541,
+          "B": 0.5763,
+          "C": 0.5719
+        },
+        "n": 3,
+        "median": 0.5719,
+        "min": 0.5541,
+        "max": 0.5763
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.8466,
+          "B": 0.8573,
+          "C": 0.8262
+        },
+        "n": 3,
+        "median": 0.8466,
+        "min": 0.8262,
+        "max": 0.8573
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.9897,
+          "B": 0.9741,
+          "C": 0.9926
+        },
+        "n": 3,
+        "median": 0.9897,
+        "min": 0.9741,
+        "max": 0.9926
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.1537,
+          "B": 0.1689,
+          "C": 0.1893
+        },
+        "n": 3,
+        "median": 0.1689,
+        "min": 0.1537,
+        "max": 0.1893
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.0904,
+          "B": 0.0791,
+          "C": 0.0788
+        },
+        "n": 3,
+        "median": 0.0791,
+        "min": 0.0788,
+        "max": 0.0904
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.6692,
+          "B": 0.7497,
+          "C": 0.6829
+        },
+        "n": 3,
+        "median": 0.6829,
+        "min": 0.6692,
+        "max": 0.7497
+      }
+    },
+    "ggpark": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.7184,
+          "B": 0.7228,
+          "C": 0.7351
+        },
+        "n": 3,
+        "median": 0.7228,
+        "min": 0.7184,
+        "max": 0.7351
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.9817,
+          "B": 0.9713,
+          "C": 0.9637
+        },
+        "n": 3,
+        "median": 0.9713,
+        "min": 0.9637,
+        "max": 0.9817
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.9107,
+          "B": 0.8958,
+          "C": 0.9404
+        },
+        "n": 3,
+        "median": 0.9107,
+        "min": 0.8958,
+        "max": 0.9404
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.7684,
+          "B": 0.6975,
+          "C": 0.8033
+        },
+        "n": 3,
+        "median": 0.7684,
+        "min": 0.6975,
+        "max": 0.8033,
+        "reference_not_valid": "the NAIP not-vegetation core in Golden Gate Park has a multiple-return share typical of canopy on both masks (naip_mask_choice.json), so NDVI probably misses canopy there, by shadow or relief displacement, and vegetation called inside it is likely right"
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.0137,
+          "B": 0.0146,
+          "C": 0.0111
+        },
+        "n": 3,
+        "median": 0.0137,
+        "min": 0.0111,
+        "max": 0.0146
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.8923,
+          "B": 0.9485,
+          "C": 0.9321
+        },
+        "n": 3,
+        "median": 0.9321,
+        "min": 0.8923,
+        "max": 0.9485
+      }
+    },
+    "mission": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.6064,
+          "B": 0.5775,
+          "C": 0.6208
+        },
+        "n": 3,
+        "median": 0.6064,
+        "min": 0.5775,
+        "max": 0.6208
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.5947,
+          "B": 0.6035,
+          "C": 0.6113
+        },
+        "n": 3,
+        "median": 0.6035,
+        "min": 0.5947,
+        "max": 0.6113
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.9621,
+          "B": 0.9667,
+          "C": 0.9536
+        },
+        "n": 3,
+        "median": 0.9621,
+        "min": 0.9536,
+        "max": 0.9667
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.9642,
+          "B": 0.9446,
+          "C": 0.9701
+        },
+        "n": 3,
+        "median": 0.9642,
+        "min": 0.9446,
+        "max": 0.9701
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.0411,
+          "B": 0.0514,
+          "C": 0.0555
+        },
+        "n": 3,
+        "median": 0.0514,
+        "min": 0.0411,
+        "max": 0.0555
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.2309,
+          "B": 0.2261,
+          "C": 0.2109
+        },
+        "n": 3,
+        "median": 0.2261,
+        "min": 0.2109,
+        "max": 0.2309
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.7602,
+          "B": 0.7736,
+          "C": 0.7331
+        },
+        "n": 3,
+        "median": 0.7602,
+        "min": 0.7331,
+        "max": 0.7736
+      }
+    },
+    "soma": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.5472,
+          "B": 0.5349,
+          "C": 0.5641
+        },
+        "n": 3,
+        "median": 0.5472,
+        "min": 0.5349,
+        "max": 0.5641
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.5771,
+          "B": 0.581,
+          "C": 0.5927
+        },
+        "n": 3,
+        "median": 0.581,
+        "min": 0.5771,
+        "max": 0.5927
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.9717,
+          "B": 0.9772,
+          "C": 0.9621
+        },
+        "n": 3,
+        "median": 0.9717,
+        "min": 0.9621,
+        "max": 0.9772
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.9468,
+          "B": 0.9166,
+          "C": 0.9549
+        },
+        "n": 3,
+        "median": 0.9468,
+        "min": 0.9166,
+        "max": 0.9549
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.0337,
+          "B": 0.045,
+          "C": 0.0448
+        },
+        "n": 3,
+        "median": 0.0448,
+        "min": 0.0337,
+        "max": 0.045
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.2228,
+          "B": 0.2216,
+          "C": 0.2029
+        },
+        "n": 3,
+        "median": 0.2216,
+        "min": 0.2029,
+        "max": 0.2228
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.7938,
+          "B": 0.8155,
+          "C": 0.785
+        },
+        "n": 3,
+        "median": 0.7938,
+        "min": 0.785,
+        "max": 0.8155
+      }
+    },
+    "steep": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.5855,
+          "B": 0.5668,
+          "C": 0.6159
+        },
+        "n": 3,
+        "median": 0.5855,
+        "min": 0.5668,
+        "max": 0.6159
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.5918,
+          "B": 0.6063,
+          "C": 0.6275
+        },
+        "n": 3,
+        "median": 0.6063,
+        "min": 0.5918,
+        "max": 0.6275
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.9435,
+          "B": 0.9202,
+          "C": 0.9027
+        },
+        "n": 3,
+        "median": 0.9202,
+        "min": 0.9027,
+        "max": 0.9435
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.8931,
+          "B": 0.8754,
+          "C": 0.9144
+        },
+        "n": 3,
+        "median": 0.8931,
+        "min": 0.8754,
+        "max": 0.9144
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.0687,
+          "B": 0.0768,
+          "C": 0.0833
+        },
+        "n": 3,
+        "median": 0.0768,
+        "min": 0.0687,
+        "max": 0.0833
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.104,
+          "B": 0.0961,
+          "C": 0.0805
+        },
+        "n": 3,
+        "median": 0.0961,
+        "min": 0.0805,
+        "max": 0.104
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.8276,
+          "B": 0.8547,
+          "C": 0.8203
+        },
+        "n": 3,
+        "median": 0.8276,
+        "min": 0.8203,
+        "max": 0.8547
+      }
+    },
+    "sunset": {
+      "building_lift_global_shift": {
+        "per_seed": {
+          "A": 0.665,
+          "B": 0.6512,
+          "C": 0.6814
+        },
+        "n": 3,
+        "median": 0.665,
+        "min": 0.6512,
+        "max": 0.6814
+      },
+      "ground_precision_floor": {
+        "per_seed": {
+          "A": 0.6121,
+          "B": 0.6136,
+          "C": 0.6305
+        },
+        "n": 3,
+        "median": 0.6136,
+        "min": 0.6121,
+        "max": 0.6305
+      },
+      "ground_recall": {
+        "per_seed": {
+          "A": 0.9772,
+          "B": 0.9632,
+          "C": 0.9632
+        },
+        "n": 3,
+        "median": 0.9632,
+        "min": 0.9632,
+        "max": 0.9772
+      },
+      "vegetation_headline": {
+        "per_seed": {
+          "A": 0.9217,
+          "B": 0.8979,
+          "C": 0.9212
+        },
+        "n": 3,
+        "median": 0.9212,
+        "min": 0.8979,
+        "max": 0.9217
+      },
+      "not_vegetation_core_called_vegetation": {
+        "per_seed": {
+          "A": 0.0587,
+          "B": 0.0611,
+          "C": 0.0762
+        },
+        "n": 3,
+        "median": 0.0611,
+        "min": 0.0587,
+        "max": 0.0762
+      },
+      "raised_unassigned_called_ground_rate": {
+        "per_seed": {
+          "A": 0.1784,
+          "B": 0.1923,
+          "C": 0.1832
+        },
+        "n": 3,
+        "median": 0.1832,
+        "min": 0.1784,
+        "max": 0.1923
+      },
+      "easy_error_auroc": {
+        "per_seed": {
+          "A": 0.8538,
+          "B": 0.8398,
+          "C": 0.8189
+        },
+        "n": 3,
+        "median": 0.8398,
+        "min": 0.8189,
+        "max": 0.8538
+      }
+    }
+  },
+  "surrey_held_out": {
+    "accuracy_from_prediction_cache": {
+      "per_seed": {
+        "A": 0.8769,
+        "B": 0.8814,
+        "C": 0.8819
+      },
+      "n": 3,
+      "median": 0.8814,
+      "min": 0.8769,
+      "max": 0.8819
+    },
+    "accuracy_training_artefact": {
+      "per_seed": {
+        "A": 0.8769,
+        "B": 0.8819,
+        "C": 0.8819
+      },
+      "n": 3,
+      "median": 0.8819,
+      "min": 0.8769,
+      "max": 0.8819
+    },
+    "iou_per_class": {
+      "ground": {
+        "per_seed": {
+          "A": 0.9188,
+          "B": 0.9142,
+          "C": 0.9113
+        },
+        "n": 3,
+        "median": 0.9142,
+        "min": 0.9113,
+        "max": 0.9188
+      },
+      "vegetation": {
+        "per_seed": {
+          "A": 0.427,
+          "B": 0.427,
+          "C": 0.4289
+        },
+        "n": 3,
+        "median": 0.427,
+        "min": 0.427,
+        "max": 0.4289
+      },
+      "car": {
+        "per_seed": {
+          "A": 0.554,
+          "B": 0.5237,
+          "C": 0.4922
+        },
+        "n": 3,
+        "median": 0.5237,
+        "min": 0.4922,
+        "max": 0.554
+      },
+      "powerline": {
+        "per_seed": {
+          "A": 0.8142,
+          "B": 0.8511,
+          "C": 0.773
+        },
+        "n": 3,
+        "median": 0.8142,
+        "min": 0.773,
+        "max": 0.8511
+      },
+      "fence": {
+        "per_seed": {
+          "A": 0.3723,
+          "B": 0.3838,
+          "C": 0.3774
+        },
+        "n": 3,
+        "median": 0.3774,
+        "min": 0.3723,
+        "max": 0.3838
+      },
+      "tree": {
+        "per_seed": {
+          "A": 0.8756,
+          "B": 0.8767,
+          "C": 0.883
+        },
+        "n": 3,
+        "median": 0.8767,
+        "min": 0.8756,
+        "max": 0.883
+      },
+      "pickup": {
+        "per_seed": {
+          "A": 0.1502,
+          "B": 0.1398,
+          "C": 0.1446
+        },
+        "n": 3,
+        "median": 0.1446,
+        "min": 0.1398,
+        "max": 0.1502
+      },
+      "van-truck": {
+        "per_seed": {
+          "A": 0.1743,
+          "B": 0.2119,
+          "C": 0.1749
+        },
+        "n": 3,
+        "median": 0.1749,
+        "min": 0.1743,
+        "max": 0.2119
+      },
+      "heavy-duty": {
+        "per_seed": {
+          "A": 0.0003,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0003
+      },
+      "utility-pole": {
+        "per_seed": {
+          "A": 0.2186,
+          "B": 0.1608,
+          "C": 0.1758
+        },
+        "n": 3,
+        "median": 0.1758,
+        "min": 0.1608,
+        "max": 0.2186
+      },
+      "light-pole": {
+        "per_seed": {
+          "A": 0.072,
+          "B": 0.1108,
+          "C": 0.0691
+        },
+        "n": 3,
+        "median": 0.072,
+        "min": 0.0691,
+        "max": 0.1108
+      },
+      "traffic-pole": {
+        "per_seed": {
+          "A": 0.0827,
+          "B": 0.0826,
+          "C": 0.0961
+        },
+        "n": 3,
+        "median": 0.0827,
+        "min": 0.0826,
+        "max": 0.0961
+      },
+      "habitat": {
+        "per_seed": {
+          "A": 0.6676,
+          "B": 0.7242,
+          "C": 0.7265
+        },
+        "n": 3,
+        "median": 0.7242,
+        "min": 0.6676,
+        "max": 0.7265
+      },
+      "complex": {
+        "per_seed": {
+          "A": 0.3737,
+          "B": 0.3933,
+          "C": 0.4037
+        },
+        "n": 3,
+        "median": 0.3933,
+        "min": 0.3737,
+        "max": 0.4037
+      },
+      "annex": {
+        "per_seed": {
+          "A": 0.273,
+          "B": 0.2344,
+          "C": 0.2631
+        },
+        "n": 3,
+        "median": 0.2631,
+        "min": 0.2344,
+        "max": 0.273
+      }
+    }
+  },
+  "claims": {
+    "extrapolation": {
+      "per_seed": {
+        "A": "predicts degradation",
+        "B": "predicts degradation",
+        "C": "predicts degradation"
+      },
+      "expected": "predicts degradation",
+      "k": 3,
+      "n": 3,
+      "stands": true,
+      "phrase": "on all 3 seeds",
+      "financial_lift": {
+        "per_seed": {
+          "A": 0.2343,
+          "B": 0.2351,
+          "C": 0.2682
+        },
+        "n": 3,
+        "median": 0.2351,
+        "min": 0.2343,
+        "max": 0.2682
+      },
+      "other_built_median": {
+        "per_seed": {
+          "A": 0.5768,
+          "B": 0.5562,
+          "C": 0.5925
+        },
+        "n": 3,
+        "median": 0.5768,
+        "min": 0.5562,
+        "max": 0.5925
+      },
+      "status": "primary formulation, written before E0"
+    },
+    "relief": {
+      "per_seed": {
+        "A": "measured nothing",
+        "B": "measured nothing",
+        "C": "predicts degradation"
+      },
+      "expected": "predicts degradation",
+      "k": 1,
+      "n": 3,
+      "stands": false,
+      "phrase": "on 1 of 3 seeds",
+      "named_minus_other": {
+        "per_seed": {
+          "A": 0.0318,
+          "B": 0.0454,
+          "C": 0.0563
+        },
+        "n": 3,
+        "median": 0.0454,
+        "min": 0.0318,
+        "max": 0.0563
+      },
+      "metric": "delivery ground called building, high-relief blocks against the rest",
+      "extension": "the rule was written for one model; read per seed with the same 0.05 margin",
+      "at_the_edge": {}
+    },
+    "easy_errors": {
+      "embarcadero": {
+        "transfer": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "transfer",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "home weakness",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.356,
+            "B": 0.3439,
+            "C": 0.3227
+          },
+          "n": 3,
+          "median": 0.3439,
+          "min": 0.3227,
+          "max": 0.356
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      },
+      "financial": {
+        "transfer": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "transfer",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "home weakness",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.0904,
+            "B": 0.0791,
+            "C": 0.0788
+          },
+          "n": 3,
+          "median": 0.0791,
+          "min": 0.0788,
+          "max": 0.0904
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      },
+      "ggpark": {
+        "transfer": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "transfer",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "home weakness",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.0137,
+            "B": 0.0146,
+            "C": 0.0111
+          },
+          "n": 3,
+          "median": 0.0137,
+          "min": 0.0111,
+          "max": 0.0146
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      },
+      "mission": {
+        "transfer": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "transfer",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "home weakness",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.2309,
+            "B": 0.2261,
+            "C": 0.2109
+          },
+          "n": 3,
+          "median": 0.2261,
+          "min": 0.2109,
+          "max": 0.2309
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      },
+      "soma": {
+        "transfer": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "transfer",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "home weakness",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.2228,
+            "B": 0.2216,
+            "C": 0.2029
+          },
+          "n": 3,
+          "median": 0.2216,
+          "min": 0.2029,
+          "max": 0.2228
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      },
+      "steep": {
+        "transfer": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "transfer",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "home weakness",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.104,
+            "B": 0.0961,
+            "C": 0.0805
+          },
+          "n": 3,
+          "median": 0.0961,
+          "min": 0.0805,
+          "max": 0.104
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      },
+      "sunset": {
+        "transfer": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "transfer",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
+        "home_weakness": {
+          "per_seed": {
+            "A": "transfer",
+            "B": "transfer",
+            "C": "transfer"
+          },
+          "expected": "home weakness",
+          "k": 0,
+          "n": 3,
+          "stands": false,
+          "phrase": "on 0 of 3 seeds"
+        },
+        "rate": {
+          "per_seed": {
+            "A": 0.1784,
+            "B": 0.1923,
+            "C": 0.1832
+          },
+          "n": 3,
+          "median": 0.1832,
+          "min": 0.1784,
+          "max": 0.1923
+        },
+        "home_range_per_seed": {
+          "A": [
+            0.0008,
+            0.14
+          ],
+          "B": [
+            0.0011,
+            0.1643
+          ],
+          "C": [
+            0.0013,
+            0.1485
+          ]
+        }
+      }
+    },
+    "hard_errors_home_vs_water": {
+      "per_seed": {
+        "A": "water errors harder to see than errors at home",
+        "B": "water errors harder to see than errors at home",
+        "C": "water errors harder to see than errors at home"
+      },
+      "expected": "water errors harder to see than errors at home",
+      "k": 3,
+      "n": 3,
+      "stands": true,
+      "phrase": "on all 3 seeds",
+      "per_seed_detail": {
+        "A": {
+          "home": {
+            "right": 49817895,
+            "wrong": 851757,
+            "auroc": 0.8617
+          },
+          "embarcadero_water": {
+            "right": 398233,
+            "wrong": 44107,
+            "auroc": 0.5175,
+            "median_conf_right": 0.8862,
+            "median_conf_wrong": 0.8848
+          },
+          "water_minus_home": -0.3442,
+          "reading": "water errors harder to see than errors at home"
+        },
+        "B": {
+          "home": {
+            "right": 49573559,
+            "wrong": 750391,
+            "auroc": 0.8755
+          },
+          "embarcadero_water": {
+            "right": 407770,
+            "wrong": 41998,
+            "auroc": 0.5362,
+            "median_conf_right": 0.8716,
+            "median_conf_wrong": 0.8618
+          },
+          "water_minus_home": -0.3393,
+          "reading": "water errors harder to see than errors at home"
+        },
+        "C": {
+          "home": {
+            "right": 49263586,
+            "wrong": 706109,
+            "auroc": 0.8566
+          },
+          "embarcadero_water": {
+            "right": 379314,
+            "wrong": 45822,
+            "auroc": 0.5167,
+            "median_conf_right": 0.8574,
+            "median_conf_wrong": 0.8574
+          },
+          "water_minus_home": -0.3399,
+          "reading": "water errors harder to see than errors at home"
+        }
+      },
+      "home_auroc": {
+        "per_seed": {
+          "A": 0.8617,
+          "B": 0.8755,
+          "C": 0.8566
+        },
+        "n": 3,
+        "median": 0.8617,
+        "min": 0.8566,
+        "max": 0.8755
+      },
+      "water_auroc": {
+        "per_seed": {
+          "A": 0.5175,
+          "B": 0.5362,
+          "C": 0.5167
+        },
+        "n": 3,
+        "median": 0.5175,
+        "min": 0.5167,
+        "max": 0.5362
+      },
+      "construction": "among ground calls, right ground against errors within 0.5 m of the ground surface; Surrey: DALES non-ground labels; Embarcadero: delivery water",
+      "margin": 0.05
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# A shell script with carriage returns at the ends of its lines dies on its first line on Linux, with
+# a message about an invalid option name that says nothing about line endings. That cost an hour on a
+# rented machine, and the same class of fault broke CI in another project in this portfolio.
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.png binary
+*.jpg binary
+*.webm binary
+*.laz binary
+*.bin binary

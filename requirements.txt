@@ -1,0 +1,33 @@
+# CPU only, deliberately. GitHub Actions runners have no GPU, and a +cu pin would
+# break both CI and the clean-clone test. scripts/pipeline/train.py picks its device
+# at runtime and records which one produced each artefact, so a number from this
+# wheel and a number from a CUDA build are never confused.
+#
+# Every model in data/artifacts was trained and scored with torch 2.11.0+cu128. To
+# train or predict on an NVIDIA card, install that build over the top:
+#   pip install --index-url https://download.pytorch.org/whl/cu128 torch==2.11.0+cu128
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.9.1+cpu ; sys_platform != "darwin"
+torch==2.9.1 ; sys_platform == "darwin"
+
+numpy==2.2.6
+scipy==1.16.3
+laspy==2.7.0
+lazrs==0.8.2
+shapely==2.1.2
+pyproj==3.7.2
+huggingface-hub==0.35.3
+# NAIP and the footprint rasters; read by the registration and reference code and their unit tests
+rasterio==1.4.3
+# used directly by the gauge, datum and water checks, not only through huggingface-hub
+requests==2.32.5
+tqdm==4.70.0
+# reading committed frames in the colour vision integrity test
+pillow==12.0.0
+
+pytest==9.0.3
+ruff==0.16.3
+mypy==2.3.1
+# the page smoke test drives the built page in Chromium: python -m playwright install chromium
+playwright==1.44.0

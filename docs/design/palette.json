@@ -1,0 +1,512 @@
+{
+  "search": {
+    "seed": 20260914,
+    "steps": 4000,
+    "restarts": 16,
+    "hue_ranges": {
+      "ground": [
+        50,
+        95
+      ],
+      "vegetation": [
+        125,
+        180
+      ],
+      "building": [
+        260,
+        345
+      ],
+      "water": [
+        200,
+        250
+      ],
+      "vehicle": [
+        0,
+        360
+      ],
+      "pole": [
+        180,
+        230
+      ],
+      "fence": [
+        0,
+        360
+      ],
+      "bridge deck": [
+        0,
+        360
+      ]
+    },
+    "chroma_cap": 0.16,
+    "chroma_min": 0.1,
+    "chroma_share_of_gamut": 0.9,
+    "lightness_ranges": {
+      "light": [
+        0.35,
+        0.62
+      ],
+      "dark": [
+        0.55,
+        0.9
+      ]
+    },
+    "r5_proxy_retention": 0.65,
+    "pole_adjusted": "pole moved alone for the story pairs pole/building and pole/vegetation, by --only pole"
+  },
+  "rules": "backend/surrey/palette.py",
+  "confidence_map": "data/artifacts/confidence_mapping.json",
+  "themes": {
+    "light": {
+      "ground": "#e6e9e6",
+      "tokens": {
+        "ground": {
+          "L": 0.56,
+          "C": 0.1098,
+          "h": 69.0
+        },
+        "vegetation": {
+          "L": 0.52,
+          "C": 0.1044,
+          "h": 160.0
+        },
+        "building": {
+          "L": 0.35,
+          "C": 0.16,
+          "h": 266.0
+        },
+        "vehicle": {
+          "L": 0.43,
+          "C": 0.1314,
+          "h": 256.0
+        },
+        "pole": {
+          "L": 0.58,
+          "C": 0.1,
+          "h": 188.0
+        },
+        "fence": {
+          "L": 0.41,
+          "C": 0.1134,
+          "h": 138.0
+        },
+        "water": {
+          "L": 0.55,
+          "C": 0.1008,
+          "h": 232.0
+        },
+        "bridge deck": {
+          "L": 0.44,
+          "C": 0.108,
+          "h": 150.0
+        }
+      }
+    },
+    "dark": {
+      "ground": "#131815",
+      "tokens": {
+        "ground": {
+          "L": 0.74,
+          "C": 0.1458,
+          "h": 69.0
+        },
+        "vegetation": {
+          "L": 0.76,
+          "C": 0.153,
+          "h": 160.0
+        },
+        "building": {
+          "L": 0.55,
+          "C": 0.16,
+          "h": 266.0
+        },
+        "vehicle": {
+          "L": 0.65,
+          "C": 0.16,
+          "h": 256.0
+        },
+        "pole": {
+          "L": 0.9,
+          "C": 0.1404,
+          "h": 188.0
+        },
+        "fence": {
+          "L": 0.81,
+          "C": 0.16,
+          "h": 138.0
+        },
+        "water": {
+          "L": 0.74,
+          "C": 0.135,
+          "h": 232.0
+        },
+        "bridge deck": {
+          "L": 0.83,
+          "C": 0.16,
+          "h": 150.0
+        }
+      }
+    }
+  },
+  "floor": 0.3,
+  "floor_note": "every class stays nearest its own colour at the lowest confidence",
+  "checks": {
+    "light": {
+      "contrast_min": {
+        "normal": 3.33,
+        "deuteranopia": 3.52,
+        "protanopia": 3.04
+      },
+      "pairs": {
+        "ground / vegetation": {
+          "normal": 61.6,
+          "deuteranopia": 36.7,
+          "protanopia": 28.7,
+          "bar": 20.0
+        },
+        "ground / building": {
+          "normal": 106.2,
+          "deuteranopia": 107.3,
+          "protanopia": 101.0,
+          "bar": 20.0
+        },
+        "ground / vehicle": {
+          "normal": 93.0,
+          "deuteranopia": 96.9,
+          "protanopia": 90.1,
+          "bar": 10.0
+        },
+        "ground / pole": {
+          "normal": 71.7,
+          "deuteranopia": 55.6,
+          "protanopia": 49.0,
+          "bar": 10.0
+        },
+        "ground / fence": {
+          "normal": 50.6,
+          "deuteranopia": 24.7,
+          "protanopia": 13.2,
+          "bar": 10.0
+        },
+        "ground / water": {
+          "normal": 80.5,
+          "deuteranopia": 78.8,
+          "protanopia": 72.8,
+          "bar": 20.0
+        },
+        "ground / bridge deck": {
+          "normal": 57.7,
+          "deuteranopia": 31.8,
+          "protanopia": 21.4,
+          "bar": 10.0
+        },
+        "vegetation / building": {
+          "normal": 97.5,
+          "deuteranopia": 71.8,
+          "protanopia": 74.1,
+          "bar": 20.0
+        },
+        "vegetation / vehicle": {
+          "normal": 75.2,
+          "deuteranopia": 60.4,
+          "protanopia": 62.3,
+          "bar": 10.0
+        },
+        "vegetation / pole": {
+          "normal": 20.4,
+          "deuteranopia": 20.4,
+          "protanopia": 20.8,
+          "bar": 20.0
+        },
+        "vegetation / fence": {
+          "normal": 24.3,
+          "deuteranopia": 23.1,
+          "protanopia": 25.9,
+          "bar": 10.0
+        },
+        "vegetation / water": {
+          "normal": 48.7,
+          "deuteranopia": 42.6,
+          "protanopia": 44.2,
+          "bar": 10.0
+        },
+        "vegetation / bridge deck": {
+          "normal": 12.4,
+          "deuteranopia": 12.2,
+          "protanopia": 12.9,
+          "bar": 10.0
+        },
+        "building / vehicle": {
+          "normal": 24.3,
+          "deuteranopia": 15.9,
+          "protanopia": 15.1,
+          "bar": 10.0
+        },
+        "building / pole": {
+          "normal": 85.0,
+          "deuteranopia": 56.8,
+          "protanopia": 59.2,
+          "bar": 20.0
+        },
+        "building / fence": {
+          "normal": 107.3,
+          "deuteranopia": 88.1,
+          "protanopia": 93.0,
+          "bar": 10.0
+        },
+        "building / water": {
+          "normal": 55.1,
+          "deuteranopia": 36.2,
+          "protanopia": 36.8,
+          "bar": 20.0
+        },
+        "building / bridge deck": {
+          "normal": 100.9,
+          "deuteranopia": 77.5,
+          "protanopia": 80.3,
+          "bar": 20.0
+        },
+        "vehicle / pole": {
+          "normal": 61.3,
+          "deuteranopia": 44.1,
+          "protanopia": 46.0,
+          "bar": 10.0
+        },
+        "vehicle / fence": {
+          "normal": 87.9,
+          "deuteranopia": 78.5,
+          "protanopia": 83.0,
+          "bar": 10.0
+        },
+        "vehicle / water": {
+          "normal": 30.9,
+          "deuteranopia": 22.2,
+          "protanopia": 22.7,
+          "bar": 10.0
+        },
+        "vehicle / bridge deck": {
+          "normal": 80.0,
+          "deuteranopia": 67.3,
+          "protanopia": 69.7,
+          "bar": 10.0
+        },
+        "pole / fence": {
+          "normal": 43.7,
+          "deuteranopia": 43.2,
+          "protanopia": 46.5,
+          "bar": 10.0
+        },
+        "pole / water": {
+          "normal": 31.7,
+          "deuteranopia": 23.6,
+          "protanopia": 25.1,
+          "bar": 10.0
+        },
+        "pole / bridge deck": {
+          "normal": 31.6,
+          "deuteranopia": 31.6,
+          "protanopia": 32.8,
+          "bar": 10.0
+        },
+        "fence / water": {
+          "normal": 66.6,
+          "deuteranopia": 63.8,
+          "protanopia": 68.1,
+          "bar": 10.0
+        },
+        "fence / bridge deck": {
+          "normal": 13.0,
+          "deuteranopia": 11.9,
+          "protanopia": 14.0,
+          "bar": 10.0
+        },
+        "water / bridge deck": {
+          "normal": 56.5,
+          "deuteranopia": 51.9,
+          "protanopia": 54.1,
+          "bar": 10.0
+        }
+      },
+      "failures": [],
+      "building_vegetation_lightness_gap": 0.17
+    },
+    "dark": {
+      "contrast_min": {
+        "normal": 3.6,
+        "deuteranopia": 3.37,
+        "protanopia": 3.8
+      },
+      "pairs": {
+        "ground / vegetation": {
+          "normal": 85.2,
+          "deuteranopia": 46.6,
+          "protanopia": 37.6,
+          "bar": 20.0
+        },
+        "ground / building": {
+          "normal": 120.7,
+          "deuteranopia": 124.9,
+          "protanopia": 118.4,
+          "bar": 20.0
+        },
+        "ground / vehicle": {
+          "normal": 118.5,
+          "deuteranopia": 122.3,
+          "protanopia": 115.1,
+          "bar": 10.0
+        },
+        "ground / pole": {
+          "normal": 99.5,
+          "deuteranopia": 76.3,
+          "protanopia": 70.2,
+          "bar": 10.0
+        },
+        "ground / fence": {
+          "normal": 67.8,
+          "deuteranopia": 23.4,
+          "protanopia": 19.9,
+          "bar": 10.0
+        },
+        "ground / water": {
+          "normal": 107.4,
+          "deuteranopia": 105.0,
+          "protanopia": 97.3,
+          "bar": 20.0
+        },
+        "ground / bridge deck": {
+          "normal": 79.5,
+          "deuteranopia": 36.2,
+          "protanopia": 31.0,
+          "bar": 10.0
+        },
+        "vegetation / building": {
+          "normal": 108.5,
+          "deuteranopia": 80.4,
+          "protanopia": 86.5,
+          "bar": 20.0
+        },
+        "vegetation / vehicle": {
+          "normal": 97.8,
+          "deuteranopia": 76.5,
+          "protanopia": 81.0,
+          "bar": 10.0
+        },
+        "vegetation / pole": {
+          "normal": 32.6,
+          "deuteranopia": 32.0,
+          "protanopia": 33.0,
+          "bar": 20.0
+        },
+        "vegetation / fence": {
+          "normal": 26.2,
+          "deuteranopia": 25.1,
+          "protanopia": 24.6,
+          "bar": 10.0
+        },
+        "vegetation / water": {
+          "normal": 69.0,
+          "deuteranopia": 58.6,
+          "protanopia": 61.5,
+          "bar": 10.0
+        },
+        "vegetation / bridge deck": {
+          "normal": 14.1,
+          "deuteranopia": 14.3,
+          "protanopia": 14.0,
+          "bar": 10.0
+        },
+        "building / vehicle": {
+          "normal": 16.7,
+          "deuteranopia": 11.8,
+          "protanopia": 13.0,
+          "bar": 10.0
+        },
+        "building / pole": {
+          "normal": 92.7,
+          "deuteranopia": 64.0,
+          "protanopia": 69.7,
+          "bar": 20.0
+        },
+        "building / fence": {
+          "normal": 122.6,
+          "deuteranopia": 105.4,
+          "protanopia": 110.7,
+          "bar": 10.0
+        },
+        "building / water": {
+          "normal": 46.3,
+          "deuteranopia": 28.8,
+          "protanopia": 32.1,
+          "bar": 20.0
+        },
+        "building / bridge deck": {
+          "normal": 118.0,
+          "deuteranopia": 94.2,
+          "protanopia": 100.1,
+          "bar": 20.0
+        },
+        "vehicle / pole": {
+          "normal": 78.7,
+          "deuteranopia": 56.2,
+          "protanopia": 60.3,
+          "bar": 10.0
+        },
+        "vehicle / fence": {
+          "normal": 113.3,
+          "deuteranopia": 101.5,
+          "protanopia": 105.5,
+          "bar": 10.0
+        },
+        "vehicle / water": {
+          "normal": 31.6,
+          "deuteranopia": 20.0,
+          "protanopia": 21.8,
+          "bar": 10.0
+        },
+        "vehicle / bridge deck": {
+          "normal": 107.3,
+          "deuteranopia": 89.7,
+          "protanopia": 94.1,
+          "bar": 10.0
+        },
+        "pole / fence": {
+          "normal": 52.6,
+          "deuteranopia": 53.1,
+          "protanopia": 54.1,
+          "bar": 10.0
+        },
+        "pole / water": {
+          "normal": 47.5,
+          "deuteranopia": 36.3,
+          "protanopia": 38.6,
+          "bar": 10.0
+        },
+        "pole / bridge deck": {
+          "normal": 40.1,
+          "deuteranopia": 40.2,
+          "protanopia": 41.2,
+          "bar": 10.0
+        },
+        "fence / water": {
+          "normal": 87.0,
+          "deuteranopia": 83.4,
+          "protanopia": 85.9,
+          "bar": 10.0
+        },
+        "fence / bridge deck": {
+          "normal": 14.8,
+          "deuteranopia": 12.9,
+          "protanopia": 12.9,
+          "bar": 10.0
+        },
+        "water / bridge deck": {
+          "normal": 78.9,
+          "deuteranopia": 71.2,
+          "protanopia": 73.9,
+          "bar": 10.0
+        }
+      },
+      "failures": [],
+      "building_vegetation_lightness_gap": 0.21
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "question": "what does this metric score with no model at all",
+  "every_number_here_is_a_null": "this whole artefact is the floor. Keys are named null_* so that a guard looking for an unpaired score cannot mistake one for a result",
+  "footprints_source": "data/target/sf_footprints.geojson",
+  "footprints_license": "ODbL-1.0",
+  "hag_gate_m": 2.0,
+  "hag_definition": "label free minimum-z grid over all points, the same surface the model sees, not the delivery's ground class",
+  "coverage_cell_m": 1.0,
+  "asprs_noise_excluded": [
+    7,
+    18
+  ],
+  "notes": [
+    "baseline_everything_above_2m is the score of a model that calls every point over 2 m a building. Any measured precision is read against it.",
+    "recall_touch counts a footprint as found when one point lands in it, which every building wins outright. It is reported to show that it is useless, and the transfer score uses area coverage instead.",
+    "coverage has a high null too, because lidar covers a footprint whatever the labels say. It catches under-covering only; precision catches over-prediction. The pair covers both directions, neither alone does."
+  ],
+  "summary": {
+    "built_area_aois": [
+      "embarcadero",
+      "financial",
+      "mission",
+      "soma",
+      "steep",
+      "sunset"
+    ],
+    "control_aois": [
+      "baybridge",
+      "ggpark"
+    ],
+    "everything_above_2m_precision_range_built": [
+      0.137,
+      0.6319
+    ],
+    "everything_above_2m_precision_control": {
+      "baybridge": 0.0,
+      "ggpark": 0.0
+    },
+    "recall_touch_range": [
+      0.0,
+      1.0
+    ],
+    "aois_with_no_footprints": [
+      "baybridge"
+    ]
+  },
+  "aois": [
+    {
+      "aoi": "baybridge",
+      "is_control": true,
+      "points": 3069047,
+      "aoi_area_m2": 90315.1,
+      "footprints_in_aoi": 0,
+      "footprint_area_fraction": 0.0,
+      "points_over_2m_fraction": 0.1862,
+      "noise_fraction": 0.00019,
+      "baseline_everything": {
+        "null_precision": 0.0,
+        "eligible_points": 3068476
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.0,
+        "eligible_points": 571498,
+        "null_recall_touch": null,
+        "null_coverage_median": null,
+        "null_coverage_p10": null,
+        "footprints_scored": 0,
+        "footprints_too_small": 0
+      }
+    },
+    {
+      "aoi": "embarcadero",
+      "is_control": false,
+      "points": 4458544,
+      "aoi_area_m2": 90950.1,
+      "footprints_in_aoi": 7,
+      "footprint_area_fraction": 0.0418,
+      "points_over_2m_fraction": 0.2803,
+      "noise_fraction": 0.00542,
+      "baseline_everything": {
+        "null_precision": 0.055,
+        "eligible_points": 4434367
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.137,
+        "eligible_points": 1249647,
+        "null_recall_touch": 1.0,
+        "null_coverage_median": 0.8275,
+        "null_coverage_p10": 0.4377,
+        "footprints_scored": 7,
+        "footprints_too_small": 0
+      }
+    },
+    {
+      "aoi": "financial",
+      "is_control": false,
+      "points": 7630301,
+      "aoi_area_m2": 90923.0,
+      "footprints_in_aoi": 25,
+      "footprint_area_fraction": 0.4369,
+      "points_over_2m_fraction": 0.6359,
+      "noise_fraction": 0.01821,
+      "baseline_everything": {
+        "null_precision": 0.4951,
+        "eligible_points": 7491350
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.6319,
+        "eligible_points": 4851963,
+        "null_recall_touch": 0.96,
+        "null_coverage_median": 0.8342,
+        "null_coverage_p10": 0.7053,
+        "footprints_scored": 23,
+        "footprints_too_small": 2
+      }
+    },
+    {
+      "aoi": "ggpark",
+      "is_control": true,
+      "points": 9012919,
+      "aoi_area_m2": 90751.2,
+      "footprints_in_aoi": 1,
+      "footprint_area_fraction": 0.001,
+      "points_over_2m_fraction": 0.6115,
+      "noise_fraction": 0.00035,
+      "baseline_everything": {
+        "null_precision": 0.0004,
+        "eligible_points": 9009760
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.0,
+        "eligible_points": 5511190,
+        "null_recall_touch": 0.0,
+        "null_coverage_median": 0.0,
+        "null_coverage_p10": 0.0,
+        "footprints_scored": 1,
+        "footprints_too_small": 0
+      }
+    },
+    {
+      "aoi": "mission",
+      "is_control": false,
+      "points": 4536209,
+      "aoi_area_m2": 90889.8,
+      "footprints_in_aoi": 56,
+      "footprint_area_fraction": 0.3915,
+      "points_over_2m_fraction": 0.4591,
+      "noise_fraction": 0.00092,
+      "baseline_everything": {
+        "null_precision": 0.3748,
+        "eligible_points": 4532015
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.542,
+        "eligible_points": 2082611,
+        "null_recall_touch": 1.0,
+        "null_coverage_median": 0.9382,
+        "null_coverage_p10": 0.6732,
+        "footprints_scored": 56,
+        "footprints_too_small": 0
+      }
+    },
+    {
+      "aoi": "soma",
+      "is_control": false,
+      "points": 4527700,
+      "aoi_area_m2": 90895.8,
+      "footprints_in_aoi": 26,
+      "footprint_area_fraction": 0.4757,
+      "points_over_2m_fraction": 0.4949,
+      "noise_fraction": 0.00108,
+      "baseline_everything": {
+        "null_precision": 0.4658,
+        "eligible_points": 4522800
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.6289,
+        "eligible_points": 2240726,
+        "null_recall_touch": 1.0,
+        "null_coverage_median": 0.7495,
+        "null_coverage_p10": 0.4661,
+        "footprints_scored": 26,
+        "footprints_too_small": 0
+      }
+    },
+    {
+      "aoi": "steep",
+      "is_control": false,
+      "points": 5427902,
+      "aoi_area_m2": 90886.8,
+      "footprints_in_aoi": 78,
+      "footprint_area_fraction": 0.481,
+      "points_over_2m_fraction": 0.6587,
+      "noise_fraction": 0.00205,
+      "baseline_everything": {
+        "null_precision": 0.4667,
+        "eligible_points": 5416755
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.5954,
+        "eligible_points": 3575521,
+        "null_recall_touch": 0.9744,
+        "null_coverage_median": 0.9683,
+        "null_coverage_p10": 0.8548,
+        "footprints_scored": 77,
+        "footprints_too_small": 1
+      }
+    },
+    {
+      "aoi": "sunset",
+      "is_control": false,
+      "points": 5466462,
+      "aoi_area_m2": 90742.1,
+      "footprints_in_aoi": 33,
+      "footprint_area_fraction": 0.2971,
+      "points_over_2m_fraction": 0.4212,
+      "noise_fraction": 0.00097,
+      "baseline_everything": {
+        "null_precision": 0.2841,
+        "eligible_points": 5461138
+      },
+      "baseline_everything_above_2m": {
+        "null_precision": 0.5105,
+        "eligible_points": 2302589,
+        "null_recall_touch": 1.0,
+        "null_coverage_median": 0.9286,
+        "null_coverage_p10": 0.8205,
+        "footprints_scored": 33,
+        "footprints_too_small": 0
+      }
+    }
+  ],
+  "seconds": 231.9
+}

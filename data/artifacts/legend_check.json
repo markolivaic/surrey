@@ -1,0 +1,220 @@
+{
+  "layout": {
+    "1440x900": {
+      "strip_bottom": 890,
+      "viewport_height": 900,
+      "fits": true,
+      "overlaps_label": false,
+      "clipped": false,
+      "table_height": 357,
+      "table_share_of_height": 0.397
+    },
+    "1920x1080": {
+      "strip_bottom": 1058,
+      "viewport_height": 1080,
+      "fits": true,
+      "overlaps_label": false,
+      "clipped": false,
+      "table_height": 326,
+      "table_share_of_height": 0.302
+    },
+    "1280x800": {
+      "strip_bottom": 790,
+      "viewport_height": 800,
+      "fits": true,
+      "overlaps_label": false,
+      "clipped": false,
+      "table_height": 372,
+      "table_share_of_height": 0.465
+    },
+    "1366x768": {
+      "strip_bottom": 758,
+      "viewport_height": 768,
+      "fits": true,
+      "overlaps_label": false,
+      "clipped": false,
+      "table_height": 357,
+      "table_share_of_height": 0.465
+    }
+  },
+  "free_view": {
+    "1440x900": {
+      "panel_shown": true,
+      "panel_bottom_gap": 18,
+      "panel_right_gap": 20,
+      "panel_touches_legend": false,
+      "panel_touches_chip": false,
+      "panel_covers_middle": false,
+      "chip": "M0 seed A, the published model"
+    },
+    "1920x1080": {
+      "panel_shown": true,
+      "panel_bottom_gap": 18,
+      "panel_right_gap": 20,
+      "panel_touches_legend": false,
+      "panel_touches_chip": false,
+      "panel_covers_middle": false,
+      "chip": "M0 seed A, the published model"
+    },
+    "1280x800": {
+      "panel_shown": true,
+      "panel_bottom_gap": 18,
+      "panel_right_gap": 20,
+      "panel_touches_legend": false,
+      "panel_touches_chip": false,
+      "panel_covers_middle": false,
+      "chip": "M0 seed A, the published model"
+    },
+    "1366x768": {
+      "panel_shown": true,
+      "panel_bottom_gap": 18,
+      "panel_right_gap": 20,
+      "panel_touches_legend": false,
+      "panel_touches_chip": false,
+      "panel_covers_middle": false,
+      "chip": "M0 seed A, the published model"
+    }
+  },
+  "swatches_measured": [
+    "Ground",
+    "Medium Vegetation",
+    "High Vegetation",
+    "Building",
+    "Wire-Conductor (Phase)"
+  ],
+  "closest_swatch_pairs": {
+    "normal": [
+      {
+        "rows": [
+          "Medium Vegetation",
+          "High Vegetation"
+        ],
+        "delta_e76": 0.0
+      },
+      {
+        "rows": [
+          "High Vegetation",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 14.8
+      },
+      {
+        "rows": [
+          "Medium Vegetation",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 14.8
+      },
+      {
+        "rows": [
+          "Ground",
+          "High Vegetation"
+        ],
+        "delta_e76": 61.7
+      },
+      {
+        "rows": [
+          "Ground",
+          "Medium Vegetation"
+        ],
+        "delta_e76": 61.7
+      },
+      {
+        "rows": [
+          "Ground",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 66.5
+      }
+    ],
+    "deuteranopia": [
+      {
+        "rows": [
+          "Medium Vegetation",
+          "High Vegetation"
+        ],
+        "delta_e76": 0.0
+      },
+      {
+        "rows": [
+          "High Vegetation",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 14.0
+      },
+      {
+        "rows": [
+          "Medium Vegetation",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 14.0
+      },
+      {
+        "rows": [
+          "Ground",
+          "High Vegetation"
+        ],
+        "delta_e76": 36.8
+      },
+      {
+        "rows": [
+          "Ground",
+          "Medium Vegetation"
+        ],
+        "delta_e76": 36.8
+      },
+      {
+        "rows": [
+          "Ground",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 49.6
+      }
+    ],
+    "protanopia": [
+      {
+        "rows": [
+          "Medium Vegetation",
+          "High Vegetation"
+        ],
+        "delta_e76": 0.0
+      },
+      {
+        "rows": [
+          "High Vegetation",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 14.8
+      },
+      {
+        "rows": [
+          "Medium Vegetation",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 14.8
+      },
+      {
+        "rows": [
+          "Ground",
+          "High Vegetation"
+        ],
+        "delta_e76": 28.7
+      },
+      {
+        "rows": [
+          "Ground",
+          "Medium Vegetation"
+        ],
+        "delta_e76": 28.7
+      },
+      {
+        "rows": [
+          "Ground",
+          "Wire-Conductor (Phase)"
+        ],
+        "delta_e76": 43.2
+      }
+    ]
+  },
+  "note": "swatch colour is the mean of the swatch's own pixels, border excluded, so a patterned swatch reads as its mix with the card behind it"
+}

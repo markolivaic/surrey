@@ -1,0 +1,66 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: torch is the cpu build and no gpu is present
+        run: |
+          python -c "import torch; print(torch.__version__); assert not torch.cuda.is_available()"
+
+      - name: lint
+        run: ruff check .
+
+      - name: format
+        run: ruff format --check .
+
+      - name: typecheck
+        run: mypy
+
+      - name: behavioural tests
+        run: pytest tests/unit -q -rs
+
+      - name: integrity tests
+        run: pytest tests/integrity -q -rs
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: page figures from the registry
+        run: python scripts/pipeline/page_figures.py
+
+      - name: the README is what its template and the registry produce
+        run: python scripts/pipeline/render_readme.py --check
+
+      - name: build the viewer
+        working-directory: web
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+      - name: smoke test on the FIXTURE octree
+        run: |
+          python -m playwright install --with-deps chromium
+          pytest tests/smoke -q -rs

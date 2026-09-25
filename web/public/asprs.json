@@ -1,0 +1,96 @@
+{
+  "source": "Table 17, ASPRS Standard Point Classes (Point Data Record Formats 6-10), LAS Specification 1.4 R15, ASPRS, 09 July 2019",
+  "classes": [
+    {
+      "code": 1,
+      "name": "Unclassified",
+      "m0": [],
+      "m1": [],
+      "delivery_labels": true
+    },
+    {
+      "code": 2,
+      "name": "Ground",
+      "m0": [
+        "ground"
+      ],
+      "m1": [
+        "ground"
+      ],
+      "delivery_labels": true
+    },
+    {
+      "code": 3,
+      "name": "Low Vegetation",
+      "m0": [],
+      "m1": [],
+      "delivery_labels": false
+    },
+    {
+      "code": 4,
+      "name": "Medium Vegetation",
+      "m0": [
+        "vegetation"
+      ],
+      "m1": [
+        "vegetation"
+      ],
+      "delivery_labels": false
+    },
+    {
+      "code": 5,
+      "name": "High Vegetation",
+      "m0": [
+        "tree"
+      ],
+      "m1": [
+        "tree"
+      ],
+      "delivery_labels": false
+    },
+    {
+      "code": 6,
+      "name": "Building",
+      "m0": [
+        "annex",
+        "complex",
+        "habitat"
+      ],
+      "m1": [
+        "annex",
+        "complex",
+        "habitat"
+      ],
+      "delivery_labels": false
+    },
+    {
+      "code": 9,
+      "name": "Water",
+      "m0": [],
+      "m1": [
+        "water"
+      ],
+      "delivery_labels": true
+    },
+    {
+      "code": 14,
+      "name": "Wire-Conductor (Phase)",
+      "m0": [
+        "powerline"
+      ],
+      "m1": [
+        "powerline"
+      ],
+      "delivery_labels": false
+    },
+    {
+      "code": 17,
+      "name": "Bridge Deck",
+      "m0": [],
+      "m1": [
+        "bridge_deck"
+      ],
+      "delivery_labels": true
+    }
+  ]
+}

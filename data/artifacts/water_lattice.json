@@ -1,0 +1,410 @@
+{
+  "what": "whether the points labelled water, and ground as the control, sit on a regular grid",
+  "labels": "swisstopo's classes for the Swiss tiles, the delivery's ASPRS codes for San Francisco",
+  "tolerance_cm": 1.0,
+  "sets": {
+    "swiss_training.water": {
+      "points": 16108039,
+      "tiles_read": 13,
+      "nn_median_cm_weighted": 25.0,
+      "nn_cv_weighted": 0.0511,
+      "share_on_the_lattice": 0.952,
+      "chance_share": 0.0144,
+      "per_tile": {
+        "ch2024_2683-1243_00": {
+          "points": 339853,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0284,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9983,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1243_01": {
+          "points": 2292775,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0591,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9931,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1243_10": {
+          "points": 1709735,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0726,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9863,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1243_11": {
+          "points": 109462,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.054,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9943,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1246_00": {
+          "points": 1596516,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0845,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.8614,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1246_01": {
+          "points": 1424372,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.1487,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.8883,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1246_10": {
+          "points": 1442286,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0771,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.8025,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1246_11": {
+          "points": 327907,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0463,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9923,
+          "chance_share": 0.0144
+        },
+        "ch2025_2500-1118_00": {
+          "points": 297733,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.2105,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.7805,
+          "chance_share": 0.0144
+        },
+        "ch2025_2500-1118_01": {
+          "points": 0,
+          "note": "too few points to read"
+        },
+        "ch2025_2500-1118_10": {
+          "points": 3239698,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0004,
+          "step_cm": 25,
+          "share_on_the_lattice": 1.0,
+          "chance_share": 0.0144
+        },
+        "ch2025_2500-1118_11": {
+          "points": 1426016,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0,
+          "step_cm": 25,
+          "share_on_the_lattice": 1.0,
+          "chance_share": 0.0144
+        },
+        "ch2025_2500-1119_00": {
+          "points": 0,
+          "note": "too few points to read"
+        },
+        "ch2025_2500-1119_01": {
+          "points": 0,
+          "note": "too few points to read"
+        },
+        "ch2025_2500-1119_10": {
+          "points": 992925,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.005,
+          "step_cm": 25,
+          "share_on_the_lattice": 1.0,
+          "chance_share": 0.0144
+        },
+        "ch2025_2500-1119_11": {
+          "points": 908761,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0069,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9998,
+          "chance_share": 0.0144
+        }
+      }
+    },
+    "swiss_training.ground": {
+      "points": 20732023,
+      "tiles_read": 14,
+      "nn_median_cm_weighted": 16.16,
+      "nn_cv_weighted": 0.3879,
+      "share_on_the_lattice": 0.0409,
+      "chance_share": 0.0389,
+      "per_tile": {
+        "ch2024_2683-1243_00": {
+          "points": 3129491,
+          "nn_median_cm": 15.52,
+          "nn_cv": 0.4057,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0535,
+          "chance_share": 0.0533
+        },
+        "ch2024_2683-1243_01": {
+          "points": 1183760,
+          "nn_median_cm": 15.81,
+          "nn_cv": 0.3849,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0536,
+          "chance_share": 0.0533
+        },
+        "ch2024_2683-1243_10": {
+          "points": 139643,
+          "nn_median_cm": 19.72,
+          "nn_cv": 0.3828,
+          "step_cm": 27,
+          "share_on_the_lattice": 0.0121,
+          "chance_share": 0.0123
+        },
+        "ch2024_2683-1243_11": {
+          "points": 0,
+          "note": "too few points to read"
+        },
+        "ch2024_2683-1246_00": {
+          "points": 3,
+          "note": "too few points to read"
+        },
+        "ch2024_2683-1246_01": {
+          "points": 1193056,
+          "nn_median_cm": 17.03,
+          "nn_cv": 0.4103,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.0489,
+          "chance_share": 0.0144
+        },
+        "ch2024_2683-1246_10": {
+          "points": 1437191,
+          "nn_median_cm": 15.52,
+          "nn_cv": 0.4221,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0534,
+          "chance_share": 0.0533
+        },
+        "ch2024_2683-1246_11": {
+          "points": 2125546,
+          "nn_median_cm": 16.4,
+          "nn_cv": 0.4243,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0352,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1118_00": {
+          "points": 1472638,
+          "nn_median_cm": 16.4,
+          "nn_cv": 0.3897,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0352,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1118_01": {
+          "points": 1477190,
+          "nn_median_cm": 16.4,
+          "nn_cv": 0.4018,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0353,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1118_10": {
+          "points": 422140,
+          "nn_median_cm": 15.65,
+          "nn_cv": 0.348,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0356,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1118_11": {
+          "points": 986213,
+          "nn_median_cm": 16.28,
+          "nn_cv": 0.3696,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0351,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1119_00": {
+          "points": 2149613,
+          "nn_median_cm": 16.12,
+          "nn_cv": 0.363,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0352,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1119_01": {
+          "points": 2231383,
+          "nn_median_cm": 16.55,
+          "nn_cv": 0.3627,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0352,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1119_10": {
+          "points": 1265296,
+          "nn_median_cm": 16.16,
+          "nn_cv": 0.3365,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.035,
+          "chance_share": 0.0352
+        },
+        "ch2025_2500-1119_11": {
+          "points": 1518863,
+          "nn_median_cm": 16.03,
+          "nn_cv": 0.3754,
+          "step_cm": 16,
+          "share_on_the_lattice": 0.0351,
+          "chance_share": 0.0352
+        }
+      }
+    },
+    "zug_held_out.water": {
+      "points": 4367173,
+      "tiles_read": 4,
+      "nn_median_cm_weighted": 24.99,
+      "nn_cv_weighted": 0.035,
+      "share_on_the_lattice": 0.745,
+      "chance_share": 0.0144,
+      "per_tile": {
+        "ch2024_2680-1225_00": {
+          "points": 2176641,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0272,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.548,
+          "chance_share": 0.0144
+        },
+        "ch2024_2680-1225_01": {
+          "points": 433505,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.1199,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.8987,
+          "chance_share": 0.0144
+        },
+        "ch2024_2680-1225_10": {
+          "points": 1748098,
+          "nn_median_cm": 25.0,
+          "nn_cv": 0.0213,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.9554,
+          "chance_share": 0.0144
+        },
+        "ch2024_2680-1225_11": {
+          "points": 8929,
+          "nn_median_cm": 21.02,
+          "nn_cv": 0.5001,
+          "step_cm": 25,
+          "share_on_the_lattice": 0.1007,
+          "chance_share": 0.0144
+        }
+      }
+    },
+    "zug_held_out.ground": {
+      "points": 8769588,
+      "tiles_read": 4,
+      "nn_median_cm_weighted": 14.99,
+      "nn_cv_weighted": 0.4004,
+      "share_on_the_lattice": 0.0535,
+      "chance_share": 0.0533,
+      "per_tile": {
+        "ch2024_2680-1225_00": {
+          "points": 155733,
+          "nn_median_cm": 14.42,
+          "nn_cv": 0.4527,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0539,
+          "chance_share": 0.0533
+        },
+        "ch2024_2680-1225_01": {
+          "points": 3349539,
+          "nn_median_cm": 15.13,
+          "nn_cv": 0.3935,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0538,
+          "chance_share": 0.0533
+        },
+        "ch2024_2680-1225_10": {
+          "points": 1840869,
+          "nn_median_cm": 14.32,
+          "nn_cv": 0.4009,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0534,
+          "chance_share": 0.0533
+        },
+        "ch2024_2680-1225_11": {
+          "points": 3423447,
+          "nn_median_cm": 15.23,
+          "nn_cv": 0.4046,
+          "step_cm": 13,
+          "share_on_the_lattice": 0.0533,
+          "chance_share": 0.0533
+        }
+      }
+    },
+    "embarcadero.water": {
+      "points": 1279147,
+      "tiles_read": 1,
+      "nn_median_cm_weighted": 13.04,
+      "nn_cv_weighted": 0.4197,
+      "share_on_the_lattice": 0.0748,
+      "chance_share": 0.0744,
+      "per_tile": {
+        "embarcadero": {
+          "points": 1279147,
+          "nn_median_cm": 13.04,
+          "nn_cv": 0.4197,
+          "step_cm": 11,
+          "share_on_the_lattice": 0.0748,
+          "chance_share": 0.0744
+        }
+      }
+    },
+    "embarcadero.ground": {
+      "points": 459883,
+      "tiles_read": 1,
+      "nn_median_cm_weighted": 10.0,
+      "nn_cv_weighted": 0.5107,
+      "share_on_the_lattice": 0.1112,
+      "chance_share": 0.1111,
+      "per_tile": {
+        "embarcadero": {
+          "points": 459883,
+          "nn_median_cm": 10.0,
+          "nn_cv": 0.5107,
+          "step_cm": 9,
+          "share_on_the_lattice": 0.1112,
+          "chance_share": 0.1111
+        }
+      }
+    },
+    "baybridge.water": {
+      "points": 1396087,
+      "tiles_read": 1,
+      "nn_median_cm_weighted": 12.65,
+      "nn_cv_weighted": 0.4246,
+      "share_on_the_lattice": 0.0743,
+      "chance_share": 0.0744,
+      "per_tile": {
+        "baybridge": {
+          "points": 1396087,
+          "nn_median_cm": 12.65,
+          "nn_cv": 0.4246,
+          "step_cm": 11,
+          "share_on_the_lattice": 0.0743,
+          "chance_share": 0.0744
+        }
+      }
+    },
+    "baybridge.ground": {
+      "points": 0,
+      "per_tile": {
+        "baybridge": {
+          "points": 0,
+          "note": "too few points to read"
+        }
+      }
+    }
+  }
+}

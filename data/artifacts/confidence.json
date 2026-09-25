@@ -1,0 +1,332 @@
+{
+  "question": "how sure is the model where it has no concept",
+  "no_training": "the checkpoint is unchanged, only inference was rerun",
+  "checkpoint_step": 12000,
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "entropy_note": "normalised by log of the class count, so 0 is certain and 1 is a uniform guess over all fifteen classes",
+  "softmax_precision": "float32, because a half precision 15-way tail underflows",
+  "surrey_blocks_per_tile": 40,
+  "pooled": [
+    {
+      "group": "surrey_correct",
+      "points": 21525160,
+      "max_prob_median": 0.9555,
+      "max_prob_p10": 0.72,
+      "max_prob_p90": 0.9942,
+      "max_prob_over_0_9": 0.7091,
+      "max_prob_under_0_5": 0.0162,
+      "entropy_median": 0.075,
+      "entropy_p90": 0.2684
+    },
+    {
+      "group": "surrey_wrong",
+      "points": 2399687,
+      "max_prob_median": 0.6317,
+      "max_prob_p10": 0.4207,
+      "max_prob_p90": 0.8959,
+      "max_prob_over_0_9": 0.0945,
+      "max_prob_under_0_5": 0.21,
+      "entropy_median": 0.3021,
+      "entropy_p90": 0.5502
+    },
+    {
+      "group": "sf_ground",
+      "points": 9891804,
+      "max_prob_median": 0.6619,
+      "max_prob_p10": 0.5593,
+      "max_prob_p90": 0.8093,
+      "max_prob_over_0_9": 0.0355,
+      "max_prob_under_0_5": 0.0009,
+      "entropy_median": 0.2365,
+      "entropy_p90": 0.2536
+    },
+    {
+      "group": "sf_unassigned",
+      "points": 30805097,
+      "max_prob_median": 0.7476,
+      "max_prob_p10": 0.5448,
+      "max_prob_p90": 0.9447,
+      "max_prob_over_0_9": 0.1978,
+      "max_prob_under_0_5": 0.0398,
+      "entropy_median": 0.233,
+      "entropy_p90": 0.3668
+    },
+    {
+      "group": "sf_water",
+      "points": 2675234,
+      "max_prob_median": 0.6289,
+      "max_prob_p10": 0.5429,
+      "max_prob_p90": 0.7058,
+      "max_prob_over_0_9": 0.0017,
+      "max_prob_under_0_5": 0.0011,
+      "entropy_median": 0.2436,
+      "entropy_p90": 0.2547
+    },
+    {
+      "group": "sf_bridge_deck",
+      "points": 560288,
+      "max_prob_median": 0.7513,
+      "max_prob_p10": 0.5977,
+      "max_prob_p90": 0.9514,
+      "max_prob_over_0_9": 0.1532,
+      "max_prob_under_0_5": 0.0062,
+      "entropy_median": 0.2232,
+      "entropy_p90": 0.2753
+    }
+  ],
+  "verdict": "less confident over water: the network carried doubt that argmax threw away, which earns the viewer a third colour for 'no answer'",
+  "per_area": [
+    {
+      "aoi": "baybridge",
+      "groups": [
+        {
+          "group": "sf_water",
+          "points": 1396087,
+          "max_prob_median": 0.6334,
+          "max_prob_p10": 0.5458,
+          "max_prob_p90": 0.705,
+          "max_prob_over_0_9": 0.0012,
+          "max_prob_under_0_5": 0.001,
+          "entropy_median": 0.2427,
+          "entropy_p90": 0.2545
+        },
+        {
+          "group": "sf_bridge_deck",
+          "points": 325405,
+          "max_prob_median": 0.7605,
+          "max_prob_p10": 0.6288,
+          "max_prob_p90": 0.9718,
+          "max_prob_over_0_9": 0.1856,
+          "max_prob_under_0_5": 0.0077,
+          "entropy_median": 0.2227,
+          "entropy_p90": 0.3037
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 1346984,
+          "max_prob_median": 0.6602,
+          "max_prob_p10": 0.5516,
+          "max_prob_p90": 0.9468,
+          "max_prob_over_0_9": 0.1291,
+          "max_prob_under_0_5": 0.0139,
+          "entropy_median": 0.2396,
+          "entropy_p90": 0.256
+        }
+      ]
+    },
+    {
+      "aoi": "embarcadero",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 459883,
+          "max_prob_median": 0.6584,
+          "max_prob_p10": 0.5698,
+          "max_prob_p90": 0.7527,
+          "max_prob_over_0_9": 0.0092,
+          "max_prob_under_0_5": 0.0004,
+          "entropy_median": 0.2371,
+          "entropy_p90": 0.2525
+        },
+        {
+          "group": "sf_water",
+          "points": 1279147,
+          "max_prob_median": 0.6243,
+          "max_prob_p10": 0.5399,
+          "max_prob_p90": 0.7058,
+          "max_prob_over_0_9": 0.0022,
+          "max_prob_under_0_5": 0.0012,
+          "entropy_median": 0.2444,
+          "entropy_p90": 0.2549
+        },
+        {
+          "group": "sf_bridge_deck",
+          "points": 234883,
+          "max_prob_median": 0.7321,
+          "max_prob_p10": 0.5718,
+          "max_prob_p90": 0.9084,
+          "max_prob_over_0_9": 0.1083,
+          "max_prob_under_0_5": 0.0042,
+          "entropy_median": 0.2241,
+          "entropy_p90": 0.2565
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 2456216,
+          "max_prob_median": 0.6628,
+          "max_prob_p10": 0.54,
+          "max_prob_p90": 0.8694,
+          "max_prob_over_0_9": 0.0709,
+          "max_prob_under_0_5": 0.0294,
+          "entropy_median": 0.2398,
+          "entropy_p90": 0.2888
+        }
+      ]
+    },
+    {
+      "aoi": "financial",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 1394775,
+          "max_prob_median": 0.6654,
+          "max_prob_p10": 0.5612,
+          "max_prob_p90": 0.7994,
+          "max_prob_over_0_9": 0.0389,
+          "max_prob_under_0_5": 0.0008,
+          "entropy_median": 0.2356,
+          "entropy_p90": 0.2534
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 6096575,
+          "max_prob_median": 0.8265,
+          "max_prob_p10": 0.5506,
+          "max_prob_p90": 0.9857,
+          "max_prob_over_0_9": 0.3857,
+          "max_prob_under_0_5": 0.0403,
+          "entropy_median": 0.2016,
+          "entropy_p90": 0.3574
+        }
+      ]
+    },
+    {
+      "aoi": "ggpark",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 2354868,
+          "max_prob_median": 0.6487,
+          "max_prob_p10": 0.5458,
+          "max_prob_p90": 0.7873,
+          "max_prob_over_0_9": 0.016,
+          "max_prob_under_0_5": 0.0011,
+          "entropy_median": 0.2396,
+          "entropy_p90": 0.2545
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 6654892,
+          "max_prob_median": 0.8431,
+          "max_prob_p10": 0.5856,
+          "max_prob_p90": 0.9393,
+          "max_prob_over_0_9": 0.2803,
+          "max_prob_under_0_5": 0.0418,
+          "entropy_median": 0.2193,
+          "entropy_p90": 0.3992
+        }
+      ]
+    },
+    {
+      "aoi": "mission",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 1400802,
+          "max_prob_median": 0.6505,
+          "max_prob_p10": 0.5487,
+          "max_prob_p90": 0.8187,
+          "max_prob_over_0_9": 0.0429,
+          "max_prob_under_0_5": 0.001,
+          "entropy_median": 0.2391,
+          "entropy_p90": 0.2544
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 3131213,
+          "max_prob_median": 0.6976,
+          "max_prob_p10": 0.5296,
+          "max_prob_p90": 0.8936,
+          "max_prob_over_0_9": 0.0892,
+          "max_prob_under_0_5": 0.049,
+          "entropy_median": 0.2411,
+          "entropy_p90": 0.3841
+        }
+      ]
+    },
+    {
+      "aoi": "soma",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 1284347,
+          "max_prob_median": 0.6522,
+          "max_prob_p10": 0.5574,
+          "max_prob_p90": 0.8123,
+          "max_prob_over_0_9": 0.0441,
+          "max_prob_under_0_5": 0.0009,
+          "entropy_median": 0.2388,
+          "entropy_p90": 0.2536
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 3238453,
+          "max_prob_median": 0.7074,
+          "max_prob_p10": 0.5396,
+          "max_prob_p90": 0.9096,
+          "max_prob_over_0_9": 0.1164,
+          "max_prob_under_0_5": 0.0308,
+          "entropy_median": 0.239,
+          "entropy_p90": 0.3391
+        }
+      ]
+    },
+    {
+      "aoi": "steep",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 1143332,
+          "max_prob_median": 0.6935,
+          "max_prob_p10": 0.5737,
+          "max_prob_p90": 0.8822,
+          "max_prob_over_0_9": 0.0801,
+          "max_prob_under_0_5": 0.0011,
+          "entropy_median": 0.2278,
+          "entropy_p90": 0.2523
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 4273423,
+          "max_prob_median": 0.7346,
+          "max_prob_p10": 0.5297,
+          "max_prob_p90": 0.919,
+          "max_prob_over_0_9": 0.1406,
+          "max_prob_under_0_5": 0.0468,
+          "entropy_median": 0.2413,
+          "entropy_p90": 0.3782
+        }
+      ]
+    },
+    {
+      "aoi": "sunset",
+      "groups": [
+        {
+          "group": "sf_ground",
+          "points": 1853797,
+          "max_prob_median": 0.674,
+          "max_prob_p10": 0.5813,
+          "max_prob_p90": 0.7982,
+          "max_prob_over_0_9": 0.0249,
+          "max_prob_under_0_5": 0.0004,
+          "entropy_median": 0.2332,
+          "entropy_p90": 0.2512
+        },
+        {
+          "group": "sf_unassigned",
+          "points": 3607341,
+          "max_prob_median": 0.7146,
+          "max_prob_p10": 0.5453,
+          "max_prob_p90": 0.887,
+          "max_prob_over_0_9": 0.0751,
+          "max_prob_under_0_5": 0.0435,
+          "entropy_median": 0.2331,
+          "entropy_p90": 0.3649
+        }
+      ]
+    }
+  ],
+  "seconds": 356.3
+}

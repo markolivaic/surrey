@@ -1,0 +1,160 @@
+{
+  "checkpoint": "data/checkpoints/m0_seedA.pt",
+  "blocks_per_tile": 12,
+  "points_per_tensor": 32768,
+  "block_m": 40.0,
+  "device": "cuda",
+  "what": "share of points with the same predicted class, over the fifteen classes and over the six coarse groups; base rates are the same iterator run again with a different seed",
+  "tiles": {
+    "sf_financial": {
+      "points": 1459881,
+      "fine": {
+        "old_vs_new": 0.579,
+        "new_vs_new_other_seed": 0.7948,
+        "old_vs_old_other_seed": 0.7922
+      },
+      "coarse": {
+        "old_vs_new": 0.6439,
+        "new_vs_new_other_seed": 0.8308,
+        "old_vs_old_other_seed": 0.8165
+      }
+    },
+    "sf_soma": {
+      "points": 802444,
+      "fine": {
+        "old_vs_new": 0.7533,
+        "new_vs_new_other_seed": 0.8561,
+        "old_vs_old_other_seed": 0.8378
+      },
+      "coarse": {
+        "old_vs_new": 0.793,
+        "new_vs_new_other_seed": 0.8799,
+        "old_vs_old_other_seed": 0.8611
+      }
+    },
+    "sf_mission": {
+      "points": 818670,
+      "fine": {
+        "old_vs_new": 0.7372,
+        "new_vs_new_other_seed": 0.8365,
+        "old_vs_old_other_seed": 0.8364
+      },
+      "coarse": {
+        "old_vs_new": 0.8216,
+        "new_vs_new_other_seed": 0.8777,
+        "old_vs_old_other_seed": 0.8711
+      }
+    },
+    "sf_sunset": {
+      "points": 1028177,
+      "fine": {
+        "old_vs_new": 0.7659,
+        "new_vs_new_other_seed": 0.871,
+        "old_vs_old_other_seed": 0.8434
+      },
+      "coarse": {
+        "old_vs_new": 0.8201,
+        "new_vs_new_other_seed": 0.8995,
+        "old_vs_old_other_seed": 0.8655
+      }
+    },
+    "sf_ggpark": {
+      "points": 1782327,
+      "fine": {
+        "old_vs_new": 0.7609,
+        "new_vs_new_other_seed": 0.927,
+        "old_vs_old_other_seed": 0.8557
+      },
+      "coarse": {
+        "old_vs_new": 0.9296,
+        "new_vs_new_other_seed": 0.9538,
+        "old_vs_old_other_seed": 0.9512
+      }
+    },
+    "sf_embarcadero": {
+      "points": 788571,
+      "fine": {
+        "old_vs_new": 0.7464,
+        "new_vs_new_other_seed": 0.8538,
+        "old_vs_old_other_seed": 0.8606
+      },
+      "coarse": {
+        "old_vs_new": 0.7746,
+        "new_vs_new_other_seed": 0.86,
+        "old_vs_old_other_seed": 0.8706
+      }
+    },
+    "sf_baybridge": {
+      "points": 511800,
+      "fine": {
+        "old_vs_new": 0.9314,
+        "new_vs_new_other_seed": 0.9484,
+        "old_vs_old_other_seed": 0.9635
+      },
+      "coarse": {
+        "old_vs_new": 0.9321,
+        "new_vs_new_other_seed": 0.9496,
+        "old_vs_old_other_seed": 0.9637
+      }
+    },
+    "sf_steep": {
+      "points": 991795,
+      "fine": {
+        "old_vs_new": 0.7225,
+        "new_vs_new_other_seed": 0.8477,
+        "old_vs_old_other_seed": 0.805
+      },
+      "coarse": {
+        "old_vs_new": 0.7859,
+        "new_vs_new_other_seed": 0.8943,
+        "old_vs_old_other_seed": 0.8345
+      }
+    },
+    "surrey_5080_54400": {
+      "points": 774859,
+      "fine": {
+        "old_vs_new": 0.88,
+        "new_vs_new_other_seed": 0.9217,
+        "old_vs_old_other_seed": 0.8943
+      },
+      "coarse": {
+        "old_vs_new": 0.9415,
+        "new_vs_new_other_seed": 0.948,
+        "old_vs_old_other_seed": 0.9475
+      },
+      "accuracy_old": 0.8396,
+      "accuracy_new": 0.8733
+    },
+    "surrey_5080_54470": {
+      "points": 648394,
+      "fine": {
+        "old_vs_new": 0.9092,
+        "new_vs_new_other_seed": 0.942,
+        "old_vs_old_other_seed": 0.916
+      },
+      "coarse": {
+        "old_vs_new": 0.9516,
+        "new_vs_new_other_seed": 0.9573,
+        "old_vs_old_other_seed": 0.9542
+      },
+      "accuracy_old": 0.8835,
+      "accuracy_new": 0.9208
+    },
+    "surrey_5100_54440": {
+      "points": 637777,
+      "fine": {
+        "old_vs_new": 0.915,
+        "new_vs_new_other_seed": 0.9285,
+        "old_vs_old_other_seed": 0.9271
+      },
+      "coarse": {
+        "old_vs_new": 0.9357,
+        "new_vs_new_other_seed": 0.947,
+        "old_vs_old_other_seed": 0.9447
+      },
+      "accuracy_old": 0.8677,
+      "accuracy_new": 0.884
+    }
+  },
+  "seconds": 239.3
+}

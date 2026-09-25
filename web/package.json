@@ -1,0 +1,19 @@
+{
+  "name": "surrey-viewer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:investigate": "vite build --mode investigate",
+    "build:prototype": "vite build --config vite.prototype.config.js",
+    "preview": "vite preview",
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.0"
+  }
+}

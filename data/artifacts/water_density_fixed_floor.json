@@ -1,0 +1,112 @@
+{
+  "reading_written_before_running": "written 2026-09-20 before the first run: a large rise in water recall when San Francisco is thinned to the Swiss spacing means density is what breaks water transfer; recall staying near zero means density is not it and the class simply does not survive off its sixteen training tiles, which the README then states as an open question. Ground recall before and after is the control: if thinning breaks ground too, it broke the input and neither reading holds",
+  "variant": "m1_seedA",
+  "device": "cuda",
+  "fixed_floor": true,
+  "checkpoint_step": 12000,
+  "density": {
+    "san_francisco_points_per_m2": 41.502,
+    "switzerland_points_per_m2": 17.195,
+    "keep_fraction": 0.4143,
+    "target_density_points_per_m2": 17.195,
+    "what_is_varied": "how many different points of a block the crop carries, at a 40 m block"
+  },
+  "block_m": 40.0,
+  "points_per_crop": 32768,
+  "seed": 0,
+  "areas": {
+    "embarcadero": {
+      "full": {
+        "water_support": 792956,
+        "water_hit": 17415,
+        "water_called": 19629,
+        "ground_support": 154349,
+        "ground_hit": 109557,
+        "points": 2097152,
+        "distinct_points": 2008573,
+        "distinct_points_in_a_crop_median": 32768,
+        "water_recall": 0.022,
+        "water_precision": 0.8872,
+        "ground_recall": 0.7098
+      },
+      "thinned": {
+        "water_support": 793495,
+        "water_hit": 65258,
+        "water_called": 83867,
+        "ground_support": 154911,
+        "ground_hit": 97154,
+        "points": 2097152,
+        "distinct_points": 1218522,
+        "distinct_points_in_a_crop_median": 19171,
+        "water_recall": 0.0822,
+        "water_precision": 0.7781,
+        "ground_recall": 0.6272
+      }
+    },
+    "baybridge": {
+      "full": {
+        "water_support": 865337,
+        "water_hit": 2910,
+        "water_called": 8945,
+        "ground_support": 0,
+        "ground_hit": 0,
+        "points": 1736704,
+        "distinct_points": 1511767,
+        "distinct_points_in_a_crop_median": 32768,
+        "water_recall": 0.0034,
+        "water_precision": 0.3253,
+        "ground_recall": null
+      },
+      "thinned": {
+        "water_support": 865649,
+        "water_hit": 16856,
+        "water_called": 26820,
+        "ground_support": 0,
+        "ground_hit": 0,
+        "points": 1736704,
+        "distinct_points": 949031,
+        "distinct_points_in_a_crop_median": 19151,
+        "water_recall": 0.0195,
+        "water_precision": 0.6285,
+        "ground_recall": null
+      }
+    }
+  },
+  "sweep": {
+    "17.195": {
+      "embarcadero": {
+        "distinct_points_in_a_crop_median": 19171,
+        "water_recall": 0.0822,
+        "water_precision": 0.7781,
+        "ground_recall": 0.6272
+      },
+      "baybridge": {
+        "distinct_points_in_a_crop_median": 19151,
+        "water_recall": 0.0195,
+        "water_precision": 0.6285,
+        "ground_recall": null
+      }
+    }
+  },
+  "verdict": {
+    "water_recall_full": {
+      "embarcadero": 0.022,
+      "baybridge": 0.0034
+    },
+    "water_recall_thinned": {
+      "embarcadero": 0.0822,
+      "baybridge": 0.0195
+    },
+    "ground_recall_full": {
+      "embarcadero": 0.7098,
+      "baybridge": null
+    },
+    "ground_recall_thinned": {
+      "embarcadero": 0.6272,
+      "baybridge": null
+    },
+    "control_holds": true,
+    "control_note": "ground recall after thinning has to stay within a fifth of what it was, or the thinning broke the input and the water reading means nothing"
+  },
+  "seconds": 70.1
+}

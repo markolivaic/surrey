@@ -1,0 +1,66 @@
+{
+  "area": "FIXTURE",
+  "fixture": true,
+  "note": "FIXTURE: synthetic points and random confidences, not data",
+  "points": 64000,
+  "variants": [
+    "returns_ood",
+    "ret0",
+    "m0_seedA"
+  ],
+  "encoding": "BROTLI",
+  "city": "fixture",
+  "dales_labels_included": false,
+  "slots": [
+    {
+      "variant": "returns_ood",
+      "fields": [
+        "classification",
+        "user data"
+      ]
+    },
+    {
+      "variant": "ret0",
+      "fields": [
+        "intensity"
+      ]
+    },
+    {
+      "variant": "m0_seedA",
+      "fields": [
+        "point source id"
+      ]
+    }
+  ],
+  "classes_present": {
+    "returns_ood": {
+      "0": 40000,
+      "1": 12000,
+      "12": 12000
+    },
+    "ret0": {
+      "0": 40000,
+      "1": 12000,
+      "12": 12000
+    },
+    "m0_seedA": {
+      "0": 40000,
+      "1": 12000,
+      "12": 12000
+    }
+  },
+  "files": {
+    "hierarchy.bin": {
+      "bytes": 2002,
+      "sha256": "41fdc993b93ca4ee6d30eb53072c00c51d443c2cdfc4e6f7bfc7804cfa5a58d3"
+    },
+    "metadata.json": {
+      "bytes": 2632,
+      "sha256": "e797438ea37fa2cf8f3ac31a9351360389418b45596bc0f5e8b03d2aaacf331a"
+    },
+    "octree.bin": {
+      "bytes": 426550,
+      "sha256": "16a24cb76c1afe62053fdcc9ae82acf82f5a63484014fb96ff5cf3b15832fa1a"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "what": "points drawn against pixels the cloud covers, per framing, light theme, 1440 by 900, whole viewport",
+  "budget": 1000000,
+  "rows": {
+    "sunset_wide": {
+      "area": "sunset",
+      "framing": "wide",
+      "points_drawn": 795108,
+      "pixels_covered": 228760,
+      "device_pixel_ratio": 1,
+      "points_per_covered_pixel": 3.476
+    },
+    "sunset_mid": {
+      "area": "sunset",
+      "framing": "mid",
+      "points_drawn": 995252,
+      "pixels_covered": 771980,
+      "device_pixel_ratio": 1,
+      "points_per_covered_pixel": 1.289
+    },
+    "sunset_cards": {
+      "area": "sunset",
+      "framing": "cards",
+      "points_drawn": 999358,
+      "pixels_covered": 761018,
+      "device_pixel_ratio": 1,
+      "points_per_covered_pixel": 1.313
+    },
+    "ggpark_cards": {
+      "area": "ggpark",
+      "framing": "cards",
+      "points_drawn": 998711,
+      "pixels_covered": 786182,
+      "device_pixel_ratio": 1,
+      "points_per_covered_pixel": 1.27
+    }
+  }
+}

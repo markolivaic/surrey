@@ -1,0 +1,1043 @@
+{
+  "areas": {
+    "embarcadero": {
+      "points": 4458544,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": 0.0,
+        "north_m": 0.0,
+        "method": "unregistered"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 46750,
+          "metadata.json": 3005,
+          "octree.bin": 38228874
+        },
+        "bytes": 38278629,
+        "seconds": 4.2,
+        "bytes_per_point": 8.585
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 3639867,
+          "1": 1306,
+          "3": 27624,
+          "4": 9092,
+          "5": 965,
+          "9": 10281,
+          "10": 565,
+          "11": 4930,
+          "13": 763914
+        },
+        "ret0": {
+          "0": 3115223,
+          "1": 234910,
+          "2": 10583,
+          "3": 21166,
+          "4": 67368,
+          "5": 86922,
+          "6": 8063,
+          "7": 18383,
+          "8": 6233,
+          "9": 32386,
+          "10": 4648,
+          "11": 34492,
+          "12": 743,
+          "13": 816441,
+          "14": 983
+        },
+        "m0_seedA": {
+          "0": 2863149,
+          "1": 199718,
+          "2": 11642,
+          "3": 10799,
+          "4": 109715,
+          "5": 59047,
+          "6": 6930,
+          "7": 18549,
+          "8": 8299,
+          "9": 33520,
+          "10": 3515,
+          "11": 48212,
+          "12": 809,
+          "13": 1083633,
+          "14": 1007
+        },
+        "m1_seedA": {
+          "0": 2285162,
+          "1": 139109,
+          "2": 7087,
+          "3": 10239,
+          "4": 39624,
+          "5": 131076,
+          "6": 4630,
+          "7": 11588,
+          "8": 13273,
+          "9": 10586,
+          "10": 654,
+          "11": 7202,
+          "12": 26414,
+          "13": 1037194,
+          "14": 937,
+          "15": 27650,
+          "16": 706119
+        }
+      },
+      "position": {
+        "attributes_requested": [
+          "gps-time"
+        ],
+        "attributes_written": [
+          "position",
+          "gps-time"
+        ],
+        "files": {
+          "hierarchy.bin": 46750,
+          "metadata.json": 1091,
+          "octree.bin": 12543859
+        },
+        "bytes": 12591700,
+        "seconds": 3.1,
+        "bytes_per_point": 2.824
+      },
+      "position_rgb": {
+        "attributes_requested": [
+          "rgb"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb"
+        ],
+        "files": {
+          "hierarchy.bin": 46750,
+          "metadata.json": 1129,
+          "octree.bin": 20053216
+        },
+        "bytes": 20101095,
+        "seconds": 3.0,
+        "bytes_per_point": 4.508
+      },
+      "marginal_bytes_per_point": {
+        "position": 2.824,
+        "rgb": 1.684,
+        "per_variant_class_and_confidence": 1.019
+      }
+    },
+    "ggpark": {
+      "points": 9012919,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": 3.288,
+        "north_m": -1.92,
+        "method": "ncc"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 88924,
+          "metadata.json": 3002,
+          "octree.bin": 78455127
+        },
+        "bytes": 78547053,
+        "seconds": 11.1,
+        "bytes_per_point": 8.715
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 4233270,
+          "1": 91,
+          "3": 4829,
+          "4": 26686,
+          "5": 302,
+          "9": 2793,
+          "10": 173,
+          "11": 15033,
+          "13": 4729742
+        },
+        "ret0": {
+          "0": 3170872,
+          "1": 2051705,
+          "2": 786,
+          "3": 9309,
+          "4": 7456,
+          "5": 3591888,
+          "6": 79,
+          "7": 1635,
+          "8": 6206,
+          "9": 26327,
+          "10": 31981,
+          "11": 34679,
+          "12": 12421,
+          "13": 66972,
+          "14": 603
+        },
+        "m0_seedA": {
+          "0": 3210725,
+          "1": 2259359,
+          "2": 625,
+          "3": 9388,
+          "4": 12905,
+          "5": 3259288,
+          "6": 122,
+          "7": 937,
+          "8": 11718,
+          "9": 27300,
+          "10": 32777,
+          "11": 62841,
+          "12": 15916,
+          "13": 108121,
+          "14": 897
+        },
+        "m1_seedA": {
+          "0": 2801221,
+          "1": 1981926,
+          "2": 364,
+          "3": 6106,
+          "4": 3904,
+          "5": 3722176,
+          "6": 92,
+          "7": 1620,
+          "8": 1429,
+          "9": 14878,
+          "10": 721,
+          "11": 2128,
+          "12": 121507,
+          "13": 120541,
+          "14": 140,
+          "15": 172416,
+          "16": 61750
+        }
+      },
+      "position": {
+        "attributes_requested": [
+          "gps-time"
+        ],
+        "attributes_written": [
+          "position",
+          "gps-time"
+        ],
+        "files": {
+          "hierarchy.bin": 88924,
+          "metadata.json": 1085,
+          "octree.bin": 26935055
+        },
+        "bytes": 27025064,
+        "seconds": 9.1,
+        "bytes_per_point": 2.998
+      },
+      "position_rgb": {
+        "attributes_requested": [
+          "rgb"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb"
+        ],
+        "files": {
+          "hierarchy.bin": 88924,
+          "metadata.json": 1127,
+          "octree.bin": 40810707
+        },
+        "bytes": 40900758,
+        "seconds": 9.2,
+        "bytes_per_point": 4.538
+      },
+      "marginal_bytes_per_point": {
+        "position": 2.998,
+        "rgb": 1.54,
+        "per_variant_class_and_confidence": 1.044
+      }
+    },
+    "5135_54430": {
+      "points": 9843150,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": null,
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 71170,
+          "metadata.json": 2863,
+          "octree.bin": 63628611
+        },
+        "bytes": 63702644,
+        "seconds": 8.2,
+        "bytes_per_point": 6.472
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 4683722,
+          "1": 478655,
+          "2": 77044,
+          "3": 3487,
+          "4": 106641,
+          "5": 2770904,
+          "6": 29482,
+          "7": 10739,
+          "8": 3087,
+          "9": 1790,
+          "10": 3915,
+          "11": 3755,
+          "12": 1443164,
+          "13": 184345,
+          "14": 42420
+        },
+        "ret0": {
+          "0": 4683722,
+          "1": 478655,
+          "2": 77044,
+          "3": 3487,
+          "4": 106641,
+          "5": 2770904,
+          "6": 29482,
+          "7": 10739,
+          "8": 3087,
+          "9": 1790,
+          "10": 3915,
+          "11": 3755,
+          "12": 1443164,
+          "13": 184345,
+          "14": 42420
+        },
+        "m0_seedA": {
+          "0": 4680603,
+          "1": 503921,
+          "2": 73654,
+          "3": 2661,
+          "4": 102688,
+          "5": 2757986,
+          "6": 30944,
+          "7": 13523,
+          "8": 3443,
+          "9": 1456,
+          "10": 4435,
+          "11": 5187,
+          "12": 1433350,
+          "13": 184847,
+          "14": 44452
+        },
+        "m1_seedA": {
+          "0": 4612192,
+          "1": 581189,
+          "2": 87693,
+          "3": 1484,
+          "4": 94208,
+          "5": 2721024,
+          "6": 13665,
+          "7": 10094,
+          "8": 2172,
+          "9": 2920,
+          "10": 566,
+          "11": 959,
+          "12": 1454493,
+          "13": 235707,
+          "14": 17188,
+          "15": 6759,
+          "16": 837
+        }
+      }
+    },
+    "baybridge": {
+      "points": 3069047,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": null,
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 34628,
+          "metadata.json": 2995,
+          "octree.bin": 25148074
+        },
+        "bytes": 25185697,
+        "seconds": 4.2,
+        "bytes_per_point": 8.206
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 2322844,
+          "1": 29,
+          "3": 31478,
+          "4": 113,
+          "5": 516,
+          "9": 14803,
+          "10": 71,
+          "11": 543,
+          "13": 698650
+        },
+        "ret0": {
+          "0": 2281007,
+          "1": 28994,
+          "2": 117,
+          "3": 25552,
+          "4": 2530,
+          "5": 16256,
+          "6": 394,
+          "7": 5204,
+          "8": 201,
+          "9": 41757,
+          "10": 1103,
+          "11": 2399,
+          "12": 49,
+          "13": 663100,
+          "14": 384
+        },
+        "m0_seedA": {
+          "0": 2271722,
+          "1": 28097,
+          "2": 332,
+          "3": 5753,
+          "4": 4808,
+          "5": 24115,
+          "6": 36,
+          "7": 2271,
+          "8": 602,
+          "9": 44874,
+          "10": 1446,
+          "11": 2187,
+          "12": 36,
+          "13": 682397,
+          "14": 371
+        },
+        "m1_seedA": {
+          "0": 1956030,
+          "1": 10111,
+          "2": 1,
+          "3": 7509,
+          "4": 2347,
+          "5": 6429,
+          "6": 3,
+          "7": 24,
+          "8": 151,
+          "9": 7661,
+          "10": 65,
+          "11": 1065,
+          "12": 23540,
+          "13": 740240,
+          "15": 21692,
+          "16": 292179
+        }
+      }
+    },
+    "financial": {
+      "points": 7630301,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": 0.015,
+        "north_m": -0.366,
+        "method": "phase"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 97218,
+          "metadata.json": 2983,
+          "octree.bin": 65207208
+        },
+        "bytes": 65307409,
+        "seconds": 7.1,
+        "bytes_per_point": 8.559
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 3397238,
+          "1": 424,
+          "3": 737717,
+          "4": 17192,
+          "5": 8361,
+          "9": 67461,
+          "10": 4669,
+          "11": 14727,
+          "13": 3382512
+        },
+        "ret0": {
+          "0": 2403403,
+          "1": 497252,
+          "2": 22214,
+          "3": 554855,
+          "4": 167879,
+          "5": 238549,
+          "6": 22211,
+          "7": 58962,
+          "8": 10267,
+          "9": 271615,
+          "10": 16081,
+          "11": 137601,
+          "12": 1925,
+          "13": 3218922,
+          "14": 8565
+        },
+        "m0_seedA": {
+          "0": 2136633,
+          "1": 482461,
+          "2": 24943,
+          "3": 355506,
+          "4": 144351,
+          "5": 318959,
+          "6": 17780,
+          "7": 47215,
+          "8": 11896,
+          "9": 480809,
+          "10": 54752,
+          "11": 182948,
+          "12": 1472,
+          "13": 3364807,
+          "14": 5769
+        },
+        "m1_seedA": {
+          "0": 1780567,
+          "1": 352858,
+          "2": 23527,
+          "3": 340276,
+          "4": 103548,
+          "5": 340053,
+          "6": 7555,
+          "7": 24781,
+          "8": 13555,
+          "9": 37118,
+          "10": 53566,
+          "11": 14412,
+          "12": 49634,
+          "13": 4142880,
+          "14": 2252,
+          "15": 28792,
+          "16": 314927
+        }
+      }
+    },
+    "mission": {
+      "points": 4536209,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": -1.488,
+        "north_m": -1.584,
+        "method": "ncc"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 53262,
+          "metadata.json": 3001,
+          "octree.bin": 40254414
+        },
+        "bytes": 40310677,
+        "seconds": 5.1,
+        "bytes_per_point": 8.886
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 3459004,
+          "1": 243,
+          "3": 7509,
+          "4": 14756,
+          "9": 909,
+          "10": 356,
+          "11": 8129,
+          "13": 1045303
+        },
+        "ret0": {
+          "0": 2384722,
+          "1": 571145,
+          "2": 57085,
+          "3": 4190,
+          "4": 128548,
+          "5": 264258,
+          "6": 23166,
+          "7": 66450,
+          "8": 14278,
+          "9": 2853,
+          "10": 4793,
+          "11": 24848,
+          "12": 48451,
+          "13": 924201,
+          "14": 17221
+        },
+        "m0_seedA": {
+          "0": 2195731,
+          "1": 613636,
+          "2": 57200,
+          "3": 5064,
+          "4": 129372,
+          "5": 203876,
+          "6": 23636,
+          "7": 69955,
+          "8": 15399,
+          "9": 2639,
+          "10": 3689,
+          "11": 37007,
+          "12": 52034,
+          "13": 1110744,
+          "14": 16227
+        },
+        "m1_seedA": {
+          "0": 2108338,
+          "1": 455298,
+          "2": 57367,
+          "3": 4198,
+          "4": 97583,
+          "5": 376841,
+          "6": 15534,
+          "7": 43217,
+          "8": 17787,
+          "9": 5139,
+          "10": 347,
+          "11": 7292,
+          "12": 152326,
+          "13": 993595,
+          "14": 5929,
+          "15": 45386,
+          "16": 150032
+        }
+      }
+    },
+    "soma": {
+      "points": 4527700,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": 0.071,
+        "north_m": -0.585,
+        "method": "phase"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 59576,
+          "metadata.json": 2999,
+          "octree.bin": 40166976
+        },
+        "bytes": 40229551,
+        "seconds": 5.1,
+        "bytes_per_point": 8.885
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 3240457,
+          "1": 259,
+          "3": 4722,
+          "4": 9179,
+          "9": 1234,
+          "10": 398,
+          "11": 6127,
+          "13": 1265324
+        },
+        "ret0": {
+          "0": 2414554,
+          "1": 443646,
+          "2": 46743,
+          "3": 2409,
+          "4": 133190,
+          "5": 248455,
+          "6": 11765,
+          "7": 33513,
+          "8": 4282,
+          "9": 12607,
+          "10": 6027,
+          "11": 34503,
+          "12": 11223,
+          "13": 1119672,
+          "14": 5111
+        },
+        "m0_seedA": {
+          "0": 2216581,
+          "1": 468575,
+          "2": 46710,
+          "3": 2949,
+          "4": 129450,
+          "5": 217766,
+          "6": 12331,
+          "7": 31099,
+          "8": 7135,
+          "9": 14567,
+          "10": 4578,
+          "11": 43769,
+          "12": 7366,
+          "13": 1321530,
+          "14": 3294
+        },
+        "m1_seedA": {
+          "0": 1983399,
+          "1": 358504,
+          "2": 40788,
+          "3": 2082,
+          "4": 78816,
+          "5": 294509,
+          "6": 7390,
+          "7": 15531,
+          "8": 6784,
+          "9": 7204,
+          "10": 298,
+          "11": 6064,
+          "12": 42711,
+          "13": 1501150,
+          "14": 973,
+          "15": 34808,
+          "16": 146689
+        }
+      }
+    },
+    "steep": {
+      "points": 5427902,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": -1.104,
+        "north_m": -1.944,
+        "method": "ncc"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 61908,
+          "metadata.json": 2986,
+          "octree.bin": 49179289
+        },
+        "bytes": 49244183,
+        "seconds": 6.1,
+        "bytes_per_point": 9.072
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 3359083,
+          "1": 841,
+          "3": 8208,
+          "4": 24178,
+          "5": 13,
+          "9": 907,
+          "10": 241,
+          "11": 10954,
+          "13": 2023477
+        },
+        "ret0": {
+          "0": 1950007,
+          "1": 1022595,
+          "2": 55924,
+          "3": 6445,
+          "4": 224675,
+          "5": 218248,
+          "6": 10428,
+          "7": 26591,
+          "8": 7242,
+          "9": 13043,
+          "10": 6620,
+          "11": 77042,
+          "12": 21252,
+          "13": 1776542,
+          "14": 11248
+        },
+        "m0_seedA": {
+          "0": 1778841,
+          "1": 1033818,
+          "2": 52644,
+          "3": 7536,
+          "4": 196368,
+          "5": 187750,
+          "6": 10411,
+          "7": 28424,
+          "8": 15862,
+          "9": 14894,
+          "10": 5185,
+          "11": 110976,
+          "12": 22161,
+          "13": 1955226,
+          "14": 7806
+        },
+        "m1_seedA": {
+          "0": 1657611,
+          "1": 785139,
+          "2": 52446,
+          "3": 6017,
+          "4": 197666,
+          "5": 397198,
+          "6": 8180,
+          "7": 19151,
+          "8": 9563,
+          "9": 9945,
+          "10": 282,
+          "11": 11251,
+          "12": 67807,
+          "13": 2090057,
+          "14": 2672,
+          "15": 11174,
+          "16": 101743
+        }
+      }
+    },
+    "sunset": {
+      "points": 5466462,
+      "variants": [
+        "returns_ood",
+        "ret0",
+        "m0_seedA",
+        "m1_seedA"
+      ],
+      "naip_offset_m": {
+        "east_m": 1.944,
+        "north_m": -0.84,
+        "method": "ncc"
+      },
+      "full": {
+        "attributes_requested": [
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "attributes_written": [
+          "position",
+          "rgb",
+          "classification",
+          "user data",
+          "intensity",
+          "point source id",
+          "scan angle"
+        ],
+        "files": {
+          "hierarchy.bin": 52228,
+          "metadata.json": 2999,
+          "octree.bin": 48317548
+        },
+        "bytes": 48372775,
+        "seconds": 5.1,
+        "bytes_per_point": 8.849
+      },
+      "classes_present": {
+        "returns_ood": {
+          "0": 4586248,
+          "1": 60,
+          "3": 7620,
+          "4": 19135,
+          "5": 16,
+          "9": 1208,
+          "10": 240,
+          "11": 7614,
+          "13": 844321
+        },
+        "ret0": {
+          "0": 3005184,
+          "1": 889897,
+          "2": 74209,
+          "3": 7016,
+          "4": 216978,
+          "5": 168652,
+          "6": 16110,
+          "7": 27963,
+          "8": 7142,
+          "9": 1401,
+          "10": 4787,
+          "11": 30093,
+          "12": 7975,
+          "13": 997765,
+          "14": 11290
+        },
+        "m0_seedA": {
+          "0": 2785408,
+          "1": 841196,
+          "2": 73689,
+          "3": 7293,
+          "4": 277092,
+          "5": 147525,
+          "6": 16455,
+          "7": 28104,
+          "8": 11427,
+          "9": 1623,
+          "10": 3548,
+          "11": 48975,
+          "12": 7184,
+          "13": 1206890,
+          "14": 10053
+        },
+        "m1_seedA": {
+          "0": 2609468,
+          "1": 839737,
+          "2": 68226,
+          "3": 3711,
+          "4": 173373,
+          "5": 295149,
+          "6": 22315,
+          "7": 21965,
+          "8": 12798,
+          "9": 5500,
+          "10": 320,
+          "11": 10897,
+          "12": 55343,
+          "13": 1096659,
+          "14": 2477,
+          "15": 14092,
+          "16": 234432
+        }
+      }
+    }
+  },
+  "converter": "PotreeConverter 2.1.3, BSD-2-Clause, --encoding BROTLI",
+  "costing_note": "position is measured with the constant LAS gps time field, the smallest attribute list the converter accepts; each marginal figure is the difference between two whole conversions",
+  "total_bytes": 449178618
+}

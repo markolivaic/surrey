@@ -1,0 +1,135 @@
+{
+  "question": "how much San Francisco fits in a repository with no backend",
+  "converter": "PotreeConverter 2.1.3, BSD-2-Clause",
+  "measured_on": "data/target/sf/mission.laz",
+  "variants": [
+    {
+      "variant": "full attributes, uncompressed",
+      "points": 6969036,
+      "laz_bytes": 30671809,
+      "encoding": "DEFAULT",
+      "attributes": [
+        "position",
+        "intensity",
+        "return number",
+        "number of returns",
+        "classification flags",
+        "classification",
+        "user data",
+        "scan angle",
+        "point source id",
+        "gps-time"
+      ],
+      "attribute_count": 10,
+      "octree_bytes": 216102832,
+      "bytes_per_point": 31.009,
+      "seconds": 4.2
+    },
+    {
+      "variant": "full attributes, brotli",
+      "points": 6969036,
+      "laz_bytes": 30671809,
+      "encoding": "BROTLI",
+      "attributes": [
+        "position",
+        "intensity",
+        "return number",
+        "number of returns",
+        "classification flags",
+        "classification",
+        "user data",
+        "scan angle",
+        "point source id",
+        "gps-time"
+      ],
+      "attribute_count": 10,
+      "octree_bytes": 41565442,
+      "bytes_per_point": 5.964,
+      "seconds": 7.1
+    },
+    {
+      "variant": "position and class only, brotli",
+      "points": 6969036,
+      "laz_bytes": 19402629,
+      "encoding": "BROTLI",
+      "attributes": [
+        "position",
+        "intensity",
+        "return number",
+        "number of returns",
+        "classification",
+        "scan angle rank",
+        "user data",
+        "point source id"
+      ],
+      "attribute_count": 8,
+      "octree_bytes": 28246153,
+      "bytes_per_point": 4.053,
+      "seconds": 6.1
+    }
+  ],
+  "best_bytes_per_point": 4.053,
+  "best_variant": "position and class only, brotli",
+  "budget": [
+    {
+      "budget_mb": 100,
+      "points": 24673081,
+      "extents": {
+        "50_pts_per_m2": {
+          "side_m": 702.0,
+          "area_km2": 0.493
+        },
+        "20_pts_per_m2": {
+          "side_m": 1111.0,
+          "area_km2": 1.234
+        },
+        "10_pts_per_m2": {
+          "side_m": 1571.0,
+          "area_km2": 2.467
+        }
+      }
+    },
+    {
+      "budget_mb": 250,
+      "points": 61682704,
+      "extents": {
+        "50_pts_per_m2": {
+          "side_m": 1111.0,
+          "area_km2": 1.234
+        },
+        "20_pts_per_m2": {
+          "side_m": 1756.0,
+          "area_km2": 3.084
+        },
+        "10_pts_per_m2": {
+          "side_m": 2484.0,
+          "area_km2": 6.168
+        }
+      }
+    },
+    {
+      "budget_mb": 500,
+      "points": 123365408,
+      "extents": {
+        "50_pts_per_m2": {
+          "side_m": 1571.0,
+          "area_km2": 2.467
+        },
+        "20_pts_per_m2": {
+          "side_m": 2484.0,
+          "area_km2": 6.168
+        },
+        "10_pts_per_m2": {
+          "side_m": 3512.0,
+          "area_km2": 12.337
+        }
+      }
+    }
+  ],
+  "notes": [
+    "the default encoding is uncompressed and costs about five times brotli",
+    "a LAS point format carries gps time, scan angle and point source id, none of which the viewer reads",
+    "display density is a free choice and each halving doubles the ground the same budget covers"
+  ],
+  "seconds": 17.4
+}

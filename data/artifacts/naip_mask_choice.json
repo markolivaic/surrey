@@ -1,0 +1,192 @@
+{
+  "question": "which NAIP vegetation mask is the reference, decided without predictions",
+  "criterion": "share of points with number_of_returns > 1, higher in vegetation cores and lower in non-vegetation cores",
+  "undecided_rule": "headline takes the lower of the two model figures; both stay in the table",
+  "areas": [
+    {
+      "aoi": "baybridge",
+      "preparation_seed_recovered": 1,
+      "offset_applied": {
+        "east_m": 0.0,
+        "north_m": 0.0,
+        "method": "none"
+      },
+      "unregistered": {
+        "vegetation_core_points": 0,
+        "not_vegetation_core_points": 132710,
+        "multi_return_share_vegetation_core": null,
+        "multi_return_share_not_vegetation_core": 0.161
+      },
+      "registered": {
+        "vegetation_core_points": 0,
+        "not_vegetation_core_points": 132710,
+        "multi_return_share_vegetation_core": null,
+        "multi_return_share_not_vegetation_core": 0.161
+      },
+      "decision": "masks identical, no decision needed",
+      "reference": "unregistered"
+    },
+    {
+      "aoi": "embarcadero",
+      "preparation_seed_recovered": 2,
+      "offset_applied": {
+        "east_m": 0.0,
+        "north_m": 0.0,
+        "method": "unregistered"
+      },
+      "unregistered": {
+        "vegetation_core_points": 29376,
+        "not_vegetation_core_points": 630362,
+        "multi_return_share_vegetation_core": 0.8705,
+        "multi_return_share_not_vegetation_core": 0.1909
+      },
+      "registered": {
+        "vegetation_core_points": 29376,
+        "not_vegetation_core_points": 630362,
+        "multi_return_share_vegetation_core": 0.8705,
+        "multi_return_share_not_vegetation_core": 0.1909
+      },
+      "decision": "masks identical, no decision needed",
+      "reference": "unregistered"
+    },
+    {
+      "aoi": "financial",
+      "preparation_seed_recovered": 3,
+      "offset_applied": {
+        "east_m": 0.015,
+        "north_m": -0.366,
+        "method": "phase"
+      },
+      "unregistered": {
+        "vegetation_core_points": 28170,
+        "not_vegetation_core_points": 1808939,
+        "multi_return_share_vegetation_core": 0.6383,
+        "multi_return_share_not_vegetation_core": 0.365
+      },
+      "registered": {
+        "vegetation_core_points": 28027,
+        "not_vegetation_core_points": 1808868,
+        "multi_return_share_vegetation_core": 0.6308,
+        "multi_return_share_not_vegetation_core": 0.3644
+      },
+      "decision": "criterion does not decide: headline takes the lower model figure",
+      "reference": "lower_of_two"
+    },
+    {
+      "aoi": "ggpark",
+      "preparation_seed_recovered": 4,
+      "offset_applied": {
+        "east_m": 3.288,
+        "north_m": -1.92,
+        "method": "ncc"
+      },
+      "unregistered": {
+        "vegetation_core_points": 3153386,
+        "not_vegetation_core_points": 13847,
+        "multi_return_share_vegetation_core": 0.8723,
+        "multi_return_share_not_vegetation_core": 0.7854
+      },
+      "registered": {
+        "vegetation_core_points": 3073951,
+        "not_vegetation_core_points": 29191,
+        "multi_return_share_vegetation_core": 0.8753,
+        "multi_return_share_not_vegetation_core": 0.872
+      },
+      "decision": "criterion does not decide: headline takes the lower model figure",
+      "reference": "lower_of_two"
+    },
+    {
+      "aoi": "mission",
+      "preparation_seed_recovered": 5,
+      "offset_applied": {
+        "east_m": -1.488,
+        "north_m": -1.584,
+        "method": "ncc"
+      },
+      "unregistered": {
+        "vegetation_core_points": 127547,
+        "not_vegetation_core_points": 1272733,
+        "multi_return_share_vegetation_core": 0.5874,
+        "multi_return_share_not_vegetation_core": 0.1568
+      },
+      "registered": {
+        "vegetation_core_points": 119540,
+        "not_vegetation_core_points": 1301036,
+        "multi_return_share_vegetation_core": 0.5904,
+        "multi_return_share_not_vegetation_core": 0.1714
+      },
+      "decision": "criterion does not decide: headline takes the lower model figure",
+      "reference": "lower_of_two"
+    },
+    {
+      "aoi": "soma",
+      "preparation_seed_recovered": 6,
+      "offset_applied": {
+        "east_m": 0.071,
+        "north_m": -0.585,
+        "method": "phase"
+      },
+      "unregistered": {
+        "vegetation_core_points": 108478,
+        "not_vegetation_core_points": 1448040,
+        "multi_return_share_vegetation_core": 0.4354,
+        "multi_return_share_not_vegetation_core": 0.1735
+      },
+      "registered": {
+        "vegetation_core_points": 107179,
+        "not_vegetation_core_points": 1448075,
+        "multi_return_share_vegetation_core": 0.4367,
+        "multi_return_share_not_vegetation_core": 0.1735
+      },
+      "decision": "criterion does not decide: headline takes the lower model figure",
+      "reference": "lower_of_two"
+    },
+    {
+      "aoi": "steep",
+      "preparation_seed_recovered": 7,
+      "offset_applied": {
+        "east_m": -1.104,
+        "north_m": -1.944,
+        "method": "ncc"
+      },
+      "unregistered": {
+        "vegetation_core_points": 85894,
+        "not_vegetation_core_points": 2244818,
+        "multi_return_share_vegetation_core": 0.5408,
+        "multi_return_share_not_vegetation_core": 0.2099
+      },
+      "registered": {
+        "vegetation_core_points": 76715,
+        "not_vegetation_core_points": 2290577,
+        "multi_return_share_vegetation_core": 0.5706,
+        "multi_return_share_not_vegetation_core": 0.2241
+      },
+      "decision": "criterion does not decide: headline takes the lower model figure",
+      "reference": "lower_of_two"
+    },
+    {
+      "aoi": "sunset",
+      "preparation_seed_recovered": 8,
+      "offset_applied": {
+        "east_m": 1.944,
+        "north_m": -0.84,
+        "method": "ncc"
+      },
+      "unregistered": {
+        "vegetation_core_points": 84273,
+        "not_vegetation_core_points": 1414141,
+        "multi_return_share_vegetation_core": 0.7248,
+        "multi_return_share_not_vegetation_core": 0.1583
+      },
+      "registered": {
+        "vegetation_core_points": 68070,
+        "not_vegetation_core_points": 1430637,
+        "multi_return_share_vegetation_core": 0.7517,
+        "multi_return_share_not_vegetation_core": 0.1735
+      },
+      "decision": "criterion does not decide: headline takes the lower model figure",
+      "reference": "lower_of_two"
+    }
+  ],
+  "seconds": 66.5
+}

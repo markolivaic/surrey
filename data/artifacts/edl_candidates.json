@@ -1,0 +1,341 @@
+{
+  "what": "eye-dome lighting on the live page, per scene and strength",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "repeats": 3,
+  "fps_threshold": 30.0,
+  "rows": {
+    "edl_sunset_mid_0": {
+      "scene": "sunset_mid",
+      "strength": 0.0,
+      "themes": {
+        "light": {
+          "shade_median": 1.0,
+          "shade_darkest_tenth": 1.0,
+          "grain": 0.1755,
+          "square": 0.1707,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 3.63,
+              "deuteranopia": 3.64,
+              "protanopia": 3.36
+            },
+            "min_contrast_rule": 3.0
+          }
+        },
+        "dark": {
+          "shade_median": 1.0,
+          "shade_darkest_tenth": 1.0,
+          "contrast_fails_below_shade": 0.927,
+          "share_of_pixels_below_it": 0.0,
+          "grain": 0.1752,
+          "square": 0.1707,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 3.6,
+              "deuteranopia": 3.37,
+              "protanopia": 3.81
+            },
+            "min_contrast_rule": 3.0
+          }
+        }
+      },
+      "fps": {
+        "orbit_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "scroll_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "orbit_passes": true,
+        "scroll_passes": true
+      }
+    },
+    "edl_sunset_mid_0.3": {
+      "scene": "sunset_mid",
+      "strength": 0.3,
+      "themes": {
+        "light": {
+          "shade_median": 0.9185,
+          "shade_darkest_tenth": 0.2857,
+          "grain": 0.1755,
+          "square": 0.1707,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 4.18,
+              "deuteranopia": 4.19,
+              "protanopia": 3.88
+            },
+            "min_contrast_rule": 3.0
+          }
+        },
+        "dark": {
+          "shade_median": 0.9167,
+          "shade_darkest_tenth": 0.2795,
+          "contrast_fails_below_shade": 0.927,
+          "share_of_pixels_below_it": 0.5271,
+          "grain": 0.1782,
+          "square": 0.1734,
+          "rules_at_median_shade": {
+            "failures": [
+              "R1 deuteranopia: contrast 2.95"
+            ],
+            "contrast_min": {
+              "normal": 3.13,
+              "deuteranopia": 2.95,
+              "protanopia": 3.31
+            },
+            "min_contrast_rule": 3.0
+          }
+        }
+      },
+      "fps": {
+        "orbit_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "scroll_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "orbit_passes": true,
+        "scroll_passes": true
+      }
+    },
+    "edl_sunset_mid_0.6": {
+      "scene": "sunset_mid",
+      "strength": 0.6,
+      "themes": {
+        "light": {
+          "shade_median": 0.8448,
+          "shade_darkest_tenth": 0.0823,
+          "grain": 0.1755,
+          "square": 0.1707,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 4.77,
+              "deuteranopia": 4.78,
+              "protanopia": 4.44
+            },
+            "min_contrast_rule": 3.0
+          }
+        },
+        "dark": {
+          "shade_median": 0.8402,
+          "shade_darkest_tenth": 0.0786,
+          "contrast_fails_below_shade": 0.927,
+          "share_of_pixels_below_it": 0.6302,
+          "grain": 0.1788,
+          "square": 0.1738,
+          "rules_at_median_shade": {
+            "failures": [
+              "R1 normal: contrast 2.75",
+              "R1 deuteranopia: contrast 2.60",
+              "R1 protanopia: contrast 2.90"
+            ],
+            "contrast_min": {
+              "normal": 2.75,
+              "deuteranopia": 2.6,
+              "protanopia": 2.9
+            },
+            "min_contrast_rule": 3.0
+          }
+        }
+      },
+      "fps": {
+        "orbit_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "scroll_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "orbit_passes": true,
+        "scroll_passes": true
+      }
+    },
+    "edl_ggpark_cards_0": {
+      "scene": "ggpark_cards",
+      "strength": 0.0,
+      "themes": {
+        "light": {
+          "shade_median": 1.0,
+          "shade_darkest_tenth": 1.0,
+          "grain": 0.1101,
+          "square": 0.1073,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 3.63,
+              "deuteranopia": 3.64,
+              "protanopia": 3.36
+            },
+            "min_contrast_rule": 3.0
+          }
+        },
+        "dark": {
+          "shade_median": 1.0,
+          "shade_darkest_tenth": 1.0,
+          "contrast_fails_below_shade": 0.927,
+          "share_of_pixels_below_it": 0.0,
+          "grain": 0.1099,
+          "square": 0.1073,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 3.6,
+              "deuteranopia": 3.37,
+              "protanopia": 3.81
+            },
+            "min_contrast_rule": 3.0
+          }
+        }
+      },
+      "fps": {
+        "orbit_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "scroll_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "orbit_passes": true,
+        "scroll_passes": true
+      }
+    },
+    "edl_ggpark_cards_0.3": {
+      "scene": "ggpark_cards",
+      "strength": 0.3,
+      "themes": {
+        "light": {
+          "shade_median": 0.8774,
+          "shade_darkest_tenth": 0.0087,
+          "grain": 0.1101,
+          "square": 0.1073,
+          "rules_at_median_shade": {
+            "failures": [],
+            "contrast_min": {
+              "normal": 4.5,
+              "deuteranopia": 4.51,
+              "protanopia": 4.18
+            },
+            "min_contrast_rule": 3.0
+          }
+        },
+        "dark": {
+          "shade_median": 0.8724,
+          "shade_darkest_tenth": 0.01,
+          "contrast_fails_below_shade": 0.927,
+          "share_of_pixels_below_it": 0.5701,
+          "grain": 0.118,
+          "square": 0.1158,
+          "rules_at_median_shade": {
+            "failures": [
+              "R1 normal: contrast 2.91",
+              "R1 deuteranopia: contrast 2.74"
+            ],
+            "contrast_min": {
+              "normal": 2.91,
+              "deuteranopia": 2.74,
+              "protanopia": 3.07
+            },
+            "min_contrast_rule": 3.0
+          }
+        }
+      },
+      "fps": {
+        "orbit_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "scroll_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "orbit_passes": true,
+        "scroll_passes": true
+      }
+    },
+    "edl_ggpark_cards_0.6": {
+      "scene": "ggpark_cards",
+      "strength": 0.6,
+      "themes": {
+        "light": {
+          "shade_median": 0.7707,
+          "shade_darkest_tenth": 0.0,
+          "grain": 0.1101,
+          "square": 0.1073,
+          "rules_at_median_shade": {
+            "failures": [
+              "R3 vegetation/bridge deck deuteranopia: 9.9",
+              "R3 fence/bridge deck deuteranopia: 9.9"
+            ],
+            "contrast_min": {
+              "normal": 5.46,
+              "deuteranopia": 5.47,
+              "protanopia": 5.11
+            },
+            "min_contrast_rule": 3.0
+          }
+        },
+        "dark": {
+          "shade_median": 0.7621,
+          "shade_darkest_tenth": 0.0,
+          "contrast_fails_below_shade": 0.927,
+          "share_of_pixels_below_it": 0.6323,
+          "grain": 0.1184,
+          "square": 0.1159,
+          "rules_at_median_shade": {
+            "failures": [
+              "R1 normal: contrast 2.40",
+              "R1 deuteranopia: contrast 2.28",
+              "R1 protanopia: contrast 2.52",
+              "R3 building/vehicle deuteranopia: 9.4"
+            ],
+            "contrast_min": {
+              "normal": 2.4,
+              "deuteranopia": 2.28,
+              "protanopia": 2.52
+            },
+            "min_contrast_rule": 3.0
+          }
+        }
+      },
+      "fps": {
+        "orbit_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "scroll_median_fps": [
+          59.9,
+          59.9,
+          59.9
+        ],
+        "orbit_passes": true,
+        "scroll_passes": true
+      }
+    }
+  },
+  "console_errors": []
+}

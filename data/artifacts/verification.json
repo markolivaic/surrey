@@ -1,0 +1,75 @@
+{
+  "what": "every check in the README's verification table, as one run printed it",
+  "date": "2026-09-25",
+  "machine": "Windows 11, AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD, NVIDIA GeForce RTX 3050 Laptop GPU, Python 3.12.1",
+  "checks": [
+    {
+      "check": "behavioural tests",
+      "command": "python -m pytest tests/unit -q",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {
+        "passed": 166,
+        "functions": 160
+      },
+      "summary": "160 tests; cases 166 passed"
+    },
+    {
+      "check": "integrity tests",
+      "command": "python -m pytest tests/integrity -q",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {
+        "passed": 53,
+        "functions": 50
+      },
+      "summary": "50 tests; cases 53 passed"
+    },
+    {
+      "check": "README is generated",
+      "command": "python scripts/pipeline/render_readme.py --check",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {},
+      "summary": "passes"
+    },
+    {
+      "check": "page figures",
+      "command": "python scripts/pipeline/page_figures.py",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {},
+      "summary": "passes"
+    },
+    {
+      "check": "viewer tests",
+      "command": "npm test (in web/)",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {
+        "passed": 5,
+        "failed": 0
+      },
+      "summary": "5 passed, 0 failed"
+    },
+    {
+      "check": "viewer build",
+      "command": "npm run build (in web/)",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {},
+      "summary": "passes"
+    },
+    {
+      "check": "page smoke test",
+      "command": "python -m pytest tests/smoke -q",
+      "exit_code": 0,
+      "passes": true,
+      "counts": {
+        "passed": 1,
+        "functions": 1
+      },
+      "summary": "1 test; cases 1 passed"
+    }
+  ]
+}

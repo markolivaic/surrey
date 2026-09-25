@@ -1,0 +1,259 @@
+{
+  "question": "does the return ratio separate classes at home, and does vegetation look the same away",
+  "census": {
+    "dales_all_tiles": {
+      "points": 395996290,
+      "ratio_exactly_0": 395996290
+    },
+    "san_francisco_all_areas": {
+      "points": 44129084,
+      "ratio_exactly_0": 3
+    }
+  },
+  "why_dales_is_zero": "the DALES-2 files store return_number and number_of_returns as 0 on every point; preparation computes return_number / max(number_of_returns, 1)",
+  "bins": [
+    "[0,0.25)",
+    "[0.25,0.5)",
+    "[0.5,0.75)",
+    "[0.75,1)",
+    "1"
+  ],
+  "height_band_m": [
+    2.0,
+    25.0
+  ],
+  "surrey_held_out": {
+    "tree": {
+      "points": 26835494,
+      "shares": {
+        "[0,0.25)": 1.0,
+        "[0.25,0.5)": 0.0,
+        "[0.5,0.75)": 0.0,
+        "[0.75,1)": 0.0,
+        "1": 0.0
+      }
+    },
+    "building": {
+      "points": 14930157,
+      "shares": {
+        "[0,0.25)": 1.0,
+        "[0.25,0.5)": 0.0,
+        "[0.5,0.75)": 0.0,
+        "[0.75,1)": 0.0,
+        "1": 0.0
+      }
+    },
+    "ground": {
+      "points": 51784248,
+      "shares": {
+        "[0,0.25)": 1.0,
+        "[0.25,0.5)": 0.0,
+        "[0.5,0.75)": 0.0,
+        "[0.75,1)": 0.0,
+        "1": 0.0
+      }
+    }
+  },
+  "surrey_tvd": {
+    "tree_vs_building": 0.0,
+    "tree_vs_ground": 0.0,
+    "building_vs_ground": 0.0
+  },
+  "san_francisco_per_area": [
+    {
+      "aoi": "baybridge",
+      "naip_vegetation_core": {
+        "points": 0,
+        "shares": {}
+      },
+      "naip_not_vegetation_core": {
+        "points": 132760,
+        "shares": {
+          "[0,0.25)": 0.0008,
+          "[0.25,0.5)": 0.0937,
+          "[0.5,0.75)": 0.0077,
+          "[0.75,1)": 0.0005,
+          "1": 0.8974
+        }
+      },
+      "tvd_to_surrey_tree": null,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9992
+    },
+    {
+      "aoi": "embarcadero",
+      "naip_vegetation_core": {
+        "points": 29400,
+        "shares": {
+          "[0,0.25)": 0.0471,
+          "[0.25,0.5)": 0.5259,
+          "[0.5,0.75)": 0.176,
+          "[0.75,1)": 0.0418,
+          "1": 0.2093
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 613721,
+        "shares": {
+          "[0,0.25)": 0.0003,
+          "[0.25,0.5)": 0.1168,
+          "[0.5,0.75)": 0.0061,
+          "[0.75,1)": 0.0004,
+          "1": 0.8765
+        }
+      },
+      "tvd_to_surrey_tree": 0.9529,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9997
+    },
+    {
+      "aoi": "financial",
+      "naip_vegetation_core": {
+        "points": 28220,
+        "shares": {
+          "[0,0.25)": 0.0174,
+          "[0.25,0.5)": 0.3648,
+          "[0.5,0.75)": 0.1099,
+          "[0.75,1)": 0.019,
+          "1": 0.4891
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 1824290,
+        "shares": {
+          "[0,0.25)": 0.003,
+          "[0.25,0.5)": 0.2266,
+          "[0.5,0.75)": 0.0248,
+          "[0.75,1)": 0.0033,
+          "1": 0.7423
+        }
+      },
+      "tvd_to_surrey_tree": 0.9826,
+      "tvd_not_vegetation_core_to_surrey_building": 0.997
+    },
+    {
+      "aoi": "ggpark",
+      "naip_vegetation_core": {
+        "points": 3153939,
+        "shares": {
+          "[0,0.25)": 0.0287,
+          "[0.25,0.5)": 0.3823,
+          "[0.5,0.75)": 0.1713,
+          "[0.75,1)": 0.0747,
+          "1": 0.343
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 13846,
+        "shares": {
+          "[0,0.25)": 0.0066,
+          "[0.25,0.5)": 0.5781,
+          "[0.5,0.75)": 0.1192,
+          "[0.75,1)": 0.0192,
+          "1": 0.2769
+        }
+      },
+      "tvd_to_surrey_tree": 0.9713,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9934
+    },
+    {
+      "aoi": "mission",
+      "naip_vegetation_core": {
+        "points": 127532,
+        "shares": {
+          "[0,0.25)": 0.0146,
+          "[0.25,0.5)": 0.3148,
+          "[0.5,0.75)": 0.0839,
+          "[0.75,1)": 0.016,
+          "1": 0.5708
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 1272748,
+        "shares": {
+          "[0,0.25)": 0.0006,
+          "[0.25,0.5)": 0.1086,
+          "[0.5,0.75)": 0.0063,
+          "[0.75,1)": 0.0006,
+          "1": 0.8839
+        }
+      },
+      "tvd_to_surrey_tree": 0.9854,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9994
+    },
+    {
+      "aoi": "soma",
+      "naip_vegetation_core": {
+        "points": 108483,
+        "shares": {
+          "[0,0.25)": 0.01,
+          "[0.25,0.5)": 0.2515,
+          "[0.5,0.75)": 0.0559,
+          "[0.75,1)": 0.0103,
+          "1": 0.6723
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 1454244,
+        "shares": {
+          "[0,0.25)": 0.0008,
+          "[0.25,0.5)": 0.1112,
+          "[0.5,0.75)": 0.0072,
+          "[0.75,1)": 0.0007,
+          "1": 0.8802
+        }
+      },
+      "tvd_to_surrey_tree": 0.99,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9992
+    },
+    {
+      "aoi": "steep",
+      "naip_vegetation_core": {
+        "points": 85910,
+        "shares": {
+          "[0,0.25)": 0.017,
+          "[0.25,0.5)": 0.2941,
+          "[0.5,0.75)": 0.0635,
+          "[0.75,1)": 0.0172,
+          "1": 0.6082
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 2242362,
+        "shares": {
+          "[0,0.25)": 0.0019,
+          "[0.25,0.5)": 0.1235,
+          "[0.5,0.75)": 0.0126,
+          "[0.75,1)": 0.0017,
+          "1": 0.8604
+        }
+      },
+      "tvd_to_surrey_tree": 0.983,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9981
+    },
+    {
+      "aoi": "sunset",
+      "naip_vegetation_core": {
+        "points": 84263,
+        "shares": {
+          "[0,0.25)": 0.0389,
+          "[0.25,0.5)": 0.3932,
+          "[0.5,0.75)": 0.1047,
+          "[0.75,1)": 0.0417,
+          "1": 0.4215
+        }
+      },
+      "naip_not_vegetation_core": {
+        "points": 1416633,
+        "shares": {
+          "[0,0.25)": 0.0006,
+          "[0.25,0.5)": 0.117,
+          "[0.5,0.75)": 0.0068,
+          "[0.75,1)": 0.0005,
+          "1": 0.8751
+        }
+      },
+      "tvd_to_surrey_tree": 0.9611,
+      "tvd_not_vegetation_core_to_surrey_building": 0.9994
+    }
+  ],
+  "seconds": 5.3
+}

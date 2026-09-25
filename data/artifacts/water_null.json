@@ -1,0 +1,251 @@
+{
+  "rule": "backend/surrey/water_null.py, written before this ran",
+  "station": {
+    "id": "9414290",
+    "name": "San Francisco, CA",
+    "product": "water_level",
+    "datum": "NAVD",
+    "licence": "public domain (NOAA NOS); attribution requested"
+  },
+  "margin_m": 0.5,
+  "sensitivity_margins_m": [
+    0.25,
+    1.0
+  ],
+  "vertical_check": {
+    "files": [
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04200245.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04350250.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04500205.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04550320.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04700195.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04800225.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_04900255.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_05000285.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": -0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_05100275.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_05200285.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_05300295.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      },
+      {
+        "file": "USGS_LPC_CA_SanFrancisco_B23_05450230.json",
+        "vertical_crs": "NAVD88 height - Geoid18 (m)",
+        "header_minz_minus_ept": 0.0,
+        "header_maxz_minus_ept": 0.0
+      }
+    ],
+    "vertical_crs": [
+      "NAVD88 height - Geoid18 (m)"
+    ],
+    "worst_abs_z_difference_m": 0.0,
+    "reading": "EPT heights are the source NAVD88 heights"
+  },
+  "areas": [
+    {
+      "aoi": "embarcadero",
+      "points": 4434486,
+      "unmatched_points": 0,
+      "match_distance_p99_m": 0.0135,
+      "flight_utc_first": "2023-04-20T11:53:06+00:00",
+      "flight_utc_last": "2023-04-20T15:04:10+00:00",
+      "flight_span_minutes": 191.1,
+      "gauge_level_navd88_m": {
+        "min": -0.031,
+        "max": 0.095,
+        "median": 0.069
+      },
+      "null": {
+        "null_0_5m": {
+          "called": 2158236,
+          "water_points": 1279481,
+          "true_positive": 1277851,
+          "null_precision": 0.5921,
+          "null_recall": 0.9987,
+          "null_iou": 0.5916
+        },
+        "null_0_25m": {
+          "called": 2150701,
+          "water_points": 1279481,
+          "true_positive": 1275935,
+          "null_precision": 0.5933,
+          "null_recall": 0.9972,
+          "null_iou": 0.5923
+        },
+        "null_1_0m": {
+          "called": 2171131,
+          "water_points": 1279481,
+          "true_positive": 1279418,
+          "null_precision": 0.5893,
+          "null_recall": 1.0,
+          "null_iou": 0.5893
+        }
+      },
+      "headline_null_false_positives_by_delivery_class": {
+        "1": {
+          "points": 877168,
+          "height_minus_level_m": {
+            "p1": -0.269,
+            "p50": -0.079,
+            "p99": 0.145
+          }
+        },
+        "2": {
+          "points": 1591,
+          "height_minus_level_m": {
+            "p1": -0.245,
+            "p50": -0.135,
+            "p99": 0.341
+          }
+        },
+        "20": {
+          "points": 1626,
+          "height_minus_level_m": {
+            "p1": -0.25,
+            "p50": -0.065,
+            "p99": 0.485
+          }
+        }
+      },
+      "delivery_water_height_minus_level_m": {
+        "p1": -0.269,
+        "p50": -0.145,
+        "p99": 0.051
+      },
+      "headline_null": "null_0_5m"
+    },
+    {
+      "aoi": "baybridge",
+      "points": 3068521,
+      "unmatched_points": 0,
+      "match_distance_p99_m": 0.0135,
+      "flight_utc_first": "2023-04-20T11:45:25+00:00",
+      "flight_utc_last": "2023-04-20T15:04:21+00:00",
+      "flight_span_minutes": 198.9,
+      "gauge_level_navd88_m": {
+        "min": -0.015,
+        "max": 0.096,
+        "median": 0.025
+      },
+      "null": {
+        "null_0_5m": {
+          "called": 2347896,
+          "water_points": 1396044,
+          "true_positive": 1396043,
+          "null_precision": 0.5946,
+          "null_recall": 1.0,
+          "null_iou": 0.5946
+        },
+        "null_0_25m": {
+          "called": 2346731,
+          "water_points": 1396044,
+          "true_positive": 1396016,
+          "null_precision": 0.5949,
+          "null_recall": 1.0,
+          "null_iou": 0.5949
+        },
+        "null_1_0m": {
+          "called": 2349620,
+          "water_points": 1396044,
+          "true_positive": 1396044,
+          "null_precision": 0.5942,
+          "null_recall": 1.0,
+          "null_iou": 0.5942
+        }
+      },
+      "headline_null_false_positives_by_delivery_class": {
+        "1": {
+          "points": 951853,
+          "height_minus_level_m": {
+            "p1": -0.236,
+            "p50": 0.005,
+            "p99": 0.096
+          }
+        }
+      },
+      "delivery_water_height_minus_level_m": {
+        "p1": -0.236,
+        "p50": -0.126,
+        "p99": 0.065
+      },
+      "headline_null": "null_0_5m"
+    }
+  ],
+  "gauge": {
+    "request": {
+      "product": "water_level",
+      "station": "9414290",
+      "begin_date": "20230420 11:15",
+      "end_date": "20230420 15:34",
+      "datum": "NAVD",
+      "units": "metric",
+      "time_zone": "gmt",
+      "format": "json"
+    },
+    "readings": 43,
+    "quality_flags": [
+      "v"
+    ],
+    "metadata": {
+      "id": "9414290",
+      "name": "San Francisco",
+      "lat": "37.8063",
+      "lon": "-122.4659"
+    },
+    "first_utc": "2023-04-20T11:15:00+00:00",
+    "last_utc": "2023-04-20T15:34:00+00:00"
+  },
+  "seconds": 56.5
+}

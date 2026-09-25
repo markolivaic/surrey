@@ -1,0 +1,129 @@
+{
+  "question": "what the model calls vegetation that NAIP sees",
+  "reference": "scripts/naip_reference.py, NDVI threshold fixed before any prediction",
+  "ndvi_threshold": 0.075,
+  "height_band_m": [
+    2.0,
+    25.0
+  ],
+  "prediction_cache": {
+    "checkpoint_sha256_16": "c8ef2e4a026888a0",
+    "seed": 0
+  },
+  "home_surrey": {
+    "population": "held-out Surrey points labelled tree or vegetation, 2 to 25 m above ground",
+    "points": 29169729,
+    "called_vegetation": 0.9869,
+    "called_building": 0.0036
+  },
+  "san_francisco_per_area": [
+    {
+      "aoi": "baybridge",
+      "points_in_vegetation_core": 0,
+      "points_in_not_vegetation_core": 132760,
+      "vegetation_core_called": null,
+      "vegetation_core_note": "fewer than 1000 points, not scored",
+      "not_vegetation_core_called_vegetation": 0.0
+    },
+    {
+      "aoi": "embarcadero",
+      "points_in_vegetation_core": 29400,
+      "points_in_not_vegetation_core": 613721,
+      "vegetation_core_called": {
+        "ground": 0.5717,
+        "vegetation": 0.0281,
+        "building": 0.3354,
+        "vehicle": 0.0,
+        "pole": 0.0023,
+        "fence": 0.0624
+      },
+      "not_vegetation_core_called_vegetation": 0.0
+    },
+    {
+      "aoi": "financial",
+      "points_in_vegetation_core": 28220,
+      "points_in_not_vegetation_core": 1824290,
+      "vegetation_core_called": {
+        "ground": 0.5026,
+        "vegetation": 0.0002,
+        "building": 0.4866,
+        "vehicle": 0.0,
+        "pole": 0.0022,
+        "fence": 0.0084
+      },
+      "not_vegetation_core_called_vegetation": 0.0001
+    },
+    {
+      "aoi": "ggpark",
+      "points_in_vegetation_core": 3153939,
+      "points_in_not_vegetation_core": 13846,
+      "vegetation_core_called": {
+        "ground": 0.2336,
+        "vegetation": 0.0001,
+        "building": 0.7561,
+        "vehicle": 0.0,
+        "pole": 0.0041,
+        "fence": 0.0061
+      },
+      "not_vegetation_core_called_vegetation": 0.0
+    },
+    {
+      "aoi": "mission",
+      "points_in_vegetation_core": 127532,
+      "points_in_not_vegetation_core": 1272748,
+      "vegetation_core_called": {
+        "ground": 0.4987,
+        "vegetation": 0.0002,
+        "building": 0.4824,
+        "vehicle": 0.0,
+        "pole": 0.002,
+        "fence": 0.0167
+      },
+      "not_vegetation_core_called_vegetation": 0.0
+    },
+    {
+      "aoi": "soma",
+      "points_in_vegetation_core": 108483,
+      "points_in_not_vegetation_core": 1454244,
+      "vegetation_core_called": {
+        "ground": 0.5852,
+        "vegetation": 0.0005,
+        "building": 0.4069,
+        "vehicle": 0.0,
+        "pole": 0.0023,
+        "fence": 0.0051
+      },
+      "not_vegetation_core_called_vegetation": 0.0
+    },
+    {
+      "aoi": "steep",
+      "points_in_vegetation_core": 85910,
+      "points_in_not_vegetation_core": 2242362,
+      "vegetation_core_called": {
+        "ground": 0.5406,
+        "vegetation": 0.0048,
+        "building": 0.4292,
+        "vehicle": 0.0,
+        "pole": 0.0023,
+        "fence": 0.0231
+      },
+      "not_vegetation_core_called_vegetation": 0.0
+    },
+    {
+      "aoi": "sunset",
+      "points_in_vegetation_core": 84263,
+      "points_in_not_vegetation_core": 1416633,
+      "vegetation_core_called": {
+        "ground": 0.4162,
+        "vegetation": 0.0,
+        "building": 0.5748,
+        "vehicle": 0.0,
+        "pole": 0.0013,
+        "fence": 0.0077
+      },
+      "not_vegetation_core_called_vegetation": 0.0
+    }
+  ],
+  "no_pooling": "areas are reported one by one",
+  "seconds": 2.5
+}

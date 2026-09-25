@@ -1,0 +1,263 @@
+{
+  "source": "target",
+  "voxel_m": 0.15,
+  "tiles": [
+    {
+      "name": "baybridge",
+      "split": "sf",
+      "source": "data/target/sf/baybridge.laz",
+      "point_format": 6,
+      "points_raw": 4495909,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 624,
+          "18": 11
+        }
+      },
+      "points_kept": 3068521,
+      "kept_fraction": 0.6825,
+      "density_raw": 49.8,
+      "density_kept": 34.0,
+      "hag_min_m": -79.26,
+      "hag_max_m": 163.47,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        554347.55,
+        4183155.654,
+        -2.02
+      ],
+      "epsg": 32610,
+      "cells": 725,
+      "cache": "data/prep/target/baybridge",
+      "cache_bytes": 55246266
+    },
+    {
+      "name": "embarcadero",
+      "split": "sf",
+      "source": "data/target/sf/embarcadero.laz",
+      "point_format": 6,
+      "points_raw": 9006733,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 5467,
+          "18": 19045
+        }
+      },
+      "points_kept": 4434486,
+      "kept_fraction": 0.4924,
+      "density_raw": 99.0,
+      "density_kept": 48.8,
+      "hag_min_m": -63.0,
+      "hag_max_m": 143.69,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        553777.64,
+        4182597.134,
+        -1.78
+      ],
+      "epsg": 32610,
+      "cells": 946,
+      "cache": "data/prep/target/embarcadero",
+      "cache_bytes": 79837172
+    },
+    {
+      "name": "financial",
+      "split": "sf",
+      "source": "data/target/sf/financial.laz",
+      "point_format": 6,
+      "points_raw": 13086608,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 70843,
+          "18": 74072
+        }
+      },
+      "points_kept": 7491501,
+      "kept_fraction": 0.5725,
+      "density_raw": 143.9,
+      "density_kept": 82.4,
+      "hag_min_m": -182.88,
+      "hag_max_m": 192.16,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        552806.998,
+        4182923.717,
+        1.58
+      ],
+      "epsg": 32610,
+      "cells": 946,
+      "cache": "data/prep/target/financial",
+      "cache_bytes": 134863442
+    },
+    {
+      "name": "ggpark",
+      "split": "sf",
+      "source": "data/target/sf/ggpark.laz",
+      "point_format": 6,
+      "points_raw": 13250164,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 3587
+        }
+      },
+      "points_kept": 9010024,
+      "kept_fraction": 0.68,
+      "density_raw": 146.0,
+      "density_kept": 99.3,
+      "hag_min_m": -3.32,
+      "hag_max_m": 45.17,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        545100.372,
+        4180203.936,
+        40.37
+      ],
+      "epsg": 32610,
+      "cells": 943,
+      "cache": "data/prep/target/ggpark",
+      "cache_bytes": 162196808
+    },
+    {
+      "name": "mission",
+      "split": "sf",
+      "source": "data/target/sf/mission.laz",
+      "point_format": 6,
+      "points_raw": 6969036,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 4521,
+          "18": 1
+        }
+      },
+      "points_kept": 4532181,
+      "kept_fraction": 0.6503,
+      "density_raw": 76.7,
+      "density_kept": 49.9,
+      "hag_min_m": -15.25,
+      "hag_max_m": 29.0,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        551395.241,
+        4179186.733,
+        5.91
+      ],
+      "epsg": 32610,
+      "cells": 945,
+      "cache": "data/prep/target/mission",
+      "cache_bytes": 81595666
+    },
+    {
+      "name": "soma",
+      "split": "sf",
+      "source": "data/target/sf/soma.laz",
+      "point_format": 6,
+      "points_raw": 6855946,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 5255,
+          "18": 1
+        }
+      },
+      "points_kept": 4522972,
+      "kept_fraction": 0.6597,
+      "density_raw": 75.4,
+      "density_kept": 49.8,
+      "hag_min_m": -26.34,
+      "hag_max_m": 47.01,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        552192.492,
+        4181255.489,
+        0.96
+      ],
+      "epsg": 32610,
+      "cells": 945,
+      "cache": "data/prep/target/soma",
+      "cache_bytes": 81429904
+    },
+    {
+      "name": "steep",
+      "split": "sf",
+      "source": "data/target/sf/steep.laz",
+      "point_format": 6,
+      "points_raw": 8323079,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 12078,
+          "18": 5
+        }
+      },
+      "points_kept": 5417326,
+      "kept_fraction": 0.6509,
+      "density_raw": 91.6,
+      "density_kept": 59.6,
+      "hag_min_m": -41.3,
+      "hag_max_m": 52.95,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        550997.779,
+        4183611.323,
+        51.03
+      ],
+      "epsg": 32610,
+      "cells": 945,
+      "cache": "data/prep/target/steep",
+      "cache_bytes": 97528276
+    },
+    {
+      "name": "sunset",
+      "split": "sf",
+      "source": "data/target/sf/sunset.laz",
+      "point_format": 6,
+      "points_raw": 10495885,
+      "points_dropped_by_flag": {
+        "synthetic": {},
+        "withheld": {
+          "7": 6177,
+          "18": 9
+        }
+      },
+      "points_kept": 5461632,
+      "kept_fraction": 0.5204,
+      "density_raw": 115.7,
+      "density_kept": 60.2,
+      "hag_min_m": -6.79,
+      "hag_max_m": 22.29,
+      "xy_clipped": 0,
+      "hag_clipped": 0,
+      "origin": [
+        544777.438,
+        4178049.694,
+        64.63
+      ],
+      "epsg": 32610,
+      "cells": 943,
+      "cache": "data/prep/target/sunset",
+      "cache_bytes": 98325752
+    }
+  ],
+  "points_raw_total": 72483360,
+  "points_kept_total": 43938643,
+  "kept_fraction_overall": 0.6062,
+  "density_kept": {
+    "min": 34.0,
+    "median": 54.8,
+    "max": 99.3
+  },
+  "cache_bytes_total": 791023286,
+  "seconds": 102.0
+}

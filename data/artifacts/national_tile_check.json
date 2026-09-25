@@ -1,0 +1,380 @@
+{
+  "question": "how contaminated is each national classification, measured on one tile",
+  "above_ground_m": 2.0,
+  "ground_surface": {
+    "from": "the delivery's own class 2",
+    "cell_m": 5.0,
+    "reach_m": 25.0
+  },
+  "tiles": {
+    "ign_lidarhd_paris": {
+      "dataset": "IGN LiDAR HD",
+      "place": "Paris, Lambert-93 tile 0653_6863",
+      "url": "https://data.geopf.fr/telechargement/download/LiDARHD-NUALID/NUALHD_1-0__LAZ_LAMB93_KE_2025-06-06/LHD_FXX_0653_6863_PTS_LAMB93_IGN69.copc.laz",
+      "found_via": "WFS data.geopf.fr/wfs/ows, typename IGNF_LIDAR-HD_METADONNEE:metadata, property url_npl; feature says procede_classement IGN_AUTO_V5, acquisition 2023-03-03",
+      "file_bytes": 114214253,
+      "header": {
+        "points_in_header": 17270955,
+        "las_version": "1.4",
+        "point_format": 6,
+        "crs": "2154",
+        "extent_m": [
+          1000.0,
+          1000.0
+        ],
+        "origin": [
+          653000.0,
+          6862000.0
+        ]
+      },
+      "class_table_source": "https://data.geopf.fr/annexes/ressources/documentation/DC_LiDAR_HD_1-0.pdf, section 2.2.8; code 65 from https://data.geopf.fr/annexes/ressources/documentation/SE_LiDAR_HD.pdf",
+      "excluded_codes": {
+        "65": "noise",
+        "66": "virtual points added under bridges, not a laser return"
+      },
+      "class_distribution_raw": {
+        "1": {
+          "points": 2416178,
+          "share": 0.1399,
+          "name": "non classé"
+        },
+        "2": {
+          "points": 4638200,
+          "share": 0.2686,
+          "name": "sol"
+        },
+        "3": {
+          "points": 53333,
+          "share": 0.0031,
+          "name": "végétation basse 0-50 cm"
+        },
+        "4": {
+          "points": 110741,
+          "share": 0.0064,
+          "name": "végétation moyenne 50 cm-1,50 m"
+        },
+        "5": {
+          "points": 1779809,
+          "share": 0.1031,
+          "name": "végétation haute +1,50 m"
+        },
+        "6": {
+          "points": 8118774,
+          "share": 0.4701,
+          "name": "bâtiment"
+        },
+        "9": {
+          "points": 79254,
+          "share": 0.0046,
+          "name": "eau"
+        },
+        "65": {
+          "points": 23435,
+          "share": 0.0014,
+          "name": "artefact (removed from the specification 2024-09-09)"
+        },
+        "67": {
+          "points": 51231,
+          "share": 0.003,
+          "name": "divers - bâtis"
+        }
+      },
+      "density_raw": {
+        "occupied_1m_cells_m2": 998307,
+        "points_per_m2": 17.3,
+        "first_returns_per_m2": 14.0
+      },
+      "contamination_proxy": {
+        "points": 16027035,
+        "points_with_a_ground_surface": 16027035,
+        "points_over_2m": 11101048,
+        "unclassified_share_of_points_over_2m": 0.1794,
+        "unclassified_over_2m_share_of_all_points": 0.1242,
+        "vegetation_share_of_points_over_2m": 0.1505,
+        "unclassified_over_2m_height_m_p10_p50_p90": [
+          3.8,
+          14.5,
+          22.6
+        ],
+        "population": "0.15 m voxel-thinned, noise and non-laser codes removed"
+      },
+      "seconds": 23.9
+    },
+    "swisssurface3d_zurich": {
+      "dataset": "swissSURFACE3D",
+      "place": "Zurich, LV95 tile 2683-1247, 2024 acquisition",
+      "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2683-1247/swisssurface3d_2024_2683-1247_2056_5728.copc.laz",
+      "found_via": "STAC data.geo.admin.ch/api/stac/v0.9, collection ch.swisstopo.swisssurface3d, bbox over central Zurich",
+      "file_bytes": 154674905,
+      "header": {
+        "points_in_header": 25540245,
+        "las_version": "1.4",
+        "point_format": 6,
+        "crs": "2056",
+        "extent_m": [
+          1000.0,
+          1000.0
+        ],
+        "origin": [
+          2683000.0,
+          1247000.0
+        ]
+      },
+      "class_table_source": "https://www.swisstopo.admin.ch/en/height-model-swisssurface3d, table 'Classification from 2024 onwards'. The table for data until 2024 has six classes and no facade, mast or wire class",
+      "excluded_codes": {
+        "7": "noise",
+        "18": "noise"
+      },
+      "class_distribution_raw": {
+        "1": {
+          "points": 440038,
+          "share": 0.0172,
+          "name": "unclassified and temporary objects"
+        },
+        "2": {
+          "points": 8748274,
+          "share": 0.3425,
+          "name": "ground"
+        },
+        "3": {
+          "points": 5375938,
+          "share": 0.2105,
+          "name": "vegetation (low - medium - high)"
+        },
+        "6": {
+          "points": 9531227,
+          "share": 0.3732,
+          "name": "building roofs"
+        },
+        "9": {
+          "points": 88878,
+          "share": 0.0035,
+          "name": "water"
+        },
+        "14": {
+          "points": 23408,
+          "share": 0.0009,
+          "name": "high-voltage / power line"
+        },
+        "15": {
+          "points": 16038,
+          "share": 0.0006,
+          "name": "masts with a load-bearing function"
+        },
+        "17": {
+          "points": 132270,
+          "share": 0.0052,
+          "name": "bridge-, overpass-, viaduct- and footbridge deck"
+        },
+        "26": {
+          "points": 1159268,
+          "share": 0.0454,
+          "name": "building facades"
+        },
+        "27": {
+          "points": 24906,
+          "share": 0.001,
+          "name": "bridge piers and viaduct stay cables"
+        }
+      },
+      "density_raw": {
+        "occupied_1m_cells_m2": 939346,
+        "points_per_m2": 27.2,
+        "first_returns_per_m2": 21.2
+      },
+      "contamination_proxy": {
+        "points": 23904630,
+        "points_with_a_ground_surface": 23820757,
+        "points_over_2m": 14522821,
+        "unclassified_share_of_points_over_2m": 0.008,
+        "unclassified_over_2m_share_of_all_points": 0.0049,
+        "vegetation_share_of_points_over_2m": 0.3211,
+        "unclassified_over_2m_height_m_p10_p50_p90": [
+          2.2,
+          3.1,
+          7.2
+        ],
+        "population": "0.15 m voxel-thinned, noise and non-laser codes removed"
+      },
+      "seconds": 35.3
+    },
+    "ahn5_amsterdam": {
+      "dataset": "AHN5",
+      "place": "Amsterdam, GeoTiles sub-tile 25GN1_14",
+      "url": "https://geotiles.citg.tudelft.nl/AHN5_T/25GN1_14.LAZ",
+      "found_via": "GeoTiles, TU Delft re-tiling of the AHN kaartbladen; the official download is the 5 x 6.25 km kaartblad",
+      "file_bytes": 319842607,
+      "header": {
+        "points_in_header": 39629621,
+        "las_version": "1.4",
+        "point_format": 8,
+        "crs": "7415",
+        "extent_m": [
+          1040.0,
+          1290.0
+        ],
+        "origin": [
+          122980.0,
+          483730.0
+        ]
+      },
+      "class_table_source": "https://www.ahn.nl/dataroom and https://www.ahn.nl/4-classificatie name the classes maaiveld, gebouwen, kunstwerken, water, overig, and from AHN4 high-voltage lines; neither page gives the numeric codes, so the code to name pairing below is not from a source",
+      "excluded_codes": {
+        "7": "noise",
+        "18": "noise"
+      },
+      "class_distribution_raw": {
+        "1": {
+          "points": 16951979,
+          "share": 0.4278,
+          "name": "not named by a source found"
+        },
+        "2": {
+          "points": 17922716,
+          "share": 0.4523,
+          "name": "not named by a source found"
+        },
+        "6": {
+          "points": 4437947,
+          "share": 0.112,
+          "name": "not named by a source found"
+        },
+        "9": {
+          "points": 10058,
+          "share": 0.0003,
+          "name": "not named by a source found"
+        },
+        "26": {
+          "points": 306921,
+          "share": 0.0077,
+          "name": "not named by a source found"
+        }
+      },
+      "density_raw": {
+        "occupied_1m_cells_m2": 1281750,
+        "points_per_m2": 30.9,
+        "first_returns_per_m2": 19.3
+      },
+      "contamination_proxy": {
+        "points": 35856380,
+        "points_with_a_ground_surface": 35813307,
+        "points_over_2m": 17873325,
+        "unclassified_share_of_points_over_2m": 0.7768,
+        "unclassified_over_2m_share_of_all_points": 0.3872,
+        "vegetation_share_of_points_over_2m": null,
+        "unclassified_over_2m_height_m_p10_p50_p90": [
+          3.6,
+          9.9,
+          20.8
+        ],
+        "population": "0.15 m voxel-thinned, noise and non-laser codes removed"
+      },
+      "seconds": 67.3
+    }
+  },
+  "san_francisco_same_proxy": [
+    {
+      "aoi": "baybridge",
+      "skipped": "no ground class"
+    },
+    {
+      "aoi": "embarcadero",
+      "points": 4434367,
+      "points_with_a_ground_surface": 2196885,
+      "points_over_2m": 965553,
+      "unclassified_share_of_points_over_2m": 0.9366,
+      "unclassified_over_2m_share_of_all_points": 0.2039,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        4.0,
+        10.9,
+        28.0
+      ]
+    },
+    {
+      "aoi": "financial",
+      "points": 7491350,
+      "points_with_a_ground_surface": 7444764,
+      "points_over_2m": 5315311,
+      "unclassified_share_of_points_over_2m": 1.0,
+      "unclassified_over_2m_share_of_all_points": 0.7095,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        7.1,
+        31.8,
+        145.3
+      ]
+    },
+    {
+      "aoi": "ggpark",
+      "points": 9009760,
+      "points_with_a_ground_surface": 9009760,
+      "points_over_2m": 5342168,
+      "unclassified_share_of_points_over_2m": 1.0,
+      "unclassified_over_2m_share_of_all_points": 0.5929,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        4.1,
+        20.9,
+        31.4
+      ]
+    },
+    {
+      "aoi": "mission",
+      "points": 4532015,
+      "points_with_a_ground_surface": 4524672,
+      "points_over_2m": 2493700,
+      "unclassified_share_of_points_over_2m": 1.0,
+      "unclassified_over_2m_share_of_all_points": 0.5502,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        3.7,
+        8.2,
+        13.3
+      ]
+    },
+    {
+      "aoi": "soma",
+      "points": 4522800,
+      "points_with_a_ground_surface": 4522800,
+      "points_over_2m": 2816756,
+      "unclassified_share_of_points_over_2m": 1.0,
+      "unclassified_over_2m_share_of_all_points": 0.6228,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        4.2,
+        8.4,
+        16.3
+      ]
+    },
+    {
+      "aoi": "steep",
+      "points": 5416755,
+      "points_with_a_ground_surface": 5416755,
+      "points_over_2m": 3574376,
+      "unclassified_share_of_points_over_2m": 0.9985,
+      "unclassified_over_2m_share_of_all_points": 0.6589,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        3.6,
+        9.5,
+        17.8
+      ]
+    },
+    {
+      "aoi": "sunset",
+      "points": 5461138,
+      "points_with_a_ground_surface": 5461138,
+      "points_over_2m": 2220209,
+      "unclassified_share_of_points_over_2m": 0.9997,
+      "unclassified_over_2m_share_of_all_points": 0.4064,
+      "vegetation_share_of_points_over_2m": null,
+      "unclassified_over_2m_height_m_p10_p50_p90": [
+        2.7,
+        5.6,
+        8.2
+      ]
+    }
+  ],
+  "caveat": "one tile per dataset; a tile is not a country"
+}

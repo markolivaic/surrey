@@ -1,0 +1,91 @@
+{
+  "source": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer",
+  "layers": {
+    "9": "Area - Large Scale",
+    "12": "Waterbody - Large Scale"
+  },
+  "service_copyright_text": "USGS TNM \u2013 National Hydrography Dataset.  Data Refreshed July, 2026.",
+  "licence": "USGS-produced data, U.S. public domain",
+  "maintenance": "NHD retired October 2023 and no longer maintained; the service's own refresh note is recorded above",
+  "height_used": false,
+  "areas": [
+    {
+      "aoi": "embarcadero",
+      "features": [
+        {
+          "layer": "Area - Large Scale",
+          "ftype": 445,
+          "fcode": 44500,
+          "gnis_name": "Pacific Ocean",
+          "loaddate": null
+        },
+        {
+          "layer": "Area - Large Scale",
+          "ftype": 445,
+          "fcode": 44500,
+          "gnis_name": null,
+          "loaddate": null
+        }
+      ],
+      "points": 4434486,
+      "points_inside": 2267490,
+      "by_delivery_class": {
+        "1": {
+          "points": 2456204,
+          "inside_polygon": 1032117
+        },
+        "2": {
+          "points": 459612,
+          "inside_polygon": 24884
+        },
+        "9": {
+          "points": 1279481,
+          "inside_polygon": 1059287
+        },
+        "17": {
+          "points": 234947,
+          "inside_polygon": 149774
+        }
+      }
+    },
+    {
+      "aoi": "baybridge",
+      "features": [
+        {
+          "layer": "Area - Large Scale",
+          "ftype": 445,
+          "fcode": 44500,
+          "gnis_name": "Pacific Ocean",
+          "loaddate": null
+        },
+        {
+          "layer": "Area - Large Scale",
+          "ftype": 445,
+          "fcode": 44500,
+          "gnis_name": null,
+          "loaddate": null
+        }
+      ],
+      "points": 3068521,
+      "points_inside": 2924601,
+      "by_delivery_class": {
+        "1": {
+          "points": 1347144,
+          "inside_polygon": 1225036
+        },
+        "2": {
+          "points": 0,
+          "inside_polygon": 0
+        },
+        "9": {
+          "points": 1396044,
+          "inside_polygon": 1395384
+        },
+        "17": {
+          "points": 325333,
+          "inside_polygon": 304181
+        }
+      }
+    }
+  ]
+}

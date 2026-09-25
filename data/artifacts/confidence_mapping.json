@@ -1,0 +1,268 @@
+{
+  "rule": "Rule, written before this ran:\n    source      the published model, M0 seed A, on every labelled point of the eleven\n                held-out Surrey tiles (data/predictions/m0_seedA/surrey_*.npz), confidence\n                being the top class probability\n    low end     the 5th percentile of confidence over points the model got WRONG\n    high end    the 95th percentile of confidence over points the model got RIGHT\n    map         t = clip((confidence - low) / (high - low), 0, 1); chroma rises from the\n                palette's floor at t = 0 to the class's full chroma at t = 1, linearly",
+  "source": "m0_seedA, held-out Surrey tiles, labelled points",
+  "points_right": 96365518,
+  "points_wrong": 11581911,
+  "low": 0.364,
+  "high": 0.998,
+  "low_definition": "p5 of confidence on wrong points",
+  "high_definition": "p95 of confidence on right points",
+  "surrey_reading": {
+    "median_confidence_right": 0.9551,
+    "median_confidence_wrong": 0.6348,
+    "position_right": 0.932,
+    "position_wrong": 0.427
+  },
+  "san_francisco_reading": {
+    "returns_ood": {
+      "baybridge": {
+        "median_confidence": 0.6533,
+        "position_on_map": 0.456,
+        "share_at_or_below_low": 0.0013,
+        "share_at_or_above_high": 0.0
+      },
+      "embarcadero": {
+        "median_confidence": 0.6523,
+        "position_on_map": 0.455,
+        "share_at_or_below_low": 0.0046,
+        "share_at_or_above_high": 0.0005
+      },
+      "financial": {
+        "median_confidence": 0.7705,
+        "position_on_map": 0.641,
+        "share_at_or_below_low": 0.0067,
+        "share_at_or_above_high": 0.0152
+      },
+      "ggpark": {
+        "median_confidence": 0.7832,
+        "position_on_map": 0.661,
+        "share_at_or_below_low": 0.007,
+        "share_at_or_above_high": 0.0002
+      },
+      "mission": {
+        "median_confidence": 0.6758,
+        "position_on_map": 0.492,
+        "share_at_or_below_low": 0.0062,
+        "share_at_or_above_high": 0.0003
+      },
+      "soma": {
+        "median_confidence": 0.6816,
+        "position_on_map": 0.501,
+        "share_at_or_below_low": 0.0043,
+        "share_at_or_above_high": 0.0004
+      },
+      "steep": {
+        "median_confidence": 0.7212,
+        "position_on_map": 0.563,
+        "share_at_or_below_low": 0.0075,
+        "share_at_or_above_high": 0.0001
+      },
+      "sunset": {
+        "median_confidence": 0.6948,
+        "position_on_map": 0.522,
+        "share_at_or_below_low": 0.0054,
+        "share_at_or_above_high": 0.0
+      }
+    },
+    "ret0": {
+      "baybridge": {
+        "median_confidence": 0.9204,
+        "position_on_map": 0.878,
+        "share_at_or_below_low": 0.0141,
+        "share_at_or_above_high": 0.0017
+      },
+      "embarcadero": {
+        "median_confidence": 0.8916,
+        "position_on_map": 0.832,
+        "share_at_or_below_low": 0.0295,
+        "share_at_or_above_high": 0.0075
+      },
+      "financial": {
+        "median_confidence": 0.8623,
+        "position_on_map": 0.786,
+        "share_at_or_below_low": 0.0434,
+        "share_at_or_above_high": 0.0247
+      },
+      "ggpark": {
+        "median_confidence": 0.8691,
+        "position_on_map": 0.797,
+        "share_at_or_below_low": 0.017,
+        "share_at_or_above_high": 0.0169
+      },
+      "mission": {
+        "median_confidence": 0.8677,
+        "position_on_map": 0.794,
+        "share_at_or_below_low": 0.0305,
+        "share_at_or_above_high": 0.041
+      },
+      "soma": {
+        "median_confidence": 0.8818,
+        "position_on_map": 0.817,
+        "share_at_or_below_low": 0.0311,
+        "share_at_or_above_high": 0.0349
+      },
+      "steep": {
+        "median_confidence": 0.7979,
+        "position_on_map": 0.684,
+        "share_at_or_below_low": 0.0438,
+        "share_at_or_above_high": 0.0248
+      },
+      "sunset": {
+        "median_confidence": 0.853,
+        "position_on_map": 0.771,
+        "share_at_or_below_low": 0.0317,
+        "share_at_or_above_high": 0.0263
+      }
+    },
+    "m0_seedA": {
+      "baybridge": {
+        "median_confidence": 0.9458,
+        "position_on_map": 0.918,
+        "share_at_or_below_low": 0.0112,
+        "share_at_or_above_high": 0.0016
+      },
+      "embarcadero": {
+        "median_confidence": 0.8921,
+        "position_on_map": 0.833,
+        "share_at_or_below_low": 0.0336,
+        "share_at_or_above_high": 0.0031
+      },
+      "financial": {
+        "median_confidence": 0.8271,
+        "position_on_map": 0.73,
+        "share_at_or_below_low": 0.0465,
+        "share_at_or_above_high": 0.013
+      },
+      "ggpark": {
+        "median_confidence": 0.8491,
+        "position_on_map": 0.765,
+        "share_at_or_below_low": 0.0246,
+        "share_at_or_above_high": 0.0187
+      },
+      "mission": {
+        "median_confidence": 0.8687,
+        "position_on_map": 0.796,
+        "share_at_or_below_low": 0.0317,
+        "share_at_or_above_high": 0.0284
+      },
+      "soma": {
+        "median_confidence": 0.8867,
+        "position_on_map": 0.824,
+        "share_at_or_below_low": 0.0311,
+        "share_at_or_above_high": 0.0337
+      },
+      "steep": {
+        "median_confidence": 0.8203,
+        "position_on_map": 0.72,
+        "share_at_or_below_low": 0.05,
+        "share_at_or_above_high": 0.0201
+      },
+      "sunset": {
+        "median_confidence": 0.8613,
+        "position_on_map": 0.784,
+        "share_at_or_below_low": 0.0364,
+        "share_at_or_above_high": 0.0174
+      }
+    },
+    "m0_seedB": {
+      "baybridge": {
+        "median_confidence": 0.9116,
+        "position_on_map": 0.864,
+        "share_at_or_below_low": 0.0109,
+        "share_at_or_above_high": 0.0021
+      },
+      "embarcadero": {
+        "median_confidence": 0.8638,
+        "position_on_map": 0.788,
+        "share_at_or_below_low": 0.0329,
+        "share_at_or_above_high": 0.0043
+      },
+      "financial": {
+        "median_confidence": 0.8359,
+        "position_on_map": 0.744,
+        "share_at_or_below_low": 0.0512,
+        "share_at_or_above_high": 0.0145
+      },
+      "ggpark": {
+        "median_confidence": 0.8301,
+        "position_on_map": 0.735,
+        "share_at_or_below_low": 0.0206,
+        "share_at_or_above_high": 0.019
+      },
+      "mission": {
+        "median_confidence": 0.8218,
+        "position_on_map": 0.722,
+        "share_at_or_below_low": 0.0356,
+        "share_at_or_above_high": 0.0291
+      },
+      "soma": {
+        "median_confidence": 0.8403,
+        "position_on_map": 0.751,
+        "share_at_or_below_low": 0.0371,
+        "share_at_or_above_high": 0.038
+      },
+      "steep": {
+        "median_confidence": 0.7959,
+        "position_on_map": 0.681,
+        "share_at_or_below_low": 0.0556,
+        "share_at_or_above_high": 0.0177
+      },
+      "sunset": {
+        "median_confidence": 0.8262,
+        "position_on_map": 0.729,
+        "share_at_or_below_low": 0.0405,
+        "share_at_or_above_high": 0.0181
+      }
+    },
+    "m0_seedC": {
+      "baybridge": {
+        "median_confidence": 0.9634,
+        "position_on_map": 0.945,
+        "share_at_or_below_low": 0.0087,
+        "share_at_or_above_high": 0.0109
+      },
+      "embarcadero": {
+        "median_confidence": 0.9082,
+        "position_on_map": 0.858,
+        "share_at_or_below_low": 0.0334,
+        "share_at_or_above_high": 0.0033
+      },
+      "financial": {
+        "median_confidence": 0.8677,
+        "position_on_map": 0.794,
+        "share_at_or_below_low": 0.0458,
+        "share_at_or_above_high": 0.017
+      },
+      "ggpark": {
+        "median_confidence": 0.8291,
+        "position_on_map": 0.734,
+        "share_at_or_below_low": 0.0353,
+        "share_at_or_above_high": 0.0158
+      },
+      "mission": {
+        "median_confidence": 0.8462,
+        "position_on_map": 0.76,
+        "share_at_or_below_low": 0.0404,
+        "share_at_or_above_high": 0.0209
+      },
+      "soma": {
+        "median_confidence": 0.874,
+        "position_on_map": 0.804,
+        "share_at_or_below_low": 0.0378,
+        "share_at_or_above_high": 0.0245
+      },
+      "steep": {
+        "median_confidence": 0.8086,
+        "position_on_map": 0.701,
+        "share_at_or_below_low": 0.0578,
+        "share_at_or_above_high": 0.0133
+      },
+      "sunset": {
+        "median_confidence": 0.8481,
+        "position_on_map": 0.764,
+        "share_at_or_below_low": 0.0495,
+        "share_at_or_above_high": 0.0095
+      }
+    }
+  }
+}

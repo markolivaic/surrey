@@ -1,0 +1,18 @@
+{
+  "source": "https://minedbuildings.z5.web.core.windows.net/legacy/usbuildings-v2/California.geojson.zip",
+  "license": "ODbL-1.0",
+  "state_member": "California.geojson",
+  "state_member_uncompressed_bytes": 3598943044,
+  "features_scanned": 11542912,
+  "features_kept": 70278,
+  "bbox_filter": [
+    -122.53,
+    37.7,
+    -122.35,
+    37.84
+  ],
+  "output": "data/target/sf_footprints.geojson",
+  "output_bytes": 21335831,
+  "output_sha256": "11984fdd3122195c92fa7fa96004a0b7b89cd19d227b0f06c20dfc9a41194c7d",
+  "seconds": 157.4
+}
