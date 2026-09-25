@@ -51,7 +51,7 @@
       ]
     },
     "r5_proxy_retention": 0.65,
-    "pole_adjusted": "pole moved alone for the story pairs pole/building and pole/vegetation, by --only pole"
+    "pole_adjusted": "pole moved alone for the story pairs pole/building and pole/vegetation, by --only pole, held to every rule at the eye-dome shades measured in data/artifacts/edl_sweep.json"
   },
   "rules": "backend/surrey/palette.py",
   "confidence_map": "data/artifacts/confidence_mapping.json",
@@ -82,7 +82,7 @@
         "pole": {
           "L": 0.58,
           "C": 0.1,
-          "h": 188.0
+          "h": 190.0
         },
         "fence": {
           "L": 0.41,
@@ -126,8 +126,8 @@
         },
         "pole": {
           "L": 0.9,
-          "C": 0.1404,
-          "h": 188.0
+          "C": 0.1386,
+          "h": 190.0
         },
         "fence": {
           "L": 0.81,
@@ -176,9 +176,9 @@
           "bar": 10.0
         },
         "ground / pole": {
-          "normal": 71.7,
-          "deuteranopia": 55.6,
-          "protanopia": 49.0,
+          "normal": 72.3,
+          "deuteranopia": 56.9,
+          "protanopia": 50.2,
           "bar": 10.0
         },
         "ground / fence": {
@@ -212,9 +212,9 @@
           "bar": 10.0
         },
         "vegetation / pole": {
-          "normal": 20.4,
-          "deuteranopia": 20.4,
-          "protanopia": 20.8,
+          "normal": 21.7,
+          "deuteranopia": 21.7,
+          "protanopia": 22.0,
           "bar": 20.0
         },
         "vegetation / fence": {
@@ -242,9 +242,9 @@
           "bar": 10.0
         },
         "building / pole": {
-          "normal": 85.0,
-          "deuteranopia": 56.8,
-          "protanopia": 59.2,
+          "normal": 83.9,
+          "deuteranopia": 55.7,
+          "protanopia": 58.1,
           "bar": 20.0
         },
         "building / fence": {
@@ -266,9 +266,9 @@
           "bar": 20.0
         },
         "vehicle / pole": {
-          "normal": 61.3,
-          "deuteranopia": 44.1,
-          "protanopia": 46.0,
+          "normal": 60.1,
+          "deuteranopia": 42.9,
+          "protanopia": 44.9,
           "bar": 10.0
         },
         "vehicle / fence": {
@@ -290,21 +290,21 @@
           "bar": 10.0
         },
         "pole / fence": {
-          "normal": 43.7,
-          "deuteranopia": 43.2,
-          "protanopia": 46.5,
+          "normal": 44.8,
+          "deuteranopia": 44.4,
+          "protanopia": 47.6,
           "bar": 10.0
         },
         "pole / water": {
-          "normal": 31.7,
-          "deuteranopia": 23.6,
-          "protanopia": 25.1,
+          "normal": 30.4,
+          "deuteranopia": 22.3,
+          "protanopia": 23.8,
           "bar": 10.0
         },
         "pole / bridge deck": {
-          "normal": 31.6,
-          "deuteranopia": 31.6,
-          "protanopia": 32.8,
+          "normal": 32.7,
+          "deuteranopia": 32.7,
+          "protanopia": 33.9,
           "bar": 10.0
         },
         "fence / water": {
@@ -355,9 +355,9 @@
           "bar": 10.0
         },
         "ground / pole": {
-          "normal": 99.5,
-          "deuteranopia": 76.3,
-          "protanopia": 70.2,
+          "normal": 99.8,
+          "deuteranopia": 77.9,
+          "protanopia": 71.8,
           "bar": 10.0
         },
         "ground / fence": {
@@ -391,9 +391,9 @@
           "bar": 10.0
         },
         "vegetation / pole": {
-          "normal": 32.6,
-          "deuteranopia": 32.0,
-          "protanopia": 33.0,
+          "normal": 34.2,
+          "deuteranopia": 33.4,
+          "protanopia": 34.5,
           "bar": 20.0
         },
         "vegetation / fence": {
@@ -421,9 +421,9 @@
           "bar": 10.0
         },
         "building / pole": {
-          "normal": 92.7,
-          "deuteranopia": 64.0,
-          "protanopia": 69.7,
+          "normal": 90.9,
+          "deuteranopia": 62.8,
+          "protanopia": 68.4,
           "bar": 20.0
         },
         "building / fence": {
@@ -445,9 +445,9 @@
           "bar": 20.0
         },
         "vehicle / pole": {
-          "normal": 78.7,
-          "deuteranopia": 56.2,
-          "protanopia": 60.3,
+          "normal": 76.8,
+          "deuteranopia": 54.8,
+          "protanopia": 58.8,
           "bar": 10.0
         },
         "vehicle / fence": {
@@ -469,21 +469,21 @@
           "bar": 10.0
         },
         "pole / fence": {
-          "normal": 52.6,
-          "deuteranopia": 53.1,
-          "protanopia": 54.1,
+          "normal": 54.1,
+          "deuteranopia": 54.7,
+          "protanopia": 55.8,
           "bar": 10.0
         },
         "pole / water": {
-          "normal": 47.5,
-          "deuteranopia": 36.3,
-          "protanopia": 38.6,
+          "normal": 45.6,
+          "deuteranopia": 34.9,
+          "protanopia": 37.1,
           "bar": 10.0
         },
         "pole / bridge deck": {
-          "normal": 40.1,
-          "deuteranopia": 40.2,
-          "protanopia": 41.2,
+          "normal": 41.9,
+          "deuteranopia": 41.8,
+          "protanopia": 42.9,
           "bar": 10.0
         },
         "fence / water": {

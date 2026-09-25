@@ -33,7 +33,7 @@
   },
   "machine": "Windows-11-10.0.26200-SP0",
   "python": "3.12.1",
-  "run_utc": "2026-09-25T20:23:27Z",
-  "seconds": 149.5,
+  "run_utc": "2026-09-25T20:59:44Z",
+  "seconds": 221.4,
   "note": "counted separately on purpose; a single total would let greps inflate a count of behavioural tests"
 }

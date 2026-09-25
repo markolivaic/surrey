@@ -65,10 +65,7 @@
       "scene": "sunset_mid",
       "strength": 0.15,
       "shade_median": 0.9583,
-      "failures": [
-        "R2 vegetation/pole normal: 19.7",
-        "R2 vegetation/pole deuteranopia: 19.8"
-      ],
+      "failures": [],
       "contrast_min": {
         "normal": 3.59,
         "deuteranopia": 3.78,
@@ -80,11 +77,7 @@
       "scene": "sunset_mid",
       "strength": 0.2,
       "shade_median": 0.9451,
-      "failures": [
-        "R2 vegetation/pole normal: 19.5",
-        "R2 vegetation/pole deuteranopia: 19.5",
-        "R2 vegetation/pole protanopia: 19.9"
-      ],
+      "failures": [],
       "contrast_min": {
         "normal": 3.67,
         "deuteranopia": 3.87,
@@ -96,13 +89,9 @@
       "scene": "sunset_mid",
       "strength": 0.25,
       "shade_median": 0.9316,
-      "failures": [
-        "R2 vegetation/pole normal: 19.3",
-        "R2 vegetation/pole deuteranopia: 19.3",
-        "R2 vegetation/pole protanopia: 19.6"
-      ],
+      "failures": [],
       "contrast_min": {
-        "normal": 3.76,
+        "normal": 3.77,
         "deuteranopia": 3.96,
         "protanopia": 3.44
       }
@@ -112,14 +101,10 @@
       "scene": "sunset_mid",
       "strength": 0.3,
       "shade_median": 0.9185,
-      "failures": [
-        "R2 vegetation/pole normal: 19.1",
-        "R2 vegetation/pole deuteranopia: 19.1",
-        "R2 vegetation/pole protanopia: 19.4"
-      ],
+      "failures": [],
       "contrast_min": {
-        "normal": 3.85,
-        "deuteranopia": 4.05,
+        "normal": 3.86,
+        "deuteranopia": 4.06,
         "protanopia": 3.53
       }
     },
@@ -128,15 +113,11 @@
       "scene": "sunset_mid",
       "strength": 0.35,
       "shade_median": 0.9055,
-      "failures": [
-        "R2 vegetation/pole normal: 18.8",
-        "R2 vegetation/pole deuteranopia: 18.9",
-        "R2 vegetation/pole protanopia: 19.2"
-      ],
+      "failures": [],
       "contrast_min": {
         "normal": 3.95,
         "deuteranopia": 4.15,
-        "protanopia": 3.62
+        "protanopia": 3.61
       }
     },
     "light|sunset_mid|0.4": {
@@ -145,9 +126,8 @@
       "strength": 0.4,
       "shade_median": 0.8929,
       "failures": [
-        "R2 vegetation/pole normal: 18.6",
-        "R2 vegetation/pole deuteranopia: 18.7",
-        "R2 vegetation/pole protanopia: 19.0"
+        "R2 vegetation/pole normal: 19.8",
+        "R2 vegetation/pole deuteranopia: 19.8"
       ],
       "contrast_min": {
         "normal": 4.04,
@@ -161,12 +141,12 @@
       "strength": 0.45,
       "shade_median": 0.8806,
       "failures": [
-        "R2 vegetation/pole normal: 18.4",
-        "R2 vegetation/pole deuteranopia: 18.5",
-        "R2 vegetation/pole protanopia: 18.8"
+        "R2 vegetation/pole normal: 19.5",
+        "R2 vegetation/pole deuteranopia: 19.6",
+        "R2 vegetation/pole protanopia: 19.9"
       ],
       "contrast_min": {
-        "normal": 4.13,
+        "normal": 4.14,
         "deuteranopia": 4.34,
         "protanopia": 3.79
       }
@@ -177,13 +157,13 @@
       "strength": 0.5,
       "shade_median": 0.8684,
       "failures": [
-        "R2 vegetation/pole normal: 18.2",
-        "R2 vegetation/pole deuteranopia: 18.3",
-        "R2 vegetation/pole protanopia: 18.5"
+        "R2 vegetation/pole normal: 19.3",
+        "R2 vegetation/pole deuteranopia: 19.3",
+        "R2 vegetation/pole protanopia: 19.6"
       ],
       "contrast_min": {
         "normal": 4.23,
-        "deuteranopia": 4.43,
+        "deuteranopia": 4.44,
         "protanopia": 3.88
       }
     },
@@ -193,14 +173,14 @@
       "strength": 0.55,
       "shade_median": 0.8571,
       "failures": [
-        "R2 vegetation/pole normal: 18.0",
-        "R2 vegetation/pole deuteranopia: 18.1",
-        "R2 vegetation/pole protanopia: 18.3"
+        "R2 vegetation/pole normal: 19.1",
+        "R2 vegetation/pole deuteranopia: 19.1",
+        "R2 vegetation/pole protanopia: 19.4"
       ],
       "contrast_min": {
         "normal": 4.32,
         "deuteranopia": 4.53,
-        "protanopia": 3.97
+        "protanopia": 3.96
       }
     },
     "light|sunset_mid|0.6": {
@@ -209,9 +189,9 @@
       "strength": 0.6,
       "shade_median": 0.8448,
       "failures": [
-        "R2 vegetation/pole normal: 17.8",
-        "R2 vegetation/pole deuteranopia: 17.9",
-        "R2 vegetation/pole protanopia: 18.1"
+        "R2 vegetation/pole normal: 18.9",
+        "R2 vegetation/pole deuteranopia: 18.9",
+        "R2 vegetation/pole protanopia: 19.2"
       ],
       "contrast_min": {
         "normal": 4.42,
@@ -248,10 +228,7 @@
       "scene": "ggpark_cards",
       "strength": 0.1,
       "shade_median": 0.9573,
-      "failures": [
-        "R2 vegetation/pole normal: 19.7",
-        "R2 vegetation/pole deuteranopia: 19.7"
-      ],
+      "failures": [],
       "contrast_min": {
         "normal": 3.59,
         "deuteranopia": 3.79,
@@ -263,13 +240,9 @@
       "scene": "ggpark_cards",
       "strength": 0.15,
       "shade_median": 0.9359,
-      "failures": [
-        "R2 vegetation/pole normal: 19.4",
-        "R2 vegetation/pole deuteranopia: 19.4",
-        "R2 vegetation/pole protanopia: 19.7"
-      ],
+      "failures": [],
       "contrast_min": {
-        "normal": 3.73,
+        "normal": 3.74,
         "deuteranopia": 3.93,
         "protanopia": 3.42
       }
@@ -279,11 +252,7 @@
       "scene": "ggpark_cards",
       "strength": 0.2,
       "shade_median": 0.9167,
-      "failures": [
-        "R2 vegetation/pole normal: 19.0",
-        "R2 vegetation/pole deuteranopia: 19.1",
-        "R2 vegetation/pole protanopia: 19.4"
-      ],
+      "failures": [],
       "contrast_min": {
         "normal": 3.87,
         "deuteranopia": 4.07,
@@ -296,14 +265,13 @@
       "strength": 0.25,
       "shade_median": 0.8968,
       "failures": [
-        "R2 vegetation/pole normal: 18.7",
-        "R2 vegetation/pole deuteranopia: 18.7",
-        "R2 vegetation/pole protanopia: 19.0"
+        "R2 vegetation/pole normal: 19.8",
+        "R2 vegetation/pole deuteranopia: 19.8"
       ],
       "contrast_min": {
         "normal": 4.01,
-        "deuteranopia": 4.21,
-        "protanopia": 3.68
+        "deuteranopia": 4.22,
+        "protanopia": 3.67
       }
     },
     "light|ggpark_cards|0.3": {
@@ -312,14 +280,14 @@
       "strength": 0.3,
       "shade_median": 0.8774,
       "failures": [
-        "R2 vegetation/pole normal: 18.4",
-        "R2 vegetation/pole deuteranopia: 18.4",
-        "R2 vegetation/pole protanopia: 18.7"
+        "R2 vegetation/pole normal: 19.5",
+        "R2 vegetation/pole deuteranopia: 19.5",
+        "R2 vegetation/pole protanopia: 19.8"
       ],
       "contrast_min": {
         "normal": 4.16,
         "deuteranopia": 4.36,
-        "protanopia": 3.82
+        "protanopia": 3.81
       }
     },
     "light|ggpark_cards|0.35": {
@@ -328,12 +296,12 @@
       "strength": 0.35,
       "shade_median": 0.859,
       "failures": [
-        "R2 vegetation/pole normal: 18.0",
-        "R2 vegetation/pole deuteranopia: 18.1",
-        "R2 vegetation/pole protanopia: 18.4"
+        "R2 vegetation/pole normal: 19.1",
+        "R2 vegetation/pole deuteranopia: 19.2",
+        "R2 vegetation/pole protanopia: 19.5"
       ],
       "contrast_min": {
-        "normal": 4.3,
+        "normal": 4.31,
         "deuteranopia": 4.51,
         "protanopia": 3.95
       }
@@ -344,9 +312,9 @@
       "strength": 0.4,
       "shade_median": 0.8403,
       "failures": [
-        "R2 vegetation/pole normal: 17.7",
-        "R2 vegetation/pole deuteranopia: 17.8",
-        "R2 vegetation/pole protanopia: 18.0"
+        "R2 vegetation/pole normal: 18.8",
+        "R2 vegetation/pole deuteranopia: 18.8",
+        "R2 vegetation/pole protanopia: 19.1"
       ],
       "contrast_min": {
         "normal": 4.46,
@@ -360,14 +328,14 @@
       "strength": 0.45,
       "shade_median": 0.822,
       "failures": [
-        "R2 vegetation/pole normal: 17.4",
-        "R2 vegetation/pole deuteranopia: 17.5",
-        "R2 vegetation/pole protanopia: 17.7"
+        "R2 vegetation/pole normal: 18.5",
+        "R2 vegetation/pole deuteranopia: 18.5",
+        "R2 vegetation/pole protanopia: 18.8"
       ],
       "contrast_min": {
-        "normal": 4.61,
+        "normal": 4.62,
         "deuteranopia": 4.83,
-        "protanopia": 4.25
+        "protanopia": 4.24
       }
     },
     "light|ggpark_cards|0.5": {
@@ -376,12 +344,12 @@
       "strength": 0.5,
       "shade_median": 0.8052,
       "failures": [
-        "R2 vegetation/pole normal: 17.1",
-        "R2 vegetation/pole deuteranopia: 17.2",
-        "R2 vegetation/pole protanopia: 17.4"
+        "R2 vegetation/pole normal: 18.2",
+        "R2 vegetation/pole deuteranopia: 18.2",
+        "R2 vegetation/pole protanopia: 18.4"
       ],
       "contrast_min": {
-        "normal": 4.76,
+        "normal": 4.77,
         "deuteranopia": 4.98,
         "protanopia": 4.39
       }
@@ -392,12 +360,12 @@
       "strength": 0.55,
       "shade_median": 0.7881,
       "failures": [
-        "R2 vegetation/pole normal: 16.8",
-        "R2 vegetation/pole deuteranopia: 16.9",
-        "R2 vegetation/pole protanopia: 17.1"
+        "R2 vegetation/pole normal: 17.8",
+        "R2 vegetation/pole deuteranopia: 17.9",
+        "R2 vegetation/pole protanopia: 18.1"
       ],
       "contrast_min": {
-        "normal": 4.92,
+        "normal": 4.93,
         "deuteranopia": 5.14,
         "protanopia": 4.54
       }
@@ -408,9 +376,9 @@
       "strength": 0.6,
       "shade_median": 0.7707,
       "failures": [
-        "R2 vegetation/pole normal: 16.5",
-        "R2 vegetation/pole deuteranopia: 16.6",
-        "R2 vegetation/pole protanopia: 16.8",
+        "R2 vegetation/pole normal: 17.5",
+        "R2 vegetation/pole deuteranopia: 17.6",
+        "R2 vegetation/pole protanopia: 17.8",
         "R3 vegetation/bridge deck deuteranopia: 9.9",
         "R3 fence/bridge deck deuteranopia: 9.9"
       ],
@@ -790,13 +758,13 @@
   },
   "chosen": {
     "light": {
-      "strength": 0.05,
+      "strength": 0.2,
       "passes_by_strength": {
         "0": true,
         "0.05": true,
-        "0.1": false,
-        "0.15": false,
-        "0.2": false,
+        "0.1": true,
+        "0.15": true,
+        "0.2": true,
         "0.25": false,
         "0.3": false,
         "0.35": false,

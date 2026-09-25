@@ -29,9 +29,14 @@ measurement, and the seed and step count are written into the palette file.
 Pole joined the story pairs later (pole against building, and pole against vegetation), and the
 palette above failed pole against vegetation in the light theme. With --only pole the search starts
 from the palette as it stands and moves pole alone: one hue for both themes within its range, a
-lightness per theme within that theme's range, chroma by the same rule, every rule in
-backend/surrey/palette.py checked in both themes. Of the choices that pass, the nearest to the old
-pole is taken, lightness first. Every other class keeps its colour.
+lightness per theme within that theme's range, chroma by the same rule. A colour has to pass every rule
+in backend/surrey/palette.py in both themes and all three visions, with no shade and at every median
+shade the eye-dome sweep measured (data/artifacts/edl_sweep.json) on both scenes: in the light theme
+for every strength up to the largest any pole colour allows, in the dark theme for every strength up to
+the one its rule chose. Every candidate is held at the floor R6 then chooses for it. Of the colours that
+pass, the nearest to the pole as it stands is taken, lightness first. Every other class keeps its
+colour, and no threshold moves. The sweep then chooses each theme's strength again by its own rule
+(scripts/investigations/edl_sweep.py --rechoose).
 
 Run:
     python scripts/investigations/palette_search.py
@@ -72,6 +77,7 @@ from surrey.palette import (  # noqa: E402
 )
 
 SEED, STEPS, RESTARTS = 20260914, 4000, 16
+EDL_SWEEP = ROOT / "data" / "artifacts" / "edl_sweep.json"
 HUE_RANGE = {
     "ground": (50, 95),
     "vegetation": (125, 180),
@@ -100,36 +106,81 @@ def max_chroma_table() -> np.ndarray:
 
 
 def adjust_pole() -> int:
-    """Move pole alone to the nearest colour that passes every rule in both themes."""
+    """Move pole alone to the nearest colour that passes every rule, unshaded and at the measured
+    eye-dome shades, keeping the light theme's strength as high as any pole colour allows."""
+    from surrey.palette import FLOORS, floor_ok
+
+    sweep = json.loads(EDL_SWEEP.read_text(encoding="utf-8"))
+
+    def shades(theme: str, up_to: float) -> list[float]:
+        cells = sweep["cells"].values()
+        # Darkest first: a colour that fails mostly fails there, and the check stops at a failure.
+        return sorted(
+            [1.0]
+            + [
+                c["shade_median"]
+                for c in cells
+                if c["theme"] == theme and c["strength"] <= up_to + 1e-9
+            ]
+        )
+
     cmax = max_chroma_table()
     li = {round(float(v), 2): i for i, v in enumerate(L_GRID)}
     palette = json.loads(PALETTE_FILE.read_text(encoding="utf-8"))
     old = {th: dict(d["tokens"]["pole"]) for th, d in palette["themes"].items()}
     lo_h, hi_h = HUE_RANGE["pole"]
-    best = None
-    for h in range(lo_h, hi_h + 1, 2):
-        chosen = {}
-        for th, (lo, hi) in L_RANGE.items():
-            tokens = dict(palette["themes"][th]["tokens"])
-            for L in sorted(
-                L_GRID[(lo - 1e-9 <= L_GRID) & (hi + 1e-9 >= L_GRID)],
-                key=lambda v, o=old[th]["L"]: abs(v - o),
-            ):
-                chroma = max(C_MIN, min(C_CAP, C_SHARE * cmax[li[round(float(L), 2)], h // 2]))
-                tokens["pole"] = {"L": float(L), "C": round(float(chroma), 4), "h": float(h)}
-                if not check_theme(tokens, palette["themes"][th]["ground"], palette["floor"])[
-                    "failures"
-                ]:
-                    chosen[th] = tokens["pole"]
-                    break
-        if len(chosen) < len(L_RANGE):
-            continue
-        change = (
-            sum(abs(chosen[th]["L"] - old[th]["L"]) for th in chosen)
-            + abs(h - old["light"]["h"]) / 360
+    dark_up_to = sweep["chosen"]["dark"]["strength"]
+
+    def pole(L: float, h: int) -> dict:
+        chroma = max(C_MIN, min(C_CAP, C_SHARE * cmax[li[round(float(L), 2)], h // 2]))
+        return {"L": float(L), "C": round(float(chroma), 4), "h": float(h)}
+
+    def passes(th: str, tokens: dict, floor: float, up_to: float) -> bool:
+        ground = palette["themes"][th]["ground"]
+        return all(
+            not check_theme(tokens, ground, floor, sh)["failures"] for sh in shades(th, up_to)
         )
-        if best is None or change < best[0]:
-            best = (change, chosen)
+
+    def nearest(th: str, h: int, floor: float, up_to: float) -> dict | None:
+        lo, hi = L_RANGE[th]
+        tokens = dict(palette["themes"][th]["tokens"])
+        for L in sorted(
+            L_GRID[(lo - 1e-9 <= L_GRID) & (hi + 1e-9 >= L_GRID)],
+            key=lambda v, o=old[th]["L"]: abs(v - o),
+        ):
+            tokens["pole"] = pole(L, h)
+            if floor_ok(tokens, floor) and passes(th, tokens, floor, up_to):
+                return tokens["pole"]
+        return None
+
+    best = None
+    for light_up_to in sorted(sweep["grid"], reverse=True):
+        for h in range(lo_h, hi_h + 1, 2):
+            for f in FLOORS:
+                light = nearest("light", h, f, light_up_to)
+                dark = nearest("dark", h, f, dark_up_to) if light else None
+                if not (light and dark):
+                    continue
+                trial = json.loads(json.dumps(palette))
+                trial["themes"]["light"]["tokens"]["pole"] = light
+                trial["themes"]["dark"]["tokens"]["pole"] = dark
+                floor = choose_floor(trial)
+                if floor is None:
+                    continue
+                if not (
+                    passes("light", trial["themes"]["light"]["tokens"], floor, light_up_to)
+                    and passes("dark", trial["themes"]["dark"]["tokens"], floor, dark_up_to)
+                ):
+                    continue
+                change = (
+                    abs(light["L"] - old["light"]["L"])
+                    + abs(dark["L"] - old["dark"]["L"])
+                    + abs(h - old["light"]["h"]) / 360
+                )
+                if best is None or change < best[0]:
+                    best = (change, {"light": light, "dark": dark}, light_up_to)
+        if best is not None:
+            break
     if best is None:
         print("no pole colour passes every rule with the other classes as they are")
         return 1
@@ -142,12 +193,13 @@ def adjust_pole() -> int:
         th: check_theme(d["tokens"], d["ground"], use) for th, d in palette["themes"].items()
     }
     palette["search"]["pole_adjusted"] = (
-        "pole moved alone for the story pairs pole/building and pole/vegetation, by --only pole"
+        "pole moved alone for the story pairs pole/building and pole/vegetation, by --only pole, held "
+        "to every rule at the eye-dome shades measured in data/artifacts/edl_sweep.json"
     )
     PALETTE_FILE.write_text(json.dumps(palette, indent=2) + "\n", encoding="utf-8", newline="\n")
     for th in best[1]:
         print(th, "pole", old[th], "->", best[1][th], "failures", palette["checks"][th]["failures"])
-    print("floor", floor)
+    print("floor", floor, "light passes up to", best[2], "dark up to", dark_up_to)
     return 0
 
 
