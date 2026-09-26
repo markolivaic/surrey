@@ -9,6 +9,8 @@ they show what was decided before which result existed.
   changes and no others: the working copy's absolute path is removed from the lines that name a
   file written, and Windows line endings are made plain newlines.
 - `gpu_chain_phase4.log`: written by the Phase 4 chain as it runs, and committed as it stands.
+- `phase4_inputs.sha256` and `phase4_outputs.sha256`: the SHA-256 of every file sent to the rented
+  card and of every checkpoint and prediction brought back, checked on the other side each time.
 
 Before the first commit of this repository, the order of rules and results rests on these logs and
 the dates inside the artefacts, which the project wrote itself. From the first commit on, git records

@@ -1,0 +1,148 @@
+{
+  "what": "real water, measured returns only, per 40 m block where water is the majority",
+  "block_m": 40.0,
+  "swiss": {
+    "zurich 2683-1246": {
+      "source": {
+        "water_blocks": 93,
+        "water_points_in_them": 661998,
+        "density_p10_p50_p90": [
+          0.05,
+          3.16,
+          10.5
+        ]
+      },
+      "prepared": {
+        "water_blocks": 93,
+        "water_points_in_them": 661797,
+        "density_p10_p50_p90": [
+          0.05,
+          3.16,
+          10.5
+        ]
+      }
+    },
+    "zurich 2683-1243": {
+      "source": {
+        "water_blocks": 44,
+        "water_points_in_them": 34824,
+        "density_p10_p50_p90": [
+          0.0,
+          0.28,
+          1.18
+        ]
+      },
+      "prepared": {
+        "water_blocks": 42,
+        "water_points_in_them": 34129,
+        "density_p10_p50_p90": [
+          0.0,
+          0.28,
+          1.18
+        ]
+      }
+    },
+    "geneva 2500-1118": {
+      "source": {
+        "water_blocks": 1,
+        "water_points_in_them": 30,
+        "density_p10_p50_p90": [
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      "prepared": {
+        "water_blocks": 1,
+        "water_points_in_them": 30,
+        "density_p10_p50_p90": [
+          0.02,
+          0.02,
+          0.02
+        ]
+      }
+    },
+    "geneva 2500-1119": {
+      "source": {
+        "water_blocks": 2,
+        "water_points_in_them": 3,
+        "density_p10_p50_p90": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "prepared": {
+        "water_blocks": 2,
+        "water_points_in_them": 3,
+        "density_p10_p50_p90": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "zug 2680-1225, held out": {
+      "source": {
+        "water_blocks": 8,
+        "water_points_in_them": 1910,
+        "density_p10_p50_p90": [
+          0.0,
+          0.02,
+          0.35
+        ]
+      },
+      "prepared": {
+        "water_blocks": 8,
+        "water_points_in_them": 1910,
+        "density_p10_p50_p90": [
+          0.0,
+          0.02,
+          0.35
+        ]
+      }
+    }
+  },
+  "san_francisco": {
+    "embarcadero": {
+      "source": {
+        "water_blocks": 24,
+        "water_points_in_them": 969545,
+        "density_p10_p50_p90": [
+          14.62,
+          28.1,
+          30.91
+        ]
+      },
+      "prepared": {
+        "water_blocks": 23,
+        "water_points_in_them": 696138,
+        "density_p10_p50_p90": [
+          11.78,
+          20.54,
+          23.52
+        ]
+      }
+    },
+    "baybridge": {
+      "source": {
+        "water_blocks": 38,
+        "water_points_in_them": 1470427,
+        "density_p10_p50_p90": [
+          3.8,
+          30.58,
+          35.07
+        ]
+      },
+      "prepared": {
+        "water_blocks": 39,
+        "water_points_in_them": 1087643,
+        "density_p10_p50_p90": [
+          2.74,
+          22.37,
+          24.3
+        ]
+      }
+    }
+  }
+}

@@ -67,19 +67,19 @@ flowchart LR
 
 ## What it does in San Francisco
 
-In domain first, on every voxel-thinned held-out Surrey point: point accuracy 0.8914 over three seeds (0.8843 to 0.8929), against a do-nothing baseline of 0.4797 for calling everything ground on the same thinned set.
+In domain first, on every voxel-thinned held-out Surrey point: point accuracy 0.9159 over three seeds (0.9179 to 0.918), against a do-nothing baseline of 0.4797 for calling everything ground on the same thinned set.
 
 San Francisco, median over three seeds with the lowest and highest seed beside it:
 
 | Area | Building lift over the footprint null | NAIP vegetation cores called vegetation | Delivery ground called ground |
 |---|---|---|---|
-| Golden Gate Park | no buildings | 0.9153 (0.9039 to 0.9311) | 0.962 (0.9439 to 0.9809) |
-| Sunset | 0.7011 (0.6613 to 0.7151) | 0.9104 (0.8769 to 0.913) | 0.9597 (0.9491 to 0.9736) |
-| Mission | 0.66 (0.6274 to 0.6689) | 0.9654 (0.9416 to 0.9763) | 0.955 (0.9389 to 0.9722) |
-| Russian Hill | 0.651 (0.6183 to 0.6759) | 0.8982 (0.8597 to 0.9096) | 0.8911 (0.8658 to 0.9431) |
-| SoMa | 0.6206 (0.6034 to 0.6251) | 0.9603 (0.9465 to 0.9687) | 0.9768 (0.9672 to 0.987) |
-| Financial District | 0.3306 (0.2384 to 0.3307) | 0.9831 (0.9825 to 0.9918) | 0.8394 (0.8212 to 0.845) |
-| Embarcadero | 0.0159 (0.0116 to 0.0191) | 0.9727 (0.9494 to 0.9864) | 0.8495 (0.8155 to 0.8707) |
+| Golden Gate Park | no buildings | 0.9722 (0.9704 to 0.9724) | 0.9425 (0.9366 to 0.9779) |
+| Sunset | 0.6699 (0.6634 to 0.6765) | 0.9465 (0.9418 to 0.9471) | 0.9647 (0.9588 to 0.9744) |
+| Mission | 0.6136 (0.6023 to 0.6151) | 0.9828 (0.9803 to 0.9837) | 0.9692 (0.9582 to 0.9872) |
+| Russian Hill | 0.5579 (0.5531 to 0.5623) | 0.9313 (0.9201 to 0.9318) | 0.9139 (0.9028 to 0.9354) |
+| SoMa | 0.5621 (0.5594 to 0.5631) | 0.9854 (0.9834 to 0.9862) | 0.9922 (0.9828 to 0.9958) |
+| Financial District | 0.1456 (0.1452 to 0.1972) | 0.9969 (0.9962 to 0.997) | 0.9784 (0.9726 to 0.9861) |
+| Embarcadero | 0.0443 (0.0382 to 0.0499) | 0.9985 (0.9985 to 0.9987) | 0.8318 (0.8095 to 0.8722) |
 
 Building lift is the share of the room above the null the model takes, where the null calls every point over 2 m a building. The vegetation column takes the lower of two NAIP masks, one registered to the lidar and one not, because a rule fixed before the numbers could not choose between them.
 
@@ -103,7 +103,7 @@ The published model has three inputs and no such state. `tests/integrity/test_in
 
 ## Where it fails
 
-**Water and bridge deck.** Water called ground: 0.9036 at Embarcadero (0.8873 to 0.9342) and 0.9566 at Bay Bridge (0.941 to 0.9695). Bridge deck called building: 0.9962 at Bay Bridge (0.9813 to 0.9991). And its confidence gives those mistakes away less than it gives away mistakes at home. Among ground calls, confidence separates right ground from errors within half a metre of the surface at an AUROC of 0.9103 at home (0.8923 to 0.9164), and water from right ground in Embarcadero at only 0.6666 (0.6018 to 0.725). Water errors are harder to see than errors at home on all 3 seeds.
+**Water and bridge deck.** Water called ground: 0.9618 at Embarcadero (0.9089 to 0.9724) and 0.9713 at Bay Bridge (0.9284 to 0.9752). Bridge deck called building: 0.9983 at Bay Bridge (0.9982 to 0.9984). And its confidence gives those mistakes away less than it gives away mistakes at home. Among ground calls, confidence separates right ground from errors within half a metre of the surface at an AUROC of 0.9375 at home (0.9292 to 0.9407), and water from right ground in Embarcadero at only 0.7404 (0.7144 to 0.7506). Water errors are harder to see than errors at home on all 3 seeds.
 
 **Roofs called ground.** Among points the delivery leaves unassigned more than 3 m above its ground, the share called ground is above the model's own range on the held-out Surrey tiles in Mission, SoMa and Embarcadero on all 3 seeds: transfer. In Golden Gate Park, the Sunset, Russian Hill and the Financial District it stays inside that range on all 3: a weakness the model has at home too.
 
@@ -115,10 +115,10 @@ Lift over the water null, per seed, where the rule asked for a positive lift on 
 
 | area | seed A | seed B | seed C | result |
 |---|---|---|---|---|
-| Embarcadero | -1.4149 | -1.4284 | -1.2832 | positive on 0 of 3 seeds |
-| Bay Bridge | -1.447 | -1.4524 | -1.1653 | positive on 0 of 3 seeds |
+| Embarcadero | -1.4314 | -1.4439 | -1.4478 | positive on 0 of 3 seeds |
+| Bay Bridge | -1.4652 | -1.4655 | -1.4386 | positive on 0 of 3 seeds |
 
-**The class was learned, and it does travel; it just does not reach San Francisco.** Scored on the sixteen Swiss sub-tiles it learned water from, M1 seed A reaches water IoU 0.959 (precision 0.9634, recall 0.9952) against a null that calls every point water and reaches 0.2577. Those sub-tiles are training tiles, so that figure alone cannot tell a learned class from sixteen memorised tiles. So a tile from a third city was taken afterwards, by the same rule, and never trained on: Zug, where the Lorze leaves the lake. Water IoU there is 0.8448, 0.9304 and 0.9386 on the three seeds, against a null of 0.2225, and the control that has no water output calls water on nothing. The class is real and it generalises inside Switzerland. In San Francisco the same model finds 0.0136, 0.0081 and 0.0782 of the water at Embarcadero on the three seeds. Bridge deck is a different case and is not read as transfer at all: in-sample, on its own training
+**The class was learned, and it does travel; it just does not reach San Francisco.** Scored on the sixteen Swiss sub-tiles it learned water from, M1 seed A reaches water IoU 0.959 (precision 0.9634, recall 0.9952) against a null that calls every point water and reaches 0.2577. Those sub-tiles are training tiles, so that figure alone cannot tell a learned class from sixteen memorised tiles. So a tile from a third city was taken afterwards, by the same rule, and never trained on: Zug, where the Lorze leaves the lake. Water IoU there is 0.8448, 0.9304 and 0.9386 on the three seeds, against a null of 0.2225, and the control that has no water output calls water on nothing. The class is real and it generalises inside Switzerland. In San Francisco the same model finds 0.007, 0.0019 and 0.0003 of the water at Embarcadero on the three seeds. Bridge deck is a different case and is not read as transfer at all: in-sample, on its own training
 tiles, it reaches IoU 0.2583 against a null of 0.006, so the class was never learned at home, and what it
 does at the Bay Bridge says nothing about carrying a class across the ocean.
 
@@ -130,9 +130,9 @@ That is measurable in both directions. Asking the same M1 for water over San Fra
 
 Nothing of this touches the rest of the table. Running the published M0 over the same San Francisco blocks at the DALES density changes nothing at all, because the crop already equalises them: ground recall at Embarcadero reads 0.7864 as drawn and 0.8103 at the DALES density, vegetation 0.9958 against 0.9959, and the grouping reaches 0.778 m in Embarcadero against 0.788 m on the Surrey tiles the model trained on. The M0 figures in the table above are not held down by point spacing.
 
-**What M1 does change.** Water called ground falls from M0prime's 0.9388 (0.9331 to 0.9518) to M1's 0.6968 (0.6764 to 0.744) at Embarcadero, and from M0prime's 0.9571 (0.9492 to 0.9601) to M1's 0.7543 (0.7134 to 0.8392) at Bay Bridge. The ranges do not overlap, so it falls on every seed. Bridge deck called building barely moves at Embarcadero, from the control's 0.9981 (0.9981 to 0.9983) to 0.9974 (0.9863 to 0.9976). At Bay Bridge the control calls 0.9993 (0.9992 to 0.9995) of it building, and M1 calls 0.9773, 0.9983 and 0.8641 on its three seeds: the drop belongs to one seed, not to the recipe.
+**What M1 does change.** Water called ground falls from M0prime's 0.9528 (0.8972 to 0.9641) to M1's 0.8502 (0.7909 to 0.9095) at Embarcadero, and from M0prime's 0.9395 (0.9384 to 0.9549) to M1's 0.8904 (0.7794 to 0.9327) at Bay Bridge. The ranges do not overlap, so it falls on every seed. Bridge deck called building barely moves at Embarcadero, from the control's 0.9997 (0.9982 to 0.9998) to 0.9997 (0.9987 to 0.9997). At Bay Bridge the control calls 0.9984 (0.9984 to 0.9985) of it building, and M1 calls 1.0, 0.9984 and 0.9307 on its three seeds: the drop belongs to one seed, not to the recipe.
 
-**What it costs, on all three seeds.** Ground recall at Embarcadero falls from 0.8248 to 0.8867 under M0prime to 0.6028 to 0.6836 under M1, and the same drop shows in the Financial District, Mission, SoMa and the Sunset. Confidence separates easy errors less well at Embarcadero, Mission and SoMa. On the held-out Surrey tiles, ground, vegetation, annex and pickup all fall. Giving the model two more words cost it accuracy on the words it had.
+**What it costs, on all three seeds.** Ground recall at Embarcadero falls from 0.8072 to 0.7961 under M0prime to 0.7953 to 0.7351 under M1, and the same drop shows in the Financial District, Mission, SoMa and the Sunset. Confidence separates easy errors less well at Embarcadero, Mission and SoMa. On the held-out Surrey tiles, ground, vegetation, annex and pickup all fall. Giving the model two more words cost it accuracy on the words it had.
 
 **The interrupted seed.** M1 seed A was cut off by a power loss and resumed once from its checkpoint at step 5750, before the checkpoint saved random states, so its data order after that step differs from an unbroken run. It is not an outlier. Of the 56 side effect measurements, 54 have three distinct seed values, and for
 three distinct values exactly two of them lie outside the range of the other two, so the counts have to
@@ -160,7 +160,7 @@ all six areas and its ground recall is lower in all six.
 | model, both on the same rented card | parameters | in domain accuracy |
 |---|---|---|
 | the published configuration | 725,967 | 0.8976 |
-| sixteen times larger | 11,505,423 | 0.8944 |
+| sixteen times larger | 11,505,423 | 0.9189 |
 
 One caveat belongs with every figure in this section, and it was found by the control that exists to
 find it: the same recipe trained on the rented card lands outside the three laptop seeds on
@@ -214,7 +214,7 @@ instead: PotreeConverter 2.1.3 for the octrees and ffmpeg for the walkthrough.
 
 Each row is a command a reader runs from the repository root. The results are what
 `python scripts/pipeline/verify.py` printed in the working copy, on Windows 11, AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD, NVIDIA GeForce RTX 3050 Laptop GPU, Python 3.12.1, on
-2026-09-25. A test is counted once however many cases a parametrisation makes of it; the
+2026-09-26. A test is counted once however many cases a parametrisation makes of it; the
 cases are given after it.
 
 Before this repository's first commit, the order in which rules were written and results appeared rests
@@ -223,7 +223,7 @@ the first commit on, the git history shows it.
 
 | Check | Command | Result |
 |---|---|---|
-| behavioural tests | `python -m pytest tests/unit -q` | 160 tests; cases 166 passed |
+| behavioural tests | `python -m pytest tests/unit -q` | 161 tests; cases 167 passed |
 | integrity tests | `python -m pytest tests/integrity -q` | 50 tests; cases 53 passed |
 | README is generated | `python scripts/pipeline/render_readme.py --check` | passes |
 | page figures | `python scripts/pipeline/page_figures.py` | passes |

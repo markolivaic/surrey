@@ -1,6 +1,6 @@
 {
   "what": "every check in the README's verification table, as one run printed it",
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "machine": "Windows 11, AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD, NVIDIA GeForce RTX 3050 Laptop GPU, Python 3.12.1",
   "checks": [
     {
@@ -9,10 +9,10 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 166,
-        "functions": 160
+        "passed": 167,
+        "functions": 161
       },
-      "summary": "160 tests; cases 166 passed"
+      "summary": "161 tests; cases 167 passed"
     },
     {
       "check": "integrity tests",

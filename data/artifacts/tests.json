@@ -2,9 +2,9 @@
   "suites": {
     "unit": {
       "path": "tests/unit",
-      "functions": 160,
-      "collected": 166,
-      "passed": 166,
+      "functions": 161,
+      "collected": 167,
+      "passed": 167,
       "failed": 0,
       "skipped": 0,
       "errors": 0,
@@ -33,7 +33,7 @@
   },
   "machine": "Windows-11-10.0.26200-SP0",
   "python": "3.12.1",
-  "run_utc": "2026-09-25T20:59:44Z",
-  "seconds": 221.4,
+  "run_utc": "2026-09-26T04:37:15Z",
+  "seconds": 157.3,
   "note": "counted separately on purpose; a single total would let greps inflate a count of behavioural tests"
 }

@@ -15,6 +15,10 @@ in scripts/pipeline/choose_votes.py.
 
 from __future__ import annotations
 
+import pathlib
+import pickle
+import types
+
 import numpy as np
 import torch
 
@@ -25,13 +29,30 @@ LOG_N = float(np.log(N_CLASSES))
 DEFAULT_SEED = 0
 
 
+class _PathTolerantUnpickler(pickle.Unpickler):
+    """Checkpoints trained on Windows store their run's arguments with pathlib.WindowsPath, which
+    cannot be made on Linux. Those arguments are only a record, so a stored path of either kind is read
+    as a pure path; the weights are untouched."""
+
+    def find_class(self, module, name):
+        if module == "pathlib" and name in ("WindowsPath", "PosixPath"):
+            return pathlib.PurePath
+        return super().find_class(module, name)
+
+
+_PICKLE = types.ModuleType("surrey_checkpoint_pickle")
+_PICKLE.Unpickler = _PathTolerantUnpickler  # type: ignore[attr-defined]
+_PICKLE.load = pickle.load  # type: ignore[attr-defined]
+_PICKLE.loads = pickle.loads  # type: ignore[attr-defined]
+
+
 def load_checkpoint(path, dev: str, width: int | None = None):
     """A checkpoint as the network it was trained as: its head's size, so M1's seventeen outputs are
     never cut to fifteen, its channel count and its width. Returns the network in eval mode, the
     stored blob and the channel count. A checkpoint that predates the channel option read four."""
     from .model import SurreyNet
 
-    blob = torch.load(path, map_location=dev, weights_only=False)
+    blob = torch.load(path, map_location=dev, weights_only=False, pickle_module=_PICKLE)
     args = blob.get("args") or {}
     channels = int(args.get("channels") or 4)
     width = int(width or args.get("width") or 128)

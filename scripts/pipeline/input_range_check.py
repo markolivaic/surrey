@@ -211,6 +211,32 @@ def main() -> int:
                     r["ground_relief_m"]["p90"] > typical_building
                 ),
             }
+    # The confound reading written before Phase 4 (docs/phase4_criteria.md): an area is outside what
+    # training showed on a measure when its median block lies above the 99th percentile of the 29
+    # training tiles' blocks. Building height has no reference on the San Francisco side, which labels
+    # no buildings; the block's height range carries the tall building case there.
+    p99 = {
+        "block_z_range_m": float(np.percentile(s_zrange, 99)),
+        "ground_relief_m": float(np.percentile(s_relief, 99)),
+        "building_top_m": float(np.percentile(s_btop, 99)) if s_btop.size else None,
+    }
+    confounds = {
+        "rule": "outside when the area's median block lies above the 99th percentile of the 29 "
+        "training tiles' blocks, fixed in docs/phase4_criteria.md before Phase 4",
+        "training_p99": {k: None if v is None else round(v, 2) for k, v in p99.items()},
+        "building_top_on_san_francisco": "not measurable: the delivery labels no buildings",
+        "per_aoi": {},
+    }
+    for r in sf:
+        row = {}
+        for measure, key in (("block_z_range_m", "z_range"), ("ground_relief_m", "ground_relief")):
+            v = np.asarray(r["_raw"][key])
+            med = float(np.median(v)) if v.size else None
+            row[measure] = {
+                "median": None if med is None else round(med, 2),
+                "outside": None if med is None else bool(med > p99[measure]),
+            }
+        confounds["per_aoi"][r["name"]] = row
     for r in surrey + sf:
         r.pop("_raw")
 
@@ -224,6 +250,7 @@ def main() -> int:
         ),
         "slope_leak": slope,
         "vertical_extrapolation": extrapolation,
+        "confounds_at_the_99th_percentile": confounds,
         "surrey_tiles": surrey,
         "san_francisco": sf,
         "seconds": round(time.time() - t0, 1),

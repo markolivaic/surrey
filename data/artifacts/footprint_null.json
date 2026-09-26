@@ -29,8 +29,8 @@
       "ggpark"
     ],
     "everything_above_2m_precision_range_built": [
-      0.137,
-      0.6319
+      0.1391,
+      0.6339
     ],
     "everything_above_2m_precision_control": {
       "baybridge": 0.0,
@@ -48,19 +48,19 @@
     {
       "aoi": "baybridge",
       "is_control": true,
-      "points": 3069047,
+      "points": 3068521,
       "aoi_area_m2": 90315.1,
       "footprints_in_aoi": 0,
       "footprint_area_fraction": 0.0,
       "points_over_2m_fraction": 0.1862,
-      "noise_fraction": 0.00019,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.0,
-        "eligible_points": 3068476
+        "eligible_points": 3068521
       },
       "baseline_everything_above_2m": {
         "null_precision": 0.0,
-        "eligible_points": 571498,
+        "eligible_points": 571432,
         "null_recall_touch": null,
         "null_coverage_median": null,
         "null_coverage_p10": null,
@@ -71,22 +71,22 @@
     {
       "aoi": "embarcadero",
       "is_control": false,
-      "points": 4458544,
-      "aoi_area_m2": 90950.1,
+      "points": 4434486,
+      "aoi_area_m2": 90944.1,
       "footprints_in_aoi": 7,
       "footprint_area_fraction": 0.0418,
-      "points_over_2m_fraction": 0.2803,
-      "noise_fraction": 0.00542,
+      "points_over_2m_fraction": 0.2776,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.055,
-        "eligible_points": 4434367
+        "eligible_points": 4434486
       },
       "baseline_everything_above_2m": {
-        "null_precision": 0.137,
-        "eligible_points": 1249647,
+        "null_precision": 0.1391,
+        "eligible_points": 1231013,
         "null_recall_touch": 1.0,
         "null_coverage_median": 0.8275,
-        "null_coverage_p10": 0.4377,
+        "null_coverage_p10": 0.4381,
         "footprints_scored": 7,
         "footprints_too_small": 0
       }
@@ -94,22 +94,22 @@
     {
       "aoi": "financial",
       "is_control": false,
-      "points": 7630301,
+      "points": 7491501,
       "aoi_area_m2": 90923.0,
       "footprints_in_aoi": 25,
       "footprint_area_fraction": 0.4369,
-      "points_over_2m_fraction": 0.6359,
-      "noise_fraction": 0.01821,
+      "points_over_2m_fraction": 0.6372,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.4951,
-        "eligible_points": 7491350
+        "eligible_points": 7491501
       },
       "baseline_everything_above_2m": {
-        "null_precision": 0.6319,
-        "eligible_points": 4851963,
+        "null_precision": 0.6339,
+        "eligible_points": 4773410,
         "null_recall_touch": 0.96,
-        "null_coverage_median": 0.8342,
-        "null_coverage_p10": 0.7053,
+        "null_coverage_median": 0.8268,
+        "null_coverage_p10": 0.7212,
         "footprints_scored": 23,
         "footprints_too_small": 2
       }
@@ -117,19 +117,19 @@
     {
       "aoi": "ggpark",
       "is_control": true,
-      "points": 9012919,
+      "points": 9010024,
       "aoi_area_m2": 90751.2,
       "footprints_in_aoi": 1,
       "footprint_area_fraction": 0.001,
-      "points_over_2m_fraction": 0.6115,
-      "noise_fraction": 0.00035,
+      "points_over_2m_fraction": 0.6116,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.0004,
-        "eligible_points": 9009760
+        "eligible_points": 9010024
       },
       "baseline_everything_above_2m": {
         "null_precision": 0.0,
-        "eligible_points": 5511190,
+        "eligible_points": 5510689,
         "null_recall_touch": 0.0,
         "null_coverage_median": 0.0,
         "null_coverage_p10": 0.0,
@@ -140,22 +140,22 @@
     {
       "aoi": "mission",
       "is_control": false,
-      "points": 4536209,
-      "aoi_area_m2": 90889.8,
+      "points": 4532181,
+      "aoi_area_m2": 90886.8,
       "footprints_in_aoi": 56,
       "footprint_area_fraction": 0.3915,
-      "points_over_2m_fraction": 0.4591,
-      "noise_fraction": 0.00092,
+      "points_over_2m_fraction": 0.4595,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.3748,
-        "eligible_points": 4532015
+        "eligible_points": 4532181
       },
       "baseline_everything_above_2m": {
         "null_precision": 0.542,
-        "eligible_points": 2082611,
+        "eligible_points": 2082429,
         "null_recall_touch": 1.0,
-        "null_coverage_median": 0.9382,
-        "null_coverage_p10": 0.6732,
+        "null_coverage_median": 0.9387,
+        "null_coverage_p10": 0.6719,
         "footprints_scored": 56,
         "footprints_too_small": 0
       }
@@ -163,22 +163,22 @@
     {
       "aoi": "soma",
       "is_control": false,
-      "points": 4527700,
+      "points": 4522972,
       "aoi_area_m2": 90895.8,
       "footprints_in_aoi": 26,
       "footprint_area_fraction": 0.4757,
-      "points_over_2m_fraction": 0.4949,
-      "noise_fraction": 0.00108,
+      "points_over_2m_fraction": 0.494,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.4658,
-        "eligible_points": 4522800
+        "eligible_points": 4522972
       },
       "baseline_everything_above_2m": {
-        "null_precision": 0.6289,
-        "eligible_points": 2240726,
+        "null_precision": 0.6279,
+        "eligible_points": 2234311,
         "null_recall_touch": 1.0,
         "null_coverage_median": 0.7495,
-        "null_coverage_p10": 0.4661,
+        "null_coverage_p10": 0.4664,
         "footprints_scored": 26,
         "footprints_too_small": 0
       }
@@ -186,22 +186,22 @@
     {
       "aoi": "steep",
       "is_control": false,
-      "points": 5427902,
-      "aoi_area_m2": 90886.8,
+      "points": 5417326,
+      "aoi_area_m2": 90883.8,
       "footprints_in_aoi": 78,
       "footprint_area_fraction": 0.481,
-      "points_over_2m_fraction": 0.6587,
-      "noise_fraction": 0.00205,
+      "points_over_2m_fraction": 0.6603,
+      "noise_fraction": 0.0,
       "baseline_everything": {
         "null_precision": 0.4667,
-        "eligible_points": 5416755
+        "eligible_points": 5417326
       },
       "baseline_everything_above_2m": {
-        "null_precision": 0.5954,
-        "eligible_points": 3575521,
+        "null_precision": 0.5958,
+        "eligible_points": 3576909,
         "null_recall_touch": 0.9744,
-        "null_coverage_median": 0.9683,
-        "null_coverage_p10": 0.8548,
+        "null_coverage_median": 0.9671,
+        "null_coverage_p10": 0.8669,
         "footprints_scored": 77,
         "footprints_too_small": 1
       }
@@ -209,26 +209,26 @@
     {
       "aoi": "sunset",
       "is_control": false,
-      "points": 5466462,
-      "aoi_area_m2": 90742.1,
+      "points": 5461632,
+      "aoi_area_m2": 90745.1,
       "footprints_in_aoi": 33,
       "footprint_area_fraction": 0.2971,
-      "points_over_2m_fraction": 0.4212,
-      "noise_fraction": 0.00097,
+      "points_over_2m_fraction": 0.4211,
+      "noise_fraction": 0.0,
       "baseline_everything": {
-        "null_precision": 0.2841,
-        "eligible_points": 5461138
+        "null_precision": 0.2842,
+        "eligible_points": 5461632
       },
       "baseline_everything_above_2m": {
-        "null_precision": 0.5105,
-        "eligible_points": 2302589,
+        "null_precision": 0.5098,
+        "eligible_points": 2300011,
         "null_recall_touch": 1.0,
         "null_coverage_median": 0.9286,
-        "null_coverage_p10": 0.8205,
+        "null_coverage_p10": 0.8203,
         "footprints_scored": 33,
         "footprints_too_small": 0
       }
     }
   ],
-  "seconds": 231.9
+  "seconds": 199.6
 }

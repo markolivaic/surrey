@@ -16,42 +16,42 @@
     "per_aoi_ground_relief_m": {
       "embarcadero": {
         "median": 0.62,
-        "p90": 2.07,
+        "p90": 2.08,
         "max": 4.59,
         "exceeds_a_surrey_building_at_p90": false
       },
       "financial": {
-        "median": 0.47,
+        "median": 0.46,
         "p90": 1.14,
         "max": 2.57,
         "exceeds_a_surrey_building_at_p90": false
       },
       "ggpark": {
-        "median": 4.51,
-        "p90": 8.11,
+        "median": 4.52,
+        "p90": 8.12,
         "max": 12.18,
         "exceeds_a_surrey_building_at_p90": false
       },
       "mission": {
         "median": 1.0,
-        "p90": 2.05,
+        "p90": 2.06,
         "max": 3.08,
         "exceeds_a_surrey_building_at_p90": false
       },
       "soma": {
-        "median": 0.68,
-        "p90": 1.55,
+        "median": 0.67,
+        "p90": 1.56,
         "max": 3.25,
         "exceeds_a_surrey_building_at_p90": false
       },
       "steep": {
-        "median": 6.06,
+        "median": 6.05,
         "p90": 11.05,
         "max": 17.82,
         "exceeds_a_surrey_building_at_p90": true
       },
       "sunset": {
-        "median": 3.56,
+        "median": 3.57,
         "p90": 6.61,
         "max": 9.06,
         "exceeds_a_surrey_building_at_p90": false
@@ -60,8 +60,8 @@
   },
   "vertical_extrapolation": {
     "surrey_training_block_z_max_m": 121.77,
-    "sf_block_z_max_m": 202.4,
-    "sf_blocks_above_training_max": 0.0778,
+    "sf_block_z_max_m": 191.15,
+    "sf_blocks_above_training_max": 0.0758,
     "per_aoi": {
       "baybridge": {
         "blocks": 53,
@@ -77,9 +77,9 @@
       },
       "financial": {
         "blocks": 64,
-        "blocks_above_training_max": 26,
-        "fraction_above": 0.4062,
-        "max_m": 202.4
+        "blocks_above_training_max": 25,
+        "fraction_above": 0.3906,
+        "max_m": 191.15
       },
       "ggpark": {
         "blocks": 64,
@@ -91,13 +91,13 @@
         "blocks": 64,
         "blocks_above_training_max": 0,
         "fraction_above": 0.0,
-        "max_m": 27.1
+        "max_m": 27.11
       },
       "soma": {
         "blocks": 64,
         "blocks_above_training_max": 0,
         "fraction_above": 0.0,
-        "max_m": 49.12
+        "max_m": 49.13
       },
       "steep": {
         "blocks": 64,
@@ -109,10 +109,101 @@
         "blocks": 64,
         "blocks_above_training_max": 0,
         "fraction_above": 0.0,
-        "max_m": 24.82
+        "max_m": 24.83
       }
     },
     "reading": "a block above the training maximum is not a harder example, it is outside the range the layers were fitted on. Naming these before scoring turns their result into a check, not a surprise"
+  },
+  "confounds_at_the_99th_percentile": {
+    "rule": "outside when the area's median block lies above the 99th percentile of the 29 training tiles' blocks, fixed in docs/phase4_criteria.md before Phase 4",
+    "training_p99": {
+      "block_z_range_m": 46.19,
+      "ground_relief_m": 9.1,
+      "building_top_m": 20.5
+    },
+    "building_top_on_san_francisco": "not measurable: the delivery labels no buildings",
+    "per_aoi": {
+      "baybridge": {
+        "block_z_range_m": {
+          "median": 0.23,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": null,
+          "outside": null
+        }
+      },
+      "embarcadero": {
+        "block_z_range_m": {
+          "median": 8.14,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": 0.62,
+          "outside": false
+        }
+      },
+      "financial": {
+        "block_z_range_m": {
+          "median": 99.82,
+          "outside": true
+        },
+        "ground_relief_m": {
+          "median": 0.46,
+          "outside": false
+        }
+      },
+      "ggpark": {
+        "block_z_range_m": {
+          "median": 34.53,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": 4.52,
+          "outside": false
+        }
+      },
+      "mission": {
+        "block_z_range_m": {
+          "median": 14.6,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": 1.0,
+          "outside": false
+        }
+      },
+      "soma": {
+        "block_z_range_m": {
+          "median": 17.57,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": 0.67,
+          "outside": false
+        }
+      },
+      "steep": {
+        "block_z_range_m": {
+          "median": 22.08,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": 6.05,
+          "outside": false
+        }
+      },
+      "sunset": {
+        "block_z_range_m": {
+          "median": 11.95,
+          "outside": false
+        },
+        "ground_relief_m": {
+          "median": 3.57,
+          "outside": false
+        }
+      }
+    }
   },
   "surrey_tiles": [
     {
@@ -830,15 +921,15 @@
       "ground_relief_m": {
         "blocks": 20,
         "median": 0.62,
-        "p90": 2.07,
+        "p90": 2.08,
         "p99": 4.23,
         "max": 4.59
       },
       "block_z_range_m": {
         "blocks": 64,
         "median": 8.14,
-        "p90": 102.78,
-        "p99": 137.9,
+        "p90": 102.75,
+        "p99": 137.89,
         "max": 145.58
       },
       "building_top_m": null
@@ -847,17 +938,17 @@
       "name": "financial",
       "ground_relief_m": {
         "blocks": 62,
-        "median": 0.47,
+        "median": 0.46,
         "p90": 1.14,
         "p99": 2.11,
         "max": 2.57
       },
       "block_z_range_m": {
         "blocks": 64,
-        "median": 100.11,
-        "p90": 179.42,
-        "p99": 197.07,
-        "max": 202.4
+        "median": 99.82,
+        "p90": 179.33,
+        "p99": 189.99,
+        "max": 191.15
       },
       "building_top_m": null
     },
@@ -865,16 +956,16 @@
       "name": "ggpark",
       "ground_relief_m": {
         "blocks": 64,
-        "median": 4.51,
-        "p90": 8.11,
+        "median": 4.52,
+        "p90": 8.12,
         "p99": 11.97,
         "max": 12.18
       },
       "block_z_range_m": {
         "blocks": 64,
-        "median": 34.54,
+        "median": 34.53,
         "p90": 42.61,
-        "p99": 45.52,
+        "p99": 45.51,
         "max": 46.1
       },
       "building_top_m": null
@@ -884,16 +975,16 @@
       "ground_relief_m": {
         "blocks": 64,
         "median": 1.0,
-        "p90": 2.05,
+        "p90": 2.06,
         "p99": 2.63,
         "max": 3.08
       },
       "block_z_range_m": {
         "blocks": 64,
-        "median": 14.59,
+        "median": 14.6,
         "p90": 18.78,
-        "p99": 27.01,
-        "max": 27.1
+        "p99": 27.02,
+        "max": 27.11
       },
       "building_top_m": null
     },
@@ -901,17 +992,17 @@
       "name": "soma",
       "ground_relief_m": {
         "blocks": 63,
-        "median": 0.68,
-        "p90": 1.55,
+        "median": 0.67,
+        "p90": 1.56,
         "p99": 2.83,
         "max": 3.25
       },
       "block_z_range_m": {
         "blocks": 64,
-        "median": 17.58,
+        "median": 17.57,
         "p90": 29.13,
         "p99": 48.0,
-        "max": 49.12
+        "max": 49.13
       },
       "building_top_m": null
     },
@@ -919,7 +1010,7 @@
       "name": "steep",
       "ground_relief_m": {
         "blocks": 64,
-        "median": 6.06,
+        "median": 6.05,
         "p90": 11.05,
         "p99": 17.2,
         "max": 17.82
@@ -927,7 +1018,7 @@
       "block_z_range_m": {
         "blocks": 64,
         "median": 22.08,
-        "p90": 37.9,
+        "p90": 37.87,
         "p99": 51.03,
         "max": 57.3
       },
@@ -937,7 +1028,7 @@
       "name": "sunset",
       "ground_relief_m": {
         "blocks": 64,
-        "median": 3.56,
+        "median": 3.57,
         "p90": 6.61,
         "p99": 8.92,
         "max": 9.06
@@ -947,10 +1038,10 @@
         "median": 11.95,
         "p90": 17.21,
         "p99": 22.92,
-        "max": 24.82
+        "max": 24.83
       },
       "building_top_m": null
     }
   ],
-  "seconds": 25.7
+  "seconds": 51.6
 }

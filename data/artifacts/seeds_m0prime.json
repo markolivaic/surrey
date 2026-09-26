@@ -23,227 +23,227 @@
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0342,
-          "B": 0.0461,
-          "C": 0.0851
+          "A": 0.0005,
+          "B": 0.0011,
+          "C": 0.0098
         },
         "n": 3,
-        "median": 0.0461,
-        "min": 0.0342,
-        "max": 0.0851
+        "median": 0.0011,
+        "min": 0.0005,
+        "max": 0.0098
       },
       "water_called_ground": {
         "per_seed": {
-          "A": 0.9492,
-          "B": 0.9571,
-          "C": 0.9601
+          "A": 0.9549,
+          "B": 0.9395,
+          "C": 0.9384
         },
         "n": 3,
-        "median": 0.9571,
-        "min": 0.9492,
-        "max": 0.9601
+        "median": 0.9395,
+        "min": 0.9384,
+        "max": 0.9549
       },
       "bridge_deck_called_building": {
         "per_seed": {
-          "A": 0.9995,
-          "B": 0.9993,
-          "C": 0.9992
+          "A": 0.9985,
+          "B": 0.9984,
+          "C": 0.9984
         },
         "n": 3,
-        "median": 0.9993,
-        "min": 0.9992,
-        "max": 0.9995
+        "median": 0.9984,
+        "min": 0.9984,
+        "max": 0.9985
       }
     },
     "embarcadero": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": -0.0045,
-          "B": 0.0087,
-          "C": -0.0103
+          "A": 0.0373,
+          "B": 0.0345,
+          "C": 0.035
         },
         "n": 3,
-        "median": -0.0045,
-        "min": -0.0103,
-        "max": 0.0087
+        "median": 0.035,
+        "min": 0.0345,
+        "max": 0.0373
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.3051,
-          "B": 0.3177,
-          "C": 0.3042
+          "A": 0.3338,
+          "B": 0.3602,
+          "C": 0.3466
         },
         "n": 3,
-        "median": 0.3051,
-        "min": 0.3042,
-        "max": 0.3177
+        "median": 0.3466,
+        "min": 0.3338,
+        "max": 0.3602
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.8659,
-          "B": 0.8867,
-          "C": 0.8248
+          "A": 0.7989,
+          "B": 0.7961,
+          "C": 0.8072
         },
         "n": 3,
-        "median": 0.8659,
-        "min": 0.8248,
-        "max": 0.8867
+        "median": 0.7989,
+        "min": 0.7961,
+        "max": 0.8072
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.9906,
-          "B": 0.9892,
-          "C": 0.9922
+          "A": 0.9978,
+          "B": 0.9973,
+          "C": 0.9985
         },
         "n": 3,
-        "median": 0.9906,
-        "min": 0.9892,
-        "max": 0.9922
+        "median": 0.9978,
+        "min": 0.9973,
+        "max": 0.9985
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.071,
-          "B": 0.0756,
-          "C": 0.1065
+          "A": 0.027,
+          "B": 0.0312,
+          "C": 0.0374
         },
         "n": 3,
-        "median": 0.0756,
-        "min": 0.071,
-        "max": 0.1065
+        "median": 0.0312,
+        "min": 0.027,
+        "max": 0.0374
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.356,
-          "B": 0.3439,
-          "C": 0.3227
+          "A": 0.1935,
+          "B": 0.1772,
+          "C": 0.1744
         },
         "n": 3,
-        "median": 0.3439,
-        "min": 0.3227,
-        "max": 0.356
+        "median": 0.1772,
+        "min": 0.1744,
+        "max": 0.1935
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.6035,
-          "B": 0.6335,
-          "C": 0.5667
+          "A": 0.6737,
+          "B": 0.7472,
+          "C": 0.7873
         },
         "n": 3,
-        "median": 0.6035,
-        "min": 0.5667,
-        "max": 0.6335
+        "median": 0.7472,
+        "min": 0.6737,
+        "max": 0.7873
       },
       "hard_water_auroc": {
         "per_seed": {
-          "A": 0.5175,
-          "B": 0.5362,
-          "C": 0.5167
+          "A": 0.7106,
+          "B": 0.7211,
+          "C": 0.7999
         },
         "n": 3,
-        "median": 0.5175,
-        "min": 0.5167,
-        "max": 0.5362
+        "median": 0.7211,
+        "min": 0.7106,
+        "max": 0.7999
       },
       "water_called_ground": {
         "per_seed": {
-          "A": 0.9388,
-          "B": 0.9331,
-          "C": 0.9518
+          "A": 0.9641,
+          "B": 0.8972,
+          "C": 0.9528
         },
         "n": 3,
-        "median": 0.9388,
-        "min": 0.9331,
-        "max": 0.9518
+        "median": 0.9528,
+        "min": 0.8972,
+        "max": 0.9641
       },
       "bridge_deck_called_building": {
         "per_seed": {
-          "A": 0.9983,
-          "B": 0.9981,
-          "C": 0.9981
+          "A": 0.9997,
+          "B": 0.9998,
+          "C": 0.9982
         },
         "n": 3,
-        "median": 0.9981,
-        "min": 0.9981,
-        "max": 0.9983
+        "median": 0.9997,
+        "min": 0.9982,
+        "max": 0.9998
       }
     },
     "financial": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": 0.2343,
-          "B": 0.2351,
-          "C": 0.2682
+          "A": 0.13,
+          "B": 0.1381,
+          "C": 0.1272
         },
         "n": 3,
-        "median": 0.2351,
-        "min": 0.2343,
-        "max": 0.2682
+        "median": 0.13,
+        "min": 0.1272,
+        "max": 0.1381
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.5541,
-          "B": 0.5763,
-          "C": 0.5719
+          "A": 0.6597,
+          "B": 0.6741,
+          "C": 0.6667
         },
         "n": 3,
-        "median": 0.5719,
-        "min": 0.5541,
-        "max": 0.5763
+        "median": 0.6667,
+        "min": 0.6597,
+        "max": 0.6741
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.8466,
-          "B": 0.8573,
-          "C": 0.8262
+          "A": 0.9891,
+          "B": 0.9725,
+          "C": 0.9883
         },
         "n": 3,
-        "median": 0.8466,
-        "min": 0.8262,
-        "max": 0.8573
+        "median": 0.9883,
+        "min": 0.9725,
+        "max": 0.9891
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.9897,
-          "B": 0.9741,
-          "C": 0.9926
+          "A": 0.9922,
+          "B": 0.9836,
+          "C": 0.9956
         },
         "n": 3,
-        "median": 0.9897,
-        "min": 0.9741,
-        "max": 0.9926
+        "median": 0.9922,
+        "min": 0.9836,
+        "max": 0.9956
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.1537,
-          "B": 0.1689,
-          "C": 0.1893
+          "A": 0.0906,
+          "B": 0.0992,
+          "C": 0.0946
         },
         "n": 3,
-        "median": 0.1689,
-        "min": 0.1537,
-        "max": 0.1893
+        "median": 0.0946,
+        "min": 0.0906,
+        "max": 0.0992
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.0904,
-          "B": 0.0791,
-          "C": 0.0788
+          "A": 0.0242,
+          "B": 0.0173,
+          "C": 0.0214
         },
         "n": 3,
-        "median": 0.0791,
-        "min": 0.0788,
-        "max": 0.0904
+        "median": 0.0214,
+        "min": 0.0173,
+        "max": 0.0242
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.6692,
-          "B": 0.7497,
-          "C": 0.6829
+          "A": 0.9237,
+          "B": 0.9242,
+          "C": 0.9285
         },
         "n": 3,
-        "median": 0.6829,
-        "min": 0.6692,
-        "max": 0.7497
+        "median": 0.9242,
+        "min": 0.9237,
+        "max": 0.9285
       }
     },
     "ggpark": {
@@ -260,400 +260,400 @@
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.7184,
-          "B": 0.7228,
-          "C": 0.7351
+          "A": 0.7423,
+          "B": 0.7509,
+          "C": 0.7501
         },
         "n": 3,
-        "median": 0.7228,
-        "min": 0.7184,
-        "max": 0.7351
+        "median": 0.7501,
+        "min": 0.7423,
+        "max": 0.7509
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.9817,
-          "B": 0.9713,
-          "C": 0.9637
+          "A": 0.9753,
+          "B": 0.9624,
+          "C": 0.9667
         },
         "n": 3,
-        "median": 0.9713,
-        "min": 0.9637,
-        "max": 0.9817
+        "median": 0.9667,
+        "min": 0.9624,
+        "max": 0.9753
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.9107,
-          "B": 0.8958,
-          "C": 0.9404
+          "A": 0.941,
+          "B": 0.9307,
+          "C": 0.9576
         },
         "n": 3,
-        "median": 0.9107,
-        "min": 0.8958,
-        "max": 0.9404
+        "median": 0.941,
+        "min": 0.9307,
+        "max": 0.9576
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.7684,
-          "B": 0.6975,
-          "C": 0.8033
+          "A": 0.7781,
+          "B": 0.7441,
+          "C": 0.8111
         },
         "n": 3,
-        "median": 0.7684,
-        "min": 0.6975,
-        "max": 0.8033,
+        "median": 0.7781,
+        "min": 0.7441,
+        "max": 0.8111,
         "reference_not_valid": "the NAIP not-vegetation core in Golden Gate Park has a multiple-return share typical of canopy on both masks (naip_mask_choice.json), so NDVI probably misses canopy there, by shadow or relief displacement, and vegetation called inside it is likely right"
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.0137,
-          "B": 0.0146,
-          "C": 0.0111
+          "A": 0.0004,
+          "B": 0.0003,
+          "C": 0.0003
         },
         "n": 3,
-        "median": 0.0137,
-        "min": 0.0111,
-        "max": 0.0146
+        "median": 0.0003,
+        "min": 0.0003,
+        "max": 0.0004
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.8923,
-          "B": 0.9485,
-          "C": 0.9321
+          "A": 0.993,
+          "B": 0.9901,
+          "C": 0.9825
         },
         "n": 3,
-        "median": 0.9321,
-        "min": 0.8923,
-        "max": 0.9485
+        "median": 0.9901,
+        "min": 0.9825,
+        "max": 0.993
       }
     },
     "mission": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": 0.6064,
-          "B": 0.5775,
-          "C": 0.6208
+          "A": 0.5569,
+          "B": 0.5475,
+          "C": 0.5685
         },
         "n": 3,
-        "median": 0.6064,
-        "min": 0.5775,
-        "max": 0.6208
+        "median": 0.5569,
+        "min": 0.5475,
+        "max": 0.5685
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.5947,
-          "B": 0.6035,
-          "C": 0.6113
+          "A": 0.693,
+          "B": 0.7122,
+          "C": 0.6975
         },
         "n": 3,
-        "median": 0.6035,
-        "min": 0.5947,
-        "max": 0.6113
+        "median": 0.6975,
+        "min": 0.693,
+        "max": 0.7122
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.9621,
-          "B": 0.9667,
-          "C": 0.9536
+          "A": 0.9789,
+          "B": 0.9748,
+          "C": 0.9836
         },
         "n": 3,
-        "median": 0.9621,
-        "min": 0.9536,
-        "max": 0.9667
+        "median": 0.9789,
+        "min": 0.9748,
+        "max": 0.9836
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.9642,
-          "B": 0.9446,
-          "C": 0.9701
+          "A": 0.9515,
+          "B": 0.9527,
+          "C": 0.9689
         },
         "n": 3,
-        "median": 0.9642,
-        "min": 0.9446,
-        "max": 0.9701
+        "median": 0.9527,
+        "min": 0.9515,
+        "max": 0.9689
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0411,
-          "B": 0.0514,
-          "C": 0.0555
+          "A": 0.0188,
+          "B": 0.0212,
+          "C": 0.021
         },
         "n": 3,
-        "median": 0.0514,
-        "min": 0.0411,
-        "max": 0.0555
+        "median": 0.021,
+        "min": 0.0188,
+        "max": 0.0212
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.2309,
-          "B": 0.2261,
-          "C": 0.2109
+          "A": 0.1053,
+          "B": 0.0875,
+          "C": 0.1034
         },
         "n": 3,
-        "median": 0.2261,
-        "min": 0.2109,
-        "max": 0.2309
+        "median": 0.1034,
+        "min": 0.0875,
+        "max": 0.1053
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.7602,
-          "B": 0.7736,
-          "C": 0.7331
+          "A": 0.8135,
+          "B": 0.8357,
+          "C": 0.8483
         },
         "n": 3,
-        "median": 0.7602,
-        "min": 0.7331,
-        "max": 0.7736
+        "median": 0.8357,
+        "min": 0.8135,
+        "max": 0.8483
       }
     },
     "soma": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": 0.5472,
-          "B": 0.5349,
-          "C": 0.5641
+          "A": 0.4986,
+          "B": 0.4942,
+          "C": 0.5144
         },
         "n": 3,
-        "median": 0.5472,
-        "min": 0.5349,
-        "max": 0.5641
+        "median": 0.4986,
+        "min": 0.4942,
+        "max": 0.5144
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.5771,
-          "B": 0.581,
-          "C": 0.5927
+          "A": 0.7217,
+          "B": 0.7327,
+          "C": 0.7204
         },
         "n": 3,
-        "median": 0.581,
-        "min": 0.5771,
-        "max": 0.5927
+        "median": 0.7217,
+        "min": 0.7204,
+        "max": 0.7327
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.9717,
-          "B": 0.9772,
-          "C": 0.9621
+          "A": 0.9884,
+          "B": 0.9857,
+          "C": 0.9891
         },
         "n": 3,
-        "median": 0.9717,
-        "min": 0.9621,
-        "max": 0.9772
+        "median": 0.9884,
+        "min": 0.9857,
+        "max": 0.9891
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.9468,
-          "B": 0.9166,
-          "C": 0.9549
+          "A": 0.9651,
+          "B": 0.9605,
+          "C": 0.9779
         },
         "n": 3,
-        "median": 0.9468,
-        "min": 0.9166,
-        "max": 0.9549
+        "median": 0.9651,
+        "min": 0.9605,
+        "max": 0.9779
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0337,
-          "B": 0.045,
-          "C": 0.0448
+          "A": 0.0121,
+          "B": 0.0141,
+          "C": 0.0135
         },
         "n": 3,
-        "median": 0.0448,
-        "min": 0.0337,
-        "max": 0.045
+        "median": 0.0135,
+        "min": 0.0121,
+        "max": 0.0141
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.2228,
-          "B": 0.2216,
-          "C": 0.2029
+          "A": 0.0693,
+          "B": 0.0603,
+          "C": 0.0707
         },
         "n": 3,
-        "median": 0.2216,
-        "min": 0.2029,
-        "max": 0.2228
+        "median": 0.0693,
+        "min": 0.0603,
+        "max": 0.0707
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.7938,
-          "B": 0.8155,
-          "C": 0.785
+          "A": 0.9009,
+          "B": 0.9161,
+          "C": 0.8979
         },
         "n": 3,
-        "median": 0.7938,
-        "min": 0.785,
-        "max": 0.8155
+        "median": 0.9009,
+        "min": 0.8979,
+        "max": 0.9161
       }
     },
     "steep": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": 0.5855,
-          "B": 0.5668,
-          "C": 0.6159
+          "A": 0.4604,
+          "B": 0.4398,
+          "C": 0.4755
         },
         "n": 3,
-        "median": 0.5855,
-        "min": 0.5668,
-        "max": 0.6159
+        "median": 0.4604,
+        "min": 0.4398,
+        "max": 0.4755
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.5918,
-          "B": 0.6063,
-          "C": 0.6275
+          "A": 0.7602,
+          "B": 0.7674,
+          "C": 0.7691
         },
         "n": 3,
-        "median": 0.6063,
-        "min": 0.5918,
-        "max": 0.6275
+        "median": 0.7674,
+        "min": 0.7602,
+        "max": 0.7691
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.9435,
-          "B": 0.9202,
-          "C": 0.9027
+          "A": 0.9322,
+          "B": 0.9263,
+          "C": 0.9146
         },
         "n": 3,
-        "median": 0.9202,
-        "min": 0.9027,
-        "max": 0.9435
+        "median": 0.9263,
+        "min": 0.9146,
+        "max": 0.9322
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.8931,
-          "B": 0.8754,
-          "C": 0.9144
+          "A": 0.8748,
+          "B": 0.8583,
+          "C": 0.8923
         },
         "n": 3,
-        "median": 0.8931,
-        "min": 0.8754,
-        "max": 0.9144
+        "median": 0.8748,
+        "min": 0.8583,
+        "max": 0.8923
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0687,
-          "B": 0.0768,
-          "C": 0.0833
+          "A": 0.025,
+          "B": 0.0265,
+          "C": 0.0267
         },
         "n": 3,
-        "median": 0.0768,
-        "min": 0.0687,
-        "max": 0.0833
+        "median": 0.0265,
+        "min": 0.025,
+        "max": 0.0267
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.104,
-          "B": 0.0961,
-          "C": 0.0805
+          "A": 0.0055,
+          "B": 0.0034,
+          "C": 0.0039
         },
         "n": 3,
-        "median": 0.0961,
-        "min": 0.0805,
-        "max": 0.104
+        "median": 0.0039,
+        "min": 0.0034,
+        "max": 0.0055
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.8276,
-          "B": 0.8547,
-          "C": 0.8203
+          "A": 0.889,
+          "B": 0.9104,
+          "C": 0.8971
         },
         "n": 3,
-        "median": 0.8276,
-        "min": 0.8203,
-        "max": 0.8547
+        "median": 0.8971,
+        "min": 0.889,
+        "max": 0.9104
       }
     },
     "sunset": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": 0.665,
-          "B": 0.6512,
-          "C": 0.6814
+          "A": 0.6449,
+          "B": 0.638,
+          "C": 0.6464
         },
         "n": 3,
-        "median": 0.665,
-        "min": 0.6512,
-        "max": 0.6814
+        "median": 0.6449,
+        "min": 0.638,
+        "max": 0.6464
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.6121,
-          "B": 0.6136,
-          "C": 0.6305
+          "A": 0.7287,
+          "B": 0.7353,
+          "C": 0.7392
         },
         "n": 3,
-        "median": 0.6136,
-        "min": 0.6121,
-        "max": 0.6305
+        "median": 0.7353,
+        "min": 0.7287,
+        "max": 0.7392
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.9772,
-          "B": 0.9632,
-          "C": 0.9632
+          "A": 0.9814,
+          "B": 0.9733,
+          "C": 0.9716
         },
         "n": 3,
-        "median": 0.9632,
-        "min": 0.9632,
-        "max": 0.9772
+        "median": 0.9733,
+        "min": 0.9716,
+        "max": 0.9814
       },
       "vegetation_headline": {
         "per_seed": {
-          "A": 0.9217,
-          "B": 0.8979,
-          "C": 0.9212
+          "A": 0.9383,
+          "B": 0.9377,
+          "C": 0.9423
         },
         "n": 3,
-        "median": 0.9212,
-        "min": 0.8979,
-        "max": 0.9217
+        "median": 0.9383,
+        "min": 0.9377,
+        "max": 0.9423
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0587,
-          "B": 0.0611,
-          "C": 0.0762
+          "A": 0.0233,
+          "B": 0.0249,
+          "C": 0.025
         },
         "n": 3,
-        "median": 0.0611,
-        "min": 0.0587,
-        "max": 0.0762
+        "median": 0.0249,
+        "min": 0.0233,
+        "max": 0.025
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.1784,
-          "B": 0.1923,
-          "C": 0.1832
+          "A": 0.0047,
+          "B": 0.0044,
+          "C": 0.0065
         },
         "n": 3,
-        "median": 0.1832,
-        "min": 0.1784,
-        "max": 0.1923
+        "median": 0.0047,
+        "min": 0.0044,
+        "max": 0.0065
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.8538,
-          "B": 0.8398,
-          "C": 0.8189
+          "A": 0.941,
+          "B": 0.9487,
+          "C": 0.9195
         },
         "n": 3,
-        "median": 0.8398,
-        "min": 0.8189,
-        "max": 0.8538
+        "median": 0.941,
+        "min": 0.9195,
+        "max": 0.9487
       }
     }
   },
   "surrey_held_out": {
     "accuracy_from_prediction_cache": {
       "per_seed": {
-        "A": 0.8769,
-        "B": 0.8814,
-        "C": 0.8819
+        "A": 0.9224,
+        "B": 0.9207,
+        "C": 0.9225
       },
       "n": 3,
-      "median": 0.8814,
-      "min": 0.8769,
-      "max": 0.8819
+      "median": 0.9224,
+      "min": 0.9207,
+      "max": 0.9225
     },
     "accuracy_training_artefact": {
       "per_seed": {
@@ -848,49 +848,49 @@
       "phrase": "on all 3 seeds",
       "financial_lift": {
         "per_seed": {
-          "A": 0.2343,
-          "B": 0.2351,
-          "C": 0.2682
+          "A": 0.13,
+          "B": 0.1381,
+          "C": 0.1272
         },
         "n": 3,
-        "median": 0.2351,
-        "min": 0.2343,
-        "max": 0.2682
+        "median": 0.13,
+        "min": 0.1272,
+        "max": 0.1381
       },
       "other_built_median": {
         "per_seed": {
-          "A": 0.5768,
-          "B": 0.5562,
-          "C": 0.5925
+          "A": 0.5277,
+          "B": 0.5209,
+          "C": 0.5414
         },
         "n": 3,
-        "median": 0.5768,
-        "min": 0.5562,
-        "max": 0.5925
+        "median": 0.5277,
+        "min": 0.5209,
+        "max": 0.5414
       },
       "status": "primary formulation, written before E0"
     },
     "relief": {
       "per_seed": {
-        "A": "measured nothing",
-        "B": "measured nothing",
+        "A": "predicts degradation",
+        "B": "predicts degradation",
         "C": "predicts degradation"
       },
       "expected": "predicts degradation",
-      "k": 1,
+      "k": 3,
       "n": 3,
-      "stands": false,
-      "phrase": "on 1 of 3 seeds",
+      "stands": true,
+      "phrase": "on all 3 seeds",
       "named_minus_other": {
         "per_seed": {
-          "A": 0.0318,
-          "B": 0.0454,
-          "C": 0.0563
+          "A": 0.0614,
+          "B": 0.1027,
+          "C": 0.0977
         },
         "n": 3,
-        "median": 0.0454,
-        "min": 0.0318,
-        "max": 0.0563
+        "median": 0.0977,
+        "min": 0.0614,
+        "max": 0.1027
       },
       "metric": "delivery ground called building, high-relief blocks against the rest",
       "extension": "the rule was written for one model; read per seed with the same 0.05 margin",
@@ -924,27 +924,27 @@
         },
         "rate": {
           "per_seed": {
-            "A": 0.356,
-            "B": 0.3439,
-            "C": 0.3227
+            "A": 0.1935,
+            "B": 0.1772,
+            "C": 0.1744
           },
           "n": 3,
-          "median": 0.3439,
-          "min": 0.3227,
-          "max": 0.356
+          "median": 0.1772,
+          "min": 0.1744,
+          "max": 0.1935
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       },
@@ -975,27 +975,27 @@
         },
         "rate": {
           "per_seed": {
-            "A": 0.0904,
-            "B": 0.0791,
-            "C": 0.0788
+            "A": 0.0242,
+            "B": 0.0173,
+            "C": 0.0214
           },
           "n": 3,
-          "median": 0.0791,
-          "min": 0.0788,
-          "max": 0.0904
+          "median": 0.0214,
+          "min": 0.0173,
+          "max": 0.0242
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       },
@@ -1026,27 +1026,27 @@
         },
         "rate": {
           "per_seed": {
-            "A": 0.0137,
-            "B": 0.0146,
-            "C": 0.0111
+            "A": 0.0004,
+            "B": 0.0003,
+            "C": 0.0003
           },
           "n": 3,
-          "median": 0.0137,
-          "min": 0.0111,
-          "max": 0.0146
+          "median": 0.0003,
+          "min": 0.0003,
+          "max": 0.0004
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       },
@@ -1054,101 +1054,101 @@
         "transfer": {
           "per_seed": {
             "A": "transfer",
-            "B": "transfer",
+            "B": "home weakness",
             "C": "transfer"
           },
           "expected": "transfer",
-          "k": 3,
+          "k": 2,
           "n": 3,
-          "stands": true,
-          "phrase": "on all 3 seeds"
+          "stands": false,
+          "phrase": "on 2 of 3 seeds"
         },
         "home_weakness": {
           "per_seed": {
             "A": "transfer",
-            "B": "transfer",
+            "B": "home weakness",
             "C": "transfer"
           },
           "expected": "home weakness",
-          "k": 0,
+          "k": 1,
           "n": 3,
           "stands": false,
-          "phrase": "on 0 of 3 seeds"
+          "phrase": "on 1 of 3 seeds"
         },
         "rate": {
           "per_seed": {
-            "A": 0.2309,
-            "B": 0.2261,
-            "C": 0.2109
+            "A": 0.1053,
+            "B": 0.0875,
+            "C": 0.1034
           },
           "n": 3,
-          "median": 0.2261,
-          "min": 0.2109,
-          "max": 0.2309
+          "median": 0.1034,
+          "min": 0.0875,
+          "max": 0.1053
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       },
       "soma": {
         "transfer": {
           "per_seed": {
-            "A": "transfer",
-            "B": "transfer",
-            "C": "transfer"
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
           },
           "expected": "transfer",
-          "k": 3,
-          "n": 3,
-          "stands": true,
-          "phrase": "on all 3 seeds"
-        },
-        "home_weakness": {
-          "per_seed": {
-            "A": "transfer",
-            "B": "transfer",
-            "C": "transfer"
-          },
-          "expected": "home weakness",
           "k": 0,
           "n": 3,
           "stands": false,
           "phrase": "on 0 of 3 seeds"
         },
+        "home_weakness": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "home weakness",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
         "rate": {
           "per_seed": {
-            "A": 0.2228,
-            "B": 0.2216,
-            "C": 0.2029
+            "A": 0.0693,
+            "B": 0.0603,
+            "C": 0.0707
           },
           "n": 3,
-          "median": 0.2216,
-          "min": 0.2029,
-          "max": 0.2228
+          "median": 0.0693,
+          "min": 0.0603,
+          "max": 0.0707
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       },
@@ -1179,78 +1179,78 @@
         },
         "rate": {
           "per_seed": {
-            "A": 0.104,
-            "B": 0.0961,
-            "C": 0.0805
+            "A": 0.0055,
+            "B": 0.0034,
+            "C": 0.0039
           },
           "n": 3,
-          "median": 0.0961,
-          "min": 0.0805,
-          "max": 0.104
+          "median": 0.0039,
+          "min": 0.0034,
+          "max": 0.0055
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       },
       "sunset": {
         "transfer": {
           "per_seed": {
-            "A": "transfer",
-            "B": "transfer",
-            "C": "transfer"
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
           },
           "expected": "transfer",
-          "k": 3,
-          "n": 3,
-          "stands": true,
-          "phrase": "on all 3 seeds"
-        },
-        "home_weakness": {
-          "per_seed": {
-            "A": "transfer",
-            "B": "transfer",
-            "C": "transfer"
-          },
-          "expected": "home weakness",
           "k": 0,
           "n": 3,
           "stands": false,
           "phrase": "on 0 of 3 seeds"
         },
+        "home_weakness": {
+          "per_seed": {
+            "A": "home weakness",
+            "B": "home weakness",
+            "C": "home weakness"
+          },
+          "expected": "home weakness",
+          "k": 3,
+          "n": 3,
+          "stands": true,
+          "phrase": "on all 3 seeds"
+        },
         "rate": {
           "per_seed": {
-            "A": 0.1784,
-            "B": 0.1923,
-            "C": 0.1832
+            "A": 0.0047,
+            "B": 0.0044,
+            "C": 0.0065
           },
           "n": 3,
-          "median": 0.1832,
-          "min": 0.1784,
-          "max": 0.1923
+          "median": 0.0047,
+          "min": 0.0044,
+          "max": 0.0065
         },
         "home_range_per_seed": {
           "A": [
-            0.0008,
-            0.14
+            0.0001,
+            0.0942
           ],
           "B": [
-            0.0011,
-            0.1643
+            0.0,
+            0.1161
           ],
           "C": [
-            0.0013,
-            0.1485
+            0.0,
+            0.0982
           ]
         }
       }
@@ -1269,74 +1269,74 @@
       "per_seed_detail": {
         "A": {
           "home": {
-            "right": 49817895,
-            "wrong": 851757,
-            "auroc": 0.8617
+            "right": 50440688,
+            "wrong": 930535,
+            "auroc": 0.9251
           },
           "embarcadero_water": {
-            "right": 398233,
-            "wrong": 44107,
-            "auroc": 0.5175,
-            "median_conf_right": 0.8862,
-            "median_conf_wrong": 0.8848
+            "right": 367178,
+            "wrong": 47971,
+            "auroc": 0.7106,
+            "median_conf_right": 0.9326,
+            "median_conf_wrong": 0.8242
           },
-          "water_minus_home": -0.3442,
+          "water_minus_home": -0.2145,
           "reading": "water errors harder to see than errors at home"
         },
         "B": {
           "home": {
-            "right": 49573559,
-            "wrong": 750391,
-            "auroc": 0.8755
+            "right": 50135351,
+            "wrong": 816410,
+            "auroc": 0.9228
           },
           "embarcadero_water": {
-            "right": 407770,
-            "wrong": 41998,
-            "auroc": 0.5362,
-            "median_conf_right": 0.8716,
-            "median_conf_wrong": 0.8618
+            "right": 365889,
+            "wrong": 39194,
+            "auroc": 0.7211,
+            "median_conf_right": 0.9019,
+            "median_conf_wrong": 0.7607
           },
-          "water_minus_home": -0.3393,
+          "water_minus_home": -0.2017,
           "reading": "water errors harder to see than errors at home"
         },
         "C": {
           "home": {
-            "right": 49263586,
-            "wrong": 706109,
-            "auroc": 0.8566
+            "right": 50118830,
+            "wrong": 835368,
+            "auroc": 0.9247
           },
           "embarcadero_water": {
-            "right": 379314,
-            "wrong": 45822,
-            "auroc": 0.5167,
-            "median_conf_right": 0.8574,
-            "median_conf_wrong": 0.8574
+            "right": 371014,
+            "wrong": 45232,
+            "auroc": 0.7999,
+            "median_conf_right": 0.9351,
+            "median_conf_wrong": 0.7471
           },
-          "water_minus_home": -0.3399,
+          "water_minus_home": -0.1248,
           "reading": "water errors harder to see than errors at home"
         }
       },
       "home_auroc": {
         "per_seed": {
-          "A": 0.8617,
-          "B": 0.8755,
-          "C": 0.8566
+          "A": 0.9251,
+          "B": 0.9228,
+          "C": 0.9247
         },
         "n": 3,
-        "median": 0.8617,
-        "min": 0.8566,
-        "max": 0.8755
+        "median": 0.9247,
+        "min": 0.9228,
+        "max": 0.9251
       },
       "water_auroc": {
         "per_seed": {
-          "A": 0.5175,
-          "B": 0.5362,
-          "C": 0.5167
+          "A": 0.7106,
+          "B": 0.7211,
+          "C": 0.7999
         },
         "n": 3,
-        "median": 0.5175,
-        "min": 0.5167,
-        "max": 0.5362
+        "median": 0.7211,
+        "min": 0.7106,
+        "max": 0.7999
       },
       "construction": "among ground calls, right ground against errors within 0.5 m of the ground surface; Surrey: DALES non-ground labels; Embarcadero: delivery water",
       "margin": 0.05

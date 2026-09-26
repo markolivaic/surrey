@@ -1,16 +1,16 @@
 {
   "seeds.m0.sf.ggpark.vegetation_headline.median": {
-    "value": 0.9153,
+    "value": 0.9722,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.vegetation_headline.min": {
-    "value": 0.9039,
+    "value": 0.9704,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.vegetation_headline.max": {
-    "value": 0.9311,
+    "value": 0.9724,
     "variant": "m0_seeds",
     "where": "card1"
   },
@@ -20,17 +20,17 @@
     "where": "card4"
   },
   "seeds.m0.surrey.test.accuracy_training_artefact.median": {
-    "value": 0.8914,
+    "value": 0.9179,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.accuracy_training_artefact.min": {
-    "value": 0.8843,
+    "value": 0.9159,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.accuracy_training_artefact.max": {
-    "value": 0.8929,
+    "value": 0.918,
     "variant": "m0_seeds",
     "where": "card2"
   },
@@ -65,7 +65,7 @@
     "where": "card4"
   },
   "inputs.sf.financial.blocks_above_training_max": {
-    "value": 26,
+    "value": 25,
     "variant": "none",
     "where": "card4"
   },
@@ -75,7 +75,7 @@
     "where": "card4"
   },
   "inputs.sf.financial.block_z_max_m": {
-    "value": 202.4,
+    "value": 191.15,
     "variant": "none",
     "where": "card4"
   },
@@ -85,32 +85,32 @@
     "where": "card4"
   },
   "seeds.m0.claims.financial_lift.median": {
-    "value": 0.3306,
+    "value": 0.1456,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.financial_lift.min": {
-    "value": 0.2384,
+    "value": 0.1452,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.financial_lift.max": {
-    "value": 0.3307,
+    "value": 0.1972,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.other_built_median_lift.median": {
-    "value": 0.6403,
+    "value": 0.5884,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.other_built_median_lift.min": {
-    "value": 0.6154,
+    "value": 0.5808,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.other_built_median_lift.max": {
-    "value": 0.647,
+    "value": 0.5886,
     "variant": "m0_seeds",
     "where": "card4"
   },
@@ -145,47 +145,47 @@
     "where": "card4"
   },
   "seeds.m0.sf.embarcadero.water_called_ground.median": {
-    "value": 0.9036,
+    "value": 0.9618,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.embarcadero.water_called_ground.min": {
-    "value": 0.8873,
+    "value": 0.9089,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.embarcadero.water_called_ground.max": {
-    "value": 0.9342,
+    "value": 0.9724,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.baybridge.bridge_deck_called_building.median": {
-    "value": 0.9962,
+    "value": 0.9983,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.baybridge.bridge_deck_called_building.min": {
-    "value": 0.9813,
+    "value": 0.9982,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.baybridge.bridge_deck_called_building.max": {
-    "value": 0.9991,
+    "value": 0.9984,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "compare.m1_vs_m0prime.water.baybridge.lift.max": {
-    "value": -1.1653,
+    "value": -1.4386,
     "variant": "m1_seeds",
     "where": "m1card"
   },
   "compare.m1_vs_m0prime.water.baybridge.lift.median": {
-    "value": -1.447,
+    "value": -1.4652,
     "variant": "m1_seeds",
     "where": "m1card"
   },
   "compare.m1_vs_m0prime.water.baybridge.lift.min": {
-    "value": -1.4524,
+    "value": -1.4655,
     "variant": "m1_seeds",
     "where": "m1card"
   },
@@ -200,17 +200,17 @@
     "where": "m1card"
   },
   "compare.m1_vs_m0prime.water.embarcadero.lift.max": {
-    "value": -1.2832,
+    "value": -1.4314,
     "variant": "m1_seeds",
     "where": "m1card"
   },
   "compare.m1_vs_m0prime.water.embarcadero.lift.median": {
-    "value": -1.4149,
+    "value": -1.4439,
     "variant": "m1_seeds",
     "where": "m1card"
   },
   "compare.m1_vs_m0prime.water.embarcadero.lift.min": {
-    "value": -1.4284,
+    "value": -1.4478,
     "variant": "m1_seeds",
     "where": "m1card"
   },
@@ -325,17 +325,17 @@
     "where": "m1card"
   },
   "water.m1_seeds.embarcadero.recall.max": {
-    "value": 0.0782,
+    "value": 0.007,
     "variant": "m1_seeds",
     "where": "m1card"
   },
   "water.m1_seeds.embarcadero.recall.median": {
-    "value": 0.0136,
+    "value": 0.0019,
     "variant": "m1_seeds",
     "where": "m1card"
   },
   "water.m1_seeds.embarcadero.recall.min": {
-    "value": 0.0081,
+    "value": 0.0003,
     "variant": "m1_seeds",
     "where": "m1card"
   },

@@ -92,6 +92,7 @@ from surrey.m1_criteria import (  # noqa: E402
     WATER_POLYGON_EDGE_WRITTEN,
 )
 from surrey.metrics import (  # noqa: E402
+    Confusion,
     auroc_from_histograms,
     auroc_row,
     coarse_lookup,
@@ -680,6 +681,13 @@ def main() -> int:
     )
     pools = {"all": ([], []), "easy": ([], []), "hard": ([], [])}
     conf_right, conf_wrong = [], []
+    # Every labelled point in one confusion. An output DALES-2 has no class for (M1's water and bridge
+    # deck) is a wrong answer for the point's own class, so it gets a column of its own, not a drop.
+    extra = "water or bridge deck output"
+    fine = Confusion([*CLASS_NAMES, extra])
+    coarse_names = list(COARSE)
+    grouped = Confusion([*coarse_names, extra])
+    group_of = np.append(coarse_lookup(), [len(coarse_names)] * 2)
     raised_rates = []
     correct = total = 0
     for n in names:
@@ -687,6 +695,9 @@ def main() -> int:
         pred, conf, ent = load(v["surrey"], f"surrey_{n}")
         label = np.asarray(tile.label[:], np.int16)
         lab = label >= 0
+        capped = np.minimum(pred.astype(np.int64), len(CLASS_NAMES))
+        fine.add(label[lab], capped[lab])
+        grouped.add(group_of[label[lab]], group_of[np.minimum(pred[lab].astype(np.int64), 16)])
         correct += int(((pred == label) & lab).sum())
         total += int(lab.sum())
         ok = lab & (pred == label)
@@ -720,8 +731,15 @@ def main() -> int:
             pools[k][1].append(score_histogram(conf[m]))
     cr = np.concatenate(conf_right, axis=1)
     cw = np.concatenate(conf_wrong, axis=1)
+    iou_fine = {k: v for k, v in fine.iou().items() if k != extra}
+    iou_coarse = {k: v for k, v in grouped.iou().items() if k != extra}
     surrey = {
         "accuracy_labelled_voxel_points": round(correct / total, 4),
+        "iou_per_class": iou_fine,
+        "miou_15": round(float(np.mean([v for v in iou_fine.values() if v is not None])), 4),
+        "iou_per_coarse_group": iou_coarse,
+        "miou_coarse": round(float(np.mean([v for v in iou_coarse.values() if v is not None])), 4),
+        "points_given_an_output_dales_has_no_class_for": int(fine.m[:, -1].sum()),
         "labelled_points": total,
         "confidence": {
             "surrey_correct": confidence(cr[0], cr[1]),
@@ -748,6 +766,7 @@ def main() -> int:
         "variant": args.variant,
         "variant_note": v["note"],
         "classes": n_classes,
+        "votes": manifest.get("votes", 1),
         "predictions_from": {
             "san_francisco": str(v["sf"].relative_to(ROOT)).replace("\\", "/"),
             "surrey": str(v["surrey"].relative_to(ROOT)).replace("\\", "/"),

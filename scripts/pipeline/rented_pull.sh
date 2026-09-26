@@ -6,7 +6,8 @@
 set -euo pipefail
 HOST=${1:?host, the one vast.ai shows in the ssh line}
 PORT=${2:?port, the one vast.ai shows in the ssh line}
-KEY="${HOME}/.ssh/vast_surrey"
+# The key vast.ai holds for this project; SURREY_SSH_KEY points elsewhere if it is named otherwise.
+KEY="${SURREY_SSH_KEY:-${HOME}/.ssh/vast_surrey}"
 REMOTE=/workspace/surrey
 cd "$(dirname "$0")/../.."
 

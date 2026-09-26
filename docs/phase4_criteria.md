@@ -101,3 +101,22 @@ measure. The percentile is fixed here, before any Phase 4 figure exists.
 A failed hash, a training run that records an interruption it cannot resume exactly, or a prepared
 tile that fails `tests/integrity/test_prepared_flags.py`. Each is written to the chain log with the
 time, and nothing after it runs until it is resolved.
+
+## Buildings, written after STOP 2 and before the breakdown ran
+
+The building lift fell in every built area while vegetation, ground and home accuracy rose. The lift is
+precision against footprints over its null, so it cannot say whether the model finds fewer buildings
+or more of them less precisely. For every area with footprints, old M0 (the first commit's
+artefacts) against new M0, median and range over the three seeds: precision against footprints, the
+null's precision (everything above 2 m called building), footprint coverage and its null, and the
+number of footprints scored.
+
+A figure rose or fell only when every new seed lies above or below every old seed, the drop rule of
+`backend/surrey/seeds.py`. In an area where coverage rose and precision fell, the change is a trade and
+the README describes it as one. Where both fell, the model is worse at buildings there and the README
+says so. Anything else is written as measured.
+
+What inference alone can separate is measured on the laptop with new M0 seed A: one vote against four
+(the effect of voting), and the old iterator against the new one at one vote (the effect of the
+iterator). The class weights and the dropped withheld points cannot be separated without training, and
+are reported as not separated.

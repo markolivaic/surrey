@@ -75,3 +75,14 @@ def test_the_vote_count_rule_takes_the_smallest_n_that_holds_and_caps_at_sixteen
     assert choose({1: 0.95, 2: 0.991, 4: 0.999, 8: 1.0}) == 2
     assert choose({1: 0.995, 2: 0.999, 4: 1.0, 8: 1.0}) == 1
     assert choose({1: 0.9, 2: 0.95, 4: 0.97, 8: 0.989}) == 16
+
+
+def test_a_windows_path_in_a_checkpoint_is_read_as_a_plain_path():
+    import io
+    import pathlib
+
+    from surrey.inference import _PathTolerantUnpickler
+
+    unpickler = _PathTolerantUnpickler(io.BytesIO(b""))
+    assert unpickler.find_class("pathlib", "WindowsPath") is pathlib.PurePath
+    assert unpickler.find_class("builtins", "dict") is dict

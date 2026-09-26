@@ -4,45 +4,45 @@
   "themes": {
     "light": {
       "over_water": {
-        "pixels": 81,
+        "pixels": 85,
         "normal": {
-          "min": 3.64,
-          "p1": 3.64,
+          "min": 3.42,
+          "p1": 3.77,
           "median": 3.89,
           "share_below_3": 0.0
         },
         "deuteranopia": {
-          "min": 3.64,
-          "p1": 3.64,
-          "median": 3.65,
+          "min": 3.53,
+          "p1": 3.62,
+          "median": 3.64,
           "share_below_3": 0.0
         },
         "protanopia": {
-          "min": 3.38,
-          "p1": 3.38,
-          "median": 4.32,
+          "min": 3.26,
+          "p1": 3.92,
+          "median": 4.36,
           "share_below_3": 0.0
         },
         "passes": true
       },
       "cables": {
-        "pixels": 712,
+        "pixels": 611,
         "normal": {
-          "min": 3.63,
-          "p1": 3.63,
-          "median": 3.7,
+          "min": 3.33,
+          "p1": 3.33,
+          "median": 3.43,
           "share_below_3": 0.0
         },
         "deuteranopia": {
-          "min": 3.69,
-          "p1": 3.75,
-          "median": 3.83,
+          "min": 3.52,
+          "p1": 3.52,
+          "median": 3.54,
           "share_below_3": 0.0
         },
         "protanopia": {
-          "min": 3.36,
-          "p1": 3.36,
-          "median": 3.53,
+          "min": 3.04,
+          "p1": 3.04,
+          "median": 3.29,
           "share_below_3": 0.0
         },
         "passes": true
@@ -50,45 +50,45 @@
     },
     "dark": {
       "over_water": {
-        "pixels": 81,
+        "pixels": 85,
         "normal": {
           "min": 3.68,
           "p1": 3.68,
-          "median": 7.6,
+          "median": 7.58,
           "share_below_3": 0.0
         },
         "deuteranopia": {
           "min": 3.58,
-          "p1": 3.58,
-          "median": 8.18,
+          "p1": 3.59,
+          "median": 8.19,
           "share_below_3": 0.0
         },
         "protanopia": {
-          "min": 3.81,
+          "min": 3.83,
           "p1": 3.84,
-          "median": 6.71,
+          "median": 6.64,
           "share_below_3": 0.0
         },
         "passes": true
       },
       "cables": {
-        "pixels": 712,
+        "pixels": 611,
         "normal": {
           "min": 3.6,
           "p1": 3.6,
-          "median": 13.75,
+          "median": 13.62,
           "share_below_3": 0.0
         },
         "deuteranopia": {
           "min": 3.38,
-          "p1": 3.39,
-          "median": 13.23,
+          "p1": 3.38,
+          "median": 13.2,
           "share_below_3": 0.0
         },
         "protanopia": {
-          "min": 3.81,
-          "p1": 3.86,
-          "median": 14.48,
+          "min": 3.8,
+          "p1": 3.8,
+          "median": 14.2,
           "share_below_3": 0.0
         },
         "passes": true

@@ -1,0 +1,10 @@
+{
+  "where": "a rented GPU box, not the laptop",
+  "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 580.82.07",
+  "minutes": {
+    "dales_fetch_and_prep": 4.2,
+    "swiss_fetch_and_prep": 0.0,
+    "whole_preparation": 4.2
+  },
+  "why_this_is_recorded": "the first time the download and preparation scripts ran anywhere but the laptop, which is also a test of them on a clean machine, and the rule says that past two hours of billed time the cache is copied instead"
+}
