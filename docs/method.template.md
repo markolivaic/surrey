@@ -20,8 +20,7 @@ many figures here some such moves are expected by chance.
 Each prediction is the softmax averaged over {{votes.n}} passes. The number was chosen by a rule written
 before any San Francisco figure existed (`docs/phase4_criteria.md`): the smallest of 1, 2, 4, 8 and 16
 whose coarse classes agree with twice as many passes on at least 0.99 of the held-out Surrey points.
-{{votes.n}} passes and twice as many agree on {{votes.agreement_4}} of them, which is also the share of a
-prediction that another draw of the passes could change.
+{{votes.n}} passes and twice as many agree on {{votes.agreement_4}} of them.
 
 Before this repository's first commit, the order in which rules were written and results appeared is
 self-reported, in the dates the project wrote into its own artefacts. From the first commit on, the git
