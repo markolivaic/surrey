@@ -45,7 +45,16 @@
         <div class="fig-big mono"><span data-q="seeds.m0.sf.ggpark.vegetation_headline.median" data-where="card1" data-digits="2"></span></div>
         <div class="fig-small mono">range <span data-q="seeds.m0.sf.ggpark.vegetation_headline.min" data-where="card1" data-digits="2"></span> to <span data-q="seeds.m0.sf.ggpark.vegetation_headline.max" data-where="card1" data-digits="2"></span>, over <span data-q="seeds.m0.claims.extrapolation.n" data-where="card1"></span> seeds</div>
       </div>
-      <div class="src mono">reference: NAIP 2022 vegetation cores, the lower of two masks</div>
+      <p>The photograph calls few raised points in the park clearly not vegetation:
+        <span data-q="notveg.sf.ggpark.points" data-where="card1"></span> points, a share of
+        <span data-q="notveg.sf.ggpark.share_of_area" data-where="card1" data-digits="4"></span> of the area, standing
+        <span data-q="notveg.sf.ggpark.height_median_m" data-where="card1"></span> m up at the median.
+        The model calls most of those vegetation too.</p>
+      <div class="fig">
+        <div class="fig-label">not-vegetation cores called vegetation, median of the seeds</div>
+        <div class="fig-small mono"><span data-q="seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.median" data-where="card1" data-digits="2"></span>, range <span data-q="seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.min" data-where="card1" data-digits="2"></span> to <span data-q="seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.max" data-where="card1" data-digits="2"></span></div>
+      </div>
+      <div class="src mono">reference: NAIP 2022 cores, points 2 to 25 m above the ground floor; vegetation on the lower of two masks, not-vegetation on the unregistered one</div>
     </div>
   </section>
 
@@ -57,11 +66,13 @@
       <p>A Surrey tile held out of training: the model at home, where its labels came from.</p>
       <div class="fig">
         <div class="fig-label">point accuracy on held-out Surrey, median of the seeds</div>
-        <div class="fig-big mono"><span data-q="seeds.m0.surrey.test.accuracy_training_artefact.median" data-where="card2" data-digits="2"></span></div>
-        <div class="fig-small mono">range <span data-q="seeds.m0.surrey.test.accuracy_training_artefact.min" data-where="card2" data-digits="2"></span> to <span data-q="seeds.m0.surrey.test.accuracy_training_artefact.max" data-where="card2" data-digits="2"></span></div>
+        <div class="fig-big mono"><span data-q="seeds.m0.surrey.test.accuracy_from_prediction_cache.median" data-where="card2" data-digits="2"></span></div>
+        <div class="fig-small mono">range <span data-q="seeds.m0.surrey.test.accuracy_from_prediction_cache.min" data-where="card2" data-digits="2"></span> to <span data-q="seeds.m0.surrey.test.accuracy_from_prediction_cache.max" data-where="card2" data-digits="2"></span></div>
         <div class="fig-small mono">calling everything ground <span data-q="surrey.test.voxel.ground_fraction" data-where="card2" data-digits="2"></span></div>
+        <div class="fig-small mono">mean IoU over the 15 classes <span data-q="seeds.m0.surrey.test.miou_15.median" data-where="card2" data-digits="2"></span>, range <span data-q="seeds.m0.surrey.test.miou_15.min" data-where="card2" data-digits="2"></span> to <span data-q="seeds.m0.surrey.test.miou_15.max" data-where="card2" data-digits="2"></span></div>
+        <div class="fig-small mono">over the 6 coarse groups <span data-q="seeds.m0.surrey.test.miou_coarse.median" data-where="card2" data-digits="2"></span>, range <span data-q="seeds.m0.surrey.test.miou_coarse.min" data-where="card2" data-digits="2"></span> to <span data-q="seeds.m0.surrey.test.miou_coarse.max" data-where="card2" data-digits="2"></span></div>
       </div>
-      <div class="src mono">every thinned held-out point</div>
+      <div class="src mono">every thinned held-out point, each prediction the mean of <span data-q="votes.n" data-where="card2"></span> passes</div>
     </div>
   </section>
 
@@ -70,14 +81,16 @@
       <img class="still" loading="lazy" alt="The same park on the old model with the input as delivered: most of the forest is predicted as buildings" data-still="ggpark_returns_ood">
       <div class="k mono">3 of 6</div>
       <h2>The same park on the old model</h2>
-      <p>The old model read a fourth input, the return ratio. It was 0 on every point of the mirror mbendjilali/DALES-2,
+      <p>The old model read a fourth input, the return ratio. It was 0 on every point of DALES-2 as published on Hugging Face,
         and real on all but <span data-q="sf.aois.voxel.return_ratio_exactly_0" data-where="card3"></span> of
         <span data-q="sf.aois.voxel.points" data-where="card3"></span> San Francisco points.
         Same checkpoint, only the input changes, and the forest becomes buildings.</p>
       <div class="fig">
         <div class="fig-label">vegetation cores called vegetation, input as delivered</div>
-        <div class="fig-big mono"><span data-q="ret0.sf.ggpark.before.naip_core_called_vegetation" data-where="card3" data-digits="2"></span></div>
-        <div class="fig-small mono">return ratio set to 0 <span data-q="ret0.sf.ggpark.after.naip_core_called_vegetation" data-where="card3" data-digits="2"></span></div>
+        <div class="fig-big mono"><span data-q="scores.returns_ood.sf.ggpark.vegetation_headline" data-where="card3" data-digits="2"></span></div>
+        <div class="fig-small mono">return ratio set to 0 <span data-q="scores.ret0.sf.ggpark.vegetation_headline" data-where="card3" data-digits="2"></span></div>
+        <div class="fig-small mono">not-vegetation cores called vegetation, as delivered <span data-q="scores.returns_ood.sf.ggpark.not_vegetation_core_called_vegetation" data-where="card3" data-digits="2"></span>,
+          at 0 <span data-q="scores.ret0.sf.ggpark.not_vegetation_core_called_vegetation" data-where="card3" data-digits="2"></span></div>
       </div>
       <div class="src mono">the published model has three inputs and no such state</div>
     </div>
@@ -99,9 +112,11 @@
         <div class="fig-label">building lift, Financial District, median of the seeds</div>
         <div class="fig-big mono"><span data-q="seeds.m0.claims.financial_lift.median" data-where="card4" data-digits="2"></span></div>
         <div class="fig-small mono">range <span data-q="seeds.m0.claims.financial_lift.min" data-where="card4" data-digits="2"></span> to <span data-q="seeds.m0.claims.financial_lift.max" data-where="card4" data-digits="2"></span></div>
+        <div class="fig-small mono">precision against the footprints <span data-q="seeds.m0.sf.financial.building_precision.median" data-where="card4" data-digits="2"></span>, range <span data-q="seeds.m0.sf.financial.building_precision.min" data-where="card4" data-digits="2"></span> to <span data-q="seeds.m0.sf.financial.building_precision.max" data-where="card4" data-digits="2"></span>; everything above 2 m called building, <span data-q="seeds.m0.sf.financial.building_null_precision.median" data-where="card4" data-digits="2"></span></div>
+        <div class="fig-small mono">footprint covered <span data-q="seeds.m0.sf.financial.building_coverage.median" data-where="card4" data-digits="2"></span>, range <span data-q="seeds.m0.sf.financial.building_coverage.min" data-where="card4" data-digits="2"></span> to <span data-q="seeds.m0.sf.financial.building_coverage.max" data-where="card4" data-digits="2"></span>; the null, <span data-q="seeds.m0.sf.financial.building_null_coverage.median" data-where="card4" data-digits="2"></span>; footprints scored <span data-q="seeds.m0.sf.financial.footprints_scored.median" data-where="card4"></span></div>
         <div class="fig-small mono">the other built areas <span data-q="seeds.m0.claims.other_built_median_lift.median" data-where="card4" data-digits="2"></span>, range <span data-q="seeds.m0.claims.other_built_median_lift.min" data-where="card4" data-digits="2"></span> to <span data-q="seeds.m0.claims.other_built_median_lift.max" data-where="card4" data-digits="2"></span></div>
         <div class="fig-small mono">of the points above 150 m, called a pole <span data-q="tall.sf.financial.m0_seeds.above_150m.called_pole.median" data-where="card4" data-digits="2"></span>, range <span data-q="tall.sf.financial.m0_seeds.above_150m.called_pole.min" data-where="card4" data-digits="2"></span> to <span data-q="tall.sf.financial.m0_seeds.above_150m.called_pole.max" data-where="card4" data-digits="2"></span></div>
-        <div class="fig-small mono">called vegetation <span data-q="tall.sf.financial.m0_seeds.above_150m.called_vegetation.median" data-where="card4" data-digits="2"></span>, range <span data-q="tall.sf.financial.m0_seeds.above_150m.called_vegetation.min" data-where="card4" data-digits="2"></span> to <span data-q="tall.sf.financial.m0_seeds.above_150m.called_vegetation.max" data-where="card4" data-digits="2"></span></div>
+        <div class="fig-small mono">called building <span data-q="tall.sf.financial.m0_seeds.above_150m.called_building.median" data-where="card4" data-digits="2"></span>, range <span data-q="tall.sf.financial.m0_seeds.above_150m.called_building.min" data-where="card4" data-digits="2"></span> to <span data-q="tall.sf.financial.m0_seeds.above_150m.called_building.max" data-where="card4" data-digits="2"></span></div>
       </div>
       <div class="src mono">heights are above the min z surface; lift is over the footprint null; each model figure is the median over three seeds, with their range</div>
     </div>
@@ -115,18 +130,18 @@
       <p>The bridge deck is a building. The training labels have no word for water or for a bridge, so the model says what it knows.</p>
       <div class="fig">
         <div class="fig-label">water called ground, Embarcadero, median of the seeds</div>
-        <div class="fig-big mono"><span data-q="seeds.m0.sf.embarcadero.water_called_ground.median" data-where="card4" data-digits="2"></span></div>
-        <div class="fig-small mono">range <span data-q="seeds.m0.sf.embarcadero.water_called_ground.min" data-where="card4" data-digits="2"></span> to <span data-q="seeds.m0.sf.embarcadero.water_called_ground.max" data-where="card4" data-digits="2"></span></div>
-        <div class="fig-small mono">bridge deck called building, Bay Bridge <span data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.median" data-where="card4" data-digits="2"></span>, range <span data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.min" data-where="card4" data-digits="2"></span> to <span data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.max" data-where="card4" data-digits="2"></span></div>
+        <div class="fig-big mono"><span data-q="seeds.m0.sf.embarcadero.water_called_ground.median" data-where="card5" data-digits="2"></span></div>
+        <div class="fig-small mono">range <span data-q="seeds.m0.sf.embarcadero.water_called_ground.min" data-where="card5" data-digits="2"></span> to <span data-q="seeds.m0.sf.embarcadero.water_called_ground.max" data-where="card5" data-digits="2"></span></div>
+        <div class="fig-small mono">bridge deck called building, Bay Bridge <span data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.median" data-where="card5" data-digits="2"></span>, range <span data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.min" data-where="card5" data-digits="2"></span> to <span data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.max" data-where="card5" data-digits="2"></span></div>
       </div>
       <div class="src mono">water and bridge deck are scored on Embarcadero and Bay Bridge only</div>
     </div>
   </section>
 
-  <section class="card" data-card="6" data-area="embarcadero" data-variant="m1_seedA" data-fallback-variant="m0_seedA" data-chip="M1 seed A" id="m1card">
+  <section class="card" data-card="6" data-area="embarcadero" data-variant="m1_seedA" data-fallback-variant="m0_seedA" data-chip="old M1 seed A, learned on synthetic water" id="m1card">
     <div class="body">
       <div class="k mono">6 of 6</div>
-      <h2>Teaching it water</h2>
+      <h2>The water it learned was not water</h2>
       <div id="m1card-text"></div>
     </div>
   </section>
@@ -139,7 +154,7 @@
       <span class="seg" id="model" role="group" aria-label="Model">
         <button data-model="old" aria-pressed="false">old model, four channels</button>
         <button data-model="m0" aria-pressed="true">M0</button>
-        <button data-model="m1" aria-pressed="false" id="m1button" disabled>M1, not trained yet</button>
+        <button data-model="m1" aria-pressed="false" id="m1button" disabled>old M1, not trained yet</button>
       </span></div>
     <div class="row switch">input as delivered
       <button id="input" aria-pressed="false" disabled aria-label="Input as delivered. Only the old model has this state."></button>

@@ -22,7 +22,7 @@ done
 ssh -i "$KEY" -p "$PORT" "root@$HOST" "cd $REMOTE && tar -czf - data/phase4_outputs.sha256 \
   data/checkpoints/*.pt data/predictions data/artifacts/votes.json data/artifacts/train_m0_seed?.json \
   data/artifacts/train_m0_big_seedA.json data/artifacts/rented_setup.json \
-  data/artifacts/logs/gpu_chain_phase4.log --transform 's,^data/logs,data/logs/phase4,' data/logs" \
+  --transform 's,^data/logs,data/logs/phase4,' data/logs" \
   | tar -xzf -
 
 sha256sum --quiet -c data/phase4_outputs.sha256

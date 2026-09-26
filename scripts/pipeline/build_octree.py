@@ -27,7 +27,7 @@ three, and not on the same points split into two files. A three-way split failed
 differently ("point to node lookup failed"); two parts worked. So the LAS goes to the converter
 in parts of at most PART_POINTS points, split along x at quantiles; the converter merges its inputs.
 
-Surrey, for card 2 (--surrey): the held-out tile's points from the mirror mbendjilali/DALES-2,
+Surrey, for card 2 (--surrey): the held-out tile's points from DALES-2 (mbendjilali/DALES-2),
 which carry the City of Surrey's Open Government Licence, and this project's predictions. The
 DALES annotations carry different terms ("Creative Commons 3.0" with a non-commercial
 sentence), so a hosted Surrey octree must not contain them: this script never reads a tile's
@@ -305,7 +305,7 @@ def main() -> int:
             "encoding": "BROTLI",
             "city": city,
             "point_source": (
-                "mirror mbendjilali/DALES-2, City of Surrey Open Government Licence"
+                "DALES-2 (mbendjilali/DALES-2), City of Surrey Open Government Licence"
                 if args.surrey
                 else "USGS 3DEP CA_SanFrancisco_1_B23, public domain"
             ),

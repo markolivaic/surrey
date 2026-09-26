@@ -1,4 +1,4 @@
-"""Write README.md from docs/readme.template.md, with every figure fetched from the registry by name.
+"""Write README.md and docs/method.md from their templates, each figure fetched from the registry.
 
 Matching a README figure to a quantity by its value is a guess. With fourteen variants over hundreds of
 metrics two unrelated quantities land on the same four decimals often enough that the guard which did
@@ -8,13 +8,13 @@ data/artifacts/quantities.json. A number that has no key cannot be written into 
 number whose key moves changes the README the moment the registry is rebuilt.
 
 Tables whose cells are one quantity each are directives instead of cell by cell keys, because a table is
-data and writing thirty keys by hand invites exactly the error this removes: `{{table:sf_areas}}`.
+data and writing thirty keys by hand invites exactly the error this removes: `{{table:sf_buildings}}`.
 
-    python scripts/pipeline/render_readme.py            write README.md
-    python scripts/pipeline/render_readme.py --check    fail if README.md is not what the template produces
+    python scripts/pipeline/render_readme.py            write README.md and docs/method.md
+    python scripts/pipeline/render_readme.py --check    fail if either is not what its template produces
 
-tests/integrity/test_readme_generated.py runs the check, and the older guard that matches figures by
-value stays on as the last net for anything typed in by hand.
+tests/integrity/test_readme_generated.py runs the check, and fails any decimal typed into a template
+instead of named.
 """
 
 from __future__ import annotations
@@ -29,11 +29,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE = ROOT / "docs" / "readme.template.md"
 README = ROOT / "README.md"
+# The method notes the README links to for its detail, generated the same way from their own template.
+METHOD_TEMPLATE = ROOT / "docs" / "method.template.md"
+METHOD = ROOT / "docs" / "method.md"
+DOCUMENTS = ((TEMPLATE, README), (METHOD_TEMPLATE, METHOD))
 QUANTITIES = ROOT / "data" / "artifacts" / "quantities.json"
 KEY = re.compile(r"\{\{([a-z0-9_.:]+)\}\}", re.I)
 
-# Tables the template asks for by name. Each is (heading row, alignment row, rows), where a row names the
-# label and the keys of its cells; a key of None prints the literal text given instead.
+# Tables the template asks for by name. Each row names an area and each cell one registry key, so a
+# table is data and no figure in it is typed.
 SF_AREAS = [
     ("Golden Gate Park", "ggpark"),
     ("Sunset", "sunset"),
@@ -42,22 +46,32 @@ SF_AREAS = [
     ("SoMa", "soma"),
     ("Financial District", "financial"),
     ("Embarcadero", "embarcadero"),
+    ("Bay Bridge", "baybridge"),
 ]
-SF_COLUMNS = [
-    ("Building lift over the footprint null", "building_lift_global_shift"),
+# Each class with the figure that would catch the opposite mistake beside it: vegetation found beside
+# vegetation called where the photograph sees none, ground found beside the band its precision lies in.
+BOTH_SIDES = [
     ("NAIP vegetation cores called vegetation", "vegetation_headline"),
+    ("NAIP not-vegetation cores called vegetation", "not_vegetation_core_called_vegetation"),
     ("Delivery ground called ground", "ground_recall"),
+    ("Ground precision, floor", "ground_precision_floor"),
+    ("Ground precision, ceiling", "ground_precision_ceiling"),
 ]
-# The bug table is in the order the README told it, park first and Embarcadero last, and reads the
-# pair of keys that measurement wrote: the input as delivered, and the same with the ratio forced to 0.
-BUG_AREAS = [
-    ("Golden Gate Park", "ggpark"),
-    ("Sunset", "sunset"),
-    ("Mission", "mission"),
-    ("SoMa", "soma"),
-    ("Russian Hill", "steep"),
-    ("Financial District", "financial"),
-    ("Embarcadero", "embarcadero"),
+# Buildings in the areas where the footprint null calls anything a building, with the null beside.
+BUILDING_COLUMNS = [
+    ("Building lift", "building_lift_global_shift"),
+    ("Precision against footprints", "building_precision"),
+    ("The null's precision", "building_null_precision"),
+    ("Footprint covered", "building_coverage"),
+    ("The null's coverage", "building_null_coverage"),
+]
+# The first round's M0 against the retrained M0, as scripts/investigations/building_breakdown.py set
+# them side by side.
+CHANGE_COLUMNS = [
+    ("Precision, first round", "precision", "old"),
+    ("Precision, retrained", "precision", "new"),
+    ("Coverage, first round", "coverage_median", "old"),
+    ("Coverage, retrained", "coverage_median", "new"),
 ]
 WATER_AREAS = [("Embarcadero", "embarcadero"), ("Bay Bridge", "baybridge")]
 
@@ -82,22 +96,78 @@ def spread(vals: dict, key: str) -> str:
     return f"{fmt(median)} ({fmt(low)} to {fmt(high)})"
 
 
-def table_sf_areas(vals: dict) -> str:
-    head = "| Area | " + " | ".join(name for name, _ in SF_COLUMNS) + " |"
-    rule = "|" + "---|" * (len(SF_COLUMNS) + 1)
+def has_buildings(vals: dict, area: str) -> bool:
+    return bool(vals.get(f"seeds.m0.sf.{area}.building_null_precision.median"))
+
+
+def table_sf_both_sides(vals: dict) -> str:
+    head = "| Area | " + " | ".join(name for name, _ in BOTH_SIDES) + " |"
+    rule = "|" + "---|" * (len(BOTH_SIDES) + 1)
     rows = []
     for label, area in SF_AREAS:
         cells = []
-        for _, metric in SF_COLUMNS:
+        for _, metric in BOTH_SIDES:
             key = f"seeds.m0.sf.{area}.{metric}"
-            no_footprints = (
-                metric == "building_lift_global_shift"
-                and vals.get(f"footprints.{area}.share_of_tall_points_inside") == 0.0
-            )
-            if no_footprints or f"{key}.median" not in vals:
-                cells.append("no buildings")
-            else:
-                cells.append(spread(vals, key))
+            cells.append(spread(vals, key) if vals.get(f"{key}.median") is not None else "no core")
+        rows.append(f"| {label} | " + " | ".join(cells) + " |")
+    return "\n".join([head, rule, *rows])
+
+
+def table_sf_buildings(vals: dict) -> str:
+    head = "| Area | Footprints scored | " + " | ".join(n for n, _ in BUILDING_COLUMNS) + " |"
+    rule = "|" + "---|" * (len(BUILDING_COLUMNS) + 2)
+    rows = []
+    for label, area in SF_AREAS:
+        if not has_buildings(vals, area):
+            continue
+        cells = [fmt(int(vals[f"seeds.m0.sf.{area}.footprints_scored.median"]))]
+        cells += [spread(vals, f"seeds.m0.sf.{area}.{metric}") for _, metric in BUILDING_COLUMNS]
+        rows.append(f"| {label} | " + " | ".join(cells) + " |")
+    return "\n".join([head, rule, *rows])
+
+
+def moved(vals: dict, area: str, fig: str) -> str:
+    """The drop rule of backend/surrey/seeds.py: a figure moved only when every retrained seed lies
+    beyond every first round seed."""
+    old, new = (
+        (vals[f"buildings.{area}.{fig}.{w}.min"], vals[f"buildings.{area}.{fig}.{w}.max"])
+        for w in ("old", "new")
+    )
+    if new[0] > old[1]:
+        return "rose"
+    if new[1] < old[0]:
+        return "fell"
+    return "did not move"
+
+
+def building_reading(vals: dict, area: str) -> str:
+    """The reading written in docs/phase4_criteria.md before the breakdown ran."""
+    precision, coverage = moved(vals, area, "precision"), moved(vals, area, "coverage_median")
+    if coverage == "rose" and precision == "fell":
+        return "a trade: more of each footprint covered, less precisely"
+    if coverage == "fell" and precision == "fell":
+        return "worse at buildings here"
+    return f"precision {precision}, coverage {coverage}"
+
+
+def table_building_change(vals: dict) -> str:
+    head = (
+        "| Area | Lift, first round to retrained | "
+        + " | ".join(n for n, _, _ in CHANGE_COLUMNS)
+        + " | Reading |"
+    )
+    rule = "|" + "---|" * (len(CHANGE_COLUMNS) + 3)
+    rows = []
+    for label, area in SF_AREAS:
+        if not has_buildings(vals, area):
+            continue
+        lift = (
+            f"{fmt(vals[f'buildings.{area}.lift.old.median'])} to "
+            f"{fmt(vals[f'buildings.{area}.lift.new.median'])}, {moved(vals, area, 'lift')}"
+        )
+        cells = [lift]
+        cells += [spread(vals, f"buildings.{area}.{fig}.{when}") for _, fig, when in CHANGE_COLUMNS]
+        cells.append(building_reading(vals, area))
         rows.append(f"| {label} | " + " | ".join(cells) + " |")
     return "\n".join([head, rule, *rows])
 
@@ -106,9 +176,11 @@ def table_bug(vals: dict) -> str:
     head = "| Area | NAIP vegetation cores called vegetation, input as delivered | the same, return ratio set to 0 |"
     rule = "|---|---|---|"
     rows = []
-    for label, area in BUG_AREAS:
-        a = vals[f"ret0.sf.{area}.before.naip_core_called_vegetation"]
-        b = vals[f"ret0.sf.{area}.after.naip_core_called_vegetation"]
+    for label, area in SF_AREAS:
+        a = vals.get(f"scores.returns_ood.sf.{area}.vegetation_headline")
+        b = vals.get(f"scores.ret0.sf.{area}.vegetation_headline")
+        if a is None or b is None:
+            continue
         rows.append(f"| {label} | {fmt(a)} | {fmt(b)} |")
     return "\n".join([head, rule, *rows])
 
@@ -152,7 +224,9 @@ def table_verification(vals: dict) -> str:
 
 
 TABLES = {
-    "sf_areas": table_sf_areas,
+    "sf_both_sides": table_sf_both_sides,
+    "sf_buildings": table_sf_buildings,
+    "building_change": table_building_change,
     "bug": table_bug,
     "m1_water": table_m1_water,
     "verification": table_verification,
@@ -190,28 +264,35 @@ def main() -> int:
         "--check", action="store_true", help="compare instead of writing, for CI and the guard"
     )
     args = ap.parse_args()
-    rendered = render(TEMPLATE.read_text(encoding="utf-8"), values())
-    if not args.check:
-        # The template is LF and the check below compares the text as it is, so writing Windows
-        # line endings here would make every line differ and fail a guard on an untouched file.
-        README.write_text(rendered, encoding="utf-8", newline=chr(10))
-        print(f"wrote {README}")
-        return 0
-    current = README.read_text(encoding="utf-8")
-    if current == rendered:
-        print("README.md is what the template and the registry produce")
-        return 0
-    diff = difflib.unified_diff(
-        current.splitlines(),
-        rendered.splitlines(),
-        "README.md",
-        "rendered from the template",
-        lineterm="",
-        n=1,
-    )
-    print("\n".join(list(diff)[:60]))
-    print("\nrun: python scripts/pipeline/render_readme.py")
-    return 1
+    vals = values()
+    failed = 0
+    for template, target in DOCUMENTS:
+        rendered = render(template.read_text(encoding="utf-8"), vals)
+        name = target.relative_to(ROOT).as_posix()
+        if not args.check:
+            # The template is LF and the check below compares the text as it is, so writing Windows
+            # line endings here would make every line differ and fail a guard on an untouched file.
+            target.write_text(rendered, encoding="utf-8", newline=chr(10))
+            print(f"wrote {name}")
+            continue
+        current = target.read_text(encoding="utf-8") if target.exists() else ""
+        if current == rendered:
+            print(f"{name} is what its template and the registry produce")
+            continue
+        failed += 1
+        diff = difflib.unified_diff(
+            current.splitlines(),
+            rendered.splitlines(),
+            name,
+            "rendered from the template",
+            lineterm="",
+            n=1,
+        )
+        print("\n".join(list(diff)[:60]))
+    if failed:
+        print("\nrun: python scripts/pipeline/render_readme.py")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":

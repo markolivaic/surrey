@@ -3,10 +3,10 @@
     "embarcadero": {
       "area": "embarcadero",
       "nodes": 6,
-      "points_decoded": 56006,
+      "points_decoded": 79010,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 104,
+      "points_with_a_second_cached_point_within_2cm": 105,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -35,10 +35,10 @@
     "ggpark": {
       "area": "ggpark",
       "nodes": 6,
-      "points_decoded": 204922,
+      "points_decoded": 204693,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 156,
+      "points_with_a_second_cached_point_within_2cm": 160,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -94,17 +94,17 @@
           "confidence_equal": 1.0
         }
       },
-      "class_field_agrees_with_dales_label": 0.8966,
+      "class_field_agrees_with_dales_label": 0.9338,
       "manifest_dales_labels_included": false,
       "decoder_round_trip_exact": true
     },
     "baybridge": {
       "area": "baybridge",
       "nodes": 6,
-      "points_decoded": 46781,
+      "points_decoded": 46700,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 52,
+      "points_with_a_second_cached_point_within_2cm": 48,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -133,10 +133,10 @@
     "financial": {
       "area": "financial",
       "nodes": 6,
-      "points_decoded": 157970,
+      "points_decoded": 166508,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 103,
+      "points_with_a_second_cached_point_within_2cm": 117,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -165,10 +165,10 @@
     "mission": {
       "area": "mission",
       "nodes": 6,
-      "points_decoded": 101495,
+      "points_decoded": 101359,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 138,
+      "points_with_a_second_cached_point_within_2cm": 116,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -197,10 +197,10 @@
     "soma": {
       "area": "soma",
       "nodes": 6,
-      "points_decoded": 99222,
+      "points_decoded": 98942,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 93,
+      "points_with_a_second_cached_point_within_2cm": 108,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -229,10 +229,10 @@
     "steep": {
       "area": "steep",
       "nodes": 6,
-      "points_decoded": 122463,
+      "points_decoded": 122077,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 152,
+      "points_with_a_second_cached_point_within_2cm": 139,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {
@@ -261,10 +261,10 @@
     "sunset": {
       "area": "sunset",
       "nodes": 6,
-      "points_decoded": 87275,
+      "points_decoded": 87141,
       "position_match_within_2cm": 1.0,
       "position_distance_max_m": 0.0173,
-      "points_with_a_second_cached_point_within_2cm": 178,
+      "points_with_a_second_cached_point_within_2cm": 190,
       "rgb_equal": 1.0,
       "variants": {
         "returns_ood": {

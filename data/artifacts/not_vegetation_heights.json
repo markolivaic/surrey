@@ -1,0 +1,128 @@
+{
+  "what": "the NAIP not-vegetation cores per area, unregistered mask, no model",
+  "height": "above the robust quantile ground floor stored as hag_cm.npy",
+  "areas": {
+    "baybridge": {
+      "points": 132710,
+      "area_points": 3068521,
+      "share_of_area": 0.043249,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 4.4,
+        "median": 7.89,
+        "p90": 11.26
+      },
+      "delivery_asprs_share": {
+        "1": 0.5786,
+        "17": 0.4214
+      }
+    },
+    "embarcadero": {
+      "points": 630362,
+      "area_points": 4434486,
+      "share_of_area": 0.14215,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 2.51,
+        "median": 5.76,
+        "p90": 14.99
+      },
+      "delivery_asprs_share": {
+        "1": 0.9014,
+        "2": 0.0487,
+        "9": 0.0,
+        "17": 0.0491,
+        "20": 0.0008
+      }
+    },
+    "financial": {
+      "points": 1808939,
+      "area_points": 7491501,
+      "share_of_area": 0.241465,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 3.42,
+        "median": 8.83,
+        "p90": 20.47
+      },
+      "delivery_asprs_share": {
+        "1": 0.999,
+        "2": 0.001
+      }
+    },
+    "ggpark": {
+      "points": 13847,
+      "area_points": 9010024,
+      "share_of_area": 0.001537,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 3.32,
+        "median": 17.79,
+        "p90": 22.28
+      },
+      "delivery_asprs_share": {
+        "1": 1.0
+      }
+    },
+    "mission": {
+      "points": 1272733,
+      "area_points": 4532181,
+      "share_of_area": 0.280821,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 3.07,
+        "median": 7.08,
+        "p90": 12.81
+      },
+      "delivery_asprs_share": {
+        "1": 0.9992,
+        "2": 0.0008
+      }
+    },
+    "soma": {
+      "points": 1448040,
+      "area_points": 4522972,
+      "share_of_area": 0.320152,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 3.13,
+        "median": 7.39,
+        "p90": 13.98
+      },
+      "delivery_asprs_share": {
+        "1": 0.9984,
+        "2": 0.0016
+      }
+    },
+    "steep": {
+      "points": 2244818,
+      "area_points": 5417326,
+      "share_of_area": 0.414377,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 3.53,
+        "median": 9.15,
+        "p90": 15.12
+      },
+      "delivery_asprs_share": {
+        "1": 0.9892,
+        "2": 0.0108
+      }
+    },
+    "sunset": {
+      "points": 1414141,
+      "area_points": 5461632,
+      "share_of_area": 0.258923,
+      "share_above_2m": 1.0,
+      "height_above_floor_m": {
+        "p10": 2.81,
+        "median": 5.54,
+        "p90": 7.01
+      },
+      "delivery_asprs_share": {
+        "1": 0.9964,
+        "2": 0.0036
+      }
+    }
+  }
+}

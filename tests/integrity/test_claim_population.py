@@ -100,8 +100,14 @@ def pieces(text: str) -> list[str]:
 
 
 def readme_units() -> dict[str, str]:
-    text = (ROOT / "docs" / "readme.template.md").read_text(encoding="utf-8")
-    return {f"README: {p[:50]}": p for p in pieces(text)}
+    """The README's template and the method notes' template, which the README links to."""
+    units = {}
+    for label, name in (("README", "readme.template.md"), ("method", "method.template.md")):
+        path = ROOT / "docs" / name
+        if path.exists():
+            text = path.read_text(encoding="utf-8")
+            units |= {f"{label}: {p[:50]}": p for p in pieces(text)}
+    return units
 
 
 def page_units() -> dict[str, str]:

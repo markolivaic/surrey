@@ -90,7 +90,7 @@ function fillFigures() {
   const trained = m1CardState(state.figs) !== "not_trained";
   $("m1card").classList.toggle("disabled", !trained);
   $("m1button").disabled = !trained;
-  $("m1button").textContent = trained ? "M1" : "M1, not trained yet";
+  $("m1button").textContent = trained ? "old M1, synthetic water" : "old M1, not trained yet";
 }
 
 function stillsFor(theme) {
@@ -215,7 +215,7 @@ async function main() {
     const { entry } = await viewer.show(areaName(state.area), variant, { keepCamera });
     state.legendVariant = variant;
     const chips = { returns_ood: "old model, four channels, input as delivered", ret0: "old model, four channels, return ratio set to 0",
-      m0_seedA: "M0 seed A, the published model", m1_seedA: "M1 seed A" };
+      m0_seedA: "M0 seed A, the published model", m1_seedA: "old M1 seed A, learned on synthetic water" };
     $("chip").textContent = chips[variant];
     drawLegend(entry.manifest, variant);
   }

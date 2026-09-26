@@ -78,6 +78,24 @@ def sf_figure(area: dict, name: str):
             "hard_water_auroc": lambda: area["auroc"]["hard_water_within_0_5m"]["auroc"],
             "water_called_ground": lambda: area["water_called_ground"],
             "bridge_deck_called_building": lambda: area["bridge_deck_called_building"],
+            "ground_precision_ceiling": lambda: area["ground_band"]["with_water"][
+                "precision_ceiling"
+            ],
+            "building_precision": lambda: area["building_vs_footprints_over_2m"]["global_shift"][
+                "precision"
+            ],
+            "building_null_precision": lambda: area["building_vs_footprints_over_2m"][
+                "global_shift"
+            ]["null_precision"],
+            "building_coverage": lambda: area["building_area_coverage_global_shift"][
+                "coverage_median"
+            ],
+            "building_null_coverage": lambda: area["building_area_coverage_global_shift"][
+                "null_coverage_median"
+            ],
+            "footprints_scored": lambda: area["building_area_coverage_global_shift"][
+                "footprints_scored"
+            ],
         }[name]()
     except (KeyError, TypeError):
         return None
@@ -104,6 +122,17 @@ def hard_reading(water: float | None, home: float | None) -> str | None:
     return "no difference measured"
 
 
+# Figures the README's tables quote beside the side effect metrics, read the same way.
+TABLE_FIGURES = (
+    "ground_precision_ceiling",
+    "building_precision",
+    "building_null_precision",
+    "building_coverage",
+    "building_null_coverage",
+    "footprints_scored",
+)
+
+
 def aggregate(recipe: str, scores: dict[str, dict], training: dict[str, dict]) -> dict:
     seeds = [s for s in SEED_LETTERS if s in scores]
     rows = {s: {r["aoi"]: r for r in scores[s]["san_francisco_per_area"]} for s in seeds}
@@ -111,7 +140,7 @@ def aggregate(recipe: str, scores: dict[str, dict], training: dict[str, dict]) -
     figures: dict = {}
     for aoi in SF_AOIS:
         per = {}
-        for name in SF_SIDE_EFFECT_METRICS:
+        for name in (*SF_SIDE_EFFECT_METRICS, *TABLE_FIGURES):
             vals = {s: sf_figure(rows[s][aoi], name) for s in seeds if aoi in rows[s]}
             if any(v is not None for v in vals.values()):
                 per[name] = spread(vals)
@@ -124,6 +153,9 @@ def aggregate(recipe: str, scores: dict[str, dict], training: dict[str, dict]) -
             {s: scores[s]["surrey_held_out"]["accuracy_labelled_voxel_points"] for s in seeds}
         )
     }
+    for part in ("miou_15", "miou_coarse"):
+        if all(part in scores[s]["surrey_held_out"] for s in seeds):
+            surrey[part] = spread({s: scores[s]["surrey_held_out"][part] for s in seeds})
     if training:
         tseeds = [s for s in seeds if s in training]
         surrey["accuracy_training_artefact"] = spread(

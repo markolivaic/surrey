@@ -1,9 +1,9 @@
-"""The README is generated from docs/readme.template.md, and this fails if the committed one is not.
+"""The README and docs/method.md are generated from their templates, and this fails if either is not.
 
-Matching a figure to a quantity by value guesses; naming the key does not. The template holds the key,
-scripts/pipeline/render_readme.py fills it in, and this check keeps the committed README equal to what that
-produces, so an edited figure or a moved quantity shows up as a failing test rather than as a sentence
-nobody re-derived. The older value matching guard stays on beside it for anything typed by hand.
+Matching a figure to a quantity by value guesses; naming the key does not. The templates hold the keys,
+scripts/pipeline/render_readme.py fills them in, and this check keeps the committed files equal to what
+that produces, so an edited figure or a moved quantity shows up as a failing test rather than as a
+sentence nobody re-derived. A decimal typed into a template instead of named fails the last test here.
 """
 
 from __future__ import annotations
@@ -27,12 +27,14 @@ def renderer():
     return mod
 
 
-def test_the_committed_readme_is_what_the_template_and_the_registry_produce():
+@pytest.mark.parametrize("which", [0, 1], ids=["README.md", "docs/method.md"])
+def test_the_committed_file_is_what_its_template_and_the_registry_produce(which):
     mod = renderer()
-    if not mod.TEMPLATE.exists():
+    template, target = mod.DOCUMENTS[which]
+    if not template.exists():
         pytest.skip("no template yet")
-    rendered = mod.render(mod.TEMPLATE.read_text(encoding="utf-8"), mod.values())
-    current = mod.README.read_text(encoding="utf-8")
+    rendered = mod.render(template.read_text(encoding="utf-8"), mod.values())
+    current = target.read_text(encoding="utf-8") if target.exists() else ""
     if current != rendered:
         first = next(
             (
@@ -45,9 +47,9 @@ def test_the_committed_readme_is_what_the_template_and_the_registry_produce():
             0,
         )
         pytest.fail(
-            "README.md is not what the template produces; run scripts/pipeline/render_readme.py. "
+            f"{target.name} is not what its template produces; run scripts/pipeline/render_readme.py. "
             f"First difference at line {first + 1}:\n"
-            f"  committed: {current.splitlines()[first][:160]}\n"
+            f"  committed: {current.splitlines()[first][:160] if current else ''}\n"
             f"  rendered : {rendered.splitlines()[first][:160]}"
         )
 
@@ -70,14 +72,19 @@ def test_every_figure_in_the_template_is_a_key_rather_than_a_number():
     import re
 
     mod = renderer()
-    if not mod.TEMPLATE.exists():
-        pytest.skip("no template yet")
-    text = mod.TEMPLATE.read_text(encoding="utf-8")
+    text = "\n".join(t.read_text(encoding="utf-8") for t, _ in mod.DOCUMENTS if t.exists())
     # Not measurements: the licence version, the keep fractions named in words, the thresholds the page
     # was held to, the ordinary counts a sentence needs, 4.29, the laptop card's memory, and versions:
     # 1.4 of the LAS specification, 3.12 of Python and 2.1 of PotreeConverter, in the quick start, and
-    # 2.9 and 2.11 of torch, the CI build and the one every model was trained with.
+    # 2.9 and 2.11 of torch, the CI build and the one every model was trained with. Not this project's
+    # either: 0.99, the agreement the vote rule asks for (scripts/pipeline/choose_votes.py); 0.811, the
+    # published KPConv mean IoU on the original DALES, quoted with the reasons it compares to nothing
+    # here; and two arXiv identifiers in the references.
     allowed = {
+        "0.99",
+        "0.811",
+        "2004.11985",
+        "2407.06043",
         "4.0",
         "0.15",
         "0.25",

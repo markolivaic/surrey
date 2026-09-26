@@ -9,10 +9,10 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 167,
-        "functions": 161
+        "passed": 175,
+        "functions": 166
       },
-      "summary": "161 tests; cases 167 passed"
+      "summary": "166 tests; cases 175 passed"
     },
     {
       "check": "integrity tests",
@@ -20,10 +20,10 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 53,
+        "passed": 54,
         "functions": 50
       },
-      "summary": "50 tests; cases 53 passed"
+      "summary": "50 tests; cases 54 passed"
     },
     {
       "check": "README is generated",

@@ -4,7 +4,8 @@ The scenario, written before any recording and brought up to date with the page 
 the page at 1440 by 900 and let the first screen settle; scroll it away slowly, so the colour crosses
 from the model's classes to the photograph; go through the six cards one at a time and let each
 settle; arrive in the free view, turn the NAIP divider on, and drag the handle once across the scene.
-One uninterrupted recording, no stitched takes.
+One uninterrupted recording, no stitched takes; only the seconds before the first screen has drawn
+are cut from its front.
 
 `--dry-run` walks the same scenario without recording and without encoding, and fails on any console
 error, on a card that never settles, or on a software renderer: the check before the real take.
@@ -94,13 +95,17 @@ def main() -> int:
         )
         ctx = browser.new_context(viewport=VIEWPORT, **record)
         page = ctx.new_page()
+        # The recording starts with the page, before it has drawn anything; the white seconds of loading
+        # are cut from the front, and only those.
+        recording_started = time.monotonic()
         errors: list[str] = []
         page.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
         page.on("pageerror", lambda e: errors.append(str(e)))
         page.goto(f"http://127.0.0.1:{PORT}/index.html")
         settle(page)
+        first_screen_at = time.monotonic() - recording_started
         page.wait_for_timeout(2500)
-        print(f"first screen: {page.text_content('#chip')}")
+        print(f"first screen: {page.text_content('#chip')}, settled {first_screen_at:.1f} s in")
         # The first screen's own reveal, driven by the reader's scrolling: classes, then the photograph.
         # Far enough for the colour to have crossed, and not so far that the first card takes the scene.
         for _ in range(13):
@@ -163,6 +168,8 @@ def main() -> int:
             str(ROOT / "scripts" / "pipeline" / "make_walkthrough.py"),
             "--source",
             str(video),
+            "--start",
+            f"{first_screen_at:.2f}",
         ]
     )
 

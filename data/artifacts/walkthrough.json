@@ -1,0 +1,37 @@
+{
+  "source": "data/cache/walkthrough_recording/25acee0b9a41af6b9f8598e29b4f26ff.webm",
+  "ffmpeg": "ffmpeg.EXE",
+  "ffmpeg_on_path": false,
+  "mp4": {
+    "path": "docs/walkthrough/app-walkthrough.mp4",
+    "bytes": 4467447,
+    "magic_ok": true,
+    "within_limit": true,
+    "limit_bytes": 5000000,
+    "codec": "h264",
+    "pix_fmt": "yuv420p",
+    "width": 1440,
+    "height": 900,
+    "duration_s": 43.32
+  },
+  "gif": {
+    "path": "docs/walkthrough/app-walkthrough.gif",
+    "bytes": 6770280,
+    "magic_ok": true,
+    "within_limit": true,
+    "limit_bytes": 8000000
+  },
+  "poster": {
+    "path": "docs/walkthrough/app-walkthrough-poster.jpg",
+    "bytes": 419327,
+    "magic_ok": true,
+    "within_limit": null,
+    "limit_bytes": null
+  },
+  "gif_fps": 8,
+  "gif_width": 640,
+  "gif_colours": 96,
+  "seconds_cut_from_the_front": 1.48,
+  "mp4_kbps": 831,
+  "seconds": 15.3
+}

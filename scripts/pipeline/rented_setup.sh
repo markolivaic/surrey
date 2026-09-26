@@ -2,8 +2,8 @@
 # Set up a rented GPU box to train this project, and say what it cost in time.
 #
 # Runs on the instance, once, after the code has been copied over. It does not create accounts, does
-# not read tokens and does not download anything private: DALES-2 comes from the public Hugging Face
-# mirror and the Swiss tiles from swisstopo's public STAC service, both anonymously.
+# not read tokens and does not download anything private: DALES-2 comes from its public Hugging Face
+# release and the Swiss tiles from swisstopo's public STAC service, both anonymously.
 #
 # The image already carries a CUDA build of torch. requirements.txt deliberately pins a CPU wheel so
 # that CI can run without a GPU, so installing it here would replace a working CUDA torch with a CPU
@@ -67,7 +67,7 @@ fi
 # The data pipeline, on a machine that has never seen this project: this is also the clean-machine test
 # of the download and preparation scripts, which have only ever run on the laptop.
 prep_start=$(date +%s)
-say "fetching and preparing DALES-2 from the Hugging Face mirror"
+say "fetching and preparing DALES-2 from Hugging Face"
 python -u scripts/pipeline/fetch_dales2.py 2>&1 | tail -3 | tee -a "$STAMP"
 python -u scripts/pipeline/prep_tiles.py --source dales --force 2>&1 | tail -3 | tee -a "$STAMP"
 # M0prime and M1 leave DALES water out of the loss; the mask comes from the BC Freshwater Atlas.

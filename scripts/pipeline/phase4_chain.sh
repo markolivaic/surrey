@@ -7,13 +7,13 @@
 #
 # Before each step the chain checks that every file the step reads is on the box, and before each long
 # step it writes an estimate of how long it will take. Every line goes into
-# data/artifacts/logs/gpu_chain_phase4.log with its UTC time, and the first failure stops the chain
+# data/logs/gpu_chain_phase4.log with its UTC time, and the first failure stops the chain
 # there, inside a function as well as outside one. Run again after a stop, it skips every step whose
 # output is already complete and says so. Nothing here scores; the laptop scores after rented_pull.sh.
 set -Eeuo pipefail
 cd "$(dirname "$0")/../.."
-LOG=data/artifacts/logs/gpu_chain_phase4.log
-mkdir -p data/artifacts/logs data/logs
+LOG=data/logs/gpu_chain_phase4.log
+mkdir -p data/logs
 say() { echo "$(date -u +%FT%TZ) $*" | tee -a "$LOG"; }
 trap 'say "stopped: exit $? at line $LINENO"' ERR
 

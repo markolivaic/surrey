@@ -30,7 +30,7 @@ instance would replace a working CUDA torch with a CPU one and every run would b
 ## The data
 
 The instance rebuilds its own data from the public sources with this project's own scripts: the
-mbendjilali/DALES-2 mirror from Hugging Face, the Swiss sub-tiles from swisstopo's STAC service, both anonymous. That
+DALES-2 from Hugging Face (mbendjilali/DALES-2), the Swiss sub-tiles from swisstopo's STAC service, both anonymous. That
 is deliberate: those scripts have only ever run on this laptop, so this is also the clean machine test
 of them, and `rented_setup.json` records how long it took. If the preparation costs more than two
 hours of billed time it is stopped and the prepared cache is sent instead
@@ -70,3 +70,20 @@ range of the three small seeds** for that measurement and that area. Registry va
 - If the large M1 gets a **positive** water lift, that is a new story and needs three seeds before
   anything is claimed. It is reported immediately and not written up.
 - In domain and every San Francisco class are measured, not only buildings.
+
+## Where the Phase 4 round spent its time, and what changes next time
+
+The four trainings on the RTX 5090 took 3,120 s together, by the `wall_seconds` in
+`data/artifacts/train_m0_seedA.json`, `train_m0_seedB.json`, `train_m0_seedC.json` and
+`train_m0_big_seedA.json`, and choosing the vote 798 s (`data/artifacts/votes.json`). The results, about 6.1 GB in thirteen archives,
+then came back through the vast.ai SSH proxy. One tar stream over ssh broke partway, and several scp
+copies in parallel stalled at 0 bytes; one archive at a time, each checked against its hash on arrival,
+moved at about 0.7 MB/s, as the download loop timed it, over about 3.3 hours. That is the largest part
+of the billed time, several times the training, and the instance was billed throughout it and until
+the last archive had been checked. The download's own log was working material and is not kept in the
+repository.
+
+Next time the results do not come back through the proxy. The chain uploads them from the card
+straight to a Hugging Face repository the owner has created for the round, or they are copied over a
+direct port of the instance rather than the proxied one, and the instance is released as soon as
+their hashes match.

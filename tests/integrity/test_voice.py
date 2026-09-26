@@ -26,7 +26,7 @@ BANNED = [
 ]
 EXEMPT = {"LICENSE"}
 EXEMPT_DIRS = ("web/vendor/",)
-BINARY = {".png", ".webp", ".jpg", ".webm", ".bin", ".laz", ".ico", ".woff2"}
+BINARY = {".png", ".webp", ".jpg", ".webm", ".bin", ".laz", ".ico", ".woff2", ".mp4", ".gif"}
 
 
 def voice_hits(text: str) -> list[str]:

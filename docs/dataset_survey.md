@@ -6,7 +6,7 @@ use, a download needing no registration, institutional email or click-through, a
 an aerial rather than a mobile sensor.
 
 Every answer below comes from the data provider's own page or record. A paper licence
-and a mirror tag are not a data licence. DALES taught that, and so did this survey:
+and a hub tag are not a data licence. DALES taught that, and so did this survey:
 the SensatUrban repository carries an MIT file that covers its code and says nothing
 about its data.
 

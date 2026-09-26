@@ -53,6 +53,39 @@
         "median": 0.9984,
         "min": 0.9307,
         "max": 1.0
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 0,
+          "B": 0,
+          "C": 0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
       }
     },
     "embarcadero": {
@@ -165,6 +198,72 @@
         "median": 0.9997,
         "min": 0.9987,
         "max": 0.9997
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.5328,
+          "B": 0.5386,
+          "C": 0.5147
+        },
+        "n": 3,
+        "median": 0.5328,
+        "min": 0.5147,
+        "max": 0.5386
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.197,
+          "B": 0.1969,
+          "C": 0.2004
+        },
+        "n": 3,
+        "median": 0.197,
+        "min": 0.1969,
+        "max": 0.2004
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.1666,
+          "B": 0.1666,
+          "C": 0.1666
+        },
+        "n": 3,
+        "median": 0.1666,
+        "min": 0.1666,
+        "max": 0.1666
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.8703,
+          "B": 0.874,
+          "C": 0.8259
+        },
+        "n": 3,
+        "median": 0.8703,
+        "min": 0.8259,
+        "max": 0.874
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.8749,
+          "B": 0.8749,
+          "C": 0.8749
+        },
+        "n": 3,
+        "median": 0.8749,
+        "min": 0.8749,
+        "max": 0.8749
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 6,
+          "B": 6,
+          "C": 6
+        },
+        "n": 3,
+        "median": 6.0,
+        "min": 6.0,
+        "max": 6.0
       }
     },
     "financial": {
@@ -244,6 +343,72 @@
         "median": 0.9219,
         "min": 0.8921,
         "max": 0.9349
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.9389,
+          "B": 0.9217,
+          "C": 0.9218
+        },
+        "n": 3,
+        "median": 0.9218,
+        "min": 0.9217,
+        "max": 0.9389
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.7017,
+          "B": 0.7068,
+          "C": 0.7018
+        },
+        "n": 3,
+        "median": 0.7018,
+        "min": 0.7017,
+        "max": 0.7068
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.6762,
+          "B": 0.6762,
+          "C": 0.6762
+        },
+        "n": 3,
+        "median": 0.6762,
+        "min": 0.6762,
+        "max": 0.6762
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.8062,
+          "B": 0.8133,
+          "C": 0.7951
+        },
+        "n": 3,
+        "median": 0.8062,
+        "min": 0.7951,
+        "max": 0.8133
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.8541,
+          "B": 0.8541,
+          "C": 0.8541
+        },
+        "n": 3,
+        "median": 0.8541,
+        "min": 0.8541,
+        "max": 0.8541
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 23,
+          "B": 23,
+          "C": 23
+        },
+        "n": 3,
+        "median": 23.0,
+        "min": 23.0,
+        "max": 23.0
       }
     },
     "ggpark": {
@@ -324,6 +489,72 @@
         "median": 0.9862,
         "min": 0.9857,
         "max": 0.9917
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.9691,
+          "B": 0.9681,
+          "C": 0.9703
+        },
+        "n": 3,
+        "median": 0.9691,
+        "min": 0.9681,
+        "max": 0.9703
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 1,
+          "B": 1,
+          "C": 1
+        },
+        "n": 3,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0
       }
     },
     "mission": {
@@ -403,6 +634,72 @@
         "median": 0.7921,
         "min": 0.7854,
         "max": 0.8459
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.8763,
+          "B": 0.8712,
+          "C": 0.8474
+        },
+        "n": 3,
+        "median": 0.8712,
+        "min": 0.8474,
+        "max": 0.8763
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.7927,
+          "B": 0.7882,
+          "C": 0.8085
+        },
+        "n": 3,
+        "median": 0.7927,
+        "min": 0.7882,
+        "max": 0.8085
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.5644,
+          "B": 0.5644,
+          "C": 0.5644
+        },
+        "n": 3,
+        "median": 0.5644,
+        "min": 0.5644,
+        "max": 0.5644
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.9822,
+          "B": 0.9741,
+          "C": 0.9756
+        },
+        "n": 3,
+        "median": 0.9756,
+        "min": 0.9741,
+        "max": 0.9822
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.9937,
+          "B": 0.9937,
+          "C": 0.9937
+        },
+        "n": 3,
+        "median": 0.9937,
+        "min": 0.9937,
+        "max": 0.9937
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 56,
+          "B": 56,
+          "C": 56
+        },
+        "n": 3,
+        "median": 56.0,
+        "min": 56.0,
+        "max": 56.0
       }
     },
     "soma": {
@@ -482,6 +779,72 @@
         "median": 0.9,
         "min": 0.8907,
         "max": 0.9086
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.9018,
+          "B": 0.8902,
+          "C": 0.8565
+        },
+        "n": 3,
+        "median": 0.8902,
+        "min": 0.8565,
+        "max": 0.9018
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.8156,
+          "B": 0.8103,
+          "C": 0.8268
+        },
+        "n": 3,
+        "median": 0.8156,
+        "min": 0.8103,
+        "max": 0.8268
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.6472,
+          "B": 0.6472,
+          "C": 0.6472
+        },
+        "n": 3,
+        "median": 0.6472,
+        "min": 0.6472,
+        "max": 0.6472
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.7449,
+          "B": 0.7463,
+          "C": 0.7347
+        },
+        "n": 3,
+        "median": 0.7449,
+        "min": 0.7347,
+        "max": 0.7463
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.7511,
+          "B": 0.7511,
+          "C": 0.7511
+        },
+        "n": 3,
+        "median": 0.7511,
+        "min": 0.7511,
+        "max": 0.7511
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 26,
+          "B": 26,
+          "C": 26
+        },
+        "n": 3,
+        "median": 26.0,
+        "min": 26.0,
+        "max": 26.0
       }
     },
     "steep": {
@@ -561,6 +924,72 @@
         "median": 0.8993,
         "min": 0.8779,
         "max": 0.9139
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.9455,
+          "B": 0.9418,
+          "C": 0.9529
+        },
+        "n": 3,
+        "median": 0.9455,
+        "min": 0.9418,
+        "max": 0.9529
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.7838,
+          "B": 0.7731,
+          "C": 0.7974
+        },
+        "n": 3,
+        "median": 0.7838,
+        "min": 0.7731,
+        "max": 0.7974
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.623,
+          "B": 0.623,
+          "C": 0.623
+        },
+        "n": 3,
+        "median": 0.623,
+        "min": 0.623,
+        "max": 0.623
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.9894,
+          "B": 0.9847,
+          "C": 0.9881
+        },
+        "n": 3,
+        "median": 0.9881,
+        "min": 0.9847,
+        "max": 0.9894
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.9935,
+          "B": 0.9935,
+          "C": 0.9935
+        },
+        "n": 3,
+        "median": 0.9935,
+        "min": 0.9935,
+        "max": 0.9935
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 77,
+          "B": 77,
+          "C": 77
+        },
+        "n": 3,
+        "median": 77.0,
+        "min": 77.0,
+        "max": 77.0
       }
     },
     "sunset": {
@@ -640,6 +1069,72 @@
         "median": 0.9226,
         "min": 0.9211,
         "max": 0.9542
+      },
+      "ground_precision_ceiling": {
+        "per_seed": {
+          "A": 0.9568,
+          "B": 0.9512,
+          "C": 0.958
+        },
+        "n": 3,
+        "median": 0.9568,
+        "min": 0.9512,
+        "max": 0.958
+      },
+      "building_precision": {
+        "per_seed": {
+          "A": 0.8203,
+          "B": 0.824,
+          "C": 0.8384
+        },
+        "n": 3,
+        "median": 0.824,
+        "min": 0.8203,
+        "max": 0.8384
+      },
+      "building_null_precision": {
+        "per_seed": {
+          "A": 0.5401,
+          "B": 0.5401,
+          "C": 0.5401
+        },
+        "n": 3,
+        "median": 0.5401,
+        "min": 0.5401,
+        "max": 0.5401
+      },
+      "building_coverage": {
+        "per_seed": {
+          "A": 0.9896,
+          "B": 0.9896,
+          "C": 0.9896
+        },
+        "n": 3,
+        "median": 0.9896,
+        "min": 0.9896,
+        "max": 0.9896
+      },
+      "building_null_coverage": {
+        "per_seed": {
+          "A": 0.9936,
+          "B": 0.9936,
+          "C": 0.9936
+        },
+        "n": 3,
+        "median": 0.9936,
+        "min": 0.9936,
+        "max": 0.9936
+      },
+      "footprints_scored": {
+        "per_seed": {
+          "A": 33,
+          "B": 33,
+          "C": 33
+        },
+        "n": 3,
+        "median": 33.0,
+        "min": 33.0,
+        "max": 33.0
       }
     }
   },
@@ -654,6 +1149,28 @@
       "median": 0.9132,
       "min": 0.9107,
       "max": 0.9204
+    },
+    "miou_15": {
+      "per_seed": {
+        "A": 0.4678,
+        "B": 0.4712,
+        "C": 0.4635
+      },
+      "n": 3,
+      "median": 0.4678,
+      "min": 0.4635,
+      "max": 0.4712
+    },
+    "miou_coarse": {
+      "per_seed": {
+        "A": 0.788,
+        "B": 0.7853,
+        "C": 0.7779
+      },
+      "n": 3,
+      "median": 0.7853,
+      "min": 0.7779,
+      "max": 0.788
     },
     "accuracy_training_artefact": {
       "per_seed": {

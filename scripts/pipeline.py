@@ -32,6 +32,7 @@ PY = sys.executable
 P = "scripts/pipeline"
 
 RECIPES = {"m0": "A B C", "m0prime": "A B C", "m1": "A B C"}
+AREAS = ["financial", "soma", "mission", "sunset", "ggpark", "embarcadero", "baybridge", "steep"]
 SEED = {"A": 0, "B": 1, "C": 2}
 VARIANTS = [f"{r}_seed{s}" for r, seeds in RECIPES.items() for s in seeds.split()]
 PREDICTED = [*VARIANTS, "m0_big_seedA"]
@@ -314,11 +315,15 @@ STEPS = [
         [
             py(
                 "build_octree.py",
-                "--areas financial soma mission sunset ggpark embarcadero baybridge steep "
-                "--variants m0_seedA m1_seedA",
+                f"--areas {' '.join(AREAS)} --variants returns_ood ret0 m0_seedA m1_seedA",
             ),
-            py("check_octree_decode.py", "--area embarcadero"),
-        ],
+            py(
+                "build_octree.py",
+                "--surrey --areas 5135_54430 --variants returns_ood ret0 m0_seedA m1_seedA",
+            ),
+        ]
+        + [py("check_octree_decode.py", f"--area {a}") for a in AREAS]
+        + [py("check_octree_decode.py", "--area 5135_54430 --surrey")],
         ["data/prep/target/", "data/predictions/", "PotreeConverter 2.1.3"],
         [
             "data/viewer/<area>/",
@@ -333,6 +338,20 @@ STEPS = [
         ["README.md"],
     ),
     Step("page", ["npm --prefix web ci", "npm --prefix web run build"], ["web/"], ["web/dist/"]),
+    Step(
+        "readme_images",
+        [py("readme_images.py")],
+        ["web/dist/", "data/viewer/"],
+        ["docs/design/readme/first_screen.webp", "docs/design/readme/cards_1_and_3.webp"],
+        "a browser on a hardware renderer",
+    ),
+    Step(
+        "walkthrough",
+        [py("record_walkthrough.py")],
+        ["web/dist/", "data/viewer/", "ffmpeg"],
+        ["docs/walkthrough/", "data/artifacts/walkthrough.json"],
+        "one uninterrupted take; refuses a software renderer and a busy GPU",
+    ),
     Step(
         "verify",
         [py("count_tests.py"), py("verify.py")],

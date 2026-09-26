@@ -9,6 +9,8 @@ the sheets each design round was chosen from are kept outside the repository.
   written by `scripts/investigations/cvd_bug_frames.py`.
 - `sparse_contrast_check.json`: contrast of the sparse returns over the bay and the bridge cables,
   written by `scripts/investigations/sparse_contrast_check.py`.
+- `readme/`: the two pictures at the top of the README, the first screen and cards 1 and 3 side by
+  side, shot from the built page over the real octrees by `scripts/pipeline/readme_images.py`.
 - `frames/`: the six frames `tests/integrity/test_colour_vision.py` reads, the old model's forest
   before and after the return ratio fix, on both grounds and in the first palette, stored as lossless
   WebP so every pixel is the one the renderer drew:

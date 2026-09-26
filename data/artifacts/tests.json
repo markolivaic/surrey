@@ -2,9 +2,9 @@
   "suites": {
     "unit": {
       "path": "tests/unit",
-      "functions": 161,
-      "collected": 167,
-      "passed": 167,
+      "functions": 166,
+      "collected": 175,
+      "passed": 175,
       "failed": 0,
       "skipped": 0,
       "errors": 0,
@@ -13,8 +13,8 @@
     "integrity": {
       "path": "tests/integrity",
       "functions": 50,
-      "collected": 53,
-      "passed": 53,
+      "collected": 54,
+      "passed": 54,
       "failed": 0,
       "skipped": 0,
       "errors": 0,
@@ -33,7 +33,7 @@
   },
   "machine": "Windows-11-10.0.26200-SP0",
   "python": "3.12.1",
-  "run_utc": "2026-09-26T04:37:15Z",
-  "seconds": 157.3,
+  "run_utc": "2026-09-26T19:41:46Z",
+  "seconds": 180.3,
   "note": "counted separately on purpose; a single total would let greps inflate a count of behavioural tests"
 }

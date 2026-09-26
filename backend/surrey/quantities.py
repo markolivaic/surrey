@@ -131,6 +131,9 @@ VARIANTS = {
     "m1_densityaug_seedA": "the published small configuration on M1 data, with each crop's density drawn "
     "at random across the gap between the Swiss and San Francisco crop densities; "
     "a diagnosis on one seed",
+    "m0_seedA_1vote": "M0 seed A predicted with one pass instead of the chosen vote, a diagnosis of voting",
+    "m0_seedA_legacy_iter": "M0 seed A predicted with one pass by the first round's iterator, a diagnosis "
+    "of the iterator",
     "m0_seeds": "median, min and max over every scored M0 seed (surrey.seeds)",
     "m0prime_seeds": "median, min and max over every scored M0prime seed",
     "m1_seeds": "median, min and max over every scored M1 seed",
@@ -175,6 +178,8 @@ MODEL_ARTIFACTS = (
         "confidence_mapping.json",
     }
     | {f"sf_scores_{v}.json" for v in RENTED_VARIANTS}
+    | {"sf_scores_m0_seedA_1vote.json", "sf_scores_m0_seedA_legacy_iter.json"}
+    | {"building_breakdown.json"}
     | {f"train_{v}.json" for v in RENTED_VARIANTS}
 )
 MODEL_KEY_PREFIXES = ("model.", "auroc.", "conf.", "control.", "vegetation.", "ground.", "ret0.")
@@ -1257,15 +1262,21 @@ def build_registry() -> list[Quantity]:
                             ],
                         )
                     )
-        for part in ("accuracy_from_prediction_cache", "accuracy_training_artefact"):
+        for part in (
+            "accuracy_from_prediction_cache",
+            "accuracy_training_artefact",
+            "miou_15",
+            "miou_coarse",
+        ):
             if part not in doc["surrey_held_out"]:
                 continue
+            taxonomy = "coarse6" if part == "miou_coarse" else "fine15"
             for st in stats:
                 q.append(
                     Quantity(
                         f"seeds.{recipe}.surrey.test.{part}.{st}",
                         f"{part}_{st}_over_seeds",
-                        Population("surrey", "test", "voxel", "labelled", "fine15", variant=agg),
+                        Population("surrey", "test", "voxel", "labelled", taxonomy, variant=agg),
                         src,
                         lambda a, s_=src, p_=part, t=st: a[s_]["surrey_held_out"][p_][t],
                     )
@@ -2206,17 +2217,19 @@ def build_registry() -> list[Quantity]:
         )
         _ = nr
 
-    if (ARTIFACTS / "density_classes_test.json").exists():
-        dens = json.loads((ARTIFACTS / "density_classes_test.json").read_text(encoding="utf-8"))
-        for aoi in dens.get("areas", {}):
+    # The area's density after the voxel step, from the preparation itself: the tiles every model read
+    # and the page draws.
+    if (ARTIFACTS / "prep_target.json").exists():
+        prep_t = json.loads((ARTIFACTS / "prep_target.json").read_text(encoding="utf-8"))
+        for aoi in (t["name"] for t in prep_t["tiles"]):
             q.append(
                 Quantity(
                     f"provenance.sf.{aoi}.points_per_m2",
                     "points_per_m2",
                     Population("san_francisco", aoi, "voxel", "all"),
-                    "density_classes_test.json",
-                    lambda a, x=aoi: a["density_classes_test.json"]["areas"][x][
-                        "density_points_per_m2"
+                    "prep_target.json",
+                    lambda a, x=aoi: _row(a["prep_target.json"]["tiles"], "name", x)[
+                        "density_kept"
                     ],
                     "after this project's voxel step, which is what the page draws",
                 )
@@ -2233,7 +2246,7 @@ def build_registry() -> list[Quantity]:
                         Population("san_francisco", aoi, "voxel", "drawn_at_the_point_budget"),
                         "points_per_pixel.json",
                         lambda a, x=aoi: round(
-                            a["density_classes_test.json"]["areas"][x]["density_points_per_m2"]
+                            _row(a["prep_target.json"]["tiles"], "name", x)["density_kept"]
                             * min(
                                 1.0,
                                 a["points_per_pixel.json"]["budget"]
@@ -2271,7 +2284,7 @@ def build_registry() -> list[Quantity]:
                 Population("surrey", "all", "raw", "all"),
                 "prep_dales.json",
                 lambda a: len(a["prep_dales.json"]["tiles"]),
-                "the tiles of the mirror this project trained and tested on",
+                "the DALES-2 tiles this project trained and tested on",
             )
         )
         q.append(
@@ -2675,6 +2688,271 @@ def build_registry() -> list[Quantity]:
                 lambda a, s=suite: a["tests.json"]["suites"][s]["passed"],
             )
         )
+    # ---------------- Phase 4: voting, real water, flags, confounds, buildings ----------------
+    if (ARTIFACTS / "votes.json").exists():
+        q.append(
+            Quantity(
+                "votes.n",
+                "voting_passes",
+                Population("surrey", "test", "voxel", "labelled", "coarse6"),
+                "votes.json",
+                lambda a: a["votes.json"]["votes"],
+                "chosen by the rule in docs/phase4_criteria.md",
+            )
+        )
+        for n in ("1", "2", "4", "8"):
+            q.append(
+                Quantity(
+                    f"votes.agreement_{n}",
+                    "vote_agreement_n_with_2n",
+                    Population("surrey", "test", "voxel", f"labelled_n{n}", "coarse6"),
+                    "votes.json",
+                    lambda a, n=n: a["votes.json"]["agreement_n_with_2n"][n],
+                )
+            )
+    if (ARTIFACTS / "real_water_density.json").exists():
+        rw = json.loads((ARTIFACTS / "real_water_density.json").read_text(encoding="utf-8"))
+        for side, city in (("swiss", "switzerland"), ("san_francisco", "san_francisco")):
+            for area in rw[side]:
+                # "zug 2680-1225, held out" names the tile and says it was held out; the key keeps the tile.
+                slug = area.split()[0] + (area.split()[1].rstrip(",") if side == "swiss" else "")
+                slug = slug.replace("-", "_")
+                for part in ("source", "prepared"):
+                    q.append(
+                        Quantity(
+                            f"realwater.{slug}.{part}.density_median",
+                            "real_water_density_median",
+                            Population(
+                                city, slug, "raw" if part == "source" else "voxel", "water_blocks"
+                            ),
+                            "real_water_density.json",
+                            lambda a, s_=side, ar=area, pt=part: a["real_water_density.json"][s_][
+                                ar
+                            ][pt]["density_p10_p50_p90"][1],
+                        )
+                    )
+    if (ARTIFACTS / "las_flags_audit.json").exists():
+        fa = json.loads((ARTIFACTS / "las_flags_audit.json").read_text(encoding="utf-8"))
+        for st, pick_ in (("min", min), ("max", max)):
+            q.append(
+                Quantity(
+                    f"flags.swiss_training.water.synthetic.{st}",
+                    f"synthetic_share_of_water_{st}_over_tiles",
+                    Population("switzerland", "train", "raw", "class_9"),
+                    "las_flags_audit.json",
+                    lambda a, f_=pick_: round(
+                        f_(
+                            t["per_class"]["9"]["share_synthetic"]
+                            for t in a["las_flags_audit.json"]["swiss_training"][
+                                "per_tile"
+                            ].values()
+                        ),
+                        4,
+                    ),
+                    "over the Swiss tiles M1 was trained on",
+                )
+            )
+        for group in ("swiss_training", "swiss_held_out"):
+            for tile in fa[group]["per_tile"]:
+                q.append(
+                    Quantity(
+                        f"flags.{tile.replace('-', '_')}.water.synthetic",
+                        "synthetic_share_of_water",
+                        Population("switzerland", tile, "raw", "class_9"),
+                        "las_flags_audit.json",
+                        lambda a, g=group, t=tile: round(
+                            a["las_flags_audit.json"][g]["per_tile"][t]["per_class"]["9"][
+                                "share_synthetic"
+                            ],
+                            4,
+                        ),
+                    )
+                )
+    for art, split in (("prep_swiss.json", "train"), ("prep_swiss_holdout.json", "held_out")):
+        if (ARTIFACTS / art).exists():
+            q.append(
+                Quantity(
+                    f"swisswater.{split}.real_points_kept",
+                    "real_water_points_kept",
+                    Population("switzerland", split, "voxel", "class_9_not_synthetic"),
+                    art,
+                    lambda a, s_=art: sum(t.get("water_points_kept", 0) for t in a[s_]["tiles"]),
+                )
+            )
+    if (ARTIFACTS / "input_range_check.json").exists():
+        q.append(
+            Quantity(
+                "confounds.training_p99.block_z_range_m",
+                "block_height_range_p99",
+                Population("surrey", "train", "voxel", "blocks"),
+                "input_range_check.json",
+                lambda a: a["input_range_check.json"]["confounds_at_the_99th_percentile"][
+                    "training_p99"
+                ]["block_z_range_m"],
+            )
+        )
+        for aoi in SF_AOIS:
+            q.append(
+                Quantity(
+                    f"confounds.{aoi}.block_z_range_m.median",
+                    "block_height_range_median",
+                    Population("san_francisco", aoi, "voxel", "blocks"),
+                    "input_range_check.json",
+                    lambda a, x=aoi: a["input_range_check.json"][
+                        "confounds_at_the_99th_percentile"
+                    ]["per_aoi"][x]["block_z_range_m"]["median"],
+                )
+            )
+    if (ARTIFACTS / "building_breakdown.json").exists():
+        bb = json.loads((ARTIFACTS / "building_breakdown.json").read_text(encoding="utf-8"))
+        for aoi, row in bb["areas"].items():
+            for fig, cell in row.items():
+                if not isinstance(cell, dict) or "old" not in cell:
+                    continue
+                for when in ("old", "new"):
+                    if not cell[when]:
+                        continue
+                    for st in ("median", "min", "max"):
+                        q.append(
+                            Quantity(
+                                f"buildings.{aoi}.{fig}.{when}.{st}",
+                                f"building_{fig}_{st}",
+                                Population(
+                                    "san_francisco",
+                                    aoi,
+                                    "voxel",
+                                    f"footprints_{when}_m0",
+                                    variant="m0_seeds",
+                                ),
+                                "building_breakdown.json",
+                                lambda a, x=aoi, f=fig, w=when, t=st: a["building_breakdown.json"][
+                                    "areas"
+                                ][x][f][w][t],
+                            )
+                        )
+    big = ARTIFACTS / "sf_scores_m0_big_seedA.json"
+    if big.exists() and (ARTIFACTS / "seeds_m0.json").exists():
+
+        def _capacity(a: dict) -> int:
+            rows = {r["aoi"]: r for r in a["sf_scores_m0_big_seedA.json"]["san_francisco_per_area"]}
+            small = a["seeds_m0.json"]["san_francisco"]
+            count = 0
+            for aoi, r in rows.items():
+                lift = r["building_vs_footprints_over_2m"]["global_shift"][
+                    "precision_lift_over_null"
+                ]
+                top = small.get(aoi, {}).get("building_lift_global_shift", {}).get("max")
+                if lift is not None and top is not None and lift > top:
+                    count += 1
+            return count
+
+        q.append(
+            Quantity(
+                "capacity.areas_big_above_small_max",
+                "capacity_rule_count",
+                Population(
+                    "san_francisco", "aois", "voxel", "clean_over_2m", variant="m0_big_seedA"
+                ),
+                "sf_scores_m0_big_seedA.json",
+                _capacity,
+                "areas where the large M0's building lift exceeds the max of the three small seeds",
+            )
+        )
+        q.append(
+            Quantity(
+                "capacity.areas_with_footprints",
+                "capacity_rule_areas",
+                Population("san_francisco", "aois", "voxel", "clean_over_2m", variant="m0_seeds"),
+                "seeds_m0.json",
+                lambda a: sum(
+                    1
+                    for r in a["seeds_m0.json"]["san_francisco"].values()
+                    if (r.get("building_null_precision") or {}).get("median")
+                ),
+                "areas where the footprint null calls anything a building, so a lift can be read",
+            )
+        )
+    # The two inference-only diagnoses of the building drop, beside the four-vote prediction they are
+    # read against: one pass instead of the chosen vote, and one pass by the first round's iterator.
+    if (ARTIFACTS / "building_breakdown.json").exists():
+        seed_a = {"four_votes": "m0_seedA", **{d: d for d in bb.get("diagnostics", {})}}
+        for aoi, row in bb["areas"].items():
+            for fig, cell in row.items():
+                if not isinstance(cell, dict) or "seed_a" not in cell:
+                    continue
+                for run, variant in seed_a.items():
+                    if cell["seed_a"].get(run) is None:
+                        continue
+                    q.append(
+                        Quantity(
+                            f"buildings.{aoi}.{fig}.seed_a.{run}",
+                            f"building_{fig}",
+                            Population(
+                                "san_francisco", aoi, "voxel", "footprints", variant=variant
+                            ),
+                            "building_breakdown.json",
+                            lambda a, x=aoi, f=fig, r_=run: a["building_breakdown.json"]["areas"][
+                                x
+                            ][f]["seed_a"][r_],
+                        )
+                    )
+    for variant in ("m0_seedA_1vote", "m0_seedA_legacy_iter"):
+        src = f"sf_scores_{variant}.json"
+        if not (ARTIFACTS / src).exists():
+            continue
+        for part in ("accuracy_labelled_voxel_points", "miou_15", "miou_coarse"):
+            q.append(
+                Quantity(
+                    f"diagnostic.{variant}.surrey.test.{part}",
+                    part,
+                    Population(
+                        "surrey",
+                        "test",
+                        "voxel",
+                        "labelled",
+                        "coarse6" if part == "miou_coarse" else "fine15",
+                        variant=variant,
+                    ),
+                    src,
+                    lambda a, s_=src, p_=part: a[s_]["surrey_held_out"][p_],
+                )
+            )
+    # Where the Phase 4 models were trained, and how large each is, from their own training artefacts.
+    for variant in ("m0_seedA", "m0_seedB", "m0_seedC", "m0_big_seedA"):
+        src = f"train_{variant}.json"
+        if not (ARTIFACTS / src).exists():
+            continue
+        q.append(
+            Quantity(
+                f"train.{variant}.parameters",
+                "parameters",
+                Population("surrey", "train", "voxel", "all", variant=variant),
+                src,
+                lambda a, s_=src: a[s_]["parameters"],
+            )
+        )
+    # ---------------- the NAIP not-vegetation cores, no model involved ----------------
+    if (ARTIFACTS / "not_vegetation_heights.json").exists():
+        nv = json.loads((ARTIFACTS / "not_vegetation_heights.json").read_text(encoding="utf-8"))
+        for aoi, row in nv["areas"].items():
+            parts: list[tuple[str, tuple[str, ...]]] = [
+                ("points", ("points",)),
+                ("share_of_area", ("share_of_area",)),
+            ]
+            if row["points"]:
+                parts.append(("height_median_m", ("height_above_floor_m", "median")))
+            for part, path in parts:
+                q.append(
+                    Quantity(
+                        f"notveg.sf.{aoi}.{part}",
+                        f"not_vegetation_core_{part}",
+                        Population("san_francisco", aoi, "voxel", "naip_not_vegetation_core"),
+                        "not_vegetation_heights.json",
+                        lambda a, x=aoi, p_=path: _dig(
+                            a["not_vegetation_heights.json"]["areas"][x], p_
+                        ),
+                    )
+                )
     return with_variants(q)
 
 

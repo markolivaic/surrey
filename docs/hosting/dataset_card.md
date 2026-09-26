@@ -38,7 +38,7 @@ lidar from Surrey, British Columbia. They are not measurements and not ground tr
 | San Francisco folders: positions | USGS 3DEP delivery `CA_SanFrancisco_1_B23` | United States Government public domain |
 | San Francisco folders: colour | NAIP 2022 imagery, USDA Farm Production and Conservation | United States Government public domain |
 | Every folder: class and confidence | predictions made by this project's models | CC BY-NC 4.0, non-commercial, in `LICENSE_MODEL.md` beside this card |
-| Surrey folder: positions | held-out tile of the Hugging Face mirror mbendjilali/DALES-2, lidar flown over Surrey | Open Government Licence, City of Surrey: "Contains information licensed under the Open Government License – City of Surrey." |
+| Surrey folder: positions | held-out tile of DALES-2 (mbendjilali/DALES-2 on Hugging Face), lidar flown over Surrey | Open Government Licence, City of Surrey: "Contains information licensed under the Open Government License – City of Surrey." |
 
 The Surrey folder holds points and predictions only. It contains no DALES annotation and no mbendjilali/DALES-2 label:
 the build never reads the label array, and `scripts/pipeline/check_octree_decode.py` confirms the class

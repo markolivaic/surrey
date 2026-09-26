@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
@@ -38,8 +39,14 @@ DEFAULT_ARTIFACT = ROOT / "data" / "artifacts" / "walkthrough.json"
 
 MP4_MAX_BYTES = 5_000_000
 GIF_MAX_BYTES = 8_000_000
-GIF_FPS = 12
-GIF_WIDTH = 960
+# A point cloud is close to noise to an encoder, so neither file fits its limit at the usual settings:
+# at CRF 26 the first recording of the page came to 13 MB, and a 960 wide GIF at 12 frames a second to
+# 34 MB. The MP4 is therefore encoded in two passes at the bitrate that fills nine tenths of its limit
+# over the clip's own length, and the GIF is drawn smaller, slower and with fewer colours, undithered.
+MP4_FILL = 0.9
+GIF_FPS = 8
+GIF_WIDTH = 640
+GIF_COLOURS = 96
 
 MAGIC = {
     ".mp4": lambda b: b[4:8] == b"ftyp",
@@ -114,6 +121,13 @@ def main() -> int:
     ap.add_argument("--stem", default=STEM)
     ap.add_argument("--gif-fps", type=int, default=GIF_FPS)
     ap.add_argument("--gif-width", type=int, default=GIF_WIDTH)
+    ap.add_argument("--gif-colours", type=int, default=GIF_COLOURS)
+    ap.add_argument(
+        "--start",
+        type=float,
+        default=0.0,
+        help="seconds cut from the front: the page loading, before its first screen has drawn",
+    )
     ap.add_argument("--artifact", type=Path, default=DEFAULT_ARTIFACT)
     args = ap.parse_args()
 
@@ -129,27 +143,19 @@ def main() -> int:
     print(f"ffmpeg  {ffmpeg}")
 
     # H.264 in yuv420p with the index at the front, so it plays on the first frame
-    # in a browser instead of after the whole file arrives.
-    run(
-        [
-            str(ffmpeg),
-            "-y",
-            "-i",
-            str(args.source),
-            "-c:v",
-            "libx264",
-            "-preset",
-            "slow",
-            "-crf",
-            "26",
-            "-pix_fmt",
-            "yuv420p",
-            "-movflags",
-            "+faststart",
-            "-an",
-            str(mp4),
-        ]
-    )
+    # in a browser instead of after the whole file arrives. Two passes at the bitrate the limit allows.
+    seconds = (probe(ffmpeg, args.source).get("duration_s") or 0.0) - args.start
+    if seconds <= 0:
+        raise SystemExit(f"cannot read the length of {args.source}")
+    kbps = int(MP4_MAX_BYTES * MP4_FILL * 8 / seconds / 1000)
+    passlog = args.out_dir / "_x264pass"
+    common = ["-c:v", "libx264", "-preset", "slow", "-b:v", f"{kbps}k", "-pix_fmt", "yuv420p"]
+    common += ["-passlogfile", str(passlog), "-an"]
+    source = ["-ss", f"{args.start:.2f}", "-i", str(args.source)]
+    run([str(ffmpeg), "-y", *source, *common, "-pass", "1", "-f", "mp4", os.devnull])
+    run([str(ffmpeg), "-y", *source, *common, "-pass", "2"] + ["-movflags", "+faststart", str(mp4)])
+    for leftover in args.out_dir.glob("_x264pass*"):
+        leftover.unlink()
 
     # Two passes for the GIF: build a palette from the whole clip, then map to it.
     # One pass picks 256 colours from the first frame and the rest of the clip
@@ -157,7 +163,15 @@ def main() -> int:
     palette = args.out_dir / "_palette.png"
     vf = f"fps={args.gif_fps},scale={args.gif_width}:-1:flags=lanczos"
     run(
-        [str(ffmpeg), "-y", "-i", str(mp4), "-vf", f"{vf},palettegen=stats_mode=diff", str(palette)]
+        [
+            str(ffmpeg),
+            "-y",
+            "-i",
+            str(mp4),
+            "-vf",
+            f"{vf},palettegen=max_colors={args.gif_colours}:stats_mode=diff",
+            str(palette),
+        ]
     )
     run(
         [
@@ -168,7 +182,7 @@ def main() -> int:
             "-i",
             str(palette),
             "-lavfi",
-            f"{vf} [x]; [x][1:v] paletteuse=dither=bayer:bayer_scale=3",
+            f"{vf} [x]; [x][1:v] paletteuse=dither=none:diff_mode=rectangle",
             str(gif),
         ]
     )
@@ -178,14 +192,18 @@ def main() -> int:
 
     files = [check(mp4, MP4_MAX_BYTES), check(gif, GIF_MAX_BYTES), check(poster)]
     result = {
-        "source": str(args.source),
-        "ffmpeg": str(ffmpeg),
+        # Where the recording and the encoder were, without the machine's own absolute paths.
+        "source": repo_relative(args.source),
+        "ffmpeg": ffmpeg.name,
         "ffmpeg_on_path": False,
         "mp4": {**files[0], **probe(ffmpeg, mp4)},
         "gif": files[1],
         "poster": files[2],
         "gif_fps": args.gif_fps,
         "gif_width": args.gif_width,
+        "gif_colours": args.gif_colours,
+        "seconds_cut_from_the_front": args.start,
+        "mp4_kbps": kbps,
         "seconds": round(time.time() - t0, 1),
     }
     args.artifact.parent.mkdir(parents=True, exist_ok=True)

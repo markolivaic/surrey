@@ -5,8 +5,8 @@ Each number on web/index.html is a placeholder naming a registry key and where i
 
     a key is not in data/artifacts/quantities.json or has no value
     a key's variant may not stand where it is placed: the old four channel model (returns_ood)
-    and its forced-zero input (ret0) only on card 3, the bug card; card 5 only M1 and figures
-    with no model; everywhere else the published model, the spread over its seeds, or no model
+    and its forced-zero input (ret0) only on card 3, the bug card; the M1 card only the old M1 and
+    figures with no model; everywhere else the published model, the spread over its seeds, or no model
 
 The M1 card's figures are optional until M1 is trained; m1card.js shows "not trained yet" while the
 comparison artefact does not exist. The phone stills come from data/cache/frames and are drawn
@@ -137,7 +137,7 @@ def main() -> int:
     # The inset's figures, named in full in the card's source; a spread names its stem and gets all three.
     # Keys carry capitals where they name a seed, m1_seedA, so the pattern has to take them.
     inset_keys = re.findall(
-        r'v\("((?:swiss_holdout|water|crop_density|density|lattice_test|lattice|rented)\.[A-Za-z0-9_.]+)"\)',
+        r'v\("((?:swiss_holdout|water|crop_density|density|lattice_test|lattice|rented|realwater|flags)\.[A-Za-z0-9_.]+)"\)',
         m1card_text,
     )
     inset_keys += [

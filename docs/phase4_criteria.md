@@ -4,7 +4,8 @@ Every model in `data/artifacts` today was predicted by an iterator that cut each
 runs at the source's full density, with one pass per point. M1 learned water from Swiss points that
 were almost all synthetic. Phase 4 trains M0 again, predicts every model again with both inference
 faults fixed, and scores the lot. This file is the plan and the reading rules; the commit that adds it
-is its date, and `data/artifacts/logs/gpu_chain_phase4.log` records each run against it.
+is its date. The chain logs each run against it on the machine that ran it, a log not kept in the
+repository; each training artefact records its own time.
 
 ## What changes for every prediction
 

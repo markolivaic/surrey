@@ -13,7 +13,7 @@ These are released under **Creative Commons Attribution-NonCommercial 4.0 Intern
 
 ## Why non-commercial
 
-Every model here learned from the labels of the Hugging Face mirror mbendjilali/DALES-2. Those
+Every model here learned from the labels of DALES-2, published on Hugging Face as mbendjilali/DALES-2. Those
 labels are a revision of the DALES annotations, whose project page gives them "Creative Commons 3.0"
 with a separate sentence that the data may not be used for commercial purposes
 (THIRD_PARTY_NOTICES.md sets out all three layers). Whether weights trained on labels carry the

@@ -171,6 +171,14 @@ RENTED_NOTES = {
 }
 for _v, _note in RENTED_NOTES.items():
     VARIANTS.setdefault(_v, {"sf": PRED / _v, "surrey": PRED / _v, "note": _note})
+# Diagnostics of new M0 seed A that separate what inference alone changed
+# (scripts/investigations/building_breakdown.py).
+DIAGNOSTIC_NOTES = {
+    "m0_seedA_1vote": "new M0 seed A with one vote, a diagnostic",
+    "m0_seedA_legacy_iter": "new M0 seed A with one vote and the first round's iterator, a diagnostic",
+}
+for _v, _note in DIAGNOSTIC_NOTES.items():
+    VARIANTS.setdefault(_v, {"sf": PRED / _v, "surrey": PRED / _v, "note": _note})
 GROUPS = list(COARSE)
 WATER_NULL = ROOT / "data" / "reference" / "water_null"
 WATER_POLYGON = ROOT / "data" / "reference" / "water_polygon"

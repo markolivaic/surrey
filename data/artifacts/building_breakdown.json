@@ -1,0 +1,1210 @@
+{
+  "what": "building precision and coverage against footprints, old M0 against new M0",
+  "old": "sf_scores_m0_seed[ABC].json as commit d62078f holds them",
+  "new": "sf_scores_m0_seed[ABC].json, Phase 4",
+  "rule": "rose or fell only when every new seed lies beyond every old one (backend/surrey/seeds.py); reading written in docs/phase4_criteria.md before this ran",
+  "diagnostics": {
+    "m0_seedA_1vote": "new M0 seed A, one vote, new iterator",
+    "m0_seedA_legacy_iter": "new M0 seed A, one vote, the old iterator"
+  },
+  "not_separated": "class weights from 29 tiles against 40, and the dropped withheld points: separating them needs training",
+  "areas": {
+    "embarcadero": {
+      "precision": {
+        "old": {
+          "median": 0.1773,
+          "min": 0.1737,
+          "max": 0.18,
+          "per_seed": [
+            0.1737,
+            0.18,
+            0.1773
+          ]
+        },
+        "new": {
+          "median": 0.2034,
+          "min": 0.1984,
+          "max": 0.2081,
+          "per_seed": [
+            0.2081,
+            0.1984,
+            0.2034
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.2081,
+          "m0_seedA_1vote": 0.2042,
+          "m0_seedA_legacy_iter": 0.1769
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.164,
+          "min": 0.164,
+          "max": 0.164,
+          "per_seed": [
+            0.164,
+            0.164,
+            0.164
+          ]
+        },
+        "new": {
+          "median": 0.1666,
+          "min": 0.1666,
+          "max": 0.1666,
+          "per_seed": [
+            0.1666,
+            0.1666,
+            0.1666
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.1666,
+          "m0_seedA_1vote": 0.1666,
+          "m0_seedA_legacy_iter": 0.1666
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.0159,
+          "min": 0.0116,
+          "max": 0.0191,
+          "per_seed": [
+            0.0116,
+            0.0191,
+            0.0159
+          ]
+        },
+        "new": {
+          "median": 0.0443,
+          "min": 0.0382,
+          "max": 0.0499,
+          "per_seed": [
+            0.0499,
+            0.0382,
+            0.0443
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.0499,
+          "m0_seedA_1vote": 0.0452,
+          "m0_seedA_legacy_iter": 0.0124
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.8054,
+          "min": 0.7754,
+          "max": 0.8095,
+          "per_seed": [
+            0.8054,
+            0.8095,
+            0.7754
+          ]
+        },
+        "new": {
+          "median": 0.8506,
+          "min": 0.8506,
+          "max": 0.8541,
+          "per_seed": [
+            0.8506,
+            0.8506,
+            0.8541
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.8506,
+          "m0_seedA_1vote": 0.8487,
+          "m0_seedA_legacy_iter": 0.6817
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.8749,
+          "min": 0.8749,
+          "max": 0.8749,
+          "per_seed": [
+            0.8749,
+            0.8749,
+            0.8749
+          ]
+        },
+        "new": {
+          "median": 0.8749,
+          "min": 0.8749,
+          "max": 0.8749,
+          "per_seed": [
+            0.8749,
+            0.8749,
+            0.8749
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.8749,
+          "m0_seedA_1vote": 0.8749,
+          "m0_seedA_legacy_iter": 0.8749
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 6.0,
+          "min": 6,
+          "max": 6,
+          "per_seed": [
+            6,
+            6,
+            6
+          ]
+        },
+        "new": {
+          "median": 6.0,
+          "min": 6,
+          "max": 6,
+          "per_seed": [
+            6,
+            6,
+            6
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 6,
+          "m0_seedA_1vote": 6,
+          "m0_seedA_legacy_iter": 6
+        }
+      },
+      "reading": "precision rose, coverage rose"
+    },
+    "financial": {
+      "precision": {
+        "old": {
+          "median": 0.7813,
+          "min": 0.7512,
+          "max": 0.7814,
+          "per_seed": [
+            0.7512,
+            0.7814,
+            0.7813
+          ]
+        },
+        "new": {
+          "median": 0.7234,
+          "min": 0.7232,
+          "max": 0.7401,
+          "per_seed": [
+            0.7232,
+            0.7401,
+            0.7234
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.7232,
+          "m0_seedA_1vote": 0.7231,
+          "m0_seedA_legacy_iter": 0.7673
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.6733,
+          "min": 0.6733,
+          "max": 0.6733,
+          "per_seed": [
+            0.6733,
+            0.6733,
+            0.6733
+          ]
+        },
+        "new": {
+          "median": 0.6762,
+          "min": 0.6762,
+          "max": 0.6762,
+          "per_seed": [
+            0.6762,
+            0.6762,
+            0.6762
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.6762,
+          "m0_seedA_1vote": 0.6762,
+          "m0_seedA_legacy_iter": 0.6762
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.3306,
+          "min": 0.2384,
+          "max": 0.3307,
+          "per_seed": [
+            0.2384,
+            0.3307,
+            0.3306
+          ]
+        },
+        "new": {
+          "median": 0.1456,
+          "min": 0.1452,
+          "max": 0.1972,
+          "per_seed": [
+            0.1452,
+            0.1972,
+            0.1456
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.1452,
+          "m0_seedA_1vote": 0.1447,
+          "m0_seedA_legacy_iter": 0.2814
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.7508,
+          "min": 0.7467,
+          "max": 0.7542,
+          "per_seed": [
+            0.7467,
+            0.7542,
+            0.7508
+          ]
+        },
+        "new": {
+          "median": 0.8248,
+          "min": 0.8222,
+          "max": 0.8354,
+          "per_seed": [
+            0.8222,
+            0.8354,
+            0.8248
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.8222,
+          "m0_seedA_1vote": 0.8289,
+          "m0_seedA_legacy_iter": 0.7387
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.8578,
+          "min": 0.8578,
+          "max": 0.8578,
+          "per_seed": [
+            0.8578,
+            0.8578,
+            0.8578
+          ]
+        },
+        "new": {
+          "median": 0.8541,
+          "min": 0.8541,
+          "max": 0.8541,
+          "per_seed": [
+            0.8541,
+            0.8541,
+            0.8541
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.8541,
+          "m0_seedA_1vote": 0.8541,
+          "m0_seedA_legacy_iter": 0.8541
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 23.0,
+          "min": 23,
+          "max": 23,
+          "per_seed": [
+            23,
+            23,
+            23
+          ]
+        },
+        "new": {
+          "median": 23.0,
+          "min": 23,
+          "max": 23,
+          "per_seed": [
+            23,
+            23,
+            23
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 23,
+          "m0_seedA_1vote": 23,
+          "m0_seedA_legacy_iter": 23
+        }
+      },
+      "reading": "a trade: more of each footprint covered, less precisely"
+    },
+    "ggpark": {
+      "precision": {
+        "old": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "new": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.0,
+          "m0_seedA_1vote": 0.0,
+          "m0_seedA_legacy_iter": 0.0
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "new": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.0,
+          "m0_seedA_1vote": 0.0,
+          "m0_seedA_legacy_iter": 0.0
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "new": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.0,
+          "m0_seedA_1vote": 0.0,
+          "m0_seedA_legacy_iter": 0.0
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "new": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.0,
+          "m0_seedA_1vote": 0.0,
+          "m0_seedA_legacy_iter": 0.0
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "new": {
+          "median": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "per_seed": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.0,
+          "m0_seedA_1vote": 0.0,
+          "m0_seedA_legacy_iter": 0.0
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 1.0,
+          "min": 1,
+          "max": 1,
+          "per_seed": [
+            1,
+            1,
+            1
+          ]
+        },
+        "new": {
+          "median": 1.0,
+          "min": 1,
+          "max": 1,
+          "per_seed": [
+            1,
+            1,
+            1
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 1,
+          "m0_seedA_1vote": 1,
+          "m0_seedA_legacy_iter": 1
+        }
+      },
+      "reading": "precision did not move, coverage did not move"
+    },
+    "mission": {
+      "precision": {
+        "old": {
+          "median": 0.8519,
+          "min": 0.8377,
+          "max": 0.8558,
+          "per_seed": [
+            0.8377,
+            0.8519,
+            0.8558
+          ]
+        },
+        "new": {
+          "median": 0.8317,
+          "min": 0.8268,
+          "max": 0.8323,
+          "per_seed": [
+            0.8268,
+            0.8323,
+            0.8317
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.8268,
+          "m0_seedA_1vote": 0.8244,
+          "m0_seedA_legacy_iter": 0.8397
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.5644,
+          "min": 0.5644,
+          "max": 0.5644,
+          "per_seed": [
+            0.5644,
+            0.5644,
+            0.5644
+          ]
+        },
+        "new": {
+          "median": 0.5644,
+          "min": 0.5644,
+          "max": 0.5644,
+          "per_seed": [
+            0.5644,
+            0.5644,
+            0.5644
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.5644,
+          "m0_seedA_1vote": 0.5644,
+          "m0_seedA_legacy_iter": 0.5644
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.66,
+          "min": 0.6274,
+          "max": 0.6689,
+          "per_seed": [
+            0.6274,
+            0.66,
+            0.6689
+          ]
+        },
+        "new": {
+          "median": 0.6136,
+          "min": 0.6023,
+          "max": 0.6151,
+          "per_seed": [
+            0.6023,
+            0.6151,
+            0.6136
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.6023,
+          "m0_seedA_1vote": 0.5968,
+          "m0_seedA_legacy_iter": 0.6319
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.8825,
+          "min": 0.8745,
+          "max": 0.9113,
+          "per_seed": [
+            0.8825,
+            0.9113,
+            0.8745
+          ]
+        },
+        "new": {
+          "median": 0.9776,
+          "min": 0.9776,
+          "max": 0.9777,
+          "per_seed": [
+            0.9776,
+            0.9777,
+            0.9776
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.9776,
+          "m0_seedA_1vote": 0.9844,
+          "m0_seedA_legacy_iter": 0.8367
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.9927,
+          "min": 0.9927,
+          "max": 0.9927,
+          "per_seed": [
+            0.9927,
+            0.9927,
+            0.9927
+          ]
+        },
+        "new": {
+          "median": 0.9937,
+          "min": 0.9937,
+          "max": 0.9937,
+          "per_seed": [
+            0.9937,
+            0.9937,
+            0.9937
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.9937,
+          "m0_seedA_1vote": 0.9937,
+          "m0_seedA_legacy_iter": 0.9937
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 56.0,
+          "min": 56,
+          "max": 56,
+          "per_seed": [
+            56,
+            56,
+            56
+          ]
+        },
+        "new": {
+          "median": 56.0,
+          "min": 56,
+          "max": 56,
+          "per_seed": [
+            56,
+            56,
+            56
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 56,
+          "m0_seedA_1vote": 56,
+          "m0_seedA_legacy_iter": 56
+        }
+      },
+      "reading": "a trade: more of each footprint covered, less precisely"
+    },
+    "soma": {
+      "precision": {
+        "old": {
+          "median": 0.8665,
+          "min": 0.8605,
+          "max": 0.8681,
+          "per_seed": [
+            0.8605,
+            0.8665,
+            0.8681
+          ]
+        },
+        "new": {
+          "median": 0.8455,
+          "min": 0.8446,
+          "max": 0.8459,
+          "per_seed": [
+            0.8446,
+            0.8455,
+            0.8459
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.8446,
+          "m0_seedA_1vote": 0.8429,
+          "m0_seedA_legacy_iter": 0.8617
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.6482,
+          "min": 0.6482,
+          "max": 0.6482,
+          "per_seed": [
+            0.6482,
+            0.6482,
+            0.6482
+          ]
+        },
+        "new": {
+          "median": 0.6472,
+          "min": 0.6472,
+          "max": 0.6472,
+          "per_seed": [
+            0.6472,
+            0.6472,
+            0.6472
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.6472,
+          "m0_seedA_1vote": 0.6472,
+          "m0_seedA_legacy_iter": 0.6472
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.6206,
+          "min": 0.6034,
+          "max": 0.6251,
+          "per_seed": [
+            0.6034,
+            0.6206,
+            0.6251
+          ]
+        },
+        "new": {
+          "median": 0.5621,
+          "min": 0.5594,
+          "max": 0.5631,
+          "per_seed": [
+            0.5594,
+            0.5621,
+            0.5631
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.5594,
+          "m0_seedA_1vote": 0.5548,
+          "m0_seedA_legacy_iter": 0.6079
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.5946,
+          "min": 0.5885,
+          "max": 0.6119,
+          "per_seed": [
+            0.5946,
+            0.6119,
+            0.5885
+          ]
+        },
+        "new": {
+          "median": 0.722,
+          "min": 0.7203,
+          "max": 0.7222,
+          "per_seed": [
+            0.722,
+            0.7222,
+            0.7203
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.722,
+          "m0_seedA_1vote": 0.7222,
+          "m0_seedA_legacy_iter": 0.5759
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.7777,
+          "min": 0.7777,
+          "max": 0.7777,
+          "per_seed": [
+            0.7777,
+            0.7777,
+            0.7777
+          ]
+        },
+        "new": {
+          "median": 0.7511,
+          "min": 0.7511,
+          "max": 0.7511,
+          "per_seed": [
+            0.7511,
+            0.7511,
+            0.7511
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.7511,
+          "m0_seedA_1vote": 0.7511,
+          "m0_seedA_legacy_iter": 0.7511
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 26.0,
+          "min": 26,
+          "max": 26,
+          "per_seed": [
+            26,
+            26,
+            26
+          ]
+        },
+        "new": {
+          "median": 26.0,
+          "min": 26,
+          "max": 26,
+          "per_seed": [
+            26,
+            26,
+            26
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 26,
+          "m0_seedA_1vote": 26,
+          "m0_seedA_legacy_iter": 26
+        }
+      },
+      "reading": "a trade: more of each footprint covered, less precisely"
+    },
+    "steep": {
+      "precision": {
+        "old": {
+          "median": 0.8683,
+          "min": 0.856,
+          "max": 0.8777,
+          "per_seed": [
+            0.856,
+            0.8683,
+            0.8777
+          ]
+        },
+        "new": {
+          "median": 0.8333,
+          "min": 0.8316,
+          "max": 0.835,
+          "per_seed": [
+            0.835,
+            0.8333,
+            0.8316
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.835,
+          "m0_seedA_1vote": 0.8295,
+          "m0_seedA_legacy_iter": 0.8613
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.6228,
+          "min": 0.6228,
+          "max": 0.6228,
+          "per_seed": [
+            0.6228,
+            0.6228,
+            0.6228
+          ]
+        },
+        "new": {
+          "median": 0.623,
+          "min": 0.623,
+          "max": 0.623,
+          "per_seed": [
+            0.623,
+            0.623,
+            0.623
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.623,
+          "m0_seedA_1vote": 0.623,
+          "m0_seedA_legacy_iter": 0.623
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.651,
+          "min": 0.6183,
+          "max": 0.6759,
+          "per_seed": [
+            0.6183,
+            0.651,
+            0.6759
+          ]
+        },
+        "new": {
+          "median": 0.5579,
+          "min": 0.5531,
+          "max": 0.5623,
+          "per_seed": [
+            0.5623,
+            0.5579,
+            0.5531
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.5623,
+          "m0_seedA_1vote": 0.5476,
+          "m0_seedA_legacy_iter": 0.632
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.8542,
+          "min": 0.846,
+          "max": 0.8681,
+          "per_seed": [
+            0.8542,
+            0.8681,
+            0.846
+          ]
+        },
+        "new": {
+          "median": 0.984,
+          "min": 0.9834,
+          "max": 0.9844,
+          "per_seed": [
+            0.984,
+            0.9844,
+            0.9834
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.984,
+          "m0_seedA_1vote": 0.984,
+          "m0_seedA_legacy_iter": 0.831
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.9935,
+          "min": 0.9935,
+          "max": 0.9935,
+          "per_seed": [
+            0.9935,
+            0.9935,
+            0.9935
+          ]
+        },
+        "new": {
+          "median": 0.9935,
+          "min": 0.9935,
+          "max": 0.9935,
+          "per_seed": [
+            0.9935,
+            0.9935,
+            0.9935
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.9935,
+          "m0_seedA_1vote": 0.9935,
+          "m0_seedA_legacy_iter": 0.9935
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 77.0,
+          "min": 77,
+          "max": 77,
+          "per_seed": [
+            77,
+            77,
+            77
+          ]
+        },
+        "new": {
+          "median": 77.0,
+          "min": 77,
+          "max": 77,
+          "per_seed": [
+            77,
+            77,
+            77
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 77,
+          "m0_seedA_1vote": 77,
+          "m0_seedA_legacy_iter": 77
+        }
+      },
+      "reading": "a trade: more of each footprint covered, less precisely"
+    },
+    "sunset": {
+      "precision": {
+        "old": {
+          "median": 0.8627,
+          "min": 0.8444,
+          "max": 0.8692,
+          "per_seed": [
+            0.8444,
+            0.8627,
+            0.8692
+          ]
+        },
+        "new": {
+          "median": 0.8482,
+          "min": 0.8452,
+          "max": 0.8512,
+          "per_seed": [
+            0.8482,
+            0.8512,
+            0.8452
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.8482,
+          "m0_seedA_1vote": 0.8476,
+          "m0_seedA_legacy_iter": 0.8589
+        }
+      },
+      "null_precision": {
+        "old": {
+          "median": 0.5407,
+          "min": 0.5407,
+          "max": 0.5407,
+          "per_seed": [
+            0.5407,
+            0.5407,
+            0.5407
+          ]
+        },
+        "new": {
+          "median": 0.5401,
+          "min": 0.5401,
+          "max": 0.5401,
+          "per_seed": [
+            0.5401,
+            0.5401,
+            0.5401
+          ]
+        },
+        "direction": "fell",
+        "seed_a": {
+          "four_votes": 0.5401,
+          "m0_seedA_1vote": 0.5401,
+          "m0_seedA_legacy_iter": 0.5401
+        }
+      },
+      "lift": {
+        "old": {
+          "median": 0.7011,
+          "min": 0.6613,
+          "max": 0.7151,
+          "per_seed": [
+            0.6613,
+            0.7011,
+            0.7151
+          ]
+        },
+        "new": {
+          "median": 0.6699,
+          "min": 0.6634,
+          "max": 0.6765,
+          "per_seed": [
+            0.6699,
+            0.6765,
+            0.6634
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.6699,
+          "m0_seedA_1vote": 0.6687,
+          "m0_seedA_legacy_iter": 0.6932
+        }
+      },
+      "coverage_median": {
+        "old": {
+          "median": 0.9028,
+          "min": 0.8659,
+          "max": 0.9125,
+          "per_seed": [
+            0.9125,
+            0.9028,
+            0.8659
+          ]
+        },
+        "new": {
+          "median": 0.9877,
+          "min": 0.9877,
+          "max": 0.9896,
+          "per_seed": [
+            0.9896,
+            0.9877,
+            0.9877
+          ]
+        },
+        "direction": "rose",
+        "seed_a": {
+          "four_votes": 0.9896,
+          "m0_seedA_1vote": 0.9888,
+          "m0_seedA_legacy_iter": 0.878
+        }
+      },
+      "null_coverage_median": {
+        "old": {
+          "median": 0.9936,
+          "min": 0.9936,
+          "max": 0.9936,
+          "per_seed": [
+            0.9936,
+            0.9936,
+            0.9936
+          ]
+        },
+        "new": {
+          "median": 0.9936,
+          "min": 0.9936,
+          "max": 0.9936,
+          "per_seed": [
+            0.9936,
+            0.9936,
+            0.9936
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 0.9936,
+          "m0_seedA_1vote": 0.9936,
+          "m0_seedA_legacy_iter": 0.9936
+        }
+      },
+      "footprints_scored": {
+        "old": {
+          "median": 33.0,
+          "min": 33,
+          "max": 33,
+          "per_seed": [
+            33,
+            33,
+            33
+          ]
+        },
+        "new": {
+          "median": 33.0,
+          "min": 33,
+          "max": 33,
+          "per_seed": [
+            33,
+            33,
+            33
+          ]
+        },
+        "direction": "did not move",
+        "seed_a": {
+          "four_votes": 33,
+          "m0_seedA_1vote": 33,
+          "m0_seedA_legacy_iter": 33
+        }
+      },
+      "reading": "precision did not move, coverage rose"
+    }
+  }
+}

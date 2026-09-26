@@ -1,7 +1,7 @@
 {
   "variant": "m0_seedB",
-  "checkpoint": "data\\checkpoints\\m0_seedB.pt",
-  "checkpoint_sha256_16": "02093b9d6e556811",
+  "checkpoint": "data/checkpoints/m0_seedB.pt",
+  "checkpoint_sha256_16": "d08086f7d4216bda",
   "checkpoint_step": 12000,
   "height": "height above ground, hag_cm.npy, the min-z grid surface",
   "thresholds_m": [
@@ -31,277 +31,237 @@
   ],
   "areas": {
     "baybridge": {
-      "points": 3069047,
+      "points": 3068521,
       "max_height_m": 163.47,
       "bins": {
         "above_60m": {
-          "points": 418467,
-          "share_of_area": 0.136351,
+          "points": 418280,
+          "share_of_area": 0.136313,
           "classes": {
             "ground": {
-              "points": 11902,
-              "share": 0.028442
+              "points": 82,
+              "share": 0.000196
             },
             "vegetation": {
-              "points": 7099,
-              "share": 0.016964
+              "points": 8,
+              "share": 1.9e-05
             },
             "car": {
-              "points": 325,
-              "share": 0.000777
-            },
-            "powerline": {
-              "points": 7841,
-              "share": 0.018737
-            },
-            "fence": {
-              "points": 29,
-              "share": 6.9e-05
-            },
-            "tree": {
-              "points": 8788,
-              "share": 0.021
-            },
-            "pickup": {
               "points": 6,
               "share": 1.4e-05
+            },
+            "powerline": {
+              "points": 2086,
+              "share": 0.004987
+            },
+            "tree": {
+              "points": 298,
+              "share": 0.000712
+            },
+            "pickup": {
+              "points": 3,
+              "share": 7e-06
             },
             "van-truck": {
               "points": 1,
               "share": 2e-06
             },
             "heavy-duty": {
-              "points": 43,
-              "share": 0.000103
+              "points": 101,
+              "share": 0.000241
             },
             "utility-pole": {
-              "points": 21620,
-              "share": 0.051665
+              "points": 38437,
+              "share": 0.091893
             },
             "light-pole": {
-              "points": 1227,
-              "share": 0.002932
+              "points": 37,
+              "share": 8.8e-05
             },
             "traffic-pole": {
-              "points": 128,
-              "share": 0.000306
-            },
-            "habitat": {
-              "points": 1,
-              "share": 2e-06
+              "points": 2,
+              "share": 5e-06
             },
             "complex": {
-              "points": 359457,
-              "share": 0.858985
+              "points": 377219,
+              "share": 0.901834
             }
           },
           "coarse": {
             "building": {
-              "points": 359458,
-              "share": 0.858988
+              "points": 377219,
+              "share": 0.901834
             },
             "pole": {
-              "points": 30816,
-              "share": 0.07364
+              "points": 40562,
+              "share": 0.096973
             },
             "vegetation": {
-              "points": 15887,
-              "share": 0.037965
-            },
-            "ground": {
-              "points": 11902,
-              "share": 0.028442
+              "points": 306,
+              "share": 0.000732
             },
             "vehicle": {
-              "points": 375,
-              "share": 0.000896
+              "points": 111,
+              "share": 0.000265
             },
-            "fence": {
-              "points": 29,
-              "share": 6.9e-05
+            "ground": {
+              "points": 82,
+              "share": 0.000196
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 250858,
-              "share": 0.599469
-            },
-            "low-noise": {
-              "points": 193,
-              "share": 0.000461
+              "points": 250937,
+              "share": 0.599926
             },
             "17": {
-              "points": 167408,
-              "share": 0.400051
-            },
-            "high-noise": {
-              "points": 8,
-              "share": 1.9e-05
+              "points": 167343,
+              "share": 0.400074
             }
           }
         },
         "above_100m": {
-          "points": 72639,
-          "share_of_area": 0.023668,
+          "points": 72624,
+          "share_of_area": 0.023667,
           "classes": {
             "ground": {
-              "points": 874,
-              "share": 0.012032
+              "points": 2,
+              "share": 2.8e-05
             },
             "powerline": {
-              "points": 5480,
-              "share": 0.075442
+              "points": 1310,
+              "share": 0.018038
             },
             "tree": {
-              "points": 4034,
-              "share": 0.055535
+              "points": 86,
+              "share": 0.001184
             },
             "utility-pole": {
-              "points": 11087,
-              "share": 0.152632
+              "points": 29388,
+              "share": 0.40466
             },
             "light-pole": {
-              "points": 538,
-              "share": 0.007406
-            },
-            "traffic-pole": {
-              "points": 4,
-              "share": 5.5e-05
+              "points": 3,
+              "share": 4.1e-05
             },
             "complex": {
-              "points": 50622,
-              "share": 0.696898
+              "points": 41835,
+              "share": 0.576049
             }
           },
           "coarse": {
             "building": {
-              "points": 50622,
-              "share": 0.696898
+              "points": 41835,
+              "share": 0.576049
             },
             "pole": {
-              "points": 17109,
-              "share": 0.235535
+              "points": 30701,
+              "share": 0.422739
             },
             "vegetation": {
-              "points": 4034,
-              "share": 0.055535
+              "points": 86,
+              "share": 0.001184
             },
             "ground": {
-              "points": 874,
-              "share": 0.012032
+              "points": 2,
+              "share": 2.8e-05
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 72638,
-              "share": 0.999986
-            },
-            "high-noise": {
-              "points": 1,
-              "share": 1.4e-05
+              "points": 72624,
+              "share": 1.0
             }
           }
         },
         "above_training_ceiling": {
-          "points": 38526,
-          "share_of_area": 0.012553,
+          "points": 38521,
+          "share_of_area": 0.012554,
           "classes": {
             "ground": {
-              "points": 627,
-              "share": 0.016275
+              "points": 2,
+              "share": 5.2e-05
             },
             "powerline": {
-              "points": 3902,
-              "share": 0.101282
+              "points": 709,
+              "share": 0.018406
             },
             "tree": {
-              "points": 3399,
-              "share": 0.088226
+              "points": 83,
+              "share": 0.002155
             },
             "utility-pole": {
-              "points": 5756,
-              "share": 0.149406
-            },
-            "light-pole": {
-              "points": 59,
-              "share": 0.001531
+              "points": 20700,
+              "share": 0.537369
             },
             "complex": {
-              "points": 24783,
-              "share": 0.64328
+              "points": 17027,
+              "share": 0.442019
             }
           },
           "coarse": {
-            "building": {
-              "points": 24783,
-              "share": 0.64328
-            },
             "pole": {
-              "points": 9717,
-              "share": 0.252219
+              "points": 21409,
+              "share": 0.555775
+            },
+            "building": {
+              "points": 17027,
+              "share": 0.442019
             },
             "vegetation": {
-              "points": 3399,
-              "share": 0.088226
+              "points": 83,
+              "share": 0.002155
             },
             "ground": {
-              "points": 627,
-              "share": 0.016275
+              "points": 2,
+              "share": 5.2e-05
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 38525,
-              "share": 0.999974
-            },
-            "high-noise": {
-              "points": 1,
-              "share": 2.6e-05
+              "points": 38521,
+              "share": 1.0
             }
           }
         },
         "above_150m": {
-          "points": 331,
+          "points": 332,
           "share_of_area": 0.000108,
           "classes": {
             "powerline": {
-              "points": 9,
-              "share": 0.02719
+              "points": 6,
+              "share": 0.018072
             },
             "tree": {
-              "points": 133,
-              "share": 0.401813
+              "points": 6,
+              "share": 0.018072
             },
             "utility-pole": {
-              "points": 31,
-              "share": 0.093656
-            },
-            "light-pole": {
-              "points": 1,
-              "share": 0.003021
+              "points": 316,
+              "share": 0.951807
             },
             "complex": {
-              "points": 157,
-              "share": 0.47432
+              "points": 4,
+              "share": 0.012048
             }
           },
           "coarse": {
-            "building": {
-              "points": 157,
-              "share": 0.47432
+            "pole": {
+              "points": 322,
+              "share": 0.96988
             },
             "vegetation": {
-              "points": 133,
-              "share": 0.401813
+              "points": 6,
+              "share": 0.018072
             },
-            "pole": {
-              "points": 41,
-              "share": 0.123867
+            "building": {
+              "points": 4,
+              "share": 0.012048
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 331,
+              "points": 332,
               "share": 1.0
             }
           }
@@ -309,228 +269,176 @@
       }
     },
     "embarcadero": {
-      "points": 4458544,
+      "points": 4434486,
       "max_height_m": 143.69,
       "bins": {
         "above_60m": {
-          "points": 274887,
-          "share_of_area": 0.061654,
+          "points": 235056,
+          "share_of_area": 0.053006,
           "classes": {
             "ground": {
-              "points": 5840,
-              "share": 0.021245
+              "points": 11,
+              "share": 4.7e-05
             },
-            "vegetation": {
-              "points": 921,
-              "share": 0.00335
+            "car": {
+              "points": 102,
+              "share": 0.000434
             },
             "powerline": {
-              "points": 8496,
-              "share": 0.030907
-            },
-            "fence": {
-              "points": 78,
-              "share": 0.000284
+              "points": 3719,
+              "share": 0.015822
             },
             "tree": {
-              "points": 6663,
-              "share": 0.024239
+              "points": 113,
+              "share": 0.000481
             },
             "pickup": {
-              "points": 53,
-              "share": 0.000193
+              "points": 6,
+              "share": 2.6e-05
             },
             "van-truck": {
-              "points": 93,
-              "share": 0.000338
+              "points": 1,
+              "share": 4e-06
             },
             "heavy-duty": {
-              "points": 30,
-              "share": 0.000109
+              "points": 139,
+              "share": 0.000591
             },
             "utility-pole": {
-              "points": 17558,
-              "share": 0.063874
+              "points": 15262,
+              "share": 0.064929
             },
             "light-pole": {
-              "points": 704,
-              "share": 0.002561
+              "points": 42,
+              "share": 0.000179
             },
             "traffic-pole": {
-              "points": 247,
-              "share": 0.000899
+              "points": 2,
+              "share": 9e-06
             },
             "complex": {
-              "points": 234204,
-              "share": 0.852001
+              "points": 215659,
+              "share": 0.917479
             }
           },
           "coarse": {
             "building": {
-              "points": 234204,
-              "share": 0.852001
+              "points": 215659,
+              "share": 0.917479
             },
             "pole": {
-              "points": 27005,
-              "share": 0.09824
-            },
-            "vegetation": {
-              "points": 7584,
-              "share": 0.02759
-            },
-            "ground": {
-              "points": 5840,
-              "share": 0.021245
+              "points": 19025,
+              "share": 0.080938
             },
             "vehicle": {
-              "points": 176,
-              "share": 0.00064
+              "points": 248,
+              "share": 0.001055
             },
-            "fence": {
-              "points": 78,
-              "share": 0.000284
+            "vegetation": {
+              "points": 113,
+              "share": 0.000481
+            },
+            "ground": {
+              "points": 11,
+              "share": 4.7e-05
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 139749,
-              "share": 0.508387
-            },
-            "low-noise": {
-              "points": 10,
-              "share": 3.6e-05
+              "points": 131074,
+              "share": 0.557629
             },
             "17": {
-              "points": 129636,
-              "share": 0.471597
-            },
-            "high-noise": {
-              "points": 5492,
-              "share": 0.019979
+              "points": 103982,
+              "share": 0.442371
             }
           }
         },
         "above_100m": {
-          "points": 38016,
-          "share_of_area": 0.008527,
+          "points": 35678,
+          "share_of_area": 0.008046,
           "classes": {
-            "ground": {
-              "points": 1959,
-              "share": 0.051531
-            },
-            "vegetation": {
-              "points": 71,
-              "share": 0.001868
-            },
             "powerline": {
-              "points": 560,
-              "share": 0.014731
+              "points": 62,
+              "share": 0.001738
             },
             "tree": {
-              "points": 3486,
-              "share": 0.091698
+              "points": 50,
+              "share": 0.001401
             },
             "utility-pole": {
-              "points": 4952,
-              "share": 0.130261
+              "points": 5290,
+              "share": 0.148271
             },
             "light-pole": {
-              "points": 159,
-              "share": 0.004182
+              "points": 1,
+              "share": 2.8e-05
             },
             "complex": {
-              "points": 26829,
-              "share": 0.705729
+              "points": 30275,
+              "share": 0.848562
             }
           },
           "coarse": {
             "building": {
-              "points": 26829,
-              "share": 0.705729
+              "points": 30275,
+              "share": 0.848562
             },
             "pole": {
-              "points": 5671,
-              "share": 0.149174
+              "points": 5353,
+              "share": 0.150036
             },
             "vegetation": {
-              "points": 3557,
-              "share": 0.093566
-            },
-            "ground": {
-              "points": 1959,
-              "share": 0.051531
+              "points": 50,
+              "share": 0.001401
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 38014,
-              "share": 0.999947
-            },
-            "low-noise": {
-              "points": 2,
-              "share": 5.3e-05
+              "points": 35678,
+              "share": 1.0
             }
           }
         },
         "above_training_ceiling": {
-          "points": 17573,
-          "share_of_area": 0.003941,
+          "points": 17503,
+          "share_of_area": 0.003947,
           "classes": {
-            "ground": {
-              "points": 680,
-              "share": 0.038696
-            },
-            "vegetation": {
-              "points": 4,
-              "share": 0.000228
-            },
             "powerline": {
-              "points": 505,
-              "share": 0.028737
+              "points": 12,
+              "share": 0.000686
             },
             "tree": {
-              "points": 1873,
-              "share": 0.106584
+              "points": 18,
+              "share": 0.001028
             },
             "utility-pole": {
-              "points": 2053,
-              "share": 0.116827
-            },
-            "light-pole": {
-              "points": 54,
-              "share": 0.003073
+              "points": 2990,
+              "share": 0.170828
             },
             "complex": {
-              "points": 12404,
-              "share": 0.705856
+              "points": 14483,
+              "share": 0.827458
             }
           },
           "coarse": {
             "building": {
-              "points": 12404,
-              "share": 0.705856
+              "points": 14483,
+              "share": 0.827458
             },
             "pole": {
-              "points": 2612,
-              "share": 0.148637
+              "points": 3002,
+              "share": 0.171513
             },
             "vegetation": {
-              "points": 1877,
-              "share": 0.106812
-            },
-            "ground": {
-              "points": 680,
-              "share": 0.038696
+              "points": 18,
+              "share": 0.001028
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 17572,
-              "share": 0.999943
-            },
-            "low-noise": {
-              "points": 1,
-              "share": 5.7e-05
+              "points": 17503,
+              "share": 1.0
             }
           }
         },
@@ -544,353 +452,249 @@
       }
     },
     "financial": {
-      "points": 7630301,
-      "max_height_m": 263.86,
+      "points": 7491501,
+      "max_height_m": 192.16,
       "bins": {
         "above_60m": {
-          "points": 1715158,
-          "share_of_area": 0.224782,
+          "points": 1622252,
+          "share_of_area": 0.216546,
           "classes": {
             "ground": {
-              "points": 14413,
-              "share": 0.008403
+              "points": 291,
+              "share": 0.000179
             },
             "vegetation": {
-              "points": 8850,
-              "share": 0.00516
+              "points": 3,
+              "share": 2e-06
             },
             "powerline": {
-              "points": 223363,
-              "share": 0.130229
+              "points": 190018,
+              "share": 0.117132
             },
             "fence": {
-              "points": 1818,
-              "share": 0.00106
+              "points": 1,
+              "share": 1e-06
             },
             "tree": {
-              "points": 61630,
-              "share": 0.035933
-            },
-            "van-truck": {
-              "points": 10,
-              "share": 6e-06
-            },
-            "heavy-duty": {
-              "points": 91,
-              "share": 5.3e-05
+              "points": 1972,
+              "share": 0.001216
             },
             "utility-pole": {
-              "points": 129374,
-              "share": 0.07543
+              "points": 192211,
+              "share": 0.118484
             },
             "light-pole": {
-              "points": 18252,
-              "share": 0.010642
+              "points": 361,
+              "share": 0.000223
             },
             "traffic-pole": {
-              "points": 2009,
-              "share": 0.001171
+              "points": 1,
+              "share": 1e-06
             },
             "habitat": {
-              "points": 31,
-              "share": 1.8e-05
+              "points": 176,
+              "share": 0.000108
             },
             "complex": {
-              "points": 1255317,
-              "share": 0.731896
+              "points": 1237218,
+              "share": 0.762655
             }
           },
           "coarse": {
             "building": {
-              "points": 1255348,
-              "share": 0.731914
+              "points": 1237394,
+              "share": 0.762763
             },
             "pole": {
-              "points": 372998,
-              "share": 0.217472
+              "points": 382591,
+              "share": 0.235839
             },
             "vegetation": {
-              "points": 70480,
-              "share": 0.041092
+              "points": 1975,
+              "share": 0.001217
             },
             "ground": {
-              "points": 14413,
-              "share": 0.008403
+              "points": 291,
+              "share": 0.000179
             },
             "fence": {
-              "points": 1818,
-              "share": 0.00106
-            },
-            "vehicle": {
-              "points": 101,
-              "share": 5.9e-05
+              "points": 1,
+              "share": 1e-06
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 1667718,
-              "share": 0.972341
-            },
-            "low-noise": {
-              "points": 2,
-              "share": 1e-06
-            },
-            "high-noise": {
-              "points": 47438,
-              "share": 0.027658
+              "points": 1622252,
+              "share": 1.0
             }
           }
         },
         "above_100m": {
-          "points": 1069525,
-          "share_of_area": 0.140168,
+          "points": 988808,
+          "share_of_area": 0.131991,
           "classes": {
             "ground": {
-              "points": 13423,
-              "share": 0.01255
+              "points": 291,
+              "share": 0.000294
             },
             "vegetation": {
-              "points": 198,
-              "share": 0.000185
+              "points": 2,
+              "share": 2e-06
             },
             "powerline": {
-              "points": 213641,
-              "share": 0.199753
-            },
-            "fence": {
-              "points": 14,
-              "share": 1.3e-05
+              "points": 188401,
+              "share": 0.190533
             },
             "tree": {
-              "points": 54227,
-              "share": 0.050702
-            },
-            "heavy-duty": {
-              "points": 24,
-              "share": 2.2e-05
+              "points": 1972,
+              "share": 0.001994
             },
             "utility-pole": {
-              "points": 79264,
-              "share": 0.074111
+              "points": 112845,
+              "share": 0.114122
             },
             "light-pole": {
-              "points": 17872,
-              "share": 0.01671
-            },
-            "traffic-pole": {
-              "points": 1075,
-              "share": 0.001005
-            },
-            "habitat": {
-              "points": 1,
-              "share": 1e-06
+              "points": 248,
+              "share": 0.000251
             },
             "complex": {
-              "points": 689786,
-              "share": 0.644946
+              "points": 685049,
+              "share": 0.692803
             }
           },
           "coarse": {
             "building": {
-              "points": 689787,
-              "share": 0.644947
+              "points": 685049,
+              "share": 0.692803
             },
             "pole": {
-              "points": 311852,
-              "share": 0.29158
+              "points": 301494,
+              "share": 0.304907
             },
             "vegetation": {
-              "points": 54425,
-              "share": 0.050887
+              "points": 1974,
+              "share": 0.001996
             },
             "ground": {
-              "points": 13423,
-              "share": 0.01255
-            },
-            "vehicle": {
-              "points": 24,
-              "share": 2.2e-05
-            },
-            "fence": {
-              "points": 14,
-              "share": 1.3e-05
+              "points": 291,
+              "share": 0.000294
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 1041491,
-              "share": 0.973788
-            },
-            "low-noise": {
-              "points": 2,
-              "share": 2e-06
-            },
-            "high-noise": {
-              "points": 28032,
-              "share": 0.02621
+              "points": 988808,
+              "share": 1.0
             }
           }
         },
         "above_training_ceiling": {
-          "points": 797859,
-          "share_of_area": 0.104565,
+          "points": 718494,
+          "share_of_area": 0.095908,
           "classes": {
             "ground": {
-              "points": 12878,
-              "share": 0.016141
+              "points": 291,
+              "share": 0.000405
             },
             "vegetation": {
-              "points": 106,
-              "share": 0.000133
+              "points": 2,
+              "share": 3e-06
             },
             "powerline": {
-              "points": 210759,
-              "share": 0.264156
-            },
-            "fence": {
-              "points": 1,
-              "share": 1e-06
+              "points": 185643,
+              "share": 0.258378
             },
             "tree": {
-              "points": 51991,
-              "share": 0.065163
-            },
-            "heavy-duty": {
-              "points": 24,
-              "share": 3e-05
+              "points": 1972,
+              "share": 0.002745
             },
             "utility-pole": {
-              "points": 55105,
-              "share": 0.069066
+              "points": 78498,
+              "share": 0.109254
             },
             "light-pole": {
-              "points": 16997,
-              "share": 0.021303
-            },
-            "traffic-pole": {
-              "points": 935,
-              "share": 0.001172
+              "points": 200,
+              "share": 0.000278
             },
             "complex": {
-              "points": 449063,
-              "share": 0.562835
+              "points": 451888,
+              "share": 0.628938
             }
           },
           "coarse": {
             "building": {
-              "points": 449063,
-              "share": 0.562835
+              "points": 451888,
+              "share": 0.628938
             },
             "pole": {
-              "points": 283796,
-              "share": 0.355697
+              "points": 264341,
+              "share": 0.36791
             },
             "vegetation": {
-              "points": 52097,
-              "share": 0.065296
+              "points": 1974,
+              "share": 0.002747
             },
             "ground": {
-              "points": 12878,
-              "share": 0.016141
-            },
-            "vehicle": {
-              "points": 24,
-              "share": 3e-05
-            },
-            "fence": {
-              "points": 1,
-              "share": 1e-06
+              "points": 291,
+              "share": 0.000405
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 774283,
-              "share": 0.970451
-            },
-            "low-noise": {
-              "points": 1,
-              "share": 1e-06
-            },
-            "high-noise": {
-              "points": 23575,
-              "share": 0.029548
+              "points": 718494,
+              "share": 1.0
             }
           }
         },
         "above_150m": {
-          "points": 296082,
-          "share_of_area": 0.038803,
+          "points": 233408,
+          "share_of_area": 0.031156,
           "classes": {
-            "ground": {
-              "points": 7603,
-              "share": 0.025679
-            },
             "powerline": {
-              "points": 183915,
-              "share": 0.621162
+              "points": 163342,
+              "share": 0.699813
             },
             "tree": {
-              "points": 37065,
-              "share": 0.125185
-            },
-            "heavy-duty": {
-              "points": 1,
-              "share": 3e-06
+              "points": 1944,
+              "share": 0.008329
             },
             "utility-pole": {
-              "points": 12565,
-              "share": 0.042438
+              "points": 27919,
+              "share": 0.119615
             },
             "light-pole": {
-              "points": 11955,
-              "share": 0.040377
-            },
-            "traffic-pole": {
-              "points": 122,
-              "share": 0.000412
+              "points": 135,
+              "share": 0.000578
             },
             "complex": {
-              "points": 42856,
-              "share": 0.144744
+              "points": 40068,
+              "share": 0.171665
             }
           },
           "coarse": {
             "pole": {
-              "points": 208557,
-              "share": 0.704389
+              "points": 191396,
+              "share": 0.820006
             },
             "building": {
-              "points": 42856,
-              "share": 0.144744
+              "points": 40068,
+              "share": 0.171665
             },
             "vegetation": {
-              "points": 37065,
-              "share": 0.125185
-            },
-            "ground": {
-              "points": 7603,
-              "share": 0.025679
-            },
-            "vehicle": {
-              "points": 1,
-              "share": 3e-06
+              "points": 1944,
+              "share": 0.008329
             }
           },
           "asprs": {
             "unclassified": {
-              "points": 282519,
-              "share": 0.954192
-            },
-            "high-noise": {
-              "points": 13563,
-              "share": 0.045808
+              "points": 233408,
+              "share": 1.0
             }
           }
         }
       }
     },
     "ggpark": {
-      "points": 9012919,
+      "points": 9010024,
       "max_height_m": 45.17,
       "bins": {
         "above_60m": {
@@ -924,7 +728,7 @@
       }
     },
     "mission": {
-      "points": 4536209,
+      "points": 4532181,
       "max_height_m": 29.0,
       "bins": {
         "above_60m": {
@@ -958,7 +762,7 @@
       }
     },
     "soma": {
-      "points": 4527700,
+      "points": 4522972,
       "max_height_m": 47.01,
       "bins": {
         "above_60m": {
@@ -992,7 +796,7 @@
       }
     },
     "steep": {
-      "points": 5427902,
+      "points": 5417326,
       "max_height_m": 52.94,
       "bins": {
         "above_60m": {
@@ -1026,8 +830,8 @@
       }
     },
     "sunset": {
-      "points": 5466462,
-      "max_height_m": 22.33,
+      "points": 5461632,
+      "max_height_m": 22.28,
       "bins": {
         "above_60m": {
           "points": 0,
