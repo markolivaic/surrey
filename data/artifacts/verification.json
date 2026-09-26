@@ -20,10 +20,10 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 54,
-        "functions": 50
+        "passed": 55,
+        "functions": 51
       },
-      "summary": "50 tests; cases 54 passed"
+      "summary": "51 tests; cases 55 passed"
     },
     {
       "check": "README is generated",

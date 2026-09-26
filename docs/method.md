@@ -26,7 +26,12 @@ Before this repository's first commit, the order in which rules were written and
 self-reported, in the dates the project wrote into its own artefacts. From the first commit on, the git
 history shows it: the retraining's rules are in the first commit, its results in a later one.
 
-## The vegetation reference
+## The San Francisco references
+
+Ground is scored against the delivery's own class 2, an automated vendor class. Recall is the share of
+it called ground. Precision is given as a band: its floor counts only class 2 as ground, its ceiling
+also counts points the delivery left unassigned that lie on the delivery's ground surface
+(`backend/surrey/reference.py`).
 
 The vegetation figures read NAIP 2022 cores between 2 and 25 m above the ground floor. Recall takes the
 lower of two masks, one registered to the lidar and one not, because a rule fixed beforehand could not

@@ -52142,7 +52142,7 @@
       "error": null
     },
     "verification.integrity_tests.summary": {
-      "value": "50 tests; cases 54 passed",
+      "value": "51 tests; cases 55 passed",
       "concept": "verification_summary",
       "population": {
         "city": "repository",
@@ -70667,7 +70667,7 @@
       "error": null
     },
     "tests.integrity.functions": {
-      "value": 50,
+      "value": 51,
       "concept": "tests_functions",
       "population": {
         "city": "repository",
@@ -70682,7 +70682,7 @@
       "error": null
     },
     "tests.integrity.collected": {
-      "value": 54,
+      "value": 55,
       "concept": "tests_collected",
       "population": {
         "city": "repository",
@@ -70697,7 +70697,7 @@
       "error": null
     },
     "tests.integrity.passed": {
-      "value": 54,
+      "value": 55,
       "concept": "tests_passed",
       "population": {
         "city": "repository",

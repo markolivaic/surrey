@@ -34,13 +34,13 @@ One uninterrupted recording of the running page: the first screen, the six cards
 
 ## At home, on held-out Surrey
 
-On the 11 held-out Surrey tiles, every voxel-thinned point, M0 reaches a point accuracy of 0.9285 (0.9273 to 0.9288), against 0.4797 for calling everything ground. Mean IoU is 0.5233 (0.52 to 0.527) over the fifteen classes and 0.8162 (0.8125 to 0.8164) over the six coarse groups the page draws. Each prediction is the mean of 4 passes, by a rule fixed beforehand.
+On the 11 held-out Surrey tiles, M0 reaches a point accuracy of 0.9285 (0.9273 to 0.9288), against 0.4797 for calling everything ground. Mean IoU is 0.5233 (0.52 to 0.527) over the fifteen classes and 0.8162 (0.8125 to 0.8164) over the six coarse groups the page draws.
 
-On the original DALES, with eight classes and its first annotation, KPConv reached a mean IoU of 0.811 (Varney and others, 2020). Fifteen classes, a new annotation and voxel-thinned scoring make that a different measurement; the two numbers rank nothing.
+On the original DALES, KPConv reached a mean IoU of 0.811 (Varney and others, 2020), over eight classes of a different annotation; here the classes are fifteen and the points voxel-thinned, so the two numbers rank nothing.
 
 ## San Francisco
 
-Median over three seeds, the lowest and highest in brackets, each class beside the figure that catches the opposite mistake. The ground precision floor counts only the delivery's class 2 as ground, the ceiling also unassigned points on its ground surface.
+Median over three seeds, the lowest and highest in brackets, each class beside the figure that catches the opposite mistake.
 
 | Area | NAIP vegetation cores called vegetation | NAIP not-vegetation cores called vegetation | Delivery ground called ground | Ground precision, floor | Ground precision, ceiling |
 |---|---|---|---|---|---|
@@ -53,7 +53,7 @@ Median over three seeds, the lowest and highest in brackets, each class beside t
 | Embarcadero | 0.9985 (0.9985 to 0.9987) | 0.05 (0.0461 to 0.0518) | 0.8318 (0.8095 to 0.8722) | 0.3489 (0.3447 to 0.3627) | 0.5321 (0.5263 to 0.5533) |
 | Bay Bridge | no core | 0.0312 (0.0276 to 0.0379) | no core | no core | no core |
 
-Buildings, where the footprint null (every point more than 2 m up called building) calls anything a building. Lift is the share of the room above the null's precision that the model takes.
+Buildings, where the footprint null calls every point more than 2 m up a building. Lift is the share of the room above the null's precision that the model takes.
 
 | Area | Footprints scored | Building lift | Precision against footprints | The null's precision | Footprint covered | The null's coverage |
 |---|---|---|---|---|---|---|
@@ -64,19 +64,19 @@ Buildings, where the footprint null (every point more than 2 m up called buildin
 | Financial District | 23 | 0.1456 (0.1452 to 0.1972) | 0.7234 (0.7232 to 0.7401) | 0.6762 (0.6762 to 0.6762) | 0.8248 (0.8222 to 0.8354) | 0.8541 (0.8541 to 0.8541) |
 | Embarcadero | 6 | 0.0443 (0.0382 to 0.0499) | 0.2034 (0.1984 to 0.2081) | 0.1666 (0.1666 to 0.1666) | 0.8506 (0.8506 to 0.8541) | 0.8749 (0.8749 to 0.8749) |
 
-Water is called ground, 0.9618 (0.9089 to 0.9724) at Embarcadero, and the Bay Bridge deck building, 0.9983 (0.9982 to 0.9984). Confidence hides these mistakes better than mistakes at home: it separates errors from right ground at an AUROC of 0.9375 at home and 0.7404 for water at Embarcadero, lower on 3 of 3 seeds.
+Water is called ground, 0.9618 (0.9089 to 0.9724) at Embarcadero, and the Bay Bridge deck building, 0.9983 (0.9982 to 0.9984). Confidence separates these mistakes from right ground less well than mistakes at home, AUROC 0.7404 against 0.9375, on 3 of 3 seeds.
 
 ## Why the building lift moved
 
-Against the first round, the retrained model's building lift fell in the Mission, on Russian Hill, in SoMa and in the Financial District, where it now covers more of each footprint, less precisely: a trade, by a reading written before the comparison ran. In the Financial District the new block iterator moved it and the voting did not. The tables and what could not be separated are in [docs/method.md](docs/method.md).
+Against the first round, the building lift fell in the Mission, on Russian Hill, in SoMa and in the Financial District, where the retrained model covers more of each footprint, less precisely: a trade, by a reading written beforehand. The new block iterator moved it, not the voting ([docs/method.md](docs/method.md)).
 
 ## The Financial District, the one area outside the range
 
-By a rule fixed before the retraining, an area lies outside what training showed when its median 40 m block spans more height than the training blocks' 99th percentile, 46.19 m. The Financial District's spans 99.82 m, no other area's more than 34.53 m. Buildings were expected to score lower here, and do on 3 of 3 seeds, lift 0.1456 (0.1452 to 0.1972) against 0.5884 (0.5808 to 0.5886).
+An area lies outside what training showed when its median 40 m block spans more height than the training blocks' 99th percentile, 46.19 m. The Financial District's spans 99.82 m, no other area's more than 34.53 m. Buildings were expected to score lower here, and do on 3 of 3 seeds, lift 0.1456 (0.1452 to 0.1972) against 0.5884 (0.5808 to 0.5886).
 
 ## The input that broke the first model
 
-The first model read a fourth input, the return ratio. It was 0 on all 395,996,290 prepared DALES-2 points, because the return fields of DALES-2 as published on Hugging Face hold 0, and real on all but 3 of 43,938,643 San Francisco points. Given that input as delivered, the old model called the forest building. The same checkpoint with the ratio set to 0:
+The first model read a fourth input, the return ratio. The return fields of DALES-2 as published on Hugging Face hold 0, so it was 0 on all 395,996,290 prepared DALES-2 points, and real on all but 3 of 43,938,643 San Francisco points. Given that input as delivered, the old model called the forest building:
 
 | Area | NAIP vegetation cores called vegetation, input as delivered | the same, return ratio set to 0 |
 |---|---|---|
@@ -88,23 +88,27 @@ The first model read a fourth input, the return ratio. It was 0 on all 395,996,2
 | Financial District | 0.0 | 0.9971 |
 | Embarcadero | 0.0 | 0.9984 |
 
-The published model has three inputs, and `tests/integrity/test_input_channels.py` fails any model with an input that never varies in its training data.
+The published model has three inputs; `tests/integrity/test_input_channels.py` fails any model with an input constant in its training data.
 
 ## Water, and the old M1
 
-M1, the first round's attempt at water, learned it from Swiss tiles where 0.8586 to 0.9999 of the labelled water is synthetic fill, laid where the lake returned no pulse. Real water there holds at most a median of 3.16 points per square metre, against 28.1 at Embarcadero. M1's lift over the water null is negative on every seed at both places, and it is not trained again; M1 and M0prime are read only against each other ([docs/method.md](docs/method.md)).
+M1, the first round's attempt at water, learned it from Swiss tiles where 0.8586 to 0.9999 of the labelled water is synthetic fill. Real water there holds at most a median of 3.16 points per square metre, against 28.1 at Embarcadero. Its lift over the water null is negative on every seed, and it is not trained again ([docs/method.md](docs/method.md)).
 
 ## A bigger model
 
-A model with 11,505,423 parameters, trained as a control on the same card as the small seeds, beats the highest of them in 0 of the 6 areas with footprints, where the rule written beforehand asked for 4. The published model is unchanged ([docs/method.md](docs/method.md)).
+A control with 11,505,423 parameters beats the highest small seed in 0 of 6 areas with footprints, where the rule written beforehand asked for 4 ([docs/method.md](docs/method.md)).
 
 ## Reading the figures
 
-A figure is read as moved only when every seed of one model lies beyond every seed of the other; [docs/method.md](docs/method.md) gives how often chance does that. Before this repository's first commit, the order in which rules were written and results appeared is self-reported; from the first commit on, the git history shows it.
+A figure moved only when every seed of one model lies beyond every seed of the other ([docs/method.md](docs/method.md) gives how often chance does that). Before the first commit, the order of rules and results is self-reported; from the first commit on, the git history shows it.
 
-## How this was built
+## Why this exists
 
-> Left empty on purpose. The author writes this section.
+Most lidar segmentation results are reported on tiles from the same survey the model learned from. That tells you how well it learned one place. It does not tell you what happens when the same model is pointed at a city it has never seen, which is what anyone who wants to use it will do.
+
+I wanted to see that gap on real data, not on a benchmark split. Surrey is where the labels are; San Francisco has a public national lidar delivery and no labels at all. So the question became how to measure a model where nothing is labelled, without fooling myself. Each class is scored against something the model never touched: the delivery's own ground class, building footprints, vegetation from aerial imagery. Each figure stands beside a null, and the rules for reading it were written before the numbers.
+
+This would be wrong if the references are wrong, and they are imperfect: the footprints sit off the lidar, the vegetation mask is a colour index, and San Francisco is also where the input fault was found. Those limits are written down below, next to the numbers they affect.
 
 ## The name
 
@@ -179,7 +183,7 @@ Each row is a command a reader runs from the repository root. The results are wh
 | Check | Command | Result |
 |---|---|---|
 | behavioural tests | `python -m pytest tests/unit -q` | 166 tests; cases 175 passed |
-| integrity tests | `python -m pytest tests/integrity -q` | 50 tests; cases 54 passed |
+| integrity tests | `python -m pytest tests/integrity -q` | 51 tests; cases 55 passed |
 | README is generated | `python scripts/pipeline/render_readme.py --check` | passes |
 | page figures | `python scripts/pipeline/page_figures.py` | passes |
 | viewer tests | `npm test (in web/)` | 5 passed, 0 failed |
@@ -188,9 +192,8 @@ Each row is a command a reader runs from the repository root. The results are wh
 
 ## Limitations and failure modes
 
-- Figures are per area and per seed; pooled, they would hide a seed spread as large as some effects.
 - San Francisco was the development set as well as the test.
-- The footprints sit about two metres off the lidar, moved by one global offset whose southward part is not explained.
+- The footprints sit about two metres off the lidar; part of the offset is not explained.
 - In Golden Gate Park the park's false vegetation figure rests on only 13,847 points.
 - The old four channel model, M0prime and M1 are from the first round and appear only on the bug and water cards.
 - Frame rates were measured on one laptop.
