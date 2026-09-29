@@ -108,6 +108,9 @@ def main() -> int:
         else str(args.ckpt),
         "channels": channels,
         "classes": n_out,
+        # Entropy is divided by the log of this; predictions made before the field existed
+        # divided by log 15 whatever the model's class count.
+        "entropy_normalised_by_log_of": n_out,
         "recipe": blob.get("args", {}).get("recipe", "m0"),
         "batch": args.batch,
         "seed": args.seed,

@@ -97,3 +97,21 @@ def gain(
 ) -> bool | None:
     """The mirror of drop, reported with the same strictness."""
     return drop(old, new, higher_is_better)
+
+
+def chance_of_a_move(n_new: int, n_old: int) -> float:
+    """How often chance alone puts every seed of one side beyond every seed of the other.
+
+    With exchangeable runs every ordering of the n_new + n_old values is equally likely, and
+    exactly one of the comb(n_new + n_old, n_new) ways to choose the new side's ranks puts all of
+    them on top, and one puts all of them at the bottom. Two-sided, since a drop and a gain are
+    both read: 2 / comb(n_new + n_old, n_new), 1 in 10 for three seeds against three.
+    """
+    from math import comb
+
+    return 2 / comb(n_new + n_old, n_new)
+
+
+def expected_by_chance(comparisons: int, n_new: int, n_old: int) -> float:
+    """The number of moves chance alone would give over a set of comparisons."""
+    return round(comparisons * chance_of_a_move(n_new, n_old), 1)

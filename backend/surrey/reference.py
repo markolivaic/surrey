@@ -28,6 +28,8 @@ from __future__ import annotations
 import numpy as np
 
 ASPRS_GROUND = 2
+# The delivery's own ground: class 2, and the ground it keeps but marks ignored (20).
+GROUND_CODES = (2, 20)
 ASPRS_UNASSIGNED = 1
 ASPRS_NOISE = (7, 18)
 NEAR_GROUND_M = 0.5
@@ -108,7 +110,7 @@ def score_ground(
 ) -> dict:
     """Ground against the delivery, as a clean recall and a bounded precision."""
     clean = ~np.isin(asprs, ASPRS_NOISE)
-    ref = (asprs == ASPRS_GROUND) & clean
+    ref = np.isin(asprs, GROUND_CODES) & clean
     unassigned = (asprs == ASPRS_UNASSIGNED) & clean
     pred = predicted_ground & clean
     if not ref.any():
@@ -126,12 +128,13 @@ def score_ground(
     # surface is plausibly ground even where the vendor left it unlabelled.
     plausible = ref | (unassigned & covered & (np.abs(height) <= NEAR_GROUND_M))
 
-    # Precision is only asked where the delivery gave something to ask against. In
-    # a cell holding no class 2 at all there is no surface, so a predicted ground
-    # point there is neither confirmed nor refuted. Counting it wrong would charge
-    # the model for the delivery's silence; counting it right would be worse. It
-    # is excluded and declared instead.
-    judgeable = covered | ref
+    # Precision is only asked where the delivery gave something to ask against: a ground
+    # surface within reach, or a class of its own on the point. Water and bridge deck called
+    # ground are wrong wherever they are, since the delivery says what they are. An
+    # unassigned point in a cell with no ground surface is neither confirmed nor refuted;
+    # it is excluded and the excluded share is declared.
+    labelled = clean & (asprs != ASPRS_UNASSIGNED)
+    judgeable = covered | labelled
     pred_j = pred & judgeable
 
     hits_strict = int((pred_j & ref).sum())
@@ -140,7 +143,7 @@ def score_ground(
     n_judgeable = int(pred_j.sum())
 
     return {
-        "reference": "delivery ASPRS class 2, automated vendor output, not hand labels",
+        "reference": "delivery ASPRS classes 2 and 20, the vendor's classification, not hand labels",
         "reference_points": int(ref.sum()),
         "predicted_points": n_pred,
         "predicted_points_judgeable": n_judgeable,

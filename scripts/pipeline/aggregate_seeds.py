@@ -68,7 +68,8 @@ def sf_figure(area: dict, name: str):
             "vegetation_headline": lambda: area["vegetation_headline"][
                 "vegetation_core_called_vegetation"
             ],
-            "not_vegetation_core_called_vegetation": lambda: area["vegetation"]["unregistered"][
+            # The same mask rule as recall, on its harsher side (docs/phase6_criteria.md).
+            "not_vegetation_core_called_vegetation": lambda: area["vegetation_headline"][
                 "not_vegetation_core_called_vegetation"
             ],
             "raised_unassigned_called_ground_rate": lambda: area[
@@ -96,6 +97,18 @@ def sf_figure(area: dict, name: str):
             "footprints_scored": lambda: area["building_area_coverage_global_shift"][
                 "footprints_scored"
             ],
+            "unjudged_ground_share": lambda: area["ground_band"]["with_water"][
+                "predicted_points_unjudgeable_fraction"
+            ],
+            "building_lift_delivery_gate": lambda: area["building_delivery_gate_global_shift"][
+                "precision_lift_over_null"
+            ],
+            "building_null_precision_delivery_gate": lambda: area[
+                "building_delivery_gate_global_shift"
+            ]["null_precision"],
+            "building_coverage_delivery_gate": lambda: area["building_delivery_gate_global_shift"][
+                "coverage"
+            ]["coverage_median"],
         }[name]()
     except (KeyError, TypeError):
         return None
@@ -125,11 +138,15 @@ def hard_reading(water: float | None, home: float | None) -> str | None:
 # Figures the README's tables quote beside the side effect metrics, read the same way.
 TABLE_FIGURES = (
     "ground_precision_ceiling",
+    "unjudged_ground_share",
     "building_precision",
     "building_null_precision",
     "building_coverage",
     "building_null_coverage",
     "footprints_scored",
+    "building_lift_delivery_gate",
+    "building_null_precision_delivery_gate",
+    "building_coverage_delivery_gate",
 )
 
 
@@ -250,7 +267,7 @@ def aggregate(recipe: str, scores: dict[str, dict], training: dict[str, dict]) -
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--recipe", required=True, choices=("m0", "m0prime", "m1"))
+    ap.add_argument("--recipe", required=True, choices=("m0", "m0prime", "m1", "m0phase4"))
     args = ap.parse_args()
     scores, training = {}, {}
     for s in SEED_LETTERS:

@@ -38,7 +38,22 @@ from surrey.m1_criteria import (  # noqa: E402
     water_success,
 )
 from surrey.reference import REFERENCE_NOT_VALID  # noqa: E402
-from surrey.seeds import SEED_LETTERS, drop, gain, spread, variant  # noqa: E402
+
+# Phase 6 against Phase 4: the same data and recipe, only the neighbour search differs
+# (docs/phase6_criteria.md). The pairs m1_criteria.py defines keep their density notes.
+CONFOUND = {
+    **DENSITY_CONFOUND,
+    ("m0", "m0phase4"): "none: the same data, weights and steps; only the neighbour search differs",
+}
+from surrey.seeds import (  # noqa: E402
+    SEED_LETTERS,
+    chance_of_a_move,
+    drop,
+    expected_by_chance,
+    gain,
+    spread,
+    variant,
+)
 
 ARTIFACTS = ROOT / "data" / "artifacts"
 
@@ -107,7 +122,7 @@ def compare(
         "old": old,
         "seeds": {new: sorted(new_scores), old: sorted(old_scores)},
         "rule": "backend/surrey/m1_criteria.py and surrey.seeds.drop, written before training",
-        "density_confound": DENSITY_CONFOUND.get((new, old)),
+        "density_confound": CONFOUND.get((new, old)),
         "side_effects_san_francisco": side,
         "side_effects_surrey_held_out": surrey,
         "drops": sorted(
@@ -118,6 +133,16 @@ def compare(
             f"{aoi}.{m}" for aoi, ms in side.items() for m, r in ms.items() if r["gain"]
         )
         + sorted(f"surrey.{n}" for n, r in surrey.items() if r["gain"]),
+    }
+    # How many of those moves chance alone would give (surrey.seeds.chance_of_a_move).
+    read = sum(1 for ms in side.values() for r in ms.values() if r["drop"] is not None)
+    read += sum(1 for r in surrey.values() if r["drop"] is not None)
+    n_new, n_old = len(new_scores), len(old_scores)
+    out["chance"] = {
+        "comparisons": read,
+        "two_sided_chance_of_a_move": round(chance_of_a_move(n_new, n_old), 4),
+        "moves_expected_by_chance": expected_by_chance(read, n_new, n_old),
+        "moves_seen": len(out["drops"]) + len(out["gains"]),
     }
 
     if new == "m1":
@@ -173,11 +198,13 @@ def compare(
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--new", required=True, choices=("m0prime", "m1"))
-    ap.add_argument("--old", required=True, choices=("m0", "m0prime"))
+    ap.add_argument("--new", required=True, choices=("m0prime", "m1", "m0"))
+    ap.add_argument("--old", required=True, choices=("m0", "m0prime", "m0phase4"))
     args = ap.parse_args()
-    if (args.new, args.old) not in DENSITY_CONFOUND:
-        raise SystemExit("only m1 against m0prime and m0prime against m0 are defined")
+    if (args.new, args.old) not in CONFOUND:
+        raise SystemExit(
+            "only m1 against m0prime, m0prime against m0 and m0 against m0phase4 are defined"
+        )
     ns, os_ = load(args.new, "sf_scores"), load(args.old, "sf_scores")
     if not ns or not os_:
         raise SystemExit("both recipes need scored seeds")

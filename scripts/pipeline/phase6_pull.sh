@@ -31,6 +31,11 @@ for v in "${MODELS[@]}"; do
   cp "$STAGE/data/checkpoints/$v.pt" data/checkpoints/
   cp -r "$STAGE/data/predictions/$v" data/predictions/
 done
+for s in A B C; do
+  if [ -f "data/artifacts/train_m0_seed$s.json" ] && [ ! -f "data/artifacts/train_m0phase4_seed$s.json" ]; then
+    cp "data/artifacts/train_m0_seed$s.json" "data/artifacts/train_m0phase4_seed$s.json"
+  fi
+done
 cp "$STAGE"/data/artifacts/*.json data/artifacts/
 mkdir -p data/logs
 cp "$STAGE"/data/logs/* data/logs/

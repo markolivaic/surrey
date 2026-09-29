@@ -25,7 +25,6 @@ import torch
 from .cache import CachedTile
 from .data import N_CLASSES
 
-LOG_N = float(np.log(N_CLASSES))
 DEFAULT_SEED = 0
 
 
@@ -161,6 +160,9 @@ def infer_tile(
     )
     pred = np.where(seen, probs.argmax(axis=1), -1).astype(np.int8)
     conf = np.where(seen, probs.max(axis=1), 0.0).astype(np.float32)
-    ent = -(probs * np.log(np.clip(probs, 1e-12, None))).sum(axis=1) / np.float32(LOG_N)
+    # Normalised by the model's own class count, so 1 is a uniform guess over its outputs.
+    ent = -(probs * np.log(np.clip(probs, 1e-12, None))).sum(axis=1) / np.float32(
+        np.log(probs.shape[1])
+    )
     ent = np.where(seen, ent, 0.0).astype(np.float32)
     return pred, conf, ent, seen

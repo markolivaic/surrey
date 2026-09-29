@@ -100,6 +100,7 @@ from surrey.metrics import (  # noqa: E402
     score_histogram,
 )
 from surrey.reference import (  # noqa: E402
+    GROUND_CODES,
     SURFACE_CELL_M,
     SURFACE_REACH_M,
     score_ground,
@@ -179,6 +180,15 @@ DIAGNOSTIC_NOTES = {
 }
 for _v, _note in DIAGNOSTIC_NOTES.items():
     VARIANTS.setdefault(_v, {"sf": PRED / _v, "surrey": PRED / _v, "note": _note})
+# Phase 4's M0, trained and predicted with the fp16 neighbour search, kept aside by
+# scripts/pipeline/phase6_pull.sh and scored with the same code, so Phase 6 is read against it
+# (docs/phase6_criteria.md).
+for _seed in ("A", "B", "C"):
+    VARIANTS[f"m0phase4_seed{_seed}"] = {
+        "sf": PRED / "phase4" / f"m0_seed{_seed}",
+        "surrey": PRED / "phase4" / f"m0_seed{_seed}",
+        "note": f"Phase 4 M0 seed {_seed}, the fp16 neighbour search",
+    }
 GROUPS = list(COARSE)
 WATER_NULL = ROOT / "data" / "reference" / "water_null"
 WATER_POLYGON = ROOT / "data" / "reference" / "water_polygon"
@@ -204,9 +214,9 @@ CONFIDENCE_GROUPS = {
 }
 
 
-def load(directory: Path, name: str):
+def load(directory: Path, name: str, entropy_scale: float = 1.0):
     z = np.load(directory / f"{name}.npz")
-    return z["pred"], z["conf"].astype(np.float32), z["ent"].astype(np.float32)
+    return z["pred"], z["conf"].astype(np.float32), z["ent"].astype(np.float32) * entropy_scale
 
 
 def null_key(margin: float) -> str:
@@ -350,7 +360,8 @@ def building(inside: np.ndarray, predicted: np.ndarray, eligible: np.ndarray) ->
     null = float(inside[eligible].mean())
     prec = float(inside[pred].mean()) if pred.any() else float("nan")
     room = 1.0 - null
-    lift = (prec - null) / room if room > 1e-9 and prec == prec else float("nan")
+    # Where the null calls nothing a building there is nothing to lift over.
+    lift = (prec - null) / room if room > 1e-9 and null > 0 and prec == prec else float("nan")
     return {
         "eligible_points": int(eligible.sum()),
         "predicted_building_points": int(pred.sum()),
@@ -373,7 +384,7 @@ def blocks(tile: CachedTile, block_m: float, asprs: np.ndarray, clean: np.ndarra
             rel = zb - float(np.quantile(zb, 0.01))
             c = clean[idx]
             zrange = float(np.quantile(rel[c], 0.999)) if c.any() else float("nan")
-            g = asprs[idx] == ASPRS_GROUND
+            g = np.isin(asprs[idx], GROUND_CODES)
             relief = (
                 float(np.quantile(zb[g], 0.98) - np.quantile(zb[g], 0.02))
                 if g.sum() >= MIN_GROUND_POINTS
@@ -420,6 +431,11 @@ def main() -> int:
 
     manifest = json.loads((v["sf"] / "manifest.json").read_text(encoding="utf-8"))
     n_classes = int(manifest.get("classes", 15))
+    # Predictions made before predict_cache recorded its normaliser divided entropy by log 15 for
+    # every model; for a model with another class count that is rescaled here to its own.
+    entropy_scale = (
+        1.0 if "entropy_normalised_by_log_of" in manifest else float(np.log(15) / np.log(n_classes))
+    )
     groups = list(GROUPS)
     if n_classes > len(table):
         # M1: water and bridge deck are their own coarse groups.
@@ -443,7 +459,7 @@ def main() -> int:
         tile = CachedTile(p, "sf")
         if polys is None:
             polys = load_footprints(FOOTPRINTS, tile.epsg)
-        pred, conf, ent = load(v["sf"], f"sf_{name}")
+        pred, conf, ent = load(v["sf"], f"sf_{name}", entropy_scale)
         coarse = table[pred]
         asprs = np.asarray(tile.asprs[:], np.int16)
         clean = ~np.isin(asprs, ASPRS_NOISE)
@@ -485,7 +501,7 @@ def main() -> int:
 
         # Ground band, with water and without.
         g_pred = coarse == GROUPS.index("ground")
-        if (asprs == ASPRS_GROUND).any():
+        if np.isin(asprs, GROUND_CODES).any():
             a_nowater = asprs.copy()
             a_nowater[a_nowater == ASPRS_WATER] = ASPRS_NOISE[0]
             keep = (
@@ -500,15 +516,20 @@ def main() -> int:
                 "without_water": {k: gn.get(k) for k in keep},
             }
             surf, key = vendor_ground_surface(
-                x, y, z, (asprs == ASPRS_GROUND) & clean, SURFACE_CELL_M, SURFACE_REACH_M
+                x, y, z, np.isin(asprs, GROUND_CODES) & clean, SURFACE_CELL_M, SURFACE_REACH_M
             )
             h = z - surf[key]
         else:
             row["ground_band"] = None
             h = np.full(tile.n, np.nan)
 
-        # Buildings against footprints, three placements.
-        tall = clean & (hag > HAG_GATE_M)
+        # Buildings against footprints, three placements. What the delivery labels water or bridge
+        # deck is not a candidate building; the deck keeps its own figure above. The primary gate
+        # is the label-free floor; a second gate from the delivery's own ground surface stands
+        # beside it for the global placement, because the floor sits on the roofs of tall blocks.
+        not_building_ref = np.isin(asprs, (ASPRS_WATER, ASPRS_BRIDGE))
+        tall = clean & (hag > HAG_GATE_M) & ~not_building_ref
+        tall_delivery = clean & (np.nan_to_num(h, nan=-np.inf) > HAG_GATE_M) & ~not_building_ref
         b_pred = coarse == GROUPS.index("building")
         clipped, _ = clip_to_box(polys, ux, uy)
         placements = {
@@ -533,6 +554,12 @@ def main() -> int:
                 row["building_area_coverage_global_shift"] = coverage_with_null(
                     moved, ux, uy, b_pred, tall
                 )
+                row["building_delivery_gate_global_shift"] = {
+                    "gate": "height above the delivery's own ground surface, classes 2 and 20",
+                    "points_the_surface_reaches": round(float(np.isfinite(h).mean()), 4),
+                    **building(inside, b_pred, tall_delivery),
+                    "coverage": coverage_with_null(moved, ux, uy, b_pred, tall_delivery),
+                }
         lifts = {
             k: r.get("precision_lift_over_null")
             for k, r in row["building_vs_footprints_over_2m"].items()
@@ -566,13 +593,25 @@ def main() -> int:
             k: (r.get("vegetation_core_called") or {}).get("vegetation")
             for k, r in row["vegetation"].items()
         }
+        false = {
+            k: r.get("not_vegetation_core_called_vegetation") for k, r in row["vegetation"].items()
+        }
         if choice == "lower_of_two" and None not in figs.values() and figs:
             head, basis = min(figs.values()), "lower of the two masks: the rule did not decide"
+            known = [v for v in false.values() if v is not None]
+            # Both halves of the pair read the harsher mask: recall the lower, false vegetation
+            # the higher.
+            wrong = max(known) if known else None
         elif choice in figs:
             head, basis = figs[choice], f"{choice} mask chosen by the rule"
+            wrong = false.get(choice)
         else:
-            head, basis = None, "no vegetation core"
-        row["vegetation_headline"] = {"vegetation_core_called_vegetation": head, "basis": basis}
+            head, basis, wrong = None, "no vegetation core", None
+        row["vegetation_headline"] = {
+            "vegetation_core_called_vegetation": head,
+            "not_vegetation_core_called_vegetation": wrong,
+            "basis": basis,
+        }
 
         # Confidence by what the delivery says.
         row["confidence"] = {
@@ -581,7 +620,7 @@ def main() -> int:
         }
 
         # Error detection: among ground calls, right against easy, hard and water.
-        right = called & clean & (asprs == ASPRS_GROUND)
+        right = called & clean & np.isin(asprs, GROUND_CODES)
         easy = called & clean & (asprs == ASPRS_UNASSIGNED) & (h > EASY_ABOVE_M)
         water = called & (asprs == ASPRS_WATER)
         raised = clean & (asprs == ASPRS_UNASSIGNED) & (h > EASY_ABOVE_M)
@@ -626,7 +665,7 @@ def main() -> int:
                 ),
             }
         if relief.any():
-            g_true = clean & (asprs == ASPRS_GROUND)
+            g_true = clean & np.isin(asprs, GROUND_CODES)
             named = rate(called, g_true & relief)
             rest = rate(called, g_true & in_block & ~relief)
             named_b = rate(coarse == GROUPS.index("building"), g_true & relief)
@@ -700,7 +739,7 @@ def main() -> int:
     correct = total = 0
     for n in names:
         tile = CachedTile(DALES_PREP / n, "test")
-        pred, conf, ent = load(v["surrey"], f"surrey_{n}")
+        pred, conf, ent = load(v["surrey"], f"surrey_{n}", entropy_scale)
         label = np.asarray(tile.label[:], np.int16)
         lab = label >= 0
         capped = np.minimum(pred.astype(np.int64), len(CLASS_NAMES))
