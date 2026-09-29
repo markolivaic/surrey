@@ -155,10 +155,7 @@ async function main() {
     stillsFor(state.theme);
   }
 
-  // Phones get the stills and the text, and no WebGL at all.
-  if (narrow) return;
-
-  viewer = new Viewer($("stage"), DATA, reducedMotion);
+  // The FIXTURE banner goes up on every screen, a phone's included, before anything else is decided.
   if (FIXTURE) {
     const banner = document.createElement("div");
     banner.className = "fixture mono";
@@ -166,6 +163,11 @@ async function main() {
     banner.textContent = "FIXTURE: synthetic points and random confidences for the smoke test, not data and not predictions";
     document.body.appendChild(banner);
   }
+
+  // Phones get the stills and the text, and no WebGL at all.
+  if (narrow) return;
+
+  viewer = new Viewer($("stage"), DATA, reducedMotion);
   // Eye-dome strength: each theme's own, from the sweep. A ?edl= parameter overrides both, for
   // measuring.
   const edlFor = (theme) => (INVESTIGATE && params.get("edl") !== null
