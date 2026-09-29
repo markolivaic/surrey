@@ -442,7 +442,10 @@ def main() -> int:
         table = np.concatenate([table, np.array([len(GROUPS), len(GROUPS) + 1], table.dtype)])
         groups = [*GROUPS, "water", "bridge_deck"]
     mask_choice = {
-        r["aoi"]: r for r in json.loads((ARTIFACTS / "naip_mask_choice.json").read_text())["areas"]
+        r["aoi"]: r
+        for r in json.loads((ARTIFACTS / "naip_mask_choice.json").read_text(encoding="utf-8"))[
+            "areas"
+        ]
     }
     areas_on_disk = sorted(
         p.name for p in TARGET_PREP.iterdir() if p.is_dir() and (p / "meta.json").exists()
@@ -724,7 +727,9 @@ def main() -> int:
 
     # Surrey, the in-domain side of the confidence and AUROC tables.
     names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     pools = {"all": ([], []), "easy": ([], []), "hard": ([], [])}
     conf_right, conf_wrong = [], []

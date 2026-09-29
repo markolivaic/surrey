@@ -5,9 +5,8 @@ data/*
 !data/artifacts/
 data/artifacts/*.tmp
 
-# Artefacts ARE committed: they are the evidence for every number in the README,
-# and several of them cost hours of GPU time to reproduce.
-!data/artifacts/
+# Artefacts ARE committed (the exception above): they are the evidence for every number in
+# the README, and several of them cost hours of GPU time to reproduce.
 
 .venv/
 .env

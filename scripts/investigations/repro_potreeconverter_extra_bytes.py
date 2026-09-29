@@ -81,7 +81,7 @@ def run(n_extra: int, work: Path, points: int = POINTS) -> dict:
     )
     if proc.returncode != 0:
         return {"extra_attributes": n_extra, "points": points, "converter_exit": proc.returncode}
-    meta = json.loads((out_dir / "metadata.json").read_text())
+    meta = json.loads((out_dir / "metadata.json").read_text(encoding="utf-8"))
     sizes = {a["name"]: a["size"] for a in meta["attributes"]}
     record = sum(sizes.values())
     hierarchy = (out_dir / "hierarchy.bin").read_bytes()

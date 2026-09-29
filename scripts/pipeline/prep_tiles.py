@@ -200,7 +200,7 @@ def main() -> int:
 
     done = {}
     if artifact.exists() and not args.force:
-        done = {r["name"]: r for r in json.loads(artifact.read_text())["tiles"]}
+        done = {r["name"]: r for r in json.loads(artifact.read_text(encoding="utf-8"))["tiles"]}
 
     t0 = time.time()
     records = []

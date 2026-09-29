@@ -51,7 +51,7 @@ class Step:
 
 
 def py(script: str, args: str = "") -> str:
-    return f"{PY} {P}/{script} {args}".strip()
+    return f'"{PY}" {P}/{script} {args}'.strip()
 
 
 STEPS = [

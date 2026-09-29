@@ -82,7 +82,7 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=OUT)
     args = ap.parse_args()
     t0 = time.time()
-    tiles = json.loads(PREP_ARTIFACT.read_text())["tiles"]
+    tiles = json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
     e0 = min(int(t["name"].split("_")[0]) for t in tiles) * NAME_UNIT_M
     n0 = min(int(t["name"].split("_")[1]) for t in tiles) * NAME_UNIT_M
     e1 = max(int(t["name"].split("_")[0]) for t in tiles) * NAME_UNIT_M + TILE_M

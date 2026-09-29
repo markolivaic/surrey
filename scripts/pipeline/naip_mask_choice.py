@@ -98,7 +98,9 @@ def main() -> int:
     reg_meta = {
         a["aoi"]: a
         for a in json.loads(
-            (ROOT / "data" / "artifacts" / "naip_reference_registered.json").read_text()
+            (ROOT / "data" / "artifacts" / "naip_reference_registered.json").read_text(
+                encoding="utf-8"
+            )
         )["areas"]
     }
     rows = []

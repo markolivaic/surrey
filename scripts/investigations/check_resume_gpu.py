@@ -84,7 +84,7 @@ def main() -> int:
         train("broken", "--resume")
 
         def batches(name: str) -> list[str]:
-            return (tmp / f"{name}.batches").read_text().split()
+            return (tmp / f"{name}.batches").read_text(encoding="utf-8").split()
 
         def weights(name: str) -> dict:
             return torch.load(tmp / f"{name}.pt", map_location="cpu", weights_only=False)["model"]
@@ -93,7 +93,7 @@ def main() -> int:
             wa, wb = weights(a), weights(b)
             return max(float((wa[k].double() - wb[k].double()).abs().max()) for k in wa)
 
-        unbroken = json.loads((tmp / "unbroken.json").read_text())
+        unbroken = json.loads((tmp / "unbroken.json").read_text(encoding="utf-8"))
         result = {
             "device": unbroken["device"],
             "device_name": unbroken["device_name"],
@@ -108,7 +108,7 @@ def main() -> int:
             "weights_max_abs_difference_between_unbroken_runs": max_abs(
                 "unbroken_again", "unbroken"
             ),
-            "interruptions_recorded": json.loads((tmp / "broken.json").read_text())[
+            "interruptions_recorded": json.loads((tmp / "broken.json").read_text(encoding="utf-8"))[
                 "interruptions"
             ],
             "note": "batch order is the requirement on the card; the weights are reported beside the difference "

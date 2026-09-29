@@ -149,7 +149,9 @@ def gpu_busy() -> tuple[bool, str]:
             text=True,
             timeout=20,
         ).stdout
-        name, util, mem = [x.strip() for x in out.strip().split(",")]
-        return int(util) > 15 or int(mem) > 600, f"{name}, {util}% busy, {mem} MiB used"
+        cards = [[x.strip() for x in line.split(",")] for line in out.strip().splitlines()]
+        busy = [c for c in cards if int(c[1]) > 15 or int(c[2]) > 600]
+        shown = "; ".join(f"{n}, {u}% busy, {m} MiB used" for n, u, m in cards)
+        return bool(busy), shown
     except (OSError, ValueError, subprocess.SubprocessError):
         return False, "nvidia-smi unavailable"

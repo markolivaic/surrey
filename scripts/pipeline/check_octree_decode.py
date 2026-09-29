@@ -57,7 +57,7 @@ def main() -> int:
             ],
             check=True,
         )
-        info = json.loads(Path(f"{out}.json").read_text())
+        info = json.loads(Path(f"{out}.json").read_text(encoding="utf-8"))
         slots = info["slots"]
         dt = np.dtype([("xyz", "<f4", 3), ("rgb", "u1", 3)] + [(e, "u1") for e in slots])
         dec = np.frombuffer(out.read_bytes(), dtype=dt)

@@ -105,7 +105,9 @@ def main() -> int:
 
     # Home figure: the same height band, from the DALES labels.
     names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     total = hit_veg = hit_bld = 0
     missing = []

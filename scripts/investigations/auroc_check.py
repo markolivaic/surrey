@@ -130,7 +130,9 @@ def main() -> int:
 
     # ---------------- Surrey, every point of every held-out tile ----------------
     test_names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     s_right, s_wrong = Group(), Group()
     correct_total = labelled_total = 0

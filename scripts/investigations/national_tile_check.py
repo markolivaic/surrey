@@ -162,7 +162,11 @@ def download(name: str, spec: dict) -> Path:
     recorded = target.with_suffix(".size")
     # A finished download records the size the server announced, so a rerun can
     # verify the cached file without the network.
-    if target.exists() and recorded.exists() and int(recorded.read_text()) == target.stat().st_size:
+    if (
+        target.exists()
+        and recorded.exists()
+        and int(recorded.read_text(encoding="utf-8")) == target.stat().st_size
+    ):
         return target
     head = urllib.request.Request(spec["url"], method="HEAD", headers=HEADERS)
     with urllib.request.urlopen(head, timeout=60) as r:

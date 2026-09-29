@@ -312,7 +312,7 @@ def main() -> int:
     in_domain = None
     ta = ROOT / "data" / "artifacts" / "train_dales.json"
     if ta.exists():
-        t = json.loads(ta.read_text())
+        t = json.loads(ta.read_text(encoding="utf-8"))
         in_domain = {
             "iou_per_class": t["final"]["iou_per_class"],
             "accuracy": t["final"]["accuracy"],

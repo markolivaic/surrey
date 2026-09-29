@@ -104,8 +104,8 @@ def main() -> int:
     args = ap.parse_args()
 
     pred_dir = PREDICTIONS / args.variant
-    manifest = json.loads((pred_dir / "manifest.json").read_text())
-    ceiling = float(json.loads(SCORES.read_text())[CEILING_KEY])
+    manifest = json.loads((pred_dir / "manifest.json").read_text(encoding="utf-8"))
+    ceiling = float(json.loads(SCORES.read_text(encoding="utf-8"))[CEILING_KEY])
     thresholds = sorted(THRESHOLDS_M + [ceiling])
 
     areas = sorted(p.name for p in PREP.iterdir() if p.is_dir())

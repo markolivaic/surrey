@@ -76,7 +76,7 @@ def main() -> int:
 
     train = [
         CachedTile(DALES_PREP / t["name"], "train")
-        for t in json.loads(PREP_ARTIFACT.read_text())["tiles"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
         if t["split"] == "train"
     ]
     rng = np.random.default_rng(args.seed)

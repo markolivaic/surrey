@@ -56,6 +56,11 @@ def _get(url: str, timeout: float = 60.0, attempts: int = 4) -> bytes:
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read()
+        except urllib.error.HTTPError as e:
+            # The far end answered: a missing or forbidden object stays missing on a retry.
+            if e.code in (403, 404) or attempt == attempts - 1:
+                raise
+            time.sleep(2.0 * (attempt + 1))
         except (urllib.error.URLError, ConnectionError, TimeoutError):
             if attempt == attempts - 1:
                 raise

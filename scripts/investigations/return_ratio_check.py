@@ -89,7 +89,9 @@ def main() -> int:
 
     home = {g: np.zeros(5, np.int64) for g in GROUPS}
     names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     for n in names:
         tile = CachedTile(DALES_PREP / n, "test")

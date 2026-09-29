@@ -268,7 +268,9 @@ def main() -> int:
         )
 
     names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     surrey = []
     composition = np.zeros(N_CLASSES, np.int64)

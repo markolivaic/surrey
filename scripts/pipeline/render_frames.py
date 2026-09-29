@@ -305,7 +305,7 @@ def main() -> int:
             )
             print(f"wrote {p2}")
     meta = OUT / "frames.json"
-    doc = json.loads(meta.read_text()) if meta.exists() else {}
+    doc = json.loads(meta.read_text(encoding="utf-8")) if meta.exists() else {}
     doc[path.name] = {
         "area": args.area,
         "variant": args.variant,

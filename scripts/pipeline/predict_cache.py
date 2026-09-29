@@ -93,7 +93,7 @@ def main() -> int:
     )
 
     jobs = []
-    for t in json.loads(PREP_ARTIFACT.read_text())["tiles"]:
+    for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]:
         if t["split"] == "test":
             jobs.append(("surrey", t["name"], DALES_PREP / t["name"]))
     for p in sorted(TARGET_PREP.iterdir()):

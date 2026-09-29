@@ -126,7 +126,7 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = ap.parse_args()
 
-    spec = json.loads(PREP_ARTIFACT.read_text())["tiles"]
+    spec = json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
     train_names = sorted(t["name"] for t in spec if t["split"] == "train")[: args.train_count]
 
     t0 = time.time()

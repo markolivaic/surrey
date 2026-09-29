@@ -266,7 +266,11 @@ def main() -> int:
     t0 = time.time()
     for area in args.areas:
         tile = CachedTile(TARGET_PREP / area, "sf")
-        density = float(json.loads((TARGET_PREP / area / "meta.json").read_text())["density_kept"])
+        density = float(
+            json.loads((TARGET_PREP / area / "meta.json").read_text(encoding="utf-8"))[
+                "density_kept"
+            ]
+        )
         keep = round(
             min(target / density, 1.0), 4
         )  # kept for the record; the crop is set by density

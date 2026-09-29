@@ -155,7 +155,9 @@ def main() -> int:
         pools.setdefault(group, []).append((c, e))
 
     test_names = [
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     ]
     print(f"Surrey, {len(test_names)} held-out tiles, {args.surrey_blocks} blocks each")
     for n in sorted(test_names):

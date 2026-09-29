@@ -20,6 +20,7 @@ import functools
 import http.server
 import os
 import re
+import urllib.parse
 
 RANGE = re.compile(r"bytes=(\d*)-(\d*)$")
 
@@ -28,7 +29,7 @@ class RangeHandler(http.server.SimpleHTTPRequestHandler):
     mounts: dict[str, str] = {}
 
     def translate_path(self, path):
-        clean = path.split("?", 1)[0].split("#", 1)[0]
+        clean = urllib.parse.unquote(path.split("?", 1)[0].split("#", 1)[0])
         for prefix, folder in self.mounts.items():
             if clean == prefix or clean.startswith(prefix + "/"):
                 rest = clean[len(prefix) :].lstrip("/")

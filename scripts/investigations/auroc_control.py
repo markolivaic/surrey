@@ -103,7 +103,9 @@ def main() -> int:
 
     # ---------------- Surrey ----------------
     names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     pooled = {"all": ([], []), "easy": ([], []), "hard": ([], [])}
     per_tile = []
@@ -149,7 +151,9 @@ def main() -> int:
     if irc.exists():
         relief = {
             k: v["median"]
-            for k, v in json.loads(irc.read_text())["slope_leak"]["per_aoi_ground_relief_m"].items()
+            for k, v in json.loads(irc.read_text(encoding="utf-8"))["slope_leak"][
+                "per_aoi_ground_relief_m"
+            ].items()
         }
     areas = []
     for p in sorted(TARGET_PREP.iterdir()):

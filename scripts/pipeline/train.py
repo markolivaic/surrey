@@ -113,7 +113,7 @@ def training_fractions(stats_path: Path) -> np.ndarray:
     run: training on equal weights by accident looks like a result, not like an error."""
     if not stats_path.exists():
         raise SystemExit(f"{stats_path} is missing; run scripts/pipeline/dales_stats.py")
-    split = json.loads(stats_path.read_text())["per_split"]["train"]
+    split = json.loads(stats_path.read_text(encoding="utf-8"))["per_split"]["train"]
     if split["tiles"] != 29:
         raise SystemExit(f"{stats_path} counts {split['tiles']} training tiles, expected 29")
     return np.array([max(split["fractions"][n], 1e-9) for n in CLASS_NAMES])
@@ -128,10 +128,10 @@ def m1_class_weights(stats_path: Path, swiss_path: Path, power: float = 0.5) -> 
     scale of the vector does not matter, only the ratios.
     """
     w15 = (1.0 / training_fractions(stats_path)) ** power
-    swiss = json.loads(swiss_path.read_text())
+    swiss = json.loads(swiss_path.read_text(encoding="utf-8"))
     dales_points = sum(
         t["points_kept"]
-        for t in json.loads(PREP_ARTIFACT.read_text())["tiles"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
         if t["split"] == "train"
     )
     total = dales_points + swiss["points_kept_total"]
@@ -144,7 +144,7 @@ def m1_class_weights(stats_path: Path, swiss_path: Path, power: float = 0.5) -> 
 
 
 def split_names(artifact: Path) -> tuple[list[str], list[str]]:
-    spec = json.loads(artifact.read_text())["tiles"]
+    spec = json.loads(artifact.read_text(encoding="utf-8"))["tiles"]
     train = [t["name"] for t in spec if t["split"] == "train"]
     test = [t["name"] for t in spec if t["split"] == "test"]
     return sorted(train), sorted(test)
@@ -352,7 +352,9 @@ def main() -> int:
             if mask_path.exists():
                 t.ignore_mask = np.load(mask_path)
                 ignored_water += int(t.ignore_mask.sum())
-        swiss_names = [r["name"] for r in json.loads(SWISS_ARTIFACT.read_text())["tiles"]]
+        swiss_names = [
+            r["name"] for r in json.loads(SWISS_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        ]
         # Every tile is 500 m square in both sources, so drawing a tile uniformly draws
         # area uniformly, as M0 did over DALES alone.
         swiss_tiles = [CachedTile(SWISS_PREP / n, "train") for n in swiss_names]

@@ -51,7 +51,9 @@ SF_AOIS = ["baybridge", "embarcadero", "financial", "ggpark", "mission", "soma",
 
 def main() -> int:
     names = sorted(
-        t["name"] for t in json.loads(PREP_ARTIFACT.read_text())["tiles"] if t["split"] == "test"
+        t["name"]
+        for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]
+        if t["split"] == "test"
     )
     right, wrong = [], []
     for n in names:

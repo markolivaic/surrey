@@ -128,7 +128,7 @@ def runs(tmp_path_factory):
 
 
 def batches(path: Path) -> list[str]:
-    return path.read_text().split()
+    return path.read_text(encoding="utf-8").split()
 
 
 def test_a_resumed_run_draws_the_same_batches(runs):
@@ -149,10 +149,13 @@ def test_self_test_two_unbroken_runs_agree_bit_for_bit(runs):
 
 
 def test_the_artefact_records_one_exact_interruption(runs):
-    rec = json.loads((runs / "broken.json").read_text())["interruptions"]
+    rec = json.loads((runs / "broken.json").read_text(encoding="utf-8"))["interruptions"]
     assert rec["count"] == 1 and rec["all_exact"] is True
     assert rec["events"][0]["resumed_from_checkpoint_step"] == 2
-    assert json.loads((runs / "unbroken.json").read_text())["interruptions"]["count"] == 0
+    assert (
+        json.loads((runs / "unbroken.json").read_text(encoding="utf-8"))["interruptions"]["count"]
+        == 0
+    )
 
 
 def test_self_test_a_checkpoint_without_random_state_resumes_differently_and_says_so(runs):
@@ -161,5 +164,5 @@ def test_self_test_a_checkpoint_without_random_state_resumes_differently_and_say
     assert legacy[4:] != unbroken[4:], (
         "a reseeded sampler drew the same batches; the test proves nothing"
     )
-    rec = json.loads((runs / "legacy.json").read_text())["interruptions"]
+    rec = json.loads((runs / "legacy.json").read_text(encoding="utf-8"))["interruptions"]
     assert rec["count"] == 1 and rec["all_exact"] is False

@@ -190,7 +190,7 @@ def main() -> int:
     args.artifact.parent.mkdir(parents=True, exist_ok=True)
     prior = {}
     if args.artifact.exists():
-        prior = {r["aoi"]: r for r in json.loads(args.artifact.read_text())["aois"]}
+        prior = {r["aoi"]: r for r in json.loads(args.artifact.read_text(encoding="utf-8"))["aois"]}
     for r in records:
         prior[r["aoi"]] = r
     args.artifact.write_text(
