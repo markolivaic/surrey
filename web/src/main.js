@@ -180,15 +180,30 @@ async function main() {
   }
   viewer.onFrame = (v) => { $("loading").hidden = !(v.current && v.metrics.areas[v.current.name]?.loading > 0); };
 
+  // Shows an area, or says on screen that it could not be loaded. Returns null when the area failed or
+  // a later card has taken the scene in the meantime.
+  async function showArea(name, variant, options) {
+    try {
+      const shown = await viewer.show(name, variant, options);
+      return shown.stale ? null : shown;
+    } catch (err) {
+      console.warn(`area ${name} could not be loaded`, err);
+      $("chip").textContent = "this area could not be loaded";
+      return null;
+    }
+  }
+
   async function showCard(el) {
     const onHero = el.id === "hero";
     const name = areaName(el.dataset.area);
     let variant = el.dataset.variant;
-    const { entry, variant: v } = await viewer.show(name, variant);
+    const shown = await showArea(name, variant);
+    if (!shown) return;
+    const { entry, variant: v } = shown;
     let chip = el.dataset.chip;
     if (!v && el.dataset.fallbackVariant) {
       variant = el.dataset.fallbackVariant;
-      await viewer.show(name, variant);
+      if (!(await showArea(name, variant))) return;
       chip = "M1 not trained: this frame is M0 seed A";
     }
     // A card can ask for one of the opening's framings instead of the low oblique view.
@@ -212,7 +227,9 @@ async function main() {
 
   async function showFree(keepCamera) {
     const variant = variantForFree();
-    const { entry } = await viewer.show(areaName(state.area), variant, { keepCamera });
+    const shown = await showArea(areaName(state.area), variant, { keepCamera });
+    if (!shown) return;
+    const { entry } = shown;
     state.legendVariant = variant;
     const chips = { returns_ood: "old model, four channels, input as delivered", ret0: "old model, four channels, return ratio set to 0",
       m0_seedA: "M0 seed A, the published model", m1_seedA: "old M1 seed A, learned on synthetic water" };

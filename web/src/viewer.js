@@ -111,15 +111,33 @@ export class Viewer {
         entry.openingEyes = { wide: at(1.0, 34), mid: at(0.55, 34), still: at(1.0, 38) };
       }
       return entry;
-    })();
+    })().catch((err) => {
+      // A failed area is not kept: the next request for it tries again.
+      this.areas.delete(name);
+      throw err;
+    });
     return entry.ready;
   }
 
   async show(name, variant, { keepCamera = false } = {}) {
     const t0 = performance.now();
+    const token = (this.showToken = (this.showToken || 0) + 1);
     const same = this.current && this.current.name === name;
     if (!same && !this.reducedMotion) this.renderer.domElement.style.opacity = "0";
-    const entry = await this.area(name);
+    let entry;
+    try {
+      entry = await this.area(name);
+    } catch (err) {
+      if (token === this.showToken) this.renderer.domElement.style.opacity = "1";
+      throw err;
+    }
+    // A later request came in while this area loaded: that one owns the scene. If it asked for the
+    // area already on screen, nothing will fade the canvas back in, so this does.
+    if (token !== this.showToken) {
+      if (this.latestShown === this.current?.name) this.renderer.domElement.style.opacity = "1";
+      return { entry, variant: null, stale: true };
+    }
+    this.latestShown = name;
     const v = hasVariant(entry.material, variant) ? variant : null;
     if (v) selectVariant(entry.material, v);
     if (!same) {

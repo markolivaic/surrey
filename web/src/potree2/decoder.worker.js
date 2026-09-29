@@ -24,7 +24,15 @@ function dealign24b(mortoncode) {
 }
 
 self.onmessage = (event) => {
-  const { id, buffer, attributes, numPoints, scale, offset, octreeOffset } = event.data;
+  try {
+    decode(event.data);
+  } catch (err) {
+    self.postMessage({ id: event.data.id, error: String(err && err.message ? err.message : err) });
+  }
+};
+
+function decode(data) {
+  const { id, buffer, attributes, numPoints, scale, offset, octreeOffset } = data;
   const bytes = BrotliDecode(new Int8Array(buffer));
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
   const out = {};
@@ -100,4 +108,4 @@ self.onmessage = (event) => {
     }
   }
   self.postMessage({ id, attributes: out }, transfer);
-};
+}

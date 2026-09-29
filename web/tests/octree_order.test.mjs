@@ -30,6 +30,10 @@ function tree() {
   split(root);
   root.children.forEach(split);
   oct.root = root;
+  // What a decode message is built from, for the tests that let a node get as far as decoding.
+  oct.meta = { scale: [0.001, 0.001, 0.001], offset: [0, 0, 0] };
+  oct.attributes = [];
+  oct.offset = [0, 0, 0];
   oct.requested = [];
   oct.loadNode = (n) => oct.requested.push(n.name);
   return oct;
@@ -105,4 +109,39 @@ test("self-test: without the stop the node stays in flight", async () => {
   await new Promise((r) => setTimeout(r, 10));
   assert.equal(oct.inFlight.size, 1);
   assert.equal(node.state, "loading");
+});
+
+test("a decode that finishes after the area was left adds no points", async () => {
+  const oct = tree();
+  const node = oct.root.children[0];
+  let finishDecode;
+  oct.range = () => Promise.resolve(new ArrayBuffer(8));
+  oct.pool = { decode: () => new Promise((resolve) => { finishDecode = resolve; }) };
+  oct.group = { add: () => { throw new Error("points were added after the area was left"); } };
+  node.byteSize = 10n;
+  const loading = Object.getPrototypeOf(oct).loadNode.call(oct, node);
+  await new Promise((r) => setTimeout(r, 0));
+  assert.equal(oct.stopLoading(), 1);
+  finishDecode({ position: new Float32Array(3), rgb: new Uint16Array(3) });
+  await loading;
+  assert.equal(node.points, null);
+  assert.equal(node.state, "idle");
+  assert.equal(oct.inFlight.size, 0);
+});
+
+test("a decode that fails marks the node failed and frees its slot", async () => {
+  const oct = tree();
+  const node = oct.root.children[0];
+  oct.range = () => Promise.resolve(new ArrayBuffer(8));
+  oct.pool = { decode: () => Promise.reject(new Error("corrupt node")) };
+  node.byteSize = 10n;
+  const warn = console.warn;
+  console.warn = () => {};
+  try {
+    await Object.getPrototypeOf(oct).loadNode.call(oct, node);
+  } finally {
+    console.warn = warn;
+  }
+  assert.equal(node.state, "failed");
+  assert.equal(oct.inFlight.size, 0);
 });

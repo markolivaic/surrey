@@ -48,9 +48,10 @@ export class DecoderPool {
     for (let i = 0; i < size; i++) {
       const w = new Worker(new URL("./decoder.worker.js", import.meta.url), { type: "module" });
       w.onmessage = (e) => {
-        const { resolve } = this.pending.get(e.data.id);
+        const { resolve, reject } = this.pending.get(e.data.id);
         this.pending.delete(e.data.id);
-        resolve(e.data.attributes);
+        if (e.data.error) reject(new Error(e.data.error));
+        else resolve(e.data.attributes);
         this.idle.push(w);
         this.pump();
       };
@@ -60,8 +61,8 @@ export class DecoderPool {
   }
 
   decode(message) {
-    return new Promise((resolve) => {
-      this.queue.push({ message, resolve });
+    return new Promise((resolve, reject) => {
+      this.queue.push({ message, resolve, reject });
       this.pump();
     });
   }
@@ -69,9 +70,9 @@ export class DecoderPool {
   pump() {
     while (this.idle.length && this.queue.length) {
       const w = this.idle.pop();
-      const { message, resolve } = this.queue.shift();
+      const { message, resolve, reject } = this.queue.shift();
       const id = this.nextId++;
-      this.pending.set(id, { resolve });
+      this.pending.set(id, { resolve, reject });
       w.postMessage({ ...message, id }, [message.buffer]);
     }
   }
@@ -190,6 +191,10 @@ export class Octree {
         buffer, attributes: this.attributes, numPoints: node.numPoints,
         scale: this.meta.scale, offset: this.meta.offset, octreeOffset: this.offset,
       });
+      // Decoding is not abortable. If the area was left while it ran, or the node was asked for
+      // again, this result is not the node's any more: adding it would leave a second set of points
+      // that nothing hides.
+      if (controller.signal.aborted || this.inFlight.get(node) !== controller) return;
       const geom = new THREE.BufferGeometry();
       geom.setAttribute("position", new THREE.BufferAttribute(attrs.position, 3));
       geom.setAttribute("rgb", new THREE.BufferAttribute(attrs.rgb, 3, true));
@@ -217,14 +222,14 @@ export class Octree {
       if (this.onNodeLoaded) this.onNodeLoaded(node);
     } catch (err) {
       if (err && err.name === "AbortError") {
-        node.state = "idle";
-        this.inFlight.delete(node);
+        if (this.inFlight.get(node) === controller) node.state = "idle";
         return;
       }
       node.state = "failed";
       console.warn(`node ${node.name} failed`, err);
     } finally {
-      if (node.state !== "idle") this.inFlight.delete(node);
+      // Only this call's own entry: a newer request for the same node may already hold the slot.
+      if (this.inFlight.get(node) === controller) this.inFlight.delete(node);
     }
   }
 
