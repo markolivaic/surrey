@@ -9,11 +9,15 @@
 #   bash scripts/pipeline/rented_push.sh HOST PORT
 #   bash scripts/pipeline/rented_push.sh HOST PORT --with-cache
 #   bash scripts/pipeline/rented_push.sh HOST PORT --phase4
+#   bash scripts/pipeline/rented_push.sh HOST PORT --phase6
 #
 # --phase4 also sends what Phase 4 predicts with and cannot rebuild on the box: the San Francisco tiles
 # as the laptop prepared them, which the laptop's references are indexed by, and the old checkpoints
 # that are predicted again without training (docs/phase4_criteria.md). Each file is hashed here first,
 # and scripts/pipeline/phase4_chain.sh checks the hashes on the box before it starts.
+#
+# --phase6 sends only the San Francisco tiles, hashed the same way: Phase 6 predicts nothing old
+# (docs/phase6_criteria.md), and scripts/pipeline/phase6_chain.sh checks the hashes.
 set -euo pipefail
 HOST=${1:?host, the one vast.ai shows in the ssh line}
 PORT=${2:?port, the one vast.ai shows in the ssh line}
@@ -40,6 +44,16 @@ if [ "$OPTION" = "--with-cache" ]; then
   echo "sending the prepared cache as well, about 7 GB"
   tar -czf - data/prep/dales data/prep/dales_water_ignore data/prep/swiss \
     | ssh -i "$KEY" -p "$PORT" "root@$HOST" "tar -xzf - -C $REMOTE"
+fi
+
+if [ "$OPTION" = "--phase6" ]; then
+  echo "hashing and sending the San Francisco tiles"
+  LIST=$(mktemp)
+  find data/prep/target -type f | sort > "$LIST"
+  xargs -a "$LIST" sha256sum > data/phase6_inputs.sha256
+  echo data/phase6_inputs.sha256 >> "$LIST"
+  tar -czf - -T "$LIST" | ssh -i "$KEY" -p "$PORT" "root@$HOST" "tar -xzf - -C $REMOTE"
+  rm -f "$LIST"
 fi
 
 if [ "$OPTION" = "--phase4" ]; then

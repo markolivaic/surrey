@@ -67,16 +67,26 @@ def index_points(points: torch.Tensor, idx: torch.Tensor) -> torch.Tensor:
 def knn_idx(query: torch.Tensor, ref: torch.Tensor, k: int, chunk: int = 1024) -> torch.Tensor:
     """(B, S, 3) against (B, N, 3) -> (B, S, k) indices into ref.
 
-    Chunked over S so the distance matrix never exists in full.
+    Chunked over S so the distance matrix never exists in full. The distance is expanded as
+    |q|^2 + |r|^2 - 2 q.r, which subtracts large numbers to get a small one. Under fp16 autocast the
+    q.r product ran in half precision, and with z up to 200 m above a block's floor a square near
+    40,000 m^2 has a step of 32 m^2, so the nearest neighbours of a tall point were close to a random
+    pick. So the search runs in fp32 with autocast off, on coordinates centred on the reference
+    cloud's mean: distances do not change under a shift, and the squares being subtracted get
+    smaller. scripts/investigations/precision_audit.py measures both choices on real blocks.
     """
     b, s, _ = query.shape
     out = torch.empty(b, s, k, dtype=torch.long, device=query.device)
-    ref_sq = (ref**2).sum(-1).unsqueeze(1)
-    for i in range(0, s, chunk):
-        j = min(i + chunk, s)
-        q = query[:, i:j]
-        d = (q**2).sum(-1).unsqueeze(-1) + ref_sq - 2.0 * torch.bmm(q, ref.transpose(1, 2))
-        out[:, i:j] = d.topk(k, dim=-1, largest=False).indices
+    with torch.autocast(device_type=query.device.type, enabled=False):
+        centre = ref.float().mean(dim=1, keepdim=True)
+        query = query.float() - centre
+        ref = ref.float() - centre
+        ref_sq = (ref**2).sum(-1).unsqueeze(1)
+        for i in range(0, s, chunk):
+            j = min(i + chunk, s)
+            q = query[:, i:j]
+            d = (q**2).sum(-1).unsqueeze(-1) + ref_sq - 2.0 * torch.bmm(q, ref.transpose(1, 2))
+            out[:, i:j] = d.topk(k, dim=-1, largest=False).indices
     return out
 
 

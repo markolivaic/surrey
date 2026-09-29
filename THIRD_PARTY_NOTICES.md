@@ -63,11 +63,8 @@ specifies it:
 
 > Contains information licensed under the Open Government License – City of Surrey.
 
-That string contains an en dash. Repository prose in this project uses no dashes
-of any kind, and this line is the single exception, because it is a legal
-citation rather than prose. `tests/integrity/` exempts it by name so the
-punctuation guard neither fails on a correct file nor quietly rewrites a legal
-attribution.
+That string contains an en dash, as does the British Columbia attribution below.
+Both are reproduced exactly as their licences give them.
 
 **One more fact about this data, which belongs here as much as in the README.**
 DALES stands for Dayton Annotated Laser Earth Scan. Dayton is the University of
