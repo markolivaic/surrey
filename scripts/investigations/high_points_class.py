@@ -26,7 +26,8 @@ No inference runs here: predictions come from the cache written by
 
 Run:
     python scripts/investigations/high_points_class.py
-    python scripts/investigations/high_points_class.py --variant m0_seedB
+    python scripts/investigations/high_points_class.py --variant m0_seedB --out data/artifacts/high_points_class_m0_seedB.json
+    python scripts/investigations/high_points_class.py --variant m0phase4_seedA --out data/artifacts/high_points_class_m0phase4_seedA.json
 """
 
 from __future__ import annotations
@@ -103,7 +104,11 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=OUT)
     args = ap.parse_args()
 
-    pred_dir = PREDICTIONS / args.variant
+    # Phase 4's M0 is read from where scripts/pipeline/phase6_pull.sh moved it.
+    if args.variant.startswith("m0phase4_seed"):
+        pred_dir = PREDICTIONS / "phase4" / args.variant.replace("m0phase4_", "m0_")
+    else:
+        pred_dir = PREDICTIONS / args.variant
     manifest = json.loads((pred_dir / "manifest.json").read_text(encoding="utf-8"))
     ceiling = float(json.loads(SCORES.read_text(encoding="utf-8"))[CEILING_KEY])
     thresholds = sorted(THRESHOLDS_M + [ceiling])

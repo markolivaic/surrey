@@ -194,6 +194,8 @@ MODEL_ARTIFACTS = (
     | {"sf_scores_m0_seedA_1vote.json", "sf_scores_m0_seedA_legacy_iter.json"}
     | {"building_breakdown.json"}
     | {f"train_{v}.json" for v in RENTED_VARIANTS}
+    | {"high_points_class.json"}
+    | {f"high_points_class_{r}_seed{x}.json" for r in ("m0", "m0phase4") for x in ("A", "B", "C")}
 )
 MODEL_KEY_PREFIXES = ("model.", "auroc.", "conf.", "control.", "vegetation.", "ground.", "ret0.")
 
@@ -2063,10 +2065,12 @@ def build_registry() -> list[Quantity]:
     # The class of the tall points, per area and per threshold, from each seed's own calls, and the
     # median and range over the seeds. The page needs it because the colour of a tower is a claim a
     # reader can read off it, and the seeds disagree about it far more than about anything else.
+    # Phase 4's seeds are read the same way, so the fix's effect on the towers needs no footprint.
     tall_files = {
         "m0_seedA": "high_points_class.json",
         "m0_seedB": "high_points_class_m0_seedB.json",
         "m0_seedC": "high_points_class_m0_seedC.json",
+        **{f"m0phase4_seed{s}": f"high_points_class_m0phase4_seed{s}.json" for s in SEEDS},
     }
     tall_files = {v: f for v, f in tall_files.items() if (ARTIFACTS / f).exists()}
     tall_docs = {
@@ -2106,23 +2110,23 @@ def build_registry() -> list[Quantity]:
                         lambda a, s_=src, x=aoi, n=bin_name: a[s_]["areas"][x]["bins"][n]["points"],
                     )
                 )
-    if len(tall_docs) == 3:
-        first = tall_docs["m0_seedA"]
+    for recipe in ("m0", "m0phase4"):
+        files = {v: f for v, f in tall_files.items() if v in {f"{recipe}_seed{s}" for s in SEEDS}}
+        if len(files) != len(SEEDS):
+            continue
+        docs = {v: tall_docs[v] for v in files}
+        first = docs[f"{recipe}_seedA"]
         for aoi, row in first["areas"].items():
             for bin_name in row["bins"]:
                 classes = sorted(
-                    {
-                        c
-                        for d in tall_docs.values()
-                        for c in d["areas"][aoi]["bins"][bin_name]["coarse"]
-                    }
+                    {c for d in docs.values() for c in d["areas"][aoi]["bins"][bin_name]["coarse"]}
                 )
                 for cls in classes:
                     for st in ("median", "min", "max"):
                         # A class a seed never called at that height is a share of 0, not a gap.
                         q.append(
                             Quantity(
-                                f"tall.sf.{aoi}.m0_seeds.{bin_name}.called_{cls}.{st}",
+                                f"tall.sf.{aoi}.{recipe}_seeds.{bin_name}.called_{cls}.{st}",
                                 f"share_called_{cls}_{st}_over_seeds",
                                 Population(
                                     "san_francisco",
@@ -2130,15 +2134,15 @@ def build_registry() -> list[Quantity]:
                                     "voxel",
                                     f"height:{bin_name}",
                                     "coarse6",
-                                    variant="m0_seeds",
+                                    variant=f"{recipe}_seeds",
                                 ),
-                                "high_points_class.json",
-                                lambda a, x=aoi, n=bin_name, c=cls, t=st: _spread_of(
+                                files[f"{recipe}_seedA"],
+                                lambda a, x=aoi, n=bin_name, c=cls, t=st, fs=files: _spread_of(
                                     {
                                         v: a[f]["areas"][x]["bins"][n]["coarse"].get(
                                             c, {"share": 0.0}
                                         )["share"]
-                                        for v, f in tall_files.items()
+                                        for v, f in fs.items()
                                     }
                                 )[t],
                             )
