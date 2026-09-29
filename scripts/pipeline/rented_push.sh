@@ -46,13 +46,34 @@ if [ "$OPTION" = "--with-cache" ]; then
     | ssh -i "$KEY" -p "$PORT" "root@$HOST" "tar -xzf - -C $REMOTE"
 fi
 
+# A large set goes in 100 MB parts, one after another and each retried: a single tar stream of the
+# San Francisco tiles through the vast.ai SSH proxy broke partway in Phase 4, and parallel copies stalled.
+send_parts() {
+  local list=$1 tmp part try
+  tmp=$(mktemp -d)
+  tar -czf - -T "$list" | split -b 100M - "$tmp/part_"
+  ssh -i "$KEY" -p "$PORT" "root@$HOST" "rm -rf $REMOTE/.incoming && mkdir -p $REMOTE/.incoming"
+  for part in "$tmp"/part_*; do
+    for try in 1 2 3 4 5; do
+      if scp -q -i "$KEY" -P "$PORT" -o ServerAliveInterval=15 "$part" "root@$HOST:$REMOTE/.incoming/"; then
+        echo "  sent $(basename "$part")"
+        break
+      fi
+      echo "  $(basename "$part") failed, try $try"
+      sleep 5
+    done
+  done
+  ssh -i "$KEY" -p "$PORT" "root@$HOST" "cd $REMOTE && cat .incoming/part_* | tar -xzf - && rm -rf .incoming"
+  rm -rf "$tmp"
+}
+
 if [ "$OPTION" = "--phase6" ]; then
   echo "hashing and sending the San Francisco tiles"
   LIST=$(mktemp)
   find data/prep/target -type f | sort > "$LIST"
   xargs -a "$LIST" sha256sum > data/phase6_inputs.sha256
   echo data/phase6_inputs.sha256 >> "$LIST"
-  tar -czf - -T "$LIST" | ssh -i "$KEY" -p "$PORT" "root@$HOST" "tar -xzf - -C $REMOTE"
+  send_parts "$LIST"
   rm -f "$LIST"
 fi
 
@@ -63,7 +84,7 @@ if [ "$OPTION" = "--phase4" ]; then
   ls data/checkpoints/dayton.pt data/checkpoints/m0prime_seed?.pt data/checkpoints/m1_seed?.pt >> "$LIST"
   xargs -a "$LIST" sha256sum > data/phase4_inputs.sha256
   echo data/phase4_inputs.sha256 >> "$LIST"
-  tar -czf - -T "$LIST" | ssh -i "$KEY" -p "$PORT" "root@$HOST" "tar -xzf - -C $REMOTE"
+  send_parts "$LIST"
   rm -f "$LIST"
 fi
 
