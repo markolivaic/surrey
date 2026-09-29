@@ -27,7 +27,7 @@ What the page must show:
 - The model working, first. The default state is the fixed input on the published model.
 - **Input switch**: as delivered (the bug) / as trained. One click, same camera, same
   frame, so the forest becoming buildings and back is the only thing that moves.
-- **Model switch**: M0 / M1. M1 is shown disabled with "not trained yet" until it exists.
+- **Model switch**: M0 / M1. M1 is the old M1, learned on synthetic water, and says so.
 - **Orthophoto wipe** on the same 3D view: NAIP colour on the lidar points against the
   model's classes, swept by a handle.
 - **Class as hue and lightness, confidence as colour strength (chroma)**, with a two-axis legend

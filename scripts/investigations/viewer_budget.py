@@ -1,10 +1,8 @@
 """How much city fits in a repository? Convert a real area and measure the bytes.
 
-The viewer has no backend. Everything it needs is committed or served as a static
-file, because the two earlier projects in this portfolio that call an API are
-shells when hosted, and here the viewer is the product rather than a bonus. So the
-extent is decided by arithmetic before anything is converted, and the arithmetic
-needs a real bytes-per-point figure rather than a guess.
+The viewer has no backend: everything it needs is committed or served as a static
+file. So the extent is decided by arithmetic before anything is converted, and the
+arithmetic needs a real bytes-per-point figure rather than a guess.
 
 Three settings matter, and they are worth a factor of eight between them:
 

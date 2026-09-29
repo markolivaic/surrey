@@ -1,12 +1,8 @@
 """Finding the external binaries this project shells out to.
 
-Neither of these is assumed to be on PATH, and that is the whole point of the
-module. ffmpeg was installed on this machine by winget, which reported that it had
-changed PATH, but the shim under `WinGet\\Links` was never created, so `ffmpeg`
-resolved to nothing while `ffmpeg.exe` sat on disk and worked. A script that
-assumes the name is on PATH reports "not installed" for software that is
-installed, and the fix looks like reinstalling something that needs no
-reinstalling.
+Neither is assumed to be on PATH: on Windows a package manager can install ffmpeg
+without creating the PATH shim, and a script that only asks PATH then reports
+installed software as missing.
 
 So: look on PATH, then in the places a package manager actually puts things, then
 under the project's own tools directory, and if none of that finds it, say where

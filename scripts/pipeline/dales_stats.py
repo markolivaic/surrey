@@ -1,9 +1,7 @@
 """Measure DALES-2 across every tile, not one of them.
 
-The brief this project started from quoted a class distribution taken from a
-single tile. On this portfolio a figure that was true only of a convenient
-sample has already been wrong three times, so this reads all 40 tiles and
-reports the spread between them as well as the pooled total.
+A class distribution taken from one tile describes that tile. This reads all 40
+tiles and reports the spread between them as well as the pooled total.
 
 Run:
     python scripts/pipeline/dales_stats.py

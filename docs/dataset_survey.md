@@ -14,7 +14,7 @@ Nothing here was verified from the data itself. Checking geography from coordina
 the way DALES was shown not to be Dayton, needs the files downloaded, and the two
 datasets that pass would mean 16.0 GB and 42.6 GB. That waits for a decision.
 
-## The eight candidates
+## The candidates
 
 | dataset | 1 data licence | 2 download without registration | 3 aerial | sensor |
 |---|---|---|---|---|

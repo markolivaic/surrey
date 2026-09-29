@@ -19,13 +19,15 @@ the models on the DALES benchmark do.
 
 Z reaches the network relative to its own block's first percentile, so a metre is
 a metre and no terrain model is involved. The quantile grid survives for one
-narrower job: the 2 m gate used when scoring against footprints, where its error
-rates are measured and small enough to state.
+narrower job: the 2 m gate used when scoring against footprints. No cell size passed
+the rule scripts/investigations/ground_cell_choice.py set for it, so the building
+figures also carry a second gate from the delivery's own ground surface
+(docs/phase6_criteria.md).
 
-Density is equalised by voxel downsampling. DALES runs 26 to 70 points per square
-metre; the San Francisco areas run 76 to 147. A model trained at one density and
-run at three times that sees every neighbourhood shrink. A fixed voxel size
-thins both to the same ceiling.
+A fixed voxel size thins both sides but does not bring them to one density: the
+prepared tiles still differ (data/artifacts/prep_dales.json, prep_target.json). What
+equalises what the network sees is the crop, since every 40 m block reaches it as the
+same fixed number of points (surrey.cache).
 
 Intensity is not used. Both deliveries carry it and neither is calibrated to the
 other, so a model leaning on intensity would fail on the target for reasons that
@@ -111,9 +113,7 @@ def quantile_z_grid(
     half a percent of points classified low noise, some of them 70 m below the
     street, and one such point drags a whole cell's minimum down with it. At a
     25 m cell that made 90 percent of the delivery's own ground points read as
-    more than 2 m above ground, in an area with 1.3 m of relief. The same failure
-    in the opposite direction is recorded in nadir, where high noise put cells
-    200 m above a city that tops out at 217 m.
+    more than 2 m above ground, in an area with 1.3 m of relief.
 
     A quantile ignores a sparse tail at either end without needing a noise label,
     which matters because the target has one and the training set does not, and

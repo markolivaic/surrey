@@ -1,9 +1,8 @@
 """No channel a model reads may be dead in training or out of range on the target.
 
-This is the guard that would have caught, on the first day, the bug the whole transfer
-study ended up measuring: the return ratio was exactly 0 on every DALES-2 training
-point and between 1/n and 1 on every San Francisco point. Every number was sourced
-and consistent, and the input was meaningless.
+The return ratio was exactly 0 on every DALES-2 training point and between 1/n and 1
+on every San Francisco point, so the channel carried nothing learned. This reads each
+channel's range on both sides.
 
 Reads data/artifacts/input_channels.json, written by scripts/pipeline/input_channel_check.py.
 """
@@ -20,9 +19,8 @@ ARTIFACT = ROOT / "data" / "artifacts" / "input_channels.json"
 MAJORITY = 0.5
 # A channel broken on one flight line or one sensor would put a minority of an area's
 # points out of range, and the majority rule alone would pass it. So every area and
-# channel above this share must be listed below with the reason it is accepted, the
-# same pattern as the UNSOURCED list for numbers. An entry that no longer applies fails
-# too, so the list cannot rot into a blanket pass.
+# channel above this share must be listed below with the reason it is accepted. An
+# entry that no longer applies fails too, so the list cannot rot into a blanket pass.
 LISTED = 0.05
 ACCEPTED_EXTRAPOLATIONS = {
     ("financial", "z_above_block_floor"): (

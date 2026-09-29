@@ -14,8 +14,8 @@ than a guess:
 
   1. Every tile origin decoded that way is a multiple of 500 m, and the tiles
      tile. A wrong scale factor would not produce a grid.
-  2. Placing that grid in the CRS the paper states puts the data on Surrey and
-     over 6000 km from Surrey.
+  2. Placing that grid in the CRS the paper states puts the data on Surrey, 3,198 km
+     from Dayton (data/artifacts/where_is_dales.json).
 
 If the naming convention were wrong, check 1 would fail before check 2 was ever
 reached.

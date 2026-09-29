@@ -1,18 +1,8 @@
-"""Turn one screen recording into the three files the publish standard asks for.
+"""Turn one screen recording into an MP4, a GIF and a poster.
 
-The standard wants an MP4 (H.264, yuv420p, faststart, under 5 MB), a GIF under
-8 MB linked to it, and a JPEG poster of the first frame, and it wants the media to
-be one uninterrupted recording of the running application rather than stitched
-takes.
-
-This exists early, and was tested before there was an application to record,
-because on this portfolio a step that sounded trivial once blocked a publish for a
-month and the cause was that the step could not be run at all. Knowing the encode
-works is worth more now than it will be on the evening it is needed.
-
-ffmpeg is located rather than assumed to be on PATH. See backend/surrey/tools.py:
-on this machine winget installed it, reported changing PATH, and never created the
-shim.
+The MP4 is H.264, yuv420p and faststart, under 5 MB; the GIF is under 8 MB and links to it; the poster
+is the JPEG of the first frame. The media is one uninterrupted recording of the running page. ffmpeg is
+located by backend/surrey/tools.py rather than assumed to be on PATH.
 
 Run:
     python scripts/pipeline/make_walkthrough.py --source recording.webm

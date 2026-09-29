@@ -1,6 +1,5 @@
 # A shell script with carriage returns at the ends of its lines dies on its first line on Linux, with
-# a message about an invalid option name that says nothing about line endings. That cost an hour on a
-# rented machine, and the same class of fault broke CI in another project in this portfolio.
+# a message about an invalid option name that says nothing about line endings.
 * text=auto eol=lf
 *.sh text eol=lf
 *.py text eol=lf

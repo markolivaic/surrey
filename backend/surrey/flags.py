@@ -70,7 +70,8 @@ DECISIONS = {
         "swissSURFACE3D": ("keep", "never set; the same reason"),
         "USGS 3DEP CA_SanFrancisco_1_B23": (
             "keep",
-            "the delivery's point format has no overlap bit",
+            "the Entwine (EPT) copy read here carries no overlap bit, so overlap points "
+            "cannot be told apart in it",
         ),
     },
 }

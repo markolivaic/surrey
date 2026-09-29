@@ -1,4 +1,4 @@
-"""The README keeps its disclosures (PROJECT_STANDARD 10.1).
+"""The README keeps its disclosures on its first screen.
 
 Every prose match runs on text with whitespace collapsed, so re-wrapping a sentence cannot disarm it.
 """

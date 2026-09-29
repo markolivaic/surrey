@@ -6,9 +6,9 @@ told where the octrees are by `?data=`. `scripts/investigations/hosting_check.py
 browser, that a page can read byte ranges from Hugging Face across origins
 (`data/artifacts/hosting_check.json`).
 
-Every step below is run by hand, in Git Bash from the repository root. Accounts, tokens and settings are
-the owner's steps. The token is pasted at the login prompt and is never written to a file in the
-repository or passed on a command line.
+Every step below is run by hand, in Git Bash from the repository root, logged in to your own
+Hugging Face and GitHub accounts. A token is pasted at the login prompt and never written to a file
+in the repository or passed on a command line.
 
 Checked against the command line tool installed in this project's environment: `hf` from
 huggingface_hub 0.35.3 (`.venv/Scripts/hf.exe`). Older guides say `huggingface-cli`; that is not the

@@ -1,10 +1,10 @@
 """Per-class scoring.
 
-No mean intersection over union anywhere in here. Four of the fifteen DALES-2
-classes hold under half a percent of the points, several are absent from whole
-tiles, and a fifteen class mean moves when those four twitch. The question this
-project asks is which classes survive a change of city, and that question only
-has per-class answers.
+Per class first. Four of the fifteen DALES-2 classes hold under half a percent of
+the points, several are absent from whole tiles, and a fifteen class mean moves when
+those four move, so a mean is reported beside the per-class figures, never instead of
+them. The question is which classes survive a change of city, and that has per-class
+answers.
 
 A class with no support returns None rather than zero. Zero is a measurement and
 None is an absence, and reporting an absence as a zero is how a model that never

@@ -1,8 +1,7 @@
 """One registered source for every quantity the project reports.
 
-The provenance guard in tests/integrity/test_numbers.py checks that each number in
-the prose exists in some artefact. It does not check that numbers about the same
-thing agree, and they did not. Three Surrey ground fractions were in circulation at
+A number that exists in some artefact is not yet a number that agrees with the
+others about the same thing, and at one point they did not. Three Surrey ground fractions were in circulation at
 once, 0.4797, 0.5016 and 0.5119, every one of them real and correctly computed, and
 together impossible to read. The model accuracy 0.8948 was then paired with 0.5119
 as its do-nothing baseline, which was wrong: the accuracy is over voxel-thinned

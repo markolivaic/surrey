@@ -1,10 +1,11 @@
 # Third party data and code
 
-Nothing listed here is redistributed by this repository. Every dataset is
-downloaded on demand by a script in `scripts/`, and `data/` is ignored by git.
-This section exists so a reader knows what they are about to download and under
-what terms, and so the terms are recorded where they can be checked rather than
-taken on trust.
+No dataset is redistributed as data. Every dataset is downloaded on demand by a script in
+`scripts/`, and `data/` is ignored by git except `data/artifacts/`, which holds measurements made
+from the data, not the data itself. The repository does carry pictures rendered from some of these
+sources (the stills, the README pictures, the walkthrough and the design frames, each in the table
+below) and two pieces of third-party code in `web/` (under Code). This file records the terms of
+each, and where it comes from, so they can be checked rather than taken on trust.
 
 ## Every asset the page shows, and what it is
 
@@ -14,6 +15,8 @@ is synthetic. Each is labelled where it is shown.
 | Asset | Provenance | Observed | Label shown on the page |
 |---|---|---|---|
 | The live scene, `data/viewer/` (built, not committed) | USGS 3DEP San Francisco points, coloured by a model's calls | the points, yes; the colours are predictions | the variant on the model label, for example "M0 seed A, the published model" |
+| Card 2's scene and still, `data/viewer/5135_54430/` and `web/public/stills/5135_54430_home_*` | A held-out DALES-2 tile's points, City of Surrey lidar under the Open Government Licence, coloured by a model's calls; the DALES labels are not in them | the points, yes; the colours are predictions | "Surrey held-out tile", with the model's variant |
+| The class table on the first screen, `web/public/asprs.json` | Quoted from ASPRS, LAS Specification 1.4 R15, Table 17 (below) | a quotation | the table's own caption names the standard, its revision and its date |
 | The photograph on the points | NAIP 2022 imagery, public domain, sampled at each point | yes, 337 days from the lidar | "the aerial photograph on the points, not the model" |
 | The stills, `web/public/stills/` | Rendered by `scripts/pipeline/render_frames.py` from the same points and calls | the points, yes; the colours are predictions | the area and the variant, burned into each still |
 | The water inset, `web/public/stills/water_inset_*.webp` | swissSURFACE3D Zug and 3DEP Embarcadero points, coloured by the old M1 seed A's calls; the Zug water points are the survey's synthetic fill | the points, yes; the colours are predictions | "coloured by the old M1 seed A", "Zug, the fill", and the swisstopo attribution |
@@ -66,8 +69,7 @@ specifies it:
 That string contains an en dash, as does the British Columbia attribution below.
 Both are reproduced exactly as their licences give them.
 
-**One more fact about this data, which belongs here as much as in the README.**
-DALES stands for Dayton Annotated Laser Earth Scan. Dayton is the University of
+**Where the data was flown.** DALES stands for Dayton Annotated LiDAR Earth Scan. Dayton is the University of
 Dayton, where the annotating was done. The lidar was flown over Surrey, British
 Columbia, Canada, 3,198 km away. `scripts/investigations/where_is_dales.py` measures that from
 the tiles themselves.
@@ -112,7 +114,9 @@ DOI's Crossref record; the DALES-2 entry is the one its dataset card gives.
 ## The target city
 
 **USGS 3DEP, delivery `CA_SanFrancisco_1_B23`**, read from
-`s3://usgs-lidar-public`. United States Government Public Domain, anonymous
+`s3://usgs-lidar-public` (https://s3-us-west-2.amazonaws.com/usgs-lidar-public), cached in
+`data/target/sf/` and prepared into `data/prep/target/` by `scripts/pipeline/prep_tiles.py`
+(15 cm voxel thinning, points with a dropped LAS flag removed, heights above a label-free floor). United States Government Public Domain, anonymous
 access, no attribution required. Downloaded by `scripts/pipeline/fetch_sf_aoi.py`.
 
 The delivery is published as an Entwine Point Tile octree in EPSG:3857. It
@@ -127,7 +131,10 @@ bills the caller. `backend/surrey/ept.py` refuses it, and
 ## The imagery
 
 **NAIP 2022**, USDA Farm Production and Conservation Business Center, read from the public
-NAIP collection. United States Government public domain. It colours the NAIP side of the
+NAIP collection on Microsoft Planetary Computer (https://planetarycomputer.microsoft.com/api/stac/v1,
+collection `naip`) by `scripts/pipeline/naip_reference.py`, cached in `data/cache/naip/`, sampled at
+each point, and turned into NDVI vegetation and not-vegetation cores in `data/reference/`. United
+States Government public domain. It colours the NAIP side of the
 viewer's divider and builds the blind vegetation reference; it is never a training label.
 
 ## The Swiss training tiles (M0prime and M1)
@@ -135,12 +142,17 @@ viewer's divider and builds the blind vegetation reference; it is never a traini
 **swissSURFACE3D**, Federal Office of Topography swisstopo, free geodata under swisstopo's
 terms of use, which make a source reference mandatory wherever the data or anything made from
 it is shown or passed on. The form used here: Federal Office of Topography swisstopo (©swisstopo).
-Downloaded by `scripts/pipeline/prep_swiss.py`; no tile is redistributed.
+Product page https://www.swisstopo.admin.ch/en/height-model-swisssurface3d; the tiles come from the
+STAC service https://data.geo.admin.ch/api/stac/v0.9/collections/ch.swisstopo.swisssurface3d/items.
+Downloaded and prepared by `scripts/pipeline/prep_swiss.py` into `data/prep/swiss/` (the same
+thinning as the Surrey tiles, synthetic and withheld points removed); no tile is redistributed.
 
 ## The water mask for DALES training tiles
 
-**BC Freshwater Atlas**, Province of British Columbia, used only to leave DALES points over
-water out of M0prime and M1 training (`scripts/pipeline/dales_water_check.py`). Open Government Licence,
+**BC Freshwater Atlas**, Province of British Columbia, read from the province's WFS
+(https://openmaps.gov.bc.ca/geo/pub/wfs: lakes, rivers, man-made waterbodies, bays and channels)
+and used only to leave DALES points over water out of M0prime and M1 training
+(`scripts/pipeline/dales_water_check.py`, which writes `data/prep/dales_water_ignore/`). Open Government Licence,
 British Columbia, whose required statement is reproduced exactly, dash included:
 
 > Contains information licensed under the Open Government Licence – British Columbia.
@@ -148,7 +160,9 @@ British Columbia, whose required statement is reproduced exactly, dash included:
 ## The sea level
 
 **NOAA CO-OPS station 9414290, San Francisco, CA**, verified six minute water level
-in NAVD88, from the CO-OPS data API. The NOAA disclaimer states that information on
+in NAVD88, from the CO-OPS data API (https://api.tidesandcurrents.noaa.gov/api/prod/datagetter;
+station page https://tidesandcurrents.noaa.gov/stationhome.html?id=9414290), cached in
+`data/reference/water_null/`. The NOAA disclaimer states that information on
 its servers is in the public domain unless annotated otherwise, and NOS requests
 attribution: water level data from NOAA National Ocean Service, Center for
 Operational Oceanographic Products and Services. Downloaded by
@@ -156,9 +170,12 @@ Operational Oceanographic Products and Services. Downloaded by
 
 ## The building reference
 
-**Microsoft Building Footprints**, ODbL-1.0. The California state file is
-downloaded as a 466 MB zip and cached; `scripts/pipeline/extract_footprints.py` cuts out
-the San Francisco subset.
+**Microsoft Building Footprints**, ODbL-1.0 (https://github.com/microsoft/USBuildingFootprints).
+The California state file
+(https://minedbuildings.z5.web.core.windows.net/legacy/usbuildings-v2/California.geojson.zip) is
+downloaded as a 466 MB zip and cached; `scripts/pipeline/extract_footprints.py` cuts out the San
+Francisco subset into `data/target/sf_footprints.geojson`, which the scoring moves by one measured
+offset before counting points inside each polygon.
 
 ## Code
 

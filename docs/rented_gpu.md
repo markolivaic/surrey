@@ -1,8 +1,8 @@
 # The capacity control, on a rented card
 
-The model has 726,225 parameters because the laptop has 4.29 GB, not because anyone decided that was
-the right size. This is the one objection to the project that has no answer in the repository, so one
-large M0 and one large M1 are trained on a rented card and reported as a control. Everything else
+The published model has 725,967 parameters because the laptop has 4.29 GB, not because anyone
+decided that was the right size. So one large M0 and one large M1 are trained on a rented card and
+reported as a control. Everything else
 stays as it is: the 5 s load time threshold, the water criterion, the seed rules, the published model.
 
 Written before any of it runs.
@@ -19,7 +19,8 @@ stopped instance still bills its disk.
 
 ## What the instance is
 
-An RTX 4090, 24 GB, one GPU, at least 8 CPU cores and 32 GB of RAM, 100 GB of disk, on the
+For the first rented round, an RTX 4090, 24 GB, one GPU, at least 8 CPU cores and 32 GB of RAM,
+100 GB of disk, on the
 `vastai/pytorch:cuda-12.8.1-auto` image, which matches the CUDA build this project runs locally
 (torch 2.11.0+cu128).
 
@@ -84,6 +85,6 @@ the last archive had been checked. The download's own log was working material a
 repository.
 
 Next time the results do not come back through the proxy. The chain uploads them from the card
-straight to a Hugging Face repository the owner has created for the round, or they are copied over a
+straight to a private Hugging Face repository made for the round, or they are copied over a
 direct port of the instance rather than the proxied one, and the instance is released as soon as
 their hashes match.
