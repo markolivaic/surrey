@@ -79,8 +79,9 @@ def test_every_figure_in_the_template_is_a_key_rather_than_a_number():
     # 2.9 and 2.11 of torch, the CI build and the one every model was trained with. Not this project's
     # either: 0.99, the agreement the vote rule asks for (scripts/pipeline/choose_votes.py); 0.811, the
     # published KPConv mean IoU on the original DALES, quoted with the reasons it compares to nothing
-    # here; and two arXiv identifiers in the references.
+    # here; and two arXiv identifiers and a DOI prefix in the references.
     allowed = {
+        "10.1109",
         "0.99",
         "0.811",
         "2004.11985",
