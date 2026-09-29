@@ -30,10 +30,10 @@ def renderer():
 @pytest.mark.parametrize("which", [0, 1], ids=["README.md", "docs/method.md"])
 def test_the_committed_file_is_what_its_template_and_the_registry_produce(which):
     mod = renderer()
-    template, target = mod.DOCUMENTS[which]
+    template, target, short = mod.DOCUMENTS[which]
     if not template.exists():
         pytest.skip("no template yet")
-    rendered = mod.render(template.read_text(encoding="utf-8"), mod.values())
+    rendered = mod.render(template.read_text(encoding="utf-8"), mod.values(), short=short)
     current = target.read_text(encoding="utf-8") if target.exists() else ""
     if current != rendered:
         first = next(
@@ -72,7 +72,7 @@ def test_every_figure_in_the_template_is_a_key_rather_than_a_number():
     import re
 
     mod = renderer()
-    text = "\n".join(t.read_text(encoding="utf-8") for t, _ in mod.DOCUMENTS if t.exists())
+    text = "\n".join(t.read_text(encoding="utf-8") for t, *_ in mod.DOCUMENTS if t.exists())
     # Not measurements: the licence version, the keep fractions named in words, the thresholds the page
     # was held to, the ordinary counts a sentence needs, 4.29, the laptop card's memory, and versions:
     # 1.4 of the LAS specification, 3.12 of Python and 2.1 of PotreeConverter, in the quick start, and

@@ -134,13 +134,17 @@ VARIANTS = {
     "m0_seedA_legacy_iter": "M0 seed A predicted with one pass by the first round's iterator, a diagnosis "
     "of the iterator",
     "m0_seeds": "median, min and max over every scored M0 seed (surrey.seeds)",
+    "m0phase4_seedA": "Phase 4 M0 seed A, trained and predicted with the fp16 neighbour search",
+    "m0phase4_seedB": "Phase 4 M0 seed B, the same",
+    "m0phase4_seedC": "Phase 4 M0 seed C, the same",
+    "m0phase4_seeds": "median, min and max over the Phase 4 M0 seeds",
     "m0prime_seeds": "median, min and max over every scored M0prime seed",
     "m1_seeds": "median, min and max over every scored M1 seed",
 }
 PUBLISHED_VARIANT = "m0_seedA"
 # The spread over the published recipe's seeds may stand beside the published figure.
 PUBLISHED_AGGREGATE = "m0_seeds"
-RECIPES = ("m0", "m0prime", "m1")
+RECIPES = ("m0", "m0prime", "m1", "m0phase4")
 SEEDS = ("A", "B", "C")
 # Artefacts that only a model can produce. Every quantity read from one must carry a
 # variant other than none.
@@ -167,7 +171,12 @@ MODEL_ARTIFACTS = (
         "sf_scores_m0_seedA.json",
         "sf_scores_m0_seedB.json",
     }
-    | {f"sf_scores_{r}_seed{x}.json" for r in ("m0", "m0prime", "m1") for x in ("A", "B", "C")}
+    | {
+        f"sf_scores_{r}_seed{x}.json"
+        for r in ("m0", "m0prime", "m1", "m0phase4")
+        for x in ("A", "B", "C")
+    }
+    | {"seeds_m0phase4.json", "compare_m0_vs_m0phase4.json", "precision_audit.json"}
     | {
         "seeds_m0.json",
         "seeds_m0prime.json",
@@ -2930,6 +2939,108 @@ def build_registry() -> list[Quantity]:
                 lambda a, s_=src: a[s_]["parameters"],
             )
         )
+    # ---------------- Phase 6: chance counts, the precision audit, per-class IoU ----------------
+    for pair in ("m1_vs_m0prime", "m0_vs_m0phase4"):
+        src = f"compare_{pair}.json"
+        if not (ARTIFACTS / src).exists():
+            continue
+        doc = json.loads((ARTIFACTS / src).read_text(encoding="utf-8"))
+        new_recipe = pair.split("_vs_")[0]
+        for part in (
+            "comparisons",
+            "two_sided_chance_of_a_move",
+            "moves_expected_by_chance",
+            "moves_seen",
+        ):
+            if part not in doc.get("chance", {}):
+                continue
+            q.append(
+                Quantity(
+                    f"compare.{pair}.chance.{part}",
+                    f"seed_comparison_{part}",
+                    Population(
+                        "san_francisco",
+                        "aois",
+                        "voxel",
+                        f"compare:{pair}",
+                        variant=f"{new_recipe}_seeds",
+                    ),
+                    src,
+                    lambda a, s_=src, pt=part: a[s_]["chance"][pt],
+                    "surrey.seeds.chance_of_a_move over the comparisons read",
+                )
+            )
+        for side in ("drops", "gains"):
+            q.append(
+                Quantity(
+                    f"compare.{pair}.{side}.count",
+                    f"seed_comparison_{side}",
+                    Population(
+                        "san_francisco",
+                        "aois",
+                        "voxel",
+                        f"compare:{pair}",
+                        variant=f"{new_recipe}_seeds",
+                    ),
+                    src,
+                    lambda a, s_=src, sd=side: len(a[s_][sd]),
+                )
+            )
+    if (ARTIFACTS / "precision_audit.json").exists():
+        pa = json.loads((ARTIFACTS / "precision_audit.json").read_text(encoding="utf-8"))
+        for area, block_ in pa["areas"].items():
+            for version, row in block_["versions"].items():
+                for metric, value in row.items():
+                    if value is None:
+                        continue
+                    q.append(
+                        Quantity(
+                            f"precision.{area}.{version}.{metric}",
+                            f"precision_audit_{metric}",
+                            Population(
+                                "san_francisco",
+                                area,
+                                "voxel",
+                                f"tallest_blocks:{version}",
+                                variant="m0phase4_seedA",
+                            ),
+                            "precision_audit.json",
+                            lambda a, x=area, v=version, m=metric: a["precision_audit.json"][
+                                "areas"
+                            ][x]["versions"][v][m],
+                            "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+                        )
+                    )
+    for recipe in RECIPES:
+        src = f"seeds_{recipe}.json"
+        if not (ARTIFACTS / src).exists():
+            continue
+        per_class = json.loads((ARTIFACTS / src).read_text(encoding="utf-8"))[
+            "surrey_held_out"
+        ].get("iou_per_class", {})
+        for name, cell in per_class.items():
+            # A class the held-out Surrey tiles do not hold (M1's water and bridge deck) has no IoU.
+            if cell.get("median") is None:
+                continue
+            for st in ("median", "min", "max"):
+                q.append(
+                    Quantity(
+                        f"seeds.{recipe}.surrey.test.iou.{name}.{st}",
+                        f"iou_{st}_over_seeds",
+                        Population(
+                            "surrey",
+                            "test",
+                            "voxel",
+                            f"class:{name}",
+                            "fine15",
+                            variant=f"{recipe}_seeds",
+                        ),
+                        src,
+                        lambda a, s_=src, n=name, t=st: a[s_]["surrey_held_out"]["iou_per_class"][
+                            n
+                        ][t],
+                    )
+                )
     # ---------------- the NAIP not-vegetation cores, no model involved ----------------
     if (ARTIFACTS / "not_vegetation_heights.json").exists():
         nv = json.loads((ARTIFACTS / "not_vegetation_heights.json").read_text(encoding="utf-8"))

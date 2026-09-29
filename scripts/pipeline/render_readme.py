@@ -32,7 +32,9 @@ README = ROOT / "README.md"
 # The method notes the README links to for its detail, generated the same way from their own template.
 METHOD_TEMPLATE = ROOT / "docs" / "method.template.md"
 METHOD = ROOT / "docs" / "method.md"
-DOCUMENTS = ((TEMPLATE, README), (METHOD_TEMPLATE, METHOD))
+# The README shows figures short; the method notes keep the four decimals the artefacts hold.
+DOCUMENTS = ((TEMPLATE, README, True), (METHOD_TEMPLATE, METHOD, False))
+SHORT = False
 QUANTITIES = ROOT / "data" / "artifacts" / "quantities.json"
 KEY = re.compile(r"\{\{([a-z0-9_.:]+)\}\}", re.I)
 
@@ -85,15 +87,26 @@ def values() -> dict:
 
 def fmt(value) -> str:
     if isinstance(value, float):
+        if SHORT:
+            # Two decimals between 0.1 and 10, one above, two significant digits below, so a small
+            # share never prints as 0.00.
+            if value == 0:
+                return "0"
+            if abs(value) >= 10:
+                return f"{value:.1f}"
+            if abs(value) >= 0.1:
+                return f"{value:.2f}"
+            return f"{value:.2g}"
         text = f"{value:.4f}".rstrip("0")
         return text + "0" if text.endswith(".") else text
     return f"{value:,}" if isinstance(value, int) and abs(value) >= 10000 else str(value)
 
 
 def spread(vals: dict, key: str) -> str:
-    """A median with the seed range behind it, the way every per area figure is reported."""
-    median, low, high = (vals[f"{key}.{part}"] for part in ("median", "min", "max"))
-    return f"{fmt(median)} ({fmt(low)} to {fmt(high)})"
+    """A median with the seed range behind it, the way every per area figure is reported; where every
+    seed gives the same figure there is no range to show."""
+    median, low, high = (fmt(vals[f"{key}.{part}"]) for part in ("median", "min", "max"))
+    return median if low == high else f"{median} ({low} to {high})"
 
 
 def has_buildings(vals: dict, area: str) -> bool:
@@ -233,7 +246,16 @@ TABLES = {
 }
 
 
-def render(template: str, vals: dict) -> str:
+def render(template: str, vals: dict, short: bool = False) -> str:
+    global SHORT
+    SHORT = short
+    try:
+        return _render(template, vals)
+    finally:
+        SHORT = False
+
+
+def _render(template: str, vals: dict) -> str:
     missing = []
 
     def one(m: re.Match) -> str:
@@ -250,6 +272,8 @@ def render(template: str, vals: dict) -> str:
         return fmt(vals[name])
 
     out = KEY.sub(one, template)
+    # A range typed into the prose, "0.54 (0.54 to 0.54)", says nothing when every seed agrees.
+    out = re.sub(r"(?<![\w.])(-?[\d.,]+) \(\1 to \1\)", r"\1", out)
     if missing:
         raise SystemExit(
             "the template names things the registry does not have: "
@@ -266,8 +290,8 @@ def main() -> int:
     args = ap.parse_args()
     vals = values()
     failed = 0
-    for template, target in DOCUMENTS:
-        rendered = render(template.read_text(encoding="utf-8"), vals)
+    for template, target, short in DOCUMENTS:
+        rendered = render(template.read_text(encoding="utf-8"), vals, short=short)
         name = target.relative_to(ROOT).as_posix()
         if not args.check:
             # The template is LF and the check below compares the text as it is, so writing Windows

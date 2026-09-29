@@ -34,7 +34,7 @@ One uninterrupted recording of the running page: the first screen, the six cards
 
 ## At home, on held-out Surrey
 
-On the 11 held-out Surrey tiles, M0 reaches a point accuracy of 0.9285 (0.9273 to 0.9288), against 0.4797 for calling everything ground. Mean IoU is 0.5233 (0.52 to 0.527) over the fifteen classes and 0.8162 (0.8125 to 0.8164) over the six coarse groups the page draws.
+On the 11 held-out Surrey tiles, M0 reaches a point accuracy of 0.93, against 0.48 for calling everything ground. Mean IoU is 0.52 (0.52 to 0.53) over the fifteen classes and 0.82 (0.81 to 0.82) over the six coarse groups the page draws.
 
 On the original DALES, KPConv reached a mean IoU of 0.811 (Varney and others, 2020), over eight classes of a different annotation; here the classes are fifteen and the points voxel-thinned, so the two numbers rank nothing.
 
@@ -44,27 +44,27 @@ Median over three seeds, the lowest and highest in brackets, each class beside t
 
 | Area | NAIP vegetation cores called vegetation | NAIP not-vegetation cores called vegetation | Delivery ground called ground | Ground precision, floor | Ground precision, ceiling |
 |---|---|---|---|---|---|
-| Golden Gate Park | 0.9722 (0.9704 to 0.9724) | 0.8468 (0.8411 to 0.853) | 0.9425 (0.9366 to 0.9779) | 0.7445 (0.743 to 0.7507) | 0.9665 (0.9661 to 0.9687) |
-| Sunset | 0.9465 (0.9418 to 0.9471) | 0.036 (0.0331 to 0.0361) | 0.9647 (0.9588 to 0.9744) | 0.7466 (0.7442 to 0.7474) | 0.9619 (0.9595 to 0.9641) |
-| Mission | 0.9828 (0.9803 to 0.9837) | 0.0328 (0.0275 to 0.033) | 0.9692 (0.9582 to 0.9872) | 0.7185 (0.6916 to 0.7228) | 0.8828 (0.8494 to 0.8881) |
-| Russian Hill | 0.9313 (0.9201 to 0.9318) | 0.0442 (0.0423 to 0.0447) | 0.9139 (0.9028 to 0.9354) | 0.7724 (0.7689 to 0.7745) | 0.952 (0.9457 to 0.9536) |
-| SoMa | 0.9854 (0.9834 to 0.9862) | 0.0313 (0.0281 to 0.0316) | 0.9922 (0.9828 to 0.9958) | 0.6924 (0.6746 to 0.6966) | 0.8414 (0.8197 to 0.8461) |
-| Financial District | 0.9969 (0.9962 to 0.997) | 0.116 (0.1139 to 0.1245) | 0.9784 (0.9726 to 0.9861) | 0.6583 (0.6505 to 0.6626) | 0.9102 (0.8989 to 0.9157) |
-| Embarcadero | 0.9985 (0.9985 to 0.9987) | 0.05 (0.0461 to 0.0518) | 0.8318 (0.8095 to 0.8722) | 0.3489 (0.3447 to 0.3627) | 0.5321 (0.5263 to 0.5533) |
-| Bay Bridge | no core | 0.0312 (0.0276 to 0.0379) | no core | no core | no core |
+| Golden Gate Park | 0.97 | 0.85 (0.84 to 0.85) | 0.94 (0.94 to 0.98) | 0.74 (0.74 to 0.75) | 0.97 |
+| Sunset | 0.95 (0.94 to 0.95) | 0.036 (0.033 to 0.036) | 0.96 (0.96 to 0.97) | 0.75 (0.74 to 0.75) | 0.96 |
+| Mission | 0.98 | 0.033 (0.028 to 0.033) | 0.97 (0.96 to 0.99) | 0.72 (0.69 to 0.72) | 0.88 (0.85 to 0.89) |
+| Russian Hill | 0.93 (0.92 to 0.93) | 0.044 (0.042 to 0.045) | 0.91 (0.90 to 0.94) | 0.77 | 0.95 |
+| SoMa | 0.99 (0.98 to 0.99) | 0.031 (0.028 to 0.032) | 0.99 (0.98 to 1.00) | 0.69 (0.67 to 0.70) | 0.84 (0.82 to 0.85) |
+| Financial District | 1.00 | 0.12 (0.11 to 0.12) | 0.98 (0.97 to 0.99) | 0.66 (0.65 to 0.66) | 0.91 (0.90 to 0.92) |
+| Embarcadero | 1.00 | 0.05 (0.046 to 0.052) | 0.83 (0.81 to 0.87) | 0.35 (0.34 to 0.36) | 0.53 (0.53 to 0.55) |
+| Bay Bridge | no core | 0.031 (0.028 to 0.038) | no core | no core | no core |
 
 Buildings, where the footprint null calls every point more than 2 m up a building. Lift is the share of the room above the null's precision that the model takes.
 
 | Area | Footprints scored | Building lift | Precision against footprints | The null's precision | Footprint covered | The null's coverage |
 |---|---|---|---|---|---|---|
-| Sunset | 33 | 0.6699 (0.6634 to 0.6765) | 0.8482 (0.8452 to 0.8512) | 0.5401 (0.5401 to 0.5401) | 0.9877 (0.9877 to 0.9896) | 0.9936 (0.9936 to 0.9936) |
-| Mission | 56 | 0.6136 (0.6023 to 0.6151) | 0.8317 (0.8268 to 0.8323) | 0.5644 (0.5644 to 0.5644) | 0.9776 (0.9776 to 0.9777) | 0.9937 (0.9937 to 0.9937) |
-| Russian Hill | 77 | 0.5579 (0.5531 to 0.5623) | 0.8333 (0.8316 to 0.835) | 0.623 (0.623 to 0.623) | 0.984 (0.9834 to 0.9844) | 0.9935 (0.9935 to 0.9935) |
-| SoMa | 26 | 0.5621 (0.5594 to 0.5631) | 0.8455 (0.8446 to 0.8459) | 0.6472 (0.6472 to 0.6472) | 0.722 (0.7203 to 0.7222) | 0.7511 (0.7511 to 0.7511) |
-| Financial District | 23 | 0.1456 (0.1452 to 0.1972) | 0.7234 (0.7232 to 0.7401) | 0.6762 (0.6762 to 0.6762) | 0.8248 (0.8222 to 0.8354) | 0.8541 (0.8541 to 0.8541) |
-| Embarcadero | 6 | 0.0443 (0.0382 to 0.0499) | 0.2034 (0.1984 to 0.2081) | 0.1666 (0.1666 to 0.1666) | 0.8506 (0.8506 to 0.8541) | 0.8749 (0.8749 to 0.8749) |
+| Sunset | 33 | 0.67 (0.66 to 0.68) | 0.85 | 0.54 | 0.99 | 0.99 |
+| Mission | 56 | 0.61 (0.60 to 0.62) | 0.83 | 0.56 | 0.98 | 0.99 |
+| Russian Hill | 77 | 0.56 (0.55 to 0.56) | 0.83 | 0.62 | 0.98 | 0.99 |
+| SoMa | 26 | 0.56 | 0.85 (0.84 to 0.85) | 0.65 | 0.72 | 0.75 |
+| Financial District | 23 | 0.15 (0.15 to 0.20) | 0.72 (0.72 to 0.74) | 0.68 | 0.82 (0.82 to 0.84) | 0.85 |
+| Embarcadero | 6 | 0.044 (0.038 to 0.05) | 0.20 (0.20 to 0.21) | 0.17 | 0.85 | 0.87 |
 
-Water is called ground, 0.9618 (0.9089 to 0.9724) at Embarcadero, and the Bay Bridge deck building, 0.9983 (0.9982 to 0.9984). Confidence separates these mistakes from right ground less well than mistakes at home, AUROC 0.7404 against 0.9375, on 3 of 3 seeds.
+Water is called ground, 0.96 (0.91 to 0.97) at Embarcadero, and the Bay Bridge deck building, 1.00. Confidence separates these mistakes from right ground less well than mistakes at home, AUROC 0.74 against 0.94, on 3 of 3 seeds.
 
 ## Why the building lift moved
 
@@ -72,7 +72,7 @@ Against the first round, the building lift fell in the Mission, on Russian Hill,
 
 ## The Financial District, the one area outside the range
 
-An area lies outside what training showed when its median 40 m block spans more height than the training blocks' 99th percentile, 46.19 m. The Financial District's spans 99.82 m, no other area's more than 34.53 m. Buildings were expected to score lower here, and do on 3 of 3 seeds, lift 0.1456 (0.1452 to 0.1972) against 0.5884 (0.5808 to 0.5886).
+An area lies outside what training showed when its median 40 m block spans more height than the training blocks' 99th percentile, 46.2 m. The Financial District's spans 99.8 m, no other area's more than 34.5 m. Buildings were expected to score lower here, and do on 3 of 3 seeds, lift 0.15 (0.15 to 0.20) against 0.59 (0.58 to 0.59).
 
 ## The input that broke the first model
 
@@ -80,19 +80,19 @@ The first model read a fourth input, the return ratio. The return fields of DALE
 
 | Area | NAIP vegetation cores called vegetation, input as delivered | the same, return ratio set to 0 |
 |---|---|---|
-| Golden Gate Park | 0.0002 | 0.9707 |
-| Sunset | 0.0 | 0.9475 |
-| Mission | 0.0 | 0.9822 |
-| Russian Hill | 0.0 | 0.9303 |
-| SoMa | 0.0 | 0.9859 |
-| Financial District | 0.0 | 0.9971 |
-| Embarcadero | 0.0 | 0.9984 |
+| Golden Gate Park | 0.0002 | 0.97 |
+| Sunset | 0 | 0.95 |
+| Mission | 0 | 0.98 |
+| Russian Hill | 0 | 0.93 |
+| SoMa | 0 | 0.99 |
+| Financial District | 0 | 1.00 |
+| Embarcadero | 0 | 1.00 |
 
 The published model has three inputs; `tests/integrity/test_input_channels.py` fails any model with an input constant in its training data.
 
 ## Water, and the old M1
 
-M1, the first round's attempt at water, learned it from Swiss tiles where 0.8586 to 0.9999 of the labelled water is synthetic fill. Real water there holds at most a median of 3.16 points per square metre, against 28.1 at Embarcadero. Its lift over the water null is negative on every seed, and it is not trained again ([docs/method.md](docs/method.md)).
+M1, the first round's attempt at water, learned it from Swiss tiles where 0.86 to 1.00 of the labelled water is synthetic fill. Real water there holds at most a median of 3.16 points per square metre, against 28.1 at Embarcadero. Its lift over the water null is negative on every seed, and it is not trained again ([docs/method.md](docs/method.md)).
 
 ## A bigger model
 

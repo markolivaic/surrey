@@ -77116,6 +77116,3381 @@
       "doc": "",
       "error": null
     },
+    "compare.m1_vs_m0prime.drops.count": {
+      "value": 8,
+      "concept": "seed_comparison_drops",
+      "population": {
+        "city": "san_francisco",
+        "split": "aois",
+        "sampling": "voxel",
+        "subset": "compare:m1_vs_m0prime",
+        "taxonomy": "none",
+        "variant": "m1_seeds"
+      },
+      "source": "compare_m1_vs_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "compare.m1_vs_m0prime.gains.count": {
+      "value": 3,
+      "concept": "seed_comparison_gains",
+      "population": {
+        "city": "san_francisco",
+        "split": "aois",
+        "sampling": "voxel",
+        "subset": "compare:m1_vs_m0prime",
+        "taxonomy": "none",
+        "variant": "m1_seeds"
+      },
+      "source": "compare_m1_vs_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "precision.financial.before.sa1_neighbours_kept": {
+      "value": 0.5579,
+      "concept": "precision_audit_sa1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa1_neighbours_kept_above_100m": {
+      "value": 0.1303,
+      "concept": "precision_audit_sa1_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa2_neighbours_kept": {
+      "value": 0.6752,
+      "concept": "precision_audit_sa2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa2_neighbours_kept_above_100m": {
+      "value": 0.2838,
+      "concept": "precision_audit_sa2_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa3_neighbours_kept": {
+      "value": 0.6932,
+      "concept": "precision_audit_sa3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa3_neighbours_kept_above_100m": {
+      "value": 0.3519,
+      "concept": "precision_audit_sa3_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp3_neighbours_kept": {
+      "value": 0.6888,
+      "concept": "precision_audit_fp3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp3_neighbours_kept_above_100m": {
+      "value": 0.3094,
+      "concept": "precision_audit_fp3_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp2_neighbours_kept": {
+      "value": 0.6138,
+      "concept": "precision_audit_fp2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp2_neighbours_kept_above_100m": {
+      "value": 0.2076,
+      "concept": "precision_audit_fp2_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp1_neighbours_kept": {
+      "value": 0.5316,
+      "concept": "precision_audit_fp1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp1_neighbours_kept_above_100m": {
+      "value": 0.1132,
+      "concept": "precision_audit_fp1_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa1_output_relative_error": {
+      "value": 2.7778,
+      "concept": "precision_audit_sa1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa2_output_relative_error": {
+      "value": 2.7537,
+      "concept": "precision_audit_sa2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.sa3_output_relative_error": {
+      "value": 1.0859,
+      "concept": "precision_audit_sa3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp3_output_relative_error": {
+      "value": 2.131,
+      "concept": "precision_audit_fp3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp2_output_relative_error": {
+      "value": 5.121,
+      "concept": "precision_audit_fp2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.fp1_output_relative_error": {
+      "value": 6.394,
+      "concept": "precision_audit_fp1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.head_output_relative_error": {
+      "value": 1.4548,
+      "concept": "precision_audit_head_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.class_agreement": {
+      "value": 0.5886,
+      "concept": "precision_audit_class_agreement",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.before.class_agreement_above_100m": {
+      "value": 0.1343,
+      "concept": "precision_audit_class_agreement_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa1_neighbours_kept": {
+      "value": 0.9996,
+      "concept": "precision_audit_sa1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa1_neighbours_kept_above_100m": {
+      "value": 0.9994,
+      "concept": "precision_audit_sa1_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa2_neighbours_kept": {
+      "value": 0.9999,
+      "concept": "precision_audit_sa2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa2_neighbours_kept_above_100m": {
+      "value": 0.9999,
+      "concept": "precision_audit_sa2_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa3_neighbours_kept_above_100m": {
+      "value": 1.0,
+      "concept": "precision_audit_sa3_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp3_neighbours_kept_above_100m": {
+      "value": 1.0,
+      "concept": "precision_audit_fp3_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp2_neighbours_kept": {
+      "value": 0.9998,
+      "concept": "precision_audit_fp2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp2_neighbours_kept_above_100m": {
+      "value": 0.9998,
+      "concept": "precision_audit_fp2_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp1_neighbours_kept": {
+      "value": 0.9995,
+      "concept": "precision_audit_fp1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp1_neighbours_kept_above_100m": {
+      "value": 0.9994,
+      "concept": "precision_audit_fp1_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa1_output_relative_error": {
+      "value": 0.004,
+      "concept": "precision_audit_sa1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa2_output_relative_error": {
+      "value": 0.0055,
+      "concept": "precision_audit_sa2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.sa3_output_relative_error": {
+      "value": 0.0028,
+      "concept": "precision_audit_sa3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp3_output_relative_error": {
+      "value": 0.0027,
+      "concept": "precision_audit_fp3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp2_output_relative_error": {
+      "value": 0.0035,
+      "concept": "precision_audit_fp2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.fp1_output_relative_error": {
+      "value": 0.0041,
+      "concept": "precision_audit_fp1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.head_output_relative_error": {
+      "value": 0.0031,
+      "concept": "precision_audit_head_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.class_agreement": {
+      "value": 0.9985,
+      "concept": "precision_audit_class_agreement",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.after.class_agreement_above_100m": {
+      "value": 0.9972,
+      "concept": "precision_audit_class_agreement_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.sa1_neighbours_kept": {
+      "value": 0.999,
+      "concept": "precision_audit_sa1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.sa1_neighbours_kept_above_100m": {
+      "value": 0.9979,
+      "concept": "precision_audit_sa1_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.sa2_neighbours_kept": {
+      "value": 0.9998,
+      "concept": "precision_audit_sa2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.sa2_neighbours_kept_above_100m": {
+      "value": 0.9997,
+      "concept": "precision_audit_sa2_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.sa3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.sa3_neighbours_kept_above_100m": {
+      "value": 0.9999,
+      "concept": "precision_audit_sa3_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.fp3_neighbours_kept": {
+      "value": 0.9999,
+      "concept": "precision_audit_fp3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.fp3_neighbours_kept_above_100m": {
+      "value": 0.9998,
+      "concept": "precision_audit_fp3_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.fp2_neighbours_kept": {
+      "value": 0.9998,
+      "concept": "precision_audit_fp2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.fp2_neighbours_kept_above_100m": {
+      "value": 0.9995,
+      "concept": "precision_audit_fp2_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.fp1_neighbours_kept": {
+      "value": 0.9987,
+      "concept": "precision_audit_fp1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.financial.fp32_uncentred.fp1_neighbours_kept_above_100m": {
+      "value": 0.9973,
+      "concept": "precision_audit_fp1_neighbours_kept_above_100m",
+      "population": {
+        "city": "san_francisco",
+        "split": "financial",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.sa1_neighbours_kept": {
+      "value": 0.9256,
+      "concept": "precision_audit_sa1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.sa2_neighbours_kept": {
+      "value": 0.9862,
+      "concept": "precision_audit_sa2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.sa3_neighbours_kept": {
+      "value": 0.9969,
+      "concept": "precision_audit_sa3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.fp3_neighbours_kept": {
+      "value": 0.9912,
+      "concept": "precision_audit_fp3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.fp2_neighbours_kept": {
+      "value": 0.9632,
+      "concept": "precision_audit_fp2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.fp1_neighbours_kept": {
+      "value": 0.8905,
+      "concept": "precision_audit_fp1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.sa1_output_relative_error": {
+      "value": 0.0802,
+      "concept": "precision_audit_sa1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.sa2_output_relative_error": {
+      "value": 0.1077,
+      "concept": "precision_audit_sa2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.sa3_output_relative_error": {
+      "value": 0.0772,
+      "concept": "precision_audit_sa3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.fp3_output_relative_error": {
+      "value": 0.1218,
+      "concept": "precision_audit_fp3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.fp2_output_relative_error": {
+      "value": 0.1332,
+      "concept": "precision_audit_fp2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.fp1_output_relative_error": {
+      "value": 0.153,
+      "concept": "precision_audit_fp1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.head_output_relative_error": {
+      "value": 0.0901,
+      "concept": "precision_audit_head_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.before.class_agreement": {
+      "value": 0.9798,
+      "concept": "precision_audit_class_agreement",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:before",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.sa1_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.sa2_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.sa3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.fp3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.fp2_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.fp1_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.sa1_output_relative_error": {
+      "value": 0.0024,
+      "concept": "precision_audit_sa1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.sa2_output_relative_error": {
+      "value": 0.0033,
+      "concept": "precision_audit_sa2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.sa3_output_relative_error": {
+      "value": 0.0014,
+      "concept": "precision_audit_sa3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.fp3_output_relative_error": {
+      "value": 0.003,
+      "concept": "precision_audit_fp3_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.fp2_output_relative_error": {
+      "value": 0.003,
+      "concept": "precision_audit_fp2_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.fp1_output_relative_error": {
+      "value": 0.0036,
+      "concept": "precision_audit_fp1_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.head_output_relative_error": {
+      "value": 0.0022,
+      "concept": "precision_audit_head_output_relative_error",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.after.class_agreement": {
+      "value": 0.9998,
+      "concept": "precision_audit_class_agreement",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:after",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.fp32_uncentred.sa1_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.fp32_uncentred.sa2_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.fp32_uncentred.sa3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_sa3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.fp32_uncentred.fp3_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp3_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.fp32_uncentred.fp2_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp2_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "precision.sunset.fp32_uncentred.fp1_neighbours_kept": {
+      "value": 1.0,
+      "concept": "precision_audit_fp1_neighbours_kept",
+      "population": {
+        "city": "san_francisco",
+        "split": "sunset",
+        "sampling": "voxel",
+        "subset": "tallest_blocks:fp32_uncentred",
+        "taxonomy": "none",
+        "variant": "m0phase4_seedA"
+      },
+      "source": "precision_audit.json",
+      "doc": "Phase 4 M0 seed A on the tallest blocks, against an exact pass",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.ground.median": {
+      "value": 0.9279,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.ground.min": {
+      "value": 0.9251,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.ground.max": {
+      "value": 0.9285,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.vegetation.median": {
+      "value": 0.4709,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.vegetation.min": {
+      "value": 0.4703,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.vegetation.max": {
+      "value": 0.4719,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.car.median": {
+      "value": 0.5976,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.car.min": {
+      "value": 0.5972,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.car.max": {
+      "value": 0.6224,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.powerline.median": {
+      "value": 0.8664,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.powerline.min": {
+      "value": 0.8645,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.powerline.max": {
+      "value": 0.8812,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.fence.median": {
+      "value": 0.4348,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.fence.min": {
+      "value": 0.4311,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.fence.max": {
+      "value": 0.4379,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.tree.median": {
+      "value": 0.8996,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.tree.min": {
+      "value": 0.8985,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.tree.max": {
+      "value": 0.902,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.pickup.median": {
+      "value": 0.2075,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.pickup.min": {
+      "value": 0.2027,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.pickup.max": {
+      "value": 0.2287,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.van-truck.median": {
+      "value": 0.2667,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.van-truck.min": {
+      "value": 0.2542,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.van-truck.max": {
+      "value": 0.2891,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.heavy-duty.median": {
+      "value": 0.0245,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.heavy-duty.min": {
+      "value": 0.0208,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.heavy-duty.max": {
+      "value": 0.0481,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.utility-pole.median": {
+      "value": 0.2026,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.utility-pole.min": {
+      "value": 0.1913,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.utility-pole.max": {
+      "value": 0.2174,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.light-pole.median": {
+      "value": 0.1748,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.light-pole.min": {
+      "value": 0.1502,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.light-pole.max": {
+      "value": 0.1787,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.traffic-pole.median": {
+      "value": 0.2569,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.traffic-pole.min": {
+      "value": 0.2218,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.traffic-pole.max": {
+      "value": 0.2639,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.habitat.median": {
+      "value": 0.8717,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.habitat.min": {
+      "value": 0.8692,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.habitat.max": {
+      "value": 0.8746,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.complex.median": {
+      "value": 0.6372,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.complex.min": {
+      "value": 0.6309,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.complex.max": {
+      "value": 0.6438,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.annex.median": {
+      "value": 0.4084,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.annex.min": {
+      "value": 0.4079,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0.surrey.test.iou.annex.max": {
+      "value": 0.4194,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m0_seeds"
+      },
+      "source": "seeds_m0.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.ground.median": {
+      "value": 0.9142,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.ground.min": {
+      "value": 0.9113,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.ground.max": {
+      "value": 0.9188,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.vegetation.median": {
+      "value": 0.427,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.vegetation.min": {
+      "value": 0.427,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.vegetation.max": {
+      "value": 0.4289,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.car.median": {
+      "value": 0.5237,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.car.min": {
+      "value": 0.4922,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.car.max": {
+      "value": 0.554,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.powerline.median": {
+      "value": 0.8142,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.powerline.min": {
+      "value": 0.773,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.powerline.max": {
+      "value": 0.8511,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.fence.median": {
+      "value": 0.3774,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.fence.min": {
+      "value": 0.3723,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.fence.max": {
+      "value": 0.3838,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.tree.median": {
+      "value": 0.8767,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.tree.min": {
+      "value": 0.8756,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.tree.max": {
+      "value": 0.883,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.pickup.median": {
+      "value": 0.1446,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.pickup.min": {
+      "value": 0.1398,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.pickup.max": {
+      "value": 0.1502,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.van-truck.median": {
+      "value": 0.1749,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.van-truck.min": {
+      "value": 0.1743,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.van-truck.max": {
+      "value": 0.2119,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.heavy-duty.median": {
+      "value": 0.0,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.heavy-duty.min": {
+      "value": 0.0,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.heavy-duty.max": {
+      "value": 0.0003,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.utility-pole.median": {
+      "value": 0.1758,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.utility-pole.min": {
+      "value": 0.1608,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.utility-pole.max": {
+      "value": 0.2186,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.light-pole.median": {
+      "value": 0.072,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.light-pole.min": {
+      "value": 0.0691,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.light-pole.max": {
+      "value": 0.1108,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.traffic-pole.median": {
+      "value": 0.0827,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.traffic-pole.min": {
+      "value": 0.0826,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.traffic-pole.max": {
+      "value": 0.0961,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.habitat.median": {
+      "value": 0.7242,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.habitat.min": {
+      "value": 0.6676,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.habitat.max": {
+      "value": 0.7265,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.complex.median": {
+      "value": 0.3933,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.complex.min": {
+      "value": 0.3737,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.complex.max": {
+      "value": 0.4037,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.annex.median": {
+      "value": 0.2631,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.annex.min": {
+      "value": 0.2344,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m0prime.surrey.test.iou.annex.max": {
+      "value": 0.273,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m0prime_seeds"
+      },
+      "source": "seeds_m0prime.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.ground.median": {
+      "value": 0.8977,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.ground.min": {
+      "value": 0.8912,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.ground.max": {
+      "value": 0.9098,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:ground",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.vegetation.median": {
+      "value": 0.4072,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.vegetation.min": {
+      "value": 0.387,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.vegetation.max": {
+      "value": 0.4165,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:vegetation",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.car.median": {
+      "value": 0.5547,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.car.min": {
+      "value": 0.5432,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.car.max": {
+      "value": 0.5722,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:car",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.powerline.median": {
+      "value": 0.792,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.powerline.min": {
+      "value": 0.7578,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.powerline.max": {
+      "value": 0.8005,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:powerline",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.fence.median": {
+      "value": 0.3743,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.fence.min": {
+      "value": 0.3733,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.fence.max": {
+      "value": 0.4059,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:fence",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.tree.median": {
+      "value": 0.8604,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.tree.min": {
+      "value": 0.8361,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.tree.max": {
+      "value": 0.8779,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:tree",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.pickup.median": {
+      "value": 0.1103,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.pickup.min": {
+      "value": 0.1022,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.pickup.max": {
+      "value": 0.1205,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:pickup",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.van-truck.median": {
+      "value": 0.1937,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.van-truck.min": {
+      "value": 0.1845,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.van-truck.max": {
+      "value": 0.2099,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:van-truck",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.heavy-duty.median": {
+      "value": 0.0,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.heavy-duty.min": {
+      "value": 0.0,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.heavy-duty.max": {
+      "value": 0.037,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:heavy-duty",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.utility-pole.median": {
+      "value": 0.1663,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.utility-pole.min": {
+      "value": 0.0968,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.utility-pole.max": {
+      "value": 0.1959,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:utility-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.light-pole.median": {
+      "value": 0.0487,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.light-pole.min": {
+      "value": 0.0433,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.light-pole.max": {
+      "value": 0.1459,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:light-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.traffic-pole.median": {
+      "value": 0.1508,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.traffic-pole.min": {
+      "value": 0.1473,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.traffic-pole.max": {
+      "value": 0.1537,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:traffic-pole",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.habitat.median": {
+      "value": 0.7291,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.habitat.min": {
+      "value": 0.7279,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.habitat.max": {
+      "value": 0.7614,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:habitat",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.complex.median": {
+      "value": 0.398,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.complex.min": {
+      "value": 0.3586,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.complex.max": {
+      "value": 0.4137,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:complex",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.annex.median": {
+      "value": 0.2022,
+      "concept": "iou_median_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.annex.min": {
+      "value": 0.174,
+      "concept": "iou_min_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
+    "seeds.m1.surrey.test.iou.annex.max": {
+      "value": 0.228,
+      "concept": "iou_max_over_seeds",
+      "population": {
+        "city": "surrey",
+        "split": "test",
+        "sampling": "voxel",
+        "subset": "class:annex",
+        "taxonomy": "fine15",
+        "variant": "m1_seeds"
+      },
+      "source": "seeds_m1.json",
+      "doc": "",
+      "error": null
+    },
     "notveg.sf.baybridge.points": {
       "value": 132710,
       "concept": "not_vegetation_core_points",
