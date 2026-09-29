@@ -10,11 +10,14 @@ scripts/investigations/ answered one question each and are not part of this chai
     python scripts/pipeline.py --run all       # everything, in order
 
 Downloading, training and prediction take hours and want an NVIDIA card; the last steps do not. On a
-rented card the same steps run through scripts/pipeline/phase4_chain.sh (docs/phase4_criteria.md).
+rented card the training and prediction run through scripts/pipeline/phase6_chain.sh
+(docs/phase6_criteria.md).
 
-Only M0, small and large, is trained here. The four channel checkpoint and the M0prime and M1 pairs come
-from the earlier round and are predicted again, not trained: they were trained with class weights from
-all 40 tiles and on Swiss water that the flag filter now removes, which this code no longer does.
+Only M0, small and large, is trained and predicted here. Every other model's predictions were made
+before the neighbour search ran in fp32 and are kept as they were (the step kept_predictions): Phase 4's
+M0 as m0phase4, the first round's M0prime and M1 pairs, and the four channel checkpoint. This code would
+predict them differently, and the first round's models were also trained with class weights from all 40
+tiles and on Swiss water that the flag filter now removes.
 """
 
 from __future__ import annotations
@@ -31,11 +34,17 @@ ROOT = Path(__file__).resolve().parents[1]
 PY = sys.executable
 P = "scripts/pipeline"
 
-RECIPES = {"m0": "A B C", "m0prime": "A B C", "m1": "A B C"}
+RECIPES = ["m0", "m0phase4", "m0prime", "m1"]
 AREAS = ["financial", "soma", "mission", "sunset", "ggpark", "embarcadero", "baybridge", "steep"]
 SEED = {"A": 0, "B": 1, "C": 2}
-VARIANTS = [f"{r}_seed{s}" for r, seeds in RECIPES.items() for s in seeds.split()]
-PREDICTED = [*VARIANTS, "m0_big_seedA"]
+PREDICTED = ["m0_seedA", "m0_seedB", "m0_seedC", "m0_big_seedA"]
+# Predicted in Phase 4 with the fp16 neighbour search (commit 2072357 holds their scores and
+# data/artifacts/logs/phase4_outputs.sha256 their hashes) and kept: returns_ood is the four channel
+# checkpoint on its input as delivered, ret0 the same with that channel set to 0.
+KEPT = [f"{r}_seed{s}" for r in ("m0phase4", "m0prime", "m1") for s in "ABC"] + [
+    "returns_ood",
+    "ret0",
+]
 # Filled in when a step runs, from the number data/artifacts/votes.json holds.
 VOTES = "{votes}"
 BIG = "--recipe m0 --seed 0 --width 512 --batch 8 --lr 0.004 --steps 6000"
@@ -230,25 +239,27 @@ STEPS = [
                 f"--ckpt data/checkpoints/{v}.pt --out-dir data/predictions/{v} --votes {VOTES}",
             )
             for v in PREDICTED
-        ]
-        + [
-            py(
-                "predict_cache.py",
-                f"--ckpt data/checkpoints/dayton.pt --out-dir data/predictions --votes {VOTES}",
-            ),
-            py(
-                "predict_cache.py",
-                "--ckpt data/checkpoints/dayton.pt --out-dir data/predictions/ret0 "
-                f"--ret-value 0 --votes {VOTES}",
-            ),
         ],
         ["data/checkpoints/", "data/artifacts/votes.json", "data/prep/target/", "data/prep/dales/"],
         ["data/predictions/<variant>/"],
         "GPU",
     ),
     Step(
+        "kept_predictions",
+        [],
+        ["the Phase 4 run on the rented card, with the fp16 neighbour search"],
+        [
+            "data/predictions/phase4/m0_seed<A, B, C>/",
+            "data/predictions/m0prime_seed<A, B, C>/",
+            "data/predictions/m1_seed<A, B, C>/",
+            "data/predictions/manifest.json",
+            "data/predictions/ret0/",
+        ],
+        "not run here; kept as made before the fix, each read only against models of its own search",
+    ),
+    Step(
         "score_sf",
-        [py("score_variant.py", f"--variant {v}") for v in [*PREDICTED, "returns_ood", "ret0"]],
+        [py("score_variant.py", f"--variant {v}") for v in [*PREDICTED, *KEPT]],
         [
             "data/predictions/",
             "data/reference/",
@@ -268,11 +279,12 @@ STEPS = [
     Step(
         "compare",
         [
+            py("compare_recipes.py", "--new m0 --old m0phase4"),
             py("compare_recipes.py", "--new m1 --old m0prime"),
         ],
         ["data/artifacts/seeds_*.json"],
-        ["data/artifacts/compare_m1_vs_m0prime.json"],
-        "the old pair against itself only, never against the new M0",
+        ["data/artifacts/compare_m0_vs_m0phase4.json", "data/artifacts/compare_m1_vs_m0prime.json"],
+        "M0 against Phase 4's M0, and the old pair against itself only",
     ),
     Step(
         "quantities",

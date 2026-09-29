@@ -36,7 +36,16 @@ for s in A B C; do
     cp "data/artifacts/train_m0_seed$s.json" "data/artifacts/train_m0phase4_seed$s.json"
   fi
 done
-cp "$STAGE"/data/artifacts/*.json data/artifacts/
+# Phase 4's vote count stays readable beside Phase 6's: the kept predictions were made with it.
+if [ -f data/artifacts/votes.json ] && [ ! -f data/artifacts/votes_phase4.json ]; then
+  cp data/artifacts/votes.json data/artifacts/votes_phase4.json
+fi
+# rented_setup.json stays Phase 4's, the first run of the preparation off the laptop, which is what it
+# says it records; the Phase 6 box is in each training artefact and in the chain's log.
+for f in "$STAGE"/data/artifacts/*.json; do
+  [ "$(basename "$f")" = rented_setup.json ] || cp "$f" data/artifacts/
+done
+cp "$STAGE/phase6_outputs.sha256" data/phase6_inputs.sha256 data/artifacts/logs/
 mkdir -p data/logs
 cp "$STAGE"/data/logs/* data/logs/
 echo "Phase 6 outputs in place; Phase 4's are in data/checkpoints/phase4 and data/predictions/phase4"
