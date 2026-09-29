@@ -84,7 +84,8 @@ def main() -> int:
     out_dir = args.out_dir
 
     dev = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
-    net, blob, channels = load_checkpoint(args.ckpt, dev, args.width)
+    # The project's own training checkpoints, which carry more than weights.
+    net, blob, channels = load_checkpoint(args.ckpt, dev, args.width, allow_pickle=True)
     n_out = int(blob["model"]["head.4.bias"].shape[0])
     digest = checkpoint_digest(args.ckpt)
     print(

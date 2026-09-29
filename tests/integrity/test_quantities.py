@@ -37,3 +37,10 @@ def test_the_committed_quantities_file_is_current(values):
     then = {k: v["value"] for k, v in committed.items()}
     drift = {k: (then.get(k), now[k]) for k in now if then.get(k) != now[k]}
     assert not drift, f"quantities.json is stale, rebuild it: {drift}"
+    # A quantity registers only when its artefact exists, so a deleted artefact would drop its
+    # quantities from a fresh build while the committed file, and every page and README figure
+    # read from it, still carried them.
+    gone = sorted(set(then) - set(now))
+    assert not gone, (
+        f"quantities in quantities.json that no artefact produces any more: {gone[:20]}"
+    )

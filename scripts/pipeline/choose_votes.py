@@ -55,7 +55,7 @@ def main() -> int:
     ap.add_argument("--device", default=None)
     args = ap.parse_args()
     dev = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
-    net, _, _ = load_checkpoint(args.ckpt, dev)
+    net, _, _ = load_checkpoint(args.ckpt, dev, allow_pickle=True)
     coarse = coarse_lookup()
     names = sorted(
         t["name"]

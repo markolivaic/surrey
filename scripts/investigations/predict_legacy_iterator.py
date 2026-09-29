@@ -38,7 +38,7 @@ PREP_ARTIFACT = ROOT / "data" / "artifacts" / "prep_dales.json"
 
 def main() -> int:
     dev = "cuda" if torch.cuda.is_available() else "cpu"
-    net, blob, channels = load_checkpoint(CKPT, dev)
+    net, blob, channels = load_checkpoint(CKPT, dev, allow_pickle=True)
     jobs = [
         ("surrey", t["name"], DALES_PREP / t["name"])
         for t in json.loads(PREP_ARTIFACT.read_text(encoding="utf-8"))["tiles"]

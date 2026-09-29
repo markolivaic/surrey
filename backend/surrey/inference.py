@@ -45,13 +45,28 @@ _PICKLE.load = pickle.load  # type: ignore[attr-defined]
 _PICKLE.loads = pickle.loads  # type: ignore[attr-defined]
 
 
-def load_checkpoint(path, dev: str, width: int | None = None):
+def load_checkpoint(path, dev: str, width: int | None = None, allow_pickle: bool = False):
     """A checkpoint as the network it was trained as: its head's size, so M1's seventeen outputs are
     never cut to fifteen, its channel count and its width. Returns the network in eval mode, the
-    stored blob and the channel count. A checkpoint that predates the channel option read four."""
+    stored blob and the channel count. A checkpoint that predates the channel option read four.
+
+    By default only weights and plain values are read (torch.load with weights_only=True), which is
+    what a file from elsewhere should get: the weights scripts/pipeline/export_weights.py writes. A
+    training checkpoint also carries the run's random states and arguments, which only unpickling
+    reads, and unpickling can run code; the project's own scripts pass allow_pickle=True for the
+    checkpoints they trained themselves."""
     from .model import SurreyNet
 
-    blob = torch.load(path, map_location=dev, weights_only=False, pickle_module=_PICKLE)
+    if allow_pickle:
+        blob = torch.load(path, map_location=dev, weights_only=False, pickle_module=_PICKLE)
+    else:
+        try:
+            blob = torch.load(path, map_location=dev, weights_only=True)
+        except pickle.UnpicklingError as e:
+            raise SystemExit(
+                f"{path} carries more than weights. Load it with allow_pickle=True only if it was "
+                "trained here, or read the weights file scripts/pipeline/export_weights.py writes."
+            ) from e
     args = blob.get("args") or {}
     channels = int(args.get("channels") or 4)
     width = int(width or args.get("width") or 128)

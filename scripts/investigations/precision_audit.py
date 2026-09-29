@@ -133,7 +133,7 @@ def main() -> int:
         raise SystemExit(
             "this measures the CUDA autocast path the models ran on; it needs a CUDA card"
         )
-    net, _blob, channels = load_checkpoint(CKPT, "cuda")
+    net, _blob, channels = load_checkpoint(CKPT, "cuda", allow_pickle=True)
     net.eval()
     result = {"checkpoint": CKPT.relative_to(ROOT).as_posix(), "tall_m": TALL_M, "areas": {}}
     for area, n in AREAS.items():
