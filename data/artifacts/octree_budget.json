@@ -34,11 +34,11 @@
         "files": {
           "hierarchy.bin": 46530,
           "metadata.json": 3004,
-          "octree.bin": 37572566
+          "octree.bin": 37657703
         },
-        "bytes": 37622100,
+        "bytes": 37707237,
         "seconds": 4.1,
-        "bytes_per_point": 8.484
+        "bytes_per_point": 8.503
       },
       "classes_present": {
         "returns_ood": {
@@ -69,21 +69,21 @@
           "14": 4665
         },
         "m0_seedA": {
-          "0": 2914872,
-          "1": 128580,
-          "2": 18181,
-          "3": 9783,
-          "4": 30328,
-          "5": 166793,
-          "6": 4338,
-          "7": 34897,
-          "8": 2725,
-          "9": 24649,
-          "10": 6104,
-          "11": 5410,
-          "12": 3981,
-          "13": 1079697,
-          "14": 4148
+          "0": 3163796,
+          "1": 152644,
+          "2": 28654,
+          "3": 16506,
+          "4": 45735,
+          "5": 160818,
+          "6": 6057,
+          "7": 32344,
+          "8": 6875,
+          "9": 48958,
+          "10": 3989,
+          "11": 7118,
+          "12": 5492,
+          "13": 748118,
+          "14": 7382
         },
         "m1_seedA": {
           "0": 2441810,
@@ -133,16 +133,16 @@
         "files": {
           "hierarchy.bin": 46530,
           "metadata.json": 1131,
-          "octree.bin": 19815419
+          "octree.bin": 19815422
         },
-        "bytes": 19863080,
+        "bytes": 19863083,
         "seconds": 4.1,
         "bytes_per_point": 4.479
       },
       "marginal_bytes_per_point": {
         "position": 2.811,
         "rgb": 1.668,
-        "per_variant_class_and_confidence": 1.001
+        "per_variant_class_and_confidence": 1.006
       }
     },
     "ggpark": {
@@ -179,11 +179,11 @@
         "files": {
           "hierarchy.bin": 88946,
           "metadata.json": 2996,
-          "octree.bin": 71871307
+          "octree.bin": 72106340
         },
-        "bytes": 71963249,
-        "seconds": 10.1,
-        "bytes_per_point": 7.987
+        "bytes": 72198282,
+        "seconds": 11.1,
+        "bytes_per_point": 8.013
       },
       "classes_present": {
         "returns_ood": {
@@ -214,20 +214,20 @@
           "14": 3453
         },
         "m0_seedA": {
-          "0": 3068312,
-          "1": 1049301,
-          "2": 384,
-          "3": 2115,
-          "4": 341,
-          "5": 4818441,
-          "7": 90,
-          "8": 4,
-          "9": 7545,
-          "10": 4460,
-          "11": 66,
-          "12": 2230,
-          "13": 54822,
-          "14": 1913
+          "0": 3059432,
+          "1": 1062670,
+          "2": 375,
+          "3": 3949,
+          "4": 582,
+          "5": 4821104,
+          "7": 384,
+          "8": 14,
+          "9": 10004,
+          "10": 5800,
+          "11": 129,
+          "12": 4147,
+          "13": 37472,
+          "14": 3962
         },
         "m1_seedA": {
           "0": 2963240,
@@ -279,13 +279,13 @@
           "octree.bin": 40798321
         },
         "bytes": 40888394,
-        "seconds": 8.1,
+        "seconds": 9.1,
         "bytes_per_point": 4.538
       },
       "marginal_bytes_per_point": {
         "position": 2.998,
         "rgb": 1.54,
-        "per_variant_class_and_confidence": 0.862
+        "per_variant_class_and_confidence": 0.869
       }
     },
     "5135_54430": {
@@ -318,11 +318,11 @@
         "files": {
           "hierarchy.bin": 71170,
           "metadata.json": 2855,
-          "octree.bin": 60281379
+          "octree.bin": 60257592
         },
-        "bytes": 60355404,
-        "seconds": 7.1,
-        "bytes_per_point": 6.132
+        "bytes": 60331617,
+        "seconds": 8.1,
+        "bytes_per_point": 6.129
       },
       "classes_present": {
         "returns_ood": {
@@ -360,21 +360,21 @@
           "14": 35139
         },
         "m0_seedA": {
-          "0": 4729287,
-          "1": 430637,
-          "2": 96545,
-          "3": 328,
-          "4": 84516,
-          "5": 2792325,
-          "6": 11934,
-          "7": 5227,
-          "8": 333,
-          "9": 217,
-          "10": 2095,
-          "11": 628,
-          "12": 1642446,
-          "13": 7856,
-          "14": 38776
+          "0": 4723845,
+          "1": 428094,
+          "2": 98080,
+          "3": 337,
+          "4": 84290,
+          "5": 2799829,
+          "6": 12899,
+          "7": 5527,
+          "8": 534,
+          "9": 713,
+          "10": 1467,
+          "11": 751,
+          "12": 1641626,
+          "13": 6854,
+          "14": 38304
         },
         "m1_seedA": {
           "0": 4685799,
@@ -405,9 +405,9 @@
         "files": {
           "hierarchy.bin": 71170,
           "metadata.json": 936,
-          "octree.bin": 29822829
+          "octree.bin": 29822813
         },
-        "bytes": 29894935,
+        "bytes": 29894919,
         "seconds": 6.1,
         "bytes_per_point": 3.037
       },
@@ -431,7 +431,7 @@
       "marginal_bytes_per_point": {
         "position": 3.037,
         "rgb": 0.0,
-        "per_variant_class_and_confidence": 0.774
+        "per_variant_class_and_confidence": 0.773
       }
     },
     "baybridge": {
@@ -464,11 +464,11 @@
         "files": {
           "hierarchy.bin": 34474,
           "metadata.json": 2988,
-          "octree.bin": 24714245
+          "octree.bin": 24891669
         },
-        "bytes": 24751707,
+        "bytes": 24929131,
         "seconds": 3.1,
-        "bytes_per_point": 8.066
+        "bytes_per_point": 8.124
       },
       "classes_present": {
         "returns_ood": {
@@ -497,19 +497,21 @@
           "14": 83
         },
         "m0_seedA": {
-          "0": 2295756,
-          "1": 5410,
-          "3": 18084,
-          "4": 749,
-          "5": 22763,
-          "7": 540,
-          "8": 59,
-          "9": 48432,
-          "10": 332,
-          "11": 222,
-          "12": 47,
-          "13": 676087,
-          "14": 40
+          "0": 2590035,
+          "1": 36540,
+          "2": 7831,
+          "3": 7716,
+          "4": 18230,
+          "5": 10847,
+          "6": 1797,
+          "7": 6303,
+          "8": 455,
+          "9": 92277,
+          "10": 3029,
+          "11": 209,
+          "12": 176,
+          "13": 293052,
+          "14": 24
         },
         "m1_seedA": {
           "0": 2086564,
@@ -559,13 +561,13 @@
           "octree.bin": 13695122
         },
         "bytes": 13730720,
-        "seconds": 3.1,
+        "seconds": 3.0,
         "bytes_per_point": 4.475
       },
       "marginal_bytes_per_point": {
         "position": 2.793,
         "rgb": 1.682,
-        "per_variant_class_and_confidence": 0.898
+        "per_variant_class_and_confidence": 0.912
       }
     },
     "financial": {
@@ -602,11 +604,11 @@
         "files": {
           "hierarchy.bin": 88858,
           "metadata.json": 3006,
-          "octree.bin": 61881889
+          "octree.bin": 62476636
         },
-        "bytes": 61973753,
-        "seconds": 7.1,
-        "bytes_per_point": 8.273
+        "bytes": 62568500,
+        "seconds": 8.2,
+        "bytes_per_point": 8.352
       },
       "classes_present": {
         "returns_ood": {
@@ -638,21 +640,21 @@
           "14": 7443
         },
         "m0_seedA": {
-          "0": 2122265,
-          "1": 273550,
-          "2": 45643,
-          "3": 470122,
-          "4": 22598,
-          "5": 365911,
-          "6": 4869,
-          "7": 32119,
-          "8": 364,
-          "9": 570839,
-          "10": 12567,
-          "11": 4678,
-          "12": 20845,
-          "13": 3537640,
-          "14": 7491
+          "0": 2364051,
+          "1": 366698,
+          "2": 46938,
+          "3": 33819,
+          "4": 41166,
+          "5": 324059,
+          "6": 4340,
+          "7": 44446,
+          "8": 1732,
+          "9": 407113,
+          "10": 7562,
+          "11": 3803,
+          "12": 48882,
+          "13": 3777883,
+          "14": 19009
         },
         "m1_seedA": {
           "0": 1988581,
@@ -711,7 +713,7 @@
       "marginal_bytes_per_point": {
         "position": 2.971,
         "rgb": 1.385,
-        "per_variant_class_and_confidence": 0.979
+        "per_variant_class_and_confidence": 0.999
       }
     },
     "mission": {
@@ -748,11 +750,11 @@
         "files": {
           "hierarchy.bin": 54406,
           "metadata.json": 2994,
-          "octree.bin": 40090797
+          "octree.bin": 40140028
         },
-        "bytes": 40148197,
-        "seconds": 4.1,
-        "bytes_per_point": 8.858
+        "bytes": 40197428,
+        "seconds": 5.1,
+        "bytes_per_point": 8.869
       },
       "classes_present": {
         "returns_ood": {
@@ -783,21 +785,21 @@
           "14": 34476
         },
         "m0_seedA": {
-          "0": 2002599,
-          "1": 394269,
-          "2": 74808,
-          "3": 3860,
-          "4": 43030,
-          "5": 442623,
-          "6": 16189,
-          "7": 58829,
-          "8": 545,
-          "9": 2436,
-          "10": 4766,
-          "11": 2449,
-          "12": 254117,
-          "13": 1197632,
-          "14": 34029
+          "0": 2033146,
+          "1": 373094,
+          "2": 72271,
+          "3": 4103,
+          "4": 47160,
+          "5": 457992,
+          "6": 16598,
+          "7": 60355,
+          "8": 2548,
+          "9": 5381,
+          "10": 2225,
+          "11": 2135,
+          "12": 235257,
+          "13": 1176405,
+          "14": 43511
         },
         "m1_seedA": {
           "0": 1894865,
@@ -847,16 +849,16 @@
         "files": {
           "hierarchy.bin": 54406,
           "metadata.json": 1125,
-          "octree.bin": 20633294
+          "octree.bin": 20633298
         },
-        "bytes": 20688825,
+        "bytes": 20688829,
         "seconds": 4.1,
         "bytes_per_point": 4.565
       },
       "marginal_bytes_per_point": {
         "position": 2.952,
         "rgb": 1.613,
-        "per_variant_class_and_confidence": 1.073
+        "per_variant_class_and_confidence": 1.076
       }
     },
     "soma": {
@@ -893,11 +895,11 @@
         "files": {
           "hierarchy.bin": 58784,
           "metadata.json": 2992,
-          "octree.bin": 39577881
+          "octree.bin": 39655401
         },
-        "bytes": 39639657,
+        "bytes": 39717177,
         "seconds": 5.1,
-        "bytes_per_point": 8.764
+        "bytes_per_point": 8.781
       },
       "classes_present": {
         "returns_ood": {
@@ -927,21 +929,21 @@
           "14": 10680
         },
         "m0_seedA": {
-          "0": 1896041,
-          "1": 273756,
-          "2": 58424,
-          "3": 2039,
-          "4": 31853,
-          "5": 372630,
-          "6": 4580,
-          "7": 12708,
-          "8": 313,
-          "9": 7003,
-          "10": 5022,
-          "11": 3978,
-          "12": 66574,
-          "13": 1778915,
-          "14": 9136
+          "0": 1917073,
+          "1": 278022,
+          "2": 56895,
+          "3": 2110,
+          "4": 35024,
+          "5": 379231,
+          "6": 4804,
+          "7": 16074,
+          "8": 554,
+          "9": 11088,
+          "10": 2586,
+          "11": 4080,
+          "12": 62477,
+          "13": 1741811,
+          "14": 11143
         },
         "m1_seedA": {
           "0": 1701028,
@@ -991,16 +993,16 @@
         "files": {
           "hierarchy.bin": 58784,
           "metadata.json": 1124,
-          "octree.bin": 20918060
+          "octree.bin": 20918058
         },
-        "bytes": 20977968,
+        "bytes": 20977966,
         "seconds": 4.1,
         "bytes_per_point": 4.638
       },
       "marginal_bytes_per_point": {
         "position": 2.969,
         "rgb": 1.669,
-        "per_variant_class_and_confidence": 1.031
+        "per_variant_class_and_confidence": 1.036
       }
     },
     "steep": {
@@ -1037,11 +1039,11 @@
         "files": {
           "hierarchy.bin": 61842,
           "metadata.json": 2992,
-          "octree.bin": 46841697
+          "octree.bin": 47078250
         },
-        "bytes": 46906531,
+        "bytes": 47143084,
         "seconds": 6.1,
-        "bytes_per_point": 8.659
+        "bytes_per_point": 8.702
       },
       "classes_present": {
         "returns_ood": {
@@ -1071,21 +1073,21 @@
           "14": 10691
         },
         "m0_seedA": {
-          "0": 1390861,
-          "1": 751604,
-          "2": 68998,
-          "3": 6666,
-          "4": 18374,
-          "5": 378977,
-          "6": 1323,
-          "7": 7332,
-          "8": 2812,
-          "9": 6670,
-          "10": 7233,
-          "11": 2437,
-          "12": 59307,
-          "13": 2705970,
-          "14": 8762
+          "0": 1435664,
+          "1": 742280,
+          "2": 67090,
+          "3": 6610,
+          "4": 31178,
+          "5": 419021,
+          "6": 1607,
+          "7": 9059,
+          "8": 3284,
+          "9": 13661,
+          "10": 2475,
+          "11": 1688,
+          "12": 59721,
+          "13": 2612837,
+          "14": 11151
         },
         "m1_seedA": {
           "0": 1369808,
@@ -1144,7 +1146,7 @@
       "marginal_bytes_per_point": {
         "position": 2.967,
         "rgb": 1.54,
-        "per_variant_class_and_confidence": 1.038
+        "per_variant_class_and_confidence": 1.049
       }
     },
     "sunset": {
@@ -1181,11 +1183,11 @@
         "files": {
           "hierarchy.bin": 52184,
           "metadata.json": 2998,
-          "octree.bin": 47384524
+          "octree.bin": 47458314
         },
-        "bytes": 47439706,
+        "bytes": 47513496,
         "seconds": 5.1,
-        "bytes_per_point": 8.686
+        "bytes_per_point": 8.7
       },
       "classes_present": {
         "returns_ood": {
@@ -1215,21 +1217,21 @@
           "14": 37916
         },
         "m0_seedA": {
-          "0": 2426174,
-          "1": 902154,
-          "2": 118646,
-          "3": 6753,
-          "4": 93264,
-          "5": 288577,
-          "6": 3856,
-          "7": 5903,
-          "8": 90,
-          "9": 893,
-          "10": 6653,
-          "11": 5097,
-          "12": 75138,
-          "13": 1492459,
-          "14": 35975
+          "0": 2434007,
+          "1": 865100,
+          "2": 118320,
+          "3": 7141,
+          "4": 103303,
+          "5": 307040,
+          "6": 3036,
+          "7": 9486,
+          "8": 84,
+          "9": 1167,
+          "10": 5264,
+          "11": 5644,
+          "12": 84679,
+          "13": 1475921,
+          "14": 41440
         },
         "m1_seedA": {
           "0": 2413820,
@@ -1288,11 +1290,11 @@
       "marginal_bytes_per_point": {
         "position": 2.878,
         "rgb": 1.537,
-        "per_variant_class_and_confidence": 1.068
+        "per_variant_class_and_confidence": 1.071
       }
     }
   },
   "converter": "PotreeConverter 2.1.3, BSD-2-Clause, --encoding BROTLI",
   "costing_note": "position is measured with the constant LAS gps time field, the smallest attribute list the converter accepts; each marginal figure is the difference between two whole conversions",
-  "total_bytes": 430800304
+  "total_bytes": 432305952
 }

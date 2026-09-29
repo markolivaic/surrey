@@ -1,16 +1,16 @@
 {
   "seeds.m0.sf.ggpark.vegetation_headline.median": {
-    "value": 0.9722,
+    "value": 0.9726,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.vegetation_headline.min": {
-    "value": 0.9704,
+    "value": 0.9717,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.vegetation_headline.max": {
-    "value": 0.9724,
+    "value": 0.9757,
     "variant": "m0_seeds",
     "where": "card1"
   },
@@ -35,32 +35,32 @@
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.median": {
-    "value": 0.8468,
+    "value": 0.9429,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.min": {
-    "value": 0.8411,
+    "value": 0.9326,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.max": {
-    "value": 0.853,
+    "value": 0.9544,
     "variant": "m0_seeds",
     "where": "card1"
   },
   "seeds.m0.surrey.test.accuracy_from_prediction_cache.median": {
-    "value": 0.9285,
+    "value": 0.9283,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.accuracy_from_prediction_cache.min": {
-    "value": 0.9273,
+    "value": 0.9281,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.accuracy_from_prediction_cache.max": {
-    "value": 0.9288,
+    "value": 0.9285,
     "variant": "m0_seeds",
     "where": "card2"
   },
@@ -70,32 +70,32 @@
     "where": "card2"
   },
   "seeds.m0.surrey.test.miou_15.median": {
-    "value": 0.5233,
+    "value": 0.5203,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.miou_15.min": {
-    "value": 0.52,
+    "value": 0.5192,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.miou_15.max": {
-    "value": 0.527,
+    "value": 0.5253,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.miou_coarse.median": {
-    "value": 0.8162,
+    "value": 0.8128,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.miou_coarse.min": {
-    "value": 0.8125,
+    "value": 0.8089,
     "variant": "m0_seeds",
     "where": "card2"
   },
   "seeds.m0.surrey.test.miou_coarse.max": {
-    "value": 0.8164,
+    "value": 0.8138,
     "variant": "m0_seeds",
     "where": "card2"
   },
@@ -160,32 +160,32 @@
     "where": "card4"
   },
   "seeds.m0.claims.financial_lift.median": {
-    "value": 0.1456,
+    "value": 0.2156,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.financial_lift.min": {
-    "value": 0.1452,
+    "value": 0.2038,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.financial_lift.max": {
-    "value": 0.1972,
+    "value": 0.2186,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.financial.building_precision.median": {
-    "value": 0.7234,
+    "value": 0.746,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.financial.building_precision.min": {
-    "value": 0.7232,
+    "value": 0.7422,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.financial.building_precision.max": {
-    "value": 0.7401,
+    "value": 0.747,
     "variant": "m0_seeds",
     "where": "card4"
   },
@@ -195,17 +195,17 @@
     "where": "card4"
   },
   "seeds.m0.sf.financial.building_coverage.median": {
-    "value": 0.8248,
+    "value": 0.829,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.financial.building_coverage.min": {
-    "value": 0.8222,
+    "value": 0.8133,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.financial.building_coverage.max": {
-    "value": 0.8354,
+    "value": 0.8344,
     "variant": "m0_seeds",
     "where": "card4"
   },
@@ -219,78 +219,83 @@
     "variant": "m0_seeds",
     "where": "card4"
   },
+  "crs.sf.footprint_offset_global.areas_used": {
+    "value": 3,
+    "variant": "none",
+    "where": "card4"
+  },
   "seeds.m0.claims.other_built_median_lift.median": {
-    "value": 0.5884,
+    "value": 0.5834,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.other_built_median_lift.min": {
-    "value": 0.5808,
+    "value": 0.5812,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.claims.other_built_median_lift.max": {
-    "value": 0.5886,
+    "value": 0.5857,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "tall.sf.financial.m0_seeds.above_150m.called_pole.median": {
-    "value": 0.9469,
+    "value": 0.0305,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "tall.sf.financial.m0_seeds.above_150m.called_pole.min": {
-    "value": 0.82,
+    "value": 0.0131,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "tall.sf.financial.m0_seeds.above_150m.called_pole.max": {
-    "value": 0.9553,
+    "value": 0.036,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "tall.sf.financial.m0_seeds.above_150m.called_building.median": {
-    "value": 0.0414,
+    "value": 0.8424,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "tall.sf.financial.m0_seeds.above_150m.called_building.min": {
-    "value": 0.0386,
+    "value": 0.7665,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "tall.sf.financial.m0_seeds.above_150m.called_building.max": {
-    "value": 0.1717,
+    "value": 0.8519,
     "variant": "m0_seeds",
     "where": "card4"
   },
   "seeds.m0.sf.embarcadero.water_called_ground.median": {
-    "value": 0.9618,
+    "value": 0.9471,
     "variant": "m0_seeds",
     "where": "card5"
   },
   "seeds.m0.sf.embarcadero.water_called_ground.min": {
-    "value": 0.9089,
+    "value": 0.9186,
     "variant": "m0_seeds",
     "where": "card5"
   },
   "seeds.m0.sf.embarcadero.water_called_ground.max": {
-    "value": 0.9724,
+    "value": 0.988,
     "variant": "m0_seeds",
     "where": "card5"
   },
   "seeds.m0.sf.baybridge.bridge_deck_called_building.median": {
-    "value": 0.9983,
+    "value": 0.3631,
     "variant": "m0_seeds",
     "where": "card5"
   },
   "seeds.m0.sf.baybridge.bridge_deck_called_building.min": {
-    "value": 0.9982,
+    "value": 0.2432,
     "variant": "m0_seeds",
     "where": "card5"
   },
   "seeds.m0.sf.baybridge.bridge_deck_called_building.max": {
-    "value": 0.9984,
+    "value": 0.5152,
     "variant": "m0_seeds",
     "where": "card5"
   },
@@ -525,82 +530,82 @@
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.nocode.pole.points": {
-    "value": 12643,
+    "value": 12075,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.nocode.pole.share": {
-    "value": 0.0023,
+    "value": 0.0022,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.nocode.vehicle.points": {
-    "value": 128495,
+    "value": 130926,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.nocode.vehicle.share": {
-    "value": 0.0235,
+    "value": 0.024,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.nocode.fence.points": {
-    "value": 93264,
+    "value": 103303,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.nocode.fence.share": {
-    "value": 0.0171,
+    "value": 0.0189,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code2.points": {
-    "value": 2426174,
+    "value": 2434007,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code2.share": {
-    "value": 0.4442,
+    "value": 0.4457,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code4.points": {
-    "value": 902154,
+    "value": 865100,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code4.share": {
-    "value": 0.1652,
+    "value": 0.1584,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code5.points": {
-    "value": 288577,
+    "value": 307040,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code5.share": {
-    "value": 0.0528,
+    "value": 0.0562,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code6.points": {
-    "value": 1603572,
+    "value": 1602040,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code6.share": {
-    "value": 0.2936,
+    "value": 0.2933,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code14.points": {
-    "value": 6753,
+    "value": 7141,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.sunset.m0_seedA.code14.share": {
-    "value": 0.0012,
+    "value": 0.0013,
     "variant": "m0_seedA",
     "where": "hero"
   },
@@ -615,7 +620,7 @@
     "where": "hero"
   },
   "asprs.mission.m0_seedA.nocode.pole.points": {
-    "value": 9651,
+    "value": 9741,
     "variant": "m0_seedA",
     "where": "hero"
   },
@@ -625,67 +630,67 @@
     "where": "hero"
   },
   "asprs.mission.m0_seedA.nocode.vehicle.points": {
-    "value": 150371,
+    "value": 151772,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.nocode.vehicle.share": {
-    "value": 0.0332,
+    "value": 0.0335,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.nocode.fence.points": {
-    "value": 43030,
+    "value": 47160,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.nocode.fence.share": {
-    "value": 0.0095,
+    "value": 0.0104,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code2.points": {
-    "value": 2002599,
+    "value": 2033146,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code2.share": {
-    "value": 0.4419,
+    "value": 0.4486,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code4.points": {
-    "value": 394269,
+    "value": 373094,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code4.share": {
-    "value": 0.087,
+    "value": 0.0823,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code5.points": {
-    "value": 442623,
+    "value": 457992,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code5.share": {
-    "value": 0.0977,
+    "value": 0.1011,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code6.points": {
-    "value": 1485778,
+    "value": 1455173,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code6.share": {
-    "value": 0.3278,
+    "value": 0.3211,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.mission.m0_seedA.code14.points": {
-    "value": 3860,
+    "value": 4103,
     "variant": "m0_seedA",
     "where": "hero"
   },
@@ -705,82 +710,82 @@
     "where": "hero"
   },
   "asprs.financial.m0_seedA.nocode.pole.points": {
-    "value": 588084,
+    "value": 418478,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.nocode.pole.share": {
-    "value": 0.0785,
+    "value": 0.0559,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.nocode.vehicle.points": {
-    "value": 82995,
+    "value": 97456,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.nocode.vehicle.share": {
-    "value": 0.0111,
+    "value": 0.013,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.nocode.fence.points": {
-    "value": 22598,
+    "value": 41166,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.nocode.fence.share": {
-    "value": 0.003,
+    "value": 0.0055,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code2.points": {
-    "value": 2122265,
+    "value": 2364051,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code2.share": {
-    "value": 0.2833,
+    "value": 0.3156,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code4.points": {
-    "value": 273550,
+    "value": 366698,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code4.share": {
-    "value": 0.0365,
+    "value": 0.0489,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code5.points": {
-    "value": 365911,
+    "value": 324059,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code5.share": {
-    "value": 0.0488,
+    "value": 0.0433,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code6.points": {
-    "value": 3565976,
+    "value": 3845774,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code6.share": {
-    "value": 0.476,
+    "value": 0.5134,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code14.points": {
-    "value": 470122,
+    "value": 33819,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.financial.m0_seedA.code14.share": {
-    "value": 0.0628,
+    "value": 0.0045,
     "variant": "m0_seedA",
     "where": "hero"
   },
@@ -795,17 +800,17 @@
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.nocode.pole.points": {
-    "value": 12071,
+    "value": 15933,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.nocode.pole.share": {
-    "value": 0.0013,
+    "value": 0.0018,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.nocode.vehicle.points": {
-    "value": 478,
+    "value": 773,
     "variant": "m0_seedA",
     "where": "hero"
   },
@@ -815,62 +820,62 @@
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.nocode.fence.points": {
-    "value": 341,
+    "value": 582,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.nocode.fence.share": {
-    "value": 0.0,
+    "value": 0.0001,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code2.points": {
-    "value": 3068312,
+    "value": 3059432,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code2.share": {
-    "value": 0.3405,
+    "value": 0.3396,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code4.points": {
-    "value": 1049301,
+    "value": 1062670,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code4.share": {
-    "value": 0.1165,
+    "value": 0.1179,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code5.points": {
-    "value": 4818441,
+    "value": 4821104,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code5.share": {
-    "value": 0.5348,
+    "value": 0.5351,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code6.points": {
-    "value": 58965,
+    "value": 45581,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code6.share": {
-    "value": 0.0065,
+    "value": 0.0051,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code14.points": {
-    "value": 2115,
+    "value": 3949,
     "variant": "m0_seedA",
     "where": "hero"
   },
   "asprs.ggpark.m0_seedA.code14.share": {
-    "value": 0.0002,
+    "value": 0.0004,
     "variant": "m0_seedA",
     "where": "hero"
   }
