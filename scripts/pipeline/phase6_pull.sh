@@ -6,16 +6,30 @@
 #
 #   bash scripts/pipeline/phase6_pull.sh markolivaic/surrey-phase6
 #
-# The download uses the Hugging Face login on this machine, which only its owner puts there.
+# The download uses the Hugging Face login on this machine, which only its owner puts there. Where no
+# login is on the card, the outputs wait there in data/phase6_out with their hashes, and come over the
+# card's direct SSH port instead, never through the vast.ai SSH proxy:
+#
+#   bash scripts/pipeline/phase6_pull.sh --ssh 180.189.55.38 49736
 set -euo pipefail
-REPO=${1:?the Hugging Face dataset the card uploaded to}
 cd "$(dirname "$0")/../.."
-HF=.venv/Scripts/hf.exe
-[ -x "$HF" ] || HF=.venv/bin/hf
 STAGE=data/phase6_download
 MODELS=(m0_seedA m0_seedB m0_seedC m0_big_seedA)
 
-"$HF" download "$REPO" --repo-type dataset --local-dir "$STAGE"
+if [ "${1:-}" = "--ssh" ]; then
+  HOST=${2:?the card's public address}
+  PORT=${3:?the card's direct SSH port}
+  KEY=${SURREY_SSH_KEY:-$HOME/.ssh/vast_dayton}
+  rm -rf "$STAGE"
+  mkdir -p "$STAGE"
+  ssh -i "$KEY" -p "$PORT" "root@$HOST" "cd /workspace/surrey/data/phase6_out && tar -cf - ." |
+    tar -xf - -C "$STAGE"
+else
+  REPO=${1:?the Hugging Face dataset the card uploaded to, or --ssh HOST PORT}
+  HF=.venv/Scripts/hf.exe
+  [ -x "$HF" ] || HF=.venv/bin/hf
+  "$HF" download "$REPO" --repo-type dataset --local-dir "$STAGE"
+fi
 (cd "$STAGE" && sha256sum --quiet -c phase6_outputs.sha256)
 echo "every file matches the hash taken on the card"
 
