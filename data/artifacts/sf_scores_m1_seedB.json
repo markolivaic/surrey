@@ -1,6 +1,6 @@
 {
   "variant": "m1_seedB",
-  "variant_note": "DALES-2 and Swiss sub-tiles, water and bridge deck as classes, seed B",
+  "variant_note": "DALES-2 and Swiss sub-tiles, water and bridge deck as classes, fp16 neighbour search, seed B",
   "classes": 17,
   "votes": 4,
   "predictions_from": {
@@ -63,7 +63,7 @@
   "extrapolation_across_areas": {
     "financial": 0.0944,
     "other_built_areas": {
-      "embarcadero": 0.0364,
+      "embarcadero": 0.0641,
       "mission": 0.5137,
       "soma": 0.4624,
       "sunset": 0.6172
@@ -111,7 +111,7 @@
         "max_prob_p90": 0.9795,
         "max_prob_over_0_9": 0.5376,
         "max_prob_under_0_5": 0.0323,
-        "entropy_median": 0.1315
+        "entropy_median": 0.1257
       },
       "surrey_wrong": {
         "points": 9643361,
@@ -120,7 +120,7 @@
         "max_prob_p90": 0.7842,
         "max_prob_over_0_9": 0.025,
         "max_prob_under_0_5": 0.3369,
-        "entropy_median": 0.3845
+        "entropy_median": 0.3675
       }
     },
     "raised_not_ground_called_ground_rate_per_tile": [
@@ -384,33 +384,33 @@
             0.0,
             0.0
           ],
-          "eligible_points": 571432,
-          "predicted_building_points": 506247,
+          "eligible_points": 346263,
+          "predicted_building_points": 281606,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "global_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 571432,
-          "predicted_building_points": 506247,
+          "eligible_points": 346263,
+          "predicted_building_points": 281606,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "per_area_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 571432,
-          "predicted_building_points": 506247,
+          "eligible_points": 346263,
+          "predicted_building_points": 281606,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         }
       },
       "building_area_coverage_global_shift": {
@@ -426,7 +426,24 @@
         "shortfall_against_null": null,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
-      "building_sign_differs_global_vs_per_area": false,
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.0,
+        "eligible_points": 0,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 0,
+          "footprints_too_small": 0,
+          "coverage_median": null,
+          "coverage_p10": null,
+          "coverage_p90": null,
+          "null_coverage_median": null,
+          "null_coverage_p10": null,
+          "shortfall_against_null": null,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "vegetation": {
         "registered": {
           "vegetation_core_points": 0,
@@ -443,6 +460,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": null,
+        "not_vegetation_core_called_vegetation": 0.0059,
         "basis": "unregistered mask chosen by the rule"
       },
       "confidence": {
@@ -456,7 +474,7 @@
           "max_prob_p90": 0.9414,
           "max_prob_over_0_9": 0.1397,
           "max_prob_under_0_5": 0.1512,
-          "entropy_median": 0.3188
+          "entropy_median": 0.3048
         },
         "sf_water": {
           "points": 1396044,
@@ -465,7 +483,7 @@
           "max_prob_p90": 0.7734,
           "max_prob_over_0_9": 0.0157,
           "max_prob_under_0_5": 0.1293,
-          "entropy_median": 0.3162
+          "entropy_median": 0.3022
         },
         "sf_bridge_deck": {
           "points": 325333,
@@ -474,7 +492,7 @@
           "max_prob_p90": 0.9927,
           "max_prob_over_0_9": 0.9683,
           "max_prob_under_0_5": 0.0006,
-          "entropy_median": 0.0433
+          "entropy_median": 0.0414
         }
       },
       "raised_unassigned_called_ground_rate": {
@@ -514,20 +532,20 @@
         "extrapolation_building_lift": {
           "status": "addition, not in the prediction written before E0",
           "named_blocks": {
-            "eligible_points": 352005,
-            "predicted_building_points": 304045,
+            "eligible_points": 231771,
+            "predicted_building_points": 184048,
             "precision": 0.0,
             "null_precision": 0.0,
-            "precision_lift_over_null": 0.0
+            "precision_lift_over_null": null
           },
           "other_blocks": {
-            "eligible_points": 219427,
-            "predicted_building_points": 202202,
+            "eligible_points": 114492,
+            "predicted_building_points": 97558,
             "precision": 0.0,
             "null_precision": 0.0,
-            "precision_lift_over_null": 0.0
+            "precision_lift_over_null": null
           },
-          "reading": "measured nothing"
+          "reading": null
         }
       }
     },
@@ -707,16 +725,16 @@
       },
       "ground_band": {
         "with_water": {
-          "recall_clean": 0.7351,
-          "precision_floor": 0.3549,
-          "precision_ceiling": 0.5386,
-          "predicted_points_unjudgeable_fraction": 0.58
+          "recall_clean": 0.7322,
+          "precision_floor": 0.1915,
+          "precision_ceiling": 0.3001,
+          "predicted_points_unjudgeable_fraction": 0.2176
         },
         "without_water": {
-          "recall_clean": 0.7351,
-          "precision_floor": 0.4456,
-          "precision_ceiling": 0.6762,
-          "predicted_points_unjudgeable_fraction": 0.3958
+          "recall_clean": 0.7322,
+          "precision_floor": 0.4459,
+          "precision_ceiling": 0.6988,
+          "predicted_points_unjudgeable_fraction": 0.3931
         }
       },
       "building_vs_footprints_over_2m": {
@@ -725,33 +743,33 @@
             0.0,
             0.0
           ],
-          "eligible_points": 1231013,
-          "predicted_building_points": 980119,
-          "precision": 0.165,
-          "null_precision": 0.1391,
-          "precision_lift_over_null": 0.0301
+          "eligible_points": 1011138,
+          "predicted_building_points": 760256,
+          "precision": 0.2128,
+          "null_precision": 0.1694,
+          "precision_lift_over_null": 0.0522
         },
         "global_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 1231013,
-          "predicted_building_points": 980119,
-          "precision": 0.1969,
-          "null_precision": 0.1666,
-          "precision_lift_over_null": 0.0364
+          "eligible_points": 1011138,
+          "predicted_building_points": 760256,
+          "precision": 0.2538,
+          "null_precision": 0.2028,
+          "precision_lift_over_null": 0.0641
         },
         "per_area_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 1231013,
-          "predicted_building_points": 980119,
-          "precision": 0.1969,
-          "null_precision": 0.1666,
-          "precision_lift_over_null": 0.0364
+          "eligible_points": 1011138,
+          "predicted_building_points": 760256,
+          "precision": 0.2538,
+          "null_precision": 0.2028,
+          "precision_lift_over_null": 0.0641
         }
       },
       "building_area_coverage_global_shift": {
@@ -766,6 +784,28 @@
         "null_coverage_p10": 0.6936,
         "shortfall_against_null": 0.001,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.5014,
+        "eligible_points": 911553,
+        "predicted_building_points": 592984,
+        "precision": 0.3699,
+        "null_precision": 0.2733,
+        "precision_lift_over_null": 0.133,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 6,
+          "footprints_too_small": 1,
+          "coverage_median": 0.9843,
+          "coverage_p10": 0.7228,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9991,
+          "null_coverage_p10": 0.8231,
+          "shortfall_against_null": 0.0148,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
       },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
@@ -802,6 +842,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9972,
+        "not_vegetation_core_called_vegetation": 0.0254,
         "basis": "unregistered mask chosen by the rule"
       },
       "confidence": {
@@ -812,7 +853,7 @@
           "max_prob_p90": 0.9316,
           "max_prob_over_0_9": 0.2236,
           "max_prob_under_0_5": 0.0819,
-          "entropy_median": 0.2423
+          "entropy_median": 0.2316
         },
         "sf_unassigned": {
           "points": 2456204,
@@ -821,7 +862,7 @@
           "max_prob_p90": 0.9385,
           "max_prob_over_0_9": 0.1681,
           "max_prob_under_0_5": 0.1889,
-          "entropy_median": 0.3174
+          "entropy_median": 0.3034
         },
         "sf_water": {
           "points": 1279481,
@@ -830,7 +871,7 @@
           "max_prob_p90": 0.835,
           "max_prob_over_0_9": 0.0314,
           "max_prob_under_0_5": 0.1851,
-          "entropy_median": 0.3313
+          "entropy_median": 0.3167
         },
         "sf_bridge_deck": {
           "points": 234947,
@@ -839,34 +880,34 @@
           "max_prob_p90": 0.9917,
           "max_prob_over_0_9": 0.9916,
           "max_prob_under_0_5": 0.0013,
-          "entropy_median": 0.0411
+          "entropy_median": 0.0393
         }
       },
       "raised_unassigned_called_ground_rate": {
-        "raised_points": 863465,
-        "rate": 0.1669,
+        "raised_points": 871018,
+        "rate": 0.1655,
         "note": "delivery unassigned more than 3 m above the delivery ground surface; the Surrey rate is over DALES non-ground labels on the same definition"
       },
       "auroc": {
         "easy_unassigned_over_3m": {
-          "right": 337841,
-          "wrong": 144121,
-          "auroc": 0.707,
-          "median_conf_right": 0.8462,
+          "right": 339616,
+          "wrong": 144123,
+          "auroc": 0.7043,
+          "median_conf_right": 0.8457,
           "median_conf_wrong": 0.7441
         },
         "hard_water_within_0_5m": {
-          "right": 337841,
-          "wrong": 37973,
-          "auroc": 0.8092,
-          "median_conf_right": 0.8462,
-          "median_conf_wrong": 0.606
+          "right": 339616,
+          "wrong": 59103,
+          "auroc": 0.8001,
+          "median_conf_right": 0.8457,
+          "median_conf_wrong": 0.6143
         },
         "water_any_height": {
-          "right": 337841,
+          "right": 339616,
           "wrong": 1011963,
-          "auroc": 0.7762,
-          "median_conf_right": 0.8462,
+          "auroc": 0.7736,
+          "median_conf_right": 0.8457,
           "median_conf_wrong": 0.646
         },
         "excluded_from_easy": null
@@ -879,20 +920,20 @@
         "extrapolation_building_lift": {
           "status": "addition, not in the prediction written before E0",
           "named_blocks": {
-            "eligible_points": 221249,
-            "predicted_building_points": 182992,
+            "eligible_points": 158201,
+            "predicted_building_points": 119944,
             "precision": 0.0,
             "null_precision": 0.0,
-            "precision_lift_over_null": 0.0
+            "precision_lift_over_null": null
           },
           "other_blocks": {
-            "eligible_points": 1009764,
-            "predicted_building_points": 797127,
-            "precision": 0.2421,
-            "null_precision": 0.2031,
-            "precision_lift_over_null": 0.049
+            "eligible_points": 852937,
+            "predicted_building_points": 640312,
+            "precision": 0.3014,
+            "null_precision": 0.2404,
+            "precision_lift_over_null": 0.0803
           },
-          "reading": "measured nothing"
+          "reading": null
         }
       }
     },
@@ -976,6 +1017,28 @@
         "shortfall_against_null": 0.0478,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.9938,
+        "eligible_points": 5315622,
+        "predicted_building_points": 4249322,
+        "precision": 0.7192,
+        "null_precision": 0.6892,
+        "precision_lift_over_null": 0.0967,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 23,
+          "footprints_too_small": 2,
+          "coverage_median": 0.9702,
+          "coverage_p10": 0.7868,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9935,
+          "null_coverage_p10": 0.9063,
+          "shortfall_against_null": 0.0235,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1011,6 +1074,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9419,
+        "not_vegetation_core_called_vegetation": 0.0978,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1021,7 +1085,7 @@
           "max_prob_p90": 0.9609,
           "max_prob_over_0_9": 0.4063,
           "max_prob_under_0_5": 0.0305,
-          "entropy_median": 0.1813
+          "entropy_median": 0.1733
         },
         "sf_unassigned": {
           "points": 6095972,
@@ -1030,7 +1094,7 @@
           "max_prob_p90": 0.9873,
           "max_prob_over_0_9": 0.502,
           "max_prob_under_0_5": 0.1052,
-          "entropy_median": 0.161
+          "entropy_median": 0.1539
         },
         "sf_water": {
           "points": 0
@@ -1135,7 +1199,7 @@
           "predicted_building_points": 283485,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "global_shift": {
           "offset_east_north_m": [
@@ -1146,7 +1210,7 @@
           "predicted_building_points": 283485,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "per_area_shift": {
           "offset_east_north_m": [
@@ -1157,7 +1221,7 @@
           "predicted_building_points": 283485,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         }
       },
       "building_area_coverage_global_shift": {
@@ -1173,7 +1237,28 @@
         "shortfall_against_null": null,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
-      "building_sign_differs_global_vs_per_area": false,
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 5342392,
+        "predicted_building_points": 270240,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "precision_lift_over_null": null,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 1,
+          "footprints_too_small": 0,
+          "coverage_median": 0.0,
+          "coverage_p10": 0.0,
+          "coverage_p90": 0.0,
+          "null_coverage_median": 0.0,
+          "null_coverage_p10": 0.0,
+          "shortfall_against_null": null,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "vegetation": {
         "registered": {
           "vegetation_core_points": 3073951,
@@ -1208,6 +1293,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9275,
+        "not_vegetation_core_called_vegetation": 0.8112,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1218,7 +1304,7 @@
           "max_prob_p90": 0.9766,
           "max_prob_over_0_9": 0.3921,
           "max_prob_under_0_5": 0.0319,
-          "entropy_median": 0.1763
+          "entropy_median": 0.1685
         },
         "sf_unassigned": {
           "points": 6654386,
@@ -1227,7 +1313,7 @@
           "max_prob_p90": 0.9907,
           "max_prob_over_0_9": 0.5384,
           "max_prob_under_0_5": 0.095,
-          "entropy_median": 0.1276
+          "entropy_median": 0.1219
         },
         "sf_water": {
           "points": 0
@@ -1370,6 +1456,28 @@
         "shortfall_against_null": 0.0197,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.9984,
+        "eligible_points": 2494566,
+        "predicted_building_points": 1618882,
+        "precision": 0.8203,
+        "null_precision": 0.6366,
+        "precision_lift_over_null": 0.5056,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 56,
+          "footprints_too_small": 0,
+          "coverage_median": 0.9995,
+          "coverage_p10": 0.8015,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 1.0,
+          "null_coverage_p10": 0.9327,
+          "shortfall_against_null": 0.0005,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1405,6 +1513,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9306,
+        "not_vegetation_core_called_vegetation": 0.0355,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1415,7 +1524,7 @@
           "max_prob_p90": 0.9761,
           "max_prob_over_0_9": 0.4564,
           "max_prob_under_0_5": 0.0357,
-          "entropy_median": 0.1714
+          "entropy_median": 0.1638
         },
         "sf_unassigned": {
           "points": 3131142,
@@ -1424,7 +1533,7 @@
           "max_prob_p90": 0.9312,
           "max_prob_over_0_9": 0.1682,
           "max_prob_under_0_5": 0.1937,
-          "entropy_median": 0.3035
+          "entropy_median": 0.2901
         },
         "sf_water": {
           "points": 0
@@ -1549,6 +1658,28 @@
         "shortfall_against_null": 0.0064,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 2816921,
+        "predicted_building_points": 2159893,
+        "precision": 0.8399,
+        "null_precision": 0.7136,
+        "precision_lift_over_null": 0.441,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 26,
+          "footprints_too_small": 0,
+          "coverage_median": 0.961,
+          "coverage_p10": 0.7579,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9948,
+          "null_coverage_p10": 0.7579,
+          "shortfall_against_null": 0.034,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1584,6 +1715,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9156,
+        "not_vegetation_core_called_vegetation": 0.0105,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1594,7 +1726,7 @@
           "max_prob_p90": 0.9766,
           "max_prob_over_0_9": 0.5959,
           "max_prob_under_0_5": 0.018,
-          "entropy_median": 0.129
+          "entropy_median": 0.1233
         },
         "sf_unassigned": {
           "points": 3238433,
@@ -1603,7 +1735,7 @@
           "max_prob_p90": 0.9585,
           "max_prob_over_0_9": 0.3085,
           "max_prob_under_0_5": 0.1328,
-          "entropy_median": 0.2588
+          "entropy_median": 0.2474
         },
         "sf_water": {
           "points": 0
@@ -1728,6 +1860,28 @@
         "shortfall_against_null": 0.0089,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 3574542,
+        "predicted_building_points": 2921668,
+        "precision": 0.7923,
+        "null_precision": 0.6623,
+        "precision_lift_over_null": 0.3852,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 77,
+          "footprints_too_small": 1,
+          "coverage_median": 0.9923,
+          "coverage_p10": 0.8345,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9967,
+          "null_coverage_p10": 0.8395,
+          "shortfall_against_null": 0.0044,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1763,6 +1917,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.831,
+        "not_vegetation_core_called_vegetation": 0.0356,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1773,7 +1928,7 @@
           "max_prob_p90": 0.9868,
           "max_prob_over_0_9": 0.5539,
           "max_prob_under_0_5": 0.064,
-          "entropy_median": 0.1304
+          "entropy_median": 0.1246
         },
         "sf_unassigned": {
           "points": 4274128,
@@ -1782,7 +1937,7 @@
           "max_prob_p90": 0.9629,
           "max_prob_over_0_9": 0.3729,
           "max_prob_under_0_5": 0.1573,
-          "entropy_median": 0.2391
+          "entropy_median": 0.2286
         },
         "sf_water": {
           "points": 0
@@ -1925,6 +2080,28 @@
         "shortfall_against_null": 0.004,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 2219920,
+        "predicted_building_points": 1622309,
+        "precision": 0.8482,
+        "null_precision": 0.6265,
+        "precision_lift_over_null": 0.5935,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 33,
+          "footprints_too_small": 0,
+          "coverage_median": 0.9956,
+          "coverage_p10": 0.9757,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9983,
+          "null_coverage_p10": 0.9758,
+          "shortfall_against_null": 0.0027,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1960,6 +2137,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9239,
+        "not_vegetation_core_called_vegetation": 0.0421,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1970,7 +2148,7 @@
           "max_prob_p90": 0.9775,
           "max_prob_over_0_9": 0.5148,
           "max_prob_under_0_5": 0.0378,
-          "entropy_median": 0.1487
+          "entropy_median": 0.1421
         },
         "sf_unassigned": {
           "points": 3608692,
@@ -1979,7 +2157,7 @@
           "max_prob_p90": 0.9331,
           "max_prob_over_0_9": 0.204,
           "max_prob_under_0_5": 0.1804,
-          "entropy_median": 0.2947
+          "entropy_median": 0.2817
         },
         "sf_water": {
           "points": 0
@@ -2025,5 +2203,5 @@
       }
     }
   ],
-  "seconds": 89.5
+  "seconds": 99.5
 }

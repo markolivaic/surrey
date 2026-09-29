@@ -10,17 +10,6 @@
   "rules": "backend/surrey/seeds.py, written before M0 seed C",
   "san_francisco": {
     "baybridge": {
-      "building_lift_global_shift": {
-        "per_seed": {
-          "A": 0.0,
-          "B": 0.0,
-          "C": 0.0
-        },
-        "n": 3,
-        "median": 0.0,
-        "min": 0.0,
-        "max": 0.0
-      },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
           "A": 0.0005,
@@ -91,36 +80,36 @@
     "embarcadero": {
       "building_lift_global_shift": {
         "per_seed": {
-          "A": 0.0373,
-          "B": 0.0345,
-          "C": 0.035
+          "A": 0.0664,
+          "B": 0.0606,
+          "C": 0.0633
         },
         "n": 3,
-        "median": 0.035,
-        "min": 0.0345,
-        "max": 0.0373
+        "median": 0.0633,
+        "min": 0.0606,
+        "max": 0.0664
       },
       "ground_precision_floor": {
         "per_seed": {
-          "A": 0.3338,
-          "B": 0.3602,
-          "C": 0.3466
+          "A": 0.1755,
+          "B": 0.1873,
+          "C": 0.1802
         },
         "n": 3,
-        "median": 0.3466,
-        "min": 0.3338,
-        "max": 0.3602
+        "median": 0.1802,
+        "min": 0.1755,
+        "max": 0.1873
       },
       "ground_recall": {
         "per_seed": {
-          "A": 0.7989,
-          "B": 0.7961,
-          "C": 0.8072
+          "A": 0.7961,
+          "B": 0.7924,
+          "C": 0.8039
         },
         "n": 3,
-        "median": 0.7989,
-        "min": 0.7961,
-        "max": 0.8072
+        "median": 0.7961,
+        "min": 0.7924,
+        "max": 0.8039
       },
       "vegetation_headline": {
         "per_seed": {
@@ -146,36 +135,36 @@
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
-          "A": 0.1935,
-          "B": 0.1772,
-          "C": 0.1744
+          "A": 0.1919,
+          "B": 0.1757,
+          "C": 0.1729
         },
         "n": 3,
-        "median": 0.1772,
-        "min": 0.1744,
-        "max": 0.1935
+        "median": 0.1757,
+        "min": 0.1729,
+        "max": 0.1919
       },
       "easy_error_auroc": {
         "per_seed": {
-          "A": 0.6737,
-          "B": 0.7472,
-          "C": 0.7873
+          "A": 0.6711,
+          "B": 0.7446,
+          "C": 0.7845
         },
         "n": 3,
-        "median": 0.7472,
-        "min": 0.6737,
-        "max": 0.7873
+        "median": 0.7446,
+        "min": 0.6711,
+        "max": 0.7845
       },
       "hard_water_auroc": {
         "per_seed": {
-          "A": 0.7106,
-          "B": 0.7211,
-          "C": 0.7999
+          "A": 0.7035,
+          "B": 0.7043,
+          "C": 0.79
         },
         "n": 3,
-        "median": 0.7211,
-        "min": 0.7106,
-        "max": 0.7999
+        "median": 0.7043,
+        "min": 0.7035,
+        "max": 0.79
       },
       "water_called_ground": {
         "per_seed": {
@@ -201,36 +190,47 @@
       },
       "ground_precision_ceiling": {
         "per_seed": {
-          "A": 0.514,
-          "B": 0.542,
-          "C": 0.5322
+          "A": 0.281,
+          "B": 0.2902,
+          "C": 0.2874
         },
         "n": 3,
-        "median": 0.5322,
-        "min": 0.514,
-        "max": 0.542
+        "median": 0.2874,
+        "min": 0.281,
+        "max": 0.2902
+      },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.2526,
+          "B": 0.2408,
+          "C": 0.2566
+        },
+        "n": 3,
+        "median": 0.2526,
+        "min": 0.2408,
+        "max": 0.2566
       },
       "building_precision": {
         "per_seed": {
-          "A": 0.1977,
-          "B": 0.1954,
-          "C": 0.1957
+          "A": 0.2557,
+          "B": 0.2511,
+          "C": 0.2533
         },
         "n": 3,
-        "median": 0.1957,
-        "min": 0.1954,
-        "max": 0.1977
+        "median": 0.2533,
+        "min": 0.2511,
+        "max": 0.2557
       },
       "building_null_precision": {
         "per_seed": {
-          "A": 0.1666,
-          "B": 0.1666,
-          "C": 0.1666
+          "A": 0.2028,
+          "B": 0.2028,
+          "C": 0.2028
         },
         "n": 3,
-        "median": 0.1666,
-        "min": 0.1666,
-        "max": 0.1666
+        "median": 0.2028,
+        "min": 0.2028,
+        "max": 0.2028
       },
       "building_coverage": {
         "per_seed": {
@@ -264,6 +264,39 @@
         "median": 6.0,
         "min": 6.0,
         "max": 6.0
+      },
+      "building_lift_delivery_gate": {
+        "per_seed": {
+          "A": 0.1685,
+          "B": 0.1479,
+          "C": 0.1508
+        },
+        "n": 3,
+        "median": 0.1508,
+        "min": 0.1479,
+        "max": 0.1685
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.2733,
+          "B": 0.2733,
+          "C": 0.2733
+        },
+        "n": 3,
+        "median": 0.2733,
+        "min": 0.2733,
+        "max": 0.2733
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.939,
+          "B": 0.9531,
+          "C": 0.94
+        },
+        "n": 3,
+        "median": 0.94,
+        "min": 0.939,
+        "max": 0.9531
       }
     },
     "financial": {
@@ -355,6 +388,17 @@
         "min": 0.9189,
         "max": 0.9348
       },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.0019,
+          "B": 0.0012,
+          "C": 0.0022
+        },
+        "n": 3,
+        "median": 0.0019,
+        "min": 0.0012,
+        "max": 0.0022
+      },
       "building_precision": {
         "per_seed": {
           "A": 0.7183,
@@ -409,20 +453,42 @@
         "median": 23.0,
         "min": 23.0,
         "max": 23.0
+      },
+      "building_lift_delivery_gate": {
+        "per_seed": {
+          "A": 0.132,
+          "B": 0.138,
+          "C": 0.1296
+        },
+        "n": 3,
+        "median": 0.132,
+        "min": 0.1296,
+        "max": 0.138
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.6892,
+          "B": 0.6892,
+          "C": 0.6892
+        },
+        "n": 3,
+        "median": 0.6892,
+        "min": 0.6892,
+        "max": 0.6892
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.9754,
+          "B": 0.9895,
+          "C": 0.9724
+        },
+        "n": 3,
+        "median": 0.9754,
+        "min": 0.9724,
+        "max": 0.9895
       }
     },
     "ggpark": {
-      "building_lift_global_shift": {
-        "per_seed": {
-          "A": 0.0,
-          "B": 0.0,
-          "C": 0.0
-        },
-        "n": 3,
-        "median": 0.0,
-        "min": 0.0,
-        "max": 0.0
-      },
       "ground_precision_floor": {
         "per_seed": {
           "A": 0.7423,
@@ -458,14 +524,14 @@
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.7781,
-          "B": 0.7441,
-          "C": 0.8111
+          "A": 0.8631,
+          "B": 0.8355,
+          "C": 0.9196
         },
         "n": 3,
-        "median": 0.7781,
-        "min": 0.7441,
-        "max": 0.8111,
+        "median": 0.8631,
+        "min": 0.8355,
+        "max": 0.9196,
         "reference_not_valid": "the NAIP not-vegetation core in Golden Gate Park has a multiple-return share typical of canopy on both masks (naip_mask_choice.json), so NDVI probably misses canopy there, by shadow or relief displacement, and vegetation called inside it is likely right"
       },
       "raised_unassigned_called_ground_rate": {
@@ -500,6 +566,17 @@
         "median": 0.9692,
         "min": 0.9663,
         "max": 0.9693
+      },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
       },
       "building_precision": {
         "per_seed": {
@@ -555,6 +632,28 @@
         "median": 1.0,
         "min": 1.0,
         "max": 1.0
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
       }
     },
     "mission": {
@@ -604,14 +703,14 @@
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0188,
-          "B": 0.0212,
-          "C": 0.021
+          "A": 0.0353,
+          "B": 0.0373,
+          "C": 0.0375
         },
         "n": 3,
-        "median": 0.021,
-        "min": 0.0188,
-        "max": 0.0212
+        "median": 0.0373,
+        "min": 0.0353,
+        "max": 0.0375
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
@@ -645,6 +744,17 @@
         "median": 0.8616,
         "min": 0.8588,
         "max": 0.8784
+      },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.0018,
+          "B": 0.0008,
+          "C": 0.0014
+        },
+        "n": 3,
+        "median": 0.0014,
+        "min": 0.0008,
+        "max": 0.0018
       },
       "building_precision": {
         "per_seed": {
@@ -700,6 +810,39 @@
         "median": 56.0,
         "min": 56.0,
         "max": 56.0
+      },
+      "building_lift_delivery_gate": {
+        "per_seed": {
+          "A": 0.5444,
+          "B": 0.5436,
+          "C": 0.5589
+        },
+        "n": 3,
+        "median": 0.5444,
+        "min": 0.5436,
+        "max": 0.5589
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.6366,
+          "B": 0.6366,
+          "C": 0.6366
+        },
+        "n": 3,
+        "median": 0.6366,
+        "min": 0.6366,
+        "max": 0.6366
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.9937,
+          "B": 0.9973,
+          "C": 0.9951
+        },
+        "n": 3,
+        "median": 0.9951,
+        "min": 0.9937,
+        "max": 0.9973
       }
     },
     "soma": {
@@ -791,6 +934,17 @@
         "min": 0.8777,
         "max": 0.8919
       },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
       "building_precision": {
         "per_seed": {
           "A": 0.8231,
@@ -845,6 +999,39 @@
         "median": 26.0,
         "min": 26.0,
         "max": 26.0
+      },
+      "building_lift_delivery_gate": {
+        "per_seed": {
+          "A": 0.4757,
+          "B": 0.4712,
+          "C": 0.4883
+        },
+        "n": 3,
+        "median": 0.4757,
+        "min": 0.4712,
+        "max": 0.4883
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.7136,
+          "B": 0.7136,
+          "C": 0.7136
+        },
+        "n": 3,
+        "median": 0.7136,
+        "min": 0.7136,
+        "max": 0.7136
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.9665,
+          "B": 0.9625,
+          "C": 0.948
+        },
+        "n": 3,
+        "median": 0.9625,
+        "min": 0.948,
+        "max": 0.9665
       }
     },
     "steep": {
@@ -894,14 +1081,14 @@
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.025,
-          "B": 0.0265,
-          "C": 0.0267
+          "A": 0.0405,
+          "B": 0.0408,
+          "C": 0.0428
         },
         "n": 3,
-        "median": 0.0265,
-        "min": 0.025,
-        "max": 0.0267
+        "median": 0.0408,
+        "min": 0.0405,
+        "max": 0.0428
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
@@ -935,6 +1122,17 @@
         "median": 0.9523,
         "min": 0.9465,
         "max": 0.9541
+      },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
       },
       "building_precision": {
         "per_seed": {
@@ -990,6 +1188,39 @@
         "median": 77.0,
         "min": 77.0,
         "max": 77.0
+      },
+      "building_lift_delivery_gate": {
+        "per_seed": {
+          "A": 0.4474,
+          "B": 0.4287,
+          "C": 0.4684
+        },
+        "n": 3,
+        "median": 0.4474,
+        "min": 0.4287,
+        "max": 0.4684
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.6623,
+          "B": 0.6623,
+          "C": 0.6623
+        },
+        "n": 3,
+        "median": 0.6623,
+        "min": 0.6623,
+        "max": 0.6623
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.9923,
+          "B": 0.9931,
+          "C": 0.9929
+        },
+        "n": 3,
+        "median": 0.9929,
+        "min": 0.9923,
+        "max": 0.9931
       }
     },
     "sunset": {
@@ -1039,14 +1270,14 @@
       },
       "not_vegetation_core_called_vegetation": {
         "per_seed": {
-          "A": 0.0233,
-          "B": 0.0249,
-          "C": 0.025
+          "A": 0.0445,
+          "B": 0.0458,
+          "C": 0.0464
         },
         "n": 3,
-        "median": 0.0249,
-        "min": 0.0233,
-        "max": 0.025
+        "median": 0.0458,
+        "min": 0.0445,
+        "max": 0.0464
       },
       "raised_unassigned_called_ground_rate": {
         "per_seed": {
@@ -1080,6 +1311,17 @@
         "median": 0.9578,
         "min": 0.9554,
         "max": 0.9598
+      },
+      "unjudged_ground_share": {
+        "per_seed": {
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0
+        },
+        "n": 3,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
       },
       "building_precision": {
         "per_seed": {
@@ -1135,6 +1377,39 @@
         "median": 33.0,
         "min": 33.0,
         "max": 33.0
+      },
+      "building_lift_delivery_gate": {
+        "per_seed": {
+          "A": 0.6193,
+          "B": 0.6128,
+          "C": 0.6192
+        },
+        "n": 3,
+        "median": 0.6192,
+        "min": 0.6128,
+        "max": 0.6193
+      },
+      "building_null_precision_delivery_gate": {
+        "per_seed": {
+          "A": 0.6265,
+          "B": 0.6265,
+          "C": 0.6265
+        },
+        "n": 3,
+        "median": 0.6265,
+        "min": 0.6265,
+        "max": 0.6265
+      },
+      "building_coverage_delivery_gate": {
+        "per_seed": {
+          "A": 0.9942,
+          "B": 0.9942,
+          "C": 0.9938
+        },
+        "n": 3,
+        "median": 0.9942,
+        "min": 0.9938,
+        "max": 0.9942
       }
     }
   },
@@ -1441,14 +1716,14 @@
         },
         "rate": {
           "per_seed": {
-            "A": 0.1935,
-            "B": 0.1772,
-            "C": 0.1744
+            "A": 0.1919,
+            "B": 0.1757,
+            "C": 0.1729
           },
           "n": 3,
-          "median": 0.1772,
-          "min": 0.1744,
-          "max": 0.1935
+          "median": 0.1757,
+          "min": 0.1729,
+          "max": 0.1919
         },
         "home_range_per_seed": {
           "A": [
@@ -1791,13 +2066,13 @@
             "auroc": 0.9251
           },
           "embarcadero_water": {
-            "right": 367178,
-            "wrong": 47971,
-            "auroc": 0.7106,
-            "median_conf_right": 0.9326,
-            "median_conf_wrong": 0.8242
+            "right": 369252,
+            "wrong": 72904,
+            "auroc": 0.7035,
+            "median_conf_right": 0.9316,
+            "median_conf_wrong": 0.8252
           },
-          "water_minus_home": -0.2145,
+          "water_minus_home": -0.2216,
           "reading": "water errors harder to see than errors at home"
         },
         "B": {
@@ -1807,13 +2082,13 @@
             "auroc": 0.9228
           },
           "embarcadero_water": {
-            "right": 365889,
-            "wrong": 39194,
-            "auroc": 0.7211,
-            "median_conf_right": 0.9019,
-            "median_conf_wrong": 0.7607
+            "right": 367560,
+            "wrong": 59809,
+            "auroc": 0.7043,
+            "median_conf_right": 0.9014,
+            "median_conf_wrong": 0.7837
           },
-          "water_minus_home": -0.2017,
+          "water_minus_home": -0.2185,
           "reading": "water errors harder to see than errors at home"
         },
         "C": {
@@ -1823,13 +2098,13 @@
             "auroc": 0.9247
           },
           "embarcadero_water": {
-            "right": 371014,
-            "wrong": 45232,
-            "auroc": 0.7999,
-            "median_conf_right": 0.9351,
-            "median_conf_wrong": 0.7471
+            "right": 372904,
+            "wrong": 69279,
+            "auroc": 0.79,
+            "median_conf_right": 0.9346,
+            "median_conf_wrong": 0.7573
           },
-          "water_minus_home": -0.1248,
+          "water_minus_home": -0.1347,
           "reading": "water errors harder to see than errors at home"
         }
       },
@@ -1846,14 +2121,14 @@
       },
       "water_auroc": {
         "per_seed": {
-          "A": 0.7106,
-          "B": 0.7211,
-          "C": 0.7999
+          "A": 0.7035,
+          "B": 0.7043,
+          "C": 0.79
         },
         "n": 3,
-        "median": 0.7211,
-        "min": 0.7106,
-        "max": 0.7999
+        "median": 0.7043,
+        "min": 0.7035,
+        "max": 0.79
       },
       "construction": "among ground calls, right ground against errors within 0.5 m of the ground surface; Surrey: DALES non-ground labels; Embarcadero: delivery water",
       "margin": 0.05

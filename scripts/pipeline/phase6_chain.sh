@@ -162,7 +162,8 @@ fi
 say "outputs hashed: $(wc -l < "$OUT/phase6_outputs.sha256") files in $OUT/phase6_outputs.sha256"
 cp "$LOG" "$OUT/data/logs/"
 
-if ! hf auth whoami > /dev/null 2>&1; then
+# hf 0.35 prints "Not logged in" and still exits 0, so the words are checked as well as the status.
+if ! who=$(hf auth whoami 2>&1) || [[ "$who" == *"Not logged in"* ]]; then
   say "no Hugging Face login on this box; the outputs wait in $OUT for the owner's login, then run this again"
   exit 1
 fi

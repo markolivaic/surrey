@@ -955,6 +955,13 @@ def build_registry() -> list[Quantity]:
         "vegetation_core_called_vegetation",
         "vegetation_core_called_vegetation_registered",
     }
+    # No lift where the footprint null calls nothing a building (docs/phase6_criteria.md, item 5).
+    null_rows = json.loads((ARTIFACTS / "footprint_null.json").read_text(encoding="utf-8"))["aois"]
+    no_null = {
+        aoi
+        for aoi in SF_AOIS
+        if not _row(null_rows, "aoi", aoi)["baseline_everything_above_2m"]["null_precision"]
+    }
     # The rented card's runs are scored by the same code and registered the same way, under their own
     # variant names, so a figure from one of them can never be read as the published model's.
     for variant in (
@@ -1107,6 +1114,8 @@ def build_registry() -> list[Quantity]:
             ]
             for name, concept, population, getter in specs:
                 if name in only and aoi not in only[name]:
+                    continue
+                if name == "building_lift_global_shift" and aoi in no_null:
                     continue
                 if aoi == "baybridge" and name in no_ground:
                     continue
@@ -2684,6 +2693,44 @@ def build_registry() -> list[Quantity]:
                 "per-axis median over areas whose correlation cleared the peak bar",
             )
         )
+    q.append(
+        Quantity(
+            "crs.sf.footprint_offset_global.areas_used",
+            "areas",
+            Population("san_francisco", "aois", "voxel", "footprints_vs_low_raised_lidar"),
+            "crs_check.json",
+            lambda a: _footprint_global(a)["areas_used"],
+            "areas whose own correlation cleared the peak bar; every other area takes the global offset",
+        )
+    )
+    # Whether an area's footprints could be registered to its own lidar at all. Where they could not,
+    # the building figures there rest on the offset measured in other areas.
+    crs_file = ARTIFACTS / "crs_check.json"
+    crs_areas = (
+        {r["aoi"] for r in json.loads(crs_file.read_text(encoding="utf-8"))["areas"]}
+        if crs_file.exists()
+        else set()
+    )
+    for aoi in (x for x in SF_AOIS if x in crs_areas):
+        q.append(
+            Quantity(
+                f"crs.sf.{aoi}.footprints_registered_by_correlation",
+                "registered",
+                Population("san_francisco", aoi, "voxel", "footprints_vs_low_raised_lidar"),
+                "crs_check.json",
+                lambda a, x=aoi: int(
+                    (
+                        _row(a["crs_check.json"]["areas"], "aoi", x)
+                        .get("footprints", {})
+                        .get("lidar_low_raised_vs_footprints", {})
+                        .get("whole", {})
+                        .get("ncc_east_m")
+                    )
+                    is not None
+                ),
+                "1 where the whole area's correlation cleared the peak bar, 0 where it did not",
+            )
+        )
 
     # ---------------- test counts, from a real collection ----------------
     for suite in ("unit", "integrity"):
@@ -3005,6 +3052,25 @@ def build_registry() -> list[Quantity]:
                     lambda a, s_=src, sd=side: len(a[s_][sd]),
                 )
             )
+            # Each move by name, -1 worse and 1 better, so the method notes list them from the registry.
+            for name in doc.get(side, []):
+                q.append(
+                    Quantity(
+                        f"compare.{pair}.move.{name}",
+                        "seed_comparison_move",
+                        Population(
+                            "san_francisco",
+                            "aois",
+                            "voxel",
+                            f"compare:{pair}:{name}",
+                            variant=f"{new_recipe}_seeds",
+                        ),
+                        src,
+                        lambda a, s_=src, sd=side, n=name: (
+                            (1 if n in a[s_]["gains"] else -1) if n in a[s_][sd] else None
+                        ),
+                    )
+                )
     if (ARTIFACTS / "precision_audit.json").exists():
         pa = json.loads((ARTIFACTS / "precision_audit.json").read_text(encoding="utf-8"))
         for area, block_ in pa["areas"].items():

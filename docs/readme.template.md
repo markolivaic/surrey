@@ -6,77 +6,94 @@ A point cloud segmentation model trained on lidar flown over Surrey, British Col
 
 ![The first screen of the page: the Sunset in 3D, coloured by the published model's classes, beside the lidar standard's class table](docs/design/readme/first_screen.webp)
 
-![Cards 1 and 3 side by side: Golden Gate Park under the published model, where the trees are called vegetation, and under the old model with its input as delivered, where the forest is called building](docs/design/readme/cards_1_and_3.webp)
+![Cards 1 and 3 side by side: Golden Gate Park under the published model, where the trees are called vegetation, and under the old four channel model with its input as delivered, where the forest is called building](docs/design/readme/cards_1_and_3.webp)
 
-The colours are the model's predictions, not measurements. Left, the published model; right, the old model with the input fault described below.
+The colours are the model's predictions, not measurements. Left, the published model; right, the old four channel model with the input fault described below.
+
+On held-out Surrey the published model reaches a point accuracy of {{seeds.m0.surrey.test.accuracy_from_prediction_cache.median}}. On San Francisco, a city it never saw, it finds {{seeds.m0.sf.ggpark.vegetation_headline.median}} of the vegetation the aerial photograph shows in Golden Gate Park, but calls the delivery's water ground ({{seeds.m0.sf.embarcadero.water_called_ground.median}} at Embarcadero), a class its training labels do not have. Buildings in the Financial District, the one area taller than any block the model learned from, score lower than in the other built areas on {{seeds.m0.claims.extrapolation.k}} of {{seeds.m0.claims.extrapolation.n}} seeds, though the footprints there could not be registered to the lidar. A half precision neighbour search, fixed in the last round, had the older model call {{tall.sf.financial.m0phase4_seeds.above_150m.called_pole.median}} of the Financial District's points more than 150 m up pole; with the search exact, {{tall.sf.financial.m0_seeds.above_150m.called_building.median}} are called building, while elsewhere {{compare.m0_vs_m0phase4.chance.moves_seen}} of {{compare.m0_vs_m0phase4.chance.comparisons}} figures moved, about as many as chance moves.
 
 ## What this is
 
-- A PointNet++ style network trained on DALES-2 (Bendjilali and others, 2026), a re-annotated aerial lidar benchmark in fifteen classes, flown over Surrey, British Columbia, Canada, not over Dayton.
-- The published model, M0 seed A, run on eight areas of the USGS 3DEP San Francisco delivery and scored per area against the delivery's ground class, building footprints and NAIP vegetation, each beside its null.
-- Three training seeds, every figure given as the median with the lowest and highest seed.
+- A PointNet++ style network trained on DALES-2 (Bendjilali and others, 2026), aerial lidar in fifteen classes flown over Surrey, British Columbia, not over Dayton.
+- Run on eight areas of the USGS 3DEP San Francisco delivery and scored against the delivery's ground class, building footprints and NAIP vegetation, each beside its null.
+- Three training seeds: the median, with the lowest and highest seed in brackets where they differ.
 - A static web page that streams the real points, with a divider between the aerial photograph and the model's classes.
 
 ## What this is NOT
 
-- **Not ground truth.** The colours on San Francisco are predictions of a model trained in another country, not measurements and not part of any USGS deliverable.
-- **Not a labelled benchmark in San Francisco.** None exists for this delivery. Ground is scored against a vendor's automated class, buildings against 2D footprints of uncertain age, vegetation against an NDVI mask.
-- **Not an untouched test.** San Francisco was also the development set: the input fault below was found from its figures.
+- **Not ground truth.** The colours on San Francisco are predictions, not part of any USGS deliverable.
+- **Not a labelled benchmark.** None exists for this delivery: ground is scored against a vendor's automated class, buildings against 2D footprints, vegetation against an NDVI mask.
+- **Not an untouched test.** San Francisco was also the development set; both faults below were found from its figures.
 - **Not a model that knows water or bridges.** The training labels have no word for either.
-- **Not the full page from a fresh clone.** The real point clouds are built by the pipeline. A clone shows the page on a synthetic FIXTURE octree, labelled FIXTURE on screen.
-- **Not new.** Airborne lidar segmentation losing accuracy from one city to another is known (Xie and others, 2021), DALES has been a source domain before (Wang and others, 2024), and softmax confidence is a known weak signal for unfamiliar inputs (Hendrycks and Gimpel, 2017). This is a careful measurement of one case, and a page to see it.
+- **Not the full page from a fresh clone.** A clone shows the page on a synthetic octree, labelled FIXTURE on screen.
+- **Not new.** Cross-city loss in aerial lidar is known (Xie and others, 2021), DALES has been a source domain before (Wang and others, 2024), and softmax confidence is a weak signal for unfamiliar inputs (Hendrycks and Gimpel, 2017). This measures one case.
+
+## The models
+
+| Name | What it is | Read against |
+|---|---|---|
+| M0 | The published recipe: three inputs (x, y and height above the block floor), DALES-2 alone, seeds A, B and C; seed A is the published model | its nulls |
+| Phase 4 M0 | The same recipe trained before the neighbour search was fixed | M0 only, to measure the fix |
+| First round | The models trained before Phase 4: the four channel model, M0prime and M1, all with the old neighbour search | each only against itself or its pair |
+| M0prime, M1 | First round models with Swiss tiles added; M0prime ignores Swiss water and bridge deck, M1 learns them as classes | each other |
+
+Lift is (p - p0) / (1 - p0), where p is the model's precision against the footprints and p0 that of the null, which calls every point more than 2 m up a building; it is not given where the null calls nothing a building. A figure moved only when every seed of one model lies beyond every seed of the other, which chance alone does with probability {{compare.m0_vs_m0phase4.chance.two_sided_chance_of_a_move}} for three seeds a side ([docs/method.md](docs/method.md)). Each rented round was read by rules committed before its results: `docs/phase4_criteria.md`, `docs/phase6_criteria.md`.
 
 ## Walkthrough
 
 [![The walkthrough: the first screen, the six cards and the free view with the divider](docs/walkthrough/app-walkthrough.gif)](docs/walkthrough/app-walkthrough.mp4)
 
-One uninterrupted recording of the running page: the first screen, the six cards, and the free view with the divider dragged across. Every state transition is rendered by the running application. No screen is mocked. Its first frame is the [poster](docs/walkthrough/app-walkthrough-poster.jpg).
+One uninterrupted recording of the running page. No screen is mocked. Its first frame is the [poster](docs/walkthrough/app-walkthrough-poster.jpg).
 
 ## At home, on held-out Surrey
 
-On the {{provenance.dales.test.tiles}} held-out Surrey tiles, M0 reaches a point accuracy of {{seeds.m0.surrey.test.accuracy_from_prediction_cache.median}} ({{seeds.m0.surrey.test.accuracy_from_prediction_cache.min}} to {{seeds.m0.surrey.test.accuracy_from_prediction_cache.max}}), against {{surrey.test.voxel.ground_fraction}} for calling everything ground. Mean IoU is {{seeds.m0.surrey.test.miou_15.median}} ({{seeds.m0.surrey.test.miou_15.min}} to {{seeds.m0.surrey.test.miou_15.max}}) over the fifteen classes and {{seeds.m0.surrey.test.miou_coarse.median}} ({{seeds.m0.surrey.test.miou_coarse.min}} to {{seeds.m0.surrey.test.miou_coarse.max}}) over the six coarse groups the page draws.
+On the {{provenance.dales.test.tiles}} held-out Surrey tiles, M0 reaches a point accuracy of {{seeds.m0.surrey.test.accuracy_from_prediction_cache.median}} ({{seeds.m0.surrey.test.accuracy_from_prediction_cache.min}} to {{seeds.m0.surrey.test.accuracy_from_prediction_cache.max}}), against {{surrey.test.voxel.ground_fraction}} for calling everything ground. Mean IoU is {{seeds.m0.surrey.test.miou_15.median}} ({{seeds.m0.surrey.test.miou_15.min}} to {{seeds.m0.surrey.test.miou_15.max}}) over the fifteen classes and {{seeds.m0.surrey.test.miou_coarse.median}} ({{seeds.m0.surrey.test.miou_coarse.min}} to {{seeds.m0.surrey.test.miou_coarse.max}}) over the six coarse groups the page draws. The rare classes carry the mean down:
 
-On the original DALES, KPConv reached a mean IoU of 0.811 (Varney and others, 2020), over eight classes of a different annotation; here the classes are fifteen and the points voxel-thinned, so the two numbers rank nothing.
+{{table:surrey_classes}}
+
+KPConv's 0.811 on the original DALES (Varney and others, 2020) is over eight classes of another annotation and ranks nothing here. From `python scripts/pipeline/aggregate_seeds.py --recipe m0` (and `--recipe m0phase4`).
 
 ## San Francisco
 
-Median over three seeds, the lowest and highest in brackets, each class beside the figure that catches the opposite mistake.
+Each class beside the figure that catches the opposite mistake, from `score_variant.py --variant m0_seedA` per seed and `aggregate_seeds.py --recipe m0`:
 
 {{table:sf_both_sides}}
 
-Buildings, where the footprint null calls every point more than 2 m up a building. Lift is the share of the room above the null's precision that the model takes.
+† The not-vegetation core in Golden Gate Park returns like canopy, so NDVI probably misses trees there; not read (`backend/surrey/reference.py`).
+
+Buildings, in the areas where the footprint null calls something a building:
 
 {{table:sf_buildings}}
 
-Water is called ground, {{seeds.m0.sf.embarcadero.water_called_ground.median}} ({{seeds.m0.sf.embarcadero.water_called_ground.min}} to {{seeds.m0.sf.embarcadero.water_called_ground.max}}) at Embarcadero, and the Bay Bridge deck building, {{seeds.m0.sf.baybridge.bridge_deck_called_building.median}} ({{seeds.m0.sf.baybridge.bridge_deck_called_building.min}} to {{seeds.m0.sf.baybridge.bridge_deck_called_building.max}}). Confidence separates these mistakes from right ground less well than mistakes at home, AUROC {{seeds.m0.claims.hard_water_auroc.median}} against {{seeds.m0.claims.hard_home_auroc.median}}, on {{seeds.m0.claims.hard_errors_home_vs_water.k}} of {{seeds.m0.claims.hard_errors_home_vs_water.n}} seeds.
+Water is called ground, {{seeds.m0.sf.embarcadero.water_called_ground.median}} ({{seeds.m0.sf.embarcadero.water_called_ground.min}} to {{seeds.m0.sf.embarcadero.water_called_ground.max}}) at Embarcadero, and the Bay Bridge deck building, {{seeds.m0.sf.baybridge.bridge_deck_called_building.median}} ({{seeds.m0.sf.baybridge.bridge_deck_called_building.min}} to {{seeds.m0.sf.baybridge.bridge_deck_called_building.max}}). On water at Embarcadero, confidence separates these mistakes from right ground less well than the same kind of mistake at home: AUROC {{seeds.m0.claims.hard_water_auroc.median}} ({{seeds.m0.claims.hard_water_auroc.min}} to {{seeds.m0.claims.hard_water_auroc.max}}) against {{seeds.m0.claims.hard_home_auroc.median}} ({{seeds.m0.claims.hard_home_auroc.min}} to {{seeds.m0.claims.hard_home_auroc.max}}), lower on {{seeds.m0.claims.hard_errors_home_vs_water.k}} of {{seeds.m0.claims.hard_errors_home_vs_water.n}} seeds.
 
-## Why the building lift moved
+## The towers, and the neighbour search
 
-Against the first round, the building lift fell in the Mission, on Russian Hill, in SoMa and in the Financial District, where the retrained model covers more of each footprint, less precisely: a trade, by a reading written beforehand. The new block iterator moved it, not the voting ([docs/method.md](docs/method.md)).
+The neighbour search took its squared distances in half precision, so the higher a point stood above its block floor, the closer its neighbours came to a random pick: on the tallest Financial District blocks the Phase 4 model matched an exact pass on {{precision.financial.before.class_agreement_above_100m}} of the points more than 100 m up. The search now runs in fp32 and M0 was trained again, nothing else changed ([docs/phase6_criteria.md](docs/phase6_criteria.md)).
+
+Of the Financial District's {{tall.sf.financial.m0_seedA.above_150m.points}} points more than 150 m above the ground surface, Phase 4 M0 called {{tall.sf.financial.m0phase4_seeds.above_150m.called_pole.median}} ({{tall.sf.financial.m0phase4_seeds.above_150m.called_pole.min}} to {{tall.sf.financial.m0phase4_seeds.above_150m.called_pole.max}}) pole and {{tall.sf.financial.m0phase4_seeds.above_150m.called_building.median}} ({{tall.sf.financial.m0phase4_seeds.above_150m.called_building.min}} to {{tall.sf.financial.m0phase4_seeds.above_150m.called_building.max}}) building; M0 calls {{tall.sf.financial.m0_seeds.above_150m.called_building.median}} ({{tall.sf.financial.m0_seeds.above_150m.called_building.min}} to {{tall.sf.financial.m0_seeds.above_150m.called_building.max}}) building. No reference is needed for that. Everywhere else the fix moved little: of {{compare.m0_vs_m0phase4.chance.comparisons}} figures compared, at home and in San Francisco, {{compare.m0_vs_m0phase4.chance.moves_seen}} moved, where chance alone moves {{compare.m0_vs_m0phase4.chance.moves_expected_by_chance}}, so none is read on its own ([docs/method.md](docs/method.md)). From `scripts/investigations/precision_audit.py`, `scripts/investigations/high_points_class.py` and `compare_recipes.py --new m0 --old m0phase4`.
 
 ## The Financial District, the one area outside the range
 
-An area lies outside what training showed when its median 40 m block spans more height than the training blocks' 99th percentile, {{confounds.training_p99.block_z_range_m}} m. The Financial District's spans {{confounds.financial.block_z_range_m.median}} m, no other area's more than {{confounds.ggpark.block_z_range_m.median}} m. Buildings were expected to score lower here, and do on {{seeds.m0.claims.extrapolation.k}} of {{seeds.m0.claims.extrapolation.n}} seeds, lift {{seeds.m0.claims.financial_lift.median}} ({{seeds.m0.claims.financial_lift.min}} to {{seeds.m0.claims.financial_lift.max}}) against {{seeds.m0.claims.other_built_median_lift.median}} ({{seeds.m0.claims.other_built_median_lift.min}} to {{seeds.m0.claims.other_built_median_lift.max}}).
+Its median 40 m block spans {{confounds.financial.block_z_range_m.median}} m of height, against {{confounds.training_p99.block_z_range_m}} m at the 99th percentile of training blocks and at most {{confounds.ggpark.block_z_range_m.median}} m in any other area. A rule written before the first training expected buildings to score lower here, and they do on {{seeds.m0.claims.extrapolation.k}} of {{seeds.m0.claims.extrapolation.n}} seeds, with the search exact: lift {{seeds.m0.claims.financial_lift.median}} ({{seeds.m0.claims.financial_lift.min}} to {{seeds.m0.claims.financial_lift.max}}) against {{seeds.m0.claims.other_built_median_lift.median}} ({{seeds.m0.claims.other_built_median_lift.min}} to {{seeds.m0.claims.other_built_median_lift.max}}) in the other built areas, and {{seeds.m0.sf.financial.building_lift_delivery_gate.median}} ({{seeds.m0.sf.financial.building_lift_delivery_gate.min}} to {{seeds.m0.sf.financial.building_lift_delivery_gate.max}}) with the height gate taken from the delivery's own ground. This is weaker than the tower shares: the footprints could not be registered to the lidar here, so its {{seeds.m0.sf.financial.footprints_scored.median}} footprints are placed by the offset measured in {{crs.sf.footprint_offset_global.areas_used}} other areas.
 
 ## The input that broke the first model
 
-The first model read a fourth input, the return ratio. The return fields of DALES-2 as published on Hugging Face hold 0, so it was 0 on all {{surrey.all.voxel.return_ratio_exactly_0}} prepared DALES-2 points, and real on all but {{sf.aois.voxel.return_ratio_exactly_0}} of {{sf.aois.voxel.points}} San Francisco points. Given that input as delivered, the old model called the forest building:
+The first model read a fourth input, the return ratio. The return fields of DALES-2 as published on Hugging Face hold 0, so it was 0 on all {{surrey.all.voxel.return_ratio_exactly_0}} prepared DALES-2 points, and real on all but {{sf.aois.voxel.return_ratio_exactly_0}} of {{sf.aois.voxel.points}} San Francisco points. Given that input as delivered, the old model called the forest building (one checkpoint, one input changed, `score_variant.py --variant returns_ood` and `--variant ret0`):
 
 {{table:bug}}
+
+† As in the San Francisco table, not read.
 
 The published model has three inputs; `tests/integrity/test_input_channels.py` fails any model with an input constant in its training data.
 
 ## Water, and the old M1
 
-M1, the first round's attempt at water, learned it from Swiss tiles where {{flags.swiss_training.water.synthetic.min}} to {{flags.swiss_training.water.synthetic.max}} of the labelled water is synthetic fill. Real water there holds at most a median of {{realwater.zurich2683_1246.source.density_median}} points per square metre, against {{realwater.embarcadero.source.density_median}} at Embarcadero. Its lift over the water null is negative on every seed, and it is not trained again ([docs/method.md](docs/method.md)).
+M1, the first round's attempt at water, was trained on Swiss tiles where {{flags.swiss_training.water.synthetic.min}} to {{flags.swiss_training.water.synthetic.max}} of the labelled water is synthetic fill, a flat sheet of points on a 25 cm grid. Its gain over the water null is positive on {{compare.m1_vs_m0prime.water.embarcadero.positive_on}} of {{compare.m1_vs_m0prime.water.embarcadero.seeds}} seeds at Embarcadero and {{compare.m1_vs_m0prime.water.baybridge.positive_on}} of {{compare.m1_vs_m0prime.water.baybridge.seeds}} at Bay Bridge, and it is not trained again. What it took from the fill is not settled: moving the fill off its grid changed one seed of three, and on both sides water lies at the floor of its block, where flat ground lies too ([docs/method.md](docs/method.md)). `compare_recipes.py --new m1 --old m0prime` writes `compare_m1_vs_m0prime.json`.
 
 ## A bigger model
 
-A control with {{train.m0_big_seedA.parameters}} parameters beats the highest small seed in {{capacity.areas_big_above_small_max}} of {{capacity.areas_with_footprints}} areas with footprints, where the rule written beforehand asked for 4 ([docs/method.md](docs/method.md)).
-
-## Reading the figures
-
-A figure moved only when every seed of one model lies beyond every seed of the other ([docs/method.md](docs/method.md) gives how often chance does that). Before the first commit, the order of rules and results is self-reported; from the first commit on, the git history shows it.
+A control with {{train.m0_big_seedA.parameters}} parameters, trained with the exact search, beats the highest small seed in {{capacity.areas_big_above_small_max}} of {{capacity.areas_with_footprints}} areas with footprints, where the rule written beforehand asked for 4 ([docs/method.md](docs/method.md)). `build_quantities.py` reads it from the two models' scores.
 
 ## Why this exists
 
@@ -108,6 +125,8 @@ flowchart LR
   PG --> WEB
 ```
 
+Every figure in this README is a key in `data/artifacts/quantities.json`, which `python scripts/pipeline/build_quantities.py` builds from the committed artefacts; `python scripts/pipeline.py` prints every step that writes those, with its command.
+
 | Path | What it holds |
 |---|---|
 | `backend/surrey/` | The model, the block cache, inference and voting, the metrics, the palette and its rules, the registry of every quantity (`quantities.py`) |
@@ -117,7 +136,7 @@ flowchart LR
 | `docs/readme.template.md`, `docs/method.template.md` | This README and the method notes with each figure named by registry key |
 | `web/` | The page: its own three.js loader for Potree 2 octrees, the eye-dome pass, the cards, the free view |
 | `tests/unit/`, `tests/integrity/`, `tests/smoke/` | Behavioural tests, guards over documents and artefacts, and the built page in a real browser |
-| `docs/phase4_criteria.md` | The retraining's rules, written before it ran |
+| `docs/phase4_criteria.md`, `docs/phase6_criteria.md` | The rules of the two rented rounds, each written before it ran |
 
 ## Quick start
 
@@ -156,17 +175,18 @@ Each row is a command a reader runs from the repository root. The results are wh
 `python scripts/pipeline/verify.py` printed in the working copy, on {{verification.machine}}, on
 {{verification.date}}. A test is counted once however many cases a parametrisation makes of it. In a
 fresh clone two integrity tests skip, because the octrees and the prepared tiles they read are built
-by the pipeline and not committed.
+by the pipeline and not committed. One behavioural test, the neighbour search on a CUDA card, skips
+wherever torch has no card, as here.
 
 {{table:verification}}
 
 ## Limitations and failure modes
 
-- San Francisco was the development set as well as the test.
-- The footprints sit about two metres off the lidar; part of the offset is not explained.
-- In Golden Gate Park the park's false vegetation figure rests on only {{notveg.sf.ggpark.points}} points.
-- The old four channel model, M0prime and M1 are from the first round and appear only on the bug and water cards.
-- Frame rates were measured on one laptop.
+- San Francisco was the development set as well as the test, and the order of rules and results before the first commit is self-reported.
+- The footprints were registered to the lidar in {{crs.sf.footprint_offset_global.areas_used}} of the {{capacity.areas_with_footprints}} areas with footprints; the rest take their offset. Embarcadero's building figures rest on {{seeds.m0.sf.embarcadero.footprints_scored.median}} footprints, the Financial District's on {{seeds.m0.sf.financial.footprints_scored.median}}.
+- In Golden Gate Park false vegetation is not read (†), and its core holds {{notveg.sf.ggpark.points}} points.
+- Neighbouring points are not independent, and the seed range is the only spread given; it is not a confidence interval.
+- The four channel model, M0prime and M1 carry the old half precision search; each is read only against itself or its pair.
 
 ## References
 

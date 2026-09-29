@@ -31,6 +31,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "backend"))
 
 from surrey.data import CLASS_NAMES, COARSE  # noqa: E402
+from surrey.reference import REFERENCE_NOT_VALID  # noqa: E402
 
 TEMPLATE = ROOT / "docs" / "readme.template.md"
 README = ROOT / "README.md"
@@ -72,13 +73,13 @@ BUILDING_COLUMNS = [
     ("Footprint covered", "building_coverage"),
     ("The null's coverage", "building_null_coverage"),
 ]
-# The first round's M0 against the retrained M0, as scripts/investigations/building_breakdown.py set
-# them side by side.
+# The first round's M0 against Phase 4's, as scripts/investigations/building_breakdown.py set them side
+# by side.
 CHANGE_COLUMNS = [
     ("Precision, first round", "precision", "old"),
-    ("Precision, retrained", "precision", "new"),
+    ("Precision, Phase 4", "precision", "new"),
     ("Coverage, first round", "coverage_median", "old"),
-    ("Coverage, retrained", "coverage_median", "new"),
+    ("Coverage, Phase 4", "coverage_median", "new"),
 ]
 WATER_AREAS = [("Embarcadero", "embarcadero"), ("Bay Bridge", "baybridge")]
 
@@ -97,6 +98,9 @@ def fmt(value) -> str:
             # share never prints as 0.00.
             if value == 0:
                 return "0"
+            # A count taken as a median over seeds arrives as a float; 23.0 footprints are 23.
+            if abs(value) >= 2 and value.is_integer():
+                return f"{int(value):,}"
             if abs(value) >= 10:
                 return f"{value:.1f}"
             if abs(value) >= 0.1:
@@ -122,6 +126,8 @@ def has_buildings(vals: dict, area: str) -> bool:
 
 
 def table_sf_both_sides(vals: dict) -> str:
+    """A figure whose reference backend/surrey/reference.py marks as not valid in that area carries
+    a dagger, and the template says why under the table."""
     head = "| Area | " + " | ".join(name for name, _ in BOTH_SIDES) + " |"
     rule = "|" + "---|" * (len(BOTH_SIDES) + 1)
     rows = []
@@ -129,19 +135,33 @@ def table_sf_both_sides(vals: dict) -> str:
         cells = []
         for _, metric in BOTH_SIDES:
             key = f"seeds.m0.sf.{area}.{metric}"
-            cells.append(spread(vals, key) if vals.get(f"{key}.median") is not None else "no core")
+            if vals.get(f"{key}.median") is None:
+                cells.append("no core")
+                continue
+            mark = " \u2020" if (area, metric) in REFERENCE_NOT_VALID else ""
+            cells.append(spread(vals, key) + mark)
         rows.append(f"| {label} | " + " | ".join(cells) + " |")
     return "\n".join([head, rule, *rows])
 
 
 def table_sf_buildings(vals: dict) -> str:
-    head = "| Area | Footprints scored | " + " | ".join(n for n, _ in BUILDING_COLUMNS) + " |"
-    rule = "|" + "---|" * (len(BUILDING_COLUMNS) + 2)
+    """Whether the footprints could be registered to the area's own lidar stands beside the count:
+    where they could not, the area's figures rest on the offset measured elsewhere."""
+    head = (
+        "| Area | Footprints scored | Offset measured here | "
+        + " | ".join(n for n, _ in BUILDING_COLUMNS)
+        + " |"
+    )
+    rule = "|" + "---|" * (len(BUILDING_COLUMNS) + 3)
     rows = []
     for label, area in SF_AREAS:
         if not has_buildings(vals, area):
             continue
-        cells = [fmt(int(vals[f"seeds.m0.sf.{area}.footprints_scored.median"]))]
+        measured = vals[f"crs.sf.{area}.footprints_registered_by_correlation"]
+        cells = [
+            fmt(int(vals[f"seeds.m0.sf.{area}.footprints_scored.median"])),
+            "yes" if measured else "no",
+        ]
         cells += [spread(vals, f"seeds.m0.sf.{area}.{metric}") for _, metric in BUILDING_COLUMNS]
         rows.append(f"| {label} | " + " | ".join(cells) + " |")
     return "\n".join([head, rule, *rows])
@@ -180,8 +200,39 @@ def table_surrey_classes(vals: dict) -> str:
     return "\n".join([head, rule, *rows])
 
 
+MOVE_LABELS = {
+    "ground_precision_floor": "ground precision, floor",
+    "ground_recall": "delivery ground called ground",
+    "not_vegetation_core_called_vegetation": "not-vegetation cores called vegetation",
+    "vegetation_headline": "vegetation cores called vegetation",
+    "raised_unassigned_called_ground_rate": "raised unassigned points called ground",
+    "bridge_deck_called_building": "bridge deck called building",
+    "building_lift_global_shift": "building lift",
+    "water_called_ground": "water called ground",
+}
+
+
+def moves_table(pair: str):
+    """Every figure that moved between two recipes by the drop rule, read from the registry's
+    compare.<pair>.move keys: better or worse, never a size, since the rule reads only order."""
+
+    def build(vals: dict) -> str:
+        prefix = f"compare.{pair}.move."
+        area_label = {a: label for label, a in SF_AREAS} | {"surrey": "held-out Surrey"}
+        rows = []
+        for key in sorted(k for k in vals if k.startswith(prefix)):
+            area, metric = key[len(prefix) :].split(".", 1)
+            what = f"IoU, {metric}" if area == "surrey" else MOVE_LABELS.get(metric, metric)
+            rows.append(
+                f"| {area_label[area]} | {what} | {'better' if vals[key] > 0 else 'worse'} |"
+            )
+        return "\n".join(["| Where | Figure | Moved |", "|---|---|---|", *rows])
+
+    return build
+
+
 def moved(vals: dict, area: str, fig: str) -> str:
-    """The drop rule of backend/surrey/seeds.py: a figure moved only when every retrained seed lies
+    """The drop rule of backend/surrey/seeds.py: a figure moved only when every Phase 4 seed lies
     beyond every first round seed."""
     old, new = (
         (vals[f"buildings.{area}.{fig}.{w}.min"], vals[f"buildings.{area}.{fig}.{w}.max"])
@@ -191,7 +242,7 @@ def moved(vals: dict, area: str, fig: str) -> str:
 
 
 def building_reading(vals: dict, area: str) -> str:
-    """The reading written in docs/phase4_criteria.md before the breakdown ran."""
+    """The reading written in docs/phase4_criteria.md after the drop was seen, before the breakdown ran."""
     precision, coverage = moved(vals, area, "precision"), moved(vals, area, "coverage_median")
     if coverage == "rose" and precision == "fell":
         return "a trade: more of each footprint covered, less precisely"
@@ -202,7 +253,7 @@ def building_reading(vals: dict, area: str) -> str:
 
 def table_building_change(vals: dict) -> str:
     head = (
-        "| Area | Lift, first round to retrained | "
+        "| Area | Lift, first round to Phase 4 | "
         + " | ".join(n for n, _, _ in CHANGE_COLUMNS)
         + " | Reading |"
     )
@@ -223,15 +274,24 @@ def table_building_change(vals: dict) -> str:
 
 
 def table_bug(vals: dict) -> str:
-    head = "| Area | NAIP vegetation cores called vegetation, input as delivered | the same, return ratio set to 0 |"
-    rule = "|---|---|---|"
+    """One checkpoint with one input changed, so single figures and no seed range; the false
+    vegetation beside each, so a model that calls everything vegetation cannot look fixed."""
+    head = (
+        "| Area | Vegetation cores called vegetation, as delivered | the same, ratio set to 0 "
+        "| Not-vegetation cores called vegetation, as delivered | the same, ratio set to 0 |"
+    )
+    rule = "|---|---|---|---|---|"
     rows = []
     for label, area in SF_AREAS:
-        a = vals.get(f"scores.returns_ood.sf.{area}.vegetation_headline")
-        b = vals.get(f"scores.ret0.sf.{area}.vegetation_headline")
-        if a is None or b is None:
+        cells = []
+        for metric in ("vegetation_headline", "not_vegetation_core_called_vegetation"):
+            for variant in ("returns_ood", "ret0"):
+                v = vals.get(f"scores.{variant}.sf.{area}.{metric}")
+                mark = " \u2020" if (area, metric) in REFERENCE_NOT_VALID else ""
+                cells.append("no core" if v is None else fmt(v) + mark)
+        if cells[0] == "no core":
             continue
-        rows.append(f"| {label} | {fmt(a)} | {fmt(b)} |")
+        rows.append(f"| {label} | " + " | ".join(cells) + " |")
     return "\n".join([head, rule, *rows])
 
 
@@ -277,6 +337,8 @@ TABLES = {
     "sf_both_sides": table_sf_both_sides,
     "sf_buildings": table_sf_buildings,
     "surrey_classes": table_surrey_classes,
+    "moves_m0_vs_m0phase4": moves_table("m0_vs_m0phase4"),
+    "moves_m1_vs_m0prime": moves_table("m1_vs_m0prime"),
     "building_change": table_building_change,
     "bug": table_bug,
     "m1_water": table_m1_water,

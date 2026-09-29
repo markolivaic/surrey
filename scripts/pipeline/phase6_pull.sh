@@ -17,8 +17,8 @@ STAGE=data/phase6_download
 MODELS=(m0_seedA m0_seedB m0_seedC m0_big_seedA)
 
 if [ "${1:-}" = "--ssh" ]; then
-  HOST=${2:?the card's public address}
-  PORT=${3:?the card's direct SSH port}
+  HOST=${2:?the public address of the card}
+  PORT=${3:?the direct SSH port of the card}
   KEY=${SURREY_SSH_KEY:-$HOME/.ssh/vast_dayton}
   rm -rf "$STAGE"
   mkdir -p "$STAGE"

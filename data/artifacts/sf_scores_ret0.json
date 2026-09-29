@@ -1,6 +1,6 @@
 {
   "variant": "ret0",
-  "variant_note": "four channel checkpoint, return ratio forced to 0; on Surrey the ratio is already 0 on every point, so its Surrey predictions are the as-delivered ones",
+  "variant_note": "four channel checkpoint, return ratio forced to 0; on Surrey the ratio is already 0 on every point, so its Surrey predictions are the as-delivered ones; fp16 neighbour search",
   "classes": 15,
   "votes": 4,
   "predictions_from": {
@@ -63,7 +63,7 @@
   "extrapolation_across_areas": {
     "financial": 0.0908,
     "other_built_areas": {
-      "embarcadero": 0.0478,
+      "embarcadero": 0.0993,
       "mission": 0.6073,
       "soma": 0.5658,
       "sunset": 0.6739
@@ -374,33 +374,33 @@
             0.0,
             0.0
           ],
-          "eligible_points": 571432,
-          "predicted_building_points": 461536,
+          "eligible_points": 346263,
+          "predicted_building_points": 237767,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "global_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 571432,
-          "predicted_building_points": 461536,
+          "eligible_points": 346263,
+          "predicted_building_points": 237767,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "per_area_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 571432,
-          "predicted_building_points": 461536,
+          "eligible_points": 346263,
+          "predicted_building_points": 237767,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         }
       },
       "building_area_coverage_global_shift": {
@@ -416,7 +416,24 @@
         "shortfall_against_null": null,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
-      "building_sign_differs_global_vs_per_area": false,
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.0,
+        "eligible_points": 0,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 0,
+          "footprints_too_small": 0,
+          "coverage_median": null,
+          "coverage_p10": null,
+          "coverage_p90": null,
+          "null_coverage_median": null,
+          "null_coverage_p10": null,
+          "shortfall_against_null": null,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "vegetation": {
         "registered": {
           "vegetation_core_points": 0,
@@ -433,6 +450,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": null,
+        "not_vegetation_core_called_vegetation": 0.0168,
         "basis": "unregistered mask chosen by the rule"
       },
       "confidence": {
@@ -504,20 +522,20 @@
         "extrapolation_building_lift": {
           "status": "addition, not in the prediction written before E0",
           "named_blocks": {
-            "eligible_points": 352005,
-            "predicted_building_points": 279948,
+            "eligible_points": 231771,
+            "predicted_building_points": 160103,
             "precision": 0.0,
             "null_precision": 0.0,
-            "precision_lift_over_null": 0.0
+            "precision_lift_over_null": null
           },
           "other_blocks": {
-            "eligible_points": 219427,
-            "predicted_building_points": 181588,
+            "eligible_points": 114492,
+            "predicted_building_points": 77664,
             "precision": 0.0,
             "null_precision": 0.0,
-            "precision_lift_over_null": 0.0
+            "precision_lift_over_null": null
           },
-          "reading": "measured nothing"
+          "reading": null
         }
       }
     },
@@ -687,16 +705,16 @@
       },
       "ground_band": {
         "with_water": {
-          "recall_clean": 0.8944,
-          "precision_floor": 0.3471,
-          "precision_ceiling": 0.5261,
-          "predicted_points_unjudgeable_fraction": 0.5918
+          "recall_clean": 0.8902,
+          "precision_floor": 0.1899,
+          "precision_ceiling": 0.2983,
+          "predicted_points_unjudgeable_fraction": 0.2505
         },
         "without_water": {
-          "recall_clean": 0.8944,
-          "precision_floor": 0.4303,
-          "precision_ceiling": 0.6522,
-          "predicted_points_unjudgeable_fraction": 0.4332
+          "recall_clean": 0.8902,
+          "precision_floor": 0.4307,
+          "precision_ceiling": 0.6764,
+          "predicted_points_unjudgeable_fraction": 0.4312
         }
       },
       "building_vs_footprints_over_2m": {
@@ -705,33 +723,33 @@
             0.0,
             0.0
           ],
-          "eligible_points": 1231013,
-          "predicted_building_points": 819981,
-          "precision": 0.1723,
-          "null_precision": 0.1391,
-          "precision_lift_over_null": 0.0385
+          "eligible_points": 1011138,
+          "predicted_building_points": 600220,
+          "precision": 0.2354,
+          "null_precision": 0.1694,
+          "precision_lift_over_null": 0.0795
         },
         "global_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 1231013,
-          "predicted_building_points": 819981,
-          "precision": 0.2064,
-          "null_precision": 0.1666,
-          "precision_lift_over_null": 0.0478
+          "eligible_points": 1011138,
+          "predicted_building_points": 600220,
+          "precision": 0.2819,
+          "null_precision": 0.2028,
+          "precision_lift_over_null": 0.0993
         },
         "per_area_shift": {
           "offset_east_north_m": [
             1.584,
             -0.792
           ],
-          "eligible_points": 1231013,
-          "predicted_building_points": 819981,
-          "precision": 0.2064,
-          "null_precision": 0.1666,
-          "precision_lift_over_null": 0.0478
+          "eligible_points": 1011138,
+          "predicted_building_points": 600220,
+          "precision": 0.2819,
+          "null_precision": 0.2028,
+          "precision_lift_over_null": 0.0993
         }
       },
       "building_area_coverage_global_shift": {
@@ -746,6 +764,28 @@
         "null_coverage_p10": 0.6936,
         "shortfall_against_null": 0.0327,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+      },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.5014,
+        "eligible_points": 911553,
+        "predicted_building_points": 463728,
+        "precision": 0.4004,
+        "null_precision": 0.2733,
+        "precision_lift_over_null": 0.175,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 6,
+          "footprints_too_small": 1,
+          "coverage_median": 0.9061,
+          "coverage_p10": 0.678,
+          "coverage_p90": 0.9867,
+          "null_coverage_median": 0.9991,
+          "null_coverage_p10": 0.8231,
+          "shortfall_against_null": 0.0931,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
       },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
@@ -778,6 +818,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9984,
+        "not_vegetation_core_called_vegetation": 0.0646,
         "basis": "unregistered mask chosen by the rule"
       },
       "confidence": {
@@ -819,30 +860,30 @@
         }
       },
       "raised_unassigned_called_ground_rate": {
-        "raised_points": 863465,
-        "rate": 0.232,
+        "raised_points": 871018,
+        "rate": 0.2301,
         "note": "delivery unassigned more than 3 m above the delivery ground surface; the Surrey rate is over DALES non-ground labels on the same definition"
       },
       "auroc": {
         "easy_unassigned_over_3m": {
-          "right": 411097,
-          "wrong": 200289,
-          "auroc": 0.7212,
-          "median_conf_right": 0.9619,
-          "median_conf_wrong": 0.8589
+          "right": 412910,
+          "wrong": 200441,
+          "auroc": 0.7192,
+          "median_conf_right": 0.9614,
+          "median_conf_wrong": 0.8584
         },
         "hard_water_within_0_5m": {
-          "right": 411097,
-          "wrong": 43840,
-          "auroc": 0.7265,
-          "median_conf_right": 0.9619,
-          "median_conf_wrong": 0.8657
+          "right": 412910,
+          "wrong": 69000,
+          "auroc": 0.7347,
+          "median_conf_right": 0.9614,
+          "median_conf_wrong": 0.8579
         },
         "water_any_height": {
-          "right": 411097,
+          "right": 412910,
           "wrong": 1215304,
-          "auroc": 0.7076,
-          "median_conf_right": 0.9619,
+          "auroc": 0.7052,
+          "median_conf_right": 0.9614,
           "median_conf_wrong": 0.8799
         },
         "excluded_from_easy": null
@@ -855,20 +896,20 @@
         "extrapolation_building_lift": {
           "status": "addition, not in the prediction written before E0",
           "named_blocks": {
-            "eligible_points": 221249,
-            "predicted_building_points": 159707,
+            "eligible_points": 158201,
+            "predicted_building_points": 96659,
             "precision": 0.0,
             "null_precision": 0.0,
-            "precision_lift_over_null": 0.0
+            "precision_lift_over_null": null
           },
           "other_blocks": {
-            "eligible_points": 1009764,
-            "predicted_building_points": 660274,
-            "precision": 0.2563,
-            "null_precision": 0.2031,
-            "precision_lift_over_null": 0.0668
+            "eligible_points": 852937,
+            "predicted_building_points": 503561,
+            "precision": 0.3361,
+            "null_precision": 0.2404,
+            "precision_lift_over_null": 0.1259
           },
-          "reading": "predicts degradation"
+          "reading": null
         }
       }
     },
@@ -950,6 +991,28 @@
         "shortfall_against_null": 0.0797,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.9938,
+        "eligible_points": 5315622,
+        "predicted_building_points": 3339071,
+        "precision": 0.72,
+        "null_precision": 0.6892,
+        "precision_lift_over_null": 0.0993,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 23,
+          "footprints_too_small": 2,
+          "coverage_median": 0.9366,
+          "coverage_p10": 0.5543,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9935,
+          "null_coverage_p10": 0.9063,
+          "shortfall_against_null": 0.0573,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -981,6 +1044,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9971,
+        "not_vegetation_core_called_vegetation": 0.1208,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1103,7 +1167,7 @@
           "predicted_building_points": 40468,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "global_shift": {
           "offset_east_north_m": [
@@ -1114,7 +1178,7 @@
           "predicted_building_points": 40468,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         },
         "per_area_shift": {
           "offset_east_north_m": [
@@ -1125,7 +1189,7 @@
           "predicted_building_points": 40468,
           "precision": 0.0,
           "null_precision": 0.0,
-          "precision_lift_over_null": 0.0
+          "precision_lift_over_null": null
         }
       },
       "building_area_coverage_global_shift": {
@@ -1141,7 +1205,28 @@
         "shortfall_against_null": null,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
-      "building_sign_differs_global_vs_per_area": false,
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 5342392,
+        "predicted_building_points": 39632,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "precision_lift_over_null": null,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 1,
+          "footprints_too_small": 0,
+          "coverage_median": 0.0,
+          "coverage_p10": 0.0,
+          "coverage_p90": 0.0,
+          "null_coverage_median": 0.0,
+          "null_coverage_p10": 0.0,
+          "shortfall_against_null": null,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "vegetation": {
         "registered": {
           "vegetation_core_points": 3073951,
@@ -1172,6 +1257,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9707,
+        "not_vegetation_core_called_vegetation": 0.958,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1332,6 +1418,28 @@
         "shortfall_against_null": 0.0197,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 0.9984,
+        "eligible_points": 2494566,
+        "predicted_building_points": 1408534,
+        "precision": 0.8508,
+        "null_precision": 0.6366,
+        "precision_lift_over_null": 0.5893,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 56,
+          "footprints_too_small": 0,
+          "coverage_median": 0.9899,
+          "coverage_p10": 0.6967,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 1.0,
+          "null_coverage_p10": 0.9327,
+          "shortfall_against_null": 0.0101,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1363,6 +1471,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9822,
+        "not_vegetation_core_called_vegetation": 0.0524,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1505,6 +1614,28 @@
         "shortfall_against_null": 0.0473,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 2816921,
+        "predicted_building_points": 1806526,
+        "precision": 0.8638,
+        "null_precision": 0.7136,
+        "precision_lift_over_null": 0.5245,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 26,
+          "footprints_too_small": 0,
+          "coverage_median": 0.8792,
+          "coverage_p10": 0.6592,
+          "coverage_p90": 0.9922,
+          "null_coverage_median": 0.9948,
+          "null_coverage_p10": 0.7579,
+          "shortfall_against_null": 0.1162,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1536,6 +1667,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9859,
+        "not_vegetation_core_called_vegetation": 0.0357,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1678,6 +1810,28 @@
         "shortfall_against_null": 0.0136,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 3574542,
+        "predicted_building_points": 2627042,
+        "precision": 0.8488,
+        "null_precision": 0.6623,
+        "precision_lift_over_null": 0.5522,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 77,
+          "footprints_too_small": 1,
+          "coverage_median": 0.9882,
+          "coverage_p10": 0.8327,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9967,
+          "null_coverage_p10": 0.8395,
+          "shortfall_against_null": 0.0085,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1709,6 +1863,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9303,
+        "not_vegetation_core_called_vegetation": 0.0718,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1869,6 +2024,28 @@
         "shortfall_against_null": 0.0059,
         "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
       },
+      "building_delivery_gate_global_shift": {
+        "gate": "height above the delivery's own ground surface, classes 2 and 20",
+        "points_the_surface_reaches": 1.0,
+        "eligible_points": 2219920,
+        "predicted_building_points": 1553401,
+        "precision": 0.8665,
+        "null_precision": 0.6265,
+        "precision_lift_over_null": 0.6426,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 33,
+          "footprints_too_small": 0,
+          "coverage_median": 0.9922,
+          "coverage_p10": 0.9645,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9983,
+          "null_coverage_p10": 0.9758,
+          "shortfall_against_null": 0.0061,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        }
+      },
       "building_sign_differs_global_vs_per_area": false,
       "vegetation": {
         "registered": {
@@ -1900,6 +2077,7 @@
       },
       "vegetation_headline": {
         "vegetation_core_called_vegetation": 0.9475,
+        "not_vegetation_core_called_vegetation": 0.0595,
         "basis": "lower of the two masks: the rule did not decide"
       },
       "confidence": {
@@ -1965,5 +2143,5 @@
       }
     }
   ],
-  "seconds": 89.9
+  "seconds": 97.4
 }

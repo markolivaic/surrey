@@ -1,0 +1,831 @@
+{
+  "variant": "m0phase4_seedC",
+  "checkpoint": "data/checkpoints/m0_seedC.pt",
+  "checkpoint_sha256_16": "1aceed83aa5b0462",
+  "checkpoint_step": 12000,
+  "height": "height above ground, hag_cm.npy, the min-z grid surface",
+  "thresholds_m": [
+    60.0,
+    100.0,
+    121.77,
+    150.0
+  ],
+  "training_block_z_max_m": 121.77,
+  "delivery_has_no_building_class": true,
+  "class_names": [
+    "ground",
+    "vegetation",
+    "car",
+    "powerline",
+    "fence",
+    "tree",
+    "pickup",
+    "van-truck",
+    "heavy-duty",
+    "utility-pole",
+    "light-pole",
+    "traffic-pole",
+    "habitat",
+    "complex",
+    "annex"
+  ],
+  "areas": {
+    "baybridge": {
+      "points": 3068521,
+      "max_height_m": 163.47,
+      "bins": {
+        "above_60m": {
+          "points": 418280,
+          "share_of_area": 0.136313,
+          "classes": {
+            "ground": {
+              "points": 512,
+              "share": 0.001224
+            },
+            "vegetation": {
+              "points": 36,
+              "share": 8.6e-05
+            },
+            "powerline": {
+              "points": 15642,
+              "share": 0.037396
+            },
+            "tree": {
+              "points": 1236,
+              "share": 0.002955
+            },
+            "heavy-duty": {
+              "points": 7,
+              "share": 1.7e-05
+            },
+            "utility-pole": {
+              "points": 35651,
+              "share": 0.085232
+            },
+            "light-pole": {
+              "points": 14,
+              "share": 3.3e-05
+            },
+            "traffic-pole": {
+              "points": 1,
+              "share": 2e-06
+            },
+            "complex": {
+              "points": 365181,
+              "share": 0.873054
+            }
+          },
+          "coarse": {
+            "building": {
+              "points": 365181,
+              "share": 0.873054
+            },
+            "pole": {
+              "points": 51308,
+              "share": 0.122664
+            },
+            "vegetation": {
+              "points": 1272,
+              "share": 0.003041
+            },
+            "ground": {
+              "points": 512,
+              "share": 0.001224
+            },
+            "vehicle": {
+              "points": 7,
+              "share": 1.7e-05
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 250937,
+              "share": 0.599926
+            },
+            "17": {
+              "points": 167343,
+              "share": 0.400074
+            }
+          }
+        },
+        "above_100m": {
+          "points": 72624,
+          "share_of_area": 0.023667,
+          "classes": {
+            "ground": {
+              "points": 1,
+              "share": 1.4e-05
+            },
+            "powerline": {
+              "points": 10891,
+              "share": 0.149964
+            },
+            "tree": {
+              "points": 1169,
+              "share": 0.016097
+            },
+            "utility-pole": {
+              "points": 26438,
+              "share": 0.364039
+            },
+            "complex": {
+              "points": 34125,
+              "share": 0.469886
+            }
+          },
+          "coarse": {
+            "pole": {
+              "points": 37329,
+              "share": 0.514004
+            },
+            "building": {
+              "points": 34125,
+              "share": 0.469886
+            },
+            "vegetation": {
+              "points": 1169,
+              "share": 0.016097
+            },
+            "ground": {
+              "points": 1,
+              "share": 1.4e-05
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 72624,
+              "share": 1.0
+            }
+          }
+        },
+        "above_training_ceiling": {
+          "points": 38521,
+          "share_of_area": 0.012554,
+          "classes": {
+            "ground": {
+              "points": 1,
+              "share": 2.6e-05
+            },
+            "powerline": {
+              "points": 4873,
+              "share": 0.126502
+            },
+            "tree": {
+              "points": 1169,
+              "share": 0.030347
+            },
+            "utility-pole": {
+              "points": 19902,
+              "share": 0.516653
+            },
+            "complex": {
+              "points": 12576,
+              "share": 0.326471
+            }
+          },
+          "coarse": {
+            "pole": {
+              "points": 24775,
+              "share": 0.643156
+            },
+            "building": {
+              "points": 12576,
+              "share": 0.326471
+            },
+            "vegetation": {
+              "points": 1169,
+              "share": 0.030347
+            },
+            "ground": {
+              "points": 1,
+              "share": 2.6e-05
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 38521,
+              "share": 1.0
+            }
+          }
+        },
+        "above_150m": {
+          "points": 332,
+          "share_of_area": 0.000108,
+          "classes": {
+            "powerline": {
+              "points": 7,
+              "share": 0.021084
+            },
+            "tree": {
+              "points": 14,
+              "share": 0.042169
+            },
+            "utility-pole": {
+              "points": 311,
+              "share": 0.936747
+            }
+          },
+          "coarse": {
+            "pole": {
+              "points": 318,
+              "share": 0.957831
+            },
+            "vegetation": {
+              "points": 14,
+              "share": 0.042169
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 332,
+              "share": 1.0
+            }
+          }
+        }
+      }
+    },
+    "embarcadero": {
+      "points": 4434486,
+      "max_height_m": 143.69,
+      "bins": {
+        "above_60m": {
+          "points": 235056,
+          "share_of_area": 0.053006,
+          "classes": {
+            "ground": {
+              "points": 8,
+              "share": 3.4e-05
+            },
+            "powerline": {
+              "points": 8437,
+              "share": 0.035894
+            },
+            "tree": {
+              "points": 3800,
+              "share": 0.016166
+            },
+            "heavy-duty": {
+              "points": 44,
+              "share": 0.000187
+            },
+            "utility-pole": {
+              "points": 18728,
+              "share": 0.079675
+            },
+            "light-pole": {
+              "points": 48,
+              "share": 0.000204
+            },
+            "traffic-pole": {
+              "points": 2,
+              "share": 9e-06
+            },
+            "complex": {
+              "points": 203989,
+              "share": 0.867831
+            }
+          },
+          "coarse": {
+            "building": {
+              "points": 203989,
+              "share": 0.867831
+            },
+            "pole": {
+              "points": 27215,
+              "share": 0.115781
+            },
+            "vegetation": {
+              "points": 3800,
+              "share": 0.016166
+            },
+            "vehicle": {
+              "points": 44,
+              "share": 0.000187
+            },
+            "ground": {
+              "points": 8,
+              "share": 3.4e-05
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 131074,
+              "share": 0.557629
+            },
+            "17": {
+              "points": 103982,
+              "share": 0.442371
+            }
+          }
+        },
+        "above_100m": {
+          "points": 35678,
+          "share_of_area": 0.008046,
+          "classes": {
+            "powerline": {
+              "points": 98,
+              "share": 0.002747
+            },
+            "tree": {
+              "points": 3525,
+              "share": 0.0988
+            },
+            "utility-pole": {
+              "points": 9291,
+              "share": 0.260413
+            },
+            "complex": {
+              "points": 22764,
+              "share": 0.63804
+            }
+          },
+          "coarse": {
+            "building": {
+              "points": 22764,
+              "share": 0.63804
+            },
+            "pole": {
+              "points": 9389,
+              "share": 0.263159
+            },
+            "vegetation": {
+              "points": 3525,
+              "share": 0.0988
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 35678,
+              "share": 1.0
+            }
+          }
+        },
+        "above_training_ceiling": {
+          "points": 17503,
+          "share_of_area": 0.003947,
+          "classes": {
+            "powerline": {
+              "points": 94,
+              "share": 0.005371
+            },
+            "tree": {
+              "points": 3293,
+              "share": 0.188139
+            },
+            "utility-pole": {
+              "points": 4268,
+              "share": 0.243844
+            },
+            "complex": {
+              "points": 9848,
+              "share": 0.562646
+            }
+          },
+          "coarse": {
+            "building": {
+              "points": 9848,
+              "share": 0.562646
+            },
+            "pole": {
+              "points": 4362,
+              "share": 0.249214
+            },
+            "vegetation": {
+              "points": 3293,
+              "share": 0.188139
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 17503,
+              "share": 1.0
+            }
+          }
+        },
+        "above_150m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        }
+      }
+    },
+    "financial": {
+      "points": 7491501,
+      "max_height_m": 192.16,
+      "bins": {
+        "above_60m": {
+          "points": 1622252,
+          "share_of_area": 0.216546,
+          "classes": {
+            "ground": {
+              "points": 1269,
+              "share": 0.000782
+            },
+            "vegetation": {
+              "points": 3,
+              "share": 2e-06
+            },
+            "powerline": {
+              "points": 391906,
+              "share": 0.241581
+            },
+            "tree": {
+              "points": 2449,
+              "share": 0.00151
+            },
+            "heavy-duty": {
+              "points": 3,
+              "share": 2e-06
+            },
+            "utility-pole": {
+              "points": 191879,
+              "share": 0.118279
+            },
+            "light-pole": {
+              "points": 782,
+              "share": 0.000482
+            },
+            "traffic-pole": {
+              "points": 52,
+              "share": 3.2e-05
+            },
+            "complex": {
+              "points": 1033909,
+              "share": 0.637329
+            }
+          },
+          "coarse": {
+            "building": {
+              "points": 1033909,
+              "share": 0.637329
+            },
+            "pole": {
+              "points": 584619,
+              "share": 0.360375
+            },
+            "vegetation": {
+              "points": 2452,
+              "share": 0.001511
+            },
+            "ground": {
+              "points": 1269,
+              "share": 0.000782
+            },
+            "vehicle": {
+              "points": 3,
+              "share": 2e-06
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 1622252,
+              "share": 1.0
+            }
+          }
+        },
+        "above_100m": {
+          "points": 988808,
+          "share_of_area": 0.131991,
+          "classes": {
+            "ground": {
+              "points": 1107,
+              "share": 0.00112
+            },
+            "powerline": {
+              "points": 384582,
+              "share": 0.388935
+            },
+            "tree": {
+              "points": 2268,
+              "share": 0.002294
+            },
+            "utility-pole": {
+              "points": 137452,
+              "share": 0.139008
+            },
+            "light-pole": {
+              "points": 708,
+              "share": 0.000716
+            },
+            "traffic-pole": {
+              "points": 9,
+              "share": 9e-06
+            },
+            "complex": {
+              "points": 462682,
+              "share": 0.467919
+            }
+          },
+          "coarse": {
+            "pole": {
+              "points": 522751,
+              "share": 0.528668
+            },
+            "building": {
+              "points": 462682,
+              "share": 0.467919
+            },
+            "vegetation": {
+              "points": 2268,
+              "share": 0.002294
+            },
+            "ground": {
+              "points": 1107,
+              "share": 0.00112
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 988808,
+              "share": 1.0
+            }
+          }
+        },
+        "above_training_ceiling": {
+          "points": 718494,
+          "share_of_area": 0.095908,
+          "classes": {
+            "ground": {
+              "points": 1099,
+              "share": 0.00153
+            },
+            "powerline": {
+              "points": 364609,
+              "share": 0.507463
+            },
+            "tree": {
+              "points": 2265,
+              "share": 0.003152
+            },
+            "utility-pole": {
+              "points": 113837,
+              "share": 0.158438
+            },
+            "light-pole": {
+              "points": 706,
+              "share": 0.000983
+            },
+            "traffic-pole": {
+              "points": 5,
+              "share": 7e-06
+            },
+            "complex": {
+              "points": 235973,
+              "share": 0.328427
+            }
+          },
+          "coarse": {
+            "pole": {
+              "points": 479157,
+              "share": 0.666891
+            },
+            "building": {
+              "points": 235973,
+              "share": 0.328427
+            },
+            "vegetation": {
+              "points": 2265,
+              "share": 0.003152
+            },
+            "ground": {
+              "points": 1099,
+              "share": 0.00153
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 718494,
+              "share": 1.0
+            }
+          }
+        },
+        "above_150m": {
+          "points": 233408,
+          "share_of_area": 0.031156,
+          "classes": {
+            "ground": {
+              "points": 1,
+              "share": 4e-06
+            },
+            "powerline": {
+              "points": 179538,
+              "share": 0.769202
+            },
+            "tree": {
+              "points": 756,
+              "share": 0.003239
+            },
+            "utility-pole": {
+              "points": 42825,
+              "share": 0.183477
+            },
+            "light-pole": {
+              "points": 623,
+              "share": 0.002669
+            },
+            "complex": {
+              "points": 9665,
+              "share": 0.041408
+            }
+          },
+          "coarse": {
+            "pole": {
+              "points": 222986,
+              "share": 0.955349
+            },
+            "building": {
+              "points": 9665,
+              "share": 0.041408
+            },
+            "vegetation": {
+              "points": 756,
+              "share": 0.003239
+            },
+            "ground": {
+              "points": 1,
+              "share": 4e-06
+            }
+          },
+          "asprs": {
+            "unclassified": {
+              "points": 233408,
+              "share": 1.0
+            }
+          }
+        }
+      }
+    },
+    "ggpark": {
+      "points": 9010024,
+      "max_height_m": 45.17,
+      "bins": {
+        "above_60m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_100m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_training_ceiling": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_150m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        }
+      }
+    },
+    "mission": {
+      "points": 4532181,
+      "max_height_m": 29.0,
+      "bins": {
+        "above_60m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_100m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_training_ceiling": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_150m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        }
+      }
+    },
+    "soma": {
+      "points": 4522972,
+      "max_height_m": 47.01,
+      "bins": {
+        "above_60m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_100m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_training_ceiling": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_150m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        }
+      }
+    },
+    "steep": {
+      "points": 5417326,
+      "max_height_m": 52.94,
+      "bins": {
+        "above_60m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_100m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_training_ceiling": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_150m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        }
+      }
+    },
+    "sunset": {
+      "points": 5461632,
+      "max_height_m": 22.28,
+      "bins": {
+        "above_60m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_100m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_training_ceiling": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        },
+        "above_150m": {
+          "points": 0,
+          "share_of_area": 0.0,
+          "classes": {},
+          "coarse": {},
+          "asprs": {}
+        }
+      }
+    }
+  }
+}

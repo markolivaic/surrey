@@ -1,6 +1,6 @@
 {
   "what": "every check in the README's verification table, as one run printed it",
-  "date": "2026-09-26",
+  "date": "2026-09-29",
   "machine": "Windows 11, AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD, NVIDIA GeForce RTX 3050 Laptop GPU, Python 3.12.1",
   "checks": [
     {
@@ -9,10 +9,11 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 175,
-        "functions": 166
+        "passed": 185,
+        "skipped": 1,
+        "functions": 177
       },
-      "summary": "166 tests; cases 175 passed"
+      "summary": "177 tests; cases 185 passed, 1 skipped"
     },
     {
       "check": "integrity tests",
@@ -20,10 +21,10 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 55,
-        "functions": 51
+        "passed": 51,
+        "functions": 47
       },
-      "summary": "51 tests; cases 55 passed"
+      "summary": "47 tests; cases 51 passed"
     },
     {
       "check": "README is generated",
@@ -47,10 +48,10 @@
       "exit_code": 0,
       "passes": true,
       "counts": {
-        "passed": 5,
+        "passed": 7,
         "failed": 0
       },
-      "summary": "5 passed, 0 failed"
+      "summary": "7 passed, 0 failed"
     },
     {
       "check": "viewer build",
