@@ -56,6 +56,38 @@ curl -s -L -r 0-15 -o /dev/null -w "%{http_code} %{size_download}\n" https://hug
 
 It prints `206 16`. After a retrain the octrees change; step 3 again replaces them in a new commit.
 
+## The weights, to Hugging Face
+
+A training checkpoint needs unpickling to read, which can run code, so what is published is the
+weights alone, written by `export_weights.py` and read with `weights_only=True`.
+
+1. Write the weights of the four models the README reports:
+
+```bash
+.venv/Scripts/python scripts/pipeline/export_weights.py data/checkpoints/m0_seedA.pt data/checkpoints/m0_seedB.pt data/checkpoints/m0_seedC.pt data/checkpoints/m0_big_seedA.pt
+```
+
+2. Create the model repository, logged in as in step 1 above:
+
+```bash
+.venv/Scripts/hf.exe repo create markolivaic/surrey --repo-type model
+```
+
+3. Upload the weights, the model card as the repository's README, and the licence:
+
+```bash
+.venv/Scripts/hf.exe upload markolivaic/surrey data/weights . --repo-type model --commit-message "Weights"
+.venv/Scripts/hf.exe upload markolivaic/surrey docs/hosting/model_card.md README.md --repo-type model --commit-message "Model card"
+.venv/Scripts/hf.exe upload markolivaic/surrey LICENSE_MODEL.md LICENSE_MODEL.md --repo-type model --commit-message "Licence for the weights"
+```
+
+4. Check one file reads back as weights only:
+
+```bash
+.venv/Scripts/hf.exe download markolivaic/surrey m0_seedA.pt --local-dir data/weights_check
+.venv/Scripts/python -c "import sys; sys.path.insert(0, 'backend'); from surrey.inference import load_checkpoint; load_checkpoint('data/weights_check/m0_seedA.pt', 'cpu'); print('reads with weights_only=True')"
+```
+
 ## The page, to GitHub Pages
 
 The build uses relative paths (`base: "./"` in `web/vite.config.js`), so `web/dist` works from any
