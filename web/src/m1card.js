@@ -24,7 +24,7 @@ function source(figs) {
       the survey fills it with points on a regular grid and flags them synthetic: on the four Swiss tiles
       M1 learned from, a share of ${v("flags.swiss_training.water.synthetic.min")} to
       ${v("flags.swiss_training.water.synthetic.max")} of the water. M1 was trained before that flag was read,
-      so the water it learned is the fill.</p>
+      so most of the water it was shown was fill.</p>
     <p>Measured returns alone, water carries a median of ${v("realwater.zurich2683_1246.source.density_median")}
       points per square metre on the Swiss tile with the most of it and ${v("realwater.zug2680_1225.source.density_median")}
       at Zug, against ${v("realwater.embarcadero.source.density_median")} at Embarcadero and
@@ -62,8 +62,11 @@ function inset(figs) {
       ${v("lattice_test.m1_seedB.as_prepared.water.iou")} to ${v("lattice_test.m1_seedB.water_jittered.water.iou")},
       and leaves seeds A and C where they were, ${v("lattice_test.m1_seedA.as_prepared.water.iou")} to
       ${v("lattice_test.m1_seedA.water_jittered.water.iou")} and ${v("lattice_test.m1_seedC.as_prepared.water.iou")} to
-      ${v("lattice_test.m1_seedC.water_jittered.water.iou")}: the grid's exact places are not all that A and C took
-      from the fill.</p>`;
+      ${v("lattice_test.m1_seedC.water_jittered.water.iou")}. What M1 took from the fill is not settled: on
+      both sides the water lies at the floor of its 40 m block, a median of
+      ${v("water_input.both.switzerland.z_median")} m above it in Switzerland and
+      ${v("water_input.both.san_francisco.z_median")} m in San Francisco, the height flat ground has too, and
+      height above the floor is the only height the model reads.</p>`;
 }
 
 export function m1CardState(figs) {
@@ -86,7 +89,7 @@ export function m1CardHtml(figs) {
     const med = q(figs, `compare.m1_vs_m0prime.water.${key}.lift.median`);
     const lo = q(figs, `compare.m1_vs_m0prime.water.${key}.lift.min`);
     const hi = q(figs, `compare.m1_vs_m0prime.water.${key}.lift.max`);
-    return `${name}: lift over the null ${med} (${lo} to ${hi}), positive on ${k} of ${n} seeds`;
+    return `${name}: gain over the null ${med} (${lo} to ${hi}), positive on ${k} of ${n} seeds`;
   }).join("<br>");
   const verdict = state === "success"
     ? "<p>Against the water null, which calls every point below the measured sea level plus half a metre water, M1's water does better on every seed, at both places the delivery labels water.</p>"

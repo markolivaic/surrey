@@ -137,7 +137,7 @@ def main() -> int:
     # The inset's figures, named in full in the card's source; a spread names its stem and gets all three.
     # Keys carry capitals where they name a seed, m1_seedA, so the pattern has to take them.
     inset_keys = re.findall(
-        r'v\("((?:swiss_holdout|water|crop_density|density|lattice_test|lattice|rented|realwater|flags)\.[A-Za-z0-9_.]+)"\)',
+        r'v\("((?:swiss_holdout|water_input|water|crop_density|density|lattice_test|lattice|rented|realwater|flags)\.[A-Za-z0-9_.]+)"\)',
         m1card_text,
     )
     inset_keys += [

@@ -464,6 +464,16 @@
     "variant": "m1_seeds",
     "where": "m1card"
   },
+  "water_input.both.san_francisco.z_median": {
+    "value": 0.1,
+    "variant": "none",
+    "where": "m1card"
+  },
+  "water_input.both.switzerland.z_median": {
+    "value": 0.0,
+    "variant": "none",
+    "where": "m1card"
+  },
   "provenance.sf.flight_date": {
     "value": "2023-04-20",
     "variant": "none",
