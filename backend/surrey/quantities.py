@@ -102,38 +102,43 @@ class Quantity:
 # Francisco point, so every San Francisco figure from the first checkpoint measured a
 # model reading an input it had never seen. The variant says which model and which
 # input a number came from, and only the published one may reach the README.
+# Every model but Phase 6's M0 was trained and predicted with the fp16 neighbour search
+# (docs/phase6_criteria.md), and each description says which search a variant carries.
 VARIANTS = {
     "none": "no model involved",
     "returns_ood": "four channel checkpoint data/checkpoints/dayton.pt, input as delivered; "
-    "in domain its fourth channel is 0 as in training, away it is out of range",
-    "ret0": "the same checkpoint with the return ratio forced to 0 at inference",
-    "m0_seedA": "three channel retrain, seed A, the published model",
-    "m0_seedB": "three channel retrain, seed B, for training variance only",
-    "m0_seedC": "three channel retrain, seed C, for training variance only",
-    "m0prime_seedA": "DALES-2 and Swiss sub-tiles with Swiss water and bridge deck ignored, seed A",
-    "m0prime_seedB": "the same control, seed B",
-    "m0prime_seedC": "the same control, seed C",
-    "m1_seedA": "DALES-2 and Swiss sub-tiles with water and bridge deck as classes, seed A",
-    "m1_seedB": "M1, seed B",
-    "m1_seedC": "M1, seed C",
-    # The runs on a rented RTX 4090, kept apart from the laptop's by name so no figure from one can be
+    "in domain its fourth channel is 0 as in training, away it is out of range; fp16 neighbour search",
+    "ret0": "the same checkpoint with the return ratio forced to 0 at inference; fp16 neighbour search",
+    "m0_seedA": "three channel retrain, Phase 6, seed A, the published model; fp32 neighbour search",
+    "m0_seedB": "three channel retrain, Phase 6, seed B, for training variance only; fp32 neighbour search",
+    "m0_seedC": "three channel retrain, Phase 6, seed C, for training variance only; fp32 neighbour search",
+    "m0prime_seedA": "DALES-2 and Swiss sub-tiles with Swiss water and bridge deck ignored, seed A; "
+    "fp16 neighbour search",
+    "m0prime_seedB": "the same control, seed B; fp16 neighbour search",
+    "m0prime_seedC": "the same control, seed C; fp16 neighbour search",
+    "m1_seedA": "DALES-2 and Swiss sub-tiles with water and bridge deck as classes, seed A; "
+    "fp16 neighbour search",
+    "m1_seedB": "M1, seed B; fp16 neighbour search",
+    "m1_seedC": "M1, seed C; fp16 neighbour search",
+    # The runs on a rented card, kept apart from the laptop's by name so no figure from one can be
     # read as the other. The first of them exists to answer whether the machine itself is a difference.
-    "m0_rented_small_seedA": "the published configuration, retrained on the rented card, so the machine "
-    "can be told apart from the size of the model",
-    "m0_big_seedA": "width 512, batch 8, the same points seen, learning rate scaled with the batch; the "
-    "run the upgrade decision is read from",
-    "m1_big_seedA": "the same large recipe on the M1 data",
-    "m0_big_2x_seedA": "the large M0 at twice the points seen, a sensitivity that does not enter the "
-    "decision",
-    "m0_big_lr2_seedA": "the large M0 with the learning rate left unscaled, a sensitivity that does not "
-    "enter the decision",
+    "m0_rented_small_seedA": "the published configuration, retrained on the rented card before Phase 4, "
+    "so the machine can be told apart from the size of the model; fp16 neighbour search",
+    "m0_big_seedA": "width 512, batch 8, the same points seen, learning rate scaled with the batch, "
+    "Phase 6; the run the upgrade decision is read from; fp32 neighbour search",
+    "m1_big_seedA": "the same large recipe on the M1 data, before Phase 4; fp16 neighbour search",
+    "m0_big_2x_seedA": "the large M0 at twice the points seen, before Phase 4, a sensitivity that does "
+    "not enter the decision; fp16 neighbour search",
+    "m0_big_lr2_seedA": "the large M0 with the learning rate left unscaled, before Phase 4, a "
+    "sensitivity that does not enter the decision; fp16 neighbour search",
     "m1_densityaug_seedA": "the published small configuration on M1 data, with each crop's density drawn "
     "at random across the gap between the Swiss and San Francisco crop densities; "
-    "a diagnosis on one seed",
-    "m0_seedA_1vote": "M0 seed A predicted with one pass instead of the chosen vote, a diagnosis of voting",
-    "m0_seedA_legacy_iter": "M0 seed A predicted with one pass by the first round's iterator, a diagnosis "
-    "of the iterator",
-    "m0_seeds": "median, min and max over every scored M0 seed (surrey.seeds)",
+    "a diagnosis on one seed; fp16 neighbour search",
+    "m0_seedA_1vote": "Phase 4 M0 seed A predicted with one pass instead of the chosen vote, a diagnosis "
+    "of voting; fp16 neighbour search",
+    "m0_seedA_legacy_iter": "Phase 4 M0 seed A predicted with one pass by the first round's iterator, a "
+    "diagnosis of the iterator; fp16 neighbour search",
+    "m0_seeds": "median, min and max over the Phase 6 M0 seeds (surrey.seeds)",
     "m0phase4_seedA": "Phase 4 M0 seed A, trained and predicted with the fp16 neighbour search",
     "m0phase4_seedB": "Phase 4 M0 seed B, the same",
     "m0phase4_seedC": "Phase 4 M0 seed C, the same",

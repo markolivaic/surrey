@@ -130,29 +130,30 @@ VARIANTS = {
     "returns_ood": {
         "sf": PRED,
         "surrey": PRED,
-        "note": "four channel checkpoint, input as delivered",
+        "note": "four channel checkpoint, input as delivered, fp16 neighbour search",
     },
     "ret0": {
         "sf": PRED / "ret0",
         "surrey": PRED,
         "note": "four channel checkpoint, return ratio forced to 0; on Surrey the ratio is "
-        "already 0 on every point, so its Surrey predictions are the as-delivered ones",
+        "already 0 on every point, so its Surrey predictions are the as-delivered ones; fp16 neighbour "
+        "search",
     },
     "m0_seedA": {
         "sf": PRED / "m0_seedA",
         "surrey": PRED / "m0_seedA",
-        "note": "three channel retrain, seed A",
+        "note": "three channel retrain, Phase 6, seed A, fp32 neighbour search",
     },
     "m0_seedB": {
         "sf": PRED / "m0_seedB",
         "surrey": PRED / "m0_seedB",
-        "note": "three channel retrain, seed B",
+        "note": "three channel retrain, Phase 6, seed B, fp32 neighbour search",
     },
 }
 RECIPE_NOTES = {
-    "m0": "three channel retrain on DALES-2 alone",
-    "m0prime": "DALES-2 and Swiss sub-tiles, Swiss water and bridge deck ignored",
-    "m1": "DALES-2 and Swiss sub-tiles, water and bridge deck as classes",
+    "m0": "three channel retrain on DALES-2 alone, Phase 6, fp32 neighbour search",
+    "m0prime": "DALES-2 and Swiss sub-tiles, Swiss water and bridge deck ignored, fp16 neighbour search",
+    "m1": "DALES-2 and Swiss sub-tiles, water and bridge deck as classes, fp16 neighbour search",
 }
 for _recipe, _note in RECIPE_NOTES.items():
     for _seed in ("A", "B", "C"):
@@ -163,20 +164,26 @@ for _recipe, _note in RECIPE_NOTES.items():
 # The runs from the rented card, scored by the same code as everything else; only the note says where
 # they were trained, and the training artefact carries the card's name and memory.
 RENTED_NOTES = {
-    "m0_rented_small_seedA": "the published configuration, trained on a rented RTX 4090",
-    "m0_big_seedA": "width 512, batch 8, same points seen, learning rate scaled with the batch, rented card",
-    "m1_big_seedA": "the same large recipe on M1 data, rented card",
-    "m0_big_2x_seedA": "the large M0 at twice the points seen, a sensitivity, rented card",
-    "m0_big_lr2_seedA": "the large M0 with the learning rate unscaled, a sensitivity, rented card",
-    "m1_densityaug_seedA": "the small M1 with the crop density drawn at random, a diagnosis, rented card",
+    "m0_rented_small_seedA": "the published configuration, trained on a rented RTX 4090, fp16 neighbour "
+    "search",
+    "m0_big_seedA": "width 512, batch 8, same points seen, learning rate scaled with the batch, rented card, "
+    "Phase 6, fp32 neighbour search",
+    "m1_big_seedA": "the same large recipe on M1 data, rented card, fp16 neighbour search",
+    "m0_big_2x_seedA": "the large M0 at twice the points seen, a sensitivity, rented card, fp16 neighbour "
+    "search",
+    "m0_big_lr2_seedA": "the large M0 with the learning rate unscaled, a sensitivity, rented card, fp16 "
+    "neighbour search",
+    "m1_densityaug_seedA": "the small M1 with the crop density drawn at random, a diagnosis, rented card, "
+    "fp16 neighbour search",
 }
 for _v, _note in RENTED_NOTES.items():
     VARIANTS.setdefault(_v, {"sf": PRED / _v, "surrey": PRED / _v, "note": _note})
-# Diagnostics of new M0 seed A that separate what inference alone changed
+# Diagnostics of Phase 4 M0 seed A that separate what inference alone changed
 # (scripts/investigations/building_breakdown.py).
 DIAGNOSTIC_NOTES = {
-    "m0_seedA_1vote": "new M0 seed A with one vote, a diagnostic",
-    "m0_seedA_legacy_iter": "new M0 seed A with one vote and the first round's iterator, a diagnostic",
+    "m0_seedA_1vote": "Phase 4 M0 seed A with one vote, a diagnostic, fp16 neighbour search",
+    "m0_seedA_legacy_iter": "Phase 4 M0 seed A with one vote and the first round's iterator, a "
+    "diagnostic, fp16 neighbour search",
 }
 for _v, _note in DIAGNOSTIC_NOTES.items():
     VARIANTS.setdefault(_v, {"sf": PRED / _v, "surrey": PRED / _v, "note": _note})

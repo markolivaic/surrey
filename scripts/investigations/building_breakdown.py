@@ -1,23 +1,26 @@
-"""Why the building lift fell: precision and coverage against footprints, old M0 against new M0.
+"""Why the building lift fell: precision and coverage against footprints, first round M0 against Phase 4 M0.
 
 The lift over the footprint null is a precision, so on its own it cannot tell a model that finds
 fewer buildings from one that finds more of them less precisely. For every area with footprints this
-sets, beside each other, the old M0 (its scores as the first commit, d62078f, holds them) and the new
-M0 (Phase 4), median and range over three seeds: precision against footprints and its null, footprint
-coverage and its null, and the footprints scored. Diagnostic runs of new M0 seed A, one vote and the
-old iterator at one vote, are added when their scores exist, to separate what inference alone changed.
+sets, beside each other, the first round's M0 and Phase 4's, median and range over three seeds:
+precision against footprints and its null, footprint coverage and its null, and the footprints scored.
+Two diagnostic runs of Phase 4 M0 seed A, one vote and the first round's iterator at one vote, are
+added to separate what inference alone changed.
 
-The reading was written before this ran, in docs/phase4_criteria.md: a figure rose or fell only when
-every new seed lies beyond every old one (backend/surrey/seeds.py); coverage up with precision down is
-a trade, both down is worse, anything else is written as measured.
+Both sides are read from the commits that hold their scores: the first round's from the first commit,
+d62078f, and Phase 4's with the diagnostics from 5790e15. Both were trained and predicted with the fp16
+neighbour search and scored before the Phase 6 scoring changes (docs/phase6_criteria.md). The first
+round's predictions were not kept, so this pair cannot be scored again; reading both from their commits
+keeps it on one scoring, and a later rescore of the working copy does not change it.
+
+The reading was written in docs/phase4_criteria.md after the drop in lift had been seen and before this
+ran: a figure rose or fell only when every Phase 4 seed lies beyond every first round seed
+(backend/surrey/seeds.py); coverage up with precision down is a trade, both down is worse, anything else
+is written as measured.
 
 Writes data/artifacts/building_breakdown.json.
 
-Run, the two diagnoses first (both on the laptop's card, about a quarter of an hour each):
-    python scripts/pipeline/predict_cache.py --ckpt data/checkpoints/m0_seedA.pt --out-dir data/predictions/m0_seedA_1vote --votes 1
-    python scripts/investigations/predict_legacy_iterator.py
-    python scripts/pipeline/score_variant.py --variant m0_seedA_1vote
-    python scripts/pipeline/score_variant.py --variant m0_seedA_legacy_iter
+Run:
     python scripts/investigations/building_breakdown.py
 """
 
@@ -34,10 +37,11 @@ ROOT = Path(__file__).resolve().parents[2]
 ARTIFACTS = ROOT / "data" / "artifacts"
 OUT = ARTIFACTS / "building_breakdown.json"
 OLD_COMMIT = "d62078f"
+PHASE4_COMMIT = "5790e15"
 SEEDS = "ABC"
 DIAGNOSTICS = {
-    "m0_seedA_1vote": "new M0 seed A, one vote, new iterator",
-    "m0_seedA_legacy_iter": "new M0 seed A, one vote, the old iterator",
+    "m0_seedA_1vote": "Phase 4 M0 seed A, one vote, Phase 4's iterator",
+    "m0_seedA_legacy_iter": "Phase 4 M0 seed A, one vote, the first round's iterator",
 }
 FIGURES = {
     "precision": ("building_vs_footprints_over_2m", "global_shift", "precision"),
@@ -49,15 +53,15 @@ FIGURES = {
 }
 
 
-def from_commit(name: str) -> dict:
+def from_commit(name: str, commit: str = OLD_COMMIT) -> dict:
     out = subprocess.run(
-        ["git", "-C", str(ROOT), "show", f"{OLD_COMMIT}:data/artifacts/{name}"],
+        ["git", "-C", str(ROOT), "show", f"{commit}:data/artifacts/{name}"],
         capture_output=True,
         text=True,
         encoding="utf-8",
     )
     if out.returncode != 0:
-        raise SystemExit(f"{name} is not in commit {OLD_COMMIT}: {out.stderr.strip()}")
+        raise SystemExit(f"{name} is not in commit {commit}: {out.stderr.strip()}")
     return json.loads(out.stdout)
 
 
@@ -90,17 +94,10 @@ def summary(vals: list) -> dict | None:
 
 def main() -> int:
     old = {s: by_area(from_commit(f"sf_scores_m0_seed{s}.json")) for s in SEEDS}
-    new = {
-        s: by_area(
-            json.loads((ARTIFACTS / f"sf_scores_m0_seed{s}.json").read_text(encoding="utf-8"))
-        )
-        for s in SEEDS
+    new = {s: by_area(from_commit(f"sf_scores_m0_seed{s}.json", PHASE4_COMMIT)) for s in SEEDS}
+    diag = {
+        name: by_area(from_commit(f"sf_scores_{name}.json", PHASE4_COMMIT)) for name in DIAGNOSTICS
     }
-    diag = {}
-    for name in DIAGNOSTICS:
-        p = ARTIFACTS / f"sf_scores_{name}.json"
-        if p.exists():
-            diag[name] = by_area(json.loads(p.read_text(encoding="utf-8")))
     areas = sorted(a for a in new["A"] if pick(new["A"][a], FIGURES["footprints_scored"]))
     rows = {}
     for a in areas:
@@ -124,11 +121,13 @@ def main() -> int:
         rows[a] = row
         print(f"{a:12s} precision {prec:12s} coverage {cov:12s} -> {reading}", flush=True)
     doc = {
-        "what": "building precision and coverage against footprints, old M0 against new M0",
-        "old": f"sf_scores_m0_seed[ABC].json as commit {OLD_COMMIT} holds them",
-        "new": "sf_scores_m0_seed[ABC].json, Phase 4",
+        "what": "building precision and coverage against footprints, first round M0 against Phase 4 M0",
+        "old": f"sf_scores_m0_seed[ABC].json as commit {OLD_COMMIT} holds them, the first round",
+        "new": f"sf_scores_m0_seed[ABC].json as commit {PHASE4_COMMIT} holds them, Phase 4",
+        "search_and_scoring": "both sides trained and predicted with the fp16 neighbour search and "
+        "scored before the Phase 6 scoring changes",
         "rule": "rose or fell only when every new seed lies beyond every old one (backend/surrey/seeds.py); "
-        "reading written in docs/phase4_criteria.md before this ran",
+        "reading written in docs/phase4_criteria.md after the drop in lift was seen, before this ran",
         "diagnostics": {k: v for k, v in DIAGNOSTICS.items() if k in diag},
         "not_separated": "class weights from 29 tiles against 40, and the dropped withheld points: "
         "separating them needs training",
