@@ -146,18 +146,18 @@ flowchart LR
 ## Quick start
 
 A fresh clone runs the tests and shows the page on the FIXTURE octree, with no key or account. It needs
-Python 3.12 and Node 24.
+Python 3.12 (called `python3` on some Linux systems) and Node 24.
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate      Linux and macOS: source .venv/bin/activate
+source .venv/bin/activate        # Git Bash: source .venv/Scripts/activate   cmd: .venv\Scripts\activate
 python -m pip install -r requirements.txt
 python -m pytest tests/unit tests/integrity -q
 cd web
 npm ci
 npm run build
 cd ..
-python -m playwright install chromium
+python -m playwright install chromium     # on Linux, add --with-deps for the system libraries
 python -m pytest tests/smoke -q
 python scripts/pipeline/serve_page.py
 ```
@@ -178,7 +178,9 @@ PotreeConverter 2.1.3 and ffmpeg are looked for on PATH, or named in `.env.examp
 
 Each row is a command a reader runs from the repository root. The results are what
 `python scripts/pipeline/verify.py` printed in the working copy, on Windows 11, AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD, NVIDIA GeForce RTX 3050 Laptop GPU, Python 3.12.1, on
-2026-09-26. A test is counted once however many cases a parametrisation makes of it.
+2026-09-26. A test is counted once however many cases a parametrisation makes of it. In a
+fresh clone two integrity tests skip, because the octrees and the prepared tiles they read are built
+by the pipeline and not committed.
 
 | Check | Command | Result |
 |---|---|---|
