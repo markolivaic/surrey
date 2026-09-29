@@ -28,6 +28,10 @@ def used() -> set[str]:
         constants = dict(CONSTANT.findall(text))
         for name in READ.findall(text):
             names.add(constants.get(name, name))
+    # A shell script reads the environment where it gives a default or a demand: ${NAME:-...} or
+    # ${NAME:?...}. Plain $NAME is the script's own variable more often than the environment's.
+    for path in (ROOT / "scripts").rglob("*.sh"):
+        names |= set(re.findall(r"\$\{([A-Z][A-Z0-9_]*):[-?]", path.read_text(encoding="utf-8")))
     for path in (ROOT / "web" / "src").rglob("*.js"):
         names |= set(
             re.findall(
