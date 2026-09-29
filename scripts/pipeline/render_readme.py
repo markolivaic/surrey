@@ -22,11 +22,16 @@ from __future__ import annotations
 import argparse
 import difflib
 import json
+import math
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "backend"))
+
+from surrey.data import CLASS_NAMES, COARSE  # noqa: E402
+
 TEMPLATE = ROOT / "docs" / "readme.template.md"
 README = ROOT / "README.md"
 # The method notes the README links to for its detail, generated the same way from their own template.
@@ -96,7 +101,10 @@ def fmt(value) -> str:
                 return f"{value:.1f}"
             if abs(value) >= 0.1:
                 return f"{value:.2f}"
-            return f"{value:.2g}"
+            # Fixed point, never 6.5e-05: as many decimals as two significant digits need, counted
+            # after rounding, so 0.000995 prints as 0.0010 and not 0.00100.
+            rounded = float(f"{value:.2g}")
+            return f"{rounded:.{1 - math.floor(math.log10(abs(rounded)))}f}"
         text = f"{value:.4f}".rstrip("0")
         return text + "0" if text.endswith(".") else text
     return f"{value:,}" if isinstance(value, int) and abs(value) >= 10000 else str(value)
@@ -139,6 +147,39 @@ def table_sf_buildings(vals: dict) -> str:
     return "\n".join([head, rule, *rows])
 
 
+def drop_rule(new: tuple, old: tuple) -> str:
+    """backend/surrey/seeds.py's rule on two (min, max) seed ranges: moved only when every seed of one
+    lies beyond every seed of the other."""
+    if new[0] > old[1]:
+        return "rose"
+    if new[1] < old[0]:
+        return "fell"
+    return "did not move"
+
+
+def table_surrey_classes(vals: dict) -> str:
+    """Held-out Surrey IoU per class, the published recipe beside Phase 4's, which differs from it only
+    in the neighbour search."""
+    head = (
+        "| Class | Drawn as | Share of held-out points | IoU, M0 | IoU, Phase 4 M0, fp16 search "
+        "| Moved |"
+    )
+    rule = "|---|---|---|---|---|---|"
+    group_of = {name: group for group, names in COARSE.items() for name in names}
+    rows = []
+    for name in CLASS_NAMES:
+        new, old = (f"seeds.{r}.surrey.test.iou.{name}" for r in ("m0", "m0phase4"))
+        share = fmt(vals[f"surrey.test.voxel.class_fraction.{name}"])
+        move = drop_rule(
+            (vals[f"{new}.min"], vals[f"{new}.max"]), (vals[f"{old}.min"], vals[f"{old}.max"])
+        )
+        rows.append(
+            f"| {name} | {group_of[name]} | {share} | {spread(vals, new)} | {spread(vals, old)} "
+            f"| {move} |"
+        )
+    return "\n".join([head, rule, *rows])
+
+
 def moved(vals: dict, area: str, fig: str) -> str:
     """The drop rule of backend/surrey/seeds.py: a figure moved only when every retrained seed lies
     beyond every first round seed."""
@@ -146,11 +187,7 @@ def moved(vals: dict, area: str, fig: str) -> str:
         (vals[f"buildings.{area}.{fig}.{w}.min"], vals[f"buildings.{area}.{fig}.{w}.max"])
         for w in ("old", "new")
     )
-    if new[0] > old[1]:
-        return "rose"
-    if new[1] < old[0]:
-        return "fell"
-    return "did not move"
+    return drop_rule(new, old)
 
 
 def building_reading(vals: dict, area: str) -> str:
@@ -239,6 +276,7 @@ def table_verification(vals: dict) -> str:
 TABLES = {
     "sf_both_sides": table_sf_both_sides,
     "sf_buildings": table_sf_buildings,
+    "surrey_classes": table_surrey_classes,
     "building_change": table_building_change,
     "bug": table_bug,
     "m1_water": table_m1_water,

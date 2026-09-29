@@ -391,6 +391,16 @@ def build_registry() -> list[Quantity]:
                 lambda a, n=name: a["train_dales.json"]["final"]["iou_per_class"][n],
             )
         )
+        # The labels alone, so the same for every model scored on the held-out voxel points.
+        q.append(
+            Quantity(
+                f"surrey.test.voxel.class_fraction.{name}",
+                "class_fraction",
+                Population("surrey", "test", "voxel", f"class:{name}", "fine15"),
+                "train_dales.json",
+                lambda a, n=name: round(_support(a)[n] / sum(_support(a).values()), 6),
+            )
+        )
     for group in COARSE:
         q.append(
             Quantity(

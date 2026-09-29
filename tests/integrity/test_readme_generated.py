@@ -61,6 +61,12 @@ def test_self_test_a_changed_figure_is_caught():
     assert mod.render("x {{a.b}} y", vals) != "x 0.6 y"
 
 
+def test_a_short_figure_is_fixed_point_with_two_significant_digits():
+    mod = renderer()
+    for value, text in ((0.000065, "0.000065"), (0.000995, "0.0010"), (0.05, "0.050"), (0.0, "0")):
+        assert mod.render("{{a}}", {"a": value}, short=True) == text
+
+
 def test_a_key_the_registry_does_not_have_stops_the_render():
     mod = renderer()
     with pytest.raises(SystemExit):

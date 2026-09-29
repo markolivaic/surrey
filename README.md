@@ -50,7 +50,7 @@ Median over three seeds, the lowest and highest in brackets, each class beside t
 | Russian Hill | 0.93 (0.92 to 0.93) | 0.044 (0.042 to 0.045) | 0.91 (0.90 to 0.94) | 0.77 | 0.95 |
 | SoMa | 0.99 (0.98 to 0.99) | 0.031 (0.028 to 0.032) | 0.99 (0.98 to 1.00) | 0.69 (0.67 to 0.70) | 0.84 (0.82 to 0.85) |
 | Financial District | 1.00 | 0.12 (0.11 to 0.12) | 0.98 (0.97 to 0.99) | 0.66 (0.65 to 0.66) | 0.91 (0.90 to 0.92) |
-| Embarcadero | 1.00 | 0.05 (0.046 to 0.052) | 0.83 (0.81 to 0.87) | 0.35 (0.34 to 0.36) | 0.53 (0.53 to 0.55) |
+| Embarcadero | 1.00 | 0.050 (0.046 to 0.052) | 0.83 (0.81 to 0.87) | 0.35 (0.34 to 0.36) | 0.53 (0.53 to 0.55) |
 | Bay Bridge | no core | 0.031 (0.028 to 0.038) | no core | no core | no core |
 
 Buildings, where the footprint null calls every point more than 2 m up a building. Lift is the share of the room above the null's precision that the model takes.
@@ -62,7 +62,7 @@ Buildings, where the footprint null calls every point more than 2 m up a buildin
 | Russian Hill | 77 | 0.56 (0.55 to 0.56) | 0.83 | 0.62 | 0.98 | 0.99 |
 | SoMa | 26 | 0.56 | 0.85 (0.84 to 0.85) | 0.65 | 0.72 | 0.75 |
 | Financial District | 23 | 0.15 (0.15 to 0.20) | 0.72 (0.72 to 0.74) | 0.68 | 0.82 (0.82 to 0.84) | 0.85 |
-| Embarcadero | 6 | 0.044 (0.038 to 0.05) | 0.20 (0.20 to 0.21) | 0.17 | 0.85 | 0.87 |
+| Embarcadero | 6 | 0.044 (0.038 to 0.050) | 0.20 (0.20 to 0.21) | 0.17 | 0.85 | 0.87 |
 
 Water is called ground, 0.96 (0.91 to 0.97) at Embarcadero, and the Bay Bridge deck building, 1.00. Confidence separates these mistakes from right ground less well than mistakes at home, AUROC 0.74 against 0.94, on 3 of 3 seeds.
 
@@ -80,7 +80,7 @@ The first model read a fourth input, the return ratio. The return fields of DALE
 
 | Area | NAIP vegetation cores called vegetation, input as delivered | the same, return ratio set to 0 |
 |---|---|---|
-| Golden Gate Park | 0.0002 | 0.97 |
+| Golden Gate Park | 0.00020 | 0.97 |
 | Sunset | 0 | 0.95 |
 | Mission | 0 | 0.98 |
 | Russian Hill | 0 | 0.93 |
