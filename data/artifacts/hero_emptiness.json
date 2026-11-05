@@ -1,0 +1,446 @@
+{
+  "what": "background showing through the first screen, per rendered frame",
+  "near": 12,
+  "shots": {
+    "hero_a_desktop_dark.png": {
+      "square": 0.2874,
+      "grain": 0.2008,
+      "mean_drawn_luminance": 0.3098,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.15,
+      "block": 450,
+      "block_origin_in_scene": [
+        173,
+        244
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_a_desktop_light.png": {
+      "square": 0.2948,
+      "grain": 0.2074,
+      "mean_drawn_luminance": 0.334,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 2.23,
+      "block": 450,
+      "block_origin_in_scene": [
+        172,
+        242
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_b_desktop_dark.png": {
+      "square": 0.3746,
+      "grain": 0.2558,
+      "mean_drawn_luminance": 0.3572,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.97,
+      "block": 450,
+      "block_origin_in_scene": [
+        140,
+        208
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_b_desktop_light.png": {
+      "square": 0.3748,
+      "grain": 0.2568,
+      "mean_drawn_luminance": 0.2837,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 2.57,
+      "block": 450,
+      "block_origin_in_scene": [
+        140,
+        208
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_c_desktop_dark.png": {
+      "square": 0.2328,
+      "grain": 0.2362,
+      "mean_drawn_luminance": 0.3238,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.39,
+      "block": 450,
+      "block_origin_in_scene": [
+        151,
+        230
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_c_desktop_light.png": {
+      "square": 0.2184,
+      "grain": 0.1821,
+      "mean_drawn_luminance": 0.3335,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 2.24,
+      "block": 450,
+      "block_origin_in_scene": [
+        178,
+        243
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_financial_desktop_dark.png": {
+      "square": 0.1984,
+      "grain": 0.1789,
+      "mean_drawn_luminance": 0.3518,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.87,
+      "block": 450,
+      "block_origin_in_scene": [
+        178,
+        242
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_financial_desktop_light.png": {
+      "square": 0.198,
+      "grain": 0.1842,
+      "mean_drawn_luminance": 0.363,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 2.08,
+      "block": 450,
+      "block_origin_in_scene": [
+        177,
+        240
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_financial_order1_desktop_dark.png": {
+      "square": 0.1984,
+      "grain": 0.1789,
+      "mean_drawn_luminance": 0.3518,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.87,
+      "block": 450,
+      "block_origin_in_scene": [
+        178,
+        242
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_financial_order1_desktop_light.png": {
+      "square": 0.198,
+      "grain": 0.1842,
+      "mean_drawn_luminance": 0.363,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 2.08,
+      "block": 450,
+      "block_origin_in_scene": [
+        177,
+        240
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_financial_order2_desktop_dark.png": {
+      "square": 0.0328,
+      "grain": 0.1038,
+      "mean_drawn_luminance": 0.4202,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 8.04,
+      "block": 450,
+      "block_origin_in_scene": [
+        193,
+        222
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_financial_order2_desktop_light.png": {
+      "square": 0.0328,
+      "grain": 0.1044,
+      "mean_drawn_luminance": 0.1149,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 5.2,
+      "block": 450,
+      "block_origin_in_scene": [
+        193,
+        222
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_financial_order2wide_desktop_dark.png": {
+      "square": 0.2166,
+      "grain": 0.1115,
+      "mean_drawn_luminance": 0.438,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 8.35,
+      "block": 450,
+      "block_origin_in_scene": [
+        32,
+        219
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_financial_order2wide_desktop_light.png": {
+      "square": 0.2166,
+      "grain": 0.112,
+      "mean_drawn_luminance": 0.137,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.59,
+      "block": 450,
+      "block_origin_in_scene": [
+        32,
+        219
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_ggpark_order2_desktop_dark.png": {
+      "square": 0.1073,
+      "grain": 0.1099,
+      "mean_drawn_luminance": 0.436,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 8.31,
+      "block": 450,
+      "block_origin_in_scene": [
+        165,
+        330
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_ggpark_order2_desktop_light.png": {
+      "square": 0.1073,
+      "grain": 0.1101,
+      "mean_drawn_luminance": 0.1636,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.02,
+      "block": 450,
+      "block_origin_in_scene": [
+        165,
+        330
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_mission_order2_desktop_dark.png": {
+      "square": 0.1848,
+      "grain": 0.1625,
+      "mean_drawn_luminance": 0.3367,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.62,
+      "block": 450,
+      "block_origin_in_scene": [
+        154,
+        355
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_mission_order2_desktop_light.png": {
+      "square": 0.1848,
+      "grain": 0.1628,
+      "mean_drawn_luminance": 0.1226,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.97,
+      "block": 450,
+      "block_origin_in_scene": [
+        154,
+        355
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_mission_order2wide_desktop_dark.png": {
+      "square": 0.3126,
+      "grain": 0.0701,
+      "mean_drawn_luminance": 0.3271,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.45,
+      "block": 450,
+      "block_origin_in_scene": [
+        14,
+        289
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_mission_order2wide_desktop_light.png": {
+      "square": 0.3126,
+      "grain": 0.0707,
+      "mean_drawn_luminance": 0.1393,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.53,
+      "block": 450,
+      "block_origin_in_scene": [
+        14,
+        289
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_sunset_desktop_dark.png": {
+      "square": 0.2726,
+      "grain": 0.2653,
+      "mean_drawn_luminance": 0.3781,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 7.32,
+      "block": 450,
+      "block_origin_in_scene": [
+        155,
+        227
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_sunset_desktop_light.png": {
+      "square": 0.2726,
+      "grain": 0.2704,
+      "mean_drawn_luminance": 0.391,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 1.95,
+      "block": 450,
+      "block_origin_in_scene": [
+        153,
+        224
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_sunset_order2_desktop_dark.png": {
+      "square": 0.1613,
+      "grain": 0.1635,
+      "mean_drawn_luminance": 0.3635,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 7.07,
+      "block": 450,
+      "block_origin_in_scene": [
+        162,
+        325
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_sunset_order2_desktop_light.png": {
+      "square": 0.1614,
+      "grain": 0.1637,
+      "mean_drawn_luminance": 0.1279,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.82,
+      "block": 450,
+      "block_origin_in_scene": [
+        162,
+        326
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_sunset_order2mid_desktop_dark.png": {
+      "square": 0.1707,
+      "grain": 0.1752,
+      "mean_drawn_luminance": 0.3614,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 7.04,
+      "block": 450,
+      "block_origin_in_scene": [
+        158,
+        311
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_sunset_order2mid_desktop_light.png": {
+      "square": 0.1707,
+      "grain": 0.1755,
+      "mean_drawn_luminance": 0.1284,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.81,
+      "block": 450,
+      "block_origin_in_scene": [
+        157,
+        311
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    },
+    "hero_sunset_order2wide_desktop_dark.png": {
+      "square": 0.2382,
+      "grain": 0.0466,
+      "mean_drawn_luminance": 0.3554,
+      "ground_luminance": 0.0085,
+      "hole_contrast": 6.94,
+      "block": 450,
+      "block_origin_in_scene": [
+        18,
+        280
+      ],
+      "scene_x0": 560,
+      "theme": "dark"
+    },
+    "hero_sunset_order2wide_desktop_light.png": {
+      "square": 0.2371,
+      "grain": 0.0472,
+      "mean_drawn_luminance": 0.144,
+      "ground_luminance": 0.8081,
+      "hole_contrast": 4.42,
+      "block": 450,
+      "block_origin_in_scene": [
+        17,
+        280
+      ],
+      "scene_x0": 560,
+      "theme": "light"
+    }
+  },
+  "dark_grounds": [
+    {
+      "ground": "#131815",
+      "luminance": 0.0085,
+      "worst_class_contrast": 3.37,
+      "failures": [],
+      "hole_contrast_in_the_top_down_frame": 6.87
+    },
+    {
+      "ground": "#1a201c",
+      "luminance": 0.0134,
+      "worst_class_contrast": 3.12,
+      "failures": [],
+      "hole_contrast_in_the_top_down_frame": 6.34
+    },
+    {
+      "ground": "#1f2723",
+      "luminance": 0.0186,
+      "worst_class_contrast": 2.88,
+      "failures": [
+        "R1 deuteranopia: contrast 2.88"
+      ],
+      "hole_contrast_in_the_top_down_frame": 5.85
+    },
+    {
+      "ground": "#242d28",
+      "luminance": 0.0241,
+      "worst_class_contrast": 2.67,
+      "failures": [
+        "R1 normal: contrast 2.84",
+        "R1 deuteranopia: contrast 2.67",
+        "R1 protanopia: contrast 2.99"
+      ],
+      "hole_contrast_in_the_top_down_frame": 5.43
+    },
+    {
+      "ground": "#2a332e",
+      "luminance": 0.0306,
+      "worst_class_contrast": 2.46,
+      "failures": [
+        "R1 normal: contrast 2.61",
+        "R1 deuteranopia: contrast 2.46",
+        "R1 protanopia: contrast 2.75"
+      ],
+      "hole_contrast_in_the_top_down_frame": 4.99
+    }
+  ],
+  "dark_grounds_reference_frame": "hero_financial_order1_desktop_dark.png"
+}

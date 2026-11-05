@@ -1,0 +1,328 @@
+{
+  "held_out": true,
+  "held_out_note": "chosen after M1 was trained and scored, by the rule the training tiles were chosen by, in a city none of them came from; never trained on",
+  "rule": {
+    "min_water": 0.05,
+    "min_building": 0.1,
+    "per_city": 1,
+    "ranking": "bridge deck share among eligible, then water share"
+  },
+  "levels_read": [
+    0,
+    1
+  ],
+  "cities": {
+    "lucerne": {
+      "candidates": [],
+      "eligible": 0,
+      "selected": []
+    },
+    "zug": {
+      "candidates": [
+        {
+          "id": "swisssurface3d_2024_2679-1225",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2679-1225/swisssurface3d_2024_2679-1225_2056_5728.copc.laz",
+          "points_in_tile": 12954775,
+          "sampled": 174666,
+          "water": 0.2685,
+          "bridge_deck": 0.0003,
+          "building": 0.0547,
+          "ground": 0.318,
+          "vegetation": 0.3429,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2679-1226",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2679-1226/swisssurface3d_2024_2679-1226_2056_5728.copc.laz",
+          "points_in_tile": 25272086,
+          "sampled": 389204,
+          "water": 0.0012,
+          "bridge_deck": 0.0007,
+          "building": 0.1815,
+          "ground": 0.4532,
+          "vegetation": 0.3178,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2679-1227",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2679-1227/swisssurface3d_2024_2679-1227_2056_5728.copc.laz",
+          "points_in_tile": 25389940,
+          "sampled": 451408,
+          "water": 0.0003,
+          "bridge_deck": 0.0,
+          "building": 0.2889,
+          "ground": 0.362,
+          "vegetation": 0.2963,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2680-1224",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2680-1224/swisssurface3d_2024_2680-1224_2056_5728.copc.laz",
+          "points_in_tile": 451924,
+          "sampled": 234165,
+          "water": 0.896,
+          "bridge_deck": 0.0721,
+          "building": 0.0,
+          "ground": 0.0,
+          "vegetation": 0.0,
+          "flight_day": "2024-02-14",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2680-1225",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2680-1225/swisssurface3d_2024_2680-1225_2056_5728.copc.laz",
+          "points_in_tile": 20906489,
+          "sampled": 329797,
+          "water": 0.1625,
+          "bridge_deck": 0.0035,
+          "building": 0.1654,
+          "ground": 0.3067,
+          "vegetation": 0.3252,
+          "flight_day": "2024-02-14",
+          "eligible": true
+        },
+        {
+          "id": "swisssurface3d_2024_2680-1226",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2680-1226/swisssurface3d_2024_2680-1226_2056_5728.copc.laz",
+          "points_in_tile": 25141285,
+          "sampled": 354621,
+          "water": 0.0059,
+          "bridge_deck": 0.0002,
+          "building": 0.0972,
+          "ground": 0.5369,
+          "vegetation": 0.335,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2680-1227",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2680-1227/swisssurface3d_2024_2680-1227_2056_5728.copc.laz",
+          "points_in_tile": 26046369,
+          "sampled": 417663,
+          "water": 0.0002,
+          "bridge_deck": 0.0001,
+          "building": 0.0398,
+          "ground": 0.4693,
+          "vegetation": 0.4365,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2681-1223",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2681-1223/swisssurface3d_2024_2681-1223_2056_5728.copc.laz",
+          "points_in_tile": 24040472,
+          "sampled": 446474,
+          "water": 0.1009,
+          "bridge_deck": 0.0005,
+          "building": 0.1561,
+          "ground": 0.2753,
+          "vegetation": 0.4462,
+          "flight_day": "2024-03-22",
+          "eligible": true
+        },
+        {
+          "id": "swisssurface3d_2024_2681-1224",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2681-1224/swisssurface3d_2024_2681-1224_2056_5728.copc.laz",
+          "points_in_tile": 17173914,
+          "sampled": 338978,
+          "water": 0.1475,
+          "bridge_deck": 0.0008,
+          "building": 0.2727,
+          "ground": 0.2348,
+          "vegetation": 0.3152,
+          "flight_day": "2024-03-22",
+          "eligible": true
+        },
+        {
+          "id": "swisssurface3d_2024_2681-1225",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2681-1225/swisssurface3d_2024_2681-1225_2056_5728.copc.laz",
+          "points_in_tile": 25263539,
+          "sampled": 484621,
+          "water": 0.0078,
+          "bridge_deck": 0.0032,
+          "building": 0.3671,
+          "ground": 0.2872,
+          "vegetation": 0.2711,
+          "flight_day": "2024-02-14",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2681-1226",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2681-1226/swisssurface3d_2024_2681-1226_2056_5728.copc.laz",
+          "points_in_tile": 23500920,
+          "sampled": 367806,
+          "water": 0.0005,
+          "bridge_deck": 0.0008,
+          "building": 0.255,
+          "ground": 0.4711,
+          "vegetation": 0.2138,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2681-1227",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2681-1227/swisssurface3d_2024_2681-1227_2056_5728.copc.laz",
+          "points_in_tile": 24504865,
+          "sampled": 389816,
+          "water": 0.0057,
+          "bridge_deck": 0.0035,
+          "building": 0.1573,
+          "ground": 0.459,
+          "vegetation": 0.3032,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2682-1223",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2682-1223/swisssurface3d_2024_2682-1223_2056_5728.copc.laz",
+          "points_in_tile": 45988173,
+          "sampled": 1077817,
+          "water": 0.0,
+          "bridge_deck": 0.0,
+          "building": 0.0167,
+          "ground": 0.2244,
+          "vegetation": 0.7565,
+          "flight_day": "2024-03-22",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2682-1224",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2682-1224/swisssurface3d_2024_2682-1224_2056_5728.copc.laz",
+          "points_in_tile": 31552256,
+          "sampled": 651417,
+          "water": 0.0,
+          "bridge_deck": 0.0001,
+          "building": 0.1377,
+          "ground": 0.3019,
+          "vegetation": 0.543,
+          "flight_day": "2024-03-22",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2682-1225",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2682-1225/swisssurface3d_2024_2682-1225_2056_5728.copc.laz",
+          "points_in_tile": 26243604,
+          "sampled": 414667,
+          "water": 0.0001,
+          "bridge_deck": 0.0,
+          "building": 0.1721,
+          "ground": 0.4666,
+          "vegetation": 0.3334,
+          "flight_day": "2024-02-14",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2682-1226",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2682-1226/swisssurface3d_2024_2682-1226_2056_5728.copc.laz",
+          "points_in_tile": 24111043,
+          "sampled": 397104,
+          "water": 0.0006,
+          "bridge_deck": 0.0006,
+          "building": 0.2599,
+          "ground": 0.4275,
+          "vegetation": 0.2419,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2682-1227",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2682-1227/swisssurface3d_2024_2682-1227_2056_5728.copc.laz",
+          "points_in_tile": 24643982,
+          "sampled": 449846,
+          "water": 0.0001,
+          "bridge_deck": 0.0001,
+          "building": 0.3311,
+          "ground": 0.3489,
+          "vegetation": 0.2652,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2683-1223",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2683-1223/swisssurface3d_2024_2683-1223_2056_5728.copc.laz",
+          "points_in_tile": 27592201,
+          "sampled": 349264,
+          "water": 0.0,
+          "bridge_deck": 0.0,
+          "building": 0.0186,
+          "ground": 0.6728,
+          "vegetation": 0.3011,
+          "flight_day": "2024-03-22",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2683-1224",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2683-1224/swisssurface3d_2024_2683-1224_2056_5728.copc.laz",
+          "points_in_tile": 30599422,
+          "sampled": 534246,
+          "water": 0.0,
+          "bridge_deck": 0.0,
+          "building": 0.0124,
+          "ground": 0.4464,
+          "vegetation": 0.5377,
+          "flight_day": "2024-03-22",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2683-1225",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2683-1225/swisssurface3d_2024_2683-1225_2056_5728.copc.laz",
+          "points_in_tile": 29792350,
+          "sampled": 532197,
+          "water": 0.0011,
+          "bridge_deck": 0.0,
+          "building": 0.01,
+          "ground": 0.4386,
+          "vegetation": 0.5462,
+          "flight_day": "2024-02-14",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2683-1226",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2683-1226/swisssurface3d_2024_2683-1226_2056_5728.copc.laz",
+          "points_in_tile": 29939388,
+          "sampled": 569190,
+          "water": 0.0001,
+          "bridge_deck": 0.0002,
+          "building": 0.0437,
+          "ground": 0.3729,
+          "vegetation": 0.5599,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        },
+        {
+          "id": "swisssurface3d_2024_2683-1227",
+          "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2683-1227/swisssurface3d_2024_2683-1227_2056_5728.copc.laz",
+          "points_in_tile": 33624198,
+          "sampled": 810388,
+          "water": 0.002,
+          "bridge_deck": 0.0001,
+          "building": 0.0724,
+          "ground": 0.2346,
+          "vegetation": 0.6762,
+          "flight_day": "2024-02-15",
+          "eligible": false
+        }
+      ],
+      "eligible": 3,
+      "selected": [
+        "swisssurface3d_2024_2680-1225"
+      ]
+    }
+  },
+  "selected": [
+    {
+      "city": "zug",
+      "id": "swisssurface3d_2024_2680-1225",
+      "url": "https://data.geo.admin.ch/ch.swisstopo.swisssurface3d/swisssurface3d_2024_2680-1225/swisssurface3d_2024_2680-1225_2056_5728.copc.laz",
+      "water": 0.1625,
+      "bridge_deck": 0.0035,
+      "building": 0.1654,
+      "flight_day": "2024-02-14",
+      "points_in_tile": 20906489
+    }
+  ],
+  "seconds": 137.2
+}

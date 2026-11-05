@@ -1,0 +1,87 @@
+{
+  "checked_utc": "2026-09-14T10:15:37+00:00",
+  "page_origin": "http://127.0.0.1:8771",
+  "method": "headless Chromium fetch with a Range header",
+  "hosts": {
+    "github_pages": {
+      "url": "https://threejs.org/examples/models/gltf/LittlestTokyo.glb",
+      "first_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": false,
+        "final_host": "threejs.org",
+        "content_range_visible": null,
+        "ms": 2758
+      },
+      "middle_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": false,
+        "final_host": "threejs.org",
+        "content_range_visible": null,
+        "ms": 18
+      },
+      "range_and_cors_work_in_a_page": true
+    },
+    "huggingface": {
+      "url": "https://huggingface.co/datasets/mbendjilali/DALES-2/resolve/main/train/5080_54435.laz",
+      "first_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": true,
+        "final_host": "us.aws.cdn.hf.co",
+        "content_range_visible": "bytes 0-1023/60283242",
+        "ms": 668
+      },
+      "middle_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": true,
+        "final_host": "us.aws.cdn.hf.co",
+        "content_range_visible": "bytes 500000-501023/60283242",
+        "ms": 838
+      },
+      "range_and_cors_work_in_a_page": true
+    },
+    "cloudflare_r2": {
+      "url": "https://r2-public.protomaps.com/protomaps-sample-datasets/cb_2018_us_zcta510_500k.pmtiles",
+      "first_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": false,
+        "final_host": "r2-public.protomaps.com",
+        "content_range_visible": null,
+        "ms": 321
+      },
+      "middle_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": false,
+        "final_host": "r2-public.protomaps.com",
+        "content_range_visible": null,
+        "ms": 254
+      },
+      "range_and_cors_work_in_a_page": true
+    },
+    "local": {
+      "url": "http://127.0.0.1:8772/probe.bin",
+      "first_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": false,
+        "final_host": "127.0.0.1:8772",
+        "content_range_visible": "bytes 0-1023/1048576",
+        "ms": 15
+      },
+      "middle_kib": {
+        "status": 206,
+        "bytes": 1024,
+        "redirected": false,
+        "final_host": "127.0.0.1:8772",
+        "content_range_visible": "bytes 500000-501023/1048576",
+        "ms": 5
+      },
+      "range_and_cors_work_in_a_page": true
+    }
+  }
+}

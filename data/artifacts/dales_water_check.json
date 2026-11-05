@@ -1,0 +1,298 @@
+{
+  "question": "which DALES tiles cross water, by an independent map",
+  "map": {
+    "source": "BC Freshwater Atlas via openmaps.gov.bc.ca WFS",
+    "layers": [
+      "WHSE_BASEMAPPING.FWA_LAKES_POLY",
+      "WHSE_BASEMAPPING.FWA_RIVERS_POLY",
+      "WHSE_BASEMAPPING.FWA_MANMADE_WATERBODIES_POLY",
+      "WHSE_BASEMAPPING.FWA_BAYS_AND_CHANNELS_POLY"
+    ],
+    "licence": "Open Government Licence - British Columbia",
+    "crs": "EPSG:26910"
+  },
+  "tiles_with_water": 4,
+  "tiles": [
+    {
+      "tile": "5080_54400",
+      "split": "test",
+      "water_area_share": 0.0002,
+      "layers": [
+        "FWA_LAKES_POLY"
+      ],
+      "points_in_water": 939,
+      "points": 9768785,
+      "dales_labels_in_water": {
+        "ground": 0.0895,
+        "tree": 0.9105
+      },
+      "ignore_mask": "data/prep/dales_water_ignore/5080_54400.npy"
+    },
+    {
+      "tile": "5080_54435",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5080_54470",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5085_54320",
+      "split": "train",
+      "water_area_share": 0.0422,
+      "layers": [
+        "FWA_BAYS_AND_CHANNELS_POLY"
+      ],
+      "points_in_water": 128810,
+      "points": 11851138,
+      "dales_labels_in_water": {
+        "ground": 0.9825,
+        "vegetation": 0.0175
+      },
+      "ignore_mask": "data/prep/dales_water_ignore/5085_54320.npy"
+    },
+    {
+      "tile": "5095_54440",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5095_54455",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5100_54440",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5100_54490",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5100_54495",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5105_54405",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5105_54460",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5110_54320",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5110_54460",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5110_54475",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5110_54495",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5115_54480",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5120_54445",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5130_54355",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5135_54430",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5135_54435",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5135_54495",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5140_54390",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5140_54445",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5145_54340",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5145_54405",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5145_54460",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5145_54470",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5145_54480",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5150_54325",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5150_54340",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5155_54335",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5160_54330",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5165_54390",
+      "split": "train",
+      "water_area_share": 0.0713,
+      "layers": [
+        "FWA_RIVERS_POLY"
+      ],
+      "points_in_water": 68924,
+      "points": 5034758,
+      "dales_labels_in_water": {
+        "ground": 0.9648,
+        "vegetation": 0.0008,
+        "powerline": 0.0133,
+        "fence": 0.0204,
+        "traffic-pole": 0.0007
+      },
+      "ignore_mask": "data/prep/dales_water_ignore/5165_54390.npy"
+    },
+    {
+      "tile": "5165_54395",
+      "split": "train",
+      "water_area_share": 0.0126,
+      "layers": [
+        "FWA_RIVERS_POLY"
+      ],
+      "points_in_water": 39847,
+      "points": 11230435,
+      "dales_labels_in_water": {
+        "ground": 0.415,
+        "vegetation": 0.1375,
+        "tree": 0.4474
+      },
+      "ignore_mask": "data/prep/dales_water_ignore/5165_54395.npy"
+    },
+    {
+      "tile": "5175_54395",
+      "split": "test",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5180_54435",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5180_54485",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5185_54390",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5185_54485",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    },
+    {
+      "tile": "5190_54400",
+      "split": "train",
+      "water_area_share": 0.0,
+      "layers": []
+    }
+  ],
+  "seconds": 150.7
+}

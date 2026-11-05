@@ -1,0 +1,566 @@
+{
+  "what": "the vegetation headline of the published recipe's seeds against NAIP references rebuilt at fixed NDVI thresholds around the Otsu value",
+  "otsu_threshold": 0.075,
+  "thresholds": [
+    "0.075 (Otsu)",
+    "0.050",
+    "0.100",
+    "0.150",
+    "0.200"
+  ],
+  "read_as": "the mask rule's choice, or the lower of the two masks for vegetation found and the higher for false vegetation where it does not decide",
+  "areas": {
+    "baybridge": {
+      "0.075 (Otsu)": {
+        "found": null,
+        "false": {
+          "median": 0.042,
+          "min": 0.0307,
+          "max": 0.0514,
+          "seed_a": 0.0514
+        }
+      },
+      "0.050": {
+        "found": null,
+        "false": {
+          "median": 0.0431,
+          "min": 0.0316,
+          "max": 0.0529,
+          "seed_a": 0.0529
+        }
+      },
+      "0.100": {
+        "found": null,
+        "false": {
+          "median": 0.0418,
+          "min": 0.0305,
+          "max": 0.0511,
+          "seed_a": 0.0511
+        }
+      },
+      "0.150": {
+        "found": null,
+        "false": {
+          "median": 0.0416,
+          "min": 0.0303,
+          "max": 0.0509,
+          "seed_a": 0.0509
+        }
+      },
+      "0.200": {
+        "found": null,
+        "false": {
+          "median": 0.0414,
+          "min": 0.0301,
+          "max": 0.0506,
+          "seed_a": 0.0506
+        }
+      }
+    },
+    "embarcadero": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.9984,
+          "min": 0.9984,
+          "max": 0.9986,
+          "seed_a": 0.9986
+        },
+        "false": {
+          "median": 0.0588,
+          "min": 0.0532,
+          "max": 0.066,
+          "seed_a": 0.066
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.9981,
+          "min": 0.998,
+          "max": 0.9983,
+          "seed_a": 0.9983
+        },
+        "false": {
+          "median": 0.0596,
+          "min": 0.054,
+          "max": 0.0666,
+          "seed_a": 0.0666
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.9992,
+          "min": 0.9992,
+          "max": 0.9992,
+          "seed_a": 0.9992
+        },
+        "false": {
+          "median": 0.0589,
+          "min": 0.0532,
+          "max": 0.066,
+          "seed_a": 0.066
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.9991,
+          "min": 0.9991,
+          "max": 0.9992,
+          "seed_a": 0.9992
+        },
+        "false": {
+          "median": 0.0617,
+          "min": 0.0554,
+          "max": 0.069,
+          "seed_a": 0.069
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9994,
+          "min": 0.9994,
+          "max": 0.9995,
+          "seed_a": 0.9994
+        },
+        "false": {
+          "median": 0.0621,
+          "min": 0.0558,
+          "max": 0.0693,
+          "seed_a": 0.0693
+        }
+      }
+    },
+    "financial": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.9964,
+          "min": 0.9961,
+          "max": 0.997,
+          "seed_a": 0.997
+        },
+        "false": {
+          "median": 0.1177,
+          "min": 0.1172,
+          "max": 0.1322,
+          "seed_a": 0.1322
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.995,
+          "min": 0.9946,
+          "max": 0.9964,
+          "seed_a": 0.9964
+        },
+        "false": {
+          "median": 0.1148,
+          "min": 0.1143,
+          "max": 0.1291,
+          "seed_a": 0.1291
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.9971,
+          "min": 0.9971,
+          "max": 0.9974,
+          "seed_a": 0.9974
+        },
+        "false": {
+          "median": 0.1223,
+          "min": 0.1217,
+          "max": 0.1368,
+          "seed_a": 0.1368
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.997,
+          "min": 0.9969,
+          "max": 0.997,
+          "seed_a": 0.9969
+        },
+        "false": {
+          "median": 0.1378,
+          "min": 0.1371,
+          "max": 0.1526,
+          "seed_a": 0.1526
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9948,
+          "min": 0.9946,
+          "max": 0.9949,
+          "seed_a": 0.9946
+        },
+        "false": {
+          "median": 0.1546,
+          "min": 0.154,
+          "max": 0.1702,
+          "seed_a": 0.1702
+        }
+      }
+    },
+    "ggpark": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.9726,
+          "min": 0.9717,
+          "max": 0.9757,
+          "seed_a": 0.9726
+        },
+        "false": {
+          "median": 0.9429,
+          "min": 0.9326,
+          "max": 0.9544,
+          "seed_a": 0.9326
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.9723,
+          "min": 0.9713,
+          "max": 0.9755,
+          "seed_a": 0.9723
+        },
+        "false": {
+          "median": 0.91,
+          "min": 0.8992,
+          "max": 0.926,
+          "seed_a": 0.8992
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.9736,
+          "min": 0.9726,
+          "max": 0.9765,
+          "seed_a": 0.9736
+        },
+        "false": {
+          "median": 0.9549,
+          "min": 0.9484,
+          "max": 0.9652,
+          "seed_a": 0.9484
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.9743,
+          "min": 0.9734,
+          "max": 0.9772,
+          "seed_a": 0.9743
+        },
+        "false": {
+          "median": 0.9621,
+          "min": 0.9575,
+          "max": 0.9707,
+          "seed_a": 0.9575
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9767,
+          "min": 0.976,
+          "max": 0.9797,
+          "seed_a": 0.9767
+        },
+        "false": {
+          "median": 0.9495,
+          "min": 0.9453,
+          "max": 0.9578,
+          "seed_a": 0.9453
+        }
+      }
+    },
+    "mission": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.9835,
+          "min": 0.9796,
+          "max": 0.9853,
+          "seed_a": 0.9853
+        },
+        "false": {
+          "median": 0.0467,
+          "min": 0.0456,
+          "max": 0.0503,
+          "seed_a": 0.0503
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.9787,
+          "min": 0.9745,
+          "max": 0.9799,
+          "seed_a": 0.9799
+        },
+        "false": {
+          "median": 0.0423,
+          "min": 0.0409,
+          "max": 0.0454,
+          "seed_a": 0.0454
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.9849,
+          "min": 0.9813,
+          "max": 0.9867,
+          "seed_a": 0.9867
+        },
+        "false": {
+          "median": 0.0543,
+          "min": 0.0532,
+          "max": 0.058,
+          "seed_a": 0.058
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.9871,
+          "min": 0.9838,
+          "max": 0.9893,
+          "seed_a": 0.9893
+        },
+        "false": {
+          "median": 0.0808,
+          "min": 0.0797,
+          "max": 0.0846,
+          "seed_a": 0.0846
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9899,
+          "min": 0.9867,
+          "max": 0.9917,
+          "seed_a": 0.9917
+        },
+        "false": {
+          "median": 0.136,
+          "min": 0.135,
+          "max": 0.1397,
+          "seed_a": 0.1397
+        }
+      }
+    },
+    "soma": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.9882,
+          "min": 0.9859,
+          "max": 0.9894,
+          "seed_a": 0.9894
+        },
+        "false": {
+          "median": 0.0281,
+          "min": 0.0275,
+          "max": 0.0347,
+          "seed_a": 0.0347
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.9884,
+          "min": 0.9865,
+          "max": 0.9897,
+          "seed_a": 0.9897
+        },
+        "false": {
+          "median": 0.0259,
+          "min": 0.0254,
+          "max": 0.0324,
+          "seed_a": 0.0324
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.9889,
+          "min": 0.9863,
+          "max": 0.9901,
+          "seed_a": 0.9901
+        },
+        "false": {
+          "median": 0.032,
+          "min": 0.0313,
+          "max": 0.0389,
+          "seed_a": 0.0389
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.9958,
+          "min": 0.9937,
+          "max": 0.9964,
+          "seed_a": 0.9964
+        },
+        "false": {
+          "median": 0.0644,
+          "min": 0.0639,
+          "max": 0.0719,
+          "seed_a": 0.0719
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9968,
+          "min": 0.994,
+          "max": 0.9969,
+          "seed_a": 0.9968
+        },
+        "false": {
+          "median": 0.1325,
+          "min": 0.1318,
+          "max": 0.1405,
+          "seed_a": 0.1405
+        }
+      }
+    },
+    "russianhill": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.9293,
+          "min": 0.923,
+          "max": 0.9388,
+          "seed_a": 0.9388
+        },
+        "false": {
+          "median": 0.0648,
+          "min": 0.0644,
+          "max": 0.0743,
+          "seed_a": 0.0743
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.928,
+          "min": 0.9227,
+          "max": 0.939,
+          "seed_a": 0.939
+        },
+        "false": {
+          "median": 0.0589,
+          "min": 0.0585,
+          "max": 0.068,
+          "seed_a": 0.068
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.9359,
+          "min": 0.9281,
+          "max": 0.9442,
+          "seed_a": 0.9442
+        },
+        "false": {
+          "median": 0.0732,
+          "min": 0.0726,
+          "max": 0.0829,
+          "seed_a": 0.0829
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.9652,
+          "min": 0.9583,
+          "max": 0.973,
+          "seed_a": 0.973
+        },
+        "false": {
+          "median": 0.1058,
+          "min": 0.1049,
+          "max": 0.1162,
+          "seed_a": 0.1162
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9823,
+          "min": 0.982,
+          "max": 0.9849,
+          "seed_a": 0.9823
+        },
+        "false": {
+          "median": 0.1724,
+          "min": 0.1709,
+          "max": 0.1828,
+          "seed_a": 0.1828
+        }
+      }
+    },
+    "sunset": {
+      "0.075 (Otsu)": {
+        "found": {
+          "median": 0.947,
+          "min": 0.9449,
+          "max": 0.9496,
+          "seed_a": 0.9496
+        },
+        "false": {
+          "median": 0.0561,
+          "min": 0.0541,
+          "max": 0.0562,
+          "seed_a": 0.0562
+        }
+      },
+      "0.050": {
+        "found": {
+          "median": 0.9464,
+          "min": 0.9438,
+          "max": 0.9483,
+          "seed_a": 0.9483
+        },
+        "false": {
+          "median": 0.0487,
+          "min": 0.0468,
+          "max": 0.0489,
+          "seed_a": 0.0489
+        }
+      },
+      "0.100": {
+        "found": {
+          "median": 0.954,
+          "min": 0.951,
+          "max": 0.9555,
+          "seed_a": 0.9555
+        },
+        "false": {
+          "median": 0.0654,
+          "min": 0.0634,
+          "max": 0.0656,
+          "seed_a": 0.0656
+        }
+      },
+      "0.150": {
+        "found": {
+          "median": 0.9614,
+          "min": 0.9605,
+          "max": 0.9639,
+          "seed_a": 0.9639
+        },
+        "false": {
+          "median": 0.0877,
+          "min": 0.0859,
+          "max": 0.0881,
+          "seed_a": 0.0881
+        }
+      },
+      "0.200": {
+        "found": {
+          "median": 0.9734,
+          "min": 0.9723,
+          "max": 0.9787,
+          "seed_a": 0.9787
+        },
+        "false": {
+          "median": 0.1318,
+          "min": 0.1301,
+          "max": 0.1321,
+          "seed_a": 0.1321
+        }
+      }
+    }
+  },
+  "seconds": 433.3
+}

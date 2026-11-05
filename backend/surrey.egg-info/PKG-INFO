@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: surrey
+Version: 0.1.0
+Summary: Point cloud segmentation trained on DALES-2 lidar over Surrey, BC, and scored on USGS 3DEP lidar of San Francisco
+License-Expression: MIT
+Requires-Python: >=3.12
+License-File: LICENSE
+License-File: LICENSE_MODEL.md
+Dynamic: license-file

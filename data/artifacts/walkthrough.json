@@ -1,0 +1,25 @@
+{
+  "source": "data\\cache\\walkthrough_recording\\page@2df0978bf3940701420b359a2a902aac.webm",
+  "seconds_cut_from_the_front": 2.04,
+  "mp4": {
+    "path": "docs/walkthrough/app-walkthrough.mp4",
+    "bytes": 4590750,
+    "kbps": 1576,
+    "codec": "h264",
+    "pix_fmt": "yuv420p",
+    "width": 1100,
+    "height": 780,
+    "duration_s": 22.84
+  },
+  "animation": {
+    "path": "docs/walkthrough/app-walkthrough.webp",
+    "bytes": 4816406,
+    "fps": 8,
+    "width": 880,
+    "quality": 30
+  },
+  "poster": {
+    "path": "docs/walkthrough/app-walkthrough-poster.jpg",
+    "bytes": 280953
+  }
+}

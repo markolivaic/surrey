@@ -1,0 +1,41 @@
+{
+  "suites": {
+    "unit": {
+      "path": "tests/unit",
+      "functions": 173,
+      "collected": 182,
+      "passed": 181,
+      "failed": 0,
+      "skipped": 1,
+      "errors": 0,
+      "skipped_by_reason": {
+        "the CUDA autocast path needs a CUDA card": 1
+      }
+    },
+    "integrity": {
+      "path": "tests/integrity",
+      "functions": 15,
+      "collected": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "errors": 0,
+      "skipped_by_reason": {}
+    },
+    "smoke": {
+      "path": "tests/smoke",
+      "functions": 2,
+      "collected": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "errors": 0,
+      "skipped_by_reason": {}
+    }
+  },
+  "machine": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.1",
+  "run_utc": "2026-11-05T09:48:21Z",
+  "seconds": 164.3,
+  "note": "counted separately on purpose; a single total would let greps inflate a count of behavioural tests"
+}

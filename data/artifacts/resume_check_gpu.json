@@ -1,0 +1,25 @@
+{
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "steps": 6,
+  "stopped_after_step": 3,
+  "batch_order_matches_after_resume": true,
+  "batch_order_matches_between_unbroken_runs": true,
+  "weights_bit_for_bit_after_resume": true,
+  "weights_max_abs_difference_after_resume": 0.0,
+  "weights_max_abs_difference_between_unbroken_runs": 0.0,
+  "interruptions_recorded": {
+    "count": 1,
+    "events": [
+      {
+        "resumed_from_checkpoint_step": 3,
+        "exact": true,
+        "note": "every random state restored",
+        "resumed_utc": "2026-09-15T17:26:46+00:00"
+      }
+    ],
+    "all_exact": true
+  },
+  "note": "batch order is the requirement on the card; the weights are reported beside the difference between two unbroken runs"
+}

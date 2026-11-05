@@ -1,0 +1,426 @@
+{
+  "question": "density, dates and label process across many tiles per national set",
+  "ign_lidar_hd": {
+    "paris": {
+      "tiles": 167,
+      "points_per_m2": {
+        "n": 167,
+        "p10": 15.7,
+        "median": 17.7,
+        "p90": 19.9
+      },
+      "acquisition_months": {
+        "2023-03": 167
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 138,
+        "IGN_AUTO_MANUEL": 29
+      },
+      "moe_classement_automatique": {
+        "IGN": 167
+      },
+      "moe_classement_manuel": {
+        "NR": 138,
+        "IGN": 29
+      },
+      "missions": [
+        "22LHDKE"
+      ]
+    },
+    "lyon": {
+      "tiles": 97,
+      "points_per_m2": {
+        "n": 97,
+        "p10": 23.5,
+        "median": 38.4,
+        "p90": 45.4
+      },
+      "acquisition_months": {
+        "2021-04": 97
+      },
+      "procede_classement": {
+        "ST_AUTO_MANUEL": 97
+      },
+      "moe_classement_automatique": {
+        "Eurosense": 97
+      },
+      "moe_classement_manuel": {
+        "Eurosense": 97
+      },
+      "missions": [
+        "21LHD6OL"
+      ]
+    },
+    "marseille": {
+      "tiles": 113,
+      "points_per_m2": {
+        "n": 113,
+        "p10": 7.7,
+        "median": 31.1,
+        "p90": 40.3
+      },
+      "acquisition_months": {
+        "2021-06": 102,
+        "2021-07": 11
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 113
+      },
+      "moe_classement_automatique": {
+        "IGN": 113
+      },
+      "moe_classement_manuel": {
+        "NR": 113
+      },
+      "missions": [
+        "21LHD7PQ"
+      ]
+    },
+    "nice": {
+      "tiles": 71,
+      "points_per_m2": {
+        "n": 71,
+        "p10": 18.8,
+        "median": 27.9,
+        "p90": 44.0
+      },
+      "acquisition_months": {
+        "2021-05": 69,
+        "2021-06": 1,
+        "2021-08": 1
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 71
+      },
+      "moe_classement_automatique": {
+        "IGN": 71
+      },
+      "moe_classement_manuel": {
+        "NR": 71
+      },
+      "missions": [
+        "21LHD8SP"
+      ]
+    },
+    "toulon": {
+      "tiles": 63,
+      "points_per_m2": {
+        "n": 63,
+        "p10": 2.3,
+        "median": 27.5,
+        "p90": 47.1
+      },
+      "acquisition_months": {
+        "2021-07": 16,
+        "2022-06": 10,
+        "2022-09": 37
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 63
+      },
+      "moe_classement_automatique": {
+        "IGN": 63
+      },
+      "moe_classement_manuel": {
+        "NR": 63
+      },
+      "missions": [
+        "21LHD7PQ",
+        "22LHDQR"
+      ]
+    },
+    "montpellier": {
+      "tiles": 74,
+      "points_per_m2": {
+        "n": 74,
+        "p10": 26.1,
+        "median": 27.6,
+        "p90": 29.3
+      },
+      "acquisition_months": {
+        "2021-05": 74
+      },
+      "procede_classement": {
+        "ST_AUTO_MANUEL": 74
+      },
+      "moe_classement_automatique": {
+        "Eurosense": 74
+      },
+      "moe_classement_manuel": {
+        "Eurosense": 74
+      },
+      "missions": [
+        "21LHD4MQ"
+      ]
+    },
+    "toulouse": {
+      "tiles": 95,
+      "points_per_m2": {
+        "n": 95,
+        "p10": 20.2,
+        "median": 24.7,
+        "p90": 47.9
+      },
+      "acquisition_months": {
+        "2022-05": 93,
+        "2022-06": 1,
+        "2023-09": 1
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 95
+      },
+      "moe_classement_automatique": {
+        "IGN": 95
+      },
+      "moe_classement_manuel": {
+        "NR": 95
+      },
+      "missions": [
+        "21LHD2IP",
+        "22LHD1IQ",
+        "23LHDZIToulouse"
+      ]
+    },
+    "bordeaux": {
+      "tiles": 89,
+      "points_per_m2": {
+        "n": 89,
+        "p10": 13.7,
+        "median": 15.8,
+        "p90": 17.4
+      },
+      "acquisition_months": {
+        "2023-09": 89
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 89
+      },
+      "moe_classement_automatique": {
+        "IGN": 89
+      },
+      "moe_classement_manuel": {
+        "NR": 89
+      },
+      "missions": [
+        "23LHDFN"
+      ]
+    },
+    "nantes": {
+      "tiles": 76,
+      "points_per_m2": {
+        "n": 76,
+        "p10": 13.4,
+        "median": 17.8,
+        "p90": 27.9
+      },
+      "acquisition_months": {
+        "2024-03": 76
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 76
+      },
+      "moe_classement_automatique": {
+        "IGN": 76
+      },
+      "moe_classement_manuel": {
+        "NR": 76
+      },
+      "missions": [
+        "23LHDEH"
+      ]
+    },
+    "lille": {
+      "tiles": 0,
+      "points_per_m2": {
+        "n": 0
+      },
+      "acquisition_months": {},
+      "procede_classement": {},
+      "moe_classement_automatique": {},
+      "moe_classement_manuel": {},
+      "missions": []
+    },
+    "strasbourg": {
+      "tiles": 72,
+      "points_per_m2": {
+        "n": 72,
+        "p10": 15.6,
+        "median": 18.1,
+        "p90": 25.4
+      },
+      "acquisition_months": {
+        "2022-02": 67,
+        "2022-03": 5
+      },
+      "procede_classement": {
+        "IGN_AUTO_V5": 72
+      },
+      "moe_classement_automatique": {
+        "IGN": 72
+      },
+      "moe_classement_manuel": {
+        "NR": 72
+      },
+      "missions": [
+        "22LHDVosgesSE"
+      ]
+    },
+    "ajaccio": {
+      "tiles": 46,
+      "points_per_m2": {
+        "n": 46,
+        "p10": 5.3,
+        "median": 28.4,
+        "p90": 39.8
+      },
+      "acquisition_months": {
+        "2021-05": 46
+      },
+      "procede_classement": {
+        "ST_AUTO_MANUEL": 46
+      },
+      "moe_classement_automatique": {
+        "Avineon": 46
+      },
+      "moe_classement_manuel": {
+        "Avineon": 46
+      },
+      "missions": [
+        "21LHDCorseUT"
+      ]
+    }
+  },
+  "swisssurface3d": {
+    "zurich": {
+      "copc_tiles": 49,
+      "tiles_listed": 98,
+      "points_per_m2": {
+        "n": 49,
+        "p10": 24.7,
+        "median": 30.7,
+        "p90": 62.0
+      },
+      "flight_days": {
+        "2024-02-15": 49
+      },
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "st_gallen": {
+      "copc_tiles": 35,
+      "tiles_listed": 70,
+      "points_per_m2": {
+        "n": 35,
+        "p10": 30.1,
+        "median": 40.2,
+        "p90": 55.5
+      },
+      "flight_days": {
+        "2024-03-29": 14,
+        "2024-03-26": 21
+      },
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "chur": {
+      "copc_tiles": 0,
+      "tiles_listed": 25,
+      "points_per_m2": {
+        "n": 0
+      },
+      "flight_days": {},
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "lugano": {
+      "copc_tiles": 0,
+      "tiles_listed": 24,
+      "points_per_m2": {
+        "n": 0
+      },
+      "flight_days": {},
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "bern": {
+      "copc_tiles": 0,
+      "tiles_listed": 36,
+      "points_per_m2": {
+        "n": 0
+      },
+      "flight_days": {},
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "geneva": {
+      "copc_tiles": 20,
+      "tiles_listed": 39,
+      "points_per_m2": {
+        "n": 20,
+        "p10": 14.0,
+        "median": 20.5,
+        "p90": 23.8
+      },
+      "flight_days": {
+        "2025-03-20": 20
+      },
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "basel": {
+      "copc_tiles": 0,
+      "tiles_listed": 25,
+      "points_per_m2": {
+        "n": 0
+      },
+      "flight_days": {},
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    },
+    "lucerne": {
+      "copc_tiles": 0,
+      "tiles_listed": 25,
+      "points_per_m2": {
+        "n": 0
+      },
+      "flight_days": {},
+      "note": "tiles without a .copc.laz asset are the pre-2024 LAS 1.2 delivery"
+    }
+  },
+  "ahn5_geotiles": {
+    "25GN1_amsterdam": {
+      "subtiles": 25,
+      "points_per_m2": {
+        "n": 25,
+        "p10": 21.8,
+        "median": 25.8,
+        "p90": 31.0
+      },
+      "note": "extent from the header, which includes the overlap margin"
+    },
+    "37EN2_rotterdam": {
+      "subtiles": 25,
+      "points_per_m2": {
+        "n": 25,
+        "p10": 22.4,
+        "median": 30.5,
+        "p90": 40.7
+      },
+      "note": "extent from the header, which includes the overlap margin"
+    },
+    "30GZ2_den_haag_leiden": {
+      "subtiles": 25,
+      "points_per_m2": {
+        "n": 25,
+        "p10": 17.1,
+        "median": 22.8,
+        "p90": 28.7
+      },
+      "note": "extent from the header, which includes the overlap margin"
+    },
+    "31HZ2_utrecht": {
+      "subtiles": 25,
+      "points_per_m2": {
+        "n": 25,
+        "p10": 22.1,
+        "median": 27.9,
+        "p90": 38.5
+      },
+      "note": "extent from the header, which includes the overlap margin"
+    }
+  },
+  "seconds": 207.2
+}

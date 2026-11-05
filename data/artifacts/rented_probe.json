@@ -1,0 +1,244 @@
+{
+  "rule_written_before_the_probe": "written before the probe ran: a configuration fits when the peak of a forward and backward pass stays under 75 percent of the budget, leaving a quarter for fragmentation and for the evaluation pass; the ladder walks width before batch because width is the capacity question; the budget is the 24 GB this project planned for, with the rented card's own memory reported beside it",
+  "budget_gb": 24.0,
+  "card": {
+    "name": "NVIDIA GeForce RTX 4090",
+    "memory_gb": 51.13,
+    "torch": "2.11.0+cu128",
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39"
+  },
+  "where": "a rented card, not the laptop",
+  "steps_per_configuration": 8,
+  "tiles_read": [
+    "5080_54435",
+    "5085_54320",
+    "5095_54440",
+    "5095_54455",
+    "5100_54495",
+    "5105_54405",
+    "5105_54460",
+    "5110_54320"
+  ],
+  "ladder": [
+    {
+      "width": 128,
+      "batch": 4,
+      "parameters": 725967,
+      "peak_reserved_gb": 2.73,
+      "steps_per_second": 12.093,
+      "points_per_second": 1585052,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 128,
+      "batch": 8,
+      "parameters": 725967,
+      "peak_reserved_gb": 5.43,
+      "steps_per_second": 5.687,
+      "points_per_second": 1490763,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 128,
+      "batch": 16,
+      "parameters": 725967,
+      "peak_reserved_gb": 10.82,
+      "steps_per_second": 2.858,
+      "points_per_second": 1498564,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 128,
+      "batch": 32,
+      "parameters": 725967,
+      "peak_reserved_gb": 21.64,
+      "steps_per_second": 1.444,
+      "points_per_second": 1513768,
+      "fits_budget": false,
+      "fits_card": true
+    },
+    {
+      "width": 192,
+      "batch": 4,
+      "parameters": 1626543,
+      "peak_reserved_gb": 2.88,
+      "steps_per_second": 11.284,
+      "points_per_second": 1479064,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 192,
+      "batch": 8,
+      "parameters": 1626543,
+      "peak_reserved_gb": 5.74,
+      "steps_per_second": 5.175,
+      "points_per_second": 1356598,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 192,
+      "batch": 16,
+      "parameters": 1626543,
+      "peak_reserved_gb": 11.45,
+      "steps_per_second": 2.592,
+      "points_per_second": 1358739,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 192,
+      "batch": 32,
+      "parameters": 1626543,
+      "peak_reserved_gb": 22.85,
+      "steps_per_second": 1.264,
+      "points_per_second": 1325690,
+      "fits_budget": false,
+      "fits_card": true
+    },
+    {
+      "width": 256,
+      "batch": 4,
+      "parameters": 2885519,
+      "peak_reserved_gb": 3.87,
+      "steps_per_second": 9.764,
+      "points_per_second": 1279798,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 256,
+      "batch": 8,
+      "parameters": 2885519,
+      "peak_reserved_gb": 6.55,
+      "steps_per_second": 4.587,
+      "points_per_second": 1202396,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 256,
+      "batch": 16,
+      "parameters": 2885519,
+      "peak_reserved_gb": 15.22,
+      "steps_per_second": 2.296,
+      "points_per_second": 1203871,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 256,
+      "batch": 32,
+      "parameters": 2885519,
+      "peak_reserved_gb": 30.38,
+      "steps_per_second": 1.125,
+      "points_per_second": 1179369,
+      "fits_budget": false,
+      "fits_card": true
+    },
+    {
+      "width": 384,
+      "batch": 4,
+      "parameters": 6478671,
+      "peak_reserved_gb": 6.28,
+      "steps_per_second": 7.793,
+      "points_per_second": 1021502,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 384,
+      "batch": 8,
+      "parameters": 6478671,
+      "peak_reserved_gb": 10.36,
+      "steps_per_second": 3.674,
+      "points_per_second": 963155,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 384,
+      "batch": 16,
+      "parameters": 6478671,
+      "peak_reserved_gb": 20.68,
+      "steps_per_second": 1.841,
+      "points_per_second": 965301,
+      "fits_budget": false,
+      "fits_card": true
+    },
+    {
+      "width": 384,
+      "batch": 32,
+      "parameters": 6478671,
+      "peak_reserved_gb": 41.27,
+      "steps_per_second": 0.917,
+      "points_per_second": 961864,
+      "fits_budget": false,
+      "fits_card": false
+    },
+    {
+      "width": 512,
+      "batch": 4,
+      "parameters": 11505423,
+      "peak_reserved_gb": 6.83,
+      "steps_per_second": 6.475,
+      "points_per_second": 848679,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 512,
+      "batch": 8,
+      "parameters": 11505423,
+      "peak_reserved_gb": 13.55,
+      "steps_per_second": 3.108,
+      "points_per_second": 814838,
+      "fits_budget": true,
+      "fits_card": true
+    },
+    {
+      "width": 512,
+      "batch": 16,
+      "parameters": 11505423,
+      "peak_reserved_gb": 27.22,
+      "steps_per_second": 1.555,
+      "points_per_second": 815220,
+      "fits_budget": false,
+      "fits_card": true
+    },
+    {
+      "width": 512,
+      "batch": 32,
+      "parameters": 11505423,
+      "peak_reserved_gb": 50.61,
+      "steps_per_second": 0.647,
+      "points_per_second": 678324,
+      "fits_budget": false,
+      "fits_card": false
+    }
+  ],
+  "chosen_under_the_budget": {
+    "width": 512,
+    "batch": 8,
+    "parameters": 11505423,
+    "peak_reserved_gb": 13.55,
+    "steps_per_second": 3.108,
+    "points_per_second": 814838,
+    "fits_budget": true,
+    "fits_card": true
+  },
+  "largest_on_this_card": {
+    "width": 512,
+    "batch": 16,
+    "parameters": 11505423,
+    "peak_reserved_gb": 27.22,
+    "steps_per_second": 1.555,
+    "points_per_second": 815220,
+    "fits_budget": false,
+    "fits_card": true
+  }
+}

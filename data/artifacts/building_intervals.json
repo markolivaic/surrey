@@ -1,0 +1,1541 @@
+{
+  "what": "a bootstrap over footprints for building precision and lift, and lift by block height span pooled over the built areas, for the published recipe's three seeds",
+  "placement": "global footprint offset, as score_variant.py",
+  "eligible": "clean points more than 2 m above the label-free floor, not water or bridge deck",
+  "bootstrap": {
+    "unit": "footprint; every eligible point goes with its nearest footprint centroid",
+    "resamples": 1000,
+    "seed": 0,
+    "interval": "2.5th to 97.5th percentile"
+  },
+  "height_bins_m": [
+    0.0,
+    15.0,
+    30.0,
+    46.19,
+    121.77,
+    null
+  ],
+  "height_bin_edges_from": "15 and 30 m, then the 99th percentile and the maximum of the training blocks' height span (input_range_check.json)",
+  "areas": {
+    "sunset": {
+      "footprints": 33,
+      "A": {
+        "precision": 0.8482,
+        "null_precision": 0.5401,
+        "lift": 0.6699,
+        "precision_95": [
+          0.8331,
+          0.863
+        ],
+        "lift_95": [
+          0.6215,
+          0.7156
+        ]
+      },
+      "B": {
+        "precision": 0.8468,
+        "null_precision": 0.5401,
+        "lift": 0.667,
+        "precision_95": [
+          0.8308,
+          0.8619
+        ],
+        "lift_95": [
+          0.619,
+          0.7124
+        ]
+      },
+      "C": {
+        "precision": 0.8481,
+        "null_precision": 0.5401,
+        "lift": 0.6698,
+        "precision_95": [
+          0.8321,
+          0.8629
+        ],
+        "lift_95": [
+          0.6202,
+          0.7158
+        ]
+      }
+    },
+    "mission": {
+      "footprints": 56,
+      "A": {
+        "precision": 0.828,
+        "null_precision": 0.5644,
+        "lift": 0.6051,
+        "precision_95": [
+          0.781,
+          0.868
+        ],
+        "lift_95": [
+          0.5437,
+          0.6571
+        ]
+      },
+      "B": {
+        "precision": 0.83,
+        "null_precision": 0.5644,
+        "lift": 0.6097,
+        "precision_95": [
+          0.7831,
+          0.869
+        ],
+        "lift_95": [
+          0.55,
+          0.6629
+        ]
+      },
+      "C": {
+        "precision": 0.8297,
+        "null_precision": 0.5644,
+        "lift": 0.609,
+        "precision_95": [
+          0.7839,
+          0.87
+        ],
+        "lift_95": [
+          0.5483,
+          0.6613
+        ]
+      }
+    },
+    "russianhill": {
+      "footprints": 78,
+      "A": {
+        "precision": 0.8382,
+        "null_precision": 0.623,
+        "lift": 0.5709,
+        "precision_95": [
+          0.8143,
+          0.8585
+        ],
+        "lift_95": [
+          0.5325,
+          0.6078
+        ]
+      },
+      "B": {
+        "precision": 0.8316,
+        "null_precision": 0.623,
+        "lift": 0.5533,
+        "precision_95": [
+          0.804,
+          0.8556
+        ],
+        "lift_95": [
+          0.5121,
+          0.5899
+        ]
+      },
+      "C": {
+        "precision": 0.8321,
+        "null_precision": 0.623,
+        "lift": 0.5546,
+        "precision_95": [
+          0.8061,
+          0.8545
+        ],
+        "lift_95": [
+          0.5135,
+          0.5916
+        ]
+      }
+    },
+    "soma": {
+      "footprints": 26,
+      "A": {
+        "precision": 0.8454,
+        "null_precision": 0.6472,
+        "lift": 0.5617,
+        "precision_95": [
+          0.7571,
+          0.8973
+        ],
+        "lift_95": [
+          0.4197,
+          0.6787
+        ]
+      },
+      "B": {
+        "precision": 0.8454,
+        "null_precision": 0.6472,
+        "lift": 0.5618,
+        "precision_95": [
+          0.7614,
+          0.8989
+        ],
+        "lift_95": [
+          0.4097,
+          0.6868
+        ]
+      },
+      "C": {
+        "precision": 0.8424,
+        "null_precision": 0.6472,
+        "lift": 0.5534,
+        "precision_95": [
+          0.7576,
+          0.8961
+        ],
+        "lift_95": [
+          0.4224,
+          0.6671
+        ]
+      }
+    },
+    "financial": {
+      "footprints": 25,
+      "A": {
+        "precision": 0.7422,
+        "null_precision": 0.6762,
+        "lift": 0.2038,
+        "precision_95": [
+          0.6213,
+          0.817
+        ],
+        "lift_95": [
+          0.1146,
+          0.2955
+        ]
+      },
+      "B": {
+        "precision": 0.746,
+        "null_precision": 0.6762,
+        "lift": 0.2156,
+        "precision_95": [
+          0.633,
+          0.824
+        ],
+        "lift_95": [
+          0.1263,
+          0.3155
+        ]
+      },
+      "C": {
+        "precision": 0.747,
+        "null_precision": 0.6762,
+        "lift": 0.2186,
+        "precision_95": [
+          0.6248,
+          0.8193
+        ],
+        "lift_95": [
+          0.1224,
+          0.3147
+        ]
+      }
+    },
+    "embarcadero": {
+      "footprints": 7,
+      "A": {
+        "precision": 0.3117,
+        "null_precision": 0.2028,
+        "lift": 0.1366,
+        "precision_95": [
+          0.1587,
+          0.7857
+        ],
+        "lift_95": [
+          0.0637,
+          0.5879
+        ]
+      },
+      "B": {
+        "precision": 0.2992,
+        "null_precision": 0.2028,
+        "lift": 0.1209,
+        "precision_95": [
+          0.1395,
+          0.8283
+        ],
+        "lift_95": [
+          0.05,
+          0.6522
+        ]
+      },
+      "C": {
+        "precision": 0.307,
+        "null_precision": 0.2028,
+        "lift": 0.1307,
+        "precision_95": [
+          0.1423,
+          0.7923
+        ],
+        "lift_95": [
+          0.0543,
+          0.6053
+        ]
+      }
+    }
+  },
+  "by_height_span": {
+    "A": [
+      {
+        "span_m": [
+          0.0,
+          15.0
+        ],
+        "eligible_points": 3586917,
+        "precision": 0.7911,
+        "null_precision": 0.534,
+        "lift": 0.5518
+      },
+      {
+        "span_m": [
+          15.0,
+          30.0
+        ],
+        "eligible_points": 6355460,
+        "precision": 0.8164,
+        "null_precision": 0.5836,
+        "lift": 0.559
+      },
+      {
+        "span_m": [
+          30.0,
+          46.19
+        ],
+        "eligible_points": 1442462,
+        "precision": 0.8528,
+        "null_precision": 0.6583,
+        "lift": 0.5692
+      },
+      {
+        "span_m": [
+          46.19,
+          121.77
+        ],
+        "eligible_points": 2044353,
+        "precision": 0.6975,
+        "null_precision": 0.616,
+        "lift": 0.2121
+      },
+      {
+        "span_m": [
+          121.77,
+          null
+        ],
+        "eligible_points": 2549016,
+        "precision": 0.7217,
+        "null_precision": 0.6637,
+        "lift": 0.1726
+      }
+    ],
+    "B": [
+      {
+        "span_m": [
+          0.0,
+          15.0
+        ],
+        "eligible_points": 3586917,
+        "precision": 0.7878,
+        "null_precision": 0.534,
+        "lift": 0.5447
+      },
+      {
+        "span_m": [
+          15.0,
+          30.0
+        ],
+        "eligible_points": 6355460,
+        "precision": 0.811,
+        "null_precision": 0.5836,
+        "lift": 0.5461
+      },
+      {
+        "span_m": [
+          30.0,
+          46.19
+        ],
+        "eligible_points": 1442462,
+        "precision": 0.8532,
+        "null_precision": 0.6583,
+        "lift": 0.5704
+      },
+      {
+        "span_m": [
+          46.19,
+          121.77
+        ],
+        "eligible_points": 2044353,
+        "precision": 0.6966,
+        "null_precision": 0.616,
+        "lift": 0.2098
+      },
+      {
+        "span_m": [
+          121.77,
+          null
+        ],
+        "eligible_points": 2549016,
+        "precision": 0.7227,
+        "null_precision": 0.6637,
+        "lift": 0.1756
+      }
+    ],
+    "C": [
+      {
+        "span_m": [
+          0.0,
+          15.0
+        ],
+        "eligible_points": 3586917,
+        "precision": 0.7931,
+        "null_precision": 0.534,
+        "lift": 0.556
+      },
+      {
+        "span_m": [
+          15.0,
+          30.0
+        ],
+        "eligible_points": 6355460,
+        "precision": 0.812,
+        "null_precision": 0.5836,
+        "lift": 0.5485
+      },
+      {
+        "span_m": [
+          30.0,
+          46.19
+        ],
+        "eligible_points": 1442462,
+        "precision": 0.8529,
+        "null_precision": 0.6583,
+        "lift": 0.5696
+      },
+      {
+        "span_m": [
+          46.19,
+          121.77
+        ],
+        "eligible_points": 2044353,
+        "precision": 0.6949,
+        "null_precision": 0.616,
+        "lift": 0.2055
+      },
+      {
+        "span_m": [
+          121.77,
+          null
+        ],
+        "eligible_points": 2549016,
+        "precision": 0.7252,
+        "null_precision": 0.6637,
+        "lift": 0.1829
+      }
+    ]
+  },
+  "by_height_span_without_financial": {
+    "A": [
+      {
+        "span_m": [
+          0.0,
+          15.0
+        ],
+        "eligible_points": 3436675,
+        "precision": 0.7999,
+        "null_precision": 0.544,
+        "lift": 0.5611
+      },
+      {
+        "span_m": [
+          15.0,
+          30.0
+        ],
+        "eligible_points": 5917335,
+        "precision": 0.8257,
+        "null_precision": 0.5873,
+        "lift": 0.5778
+      },
+      {
+        "span_m": [
+          30.0,
+          46.19
+        ],
+        "eligible_points": 1277492,
+        "precision": 0.8555,
+        "null_precision": 0.6348,
+        "lift": 0.6042
+      },
+      {
+        "span_m": [
+          46.19,
+          121.77
+        ],
+        "eligible_points": 415095,
+        "precision": 0.505,
+        "null_precision": 0.3403,
+        "lift": 0.2497
+      },
+      {
+        "span_m": [
+          121.77,
+          null
+        ],
+        "eligible_points": 158201,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "lift": null
+      }
+    ],
+    "B": [
+      {
+        "span_m": [
+          0.0,
+          15.0
+        ],
+        "eligible_points": 3436675,
+        "precision": 0.7966,
+        "null_precision": 0.544,
+        "lift": 0.5539
+      },
+      {
+        "span_m": [
+          15.0,
+          30.0
+        ],
+        "eligible_points": 5917335,
+        "precision": 0.8211,
+        "null_precision": 0.5873,
+        "lift": 0.5666
+      },
+      {
+        "span_m": [
+          30.0,
+          46.19
+        ],
+        "eligible_points": 1277492,
+        "precision": 0.8542,
+        "null_precision": 0.6348,
+        "lift": 0.6008
+      },
+      {
+        "span_m": [
+          46.19,
+          121.77
+        ],
+        "eligible_points": 415095,
+        "precision": 0.4959,
+        "null_precision": 0.3403,
+        "lift": 0.2359
+      },
+      {
+        "span_m": [
+          121.77,
+          null
+        ],
+        "eligible_points": 158201,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "lift": null
+      }
+    ],
+    "C": [
+      {
+        "span_m": [
+          0.0,
+          15.0
+        ],
+        "eligible_points": 3436675,
+        "precision": 0.8019,
+        "null_precision": 0.544,
+        "lift": 0.5655
+      },
+      {
+        "span_m": [
+          15.0,
+          30.0
+        ],
+        "eligible_points": 5917335,
+        "precision": 0.8221,
+        "null_precision": 0.5873,
+        "lift": 0.569
+      },
+      {
+        "span_m": [
+          30.0,
+          46.19
+        ],
+        "eligible_points": 1277492,
+        "precision": 0.8538,
+        "null_precision": 0.6348,
+        "lift": 0.5996
+      },
+      {
+        "span_m": [
+          46.19,
+          121.77
+        ],
+        "eligible_points": 415095,
+        "precision": 0.4961,
+        "null_precision": 0.3403,
+        "lift": 0.2362
+      },
+      {
+        "span_m": [
+          121.77,
+          null
+        ],
+        "eligible_points": 158201,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "lift": null
+      }
+    ]
+  },
+  "by_height_span_per_area": {
+    "sunset": {
+      "A": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 1715802,
+          "precision": 0.8625,
+          "null_precision": 0.6168,
+          "lift": 0.641
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 584209,
+          "precision": 0.7748,
+          "null_precision": 0.3147,
+          "lift": 0.6714
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "B": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 1715802,
+          "precision": 0.8615,
+          "null_precision": 0.6168,
+          "lift": 0.6386
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 584209,
+          "precision": 0.7712,
+          "null_precision": 0.3147,
+          "lift": 0.6662
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "C": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 1715802,
+          "precision": 0.862,
+          "null_precision": 0.6168,
+          "lift": 0.6398
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 584209,
+          "precision": 0.7764,
+          "null_precision": 0.3147,
+          "lift": 0.6738
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ]
+    },
+    "mission": {
+      "A": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 982429,
+          "precision": 0.8117,
+          "null_precision": 0.5301,
+          "lift": 0.5993
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 1100000,
+          "precision": 0.8422,
+          "null_precision": 0.5951,
+          "lift": 0.6103
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "B": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 982429,
+          "precision": 0.8129,
+          "null_precision": 0.5301,
+          "lift": 0.6018
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 1100000,
+          "precision": 0.8449,
+          "null_precision": 0.5951,
+          "lift": 0.6169
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "C": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 982429,
+          "precision": 0.813,
+          "null_precision": 0.5301,
+          "lift": 0.602
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 1100000,
+          "precision": 0.8442,
+          "null_precision": 0.5951,
+          "lift": 0.6153
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ]
+    },
+    "russianhill": {
+      "A": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 32470,
+          "precision": 0.6982,
+          "null_precision": 0.1323,
+          "lift": 0.6521
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 2480746,
+          "precision": 0.8402,
+          "null_precision": 0.6331,
+          "lift": 0.5645
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 912239,
+          "precision": 0.8377,
+          "null_precision": 0.5965,
+          "lift": 0.5979
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 151454,
+          "precision": 0.8186,
+          "null_precision": 0.7226,
+          "lift": 0.346
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "B": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 32470,
+          "precision": 0.694,
+          "null_precision": 0.1323,
+          "lift": 0.6474
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 2480746,
+          "precision": 0.8325,
+          "null_precision": 0.6331,
+          "lift": 0.5433
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 912239,
+          "precision": 0.8349,
+          "null_precision": 0.5965,
+          "lift": 0.5909
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 151454,
+          "precision": 0.8102,
+          "null_precision": 0.7226,
+          "lift": 0.3158
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "C": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 32470,
+          "precision": 0.7016,
+          "null_precision": 0.1323,
+          "lift": 0.6561
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 2480746,
+          "precision": 0.8333,
+          "null_precision": 0.6331,
+          "lift": 0.5456
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 912239,
+          "precision": 0.836,
+          "null_precision": 0.5965,
+          "lift": 0.5936
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 151454,
+          "precision": 0.8031,
+          "null_precision": 0.7226,
+          "lift": 0.2903
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ]
+    },
+    "soma": {
+      "A": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 345955,
+          "precision": 0.8954,
+          "null_precision": 0.5895,
+          "lift": 0.7453
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 1591853,
+          "precision": 0.8665,
+          "null_precision": 0.6586,
+          "lift": 0.609
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 200403,
+          "precision": 0.8879,
+          "null_precision": 0.8271,
+          "lift": 0.3516
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 96100,
+          "precision": 0.2761,
+          "null_precision": 0.2917,
+          "lift": -0.022
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "B": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 345955,
+          "precision": 0.8966,
+          "null_precision": 0.5895,
+          "lift": 0.7482
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 1591853,
+          "precision": 0.8657,
+          "null_precision": 0.6586,
+          "lift": 0.6065
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 200403,
+          "precision": 0.8891,
+          "null_precision": 0.8271,
+          "lift": 0.3589
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 96100,
+          "precision": 0.2857,
+          "null_precision": 0.2917,
+          "lift": -0.0084
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ],
+      "C": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 345955,
+          "precision": 0.8965,
+          "null_precision": 0.5895,
+          "lift": 0.7479
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 1591853,
+          "precision": 0.8619,
+          "null_precision": 0.6586,
+          "lift": 0.5955
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 200403,
+          "precision": 0.8825,
+          "null_precision": 0.8271,
+          "lift": 0.3205
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 96100,
+          "precision": 0.2911,
+          "null_precision": 0.2917,
+          "lift": -0.0008
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 0,
+          "precision": null,
+          "null_precision": null,
+          "lift": null
+        }
+      ]
+    },
+    "financial": {
+      "A": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 150242,
+          "precision": 0.547,
+          "null_precision": 0.3044,
+          "lift": 0.3488
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 438125,
+          "precision": 0.6887,
+          "null_precision": 0.5334,
+          "lift": 0.3328
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 164970,
+          "precision": 0.8365,
+          "null_precision": 0.8402,
+          "lift": -0.0229
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 1629258,
+          "precision": 0.7322,
+          "null_precision": 0.6863,
+          "lift": 0.1466
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 2390815,
+          "precision": 0.7604,
+          "null_precision": 0.7076,
+          "lift": 0.1807
+        }
+      ],
+      "B": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 150242,
+          "precision": 0.547,
+          "null_precision": 0.3044,
+          "lift": 0.3488
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 438125,
+          "precision": 0.6794,
+          "null_precision": 0.5334,
+          "lift": 0.3128
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 164970,
+          "precision": 0.8473,
+          "null_precision": 0.8402,
+          "lift": 0.0445
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 1629258,
+          "precision": 0.7346,
+          "null_precision": 0.6863,
+          "lift": 0.1543
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 2390815,
+          "precision": 0.7689,
+          "null_precision": 0.7076,
+          "lift": 0.2096
+        }
+      ],
+      "C": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 150242,
+          "precision": 0.554,
+          "null_precision": 0.3044,
+          "lift": 0.3588
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 438125,
+          "precision": 0.679,
+          "null_precision": 0.5334,
+          "lift": 0.3121
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 164970,
+          "precision": 0.8479,
+          "null_precision": 0.8402,
+          "lift": 0.0486
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 1629258,
+          "precision": 0.7322,
+          "null_precision": 0.6863,
+          "lift": 0.1465
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 2390815,
+          "precision": 0.7711,
+          "null_precision": 0.7076,
+          "lift": 0.2171
+        }
+      ]
+    },
+    "embarcadero": {
+      "A": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 360019,
+          "precision": 0.3233,
+          "null_precision": 0.2286,
+          "lift": 0.1228
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 160527,
+          "precision": 0.1689,
+          "null_precision": 0.1115,
+          "lift": 0.0647
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 164850,
+          "precision": 0.9125,
+          "null_precision": 0.6129,
+          "lift": 0.7739
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 167541,
+          "precision": 0.0746,
+          "null_precision": 0.0227,
+          "lift": 0.0532
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 158201,
+          "precision": 0.0,
+          "null_precision": 0.0,
+          "lift": null
+        }
+      ],
+      "B": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 360019,
+          "precision": 0.314,
+          "null_precision": 0.2286,
+          "lift": 0.1107
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 160527,
+          "precision": 0.158,
+          "null_precision": 0.1115,
+          "lift": 0.0523
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 164850,
+          "precision": 0.9149,
+          "null_precision": 0.6129,
+          "lift": 0.7803
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 167541,
+          "precision": 0.0655,
+          "null_precision": 0.0227,
+          "lift": 0.0438
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 158201,
+          "precision": 0.0,
+          "null_precision": 0.0,
+          "lift": null
+        }
+      ],
+      "C": [
+        {
+          "span_m": [
+            0.0,
+            15.0
+          ],
+          "eligible_points": 360019,
+          "precision": 0.3354,
+          "null_precision": 0.2286,
+          "lift": 0.1385
+        },
+        {
+          "span_m": [
+            15.0,
+            30.0
+          ],
+          "eligible_points": 160527,
+          "precision": 0.1646,
+          "null_precision": 0.1115,
+          "lift": 0.0598
+        },
+        {
+          "span_m": [
+            30.0,
+            46.19
+          ],
+          "eligible_points": 164850,
+          "precision": 0.9162,
+          "null_precision": 0.6129,
+          "lift": 0.7834
+        },
+        {
+          "span_m": [
+            46.19,
+            121.77
+          ],
+          "eligible_points": 167541,
+          "precision": 0.066,
+          "null_precision": 0.0227,
+          "lift": 0.0443
+        },
+        {
+          "span_m": [
+            121.77,
+            null
+          ],
+          "eligible_points": 158201,
+          "precision": 0.0,
+          "null_precision": 0.0,
+          "lift": null
+        }
+      ]
+    }
+  },
+  "seconds": 63.6
+}

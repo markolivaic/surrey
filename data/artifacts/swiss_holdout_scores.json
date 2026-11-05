@@ -1,0 +1,703 @@
+{
+  "reading_written_before_running": "written 2026-09-20 before the first run: high water IoU here means the class was learned and the San Francisco collapse is a transfer finding; low water IoU here means it was never learned, which is a training fault to chase instead",
+  "in_sample": false,
+  "in_sample_note": "a tile from a city none of the training tiles came from, chosen by the same rule after M1 was trained and scored, and never trained on: this one does measure generalisation",
+  "prep": "swiss_holdout",
+  "sub_tiles": 4,
+  "device": "cuda",
+  "seed": 0,
+  "class_id_check": {
+    "taxonomy": {
+      "0": "ground",
+      "1": "vegetation",
+      "2": "car",
+      "3": "powerline",
+      "4": "fence",
+      "5": "tree",
+      "6": "pickup",
+      "7": "van-truck",
+      "8": "heavy-duty",
+      "9": "utility-pole",
+      "10": "light-pole",
+      "11": "traffic-pole",
+      "12": "habitat",
+      "13": "complex",
+      "14": "annex",
+      "15": "water",
+      "16": "bridge_deck"
+    },
+    "water_id": 15,
+    "bridge_deck_id": 16,
+    "ids_in_cached_swiss_labels": [
+      -1,
+      0,
+      3,
+      15,
+      16,
+      100
+    ],
+    "ids_the_table_allows": [
+      -1,
+      0,
+      3,
+      15,
+      16,
+      100
+    ],
+    "training_artefacts": {
+      "train_m1_seedA": {
+        "new_class_ids": {
+          "water": 15,
+          "bridge_deck": 16
+        },
+        "class_weight_count": 17
+      },
+      "train_m1_seedB": {
+        "new_class_ids": {
+          "water": 15,
+          "bridge_deck": 16
+        },
+        "class_weight_count": 17
+      },
+      "train_m1_seedC": {
+        "new_class_ids": {
+          "water": 15,
+          "bridge_deck": 16
+        },
+        "class_weight_count": 17
+      }
+    },
+    "prediction_manifest_classes": {
+      "m1_seedA": 17,
+      "m1_seedB": 17,
+      "m1_seedC": 17
+    },
+    "all_agree": true
+  },
+  "training_share": {
+    "dales_points": 395996290,
+    "swiss_points": 62513803,
+    "training_points": 458510093,
+    "classes": {
+      "water": {
+        "points": 16107857,
+        "share_of_training_points": 0.035131,
+        "sub_tiles_with_any": 13
+      },
+      "bridge_deck": {
+        "points": 375374,
+        "share_of_training_points": 0.000819,
+        "sub_tiles_with_any": 12
+      }
+    },
+    "loss_weights": {
+      "train_m1_seedA": {
+        "water": 0.1807,
+        "bridge_deck": 1.1836,
+        "ground": 0.0478,
+        "mean_of_the_fifteen": 1.0
+      },
+      "train_m1_seedB": {
+        "water": 0.1807,
+        "bridge_deck": 1.1836,
+        "ground": 0.0478,
+        "mean_of_the_fifteen": 1.0
+      },
+      "train_m1_seedC": {
+        "water": 0.1807,
+        "bridge_deck": 1.1836,
+        "ground": 0.0478,
+        "mean_of_the_fifteen": 1.0
+      }
+    },
+    "loss_weight_formula": "inverse frequency to the power 0.5: the fifteen DALES weights from the pooled DALES fractions M0 used, rescaled to mean one, and water and bridge deck from their share of all M1 training points by the same formula (m1_class_weights in scripts/train.py)"
+  },
+  "variants": {
+    "m1_seedA": {
+      "checkpoint_step": 12000,
+      "outputs": 17,
+      "has_water_output": true,
+      "has_bridge_deck_output": true,
+      "per_sub_tile": {
+        "ch2024_2680-1225_00": {
+          "points": 2615919,
+          "water": {
+            "support": 2176641,
+            "called": 2182179,
+            "true_positive": 2169535,
+            "precision": 0.9942,
+            "recall": 0.9967,
+            "iou": 0.991,
+            "null": "call every point this class",
+            "null_precision": 0.8321,
+            "null_recall": 1.0,
+            "null_iou": 0.8321
+          },
+          "bridge_deck": {
+            "support": 1504,
+            "called": 28791,
+            "true_positive": 1273,
+            "precision": 0.0442,
+            "recall": 0.8464,
+            "iou": 0.0439,
+            "null": "call every point this class",
+            "null_precision": 0.0006,
+            "null_recall": 1.0,
+            "null_iou": 0.0006
+          }
+        },
+        "ch2024_2680-1225_01": {
+          "points": 5420965,
+          "water": {
+            "support": 433505,
+            "called": 690354,
+            "true_positive": 422882,
+            "precision": 0.6126,
+            "recall": 0.9755,
+            "iou": 0.6033,
+            "null": "call every point this class",
+            "null_precision": 0.08,
+            "null_recall": 1.0,
+            "null_iou": 0.08
+          },
+          "bridge_deck": {
+            "support": 10070,
+            "called": 86068,
+            "true_positive": 9627,
+            "precision": 0.1119,
+            "recall": 0.956,
+            "iou": 0.1113,
+            "null": "call every point this class",
+            "null_precision": 0.0019,
+            "null_recall": 1.0,
+            "null_iou": 0.0019
+          }
+        },
+        "ch2024_2680-1225_10": {
+          "points": 5030208,
+          "water": {
+            "support": 1748098,
+            "called": 1798645,
+            "true_positive": 1711392,
+            "precision": 0.9515,
+            "recall": 0.979,
+            "iou": 0.9325,
+            "null": "call every point this class",
+            "null_precision": 0.3475,
+            "null_recall": 1.0,
+            "null_iou": 0.3475
+          },
+          "bridge_deck": {
+            "support": 98328,
+            "called": 256321,
+            "true_positive": 85492,
+            "precision": 0.3335,
+            "recall": 0.8695,
+            "iou": 0.3176,
+            "null": "call every point this class",
+            "null_precision": 0.0195,
+            "null_recall": 1.0,
+            "null_iou": 0.0195
+          }
+        },
+        "ch2024_2680-1225_11": {
+          "points": 6559156,
+          "water": {
+            "support": 8929,
+            "called": 361751,
+            "true_positive": 961,
+            "precision": 0.0027,
+            "recall": 0.1076,
+            "iou": 0.0026,
+            "null": "call every point this class",
+            "null_precision": 0.0014,
+            "null_recall": 1.0,
+            "null_iou": 0.0014
+          },
+          "bridge_deck": {
+            "support": 2545,
+            "called": 46664,
+            "true_positive": 1564,
+            "precision": 0.0335,
+            "recall": 0.6145,
+            "iou": 0.0328,
+            "null": "call every point this class",
+            "null_precision": 0.0004,
+            "null_recall": 1.0,
+            "null_iou": 0.0004
+          }
+        }
+      },
+      "pooled": {
+        "water": {
+          "support": 4367173,
+          "called": 5032929,
+          "true_positive": 4304770,
+          "precision": 0.8553,
+          "recall": 0.9857,
+          "iou": 0.8448,
+          "null": "call every point this class",
+          "null_precision": 0.2225,
+          "null_recall": 1.0,
+          "null_iou": 0.2225
+        },
+        "bridge_deck": {
+          "support": 112447,
+          "called": 417844,
+          "true_positive": 97956,
+          "precision": 0.2344,
+          "recall": 0.8711,
+          "iou": 0.2266,
+          "null": "call every point this class",
+          "null_precision": 0.0057,
+          "null_recall": 1.0,
+          "null_iou": 0.0057
+        },
+        "note": "pooled over all sixteen sub-tiles, every one of them a training tile"
+      },
+      "seconds": 125.1,
+      "points": 19626248
+    },
+    "m1_seedB": {
+      "checkpoint_step": 12000,
+      "outputs": 17,
+      "has_water_output": true,
+      "has_bridge_deck_output": true,
+      "per_sub_tile": {
+        "ch2024_2680-1225_00": {
+          "points": 2615919,
+          "water": {
+            "support": 2176641,
+            "called": 2186670,
+            "true_positive": 2170783,
+            "precision": 0.9927,
+            "recall": 0.9973,
+            "iou": 0.9901,
+            "null": "call every point this class",
+            "null_precision": 0.8321,
+            "null_recall": 1.0,
+            "null_iou": 0.8321
+          },
+          "bridge_deck": {
+            "support": 1504,
+            "called": 23375,
+            "true_positive": 1266,
+            "precision": 0.0542,
+            "recall": 0.8418,
+            "iou": 0.0536,
+            "null": "call every point this class",
+            "null_precision": 0.0006,
+            "null_recall": 1.0,
+            "null_iou": 0.0006
+          }
+        },
+        "ch2024_2680-1225_01": {
+          "points": 5420965,
+          "water": {
+            "support": 433505,
+            "called": 522751,
+            "true_positive": 419762,
+            "precision": 0.803,
+            "recall": 0.9683,
+            "iou": 0.7824,
+            "null": "call every point this class",
+            "null_precision": 0.08,
+            "null_recall": 1.0,
+            "null_iou": 0.08
+          },
+          "bridge_deck": {
+            "support": 10070,
+            "called": 63664,
+            "true_positive": 9713,
+            "precision": 0.1526,
+            "recall": 0.9645,
+            "iou": 0.1517,
+            "null": "call every point this class",
+            "null_precision": 0.0019,
+            "null_recall": 1.0,
+            "null_iou": 0.0019
+          }
+        },
+        "ch2024_2680-1225_10": {
+          "points": 5030208,
+          "water": {
+            "support": 1748098,
+            "called": 1772322,
+            "true_positive": 1714824,
+            "precision": 0.9676,
+            "recall": 0.981,
+            "iou": 0.9497,
+            "null": "call every point this class",
+            "null_precision": 0.3475,
+            "null_recall": 1.0,
+            "null_iou": 0.3475
+          },
+          "bridge_deck": {
+            "support": 98328,
+            "called": 225349,
+            "true_positive": 86745,
+            "precision": 0.3849,
+            "recall": 0.8822,
+            "iou": 0.3661,
+            "null": "call every point this class",
+            "null_precision": 0.0195,
+            "null_recall": 1.0,
+            "null_iou": 0.0195
+          }
+        },
+        "ch2024_2680-1225_11": {
+          "points": 6559156,
+          "water": {
+            "support": 8929,
+            "called": 85832,
+            "true_positive": 851,
+            "precision": 0.0099,
+            "recall": 0.0953,
+            "iou": 0.0091,
+            "null": "call every point this class",
+            "null_precision": 0.0014,
+            "null_recall": 1.0,
+            "null_iou": 0.0014
+          },
+          "bridge_deck": {
+            "support": 2545,
+            "called": 42437,
+            "true_positive": 1768,
+            "precision": 0.0417,
+            "recall": 0.6947,
+            "iou": 0.0409,
+            "null": "call every point this class",
+            "null_precision": 0.0004,
+            "null_recall": 1.0,
+            "null_iou": 0.0004
+          }
+        }
+      },
+      "pooled": {
+        "water": {
+          "support": 4367173,
+          "called": 4567575,
+          "true_positive": 4306220,
+          "precision": 0.9428,
+          "recall": 0.986,
+          "iou": 0.9304,
+          "null": "call every point this class",
+          "null_precision": 0.2225,
+          "null_recall": 1.0,
+          "null_iou": 0.2225
+        },
+        "bridge_deck": {
+          "support": 112447,
+          "called": 354825,
+          "true_positive": 99492,
+          "precision": 0.2804,
+          "recall": 0.8848,
+          "iou": 0.2705,
+          "null": "call every point this class",
+          "null_precision": 0.0057,
+          "null_recall": 1.0,
+          "null_iou": 0.0057
+        },
+        "note": "pooled over all sixteen sub-tiles, every one of them a training tile"
+      },
+      "seconds": 124.8,
+      "points": 19626248
+    },
+    "m1_seedC": {
+      "checkpoint_step": 12000,
+      "outputs": 17,
+      "has_water_output": true,
+      "has_bridge_deck_output": true,
+      "per_sub_tile": {
+        "ch2024_2680-1225_00": {
+          "points": 2615919,
+          "water": {
+            "support": 2176641,
+            "called": 2177719,
+            "true_positive": 2168158,
+            "precision": 0.9956,
+            "recall": 0.9961,
+            "iou": 0.9917,
+            "null": "call every point this class",
+            "null_precision": 0.8321,
+            "null_recall": 1.0,
+            "null_iou": 0.8321
+          },
+          "bridge_deck": {
+            "support": 1504,
+            "called": 20131,
+            "true_positive": 1328,
+            "precision": 0.066,
+            "recall": 0.883,
+            "iou": 0.0654,
+            "null": "call every point this class",
+            "null_precision": 0.0006,
+            "null_recall": 1.0,
+            "null_iou": 0.0006
+          }
+        },
+        "ch2024_2680-1225_01": {
+          "points": 5420965,
+          "water": {
+            "support": 433505,
+            "called": 478230,
+            "true_positive": 417860,
+            "precision": 0.8738,
+            "recall": 0.9639,
+            "iou": 0.8461,
+            "null": "call every point this class",
+            "null_precision": 0.08,
+            "null_recall": 1.0,
+            "null_iou": 0.08
+          },
+          "bridge_deck": {
+            "support": 10070,
+            "called": 44951,
+            "true_positive": 9672,
+            "precision": 0.2152,
+            "recall": 0.9605,
+            "iou": 0.2133,
+            "null": "call every point this class",
+            "null_precision": 0.0019,
+            "null_recall": 1.0,
+            "null_iou": 0.0019
+          }
+        },
+        "ch2024_2680-1225_10": {
+          "points": 5030208,
+          "water": {
+            "support": 1748098,
+            "called": 1750141,
+            "true_positive": 1707433,
+            "precision": 0.9756,
+            "recall": 0.9767,
+            "iou": 0.9534,
+            "null": "call every point this class",
+            "null_precision": 0.3475,
+            "null_recall": 1.0,
+            "null_iou": 0.3475
+          },
+          "bridge_deck": {
+            "support": 98328,
+            "called": 218751,
+            "true_positive": 85632,
+            "precision": 0.3915,
+            "recall": 0.8709,
+            "iou": 0.37,
+            "null": "call every point this class",
+            "null_precision": 0.0195,
+            "null_recall": 1.0,
+            "null_iou": 0.0195
+          }
+        },
+        "ch2024_2680-1225_11": {
+          "points": 6559156,
+          "water": {
+            "support": 8929,
+            "called": 96286,
+            "true_positive": 769,
+            "precision": 0.008,
+            "recall": 0.0861,
+            "iou": 0.0074,
+            "null": "call every point this class",
+            "null_precision": 0.0014,
+            "null_recall": 1.0,
+            "null_iou": 0.0014
+          },
+          "bridge_deck": {
+            "support": 2545,
+            "called": 24803,
+            "true_positive": 1864,
+            "precision": 0.0752,
+            "recall": 0.7324,
+            "iou": 0.0731,
+            "null": "call every point this class",
+            "null_precision": 0.0004,
+            "null_recall": 1.0,
+            "null_iou": 0.0004
+          }
+        }
+      },
+      "pooled": {
+        "water": {
+          "support": 4367173,
+          "called": 4502376,
+          "true_positive": 4294220,
+          "precision": 0.9538,
+          "recall": 0.9833,
+          "iou": 0.9386,
+          "null": "call every point this class",
+          "null_precision": 0.2225,
+          "null_recall": 1.0,
+          "null_iou": 0.2225
+        },
+        "bridge_deck": {
+          "support": 112447,
+          "called": 308636,
+          "true_positive": 98496,
+          "precision": 0.3191,
+          "recall": 0.8759,
+          "iou": 0.3053,
+          "null": "call every point this class",
+          "null_precision": 0.0057,
+          "null_recall": 1.0,
+          "null_iou": 0.0057
+        },
+        "note": "pooled over all sixteen sub-tiles, every one of them a training tile"
+      },
+      "seconds": 124.8,
+      "points": 19626248
+    },
+    "m0prime_seedA": {
+      "checkpoint_step": 12000,
+      "outputs": 15,
+      "has_water_output": false,
+      "has_bridge_deck_output": false,
+      "per_sub_tile": {
+        "ch2024_2680-1225_00": {
+          "points": 2615919,
+          "water": {
+            "support": 2176641,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.8321,
+            "null_recall": 1.0,
+            "null_iou": 0.8321
+          },
+          "bridge_deck": {
+            "support": 1504,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.0006,
+            "null_recall": 1.0,
+            "null_iou": 0.0006
+          }
+        },
+        "ch2024_2680-1225_01": {
+          "points": 5420965,
+          "water": {
+            "support": 433505,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.08,
+            "null_recall": 1.0,
+            "null_iou": 0.08
+          },
+          "bridge_deck": {
+            "support": 10070,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.0019,
+            "null_recall": 1.0,
+            "null_iou": 0.0019
+          }
+        },
+        "ch2024_2680-1225_10": {
+          "points": 5030208,
+          "water": {
+            "support": 1748098,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.3475,
+            "null_recall": 1.0,
+            "null_iou": 0.3475
+          },
+          "bridge_deck": {
+            "support": 98328,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.0195,
+            "null_recall": 1.0,
+            "null_iou": 0.0195
+          }
+        },
+        "ch2024_2680-1225_11": {
+          "points": 6559156,
+          "water": {
+            "support": 8929,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.0014,
+            "null_recall": 1.0,
+            "null_iou": 0.0014
+          },
+          "bridge_deck": {
+            "support": 2545,
+            "called": 0,
+            "true_positive": 0,
+            "precision": null,
+            "recall": 0.0,
+            "iou": 0.0,
+            "null": "call every point this class",
+            "null_precision": 0.0004,
+            "null_recall": 1.0,
+            "null_iou": 0.0004
+          }
+        }
+      },
+      "pooled": {
+        "water": {
+          "support": 4367173,
+          "called": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": 0.0,
+          "iou": 0.0,
+          "null": "call every point this class",
+          "null_precision": 0.2225,
+          "null_recall": 1.0,
+          "null_iou": 0.2225
+        },
+        "bridge_deck": {
+          "support": 112447,
+          "called": 0,
+          "true_positive": 0,
+          "precision": null,
+          "recall": 0.0,
+          "iou": 0.0,
+          "null": "call every point this class",
+          "null_precision": 0.0057,
+          "null_recall": 1.0,
+          "null_iou": 0.0057
+        },
+        "note": "pooled over all sixteen sub-tiles, every one of them a training tile"
+      },
+      "seconds": 124.3,
+      "points": 19626248
+    }
+  },
+  "control_reading": {
+    "m0prime_water_called": 0,
+    "m0prime_water_iou": 0.0,
+    "passes": true,
+    "why": "M0prime has no water output, so it must call water on no point; anything else is a bug in this script rather than a finding about the model"
+  }
+}

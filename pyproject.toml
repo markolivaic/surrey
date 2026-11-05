@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surrey"
+version = "0.1.0"
+description = "Point cloud segmentation trained on DALES-2 lidar over Surrey, BC, and scored on USGS 3DEP lidar of San Francisco"
+requires-python = ">=3.12"
+license = "MIT"
+
+# The pinned dependencies are in requirements.txt, which also installs this package in place.
+[tool.setuptools.packages.find]
+where = ["backend"]

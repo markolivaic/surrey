@@ -1,0 +1,16 @@
+line-length = 100
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = [
+    "E501",    # line length is handled by the formatter, not by failing the build
+    "B008",    # argparse defaults built in the signature are fine here
+    "SIM108",  # a ternary is not always clearer than an if
+]
+
+[lint.per-file-ignores]
+# Entry points name the repository root first and import their siblings after it.
+"tests/**" = ["E402"]
+"scripts/**" = ["E402"]
+"archive/**" = ["E402"]

@@ -1,0 +1,270 @@
+{
+  "question": "what ground surface keeps buildings visible in Surrey without lifting San Francisco's ground off the floor",
+  "gate_m": 2.0,
+  "quantile": 0.05,
+  "cells_tested": [
+    2.0,
+    5.0,
+    10.0,
+    15.0,
+    25.0,
+    50.0
+  ],
+  "rule": {
+    "surrey_building_visible_at_least": 0.95,
+    "sf_ground_elevated_worst_area_at_most": 0.1,
+    "tie_break": "smallest cell, because a coarser grid stops following terrain"
+  },
+  "chosen": null,
+  "pooled": [
+    {
+      "estimator": "min",
+      "cell_m": 2.0,
+      "surrey_building_visible": 0.4618,
+      "sf_ground_elevated_mean": 0.022,
+      "sf_ground_elevated_worst": 0.1047,
+      "passes": false
+    },
+    {
+      "estimator": "min",
+      "cell_m": 5.0,
+      "surrey_building_visible": 0.7156,
+      "sf_ground_elevated_mean": 0.0649,
+      "sf_ground_elevated_worst": 0.2824,
+      "passes": false
+    },
+    {
+      "estimator": "min",
+      "cell_m": 10.0,
+      "surrey_building_visible": 0.8595,
+      "sf_ground_elevated_mean": 0.1533,
+      "sf_ground_elevated_worst": 0.5781,
+      "passes": false
+    },
+    {
+      "estimator": "min",
+      "cell_m": 15.0,
+      "surrey_building_visible": 0.9116,
+      "sf_ground_elevated_mean": 0.2269,
+      "sf_ground_elevated_worst": 0.7565,
+      "passes": false
+    },
+    {
+      "estimator": "min",
+      "cell_m": 25.0,
+      "surrey_building_visible": 0.9601,
+      "sf_ground_elevated_mean": 0.3425,
+      "sf_ground_elevated_worst": 0.8998,
+      "passes": false
+    },
+    {
+      "estimator": "min",
+      "cell_m": 50.0,
+      "surrey_building_visible": 0.9898,
+      "sf_ground_elevated_mean": 0.6123,
+      "sf_ground_elevated_worst": 0.9994,
+      "passes": false
+    },
+    {
+      "estimator": "q05",
+      "cell_m": 2.0,
+      "surrey_building_visible": 0.3728,
+      "sf_ground_elevated_mean": 0.0046,
+      "sf_ground_elevated_worst": 0.0181,
+      "passes": false
+    },
+    {
+      "estimator": "q05",
+      "cell_m": 5.0,
+      "surrey_building_visible": 0.5896,
+      "sf_ground_elevated_mean": 0.0064,
+      "sf_ground_elevated_worst": 0.0256,
+      "passes": false
+    },
+    {
+      "estimator": "q05",
+      "cell_m": 10.0,
+      "surrey_building_visible": 0.8018,
+      "sf_ground_elevated_mean": 0.0181,
+      "sf_ground_elevated_worst": 0.0653,
+      "passes": false
+    },
+    {
+      "estimator": "q05",
+      "cell_m": 15.0,
+      "surrey_building_visible": 0.8755,
+      "sf_ground_elevated_mean": 0.034,
+      "sf_ground_elevated_worst": 0.0947,
+      "passes": false
+    },
+    {
+      "estimator": "q05",
+      "cell_m": 25.0,
+      "surrey_building_visible": 0.9299,
+      "sf_ground_elevated_mean": 0.0601,
+      "sf_ground_elevated_worst": 0.1322,
+      "passes": false
+    },
+    {
+      "estimator": "q05",
+      "cell_m": 50.0,
+      "surrey_building_visible": 0.9802,
+      "sf_ground_elevated_mean": 0.1666,
+      "sf_ground_elevated_worst": 0.3648,
+      "passes": false
+    }
+  ],
+  "san_francisco": [
+    {
+      "aoi": "baybridge",
+      "skipped": "no ground class in this area"
+    },
+    {
+      "aoi": "embarcadero",
+      "ground_points": 1390308,
+      "relief_m": 2.9,
+      "by_estimator": {
+        "min": {
+          "2.0": 0.0228,
+          "5.0": 0.0728,
+          "10.0": 0.1616,
+          "15.0": 0.2293,
+          "25.0": 0.3598,
+          "50.0": 0.8006
+        },
+        "q05": {
+          "2.0": 0.0087,
+          "5.0": 0.0256,
+          "10.0": 0.0653,
+          "15.0": 0.0947,
+          "25.0": 0.119,
+          "50.0": 0.3285
+        }
+      }
+    },
+    {
+      "aoi": "financial",
+      "ground_points": 2808839,
+      "relief_m": 1.3,
+      "by_estimator": {
+        "min": {
+          "2.0": 0.1047,
+          "5.0": 0.2824,
+          "10.0": 0.5781,
+          "15.0": 0.7565,
+          "25.0": 0.8998,
+          "50.0": 0.9994
+        },
+        "q05": {
+          "2.0": 0.0181,
+          "5.0": 0.0098,
+          "10.0": 0.008,
+          "15.0": 0.004,
+          "25.0": 0.0001,
+          "50.0": 0.0
+        }
+      }
+    },
+    {
+      "aoi": "ggpark",
+      "ground_points": 4429611,
+      "relief_m": 14.1,
+      "by_estimator": {
+        "min": {
+          "2.0": 0.0,
+          "5.0": 0.0061,
+          "10.0": 0.0527,
+          "15.0": 0.1136,
+          "25.0": 0.2217,
+          "50.0": 0.4011
+        },
+        "q05": {
+          "2.0": 0.0,
+          "5.0": 0.0008,
+          "10.0": 0.0129,
+          "15.0": 0.0389,
+          "25.0": 0.1008,
+          "50.0": 0.2745
+        }
+      }
+    },
+    {
+      "aoi": "mission",
+      "ground_points": 2299715,
+      "relief_m": 6.9,
+      "by_estimator": {
+        "min": {
+          "2.0": 0.001,
+          "5.0": 0.0075,
+          "10.0": 0.0225,
+          "15.0": 0.0485,
+          "25.0": 0.1062,
+          "50.0": 0.3203
+        },
+        "q05": {
+          "2.0": 0.0001,
+          "5.0": 0.0002,
+          "10.0": 0.0011,
+          "15.0": 0.0,
+          "25.0": 0.0007,
+          "50.0": 0.0121
+        }
+      }
+    },
+    {
+      "aoi": "soma",
+      "ground_points": 2097061,
+      "relief_m": 3.5,
+      "by_estimator": {
+        "min": {
+          "2.0": 0.0034,
+          "5.0": 0.0147,
+          "10.0": 0.0512,
+          "15.0": 0.089,
+          "25.0": 0.215,
+          "50.0": 0.5498
+        },
+        "q05": {
+          "2.0": 0.0006,
+          "5.0": 0.0009,
+          "10.0": 0.0031,
+          "15.0": 0.0017,
+          "25.0": 0.008,
+          "50.0": 0.0198
+        }
+      }
+    },
+    {
+      "aoi": "sunset",
+      "ground_points": 4070439,
+      "relief_m": 24.9,
+      "by_estimator": {
+        "min": {
+          "2.0": 0.0002,
+          "5.0": 0.0058,
+          "10.0": 0.0536,
+          "15.0": 0.1249,
+          "25.0": 0.2523,
+          "50.0": 0.6025
+        },
+        "q05": {
+          "2.0": 0.0001,
+          "5.0": 0.0013,
+          "10.0": 0.0186,
+          "15.0": 0.0644,
+          "25.0": 0.1322,
+          "50.0": 0.3648
+        }
+      }
+    }
+  ],
+  "surrey_tiles": [
+    "5080_54435",
+    "5085_54320",
+    "5095_54440",
+    "5095_54455",
+    "5100_54495"
+  ],
+  "labels_used_here_only": "DALES labels and the delivery's ASPRS ground class choose these two numbers and are never model inputs",
+  "seconds": 423.0
+}

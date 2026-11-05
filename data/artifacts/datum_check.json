@@ -1,0 +1,198 @@
+{
+  "question": "which datum path produced the published Web Mercator bounds",
+  "source": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/CA_SanFrancisco_1_B23/ept-sources, readers.las header of each original file",
+  "source_horizontal_crs": [
+    "NAD83(2011) / San Francisco CS13"
+  ],
+  "zero_shift_path": "Inverse of City and County of San Francisco CS13 (meter) + NAD83(2011) to WGS 84 (1) + Popular Visualisation Pseudo-Mercator",
+  "itrf_path": "EPSG:7131 to NAD83(2011) to ITRF2014 at epoch 2023.3 to Web Mercator",
+  "files_checked": 12,
+  "zero_shift_worst_abs_difference_mercator_units": 0.0,
+  "itrf2014_smallest_worst_abs_difference_mercator_units": 1.922,
+  "mercator_units_per_ground_metre": 1.265,
+  "itrf2014_smallest_worst_abs_difference_ground_m": 1.519,
+  "reading": "the published bounds are the zero-shift reprojection: the lidar holds NAD83(2011) coordinates labelled WGS 84",
+  "files": [
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04200245.json",
+      "zero_shift_minus_published": [
+        0.0,
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.924,
+        0.259,
+        -1.924,
+        0.259
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04350250.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.924,
+        0.259,
+        -1.924,
+        0.259
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04500205.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.922,
+        0.259,
+        -1.922,
+        0.259
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04550320.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.925,
+        0.261,
+        -1.925,
+        0.261
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04700195.json",
+      "zero_shift_minus_published": [
+        0.0,
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.922,
+        0.259,
+        -1.922,
+        0.26
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04800225.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.923,
+        0.26,
+        -1.922,
+        0.26
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_04900255.json",
+      "zero_shift_minus_published": [
+        0.0,
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.923,
+        0.261,
+        -1.923,
+        0.261
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_05000285.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.924,
+        0.261,
+        -1.924,
+        0.261
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_05100275.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.923,
+        0.262,
+        -1.923,
+        0.262
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_05200285.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.923,
+        0.262,
+        -1.923,
+        0.262
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_05300295.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.923,
+        0.262,
+        -1.923,
+        0.262
+      ]
+    },
+    {
+      "file": "USGS_LPC_CA_SanFrancisco_B23_05450230.json",
+      "zero_shift_minus_published": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "itrf2014_minus_published": [
+        -1.922,
+        0.262,
+        -1.922,
+        0.262
+      ]
+    }
+  ],
+  "seconds": 16.6
+}

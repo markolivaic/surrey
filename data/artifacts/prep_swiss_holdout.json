@@ -1,0 +1,151 @@
+{
+  "source": "swissSURFACE3D 2024 classification, tiles from swiss_tile_selection.json",
+  "licence": "swisstopo free geodata, attribution ©swisstopo",
+  "voxel_m": 0.15,
+  "sub_tile_m": 500.0,
+  "class_table": {
+    "1": {
+      "name": "unclassified and temporary objects",
+      "m1_label": -1,
+      "reason": "mixes vehicles, cranes and anything unresolved; DALES splits vehicles four ways and has no class for the rest"
+    },
+    "2": {
+      "name": "ground",
+      "m1_label": 0,
+      "reason": "the same class"
+    },
+    "3": {
+      "name": "vegetation (low - medium - high)",
+      "m1_label": -1,
+      "reason": "flown in February and March with no leaves; bare branches could undo the vegetation San Francisco just got back, so M1 learns vegetation from DALES alone"
+    },
+    "6": {
+      "name": "building roofs",
+      "m1_label": 100,
+      "reason": "one Swiss building class against three DALES ones; scored as the building superclass"
+    },
+    "9": {
+      "name": "water",
+      "m1_label": 15,
+      "reason": "the class M1 exists to add"
+    },
+    "14": {
+      "name": "high-voltage / power line",
+      "m1_label": 3,
+      "reason": "a conductor span, the object DALES labels powerline"
+    },
+    "15": {
+      "name": "masts with a load-bearing function",
+      "m1_label": -1,
+      "reason": "lattice pylons and masts; DALES poles are utility, light and traffic poles, a different object, and no class fits"
+    },
+    "17": {
+      "name": "bridge-, overpass-, viaduct- and footbridge deck",
+      "m1_label": 16,
+      "reason": "the class M1 exists to add, and the only bridge part the San Francisco delivery labels"
+    },
+    "26": {
+      "name": "building facades",
+      "m1_label": 100,
+      "reason": "part of the building, as DALES labels walls"
+    },
+    "27": {
+      "name": "bridge piers and viaduct stay cables",
+      "m1_label": -1,
+      "reason": "the San Francisco reference labels decks only, piers are not deck, and stay cables look like powerline; teaching either as deck or wire would be wrong"
+    }
+  },
+  "codes_not_in_table_ignored": {},
+  "flags_dropped": "synthetic and withheld (surrey.flags); raw points each removed, per class",
+  "dropped_by_tile": {
+    "swisssurface3d_2024_2680-1225": {
+      "points_in_file": 20906489,
+      "dropped_by_flag": {
+        "synthetic": {
+          "2": 47045,
+          "9": 4338836
+        },
+        "withheld": {}
+      }
+    }
+  },
+  "tiles": [
+    {
+      "name": "ch2024_2680-1225_00",
+      "city": "zug",
+      "tile": "swisssurface3d_2024_2680-1225",
+      "points_raw": 475226,
+      "points_kept": 443382,
+      "water_points_kept": 3996,
+      "density_raw": 1.9,
+      "density_kept": 1.8,
+      "label_mix": {
+        "ignore": 0.5469,
+        "ground": 0.3511,
+        "water": 0.009,
+        "bridge_deck": 0.0034,
+        "building (superclass)": 0.0896
+      },
+      "cache": "data/prep/swiss_holdout/ch2024_2680-1225_00"
+    },
+    {
+      "name": "ch2024_2680-1225_01",
+      "city": "zug",
+      "tile": "swisssurface3d_2024_2680-1225",
+      "points_raw": 5426755,
+      "points_kept": 4999580,
+      "water_points_kept": 15212,
+      "density_raw": 21.7,
+      "density_kept": 20.0,
+      "label_mix": {
+        "ignore": 0.2235,
+        "ground": 0.6693,
+        "powerline": 0.0,
+        "water": 0.003,
+        "bridge_deck": 0.002,
+        "building (superclass)": 0.1021
+      },
+      "cache": "data/prep/swiss_holdout/ch2024_2680-1225_01"
+    },
+    {
+      "name": "ch2024_2680-1225_10",
+      "city": "zug",
+      "tile": "swisssurface3d_2024_2680-1225",
+      "points_raw": 3554697,
+      "points_kept": 3241884,
+      "water_points_kept": 2183,
+      "density_raw": 14.2,
+      "density_kept": 13.0,
+      "label_mix": {
+        "ignore": 0.2775,
+        "ground": 0.5547,
+        "powerline": 0.0001,
+        "water": 0.0007,
+        "bridge_deck": 0.0304,
+        "building (superclass)": 0.1366
+      },
+      "cache": "data/prep/swiss_holdout/ch2024_2680-1225_10"
+    },
+    {
+      "name": "ch2024_2680-1225_11",
+      "city": "zug",
+      "tile": "swisssurface3d_2024_2680-1225",
+      "points_raw": 7063930,
+      "points_kept": 6557103,
+      "water_points_kept": 8112,
+      "density_raw": 28.3,
+      "density_kept": 26.2,
+      "label_mix": {
+        "ignore": 0.2956,
+        "ground": 0.5219,
+        "powerline": 0.0,
+        "water": 0.0012,
+        "bridge_deck": 0.0004,
+        "building (superclass)": 0.1808
+      },
+      "cache": "data/prep/swiss_holdout/ch2024_2680-1225_11"
+    }
+  ],
+  "points_kept_total": 15241949,
+  "seconds": 27.5
+}

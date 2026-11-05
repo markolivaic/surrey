@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A model trained in Surrey, labelling San Francisco in 3D</title>
+<meta name="description" content="A point cloud model trained on labelled lidar from Surrey, British Columbia, run on San Francisco, where nothing is labelled, and scored against references it never saw.">
+<meta property="og:title" content="A model trained in Surrey, labelling San Francisco in 3D">
+<meta property="og:description" content="A point cloud model trained on labelled lidar from Surrey, British Columbia, run on San Francisco and scored against references it never saw.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://markolivaic.github.io/surrey/first_screen.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,MONO@400..800,0..1,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+<!-- The theme before the first paint: the reader's own choice if one was made here, else the system's. -->
+<script>
+  (function () {
+    var chosen = null;
+    try { chosen = localStorage.getItem("surrey-theme"); } catch (e) { chosen = null; }
+    var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.dataset.theme = chosen || (dark ? "dark" : "light");
+  })();
+</script>
+</head>
+<body>
+<div class="stage" id="stage" aria-hidden="true"></div>
+<div class="handle" id="handle" hidden><button id="grip" aria-label="Divider between NAIP colour and predicted classes. Use the left and right arrow keys."></button></div>
+
+<header class="top">
+  <span><b>surrey</b> <span class="sub">a model trained in Surrey, BC, labelling San Francisco in 3D</span></span>
+  <span class="top-actions"><a href="#free" class="free-link">free view</a>
+    <button class="theme" id="theme" aria-pressed="false">dark</button></span>
+</header>
+
+<aside class="legend" id="legend" aria-live="polite"></aside>
+<div class="chip mono" id="chip" aria-live="polite"></div>
+<div class="loading mono" id="loading" hidden>loading points</div>
+<div class="nodata" id="nodata" role="status" hidden>
+  <p>The 3D points are not served from here. They are hosted apart from the code, and this copy of
+    the page cannot reach them, so each card shows a still instead.</p>
+  <p>The live page with the points: <a href="https://markolivaic.github.io/surrey/">markolivaic.github.io/surrey</a></p>
+</div>
+
+<section class="hero" id="hero" data-area="ggpark" data-variant="m0_seedA" data-chip="M0 seed A, the published model"></section>
+
+<main class="cards" id="cards">
+  <section class="card" data-card="1" data-area="ggpark" data-variant="m0_seedA" data-chip="M0 seed A, the published model">
+    <div class="body">
+      <img class="still" loading="lazy" width="1200" height="792" alt="Golden Gate Park in 3D, points coloured by the published model's classes" data-still="ggpark_m0_seedA">
+      <div class="k mono">1 of 6</div>
+      <h2>Golden Gate Park. The trees are trees.</h2>
+      <p>The model learned from lidar flown over Surrey, British Columbia, and was never trained on San Francisco.
+        Here it labels as vegetation nearly every point the aerial photograph shows as vegetation.</p>
+      <div class="fig">
+        <div class="fig-label">the photograph's vegetation, labelled vegetation, median of <span data-q="seeds.m0.claims.extrapolation.n" data-where="card1" data-format="count"></span> seeds</div>
+        <div class="fig-big mono"><span data-q="seeds.m0.sf.ggpark.vegetation_headline.median" data-where="card1" data-format="share"></span></div>
+        <div class="fig-cmp">In the Sunset, where the photograph has plenty of both sides:
+          <span class="mono" data-q="seeds.m0.sf.sunset.vegetation_headline.median" data-where="card1" data-format="share"></span> of the vegetation, and
+          <span class="mono" data-q="seeds.m0.sf.sunset.not_vegetation_core_called_vegetation.median" data-where="card1" data-format="share"></span> of the rest.</div>
+      </div>
+      <div class="src mono">reference: NAIP 2022 aerial photograph, points 2 to 25 m above the ground</div>
+      <details class="more"><summary>more figures</summary>
+        <p>In the park, over the seeds:
+          <span class="mono" data-q="seeds.m0.sf.ggpark.vegetation_headline.min" data-where="card1" data-format="share"></span> to
+          <span class="mono" data-q="seeds.m0.sf.ggpark.vegetation_headline.max" data-where="card1" data-format="share"></span> of the vegetation.
+          The park has little the photograph shows as not vegetation,
+          <span class="mono" data-q="naip.sf.ggpark.registered.not_vegetation_core_points" data-where="card1" data-format="count"></span> points,
+          and the model labels <span class="mono" data-q="seeds.m0.sf.ggpark.not_vegetation_core_called_vegetation.median" data-where="card1" data-format="share"></span>
+          of them vegetation; the method notes give why that figure is not read as a test.</p>
+        <p>A rule that calls every point 2 to 25 m up vegetation scores 100% on both sides, because the
+          reference points are drawn from that height band. In the Sunset the model finds a little less of
+          the vegetation than that rule, and takes in very little of the rest.</p>
+        <p>A point counts only inside a patch the photograph marks one way or the other, away from the
+          patch's edge, because a tree in an aerial photograph leans away from the camera.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" data-card="2" data-area="5135_54430" data-variant="m0_seedA" data-chip="Surrey held-out tile, M0 seed A">
+    <div class="body">
+      <img class="still" loading="lazy" width="1200" height="692" alt="A held-out Surrey tile in 3D, coloured by the published model's classes" data-still="5135_54430_home_m0_seedA">
+      <div class="k mono">2 of 6</div>
+      <h2>Where it learned</h2>
+      <p>A Surrey tile held out of training: the model at home, where its labels came from.</p>
+      <div class="fig">
+        <div class="fig-label">points labelled correctly on held-out Surrey, median of the seeds</div>
+        <div class="fig-big mono"><span data-q="seeds.m0.surrey.test.accuracy_from_prediction_cache.median" data-where="card2" data-format="share"></span></div>
+        <div class="fig-cmp">Calling every point ground gets
+          <span class="mono" data-q="surrey.test.voxel.ground_fraction" data-where="card2" data-format="share"></span>.</div>
+      </div>
+      <div class="src mono">every held-out point after thinning, each prediction the mean of <span data-q="votes.n" data-where="card2" data-format="count"></span> passes</div>
+      <details class="more"><summary>more figures</summary>
+        <p>Accuracy over the seeds:
+          <span class="mono" data-q="seeds.m0.surrey.test.accuracy_from_prediction_cache.min" data-where="card2" data-format="share"></span> to
+          <span class="mono" data-q="seeds.m0.surrey.test.accuracy_from_prediction_cache.max" data-where="card2" data-format="share"></span>.</p>
+        <p>Mean IoU (intersection over union: for each class, the points both the model and the label
+          give it, over the points either gives it, averaged over classes): over the 15
+          classes <span class="mono" data-q="seeds.m0.surrey.test.miou_15.median" data-where="card2" data-format="num"></span>
+          (<span class="mono" data-q="seeds.m0.surrey.test.miou_15.min" data-where="card2" data-format="num"></span> to
+          <span class="mono" data-q="seeds.m0.surrey.test.miou_15.max" data-where="card2" data-format="num"></span>), over the
+          6 coarse groups <span class="mono" data-q="seeds.m0.surrey.test.miou_coarse.median" data-where="card2" data-format="num"></span>
+          (<span class="mono" data-q="seeds.m0.surrey.test.miou_coarse.min" data-where="card2" data-format="num"></span> to
+          <span class="mono" data-q="seeds.m0.surrey.test.miou_coarse.max" data-where="card2" data-format="num"></span>).</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" data-card="3" data-area="ggpark" data-variant="returns_ood" data-chip="old model, four channels, input as delivered">
+    <div class="body">
+      <img class="still" loading="lazy" width="1200" height="792" alt="The same park on the old model with the input as delivered: most of the forest is predicted as buildings" data-still="ggpark_returns_ood">
+      <div class="k mono">3 of 6</div>
+      <h2>The same park on the old model</h2>
+      <p>The old model read a fourth input, the return ratio. It was 0 on every point of DALES-2 as published on Hugging Face,
+        and real on all but <span class="mono" data-q="sf.aois.voxel.return_ratio_exactly_0" data-where="card3" data-format="count"></span> of
+        <span class="mono" data-q="sf.aois.voxel.points" data-where="card3" data-format="count"></span> San Francisco points.
+        Same checkpoint, only the input changes, and the forest becomes buildings.</p>
+      <div class="fig">
+        <div class="fig-label">the photograph's vegetation, labelled vegetation, input as delivered</div>
+        <div class="fig-big mono"><span data-q="scores.returns_ood.sf.ggpark.vegetation_headline" data-where="card3" data-format="share"></span></div>
+        <div class="fig-cmp">With the return ratio set to 0, as in training:
+          <span class="mono" data-q="scores.ret0.sf.ggpark.vegetation_headline" data-where="card3" data-format="share"></span>.</div>
+      </div>
+      <div class="src mono">the published model reads only point positions and has no such input</div>
+      <details class="more"><summary>more figures</summary>
+        <p>The photograph's not-vegetation points labelled vegetation: as delivered
+          <span class="mono" data-q="scores.returns_ood.sf.ggpark.not_vegetation_core_called_vegetation" data-where="card3" data-format="share"></span>,
+          with the return ratio at 0
+          <span class="mono" data-q="scores.ret0.sf.ggpark.not_vegetation_core_called_vegetation" data-where="card3" data-format="share"></span>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" data-card="4" data-area="financial" data-variant="m0_seedA" data-framing="still" data-chip="M0 seed A, the published model">
+    <div class="body">
+      <img class="still" loading="lazy" width="1200" height="959" alt="The Financial District in 3D, the towers coloured by the published model's classes, mostly building" data-still="financial_m0_seedA">
+      <div class="k mono">4 of 6</div>
+      <h2>Taller than anything it saw</h2>
+      <p>The tallest 40 m block in training spans <span class="mono" data-q="inputs.surrey.train.block_z_max_m" data-where="card4" data-format="num"></span> m of height.
+        Here <span class="mono" data-q="inputs.sf.financial.blocks_above_training_max" data-where="card4" data-format="count"></span> of
+        <span class="mono" data-q="inputs.sf.financial.blocks" data-where="card4" data-format="count"></span> blocks span more, up to
+        <span class="mono" data-q="inputs.sf.financial.block_z_max_m" data-where="card4" data-format="num"></span> m. Written down before training:
+        buildings would score lower here than in the other built areas. They do, on
+        <span data-q="seeds.m0.claims.extrapolation.k" data-where="card4" data-format="count"></span> of
+        <span data-q="seeds.m0.claims.extrapolation.n" data-where="card4" data-format="count"></span> seeds.</p>
+      <div class="fig">
+        <div class="fig-label">building lift, Financial District, median of the seeds</div>
+        <div class="fig-big mono"><span data-q="seeds.m0.claims.financial_lift.median" data-where="card4" data-format="num"></span></div>
+        <div class="fig-cmp">The other built areas:
+          <span class="mono" data-q="seeds.m0.claims.other_built_median_lift.median" data-where="card4" data-format="num"></span>.</div>
+      </div>
+      <div class="src mono">reference: Microsoft building footprints; lift is over a null that calls every point more than 2 m up a building</div>
+      <details class="more"><summary>more figures</summary>
+        <p>Lift is the share of the null's shortfall from perfect precision that the model makes up: 0 is
+          no better than the null, 1 is every building point right. Over the seeds:
+          <span class="mono" data-q="seeds.m0.claims.financial_lift.min" data-where="card4" data-format="num"></span> to
+          <span class="mono" data-q="seeds.m0.claims.financial_lift.max" data-where="card4" data-format="num"></span> here, and
+          <span class="mono" data-q="seeds.m0.claims.other_built_median_lift.min" data-where="card4" data-format="num"></span> to
+          <span class="mono" data-q="seeds.m0.claims.other_built_median_lift.max" data-where="card4" data-format="num"></span> elsewhere.</p>
+        <p>Precision against the footprints
+          <span class="mono" data-q="seeds.m0.sf.financial.building_precision.median" data-where="card4" data-format="share"></span>
+          (<span class="mono" data-q="seeds.m0.sf.financial.building_precision.min" data-where="card4" data-format="share"></span> to
+          <span class="mono" data-q="seeds.m0.sf.financial.building_precision.max" data-where="card4" data-format="share"></span>), the null's
+          <span class="mono" data-q="seeds.m0.sf.financial.building_null_precision.median" data-where="card4" data-format="share"></span>.
+          Footprint covered
+          <span class="mono" data-q="seeds.m0.sf.financial.building_coverage.median" data-where="card4" data-format="share"></span>
+          (<span class="mono" data-q="seeds.m0.sf.financial.building_coverage.min" data-where="card4" data-format="share"></span> to
+          <span class="mono" data-q="seeds.m0.sf.financial.building_coverage.max" data-where="card4" data-format="share"></span>), the null's
+          <span class="mono" data-q="seeds.m0.sf.financial.building_null_coverage.median" data-where="card4" data-format="share"></span>.</p>
+        <p>The <span class="mono" data-q="seeds.m0.sf.financial.footprints_scored.median" data-where="card4" data-format="count"></span> footprints scored here
+          could not be registered to the lidar, so they take the offset measured in
+          <span data-q="crs.sf.footprint_offset_global.areas_used" data-where="card4" data-format="count"></span> other areas.</p>
+        <p>Of the points more than 150 m up, labelled building
+          <span class="mono" data-q="tall.sf.financial.m0_seeds.above_150m.called_building.median" data-where="card4" data-format="share"></span>
+          (<span class="mono" data-q="tall.sf.financial.m0_seeds.above_150m.called_building.min" data-where="card4" data-format="share"></span> to
+          <span class="mono" data-q="tall.sf.financial.m0_seeds.above_150m.called_building.max" data-where="card4" data-format="share"></span>), labelled pole
+          <span class="mono" data-q="tall.sf.financial.m0_seeds.above_150m.called_pole.median" data-where="card4" data-format="share"></span>
+          (<span class="mono" data-q="tall.sf.financial.m0_seeds.above_150m.called_pole.min" data-where="card4" data-format="share"></span> to
+          <span class="mono" data-q="tall.sf.financial.m0_seeds.above_150m.called_pole.max" data-where="card4" data-format="share"></span>).</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" data-card="5" data-area="embarcadero" data-variant="m0_seedA" data-chip="M0 seed A, the published model">
+    <div class="body">
+      <img class="still" loading="lazy" width="1200" height="883" alt="Embarcadero in 3D: the bay predicted as ground, part of the bridge deck as building" data-still="embarcadero_m0_seedA">
+      <div class="k mono">5 of 6</div>
+      <h2>Embarcadero. The bay is ground.</h2>
+      <p>The training labels have no word for water or for a bridge, so the model says what it knows. The
+        bay becomes ground, and part of the Bay Bridge deck becomes building.</p>
+      <div class="fig">
+        <div class="fig-label">water labelled ground, Embarcadero, median of the seeds</div>
+        <div class="fig-big mono"><span data-q="seeds.m0.sf.embarcadero.water_called_ground.median" data-where="card5" data-format="share"></span></div>
+        <div class="fig-cmp">Bay Bridge deck labelled building:
+          <span class="mono" data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.median" data-where="card5" data-format="share"></span>.</div>
+      </div>
+      <div class="src mono">reference: water and bridge deck as the delivery labels them, at Embarcadero and Bay Bridge only</div>
+      <details class="more"><summary>more figures</summary>
+        <p>Over the seeds: water labelled ground
+          <span class="mono" data-q="seeds.m0.sf.embarcadero.water_called_ground.min" data-where="card5" data-format="share"></span> to
+          <span class="mono" data-q="seeds.m0.sf.embarcadero.water_called_ground.max" data-where="card5" data-format="share"></span>, bridge deck labelled building
+          <span class="mono" data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.min" data-where="card5" data-format="share"></span> to
+          <span class="mono" data-q="seeds.m0.sf.baybridge.bridge_deck_called_building.max" data-where="card5" data-format="share"></span>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="card" data-card="6" data-area="embarcadero" data-variant="m1_seedA" data-fallback-variant="m0_seedA" data-chip="old M1 seed A, learned on synthetic water" id="m1card">
+    <div class="body">
+      <div class="k mono">6 of 6</div>
+      <h2>Most of the water it was shown was fill</h2>
+      <div id="m1card-text"></div>
+    </div>
+  </section>
+</main>
+
+<section class="free" id="free" aria-label="Free view">
+  <div class="panel" role="group" aria-label="Free view controls">
+    <h2 class="free-title">Free view</h2>
+    <div class="row">model
+      <span class="seg" id="model" role="group" aria-label="Model">
+        <button data-model="old" aria-pressed="false">old model, four channels</button>
+        <button data-model="m0" aria-pressed="true">M0</button>
+        <button data-model="m1" aria-pressed="false" id="m1button">old M1</button>
+      </span></div>
+    <div class="row switch">input as delivered
+      <button id="input" aria-pressed="false" disabled aria-label="Input as delivered. Only the old model has this state."></button>
+      <span class="mono dim" id="inputnote">only the old model has this state</span></div>
+    <div class="row switch">confidence
+      <button id="confidence" aria-pressed="false" aria-label="Show the model's confidence as colour strength"></button>
+      <span class="mono dim">as colour strength</span></div>
+    <div class="row switch">NAIP divider
+      <button id="wipe" aria-pressed="false" aria-label="Show the divider between NAIP colour and classes"></button>
+      <span class="mono dim">left of the handle, NAIP 2022</span></div>
+    <div class="row areas" id="areas" role="group" aria-label="Area"></div>
+  </div>
+</section>
+
+<footer class="credits mono small">
+  <p>In the scene, each point's colour is the class the model gave it. The free view can add the model's
+    confidence as colour strength. Every figure on this page comes from the project's registry, with the
+    model it was measured on.</p>
+  <p>Lidar: USGS 3DEP, public domain. Imagery: NAIP 2022, public domain. Surrey lidar: Contains information licensed under the Open Government License, City of Surrey.
+  Sea level: NOAA National Ocean Service, CO-OPS. Building footprints: Microsoft, ODbL. Swiss training tiles: Federal Office of Topography swisstopo (©swisstopo).
+  Colours are predictions, not measurements.</p>
+</footer>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

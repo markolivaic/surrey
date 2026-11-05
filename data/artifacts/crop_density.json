@@ -1,0 +1,62 @@
+{
+  "block_m": 40.0,
+  "points_per_crop": 32768,
+  "crop_ceiling_points_per_m2": 20.48,
+  "note": "the crop is the same length everywhere, so a denser source is thinned by the crop and a sparser one is padded with repeats; what the model sees is the distinct count below",
+  "sources": {
+    "surrey_dales_training": {
+      "tiles_read": [
+        "5080_54400",
+        "5080_54435",
+        "5080_54470",
+        "5085_54320",
+        "5095_54440",
+        "5095_54455"
+      ],
+      "blocks": 72,
+      "source_points_per_m2_median": 38.04,
+      "distinct_points_in_a_crop_median": 32768,
+      "crop_points_per_m2_median": 20.48
+    },
+    "swiss_training": {
+      "tiles_read": [
+        "ch2024_2683-1243_00",
+        "ch2024_2683-1243_01",
+        "ch2024_2683-1243_10",
+        "ch2024_2683-1243_11",
+        "ch2024_2683-1246_00",
+        "ch2024_2683-1246_01"
+      ],
+      "blocks": 59,
+      "source_points_per_m2_median": 13.81,
+      "distinct_points_in_a_crop_median": 18476,
+      "crop_points_per_m2_median": 11.55
+    },
+    "swiss_held_out": {
+      "tiles_read": [
+        "ch2024_2680-1225_00",
+        "ch2024_2680-1225_01",
+        "ch2024_2680-1225_10",
+        "ch2024_2680-1225_11"
+      ],
+      "blocks": 42,
+      "source_points_per_m2_median": 20.9,
+      "distinct_points_in_a_crop_median": 26601,
+      "crop_points_per_m2_median": 16.63
+    },
+    "san_francisco": {
+      "tiles_read": [
+        "baybridge",
+        "embarcadero",
+        "financial",
+        "ggpark",
+        "mission",
+        "soma"
+      ],
+      "blocks": 69,
+      "source_points_per_m2_median": 49.86,
+      "distinct_points_in_a_crop_median": 32768,
+      "crop_points_per_m2_median": 20.48
+    }
+  }
+}

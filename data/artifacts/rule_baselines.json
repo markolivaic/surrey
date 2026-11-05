@@ -1,0 +1,380 @@
+{
+  "what": "simple rules scored on the San Francisco references with the model's own scoring",
+  "rules": {
+    "ground": "every point less than 0.5 m above the label-free floor is ground",
+    "vegetation": "every point 2-25 m above the label-free floor is vegetation",
+    "building": "every point more than 2 m above the delivery's own ground surface with NAIP NDVI below 0.075 is building"
+  },
+  "ndvi_threshold": 0.075,
+  "footprint_offset_east_north_m": [
+    1.584,
+    -0.792
+  ],
+  "model_involved": false,
+  "areas": {
+    "baybridge": {
+      "points": 3068521,
+      "ground_below_0_5m": null,
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": null,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": null,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": null,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 346263,
+        "predicted_building_points": 0,
+        "precision": null,
+        "null_precision": 0.0,
+        "precision_lift_over_null": null,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 0,
+          "footprints_too_small": 0,
+          "coverage_median": null,
+          "coverage_p10": null,
+          "coverage_p90": null,
+          "null_coverage_median": null,
+          "null_coverage_p10": null,
+          "shortfall_against_null": null,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 0.0
+      }
+    },
+    "embarcadero": {
+      "points": 4434486,
+      "ground_below_0_5m": {
+        "recall_clean": 0.8395,
+        "precision_floor": 0.1742,
+        "precision_ceiling": 0.279,
+        "predicted_points_unjudgeable_fraction": 0.2536
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 1011138,
+        "predicted_building_points": 551500,
+        "precision": 0.3517,
+        "null_precision": 0.2028,
+        "precision_lift_over_null": 0.1868,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 6,
+          "footprints_too_small": 1,
+          "coverage_median": 0.8721,
+          "coverage_p10": 0.6212,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.8749,
+          "null_coverage_p10": 0.6936,
+          "shortfall_against_null": 0.0032,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 0.7507
+      }
+    },
+    "financial": {
+      "points": 7491501,
+      "ground_below_0_5m": {
+        "recall_clean": 0.9764,
+        "precision_floor": 0.5792,
+        "precision_ceiling": 0.8109,
+        "predicted_points_unjudgeable_fraction": 0.0048
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 4773410,
+        "predicted_building_points": 4574611,
+        "precision": 0.6967,
+        "null_precision": 0.6762,
+        "precision_lift_over_null": 0.0634,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 23,
+          "footprints_too_small": 2,
+          "coverage_median": 0.8354,
+          "coverage_p10": 0.6893,
+          "coverage_p90": 0.9976,
+          "null_coverage_median": 0.8541,
+          "null_coverage_p10": 0.6893,
+          "shortfall_against_null": 0.0219,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 0.9938
+      }
+    },
+    "ggpark": {
+      "points": 9010024,
+      "ground_below_0_5m": {
+        "recall_clean": 0.8292,
+        "precision_floor": 0.7689,
+        "precision_ceiling": 0.9803,
+        "predicted_points_unjudgeable_fraction": 0.0
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 5510689,
+        "predicted_building_points": 205554,
+        "precision": 0.0,
+        "null_precision": 0.0,
+        "precision_lift_over_null": null,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 1,
+          "footprints_too_small": 0,
+          "coverage_median": 0.0,
+          "coverage_p10": 0.0,
+          "coverage_p90": 0.0,
+          "null_coverage_median": 0.0,
+          "null_coverage_p10": 0.0,
+          "shortfall_against_null": null,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 1.0
+      }
+    },
+    "mission": {
+      "points": 4532181,
+      "ground_below_0_5m": {
+        "recall_clean": 0.9704,
+        "precision_floor": 0.6775,
+        "precision_ceiling": 0.8436,
+        "predicted_points_unjudgeable_fraction": 0.0017
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 2082429,
+        "predicted_building_points": 1524129,
+        "precision": 0.7483,
+        "null_precision": 0.5644,
+        "precision_lift_over_null": 0.4221,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 56,
+          "footprints_too_small": 0,
+          "coverage_median": 0.9803,
+          "coverage_p10": 0.6267,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9937,
+          "null_coverage_p10": 0.6271,
+          "shortfall_against_null": 0.0135,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 0.9986
+      }
+    },
+    "russianhill": {
+      "points": 5417326,
+      "ground_below_0_5m": {
+        "recall_clean": 0.6495,
+        "precision_floor": 0.6815,
+        "precision_ceiling": 0.8636,
+        "predicted_points_unjudgeable_fraction": 0.0
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 3576909,
+        "predicted_building_points": 2841783,
+        "precision": 0.7628,
+        "null_precision": 0.623,
+        "precision_lift_over_null": 0.3708,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 77,
+          "footprints_too_small": 1,
+          "coverage_median": 0.9787,
+          "coverage_p10": 0.7919,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9935,
+          "null_coverage_p10": 0.8376,
+          "shortfall_against_null": 0.0149,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 1.0
+      }
+    },
+    "soma": {
+      "points": 4522972,
+      "ground_below_0_5m": {
+        "recall_clean": 0.982,
+        "precision_floor": 0.6625,
+        "precision_ceiling": 0.8109,
+        "predicted_points_unjudgeable_fraction": 0.0
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 2234311,
+        "predicted_building_points": 1784978,
+        "precision": 0.796,
+        "null_precision": 0.6472,
+        "precision_lift_over_null": 0.4218,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 26,
+          "footprints_too_small": 0,
+          "coverage_median": 0.7498,
+          "coverage_p10": 0.6076,
+          "coverage_p90": 0.9848,
+          "null_coverage_median": 0.7511,
+          "null_coverage_p10": 0.6085,
+          "shortfall_against_null": 0.0017,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 1.0
+      }
+    },
+    "sunset": {
+      "points": 5461632,
+      "ground_below_0_5m": {
+        "recall_clean": 0.7202,
+        "precision_floor": 0.72,
+        "precision_ceiling": 0.9391,
+        "predicted_points_unjudgeable_fraction": 0.0
+      },
+      "vegetation_2_25m": {
+        "headline": {
+          "vegetation_core_called_vegetation": 1.0,
+          "not_vegetation_core_called_vegetation": 1.0
+        },
+        "per_mask": {
+          "registered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          },
+          "unregistered": {
+            "vegetation_core_called_vegetation": 1.0,
+            "not_vegetation_core_called_vegetation": 1.0
+          }
+        }
+      },
+      "building_rule": {
+        "eligible_points": 2300011,
+        "predicted_building_points": 1643248,
+        "precision": 0.7486,
+        "null_precision": 0.5401,
+        "precision_lift_over_null": 0.4533,
+        "coverage": {
+          "cell_m": 1.0,
+          "min_cells": 4,
+          "footprints_scored": 33,
+          "footprints_too_small": 0,
+          "coverage_median": 0.9871,
+          "coverage_p10": 0.7754,
+          "coverage_p90": 1.0,
+          "null_coverage_median": 0.9936,
+          "null_coverage_p10": 0.7759,
+          "shortfall_against_null": 0.0065,
+          "reading": "null_coverage is what selecting every eligible point reaches. coverage_median alone means nothing; the gap is the measurement"
+        },
+        "gate_points_the_surface_reaches": 1.0
+      }
+    }
+  },
+  "seconds": 50.8
+}
