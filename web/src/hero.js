@@ -44,7 +44,7 @@ function lede(fixture) {
         Francisco. The pictures and the figures are the real ones. ${table}`;
   }
   return `Trained on lidar flown over Surrey, British Columbia. Every point below is San
-        Francisco, which it had never seen<span class="wide-only">: ${ORDER === 2
+        Francisco, which it was never trained on<span class="wide-only">: ${ORDER === 2
           ? "first as the model calls it, then as the aerial photograph puts it"
           : "first as the aerial photograph puts it, then as the model calls it"}</span><span
         class="phone-only">, coloured as the model calls it</span>. ${table}`;
